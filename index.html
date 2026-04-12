@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEO Pages — The Cooperative Agency</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #f9f9f9; color: #111; }
+    body { font-family: system-ui, sans-serif; max-width: 820px; margin: 40px auto; padding: 0 20px; background: #f9f9f9; color: #111; }
     h1 { font-size: 1.5rem; border-bottom: 2px solid #1c69d4; padding-bottom: 10px; }
-    h2 { font-size: 1.1rem; color: #1c69d4; margin-top: 30px; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 8px 0; }
-    a { color: #1c69d4; text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
+    h2 { font-size: 1.05rem; color: #1c69d4; margin: 0 0 6px; }
     .store { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; }
+    .links { list-style: none; padding: 0; margin: 0; }
+    .links li { margin: 6px 0; }
+    .links a { color: #1c69d4; text-decoration: none; font-size: 14px; }
+    .links a:hover { text-decoration: underline; }
     .badge { font-size: 11px; background: #e8f0fe; color: #1c69d4; padding: 2px 8px; border-radius: 20px; margin-left: 8px; }
+    .tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+    .tag-model { background: #e8f0fe; color: #1c69d4; }
+    .tag-vs { background: #fce8e6; color: #c5221f; }
+    .tag-decision { background: #e6f4ea; color: #137333; }
+    .coming { color: #999; font-size: 13px; font-style: italic; }
   </style>
 </head>
 <body>
@@ -22,32 +27,43 @@
 
   <div class="store">
     <h2>Brian Harris BMW <span class="badge">Baton Rouge, LA</span></h2>
-    <ul>
-      <li><a href="Brian Harris BMW/new-bmw-3-series-baton-rouge-la.html">→ New BMW 3 Series for Sale in Baton Rouge, LA</a></li>
-      <li><a href="Brian Harris BMW/new-bmw-4-series-baton-rouge-la.html">→ New BMW 4 Series for Sale in Baton Rouge, LA</a></li>
-      <li><a href="Brian Harris BMW/new-bmw-5-series-baton-rouge-la.html">→ New BMW 5 Series for Sale in Baton Rouge, LA</a></li>
+    <ul class="links">
+      <li>
+        <a href="Brian Harris BMW/bmw-3-series-drivers-car-baton-rouge.html">→ The Last True Driver's Car Under $50K</a>
+        <span class="tag tag-model">Model Page</span>
+      </li>
+      <li>
+        <a href="Brian Harris BMW/bmw-3-series-vs-mercedes-c-class-baton-rouge.html">→ BMW 3 Series vs Mercedes-Benz C-Class: Which One Actually Wins?</a>
+        <span class="tag tag-vs">vs Page</span>
+      </li>
+      <li>
+        <a href="Brian Harris BMW/new-bmw-3-series-baton-rouge-la-v3.html">→ New BMW 3 Series for Sale in Baton Rouge, LA</a>
+        <span class="tag tag-model">Model Page</span>
+      </li>
+      <li>
+        <a href="Brian Harris BMW/new-bmw-4-series-baton-rouge-la.html">→ New BMW 4 Series for Sale in Baton Rouge, LA</a>
+        <span class="tag tag-model">Model Page</span>
+      </li>
+      <li>
+        <a href="Brian Harris BMW/new-bmw-5-series-baton-rouge-la.html">→ New BMW 5 Series for Sale in Baton Rouge, LA</a>
+        <span class="tag tag-model">Model Page</span>
+      </li>
     </ul>
   </div>
 
   <div class="store">
     <h2>BMW of Jackson <span class="badge">Jackson, MS</span></h2>
-    <ul>
-      <li style="color:#999;font-size:14px;font-style:italic;">Pages coming soon</li>
-    </ul>
+    <p class="coming">Pages coming soon</p>
   </div>
 
   <div class="store">
     <h2>Audi Baton Rouge <span class="badge">Baton Rouge, LA</span></h2>
-    <ul>
-      <li style="color:#999;font-size:14px;font-style:italic;">Pages coming soon</li>
-    </ul>
+    <p class="coming">Pages coming soon</p>
   </div>
 
   <div class="store">
     <h2>Harris Porsche <span class="badge">Baton Rouge, LA</span></h2>
-    <ul>
-      <li style="color:#999;font-size:14px;font-style:italic;">Pages coming soon</li>
-    </ul>
+    <p class="coming">Pages coming soon</p>
   </div>
 </body>
 </html>
