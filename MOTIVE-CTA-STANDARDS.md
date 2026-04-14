@@ -21,6 +21,18 @@ Motive pages have two types of CTAs:
 <button aria-label="Schedule A Test Drive" class="Button-module-scss-module__u3qYVW__button Button-module-scss-module__u3qYVW__button--large Button-module-scss-module__u3qYVW__button--fit Button-module-scss-module__u3qYVW__button--themePrimary" type="button" aria-busy="false"><p class="Text-module-scss-module__Iw40ma__text Text-module-scss-module__Iw40ma__text--bodyRegular Text-module-scss-module__Iw40ma__text--textPrimary Text-module-scss-module__Iw40ma__text--left Text-module-scss-module__Iw40ma__text--regular Button-module-scss-module__u3qYVW__buttonText Button-module-scss-module__u3qYVW__buttonText--bold"><span class="Text-module-scss-module__Iw40ma__textContent">Schedule A Test Drive</span></p></button>
 ```
 
+### Value My Trade
+```html
+<!-- Value My Trade — Motive modal button -->
+<button aria-label="Value My Trade" class="Button-module-scss-module__u3qYVW__button Button-module-scss-module__u3qYVW__button--large Button-module-scss-module__u3qYVW__button--fit Button-module-scss-module__u3qYVW__button--themePrimary" type="button" aria-busy="false"><p class="Text-module-scss-module__Iw40ma__text Text-module-scss-module__Iw40ma__text--bodyRegular Text-module-scss-module__Iw40ma__text--textPrimary Text-module-scss-module__Iw40ma__text--left Text-module-scss-module__Iw40ma__text--regular Button-module-scss-module__u3qYVW__buttonText Button-module-scss-module__u3qYVW__buttonText--bold"><span class="Text-module-scss-module__Iw40ma__textContent">Value My Trade</span></p></button>
+```
+
+### Get Pre-Qualified (Brian Harris BMW specifically)
+```html
+<!-- Get Pre-Qualified — regular link -->
+<a href="https://brianharrisbmw.com/pre-qualify" class="Button-module-scss-module__u3qYVW__button Button-module-scss-module__u3qYVW__button--large Button-module-scss-module__u3qYVW__button--fit Button-module-scss-module__u3qYVW__button--themePrimary Link-module-scss-module__wpnGQa__link--bmw" draggable="false" tabindex="0"><p class="Text-module-scss-module__Iw40ma__text Text-module-scss-module__Iw40ma__text--bodyRegular Text-module-scss-module__Iw40ma__text--textPrimary Text-module-scss-module__Iw40ma__text--left Text-module-scss-module__Iw40ma__text--regular Button-module-scss-module__u3qYVW__buttonText Button-module-scss-module__u3qYVW__buttonText--bold"><span class="Text-module-scss-module__Iw40ma__textContent">Get Pre-Qualified</span></p></a>
+```
+
 ---
 
 ## Link CTA Patterns by Store
@@ -28,7 +40,7 @@ Motive pages have two types of CTAs:
 ### Brian Harris BMW (brianharrisbmw.com)
 | CTA | Type | URL |
 |-----|------|-----|
-| Value My Trade | Link | https://brianharrisbmw.com/trade |
+| Value My Trade | Modal button | (Motive tool) |
 | Get Pre-Qualified | Link | https://brianharrisbmw.com/pre-qualify |
 | Shop New Inventory | Link | https://brianharrisbmw.com/inventory |
 | Shop X3 | Link | https://brianharrisbmw.com/cars/bmw-x3 |
@@ -52,8 +64,7 @@ Motive pages have two types of CTAs:
 ### Audi Baton Rouge (audibatonrouge.com)
 | CTA | Type | URL |
 |-----|------|-----|
-| Value My Trade | Link | https://audibatonrouge.com/value-my-trade |
-| KBB Trade-In | Link | **PENDING — Lance to provide KBB URL** |
+| Value My Trade / Sell or Trade | Link | https://audibatonrouge.com/sell-or-trade |
 | Get Pre-Qualified | Link | https://audibatonrouge.com/get-pre-qualified |
 | Shop New Inventory | Link | https://audibatonrouge.com/inventory |
 | Schedule Service | Link | https://audibatonrouge.com/service |
@@ -72,7 +83,7 @@ Motive pages have two types of CTAs:
 ## Rules
 
 1. **Never use relative URLs** (`/inventory`, `/trade`) — always use full absolute URLs
-2. **Never use `href` for test drive** on BMW/Audi pages — always use the Motive modal `<button>`
+2. **Never use `href` for test drive or trade-in** on BMW/Audi pages — always use the Motive modal `<button>`
 3. **Always verify links are live** before sending pages to Dessrae/Motive for implementation
 4. **ABR trade link** — use KBB URL (pending) not `/value-my-trade` until confirmed
 
