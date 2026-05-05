@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Review Dashboard — The Cooperative Agency</title>
+  <style>
+    :root { --blue:#1c69d4; --audi:#000; --porsche:#b12b28; --ink:#111; --muted:#666; --line:#ddd; --bg:#f7f8fa; --card:#fff; --green:#188038; --gold:#8a6100; }
+    * { box-sizing:border-box; }
+    body { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; max-width:1180px; margin:36px auto; padding:0 20px 70px; background:var(--bg); color:var(--ink); }
+    header { margin-bottom:24px; }
+    h1 { font-size:clamp(1.55rem,2.6vw,2.35rem); margin:0 0 8px; letter-spacing:-0.035em; }
+    .sub { color:var(--muted); font-size:14px; line-height:1.55; max-width:900px; margin:0; }
+    .note { margin-top:14px; padding:12px 14px; background:#fff8e1; border:1px solid #f0d27a; border-radius:10px; color:#5f4700; font-size:13px; line-height:1.45; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 28px; }
+    .filter { border:1px solid var(--line); background:#fff; color:#333; padding:8px 12px; border-radius:999px; font-size:13px; cursor:pointer; }
+    .filter.active { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .month { margin:30px 0 16px; display:flex; align-items:baseline; gap:10px; border-bottom:2px solid var(--blue); padding-bottom:9px; }
+    .month h2 { margin:0; font-size:1.15rem; color:var(--blue); }
+    .month span { color:#777; font-size:12px; }
+    .dealer { margin:18px 0; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+    .dealer-head { padding:14px 16px; background:#111; color:#fff; display:flex; justify-content:space-between; gap:12px; align-items:center; }
+    .dealer-head h3 { margin:0; font-size:1rem; }
+    .dealer-head span { font-size:12px; opacity:.75; }
+    .dealer.audi .dealer-head { background:#000; }
+    .dealer.bmw .dealer-head { background:#06101d; }
+    .dealer.porsche .dealer-head { background:#2a1110; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; padding:14px; }
+    .item { border:1px solid var(--line); border-radius:12px; padding:15px; background:#fff; display:flex; flex-direction:column; gap:12px; }
+    .item-top { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
+    .title { font-size:15px; font-weight:750; margin:0; line-height:1.3; }
+    .meta { color:#666; font-size:12px; margin-top:5px; line-height:1.35; }
+    .tags { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .tag { display:inline-flex; align-items:center; font-size:10px; padding:3px 8px; border-radius:999px; white-space:nowrap; font-weight:750; letter-spacing:.02em; }
+    .tag-web { background:#e8f0fe; color:#1c69d4; }
+    .tag-email { background:#e6f4ea; color:#137333; }
+    .tag-specials { background:#fff3cd; color:#8a6100; }
+    .tag-service { background:#e6f4ea; color:#137333; }
+    .tag-evergreen { background:#f1f3f4; color:#444; }
+    .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:34px; padding:8px 11px; border-radius:8px; font-size:12px; font-weight:750; text-decoration:none; border:1px solid var(--line); }
+    .btn-preview { background:var(--blue); color:#fff; border-color:var(--blue); }
+    .btn-raw { background:#fff; color:#555; }
+    .btn-index { background:#f3f4f6; color:#555; }
+    .hidden { display:none !important; }
+    @media (max-width:790px) { .grid { grid-template-columns:1fr; } .item-top { flex-direction:column; } .tags { justify-content:flex-start; } .dealer-head { flex-direction:column; align-items:flex-start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Creative Review Dashboard</h1>
+    <p class="sub">One place to review finished web/content/specials pages and dealership email creative. Repos stay separate; this dashboard just makes everything easier to find.</p>
+    <div class="note"><strong>Preview</strong> opens the rendered page/email. <strong>Raw HTML</strong> opens the copy/paste source for Motiv or CRM. Motive tool buttons may only function after the web HTML is pasted into the live Motive site.</div>
+    <div class="actions" style="margin-top:14px;"><a class="btn btn-index" href="index.html">SEO/Web Index</a><a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/">Email Index</a></div>
+  </header>
+
+  <div class="toolbar" aria-label="Filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="audi-baton-rouge">Audi Baton Rouge</button>
+    <button class="filter" data-filter="brian-harris-bmw">Brian Harris BMW</button>
+    <button class="filter" data-filter="bmw-of-jackson">BMW of Jackson</button>
+    <button class="filter" data-filter="harris-porsche">Harris Porsche</button>
+    <button class="filter" data-filter="web">Web/SEO</button>
+    <button class="filter" data-filter="email">Email</button>
+    <button class="filter" data-filter="specials">Specials</button>
+    <button class="filter" data-filter="sales">Sales</button>
+    <button class="filter" data-filter="service">Service</button>
+  </div>
+
+  <section class="month"><h2>May / June 2026</h2><span>current campaign drafts</span></section>
+  <section class="dealer audi" data-store-section="audi-baton-rouge">
+    <div class="dealer-head"><h3>Audi Baton Rouge</h3><span>web + email campaign review</span></div>
+    <div class="grid">
+      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
+        <div class="item-top"><div><p class="title">Audi Loyalty Credit — Q5 &amp; Q7</p><p class="meta">Motiv web/content page · loyalty credit campaign</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
+        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">Raw HTML</a></div>
+      </article>
+      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
+        <div class="item-top"><div><p class="title">Audi Loyalty Credit in Baton Rouge</p><p class="meta">Motiv web/content page · original loyalty draft</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
+        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-loyalty-credit-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-baton-rouge.html">Raw HTML</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="month"><h2>April 2026</h2><span>sales/service email creative and specials pages</span></section>
+  <section class="dealer audi" data-store-section="audi-baton-rouge">
+    <div class="dealer-head"><h3>Audi Baton Rouge</h3><span>April email creative</span></div>
+    <div class="grid">
+      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">ABR April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-april-2026-sales-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-april-2026-sales-email.html">Raw HTML</a></div></article>
+      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="service"><div class="item-top"><div><p class="title">Audi Baton Rouge Service Specials</p><p class="meta">CRM-ready service email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-service">Service</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Service/audi-br-service-specials-stripo.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Service/audi-br-service-specials-stripo.html">Raw HTML</a></div></article>
+    </div>
+  </section>
+
+  <section class="dealer bmw" data-store-section="brian-harris-bmw">
+    <div class="dealer-head"><h3>Brian Harris BMW</h3><span>April email creative + evergreen web examples</span></div>
+    <div class="grid">
+      <article class="item" data-store="brian-harris-bmw" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">Brian Harris BMW April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-april-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-april-2026-email.html">Raw HTML</a></div></article>
+      <article class="item" data-store="brian-harris-bmw" data-kind="email" data-type="service"><div class="item-top"><div><p class="title">Brian Harris BMW Service Specials</p><p class="meta">CRM-ready service email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-service">Service</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Service/bh-bmw-service-specials-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Service/bh-bmw-service-specials-2026.html">Raw HTML</a></div></article>
+      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X3 vs Lexus RX</p><p class="meta">Motiv web/content page</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">Raw HTML</a></div></article>
+    </div>
+  </section>
+
+  <section class="dealer bmw" data-store-section="bmw-of-jackson">
+    <div class="dealer-head"><h3>BMW of Jackson</h3><span>April email creative + evergreen web examples</span></div>
+    <div class="grid">
+      <article class="item" data-store="bmw-of-jackson" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">BMW of Jackson April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-april-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-april-2026-email.html">Raw HTML</a></div></article>
+      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">New BMW X3 for Sale in Jackson, MS</p><p class="meta">Motiv web/content page</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/new-bmw-x3-jackson-ms.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/new-bmw-x3-jackson-ms.html">Raw HTML</a></div></article>
+    </div>
+  </section>
+
+  <section class="dealer porsche" data-store-section="harris-porsche">
+    <div class="dealer-head"><h3>Harris Porsche</h3><span>April web + email creative</span></div>
+    <div class="grid">
+      <article class="item" data-store="harris-porsche" data-kind="web" data-type="specials"><div class="item-top"><div><p class="title">Harris Porsche April 2026 Specials</p><p class="meta">Content/specials page</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div><div class="actions"><a class="btn btn-preview" href="Harris Porsche/harris-porsche-april-2026-specials.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/harris-porsche-april-2026-specials.html">Raw HTML</a></div></article>
+      <article class="item" data-store="harris-porsche" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">Harris Porsche April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-april-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-april-2026-email.html">Raw HTML</a></div></article>
+      <article class="item" data-store="harris-porsche" data-kind="email" data-type="service"><div class="item-top"><div><p class="title">Harris Porsche Birthday Email</p><p class="meta">CRM-ready service/retention email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-service">Service</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Service/harris-porsche-birthday-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Service/harris-porsche-birthday-email.html">Raw HTML</a></div></article>
+    </div>
+  </section>
+
+  <script>
+    const filters = document.querySelectorAll('.filter');
+    const items = document.querySelectorAll('.item');
+    const dealerSections = document.querySelectorAll('.dealer');
+    filters.forEach(btn => btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      items.forEach(item => {
+        const match = f === 'all' || item.dataset.store === f || item.dataset.kind === f || item.dataset.type === f;
+        item.classList.toggle('hidden', !match);
+      });
+      dealerSections.forEach(section => {
+        const visible = [...section.querySelectorAll('.item')].some(item => !item.classList.contains('hidden'));
+        section.classList.toggle('hidden', !visible);
+      });
+    }));
+  </script>
+</body>
+</html>
