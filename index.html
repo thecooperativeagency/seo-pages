@@ -5,103 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SEO Pages — The Cooperative Agency</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; background: #f9f9f9; color: #111; }
-    h1 { font-size: 1.5rem; border-bottom: 2px solid #1c69d4; padding-bottom: 10px; }
-    h2 { font-size: 1.05rem; color: #1c69d4; margin: 0 0 10px; }
-    .store { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
-    .links { list-style: none; padding: 0; margin: 0; }
-    .links li { margin: 7px 0; display: flex; align-items: center; gap: 8px; }
-    .links a { color: #1c69d4; text-decoration: none; font-size: 14px; }
-    .links a:hover { text-decoration: underline; }
-    .badge { font-size: 11px; background: #e8f0fe; color: #1c69d4; padding: 2px 8px; border-radius: 20px; margin-left: 8px; }
-    .tag { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 10px; white-space: nowrap; }
-    .tag-model { background: #e8f0fe; color: #1c69d4; }
-    .tag-vs { background: #fce8e6; color: #c5221f; }
-    .tag-decision { background: #e6f4ea; color: #137333; }
-    .tag-specials { background: #e6f4ea; color: #137333; }
-    .coming { color: #999; font-size: 13px; font-style: italic; margin: 4px 0 0; }
-    .raw { font-size: 11px; color: #999; margin-left: 4px; }
-    .raw a { color: #999; }
+    :root { --blue:#1c69d4; --ink:#111; --muted:#666; --line:#ddd; --bg:#f7f8fa; --card:#fff; }
+    * { box-sizing:border-box; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 1120px; margin: 36px auto; padding: 0 20px 60px; background: var(--bg); color: var(--ink); }
+    header { margin-bottom: 24px; }
+    h1 { font-size: clamp(1.5rem, 2.4vw, 2.2rem); margin: 0 0 8px; letter-spacing:-0.03em; }
+    .sub { color:var(--muted); font-size:14px; line-height:1.55; max-width:820px; margin:0; }
+    .note { margin-top:14px; padding:12px 14px; background:#fff8e1; border:1px solid #f0d27a; border-radius:10px; color:#5f4700; font-size:13px; line-height:1.45; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 28px; }
+    .filter { border:1px solid var(--line); background:#fff; color:#333; padding:8px 12px; border-radius:999px; font-size:13px; cursor:pointer; }
+    .filter.active { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .month { margin:28px 0 16px; display:flex; align-items:baseline; gap:10px; border-bottom:2px solid var(--blue); padding-bottom:9px; }
+    .month h2 { margin:0; font-size:1.12rem; color:var(--blue); }
+    .month span { color:#777; font-size:12px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .page-card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:12px; }
+    .page-top { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
+    .title { font-size:15px; font-weight:700; margin:0; line-height:1.3; }
+    .meta { color:#666; font-size:12px; margin-top:5px; line-height:1.35; }
+    .tags { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .tag { display:inline-flex; align-items:center; font-size:10px; padding:3px 8px; border-radius:999px; white-space:nowrap; font-weight:700; letter-spacing:.02em; }
+    .tag-specials { background:#e6f4ea; color:#137333; }
+    .tag-model { background:#e8f0fe; color:#1c69d4; }
+    .tag-vs { background:#fce8e6; color:#c5221f; }
+    .tag-decision { background:#fff3cd; color:#8a6100; }
+    .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:34px; padding:8px 11px; border-radius:8px; font-size:12px; font-weight:700; text-decoration:none; border:1px solid var(--line); }
+    .btn-preview { background:var(--blue); color:#fff; border-color:var(--blue); }
+    .btn-raw { background:#fff; color:#555; }
+    .btn-source { background:#f3f4f6; color:#555; }
+    .hidden { display:none !important; }
+    @media (max-width: 760px) { .grid { grid-template-columns:1fr; } .page-top { flex-direction:column; } .tags { justify-content:flex-start; } }
   </style>
 </head>
 <body>
-  <h1>🚗 SEO Pages — The Cooperative Agency</h1>
-  <p style="color:#666;font-size:14px;">All pages are content-only HTML (no wrappers). Paste raw HTML directly into Motive CMS HTML block.</p>
+  <header>
+    <h1>SEO / Motiv HTML Pages</h1>
+    <p class="sub">Preview finished content-only HTML pages, then use the Raw HTML link to copy/paste into a Motiv CMS HTML block. Preview links render the page visually. Raw links intentionally show source code.</p>
+    <div class="note"><strong>Important:</strong> If you want to review the finished page, click <strong>Preview</strong>. If you want code to paste into Motiv, click <strong>Raw HTML</strong>.</div>
+  </header>
 
-  <div class="store">
-    <h2>Brian Harris BMW <span class="badge">Baton Rouge, LA</span></h2>
-    <p style="font-size:12px;color:#666;margin:0 0 12px;">12 pages ready for review</p>
-
-    <p style="font-size:11px;font-weight:600;color:#727171;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 6px;">BMW 3 Series</p>
-    <ul class="links">
-      <li><a href="Brian Harris BMW/bmw-3-series-drivers-car-baton-rouge.html">The Last True Driver's Car Under $50K</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-3-series-drivers-car-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Brian Harris BMW/bmw-3-series-vs-mercedes-c-class-baton-rouge.html">BMW 3 Series vs Mercedes-Benz C-Class</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-3-series-vs-mercedes-c-class-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Brian Harris BMW/new-bmw-3-series-baton-rouge-la-v3.html">New BMW 3 Series for Sale in Baton Rouge</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-3-series-baton-rouge-la-v3.html">raw</a>)</span></li>
-    </ul>
-
-    <p style="font-size:11px;font-weight:600;color:#727171;text-transform:uppercase;letter-spacing:0.05em;margin:16px 0 6px;">BMW 4 Series</p>
-    <ul class="links">
-      <li><a href="Brian Harris BMW/new-bmw-4-series-baton-rouge-la.html">New BMW 4 Series for Sale in Baton Rouge</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-4-series-baton-rouge-la.html">raw</a>)</span></li>
-    </ul>
-
-    <p style="font-size:11px;font-weight:600;color:#727171;text-transform:uppercase;letter-spacing:0.05em;margin:16px 0 6px;">BMW 5 Series</p>
-    <ul class="links">
-      <li><a href="Brian Harris BMW/bmw-5-series-executive-baton-rouge.html">BMW 5 Series: The Executive Sedan Redefined</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-5-series-executive-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Brian Harris BMW/bmw-5-series-vs-mercedes-e-class-baton-rouge.html">BMW 5 Series vs Mercedes-Benz E-Class</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-5-series-vs-mercedes-e-class-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Brian Harris BMW/new-bmw-5-series-baton-rouge-la.html">New BMW 5 Series for Sale in Baton Rouge</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-5-series-baton-rouge-la.html">raw</a>)</span></li>
-    </ul>
-
-    <p style="font-size:11px;font-weight:600;color:#727171;text-transform:uppercase;letter-spacing:0.05em;margin:16px 0 6px;">BMW X3</p>
-    <ul class="links">
-      <li><a href="Brian Harris BMW/bmw-x3-sav-baton-rouge.html">The SAV That Does It All</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-sav-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Brian Harris BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">BMW X3 vs Lexus RX</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Brian Harris BMW/bmw-x3-vs-mercedes-glc-baton-rouge.html">BMW X3 vs Mercedes-Benz GLC</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-vs-mercedes-glc-baton-rouge.html">raw</a>)</span></li>
-    </ul>
-
-    <p style="font-size:11px;font-weight:600;color:#727171;text-transform:uppercase;letter-spacing:0.05em;margin:16px 0 6px;">BMW X5</p>
-    <ul class="links">
-      <li><a href="Brian Harris BMW/bmw-x5-sav-baton-rouge.html">BMW X5: Where Luxury Meets Capability</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x5-sav-baton-rouge.html">raw</a>)</span></li>
-    </ul>
-
-    <p style="font-size:11px;font-weight:600;color:#727171;text-transform:uppercase;letter-spacing:0.05em;margin:16px 0 6px;">BMW X7</p>
-    <ul class="links">
-      <li><a href="Brian Harris BMW/bmw-x7-flagship-baton-rouge.html">BMW X7: The Ultimate Statement in Luxury</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x7-flagship-baton-rouge.html">raw</a>)</span></li>
-    </ul>
+  <div class="toolbar" aria-label="Filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="audi-baton-rouge">Audi Baton Rouge</button>
+    <button class="filter" data-filter="brian-harris-bmw">Brian Harris BMW</button>
+    <button class="filter" data-filter="bmw-of-jackson">BMW of Jackson</button>
+    <button class="filter" data-filter="harris-porsche">Harris Porsche</button>
+    <button class="filter" data-filter="specials">Specials</button>
+    <button class="filter" data-filter="evergreen">Evergreen</button>
   </div>
 
-  <div class="store">
-    <h2>Audi Baton Rouge <span class="badge">Baton Rouge, LA</span></h2>
-    <p style="font-size:12px;color:#666;margin:0 0 12px;">5 pages ready for review</p>
-
-    <ul class="links">
-      <li><a href="Audi Baton Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">Audi Loyalty Credit — Q5 & Q7</a> <span class="tag tag-specials">Specials</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Audi Baton Rouge/audi-loyalty-credit-baton-rouge.html">Audi Loyalty Credit in Baton Rouge</a> <span class="tag tag-specials">Specials</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Audi Baton Rouge/audi-q5-vs-lexus-rx-baton-rouge.html">Audi Q5 vs Lexus RX</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q5-vs-lexus-rx-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Audi Baton Rouge/audi-q7-vs-lexus-tx-baton-rouge.html">Audi Q7 vs Lexus TX</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q7-vs-lexus-tx-baton-rouge.html">raw</a>)</span></li>
-      <li><a href="Audi Baton Rouge/audi-q7-vs-mercedes-gle-baton-rouge.html">Audi Q7 vs Mercedes-Benz GLE</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q7-vs-mercedes-gle-baton-rouge.html">raw</a>)</span></li>
-    </ul>
+  <section class="month" data-group="may-2026"><h2>May / June 2026 Campaign Pages</h2><span>monthly offers and specials</span></section>
+  <div class="grid">
+    <article class="page-card" data-store="audi-baton-rouge" data-type="specials" data-month="may-2026">
+      <div class="page-top"><div><p class="title">Audi Loyalty Credit — Q5 &amp; Q7</p><p class="meta">Audi Baton Rouge · Loyalty credit campaign · May 1 – June 30, 2026</p></div><div class="tags"><span class="tag tag-specials">Specials</span></div></div>
+      <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">Raw HTML</a></div>
+    </article>
+    <article class="page-card" data-store="audi-baton-rouge" data-type="specials" data-month="may-2026">
+      <div class="page-top"><div><p class="title">Audi Loyalty Credit in Baton Rouge</p><p class="meta">Audi Baton Rouge · Original loyalty credit draft</p></div><div class="tags"><span class="tag tag-specials">Specials</span></div></div>
+      <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-loyalty-credit-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-baton-rouge.html">Raw HTML</a></div>
+    </article>
   </div>
 
-  <div class="store">
-    <h2>Harris Porsche <span class="badge">Baton Rouge, LA</span></h2>
-    <p style="font-size:12px;color:#666;margin:0 0 12px;">1 page ready for review</p>
-
-    <ul class="links">
-      <li><a href="Harris Porsche/harris-porsche-april-2026-specials.html">Harris Porsche April 2026 Specials</a> <span class="tag tag-specials">Specials</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/harris-porsche-april-2026-specials.html">raw</a>)</span></li>
-    </ul>
+  <section class="month" data-group="april-2026"><h2>April 2026 Campaign Pages</h2><span>monthly offers and specials</span></section>
+  <div class="grid">
+    <article class="page-card" data-store="harris-porsche" data-type="specials" data-month="april-2026">
+      <div class="page-top"><div><p class="title">Harris Porsche April 2026 Specials</p><p class="meta">Harris Porsche · April specials page</p></div><div class="tags"><span class="tag tag-specials">Specials</span></div></div>
+      <div class="actions"><a class="btn btn-preview" href="Harris Porsche/harris-porsche-april-2026-specials.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/harris-porsche-april-2026-specials.html">Raw HTML</a></div>
+    </article>
   </div>
 
-  <div class="store">
-    <h2>BMW of Jackson <span class="badge">Jackson, MS</span></h2>
-    <p style="font-size:12px;color:#666;margin:0 0 12px;">5 pages ready for review</p>
-
-    <ul class="links">
-      <li><a href="BMW of Jackson/bmw-x3-vs-mercedes-glc-jackson.html">BMW X3 vs Mercedes-Benz GLC</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x3-vs-mercedes-glc-jackson.html">raw</a>)</span></li>
-      <li><a href="BMW of Jackson/bmw-x3-vs-audi-q5-jackson.html">BMW X3 vs Audi Q5</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x3-vs-audi-q5-jackson.html">raw</a>)</span></li>
-      <li><a href="BMW of Jackson/bmw-x5-vs-mercedes-gle-jackson.html">BMW X5 vs Mercedes-Benz GLE</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x5-vs-mercedes-gle-jackson.html">raw</a>)</span></li>
-      <li><a href="BMW of Jackson/bmw-3-series-vs-mercedes-c-class-jackson.html">BMW 3 Series vs Mercedes-Benz C-Class</a> <span class="tag tag-vs">vs</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-3-series-vs-mercedes-c-class-jackson.html">raw</a>)</span></li>
-      <li><a href="BMW of Jackson/new-bmw-x3-jackson-ms.html">New BMW X3 for Sale in Jackson, MS</a> <span class="tag tag-model">Model</span> <span class="raw">(<a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/new-bmw-x3-jackson-ms.html">raw</a>)</span></li>
-    </ul>
+  <section class="month" data-group="evergreen"><h2>Evergreen Content Pages</h2><span>model, comparison, and decision pages</span></section>
+  <div class="grid">
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">The Last True Driver's Car Under $50K</p><p class="meta">Brian Harris BMW · BMW 3 Series</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-3-series-drivers-car-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-3-series-drivers-car-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW 3 Series vs Mercedes-Benz C-Class</p><p class="meta">Brian Harris BMW · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-3-series-vs-mercedes-c-class-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-3-series-vs-mercedes-c-class-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">New BMW 3 Series for Sale in Baton Rouge</p><p class="meta">Brian Harris BMW · BMW 3 Series</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/new-bmw-3-series-baton-rouge-la-v3.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-3-series-baton-rouge-la-v3.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">New BMW 4 Series for Sale in Baton Rouge</p><p class="meta">Brian Harris BMW · BMW 4 Series</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/new-bmw-4-series-baton-rouge-la.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-4-series-baton-rouge-la.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">BMW 5 Series: The Executive Sedan Redefined</p><p class="meta">Brian Harris BMW · BMW 5 Series</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-5-series-executive-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-5-series-executive-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW 5 Series vs Mercedes-Benz E-Class</p><p class="meta">Brian Harris BMW · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-5-series-vs-mercedes-e-class-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-5-series-vs-mercedes-e-class-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">New BMW 5 Series for Sale in Baton Rouge</p><p class="meta">Brian Harris BMW · BMW 5 Series</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/new-bmw-5-series-baton-rouge-la.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-5-series-baton-rouge-la.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">The SAV That Does It All</p><p class="meta">Brian Harris BMW · BMW X3</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x3-sav-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-sav-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW X3 vs Lexus RX</p><p class="meta">Brian Harris BMW · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW X3 vs Mercedes-Benz GLC</p><p class="meta">Brian Harris BMW · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x3-vs-mercedes-glc-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-vs-mercedes-glc-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">BMW X5: Where Luxury Meets Capability</p><p class="meta">Brian Harris BMW · BMW X5</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x5-sav-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x5-sav-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="brian-harris-bmw" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">BMW X7: The Ultimate Statement in Luxury</p><p class="meta">Brian Harris BMW · BMW X7</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x7-flagship-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x7-flagship-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="audi-baton-rouge" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">Audi Q5 vs Lexus RX</p><p class="meta">Audi Baton Rouge · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q5-vs-lexus-rx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q5-vs-lexus-rx-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="audi-baton-rouge" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">Audi Q7 vs Lexus TX</p><p class="meta">Audi Baton Rouge · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q7-vs-lexus-tx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q7-vs-lexus-tx-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="audi-baton-rouge" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">Audi Q7 vs Mercedes-Benz GLE</p><p class="meta">Audi Baton Rouge · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q7-vs-mercedes-gle-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q7-vs-mercedes-gle-baton-rouge.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="bmw-of-jackson" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW X3 vs Mercedes-Benz GLC</p><p class="meta">BMW of Jackson · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x3-vs-mercedes-glc-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x3-vs-mercedes-glc-jackson.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="bmw-of-jackson" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW X3 vs Audi Q5</p><p class="meta">BMW of Jackson · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x3-vs-audi-q5-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x3-vs-audi-q5-jackson.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="bmw-of-jackson" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW X5 vs Mercedes-Benz GLE</p><p class="meta">BMW of Jackson · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x5-vs-mercedes-gle-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x5-vs-mercedes-gle-jackson.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="bmw-of-jackson" data-type="evergreen vs" data-month="evergreen"><div class="page-top"><div><p class="title">BMW 3 Series vs Mercedes-Benz C-Class</p><p class="meta">BMW of Jackson · Comparison</p></div><div class="tags"><span class="tag tag-vs">vs</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-3-series-vs-mercedes-c-class-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-3-series-vs-mercedes-c-class-jackson.html">Raw HTML</a></div></article>
+    <article class="page-card" data-store="bmw-of-jackson" data-type="evergreen model" data-month="evergreen"><div class="page-top"><div><p class="title">New BMW X3 for Sale in Jackson, MS</p><p class="meta">BMW of Jackson · BMW X3</p></div><div class="tags"><span class="tag tag-model">Model</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/new-bmw-x3-jackson-ms.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/new-bmw-x3-jackson-ms.html">Raw HTML</a></div></article>
   </div>
+
+  <script>
+    const filters = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.page-card');
+    filters.forEach(btn => btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(card => {
+        const match = f === 'all' || card.dataset.store === f || (card.dataset.type || '').split(' ').includes(f) || card.dataset.month === f;
+        card.classList.toggle('hidden', !match);
+      });
+    }));
+  </script>
 </body>
 </html>
