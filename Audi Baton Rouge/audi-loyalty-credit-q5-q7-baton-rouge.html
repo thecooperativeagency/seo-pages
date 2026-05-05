@@ -115,8 +115,8 @@
     <div class="abr-motive-row">
       <a class="GroupCTA-module-scss-module__8ELkBa__button ccc-grp-cta GroupCTA-module-scss-module__8ELkBa__button--glass" target="_self" draggable="false" tabindex="0" href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D"><div class="GroupCTA-module-scss-module__8ELkBa__ctn"><i class="Icon-module-scss-module__row4fW__dynamicIcon ccc-ico GroupCTA-module-scss-module__8ELkBa__icon" data-wg-notranslate="true" aria-hidden="true" data-icon="auto_awesome"></i><span class="Text-module-scss-module__Iw40ma__textContent">Shop New Inventory</span></div></a>
       <a class="GroupCTA-module-scss-module__8ELkBa__button ccc-grp-cta GroupCTA-module-scss-module__8ELkBa__button--glass" target="_self" draggable="false" tabindex="0" href="https://audibatonrouge.com/value-my-trade"><div class="GroupCTA-module-scss-module__8ELkBa__ctn"><i class="Icon-module-scss-module__row4fW__dynamicIcon ccc-ico GroupCTA-module-scss-module__8ELkBa__icon" data-wg-notranslate="true" aria-hidden="true" data-icon="sync"></i><span class="Text-module-scss-module__Iw40ma__textContent">Value My Trade</span></div></a>
-      <button class="GroupCTA-module-scss-module__8ELkBa__button ccc-grp-cta GroupCTA-module-scss-module__8ELkBa__button--glass" type="button"><div class="GroupCTA-module-scss-module__8ELkBa__ctn"><i class="Icon-module-scss-module__row4fW__dynamicIcon ccc-ico GroupCTA-module-scss-module__8ELkBa__icon" data-wg-notranslate="true" aria-hidden="true" data-icon="monetization_on"></i><span class="Text-module-scss-module__Iw40ma__textContent">Get Pre-Qualified</span></div></button>
-      <button aria-label="Schedule An Appointment" class="GroupCTA-module-scss-module__8ELkBa__button ccc-grp-cta GroupCTA-module-scss-module__8ELkBa__button--glass" type="button"><div class="GroupCTA-module-scss-module__8ELkBa__ctn"><i class="Icon-module-scss-module__row4fW__dynamicIcon ccc-ico GroupCTA-module-scss-module__8ELkBa__icon" data-wg-notranslate="true" aria-hidden="true" data-icon="calendar_add_on"></i><span class="Text-module-scss-module__Iw40ma__textContent">Schedule Appointment</span></div></button>
+      <a class="GroupCTA-module-scss-module__8ELkBa__button ccc-grp-cta GroupCTA-module-scss-module__8ELkBa__button--glass" target="_self" draggable="false" tabindex="0" href="https://audibatonrouge.com/get-pre-qualified" onclick="return window.abrMotiveCta ? window.abrMotiveCta('pre-qualify', this) : true;"><div class="GroupCTA-module-scss-module__8ELkBa__ctn"><i class="Icon-module-scss-module__row4fW__dynamicIcon ccc-ico GroupCTA-module-scss-module__8ELkBa__icon" data-wg-notranslate="true" aria-hidden="true" data-icon="monetization_on"></i><span class="Text-module-scss-module__Iw40ma__textContent">Get Pre-Qualified</span></div></a>
+      <a aria-label="Schedule An Appointment" class="GroupCTA-module-scss-module__8ELkBa__button ccc-grp-cta GroupCTA-module-scss-module__8ELkBa__button--glass" target="_self" draggable="false" tabindex="0" href="https://audibatonrouge.com/contact" onclick="return window.abrMotiveCta ? window.abrMotiveCta('test-drive', this) : true;"><div class="GroupCTA-module-scss-module__8ELkBa__ctn"><i class="Icon-module-scss-module__row4fW__dynamicIcon ccc-ico GroupCTA-module-scss-module__8ELkBa__icon" data-wg-notranslate="true" aria-hidden="true" data-icon="calendar_add_on"></i><span class="Text-module-scss-module__Iw40ma__textContent">Schedule Appointment</span></div></a>
     </div>
   </div>
 </section>
@@ -183,10 +183,29 @@
     <div class="abr-btn-row">
       <a href="https://audibatonrouge.com/cars/new-q5s" class="abr-btn-primary">Shop Q5</a>
       <a href="https://audibatonrouge.com/cars/new-q7s" class="abr-btn-secondary">Shop Q7</a>
-      <button aria-label="Get Pre-Qualified" class="abr-btn-secondary" type="button">Get Pre-Qualified</button>
+      <a href="https://audibatonrouge.com/get-pre-qualified" onclick="return window.abrMotiveCta ? window.abrMotiveCta('pre-qualify', this) : true;" aria-label="Get Pre-Qualified" class="abr-btn-secondary">Get Pre-Qualified</a>
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  function textOf(el) { return (el && (el.innerText || el.textContent || el.getAttribute('aria-label')) || '').replace(/\s+/g, ' ').trim().toLowerCase(); }
+  function clickNativeButton(pattern, source) {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('button'));
+    var native = buttons.find(function (button) {
+      return button !== source && !button.closest('.abr-loyalty-page') && pattern.test(textOf(button));
+    });
+    if (native) { native.click(); return true; }
+    return false;
+  }
+  window.abrMotiveCta = function (kind, source) {
+    if (kind === 'pre-qualify' && clickNativeButton(/get pre-qualified|pre-qualify/, source)) return false;
+    if (kind === 'test-drive' && clickNativeButton(/schedule (an appointment|a test drive|appointment)|test drive/, source)) return false;
+    return true;
+  };
+})();
+</script>
 
 <section class="abr-section-tight abr-dark" style="border-top:1px solid #4D4D4D;">
   <div class="abr-wrap">
