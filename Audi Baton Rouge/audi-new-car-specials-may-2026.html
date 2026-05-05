@@ -1,0 +1,191 @@
+<div class="abr-specials-page">
+<style>
+  .abr-specials-page * { box-sizing:border-box; }
+  .abr-specials-page {
+    --abr-black:#000;
+    --abr-ink:#0b0b0b;
+    --abr-elevated:#111;
+    --abr-card:#171717;
+    --abr-border:#444;
+    --abr-white:#fff;
+    --abr-muted:#bdbdbd;
+    --abr-soft:#e8e8e8;
+    font-family:Audi,"AudiType",Arial,sans-serif;
+    color:var(--abr-white);
+    background:var(--abr-black);
+  }
+  .abr-specials-page .abr-wrap { max-width:1120px; margin:0 auto; width:100%; }
+  .abr-specials-page .abr-eyebrow { margin:0 0 12px; color:var(--abr-muted); font-size:11px; line-height:1.4; letter-spacing:.16em; text-transform:uppercase; font-weight:700; }
+  .abr-specials-page h1,
+  .abr-specials-page h2,
+  .abr-specials-page h3,
+  .abr-specials-page p { margin-top:0; }
+  .abr-specials-page .abr-h1 { margin:0; max-width:900px; font-size:clamp(3rem,7vw,6.75rem); line-height:.92; letter-spacing:-.07em; font-weight:700; }
+  .abr-specials-page .abr-h2 { margin:0; font-size:clamp(2rem,4vw,4rem); line-height:.96; letter-spacing:-.055em; font-weight:700; }
+  .abr-specials-page .abr-h3 { margin:0; font-size:clamp(1.35rem,2.1vw,2.1rem); line-height:1.05; letter-spacing:-.035em; font-weight:700; }
+  .abr-specials-page .abr-body-lg { max-width:820px; color:var(--abr-soft); font-size:clamp(1.08rem,1.9vw,1.42rem); line-height:1.52; }
+  .abr-specials-page .abr-body { color:#d6d6d6; font-size:16px; line-height:1.62; }
+  .abr-specials-page .abr-section { padding:76px 40px; }
+  .abr-specials-page .abr-section-tight { padding:44px 40px; }
+  .abr-specials-page .abr-dark { background:#000; }
+  .abr-specials-page .abr-elevated { background:#151515; }
+  .abr-specials-page .abr-grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; align-items:stretch; }
+  .abr-specials-page .abr-grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+  .abr-specials-page .abr-offer-card { background:#101010; border:1px solid var(--abr-border); min-height:100%; display:flex; flex-direction:column; overflow:hidden; }
+  .abr-specials-page .abr-card-media { min-height:260px; background:#050505; position:relative; overflow:hidden; }
+  .abr-specials-page .abr-card-media img { width:100%; height:100%; min-height:260px; display:block; object-fit:cover; opacity:.9; }
+  .abr-specials-page .abr-card-media-label { position:absolute; inset:auto 24px 22px 24px; z-index:2; font-size:clamp(2.4rem,4vw,4.7rem); line-height:.9; letter-spacing:-.07em; font-weight:700; color:#fff; }
+  .abr-specials-page .abr-card-content { padding:30px; display:flex; flex-direction:column; flex:1; }
+  .abr-specials-page .abr-label { margin:0 0 10px; color:var(--abr-muted); font-size:12px; text-transform:uppercase; letter-spacing:.14em; font-weight:700; }
+  .abr-specials-page .abr-amount { margin:0 0 12px; font-size:clamp(2.75rem,4.3vw,5.2rem); line-height:.88; letter-spacing:-.065em; font-weight:700; color:#fff; }
+  .abr-specials-page .abr-meta { margin:0 0 18px; color:#f4f4f4; font-size:17px; line-height:1.45; font-weight:700; }
+  .abr-specials-page .abr-divider { border-top:1px solid var(--abr-border); margin-top:24px; padding-top:22px; }
+  .abr-specials-page .abr-btn-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+  .abr-specials-page .abr-btn-primary,
+  .abr-specials-page .abr-btn-secondary,
+  .abr-specials-page .abr-btn-compact {
+    display:inline-flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; border-radius:0;
+    font-family:Audi,"AudiType",Arial,sans-serif; font-weight:700; cursor:pointer;
+  }
+  .abr-specials-page .abr-btn-primary,
+  .abr-specials-page .abr-btn-secondary { min-height:52px; padding:14px 28px; font-size:16px; }
+  .abr-specials-page .abr-btn-primary { background:#fff; color:#000; border:2px solid #fff; }
+  .abr-specials-page .abr-btn-secondary { background:transparent; color:#fff; border:2px solid #fff; }
+  .abr-specials-page .abr-model-shop-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; max-width:940px; }
+  .abr-specials-page .abr-btn-compact { min-height:42px; padding:10px 16px; font-size:14px; background:rgba(0,0,0,.22); color:#fff; border:1.5px solid rgba(255,255,255,.76); }
+  .abr-specials-page .abr-stat { border-top:2px solid #fff; padding-top:20px; }
+  .abr-specials-page .abr-stat strong { display:block; margin-bottom:8px; font-size:28px; line-height:1; letter-spacing:-.04em; color:#fff; }
+  .abr-specials-page .abr-fineprint { margin:0; color:#bdbdbd; font-size:12px; line-height:1.65; }
+  @media (max-width:980px) {
+    .abr-specials-page .abr-grid-2,
+    .abr-specials-page .abr-grid-3 { grid-template-columns:1fr; }
+  }
+  @media (max-width:640px) {
+    .abr-specials-page .abr-section,
+    .abr-specials-page .abr-section-tight { padding-left:18px; padding-right:18px; }
+    .abr-specials-page .abr-card-content { padding:24px; }
+    .abr-specials-page .abr-h1 { font-size:clamp(2.35rem,12vw,3.85rem); }
+    .abr-specials-page .abr-h2 { font-size:clamp(1.9rem,9vw,2.85rem); }
+  }
+</style>
+
+<section style="position:relative;min-height:650px;display:flex;align-items:flex-end;background:#000;overflow:hidden;">
+  <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-baton-rouge-drone-hero.jpg" alt="Audi Baton Rouge dealership" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62;" />
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.74) 50%,rgba(0,0,0,.25) 100%);"></div>
+  <div class="abr-wrap" style="position:relative;z-index:2;padding:118px 40px 58px;">
+    <p class="abr-eyebrow">Audi Baton Rouge &middot; May 2026 New Audi Specials</p>
+    <h1 class="abr-h1">May savings are here.</h1>
+    <p class="abr-body-lg" style="margin-top:24px;">Shop current Audi Baton Rouge offers on select new Audi models, including up to $11,000 off, low APR opportunities, and featured lease payments on in-stock inventory.</p>
+    <div class="abr-btn-row">
+      <a href="https://audibatonrouge.com/cars/new-q5s" class="abr-btn-primary">Shop New Q5</a>
+      <a href="https://audibatonrouge.com/cars/new-q7s" class="abr-btn-secondary">Shop New Q7</a>
+    </div>
+    <div class="abr-model-shop-row" aria-label="Shop May Audi specials">
+      <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="abr-btn-compact">Shop New Inventory</a>
+      <a href="https://audibatonrouge.com/cars/a5" class="abr-btn-compact">Shop A5</a>
+      <a href="https://audibatonrouge.com/cars/a6" class="abr-btn-compact">Shop A6</a>
+      <a href="https://audibatonrouge.com/collections/new-q8s" class="abr-btn-compact">Shop Q8</a>
+    </div>
+  </div>
+</section>
+
+<section class="abr-section-tight abr-dark">
+  <div class="abr-wrap">
+    <p class="abr-body-lg">The current Audi Baton Rouge specials page features strong May opportunities on the Q5, A5, Q7, and Q8, plus easy shopping paths for A6 and all new Audi inventory. Offers may require approved credit and may include conditional dealer or Audi Credit incentives.</p>
+  </div>
+</section>
+
+<section class="abr-section abr-elevated">
+  <div class="abr-wrap">
+    <p class="abr-eyebrow">Featured May offers</p>
+    <h2 class="abr-h2" style="max-width:860px;margin-bottom:18px;">Big savings, focused inventory, simple paths to shop.</h2>
+    <p class="abr-body-lg" style="margin-bottom:36px;">Start with the models that have the strongest current availability: Q5, Q7, A5, Q8, and A6. The featured amounts below reflect the current Audi Baton Rouge specials page and may vary by VIN, trim, and final eligibility.</p>
+
+    <div class="abr-grid-2">
+      <article class="abr-offer-card">
+        <div class="abr-card-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-front-clubhouse.jpg" alt="2026 Audi Q5" /><div class="abr-card-media-label">Q5</div></div>
+        <div class="abr-card-content">
+          <p class="abr-label">19 in stock</p>
+          <div class="abr-amount">Up to $6,000 off</div>
+          <p class="abr-meta">Or 3.99% APR up to 72 months on select new Audi Q5 models.</p>
+          <p class="abr-body">The redesigned Q5 is the volume leader for this month: strong availability, a meaningful discount opportunity, and a featured lease path on select 2025 models.</p>
+          <div class="abr-divider"><p class="abr-body"><strong>Featured lease:</strong> 2025 Audi Q5 for $695/month with $4,000 due at signing for 36 months, 10,000 miles per year.</p></div>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/new-q5s" class="abr-btn-primary">Shop Q5 Inventory</a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q7-front-urban.jpg" alt="2026 Audi Q7" /><div class="abr-card-media-label">Q7</div></div>
+        <div class="abr-card-content">
+          <p class="abr-label">17 in stock</p>
+          <div class="abr-amount">Over $11,000 off</div>
+          <p class="abr-meta">Available on select new Audi Q7 inventory.</p>
+          <p class="abr-body">For shoppers who want three-row space, quattro confidence, and a luxury SUV that still feels unmistakably Audi, Q7 carries one of the strongest current savings messages on the page.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/new-q7s" class="abr-btn-primary">Shop Q7 Inventory</a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media"><img src="https://images.app.ridemotive.com/9q52gtgj464y8p09r3zwqph2koqc" alt="Audi A5 at Audi Baton Rouge" /><div class="abr-card-media-label">A5</div></div>
+        <div class="abr-card-content">
+          <p class="abr-label">4 in stock</p>
+          <div class="abr-amount">Up to $6,000 off</div>
+          <p class="abr-meta">Or 2.99% APR up to 72 months on select new Audi A5 models.</p>
+          <p class="abr-body">The A5 brings the sport-sedan feel into a fresh Audi design language, with both purchase and lease messages worth surfacing while inventory is available.</p>
+          <div class="abr-divider"><p class="abr-body"><strong>Featured lease:</strong> 2025 Audi A5 for $593/month with $2,500 due at signing for 36 months, 10,000 miles per year.</p></div>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/a5" class="abr-btn-primary">Shop A5 Inventory</a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media"><img src="https://images.app.ridemotive.com/wl9x00lh78jf6y32dgn12u9i0y6t" alt="Audi Q8 at Audi Baton Rouge" /><div class="abr-card-media-label">Q8</div></div>
+        <div class="abr-card-content">
+          <p class="abr-label">16 in stock</p>
+          <div class="abr-amount">Over $10,000 off</div>
+          <p class="abr-meta">Available on select new Audi Q8 inventory.</p>
+          <p class="abr-body">Q8 gives the page a flagship SUV anchor: bold design, premium presence, and deep current savings for shoppers who want something more distinctive than the usual three-row SUV.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/collections/new-q8s" class="abr-btn-primary">Shop Q8 Inventory</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="abr-section abr-dark">
+  <div class="abr-wrap">
+    <p class="abr-eyebrow">More ways to shop</p>
+    <h2 class="abr-h2" style="max-width:820px;margin-bottom:32px;">Keep the page focused, but do not make shoppers hunt.</h2>
+    <div class="abr-grid-3">
+      <div class="abr-stat"><strong>A6</strong><p class="abr-body">A6 inventory is limited right now, but it belongs on the page as an easy shopping path for sedan buyers.</p><div class="abr-btn-row"><a href="https://audibatonrouge.com/cars/a6" class="abr-btn-secondary">Shop A6</a></div></div>
+      <div class="abr-stat"><strong>All New Audi</strong><p class="abr-body">For shoppers who are flexible on model, send them straight to the full new Audi inventory view.</p><div class="abr-btn-row"><a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="abr-btn-secondary">Shop New Inventory</a></div></div>
+      <div class="abr-stat"><strong>Audi Baton Rouge</strong><p class="abr-body">Offers, availability, and final eligibility can change by VIN. Audi Baton Rouge can confirm the exact numbers on the vehicle you choose.</p><div class="abr-btn-row"><a href="https://audibatonrouge.com/audi-baton-rouge-special-offers" class="abr-btn-secondary">Current Specials</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="position:relative;padding:112px 40px;background-image:url('https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-pair-flag.jpg');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.92));"></div>
+  <div class="abr-wrap" style="position:relative;z-index:2;max-width:860px;">
+    <p class="abr-eyebrow">May 2026 new Audi specials</p>
+    <h2 class="abr-h2" style="margin-bottom:18px;">Find the Audi that fits the offer.</h2>
+    <p class="abr-body-lg">Shop Q5, Q7, A5, A6, Q8, or browse every new Audi available at Audi Baton Rouge.</p>
+    <div class="abr-btn-row" style="margin-top:28px;">
+      <a href="https://audibatonrouge.com/cars/new-q5s" class="abr-btn-primary">Shop New Q5</a>
+      <a href="https://audibatonrouge.com/cars/new-q7s" class="abr-btn-secondary">Shop New Q7</a>
+    </div>
+    <div class="abr-model-shop-row" aria-label="Shop May Audi specials">
+      <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="abr-btn-compact">Shop New Inventory</a>
+      <a href="https://audibatonrouge.com/cars/a5" class="abr-btn-compact">Shop A5</a>
+      <a href="https://audibatonrouge.com/cars/a6" class="abr-btn-compact">Shop A6</a>
+      <a href="https://audibatonrouge.com/collections/new-q8s" class="abr-btn-compact">Shop Q8</a>
+    </div>
+  </div>
+</section>
+
+<section class="abr-section-tight abr-dark" style="border-top:1px solid #4D4D4D;">
+  <div class="abr-wrap">
+    <p class="abr-eyebrow">Disclosures</p>
+    <p class="abr-fineprint">May 2026 special offer information is based on the current Audi Baton Rouge special-offers page and is subject to change without notice. Offers apply to select new, in-stock Audi models only. Advertised savings may vary by model, trim, VIN, inventory availability, dealer discount, manufacturer incentive, and customer eligibility. Lease and finance examples require approved credit through participating lender or Audi Financial Services; not all customers will qualify. Lease examples shown: 2025 Audi Q5 at $695/month for 36 months with $4,000 due at signing and 10,000 miles per year; 2025 Audi A5 at $593/month for 36 months with $2,500 due at signing and 10,000 miles per year. Payments exclude tax, title, license, registration, dealer fees, optional equipment, insurance, and any other required fees unless otherwise stated. APR examples shown on select models include 3.99% APR up to 72 months on select new Audi Q5 models and 2.99% APR up to 72 months on select new Audi A5 models. Maximum discounts may require conditional Audi Credit or other qualifying incentives. Some exclusions apply. See Audi Baton Rouge for complete details, current inventory, final pricing, and eligibility. Audi Baton Rouge &middot; 11955 Airline Hwy, Baton Rouge, LA 70816.</p>
+  </div>
+</section>
+</div>
