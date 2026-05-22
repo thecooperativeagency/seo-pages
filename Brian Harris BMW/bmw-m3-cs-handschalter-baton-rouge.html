@@ -1,0 +1,307 @@
+<div class="bh-m3cs-page">
+<style>
+  .bh-m3cs-page * { box-sizing: border-box; }
+  .bh-m3cs-page {
+    --bg: #070707;
+    --panel: #111214;
+    --panel-2: #17191c;
+    --line: #2a2e33;
+    --text: #ffffff;
+    --soft: #e7e8ea;
+    --muted: #aab0b7;
+    --blue: #1c69d4;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .bh-m3cs-page a { color: inherit; text-decoration: none; }
+  .bh-m3cs-page .bh-wrap { width: min(1040px, calc(100% - 36px)); margin: 0 auto; }
+  .bh-m3cs-page .bh-section { padding: 44px 0; }
+  .bh-m3cs-page .bh-eyebrow {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .bh-m3cs-page .bh-h1,
+  .bh-m3cs-page .bh-h2,
+  .bh-m3cs-page .bh-h3,
+  .bh-m3cs-page p,
+  .bh-m3cs-page ul { margin-top: 0; }
+  .bh-m3cs-page .bh-h1 {
+    margin-bottom: 0;
+    max-width: 860px;
+    font-size: clamp(2.6rem, 6vw, 5.1rem);
+    line-height: .92;
+    letter-spacing: -.06em;
+    font-weight: 700;
+  }
+  .bh-m3cs-page .bh-h2 {
+    margin-bottom: 0;
+    font-size: clamp(1.9rem, 4vw, 3.1rem);
+    line-height: .98;
+    letter-spacing: -.05em;
+    font-weight: 700;
+  }
+  .bh-m3cs-page .bh-h3 {
+    margin-bottom: 0;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    line-height: 1.08;
+    letter-spacing: -.03em;
+    font-weight: 700;
+  }
+  .bh-m3cs-page .bh-body-lg {
+    max-width: 760px;
+    color: var(--soft);
+    font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+    line-height: 1.62;
+  }
+  .bh-m3cs-page .bh-body {
+    color: #d4d7db;
+    font-size: 16px;
+    line-height: 1.72;
+  }
+  .bh-m3cs-page .bh-hero-copy { padding: 56px 0 26px; }
+  .bh-m3cs-page .bh-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .bh-m3cs-page .bh-btn,
+  .bh-m3cs-page .bh-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 14px 24px;
+    border: 2px solid transparent;
+    font-size: 15px;
+    font-weight: 700;
+    transition: opacity .2s ease;
+  }
+  .bh-m3cs-page .bh-btn:hover,
+  .bh-m3cs-page .bh-btn-secondary:hover { opacity: .9; }
+  .bh-m3cs-page .bh-btn {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+  .bh-m3cs-page .bh-btn-secondary {
+    background: transparent;
+    border-color: rgba(255,255,255,.55);
+    color: #fff;
+  }
+  .bh-m3cs-page .bh-proof {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .bh-m3cs-page .bh-proof-item {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 16px 18px;
+  }
+  .bh-m3cs-page .bh-proof-label {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .bh-m3cs-page .bh-proof-value {
+    margin: 0;
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+  .bh-m3cs-page .bh-frame,
+  .bh-m3cs-page .bh-image-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+  }
+  .bh-m3cs-page .bh-frame img,
+  .bh-m3cs-page .bh-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .bh-m3cs-page .bh-band {
+    background: linear-gradient(180deg, #0a0b0d 0%, #101317 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .bh-m3cs-page .bh-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    gap: 24px;
+    align-items: start;
+  }
+  .bh-m3cs-page .bh-list {
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .bh-m3cs-page .bh-list li {
+    margin: 0;
+    padding: 16px 0 16px 24px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    position: relative;
+    color: #d4d7db;
+    font-size: 16px;
+    line-height: 1.68;
+  }
+  .bh-m3cs-page .bh-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: var(--blue);
+    font-size: 18px;
+    line-height: 1;
+  }
+  .bh-m3cs-page .bh-list strong { color: #fff; }
+  .bh-m3cs-page .bh-stack {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .bh-m3cs-page .bh-caption {
+    margin: 0;
+    padding: 16px 18px 18px;
+    color: #d7d9dd;
+    font-size: 15px;
+    line-height: 1.58;
+  }
+  .bh-m3cs-page .bh-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+  }
+  .bh-m3cs-page .bh-cta { padding: 34px; }
+  .bh-m3cs-page .bh-fineprint {
+    margin: 22px 0 0;
+    color: #aeb4bb;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  @media (max-width: 900px) {
+    .bh-m3cs-page .bh-grid,
+    .bh-m3cs-page .bh-mini-grid {
+      grid-template-columns: 1fr;
+    }
+    .bh-m3cs-page .bh-proof {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 360px) {
+    .bh-m3cs-page .bh-proof {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    .bh-m3cs-page .bh-wrap { width: min(1040px, calc(100% - 28px)); }
+    .bh-m3cs-page .bh-section { padding: 34px 0; }
+    .bh-m3cs-page .bh-hero-copy { padding: 42px 0 20px; }
+    .bh-m3cs-page .bh-proof-item,
+    .bh-m3cs-page .bh-cta { padding: 18px; }
+  }
+</style>
+
+<section class="bh-section">
+  <div class="bh-wrap">
+    <div class="bh-hero-copy">
+      <p class="bh-eyebrow">Brian Harris BMW · BMW 2027 M3 CS Handschalter · Baton Rouge</p>
+      <h1 class="bh-h1">2 open BMW 2027 M3 CS Handschalter slots.</h1>
+      <p class="bh-body-lg" style="margin:22px 0 0;">Brian Harris BMW currently has two open opportunities on the BMW 2027 M3 CS Handschalter. If you want the manual-transmission special edition M3 done the right way, this is the window.</p>
+      <div class="bh-btn-row">
+        <a href="https://brianharrisbmw.com/contact" class="bh-btn">Contact Brian Harris BMW</a>
+        <a href="https://brianharrisbmw.com/new-bmw-specials" class="bh-btn-secondary">View New BMW Specials</a>
+      </div>
+      <div class="bh-proof">
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">Open slots</p>
+          <p class="bh-proof-value">2 available now</p>
+        </div>
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">Transmission</p>
+          <p class="bh-proof-value">Manual Handschalter spec</p>
+        </div>
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">Shown here</p>
+          <p class="bh-proof-value">BMW Individual Imola Red</p>
+        </div>
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">Contact path</p>
+          <p class="bh-proof-value">Brian Harris BMW</p>
+        </div>
+      </div>
+    </div>
+    <div class="bh-frame">
+      <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m3cs-handschalter-hero-imola-red.jpg" alt="BMW 2027 M3 CS Handschalter in BMW Individual Imola Red" />
+    </div>
+  </div>
+</section>
+
+<section class="bh-section bh-band">
+  <div class="bh-wrap bh-grid">
+    <div>
+      <p class="bh-eyebrow">Why act now</p>
+      <h2 class="bh-h2">Lock in the spec you actually want.</h2>
+      <p class="bh-body" style="margin:20px 0 0;">A car like this is not about waiting around for something close. The opportunity is being able to secure the right M3 CS Handschalter while Brian Harris BMW still has real access to it.</p>
+      <ul class="bh-list">
+        <li><strong>Two open slots are currently available</strong> for Brian Harris BMW buyers.</li>
+        <li><strong>The Handschalter format is the reason this campaign exists,</strong> not a minor trim detail buried in the spec sheet.</li>
+        <li><strong>BMW Individual Imola Red is shown here,</strong> and additional finishes are available.</li>
+      </ul>
+    </div>
+    <div class="bh-image-card">
+      <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m3cs-handschalter-front-detail.jpg" alt="BMW 2027 M3 CS Handschalter front-end detail" />
+    </div>
+  </div>
+</section>
+
+<section class="bh-section">
+  <div class="bh-wrap">
+    <p class="bh-eyebrow">Inside the Handschalter</p>
+    <h2 class="bh-h2">This is why the Handschalter matters.</h2>
+    <p class="bh-body-lg" style="margin:18px 0 0; max-width:680px;">The center-console and cockpit details make the point immediately. This version is for the buyer who wants the M3 CS experience with a real manual in the middle of it.</p>
+    <div class="bh-stack">
+      <div class="bh-image-card">
+        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m3cs-handschalter-center-console.jpg" alt="BMW 2027 M3 CS Handschalter center console and shifter" />
+      </div>
+      <div class="bh-mini-grid">
+        <div class="bh-image-card">
+          <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m3cs-handschalter-bucket-seats.jpg" alt="BMW 2027 M3 CS Handschalter bucket seats" />
+        </div>
+        <div class="bh-image-card">
+          <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m3cs-handschalter-rear-action.jpg" alt="BMW 2027 M3 CS Handschalter rear action view" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bh-section bh-band">
+  <div class="bh-wrap">
+    <div class="bh-frame bh-cta">
+      <p class="bh-eyebrow">Brian Harris BMW · Baton Rouge, Louisiana</p>
+      <h2 class="bh-h2">When these two slots are gone, they are gone.</h2>
+      <p class="bh-body-lg" style="margin:20px 0 0;">If the BMW 2027 M3 CS Handschalter is the version you have been waiting for, now is the time to start the conversation with Brian Harris BMW.</p>
+      <div class="bh-btn-row">
+        <a href="https://brianharrisbmw.com/contact" class="bh-btn">Start your M3 CS conversation</a>
+        <a href="https://brianharrisbmw.com/new-bmw-specials" class="bh-btn-secondary">See current BMW specials</a>
+      </div>
+      <p class="bh-fineprint">Campaign details shown here are based on Brian Harris BMW's current two-slot M3 CS Handschalter opportunity and the approved campaign photo set. Availability, specification options, and timing are subject to change.</p>
+    </div>
+  </div>
+</section>
+</div>
