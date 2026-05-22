@@ -1,363 +1,300 @@
 <div class="bh-m4cs-page">
 <style>
-  .bh-m4cs-page * { box-sizing:border-box; }
+  .bh-m4cs-page * { box-sizing: border-box; }
   .bh-m4cs-page {
-    --bh-black:#070707;
-    --bh-panel:#111214;
-    --bh-panel-2:#17191c;
-    --bh-line:#2d3136;
-    --bh-white:#ffffff;
-    --bh-soft:#e7e8ea;
-    --bh-muted:#aab0b7;
-    --bh-blue:#1c69d4;
-    --bh-blue-dark:#0d3f86;
-    font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
-    color:var(--bh-white);
-    background:var(--bh-black);
+    --bg: #070707;
+    --panel: #111214;
+    --panel-2: #17191c;
+    --line: #2a2e33;
+    --text: #ffffff;
+    --soft: #e7e8ea;
+    --muted: #aab0b7;
+    --blue: #1c69d4;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
   }
-  .bh-m4cs-page a { color:inherit; text-decoration:none; }
-  .bh-m4cs-page .bh-wrap { width:min(1120px,100%); margin:0 auto; }
-  .bh-m4cs-page .bh-section { padding:76px 40px; }
-  .bh-m4cs-page .bh-section-tight { padding:44px 40px; }
+  .bh-m4cs-page a { color: inherit; text-decoration: none; }
+  .bh-m4cs-page .bh-wrap { width: min(1040px, calc(100% - 36px)); margin: 0 auto; }
+  .bh-m4cs-page .bh-section { padding: 44px 0; }
   .bh-m4cs-page .bh-eyebrow {
-    margin:0 0 14px;
-    color:var(--bh-muted);
-    font-size:12px;
-    line-height:1.4;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    font-weight:700;
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 700;
   }
   .bh-m4cs-page .bh-h1,
   .bh-m4cs-page .bh-h2,
   .bh-m4cs-page .bh-h3,
-  .bh-m4cs-page p { margin-top:0; }
+  .bh-m4cs-page p,
+  .bh-m4cs-page ul { margin-top: 0; }
   .bh-m4cs-page .bh-h1 {
-    margin:0;
-    max-width:900px;
-    font-size:clamp(3rem,7vw,6.15rem);
-    line-height:.9;
-    letter-spacing:-.07em;
-    font-weight:700;
+    margin-bottom: 0;
+    max-width: 860px;
+    font-size: clamp(2.6rem, 6vw, 5.1rem);
+    line-height: .92;
+    letter-spacing: -.06em;
+    font-weight: 700;
   }
   .bh-m4cs-page .bh-h2 {
-    margin:0;
-    font-size:clamp(2rem,4.2vw,4rem);
-    line-height:.96;
-    letter-spacing:-.055em;
-    font-weight:700;
+    margin-bottom: 0;
+    font-size: clamp(1.9rem, 4vw, 3.1rem);
+    line-height: .98;
+    letter-spacing: -.05em;
+    font-weight: 700;
   }
   .bh-m4cs-page .bh-h3 {
-    margin:0;
-    font-size:clamp(1.3rem,2vw,2rem);
-    line-height:1.05;
-    letter-spacing:-.03em;
-    font-weight:700;
+    margin-bottom: 0;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    line-height: 1.08;
+    letter-spacing: -.03em;
+    font-weight: 700;
   }
   .bh-m4cs-page .bh-body-lg {
-    max-width:780px;
-    color:var(--bh-soft);
-    font-size:clamp(1.08rem,1.8vw,1.34rem);
-    line-height:1.58;
+    max-width: 760px;
+    color: var(--soft);
+    font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+    line-height: 1.62;
   }
   .bh-m4cs-page .bh-body {
-    color:#d4d7db;
-    font-size:16px;
-    line-height:1.72;
+    color: #d4d7db;
+    font-size: 16px;
+    line-height: 1.72;
   }
-  .bh-m4cs-page .bh-btn-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+  .bh-m4cs-page .bh-hero-copy {
+    padding: 56px 0 26px;
+  }
+  .bh-m4cs-page .bh-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
   .bh-m4cs-page .bh-btn,
   .bh-m4cs-page .bh-btn-secondary {
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:52px;
-    padding:14px 28px;
-    font-size:15px;
-    font-weight:700;
-    letter-spacing:.01em;
-    border:2px solid transparent;
-    transition:opacity .2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 14px 24px;
+    border: 2px solid transparent;
+    font-size: 15px;
+    font-weight: 700;
+    transition: opacity .2s ease;
   }
   .bh-m4cs-page .bh-btn:hover,
-  .bh-m4cs-page .bh-btn-secondary:hover { opacity:.9; }
-  .bh-m4cs-page .bh-btn { background:var(--bh-blue); color:#fff; border-color:var(--bh-blue); }
-  .bh-m4cs-page .bh-btn-secondary { background:transparent; color:#fff; border-color:rgba(255,255,255,.65); }
-  .bh-m4cs-page .bh-hero {
-    position:relative;
-    min-height:760px;
-    display:flex;
-    align-items:flex-end;
-    background:#000;
-    overflow:hidden;
+  .bh-m4cs-page .bh-btn-secondary:hover { opacity: .9; }
+  .bh-m4cs-page .bh-btn {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
   }
-  .bh-m4cs-page .bh-hero img {
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:.72;
+  .bh-m4cs-page .bh-btn-secondary {
+    background: transparent;
+    border-color: rgba(255,255,255,.55);
+    color: #fff;
   }
-  .bh-m4cs-page .bh-hero:before {
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 46%,rgba(0,0,0,.3) 100%);
+  .bh-m4cs-page .bh-proof {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 28px;
   }
-  .bh-m4cs-page .bh-hero .bh-wrap { position:relative; z-index:2; padding:120px 40px 56px; }
-  .bh-m4cs-page .bh-pill-row { display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 0; }
-  .bh-m4cs-page .bh-pill {
-    border:1px solid rgba(255,255,255,.28);
-    background:rgba(0,0,0,.25);
-    color:#fff;
-    padding:10px 14px;
-    font-size:13px;
-    line-height:1.3;
-    text-transform:uppercase;
-    letter-spacing:.1em;
-    font-weight:700;
+  .bh-m4cs-page .bh-proof-item {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 16px 18px;
   }
-  .bh-m4cs-page .bh-stats {
-    display:grid;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:16px;
+  .bh-m4cs-page .bh-proof-label {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.4;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-weight: 700;
   }
-  .bh-m4cs-page .bh-stat {
-    background:var(--bh-panel);
-    border:1px solid var(--bh-line);
-    padding:26px 22px;
+  .bh-m4cs-page .bh-proof-value {
+    margin: 0;
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 700;
   }
-  .bh-m4cs-page .bh-stat-label {
-    margin:0 0 12px;
-    color:var(--bh-muted);
-    font-size:11px;
-    line-height:1.4;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-    font-weight:700;
+  .bh-m4cs-page .bh-frame,
+  .bh-m4cs-page .bh-image-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
   }
-  .bh-m4cs-page .bh-stat strong {
-    display:block;
-    font-size:clamp(2rem,3vw,3.4rem);
-    line-height:.9;
-    letter-spacing:-.05em;
-    color:#fff;
+  .bh-m4cs-page .bh-frame img,
+  .bh-m4cs-page .bh-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
-  .bh-m4cs-page .bh-grid-2 {
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:28px;
-    align-items:stretch;
-  }
-  .bh-m4cs-page .bh-panel {
-    background:var(--bh-panel);
-    border:1px solid var(--bh-line);
-    overflow:hidden;
-  }
-  .bh-m4cs-page .bh-panel-copy { padding:30px; }
-  .bh-m4cs-page .bh-panel-copy .bh-body:last-child,
-  .bh-m4cs-page .bh-panel-copy p:last-child { margin-bottom:0; }
-  .bh-m4cs-page .bh-media { background:#050505; min-height:100%; }
-  .bh-m4cs-page .bh-media img { width:100%; height:100%; min-height:320px; object-fit:cover; display:block; }
-  .bh-m4cs-page .bh-media-contain img { height:auto; min-height:0; aspect-ratio:16/10; object-fit:contain; background:#050505; }
-  .bh-m4cs-page .bh-panel-top { align-self:start; }
-  .bh-m4cs-page .bh-gallery-3,
-  .bh-m4cs-page .bh-gallery-2 {
-    display:grid;
-    gap:18px;
-  }
-  .bh-m4cs-page .bh-gallery-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
-  .bh-m4cs-page .bh-gallery-2 { grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:18px; }
-  .bh-m4cs-page .bh-gallery-card {
-    background:var(--bh-panel-2);
-    border:1px solid var(--bh-line);
-    overflow:hidden;
-  }
-  .bh-m4cs-page .bh-gallery-card img {
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    display:block;
-  }
-  .bh-m4cs-page .bh-gallery-card .bh-caption {
-    margin:0;
-    padding:18px 18px 20px;
-    color:#d7d9dd;
-    font-size:15px;
-    line-height:1.58;
-  }
-  .bh-m4cs-page .bh-feature-list {
-    margin:22px 0 0;
-    padding:0;
-    list-style:none;
-  }
-  .bh-m4cs-page .bh-feature-list li {
-    position:relative;
-    margin:0;
-    padding:16px 0 16px 28px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    color:#d4d7db;
-    font-size:16px;
-    line-height:1.68;
-  }
-  .bh-m4cs-page .bh-feature-list li:before {
-    content:"✦";
-    position:absolute;
-    left:0;
-    top:18px;
-    color:var(--bh-blue);
-    font-size:12px;
-  }
-  .bh-m4cs-page .bh-feature-list strong { color:#fff; }
   .bh-m4cs-page .bh-band {
-    background:linear-gradient(135deg,#0d0f12 0%,#0b1b35 100%);
-    border-top:1px solid var(--bh-line);
-    border-bottom:1px solid var(--bh-line);
+    background: linear-gradient(180deg, #0a0b0d 0%, #101317 100%);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .bh-m4cs-page .bh-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    gap: 24px;
+    align-items: start;
+  }
+  .bh-m4cs-page .bh-list {
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .bh-m4cs-page .bh-list li {
+    margin: 0;
+    padding: 16px 0 16px 24px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    position: relative;
+    color: #d4d7db;
+    font-size: 16px;
+    line-height: 1.68;
+  }
+  .bh-m4cs-page .bh-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: var(--blue);
+    font-size: 18px;
+    line-height: 1;
+  }
+  .bh-m4cs-page .bh-list strong { color: #fff; }
+  .bh-m4cs-page .bh-stack {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .bh-m4cs-page .bh-caption {
+    margin: 0;
+    padding: 16px 18px 18px;
+    color: #d7d9dd;
+    font-size: 15px;
+    line-height: 1.58;
+  }
+  .bh-m4cs-page .bh-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+  }
+  .bh-m4cs-page .bh-cta {
+    padding: 34px;
   }
   .bh-m4cs-page .bh-fineprint {
-    margin:0;
-    color:#aeb4bb;
-    font-size:12px;
-    line-height:1.72;
+    margin: 22px 0 0;
+    color: #aeb4bb;
+    font-size: 12px;
+    line-height: 1.7;
   }
-  @media (max-width:980px) {
-    .bh-m4cs-page .bh-stats,
-    .bh-m4cs-page .bh-grid-2,
-    .bh-m4cs-page .bh-gallery-3,
-    .bh-m4cs-page .bh-gallery-2 { grid-template-columns:1fr; }
+  @media (max-width: 900px) {
+    .bh-m4cs-page .bh-grid,
+    .bh-m4cs-page .bh-mini-grid {
+      grid-template-columns: 1fr;
+    }
+    .bh-m4cs-page .bh-proof {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
-  @media (max-width:640px) {
-    .bh-m4cs-page .bh-section,
-    .bh-m4cs-page .bh-section-tight,
-    .bh-m4cs-page .bh-hero .bh-wrap { padding-left:18px; padding-right:18px; }
-    .bh-m4cs-page .bh-hero { min-height:620px; }
-    .bh-m4cs-page .bh-h1 { font-size:clamp(2.5rem,13vw,4.2rem); }
-    .bh-m4cs-page .bh-h2 { font-size:clamp(1.9rem,9vw,2.8rem); }
-    .bh-m4cs-page .bh-panel-copy { padding:24px; }
+  @media (max-width: 360px) {
+    .bh-m4cs-page .bh-proof {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    .bh-m4cs-page .bh-wrap { width: min(1040px, calc(100% - 28px)); }
+    .bh-m4cs-page .bh-section { padding: 34px 0; }
+    .bh-m4cs-page .bh-hero-copy { padding: 42px 0 20px; }
+    .bh-m4cs-page .bh-proof-item,
+    .bh-m4cs-page .bh-cta { padding: 18px; }
   }
 </style>
 
-<section class="bh-hero">
-  <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-hero-riviera-blue.jpg" alt="BMW M4 CS in Riviera Blue at Brian Harris BMW" />
+<section class="bh-section">
   <div class="bh-wrap">
-    <p class="bh-eyebrow">Brian Harris BMW &middot; BMW M4 CS Custom Order &middot; Baton Rouge</p>
-    <h1 class="bh-h1">2 open BMW M4 CS custom-order slots.</h1>
-    <p class="bh-body-lg" style="margin-top:24px;">Brian Harris BMW currently has two open opportunities to custom order a BMW M4 CS before the June 1 deadline. For enthusiasts in Baton Rouge who know what the CS represents, this is the kind of allocation window that does not stay open long.</p>
-    <div class="bh-btn-row">
-      <a href="https://brianharrisbmw.com/contact" class="bh-btn">Contact Brian Harris BMW</a>
-      <a href="https://brianharrisbmw.com/new-bmw-specials" class="bh-btn-secondary">View New BMW Specials</a>
+    <div class="bh-hero-copy">
+      <p class="bh-eyebrow">Brian Harris BMW · BMW M4 CS Custom Order · Baton Rouge</p>
+      <h1 class="bh-h1">2 open BMW M4 CS custom-order slots.</h1>
+      <p class="bh-body-lg" style="margin:22px 0 0;">Brian Harris BMW currently has two open opportunities to custom order a BMW M4 CS before the June 1 deadline. If you already know this is the car you want, this is the window to spec it correctly instead of settling later.</p>
+      <div class="bh-btn-row">
+        <a href="https://brianharrisbmw.com/contact" class="bh-btn">Contact Brian Harris BMW</a>
+        <a href="https://brianharrisbmw.com/new-bmw-specials" class="bh-btn-secondary">View New BMW Specials</a>
+      </div>
+      <div class="bh-proof">
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">Power</p>
+          <p class="bh-proof-value">550 hp</p>
+        </div>
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">0–100 km/h</p>
+          <p class="bh-proof-value">3.4 sec</p>
+        </div>
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">Top speed</p>
+          <p class="bh-proof-value">302 km/h</p>
+        </div>
+        <div class="bh-proof-item">
+          <p class="bh-proof-label">Order window</p>
+          <p class="bh-proof-value">Before June 1</p>
+        </div>
+      </div>
     </div>
-    <div class="bh-pill-row">
-      <span class="bh-pill">550 hp</span>
-      <span class="bh-pill">0&ndash;100 km/h in 3.4 sec</span>
-      <span class="bh-pill">302 km/h top speed</span>
-      <span class="bh-pill">Orders due before June 1</span>
+    <div class="bh-frame">
+      <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-hero-riviera-blue.jpg" alt="BMW M4 CS in Riviera Blue at Brian Harris BMW" />
     </div>
   </div>
 </section>
 
 <section class="bh-section bh-band">
-  <div class="bh-wrap">
-    <div class="bh-stats">
-      <div class="bh-stat">
-        <p class="bh-stat-label">Power</p>
-        <strong>550 hp</strong>
-      </div>
-      <div class="bh-stat">
-        <p class="bh-stat-label">0&ndash;100 km/h</p>
-        <strong>3.4 s</strong>
-      </div>
-      <div class="bh-stat">
-        <p class="bh-stat-label">Top speed</p>
-        <strong>302 km/h</strong>
-      </div>
-      <div class="bh-stat">
-        <p class="bh-stat-label">Allocation</p>
-        <strong>2 slots</strong>
-      </div>
+  <div class="bh-wrap bh-grid">
+    <div>
+      <p class="bh-eyebrow">Why act now</p>
+      <h2 class="bh-h2">This is a spec-first opportunity.</h2>
+      <p class="bh-body" style="margin:20px 0 0;">The M4 CS is not the kind of car most buyers want to find by accident on a lot. The value here is being able to order it the way you want it while Brian Harris BMW still has real access.</p>
+      <ul class="bh-list">
+        <li><strong>Two open slots are currently available</strong> for Brian Harris BMW buyers.</li>
+        <li><strong>Orders need to be submitted before June 1</strong> for this specific opportunity.</li>
+        <li><strong>The custom-order path matters on a car like this,</strong> because the right spec is part of the whole point.</li>
+      </ul>
+    </div>
+    <div class="bh-image-card">
+      <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-exclusive-colours.jpg" alt="BMW M4 CS in exclusive factory colours" />
     </div>
   </div>
 </section>
 
 <section class="bh-section">
-  <div class="bh-wrap bh-grid-2">
-    <div>
-      <p class="bh-eyebrow">Why this page matters</p>
-      <h2 class="bh-h2">This is not a normal in-stock M car conversation.</h2>
-      <p class="bh-body" style="margin-top:22px;">The BMW M4 CS sits in a rare space between road car and collector halo car. It delivers the sharper, more singular version of the M4 formula, and when a dealership has real custom-order access, serious buyers tend to move fast.</p>
-      <p class="bh-body">At Brian Harris BMW, these two open slots create an opportunity to order the M4 CS the right way instead of settling for whatever spec happens to surface later. If you already know you want the car, the more important decision is whether you want to be the person configuring it.</p>
-      <ul class="bh-feature-list">
-        <li><strong>M xDrive with Active M Differential</strong> helps put the power down with real confidence on the road and on faster driving surfaces.</li>
-        <li><strong>Adaptive M suspension</strong> gives the M4 CS the tighter, more composed character enthusiasts expect from the badge.</li>
-        <li><strong>8-speed M Steptronic Sport transmission</strong> keeps the drivetrain immediate and usable without dulling the edge of the car.</li>
-      </ul>
-    </div>
-    <div class="bh-panel bh-panel-top">
-      <div class="bh-media bh-media-contain"><img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-exclusive-colours.jpg" alt="BMW M4 CS in exclusive factory colours" /></div>
-      <div class="bh-panel-copy">
-        <p class="bh-eyebrow">Factory specification</p>
-        <h3 class="bh-h3">The custom-order path is the point.</h3>
-        <p class="bh-body" style="margin-top:16px;">The M4 CS appeal is not just the performance sheet. It is the full specification story: the exact colour, the exact presence, and the confidence that the car arrived the way you intended to own it from the start.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bh-section-tight">
   <div class="bh-wrap">
     <p class="bh-eyebrow">Inside the M4 CS</p>
     <h2 class="bh-h2">Focused details, not filler.</h2>
-    <p class="bh-body-lg" style="margin-top:18px;">The BMW M4 CS backs up its allocation appeal with the hardware and cabin details that make the car feel special every time you get in it. These images do the talking without needing to over-explain the point.</p>
-    <div class="bh-gallery-3" style="margin-top:32px;">
-      <article class="bh-gallery-card">
-        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-steering-wheel.jpg" alt="BMW M4 CS steering wheel and driver cockpit detail" />
-        <p class="bh-caption">Alcantara, the 12 o&rsquo;clock marker, and the right cockpit feel from the moment you settle in.</p>
-      </article>
-      <article class="bh-gallery-card">
-        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-bucket-seats.jpg" alt="BMW M4 CS front bucket seats interior detail" />
-        <p class="bh-caption">A more serious seating environment makes the cabin feel aligned with the rest of the CS brief.</p>
-      </article>
-      <article class="bh-gallery-card">
-        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-center-console.jpg" alt="BMW M4 CS center console and carbon interior trim" />
-        <p class="bh-caption">Carbon trim and CS-specific touches keep the cabin honest about what this car is.</p>
-      </article>
-    </div>
-    <div class="bh-gallery-2">
-      <article class="bh-gallery-card">
-        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-engine-bay.jpg" alt="BMW M4 CS engine bay detail" />
-        <p class="bh-caption">The engineering story matters here too. This is a car built to feel deliberate in every major touchpoint.</p>
-      </article>
-      <article class="bh-gallery-card">
-        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-track-rear.jpg" alt="BMW M4 CS rear three-quarter track view" />
-        <p class="bh-caption">The stance, aero treatment, and rear view leave no confusion about the M4 CS role in the lineup.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="bh-section">
-  <div class="bh-wrap bh-grid-2">
-    <div class="bh-panel">
-      <div class="bh-media"><img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-hero-riviera-blue.jpg" alt="Front three-quarter view of BMW M4 CS in blue" /></div>
-      <div class="bh-panel-copy">
-        <p class="bh-eyebrow">Collector logic</p>
-        <h3 class="bh-h3">The buyers who wait often lose the spec they wanted.</h3>
-        <p class="bh-body" style="margin-top:16px;">That is the real urgency here. When the two available order opportunities are gone, the conversation shifts from building your M4 CS to hoping one appears later in a configuration close enough to accept.</p>
+    <p class="bh-body-lg" style="margin:18px 0 0; max-width:680px;">These details make the point without a lot of extra explanation.</p>
+    <div class="bh-stack">
+      <div class="bh-image-card">
+        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-steering-wheel.jpg" alt="BMW M4 CS steering wheel and cockpit detail" />
       </div>
-    </div>
-    <div>
-      <p class="bh-eyebrow">What to know</p>
-      <h2 class="bh-h2">Brian Harris BMW M4 CS buyers should move with a purpose.</h2>
-      <ul class="bh-feature-list" style="margin-top:20px;">
-        <li><strong>Only two open slots are available</strong> at Brian Harris BMW based on the current custom-order opportunity.</li>
-        <li><strong>Orders must be submitted before June 1</strong> for this specific opening.</li>
-        <li><strong>The M4 CS is a specification-sensitive car,</strong> which makes the order path more valuable than a generic in-stock substitute.</li>
-        <li><strong>Brian Harris BMW gives Baton Rouge-area buyers a direct path</strong> to start the conversation now instead of chasing the car later.</li>
-      </ul>
-      <div class="bh-btn-row">
-        <a href="https://brianharrisbmw.com/contact" class="bh-btn">Start your M4 CS conversation</a>
-        <a href="https://brianharrisbmw.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Image%20Count%22%2C%22value%22%3A%22image_count%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="bh-btn-secondary">Shop new BMW inventory</a>
+      <div class="bh-image-card">
+        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-bucket-seats.jpg" alt="BMW M4 CS front bucket seats interior detail" />
+      </div>
+      <div class="bh-mini-grid">
+        <div class="bh-image-card">
+          <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-center-console.jpg" alt="BMW M4 CS center console and carbon trim" />
+        </div>
+        <div class="bh-image-card">
+          <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-engine-bay.jpg" alt="BMW M4 CS engine bay detail" />
+        </div>
+      </div>
+      <div class="bh-image-card">
+        <img src="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/photos/bh-bmw-m4cs-track-rear.jpg" alt="BMW M4 CS rear three-quarter track view" />
       </div>
     </div>
   </div>
@@ -365,14 +302,16 @@
 
 <section class="bh-section bh-band">
   <div class="bh-wrap">
-    <p class="bh-eyebrow">Brian Harris BMW &middot; Baton Rouge, Louisiana</p>
-    <h2 class="bh-h2">Ready to talk through a BMW M4 CS custom order?</h2>
-    <p class="bh-body-lg" style="margin-top:20px;">If the BMW M4 CS is the car you have been waiting to spec correctly, reach out to Brian Harris BMW now while these two order opportunities are still open. This page reflects the current custom-order window and the verified M4 CS details used in the matching campaign creative.</p>
-    <div class="bh-btn-row">
-      <a href="https://brianharrisbmw.com/contact" class="bh-btn">Contact Brian Harris BMW</a>
-      <a href="https://brianharrisbmw.com/new-bmw-specials" class="bh-btn-secondary">See current BMW specials</a>
+    <div class="bh-frame bh-cta">
+      <p class="bh-eyebrow">Brian Harris BMW · Baton Rouge, Louisiana</p>
+      <h2 class="bh-h2">Ready to talk through a BMW M4 CS custom order?</h2>
+      <p class="bh-body-lg" style="margin:20px 0 0;">If you want one of the two open M4 CS order opportunities, contact Brian Harris BMW now while this window is still open.</p>
+      <div class="bh-btn-row">
+        <a href="https://brianharrisbmw.com/contact" class="bh-btn">Start your M4 CS conversation</a>
+        <a href="https://brianharrisbmw.com/new-bmw-specials" class="bh-btn-secondary">See current BMW specials</a>
+      </div>
+      <p class="bh-fineprint">Performance figures referenced here are drawn from the BMW M4 CS product information used for this campaign. Custom-order opportunity and timing are subject to dealership availability and change.</p>
     </div>
-    <p class="bh-fineprint" style="margin-top:24px;">Performance figures referenced here are drawn from the BMW M4 CS product information used for this campaign, including 550 horsepower, 0&ndash;100 km/h in 3.4 seconds, 302 km/h top speed, M xDrive with Active M Differential, Adaptive M suspension, 8-speed M Steptronic Sport transmission, M Carbon bucket seats, M Alcantara steering wheel, and exclusive colour availability. Custom-order opportunity and timing are subject to dealership availability and change.</p>
   </div>
 </section>
 </div>
