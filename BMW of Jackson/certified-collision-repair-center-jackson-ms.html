@@ -17,17 +17,35 @@
   .faq-a { font-size:17px; line-height:1.65; color:#444; margin:0; }
   .stat-strip { background:var(--bmw-blue); color:#fff; padding:14px 22px; display:inline-block; font-size:15px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; }
   .promise-tag { display:inline-block; padding:6px 14px; background:rgba(28,105,212,0.1); color:var(--bmw-blue); font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:18px; }
+  .hero-shell { position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:72px 24px 80px; width:100%; }
+  .hero-logo { width:min(100%, 340px); height:auto; display:block; margin:0 0 28px; }
+  .hero-kicker { margin-bottom:24px; }
+  .hero-title { font-size:56px; font-weight:700; color:#fff; letter-spacing:-0.03em; margin:0 0 18px; line-height:108%; max-width:920px; }
+  .hero-copy { font-size:24px; color:rgba(255,255,255,0.92); margin:0 0 40px; line-height:1.4; max-width:780px; }
+  @media (max-width: 768px) {
+    .hero-shell { padding:56px 20px 64px; }
+    .hero-logo { width:min(100%, 300px); margin-bottom:24px; }
+    .hero-kicker { margin-bottom:20px !important; }
+    .hero-title { font-size:38px !important; line-height:1.08 !important; margin-bottom:16px !important; }
+    .hero-copy { font-size:19px !important; line-height:1.5 !important; margin-bottom:32px !important; }
+  }
+  @media (max-width: 480px) {
+    .hero-shell { padding:48px 18px 56px; }
+    .hero-logo { width:min(100%, 270px); }
+    .hero-title { font-size:34px !important; }
+    .hero-copy { font-size:18px !important; }
+  }
 </style>
 
 <div class="bmw-text">
 <section style="position:relative;background:#000;min-height:640px;display:flex;align-items:flex-end;">
   <img src="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/photos/ccrc/bmwj-ccrc-hero-repair-bay.jpg" alt="BMW Certified Collision Repair Center repair bay at BMW of Jackson, Mississippi" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55;" />
   <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%);"></div>
-  <div style="position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:72px 24px 80px;width:100%;">
-    <img src="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/photos/ccrc/bmw-ccrc-white-logo.png" alt="BMW Certified Collision Repair Center logo" style="height:64px;width:auto;display:block;margin:0 0 28px;" />
-    <div class="stat-strip" style="background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.35);margin-bottom:24px;">Your BMW. Our Expertise.</div>
-    <h1 style="font-size:56px;font-weight:700;color:#fff;letter-spacing:-0.03em;margin:0 0 18px;line-height:108%;max-width:920px;">BMW Certified Collision Repair Center in Jackson, MS</h1>
-    <p style="font-size:24px;color:rgba(255,255,255,0.92);margin:0 0 40px;line-height:1.4;max-width:780px;">After a collision, the choice of where your BMW gets repaired matters. BMW of Jackson is a BMW Certified Collision Repair Center — a program built around the standards BMW defines for training, parts, equipment, and process.</p>
+  <div class="hero-shell">
+    <img class="hero-logo" src="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/photos/ccrc/bmw-ccrc-white-logo.png" alt="BMW Certified Collision Repair Center logo" />
+    <div class="stat-strip hero-kicker" style="background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.35);">Your BMW. Our Expertise.</div>
+    <h1 class="hero-title">BMW Certified Collision Repair Center in Jackson, MS</h1>
+    <p class="hero-copy">After a collision, the choice of where your BMW gets repaired matters. BMW of Jackson is a BMW Certified Collision Repair Center — a program built around the standards BMW defines for training, parts, equipment, and process.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
       <a href="tel:601-354-2269" style="display:inline-block;background:#1c69d4;color:#fff;text-decoration:none;font-size:16px;font-weight:700;line-height:1.2;padding:18px 28px;min-width:220px;text-align:center;vertical-align:middle;white-space:nowrap;">
         <span style="display:block;color:#fff;line-height:1.2;white-space:nowrap;">Call Collision Center</span>
