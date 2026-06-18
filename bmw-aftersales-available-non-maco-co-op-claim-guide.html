@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Non-MACO Co-Op Claim Guide | BMW Aftersales</title>
+  <meta name="description" content="Operational guide to BMW Aftersales Available Non-MACO Co-Op claims across promotional events, approved apparel, showroom accessorized vehicles, and charitable donations." />
+  <style>
+    :root {
+      --bmw-blue: #1c69d4;
+      --navy: #07111f;
+      --navy-2: #0d1d33;
+      --ink: #111827;
+      --muted: #5b6472;
+      --line: rgba(17, 24, 39, 0.12);
+      --bg: #eef2f7;
+      --card: #ffffff;
+      --soft: #f8fafc;
+      --success: #0f766e;
+      --warning: #a16207;
+      --alert: #9a3412;
+      --shadow: 0 18px 40px rgba(7, 17, 31, 0.08);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(28, 105, 212, 0.1), transparent 28%),
+        linear-gradient(180deg, #f7f9fc 0%, var(--bg) 100%);
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(7, 17, 31, 0.98), rgba(10, 31, 59, 0.96));
+      color: #fff;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(28, 105, 212, 0.45), rgba(28, 105, 212, 0));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+      gap: 28px;
+      align-items: end;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .brand-row img {
+      width: 168px;
+      max-width: 48%;
+      height: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 0.97;
+      letter-spacing: -0.045em;
+      max-width: 10.5ch;
+    }
+
+    .hero p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1rem;
+      max-width: 62ch;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-panel h2,
+    .hero-panel h3,
+    .card h2,
+    .card h3,
+    .section-head h2 {
+      margin: 0 0 10px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-panel h2 { font-size: 1.05rem; }
+    .hero-panel ul { margin: 0; padding-left: 18px; color: rgba(255,255,255,0.84); font-size: 0.95rem; }
+    .hero-panel li + li { margin-top: 8px; }
+
+    .meta-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .metric,
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 20px;
+    }
+
+    .metric .label {
+      display: block;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.3rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .metric p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bmw-blue);
+      margin-bottom: 8px;
+    }
+
+    .section-head p,
+    .card p,
+    .body-copy,
+    .sidebar p,
+    .table-wrap td,
+    .table-wrap th,
+    .checklist li,
+    .timeline li,
+    .best-bets li,
+    .footnote {
+      color: var(--muted);
+    }
+
+    .section-head p,
+    .card p { margin: 0; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #e8f0fe;
+      color: var(--bmw-blue);
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .category {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .category h3 {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .category ul,
+    .checklist,
+    .timeline,
+    .best-bets {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .category li + li,
+    .checklist li + li,
+    .timeline li + li,
+    .best-bets li + li {
+      margin-top: 8px;
+    }
+
+    .highlight-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .highlight {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .highlight strong {
+      display: block;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .highlight.success { background: #ecfdf5; }
+    .highlight.warning { background: #fff7ed; }
+    .highlight.alert { background: #fff1f2; }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      background: #fff;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #f8fbff;
+      color: var(--ink);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .sidebar {
+      display: grid;
+      gap: 18px;
+      position: sticky;
+      top: 22px;
+    }
+
+    .sidebar .card { padding: 20px; }
+
+    .sidebar h3 { font-size: 1rem; }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: #f3f6fb;
+      color: var(--navy-2);
+      border: 1px solid var(--line);
+    }
+
+    .disclaimer {
+      border-left: 4px solid var(--bmw-blue);
+      padding-left: 14px;
+      margin-top: 16px;
+      font-size: 0.92rem;
+    }
+
+    .footnote {
+      font-size: 0.88rem;
+      margin-top: 12px;
+    }
+
+    a.cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, var(--bmw-blue), #3b82f6);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 980px) {
+      .meta-strip,
+      .highlight-row,
+      .grid-2,
+      .hero-grid,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page { width: min(100% - 20px, 1180px); padding-top: 18px; }
+      .hero,
+      .card,
+      .metric { padding: 20px; }
+      .brand-row { flex-direction: column; align-items: flex-start; }
+      h1 { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="brand-row">
+            <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=1500w" alt="The Cooperative Agency logo" />
+          </div>
+          <div class="eyebrow">BMW Aftersales · Operational Reference</div>
+          <h1>Available Non-MACO Co-Op Claim Guide</h1>
+          <p>Executive-clean working guide for the four available non-MACO co-op categories dealers are most likely to use: promotional events &amp; sponsorships, approved apparel, showroom accessorized vehicles, and charitable donations.</p>
+        </div>
+        <aside class="hero-side">
+          <div class="hero-panel">
+            <h2>What this page helps with</h2>
+            <ul>
+              <li>Quickly identify what qualifies for 50% reimbursement from the Marketing fund.</li>
+              <li>Spot the documentation required before a claim is submitted.</li>
+              <li>Avoid the most common denial triggers called out in program rules.</li>
+            </ul>
+          </div>
+          <div class="hero-panel">
+            <h2>Best use case</h2>
+            <ul>
+              <li>Internal planning before spend is committed.</li>
+              <li>Fast claim readiness check before using the BMW Co-op Program Web Tool.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="meta-strip" aria-label="Quick facts">
+      <article class="metric">
+        <span class="label">Reimbursement</span>
+        <strong>50% from Marketing fund</strong>
+        <p>Each covered category on this page references 50% reimbursement from the Marketing fund.</p>
+      </article>
+      <article class="metric">
+        <span class="label">Most time-sensitive</span>
+        <strong>Event pre-approval</strong>
+        <p>Promotional events must be submitted and approved at least 30 days before the event.</p>
+      </article>
+      <article class="metric">
+        <span class="label">Most documentation-heavy</span>
+        <strong>Events &amp; sponsorships</strong>
+        <p>Signed pre-approval, itemized costs, original receipts, and a spend variance limit all apply.</p>
+      </article>
+      <article class="metric">
+        <span class="label">Simplest path</span>
+        <strong>Approved apparel</strong>
+        <p>Use Original BMW Lifestyle items and a recent parts invoice with the required invoice detail.</p>
+      </article>
+    </section>
+
+    <section class="layout">
+      <div class="stack">
+        <article class="card">
+          <div class="section-head">
+            <div>
+              <div class="kicker">At a glance</div>
+              <h2>Which categories are available?</h2>
+              <p>This guide covers only the four categories requested and only the grounded facts provided from the BMW Aftersales Dealer Co-op Programs reference.</p>
+            </div>
+            <span class="pill">4 claim paths</span>
+          </div>
+
+          <div class="grid-2">
+            <section class="category">
+              <h3>1) Promotional events &amp; sponsorships</h3>
+              <ul>
+                <li>50% reimbursement from Marketing fund.</li>
+                <li>Must be pre-approved via the BMW Aftersales Event Co-op Pre-Approval Form.</li>
+                <li>Form must be signed by an Aftersales Area Manager, Area Manager, Regional Aftersales Development Manager, or Regional Aftersales Manager.</li>
+              </ul>
+            </section>
+            <section class="category">
+              <h3>2) Approved apparel</h3>
+              <ul>
+                <li>50% reimbursement from Marketing fund.</li>
+                <li>Must be an Original BMW Lifestyle item found on shop.bmwusa.com.</li>
+                <li>Requires a parts invoice with BMW part number, item name/description, and quantity.</li>
+              </ul>
+            </section>
+            <section class="category">
+              <h3>3) Showroom accessorized vehicles</h3>
+              <ul>
+                <li>50% reimbursement from Marketing fund.</li>
+                <li>Must use an Original BMW Accessory found on shop.bmwusa.com.</li>
+                <li>Requires a $1,000 minimum accessory MSRP total.</li>
+              </ul>
+            </section>
+            <section class="category">
+              <h3>4) Charitable donations</h3>
+              <ul>
+                <li>50% reimbursement from Marketing fund.</li>
+                <li>Charity must be a registered 501(c)(3).</li>
+                <li>Donation must be an Original BMW Part, Accessory, or Lifestyle item.</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Operational detail</div>
+              <h2>Claim-by-claim requirements</h2>
+              <p>Use this table as the planning and submission checklist before a request reaches admin review.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Eligible spend / item</th>
+                  <th>Required proof</th>
+                  <th>Key rules to watch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Promotional events &amp; sponsorships</strong></td>
+                  <td>Printing/postage for invitations or direct mail, catering/food/beverage, in-center promotional advertising, giveaway items only if Original BMW Parts/Accessories/Lifestyle, and off-site booth rental fees up to $1,500 reimbursement.</td>
+                  <td>Approved pre-approval form, signed by an approved BMW manager; itemized costs; original receipts.</td>
+                  <td>Must be approved at least 30 days before the event. No approved pre-approval 30 days prior means automatic denial. Production/loading/startup/handling charges, agency commissions, taxes, and shipping are not reimbursed. Pre-approval must be within $750 of actual total event spend.</td>
+                </tr>
+                <tr>
+                  <td><strong>Approved apparel</strong></td>
+                  <td>Original BMW Lifestyle items found on shop.bmwusa.com.</td>
+                  <td>Parts invoice showing BMW part number, item name/description, and quantity.</td>
+                  <td>Invoice must be within 45 days of submission.</td>
+                </tr>
+                <tr>
+                  <td><strong>Showroom accessorized vehicle</strong></td>
+                  <td>Original BMW Accessories found on shop.bmwusa.com.</td>
+                  <td>Photo of vehicle on showroom floor plus parts invoice, or vehicle inquiry listing wholesale pricing for port-installed accessories for a new purchase.</td>
+                  <td>Regional special edition packages are excluded. Must meet a $1,000 minimum accessory MSRP total. Invoice must be within 45 days of submission.</td>
+                </tr>
+                <tr>
+                  <td><strong>Charitable donations</strong></td>
+                  <td>Original BMW Part, Accessory, or Lifestyle item donation.</td>
+                  <td>501(c)(3) verification plus parts invoice for donated items.</td>
+                  <td>No cash donations. Charity must be a registered 501(c)(3).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Events &amp; sponsorships</div>
+              <h2>The highest-risk category deserves its own checklist</h2>
+              <p>Promotional events have the tightest process controls and the clearest auto-denial trigger.</p>
+            </div>
+            <span class="pill">30-day rule</span>
+          </div>
+
+          <div class="grid-2">
+            <section>
+              <h3>Deadline and approval chain</h3>
+              <ol class="timeline">
+                <li>Submit the BMW Aftersales Event Co-op Pre-Approval Form.</li>
+                <li>Secure signature from an Aftersales Area Manager, Area Manager, Regional Aftersales Development Manager, or Regional Aftersales Manager.</li>
+                <li>Ensure the submission is approved at least 30 days before the event.</li>
+                <li>If there is no approved pre-approval 30 days prior, the claim is automatically denied.</li>
+              </ol>
+            </section>
+            <section>
+              <h3>Event caps by UIO</h3>
+              <ul class="checklist">
+                <li>Under 11,999 UIO: <strong>$3,000</strong> reimbursement cap.</li>
+                <li>12,000–24,999 UIO: <strong>$4,000</strong> reimbursement cap.</li>
+                <li>Over 25,000 UIO: <strong>$7,000</strong> reimbursement cap.</li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="highlight-row">
+            <div class="highlight success">
+              <strong>Best bets</strong>
+              <p>Events with clean pre-approval timing, itemized original receipts, and eligible BMW-branded giveaway items are the most operationally straightforward.</p>
+            </div>
+            <div class="highlight warning">
+              <strong>Hardest to get approved</strong>
+              <p>Anything submitted inside the 30-day window, or events where the final spend drifts more than $750 from the approved total, carries obvious risk.</p>
+            </div>
+            <div class="highlight alert">
+              <strong>Do not submit</strong>
+              <p>New Owner Clinics and Monthly/Quarterly Association meetings do not qualify.</p>
+            </div>
+          </div>
+
+          <p class="footnote">For promotional events and sponsorships, all claims go through the BMW Co-op Program Web Tool, and the claim deadline is within 45 days of the event/ad date or invoice date, whichever is shorter.</p>
+        </article>
+
+        <article class="card">
+          <div class="section-head">
+            <div>
+              <div class="kicker">Practical guidance</div>
+              <h2>Fast read: what tends to be easiest vs. what needs the most discipline</h2>
+              <p>These are operational observations based strictly on the stated rule complexity and required proof.</p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <section class="category">
+              <h3>Typically easiest to document</h3>
+              <ul class="best-bets">
+                <li><strong>Approved apparel:</strong> narrow product definition, known source, and one invoice package.</li>
+                <li><strong>Charitable donations:</strong> manageable if 501(c)(3) proof and donated item invoice are assembled together.</li>
+              </ul>
+            </section>
+            <section class="category">
+              <h3>Usually hardest to keep clean</h3>
+              <ul class="best-bets">
+                <li><strong>Promotional events &amp; sponsorships:</strong> pre-approval timing, signature routing, itemization, receipt retention, reimbursement caps, and variance control all matter.</li>
+                <li><strong>Showroom accessorized vehicles:</strong> easy to lose momentum if the photo, invoice details, wholesale pricing backup, or $1,000 MSRP threshold are incomplete.</li>
+              </ul>
+            </section>
+          </div>
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <section class="card">
+          <h3>Quick submission checklist</h3>
+          <ul class="checklist">
+            <li>Confirm the category matches one of the four approved paths on this page.</li>
+            <li>Verify the item is an Original BMW Part, Accessory, or Lifestyle item when required.</li>
+            <li>Collect the exact proof listed for that category before submission.</li>
+            <li>Check timing rules before the spend ages out.</li>
+          </ul>
+          <div class="badge-list">
+            <span class="badge">50% reimbursement</span>
+            <span class="badge">Original receipts</span>
+            <span class="badge">45-day invoice rule</span>
+            <span class="badge">501(c)(3) verification</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Event-specific exclusion watch</h3>
+          <p>For promotional events, production, loading, startup, handling charges, agency commissions, taxes, and shipping are not reimbursed.</p>
+          <p class="disclaimer"><strong>Operational note:</strong> if an event plan is not formally approved 30 days before the event, treat it as non-claimable under this category.</p>
+        </section>
+
+        <section class="card">
+          <h3>Important disclaimer</h3>
+          <p>This page is operational guidance only. Final approval remains subject to BMWNA and program administrator review. Use the official BMW program materials and admin instructions as the controlling authority.</p>
+          <a class="cta" href="index.html">Back to SEO / Web Index</a>
+        </section>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
