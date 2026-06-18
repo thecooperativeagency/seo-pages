@@ -52,6 +52,17 @@
       margin-bottom: 22px;
     }
 
+    .version-note {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      z-index: 2;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.64);
+    }
+
     .hero::after {
       content: "";
       position: absolute;
@@ -412,6 +423,7 @@
       .hero,
       .card,
       .metric { padding: 20px; }
+      .version-note { position: static; display: block; margin-bottom: 14px; }
       .brand-row { flex-direction: column; align-items: flex-start; }
       h1 { max-width: none; }
     }
@@ -420,6 +432,7 @@
 <body>
   <main class="page">
     <section class="hero">
+      <div class="version-note">Version v2</div>
       <div class="hero-grid">
         <div>
           <div class="brand-row">
