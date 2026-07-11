@@ -3,10 +3,11 @@
 <style>
   :root { --bmw-blue: #1c69d4; --bmw-dark-blue: #06101d; }
   .bmw-text { font-family: 'BMW Type Next', Arial, sans-serif; }
-  .btn-primary { display:inline-flex; align-items:center; justify-content:center; text-align:center; background:var(--bmw-blue); color:#fff; padding:16px 28px; min-height:56px; font-size:16px; font-weight:700; line-height:1.2; border:none; cursor:pointer; text-decoration:none; border-radius:0; transition: background 0.2s; white-space:nowrap; }
-  .btn-primary:hover { background: #1551a3; }
-  .btn-outline { display:inline-flex; align-items:center; justify-content:center; text-align:center; background:transparent; color:#fff; padding:14px 28px; min-height:56px; font-size:16px; font-weight:700; line-height:1.2; border:2px solid #fff; cursor:pointer; text-decoration:none; border-radius:0; transition: background 0.2s; white-space:nowrap; }
-  .btn-outline:hover { background: rgba(255,255,255,0.1); }
+  .bmwj-btn-row { display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+  .bmwj-btn-primary { display:inline-flex; align-items:center; justify-content:center; text-align:center; background:var(--bmw-blue); color:#fff; padding:16px 28px; min-height:56px; min-width:220px; font-size:16px; font-weight:700; line-height:1.2; border:none; cursor:pointer; text-decoration:none; border-radius:0; transition: background 0.2s; white-space:nowrap; }
+  .bmwj-btn-primary:hover { background: #1551a3; }
+  .bmwj-btn-outline { display:inline-flex; align-items:center; justify-content:center; text-align:center; background:transparent; color:#fff; padding:14px 28px; min-height:56px; min-width:200px; font-size:16px; font-weight:700; line-height:1.2; border:2px solid #fff; cursor:pointer; text-decoration:none; border-radius:0; transition: background 0.2s; white-space:nowrap; }
+  .bmwj-btn-outline:hover { background: rgba(255,255,255,0.1); }
   .promise-tag { display:inline-block; padding:6px 14px; background:rgba(28,105,212,0.1); color:var(--bmw-blue); font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:18px; }
   .eyebrow-white { display:inline-block; padding:6px 14px; background:rgba(255,255,255,0.12); color:#fff; font-size:13px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; border:1px solid rgba(255,255,255,0.35); margin-bottom:24px; }
   .step-card { flex:1; min-width:260px; background:#fff; padding:36px 32px; border-top:4px solid var(--bmw-blue); }
@@ -36,9 +37,9 @@
     <div class="eyebrow-white">BMW of Jackson · Summer of Soccer</div>
     <h1 class="hero-title">BMW Summer of Soccer Test Drive Event</h1>
     <p class="hero-copy">Take a test drive at BMW of Jackson and enter for your chance to win an exclusive track day experience with soccer legend Clint Dempsey.</p>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
-      <a href="https://bmwofjackson.net/bmw-test-drive" class="btn-primary">Test Drive at Jackson BMW</a>
-      <a href="https://bmwofjackson.net/new-bmw-specials" class="btn-outline">Shop Our Specials</a>
+    <div class="bmwj-btn-row">
+      <a href="https://bmwofjackson.net/bmw-test-drive" class="bmwj-btn-primary">Test Drive at Jackson BMW</a>
+      <a href="https://bmwofjackson.net/new-bmw-specials" class="bmwj-btn-outline">Shop Our Specials</a>
     </div>
     <p class="fine-print">Sweepstakes offered by BMW's Southern Region program. Ask our team for current entry details, eligibility, and full official rules before participating.</p>
   </div>
@@ -110,9 +111,9 @@
     <div class="promise-tag">Questions About the Event?</div>
     <h2 style="font-size:42px;font-weight:700;color:#221F1F;letter-spacing:-0.03em;margin:0 0 20px;line-height:118%;">We're Happy to Walk You Through It.</h2>
     <p style="font-size:20px;color:#221F1F;margin:0 0 48px;line-height:1.6;">Our BMW of Jackson team can help you schedule a test drive, answer questions about the Summer of Soccer sweepstakes, and share the current campaign details from BMW's Southern Region program.</p>
-    <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:center;">
-      <a href="https://bmwofjackson.net/bmw-test-drive" class="btn-primary">Test Drive at Jackson BMW</a>
-      <a href="https://bmwofjackson.net/new-bmw-specials" style="display:inline-flex;align-items:center;justify-content:center;text-align:center;background:#221F1F;color:#fff;padding:16px 28px;min-height:56px;font-size:16px;font-weight:700;line-height:1.2;border:none;text-decoration:none;white-space:nowrap;">Shop Our Specials</a>
+    <div class="bmwj-btn-row" style="justify-content:center;gap:20px;">
+      <a href="https://bmwofjackson.net/bmw-test-drive" class="bmwj-btn-primary">Test Drive at Jackson BMW</a>
+      <a href="https://bmwofjackson.net/new-bmw-specials" class="bmwj-btn-outline" style="background:#221F1F;border-color:#221F1F;">Shop Our Specials</a>
     </div>
     <p style="font-size:13px;color:#555;line-height:1.55;margin:28px auto 0;max-width:720px;">Sweepstakes campaign is offered by BMW's Southern Region. Prize package, entry mechanics, eligibility, and full official rules are set by the sponsor — please ask a BMW of Jackson team member for the current details before registering.</p>
   </div>
