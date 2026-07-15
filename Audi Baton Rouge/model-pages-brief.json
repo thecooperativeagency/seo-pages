@@ -1,0 +1,295 @@
+{
+  "dealer": "Audi Baton Rouge",
+  "domain": "audibatonrouge.com",
+  "existing_live": {
+    "q3": "https://audibatonrouge.com/all-new-audi-q3",
+    "q5": "https://audibatonrouge.com/all-new-audi-q5"
+  },
+  "template_reference": "Audi Baton Rouge/audi-q5-s-line-black-optic.html",
+  "style": {
+    "theme": "dark",
+    "pattern": "hero + intro + 3 feature rows + details grid + CTA footer",
+    "ctas": ["Shop Inventory", "Get Pre-Qualified", "Schedule a Test Drive"],
+    "prequal": "https://audibatonrouge.com/get-pre-qualified",
+    "trade": "https://audibatonrouge.com/sell-or-trade",
+    "image_base": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models"
+  },
+  "build_pages": [
+    {
+      "id": "q5-sportback",
+      "filename": "audi-q5-sportback-baton-rouge.html",
+      "slug_suggestion": "all-new-audi-q5-sportback",
+      "name": "Audi Q5 Sportback",
+      "year": "2026",
+      "msrp": "$55,100",
+      "inventory": "https://audibatonrouge.com/cars/q5-sportback",
+      "hero_sub": "Coupe-inspired silhouette. Everyday utility. quattro® standard.",
+      "intro": "The Audi Q5 Sportback blends sculpted SUV proportions with a sleeker roofline—delivering the utility of a Q5 with a more dynamic stance.",
+      "features": [
+        {"label": "Design", "title": "Sportback silhouette", "body": "A sloping rear roofline gives the Q5 Sportback a coupe-inspired profile while keeping cargo versatility.", "bullets": ["Coupe-inspired Sportback body style", "Signature Singleframe® grille", "LED exterior lighting", "Available S line styling"]},
+        {"label": "Technology", "title": "Dual digital displays", "body": "A modern cockpit keeps navigation, media, and vehicle info in clear view.", "bullets": ["Virtual cockpit digital cluster", "MMI® touch display", "Wireless smartphone integration", "Audi connect® services"]},
+        {"label": "Performance", "title": "quattro® all-wheel drive", "body": "Confident traction and everyday performance, with quattro® available as a core Q5 family strength.", "bullets": ["quattro® AWD", "Turbocharged performance", "S tronic® dual-clutch transmission", "Drive Select modes"]}
+      ],
+      "images": {
+        "hero": "variants/q5-sportback.png",
+        "f1": "variants/q5-sportback.png",
+        "f2": "variants/q5.png",
+        "f3": "variants/sq5-sportback.png",
+        "grid": ["variants/q5-sportback.png", "variants/q5.png", "variants/sq5.png", "variants/sq5-sportback.png"]
+      }
+    },
+    {
+      "id": "q7",
+      "filename": "audi-q7-baton-rouge.html",
+      "slug_suggestion": "audi-q7-baton-rouge",
+      "name": "Audi Q7",
+      "year": "2026",
+      "msrp": "$62,000",
+      "inventory": "https://audibatonrouge.com/cars/q7",
+      "hero_sub": "Three-row luxury. Standard quattro®. Room for the whole crew.",
+      "intro": "The Audi Q7 sits at the intersection of luxury and versatility—with seven-passenger seating, generous cargo space, and the confidence of quattro® all-wheel drive.",
+      "features": [
+        {"label": "Space", "title": "Larger than life luxury", "body": "With superior handling, an intuitive interface, and seating for seven, the Q7 is built for families who refuse to compromise.", "bullets": ["Seats up to 7", "Up to 68.1 cu-ft cargo volume (2nd/3rd rows folded)", "Three-row versatility", "Premium cabin materials"]},
+        {"label": "Technology", "title": "Intuitive interface", "body": "A driver-focused digital experience keeps controls and information where they belong.", "bullets": ["Virtual cockpit", "MMI® touch technology", "Available advanced driver assistance", "Audi connect®"]},
+        {"label": "Capability", "title": "quattro® + everyday power", "body": "Standard quattro® all-wheel drive and composed SUV dynamics make the Q7 as capable as it is refined.", "bullets": ["Standard quattro® AWD", "Available Sport plus package", "Available vision package lighting", "Confident highway and family hauling"]}
+      ],
+      "images": {
+        "hero": "variants/q7.jpg",
+        "f1": "variants/q7.jpg",
+        "f2": "hub/q7.jpg",
+        "f3": "variants/sq7.jpg",
+        "grid": ["variants/q7.jpg", "variants/sq7.jpg", "hub/q7.jpg", "variants/q8.png"]
+      }
+    },
+    {
+      "id": "q8",
+      "filename": "audi-q8-baton-rouge.html",
+      "slug_suggestion": "audi-q8-baton-rouge",
+      "name": "Audi Q8",
+      "year": "2027",
+      "msrp": "$76,900",
+      "inventory": "https://audibatonrouge.com/cars/q8",
+      "hero_sub": "Bold coupe-SUV design. Towing muscle. Flagship presence.",
+      "intro": "The Audi Q8 delivers athletic exterior design, premium technology, and serious capability—including up to 7,700 lbs towing capacity.",
+      "features": [
+        {"label": "Design", "title": "Bold exterior design", "body": "Athletic lines, modern lighting, and a commanding Singleframe® grille define the Q8’s presence.", "bullets": ["Coupe-SUV proportions", "Bold Singleframe® grille", "State-of-the-art lighting", "Available Sport plus package styling"]},
+        {"label": "Capability", "title": "Built to move more", "body": "Rear-seat comfort and cargo capacity meet serious towing confidence.", "bullets": ["Towing capacity up to 7,700 lbs", "Cargo volume up to 60.7 cu-ft (seats folded)", "Available all-wheel steering", "Available sport adaptive air suspension"]},
+        {"label": "Technology", "title": "Virtual cockpit plus", "body": "A high-resolution digital cluster and dual-touch MMI® system put the driver in command.", "bullets": ["12.3\" virtual cockpit plus", "MMI® touch response", "Available Bang & Olufsen® 3D sound", "Available remote park assist plus"]}
+      ],
+      "images": {
+        "hero": "variants/q8.png",
+        "f1": "variants/q8.png",
+        "f2": "variants/sq8.png",
+        "f3": "variants/rs-q8.png",
+        "grid": ["variants/q8.png", "variants/sq8.png", "variants/rs-q8.png", "hub/q8.png"]
+      }
+    },
+    {
+      "id": "a3",
+      "filename": "audi-a3-baton-rouge.html",
+      "slug_suggestion": "audi-a3-baton-rouge",
+      "name": "Audi A3",
+      "year": "2026",
+      "msrp": "$40,100",
+      "inventory": "https://audibatonrouge.com/cars/a3",
+      "hero_sub": "Premium sedan essentials—compact footprint, full Audi character.",
+      "intro": "The Audi A3 sets the standard with premium features and functionality in a size built for real life—including standard panoramic sunroof, LED headlights, and quattro® all-wheel drive.",
+      "features": [
+        {"label": "Design", "title": "Streamlined exterior", "body": "Iconic Audi body lines meet modern lighting and available Black optic and S line packages.", "bullets": ["Signature Audi sedan silhouette", "Standard LED headlights", "Available Black optic package", "Available S line plus package"]},
+        {"label": "Interior", "title": "Driver-centric cabin", "body": "A modern dash and center console keep controls functional and focused on the driver.", "bullets": ["Standard panoramic sunroof", "Premium materials and finishes", "Driver-focused layout", "Available sportier packages"]},
+        {"label": "Performance", "title": "quattro® standard", "body": "Everyday performance with the confidence of quattro® all-wheel drive.", "bullets": ["Standard quattro® AWD", "Compact luxury sedan packaging", "Responsive daily dynamics", "Starting under $41,000 MSRP"]}
+      ],
+      "images": {
+        "hero": "variants/a3.png",
+        "f1": "variants/a3.png",
+        "f2": "variants/s3.png",
+        "f3": "variants/rs3.png",
+        "grid": ["variants/a3.png", "variants/s3.png", "variants/rs3.png", "hub/a3.png"]
+      }
+    },
+    {
+      "id": "a5",
+      "filename": "audi-a5-baton-rouge.html",
+      "slug_suggestion": "audi-a5-baton-rouge",
+      "name": "Audi A5",
+      "year": "2026",
+      "msrp": "$50,200",
+      "inventory": "https://audibatonrouge.com/cars/a5",
+      "hero_sub": "Panoramic digital stage. quattro® standard. Next-gen A5.",
+      "intro": "The 2026 Audi A5 brings a panoramic digital cockpit, standard quattro®, and a 7-speed S tronic® transmission—luxury sedan presence with modern tech.",
+      "features": [
+        {"label": "Technology", "title": "Your digital stage", "body": "The 11.9\" virtual cockpit integrates seamlessly with the 14.5\" MMI® display for a panoramic digital experience.", "bullets": ["11.9\" virtual cockpit", "14.5\" MMI® touch display", "Optimized visual layout", "Intuitive controls"]},
+        {"label": "Design", "title": "Modern lighting + stance", "body": "LED headlights are standard, with available Matrix-design lighting and S sport suspension options.", "bullets": ["Standard LED headlights", "Available Matrix-design LED headlights", "Available S sport suspension", "Available panoramic glass roof"]},
+        {"label": "Performance", "title": "quattro® + S tronic®", "body": "Standard quattro® all-wheel drive and a 7-speed S tronic® dual-clutch transmission deliver composed, confident driving.", "bullets": ["Standard quattro® AWD", "7-speed S tronic®", "Available sportier packages", "Explore S5 for elevated performance"]}
+      ],
+      "images": {
+        "hero": "variants/a5.png",
+        "f1": "variants/a5.png",
+        "f2": "variants/s5.png",
+        "f3": "hub/a5.png",
+        "grid": ["variants/a5.png", "variants/s5.png", "hub/a5.png", "variants/a3.png"]
+      }
+    },
+    {
+      "id": "a6",
+      "filename": "audi-a6-baton-rouge.html",
+      "slug_suggestion": "audi-a6-baton-rouge",
+      "name": "Audi A6",
+      "year": "2026",
+      "msrp": "$64,100",
+      "inventory": "https://audibatonrouge.com/cars/a6",
+      "hero_sub": "Executive sedan comfort with progressive Audi technology.",
+      "intro": "The Audi A6 Sedan is the executive choice—refined ride, advanced digital interfaces, and the presence of a full-size luxury sedan.",
+      "features": [
+        {"label": "Luxury", "title": "Executive presence", "body": "A refined cabin and polished road manners make the A6 the everyday flagship sedan for drivers who value composure.", "bullets": ["Full-size luxury sedan packaging", "Premium interior materials", "Quiet, composed ride", "Available advanced packages"]},
+        {"label": "Technology", "title": "Connected cockpit", "body": "Digital displays and connected services keep the drive informed and effortless.", "bullets": ["Virtual cockpit", "MMI® touch technology", "Smartphone integration", "Audi connect®"]},
+        {"label": "Performance", "title": "Confident dynamics", "body": "Powerful, refined performance with the option to step up into RS 6 Avant territory for pure performance.", "bullets": ["Sedan dynamics tuned for daily luxury", "Available quattro® performance DNA", "Explore RS 6 Avant for max performance", "Shop A6 inventory at ABR"]}
+      ],
+      "images": {
+        "hero": "variants/a6.png",
+        "f1": "variants/a6.png",
+        "f2": "variants/rs6-avant.png",
+        "f3": "hub/a6.png",
+        "grid": ["variants/a6.png", "variants/rs6-avant.png", "hub/a6.png", "variants/a8.png"]
+      }
+    },
+    {
+      "id": "a8",
+      "filename": "audi-a8-baton-rouge.html",
+      "slug_suggestion": "audi-a8-baton-rouge",
+      "name": "Audi A8",
+      "year": "2027",
+      "msrp": "$95,100",
+      "inventory": "https://audibatonrouge.com/cars/a8",
+      "hero_sub": "Flagship luxury. First-class cabin. Quiet authority.",
+      "intro": "The Audi A8 is the flagship sedan—crafted for executives who want presence, technology, and a first-class ride.",
+      "features": [
+        {"label": "Flagship", "title": "First-class luxury", "body": "From materials to ride quality, the A8 is built to feel like a private suite on wheels.", "bullets": ["Flagship sedan status", "Premium leather and finishes", "Executive rear-seat comfort", "Quiet, composed highway manners"]},
+        {"label": "Technology", "title": "Advanced digital suite", "body": "A full suite of digital and comfort technologies keep the cabin effortless.", "bullets": ["Virtual cockpit", "MMI® touch systems", "Available massaging seats on upper trims", "Connected services"]},
+        {"label": "Performance", "title": "Effortless power", "body": "Smooth, confident power delivery with the option to step into S8 performance.", "bullets": ["Flagship powertrain refinement", "quattro® confidence", "Explore S8 for higher performance", "Shop A8 inventory at ABR"]}
+      ],
+      "images": {
+        "hero": "variants/a8.png",
+        "f1": "variants/a8.png",
+        "f2": "variants/s8.png",
+        "f3": "hub/a8.png",
+        "grid": ["variants/a8.png", "variants/s8.png", "hub/a8.png", "variants/a6.png"]
+      }
+    },
+    {
+      "id": "q4-e-tron",
+      "filename": "audi-q4-e-tron-baton-rouge.html",
+      "slug_suggestion": "audi-q4-e-tron-baton-rouge",
+      "name": "Audi Q4 e-tron",
+      "year": "2026",
+      "msrp": "$50,600",
+      "inventory": "https://audibatonrouge.com/cars/q4-e-tron",
+      "hero_sub": "All-electric SUV luxury—within reach.",
+      "intro": "The Audi Q4 e-tron® merges electric performance with mid-size SUV utility—placing luxury EV driving firmly within reach.",
+      "features": [
+        {"label": "Electric", "title": "All-electric drive", "body": "Emissions-free everyday driving with the utility of a compact luxury SUV.", "bullets": ["All-electric powertrain", "Seats 5", "EPA-estimated range up to 288 miles (trim/config dependent)", "About 28 min DC fast charge 10–80%"]},
+        {"label": "Practical", "title": "Fitted for real life", "body": "Mid-size utility with a compact footprint and thoughtful packaging for passengers and cargo.", "bullets": ["SUV cargo versatility", "Available AR head-up display", "Modern LED lighting options", "Everyday EV convenience"]},
+        {"label": "Shop", "title": "Available at Audi Baton Rouge", "body": "Explore Q4 e-tron® and Q4 Sportback e-tron® inventory locally.", "bullets": ["Shop Q4 e-tron inventory", "Also available: Q4 Sportback e-tron®", "Get pre-qualified online", "Schedule a test drive"]}
+      ],
+      "images": {
+        "hero": "variants/q4-e-tron.png",
+        "f1": "variants/q4-e-tron.png",
+        "f2": "variants/q4-e-tron-sportback.png",
+        "f3": "hub/q4-e-tron.png",
+        "grid": ["variants/q4-e-tron.png", "variants/q4-e-tron-sportback.png", "hub/q4-e-tron.png", "variants/q6-e-tron.png"]
+      }
+    },
+    {
+      "id": "q4-e-tron-sportback",
+      "filename": "audi-q4-sportback-e-tron-baton-rouge.html",
+      "slug_suggestion": "audi-q4-sportback-e-tron-baton-rouge",
+      "name": "Audi Q4 Sportback e-tron",
+      "year": "2026",
+      "msrp": "$59,000",
+      "inventory": "https://audibatonrouge.com/cars/q4-e-tron-sportback",
+      "hero_sub": "Sleek electric Sportback silhouette. Premium EV presence.",
+      "intro": "The Q4 Sportback e-tron® pairs electric performance with a sleek Sportback profile for drivers who want style without giving up EV practicality.",
+      "features": [
+        {"label": "Design", "title": "Sportback electric style", "body": "A sleeker silhouette and elegant interior mark the Sportback as the more expressive Q4 e-tron® choice.", "bullets": ["Sportback body style", "Premium EV design cues", "Seats 5", "All-electric drive"]},
+        {"label": "Charging", "title": "Fast-charge ready", "body": "Public DC fast charging can take the battery from low to 80% in about 28 minutes (conditions apply).", "bullets": ["About 28 min DC fast charge window", "150 kW DC max charging power", "Daily EV convenience", "Shop inventory at ABR"]},
+        {"label": "Experience", "title": "Luxury electric within reach", "body": "A premium cabin and modern tech keep the Q4 Sportback e-tron® as usable as it is distinctive.", "bullets": ["Modern digital cockpit", "Available advanced lighting signatures", "SUV utility with coupe-inspired lines", "Schedule a test drive"]}
+      ],
+      "images": {
+        "hero": "variants/q4-e-tron-sportback.png",
+        "f1": "variants/q4-e-tron-sportback.png",
+        "f2": "variants/q4-e-tron.png",
+        "f3": "variants/q6-e-tron.png",
+        "grid": ["variants/q4-e-tron-sportback.png", "variants/q4-e-tron.png", "hub/q4-e-tron.png", "variants/q6-e-tron.png"]
+      }
+    },
+    {
+      "id": "q6-e-tron",
+      "filename": "audi-q6-e-tron-baton-rouge.html",
+      "slug_suggestion": "audi-q6-e-tron-baton-rouge",
+      "name": "Audi Q6 e-tron",
+      "year": "2027",
+      "msrp": "$64,500",
+      "inventory": "https://audibatonrouge.com/cars/q6",
+      "hero_sub": "Next-chapter electric SUV. Rapid charge. Modern presence.",
+      "intro": "The Audi Q6 e-tron® marks a new chapter in electromobility—balancing evolved aesthetics, high technology, and rapid charging capability.",
+      "features": [
+        {"label": "Electric performance", "title": "Serious EV power", "body": "With launch-control performance on quattro models and rapid DC charging, the Q6 e-tron® is built for modern electric driving.", "bullets": ["Up to 456 HP with launch control (Q6 e-tron quattro)", "About 21 min DC fast charge 10–80%", "Up to 270 kW DC max charging", "Explore SQ6 for higher performance"]},
+        {"label": "Design", "title": "Evolved aesthetics", "body": "A progressive exterior and modern cabin position the Q6 e-tron® as a next-gen Audi EV.", "bullets": ["Next-gen electric SUV design", "Premium interior tech", "Available Sportback body style in family", "Commanding road presence"]},
+        {"label": "Shop", "title": "Available at Audi Baton Rouge", "body": "Browse Q6 e-tron® inventory and experience the lineup in person.", "bullets": ["Shop Q6 inventory", "Get pre-qualified", "Schedule a test drive", "Ask about SQ6 e-tron®"]}
+      ],
+      "images": {
+        "hero": "variants/q6-e-tron.png",
+        "f1": "variants/q6-e-tron.png",
+        "f2": "hub/q6-e-tron.png",
+        "f3": "variants/q4-e-tron.png",
+        "grid": ["variants/q6-e-tron.png", "hub/q6-e-tron.png", "variants/q4-e-tron.png", "variants/q4-e-tron-sportback.png"]
+      }
+    },
+    {
+      "id": "s5",
+      "filename": "audi-s5-baton-rouge.html",
+      "slug_suggestion": "audi-s5-baton-rouge",
+      "name": "Audi S5",
+      "year": "2026",
+      "msrp": "$63,300",
+      "inventory": "https://audibatonrouge.com/cars/s5",
+      "hero_sub": "S performance. Sharper stance. Everyday usability.",
+      "intro": "The Audi S5 elevates the A5 formula with S performance character—more athletic presence and a more engaging drive.",
+      "features": [
+        {"label": "S Performance", "title": "Built for the drive", "body": "S badging means more than looks—expect a sportier attitude on the road while keeping daily luxury intact.", "bullets": ["S performance tuning character", "quattro® confidence", "Sportier exterior cues", "Premium cabin"]},
+        {"label": "Design", "title": "S presence", "body": "Distinct S design elements set the S5 apart from the standard A5.", "bullets": ["S exterior design details", "Aggressive stance", "Premium wheel designs", "Driver-focused interior"]},
+        {"label": "Shop", "title": "Shop S5 at ABR", "body": "Explore current S5 inventory and get pre-qualified online.", "bullets": ["Shop S5 inventory", "Compare with A5", "Get pre-qualified", "Schedule a test drive"]}
+      ],
+      "images": {
+        "hero": "variants/s5.png",
+        "f1": "variants/s5.png",
+        "f2": "variants/a5.png",
+        "f3": "hub/a5.png",
+        "grid": ["variants/s5.png", "variants/a5.png", "hub/a5.png", "variants/s3.png"]
+      }
+    },
+    {
+      "id": "sq5",
+      "filename": "audi-sq5-baton-rouge.html",
+      "slug_suggestion": "audi-sq5-baton-rouge",
+      "name": "Audi SQ5",
+      "year": "2026",
+      "msrp": "$65,400",
+      "inventory": "https://audibatonrouge.com/cars/q5",
+      "hero_sub": "S performance SUV. Everyday utility. Elevated dynamics.",
+      "intro": "The Audi SQ5 takes the Q5 formula and turns up performance and presence—ideal for drivers who want S character in an SUV.",
+      "features": [
+        {"label": "Performance", "title": "SQ5 dynamics", "body": "More athletic power delivery and S design cues without losing Q5 practicality.", "bullets": ["S performance SUV character", "quattro® AWD", "Sportier exterior design", "Everyday five-passenger utility"]},
+        {"label": "Design", "title": "S presence", "body": "Distinctive SQ5 styling sets it apart from the standard Q5 lineup.", "bullets": ["S exterior detailing", "Aggressive stance", "Premium cabin finishes", "Available Sportback body style in family"]},
+        {"label": "Shop", "title": "Shop SQ5 locally", "body": "Browse Q5-family inventory at Audi Baton Rouge and ask about SQ5 availability.", "bullets": ["Shop related Q5 inventory", "Also explore SQ5 Sportback", "Get pre-qualified", "Schedule a test drive"]}
+      ],
+      "images": {
+        "hero": "variants/sq5.png",
+        "f1": "variants/sq5.png",
+        "f2": "variants/sq5-sportback.png",
+        "f3": "variants/q5.png",
+        "grid": ["variants/sq5.png", "variants/sq5-sportback.png", "variants/q5.png", "variants/q5-sportback.png"]
+      }
+    }
+  ]
+}
