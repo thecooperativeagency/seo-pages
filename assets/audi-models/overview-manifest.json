@@ -1,0 +1,1151 @@
+{
+  "models": {
+    "q5-sportback": {
+      "h1": "2026 Audi Q5 Sportback",
+      "msrp_line": "Starting at $55,100",
+      "sections": [
+        "2026 Audi Q5 Sportback",
+        "Highlights",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "Next-level lighting.",
+        "### Black optic package.",
+        "### Audi connect CARE\u00ae.",
+        "### Wireless Apple CarPlay\u00ae or Android Auto\u2122.",
+        "### Traffic sign recognition.",
+        "[Shopping Basket Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/q5-sportback/q5-sportback-01.jpg",
+          "bytes": 14847,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:64249574-5618-4a4b-a7e3-acf0813a076b/as/1920x1920_H2_MY26---Q5-Sportback---Interior---Passenger---7191.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-01.jpg"
+        },
+        {
+          "file": "overview/q5-sportback/q5-sportback-04.jpg",
+          "bytes": 14168,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:158d4d0b-7963-4af0-ba5b-00a120123137/as/1920X1920_H5_MY26---Q5-Sportback---Interior---Dashboard---7177.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-04.jpg"
+        },
+        {
+          "file": "overview/q5-sportback/q5-sportback-07.jpg",
+          "bytes": 12500,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:95f8522f-9fac-4af5-b602-e169ce47edb1/as/1920X1080_D2_V2_MY26---Q5-Sportback---Exterior---Front-Profile---Parked---7165.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-07.jpg"
+        },
+        {
+          "file": "overview/q5-sportback/q5-sportback-08.jpg",
+          "bytes": 11741,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:95329b7f-8ac9-4a5c-aec7-2344276a10b5/as/1920X1080_D3_MY26---Q5-Sportback---Exterior---Side-Profile---Parked---7172.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-08.jpg"
+        },
+        {
+          "file": "overview/q5-sportback/q5-sportback-05.jpg",
+          "bytes": 11315,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:cef9a3b2-1173-45b7-aa2a-5b62a1335fd1/as/1920X1920_H6_MY26---Q5-Sportback---Exterior---Rear-Profile---Driving---7169.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-05.jpg"
+        },
+        {
+          "file": "overview/q5-sportback/q5-sportback-03.jpg",
+          "bytes": 11104,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e2a5345a-21db-4033-88d6-cf3a413464cd/as/1920X1920_H4_MY26---Q5-Sportback---Exterior---Rear-Profile---Driving---7166.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-03.jpg"
+        },
+        {
+          "file": "overview/q5-sportback/q5-sportback-06.jpg",
+          "bytes": 10451,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:1ffaa62d-4ef7-4fc6-9598-6424d00d8e00/as/1920x1080_D1_V2_MY26---Q5-Sportback---Exterior---Side-Profile---Parked---7162.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-06.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-c00b586f7e.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-01.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-04.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-07.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q5-sportback/q5-sportback-08.jpg"
+      ]
+    },
+    "q6-e-tron": {
+      "h1": "2027 Audi Q6 e-tron",
+      "msrp_line": "Starting at $64,500",
+      "sections": [
+        "2027 Audi Q6 e-tron\u00ae",
+        "Highlights",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "To see and be seen.",
+        "### Unmistakably Audi.",
+        "### S line black optic package.",
+        "### Bang & Olufsen\u00ae.",
+        "### Technology package.",
+        "### Interactive ambience.",
+        "### Remote climatization via myAudi.",
+        "### Traffic sign recognition."
+      ],
+      "images": [
+        {
+          "file": "overview/q6-e-tron/q6-e-tron-05.jpg",
+          "bytes": 21513,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:c3d865cc-6803-4caa-ae8b-4ee5b20b3ba0/as/1920x1920-DriverAssistance_5_Q6_2023_5123_06_NA_Plate.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-05.jpg"
+        },
+        {
+          "file": "overview/q6-e-tron/q6-e-tron-06.jpg",
+          "bytes": 17324,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:011c63b4-73f0-40af-af38-52d71fd9b188/as/1920x1080_D1_MY27---Q6-e-tron---Front---Profile---Parked---5202.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-06.jpg"
+        },
+        {
+          "file": "overview/q6-e-tron/q6-e-tron-01.jpg",
+          "bytes": 11542,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:9f56fead-4c23-41ab-9f40-ccbe4d70c30c/as/1920x1920_H1_MY27---Q6-e-tron---Interior---Detail---5174.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-01.jpg"
+        },
+        {
+          "file": "overview/q6-e-tron/q6-e-tron-03.jpg",
+          "bytes": 8971,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e9cee4a2-5f23-4bf6-af0a-cd420f70335c/as/1920X1920_H4_MY27---Q6-e-tron---Rear---Profile---Parked---5126.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-03.jpg"
+        },
+        {
+          "file": "overview/q6-e-tron/q6-e-tron-07.jpg",
+          "bytes": 8561,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:005dbbf4-84ed-4d14-a102-b8514f126552/as/1920X1080_D2_MY27---Q6-e-tron---Front---Profile---Parked---5204.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-07.jpg"
+        },
+        {
+          "file": "overview/q6-e-tron/q6-e-tron-08.jpg",
+          "bytes": 8022,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:615e530f-62b2-4c22-ba0a-f7ff26670a82/as/1920X1080_D3_MY27---Q6-e-tron---Wheel---Closeup---Parked---5210.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-08.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-165ffc7bf9.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-05.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-05.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-06.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q6-e-tron/q6-e-tron-03.jpg"
+      ]
+    },
+    "q4-e-tron": {
+      "h1": "2026 Audi Q4 e-tron\u00ae",
+      "msrp_line": "Starting at $50,600",
+      "sections": [
+        "Put yourself in charge.",
+        "2026 Audi Q4 e-tron\u00ae",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "[Car Handover Small\\\\",
+        "[Shopping Basket Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-05.jpg",
+          "bytes": 718058,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:4bef1e78-2f00-4dc9-bfd5-61f4fab22b1b/as/1920x1920-D3-Q4-e-tron-2025.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-05.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-08.jpg",
+          "bytes": 404888,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:4169caad-9ef9-4516-9df7-9c2322a033b6/as/1920x1920_MY25---Q4-e-tron---Front-Profile---Driving---Pebble-Gray---006.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-08.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-03.jpg",
+          "bytes": 352105,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:9c58b657-ac36-406a-8440-1c808270c04d/as/1920x1920-D1-MY26---Q4-e-tron---Rear-Profile---Parked---Pebble-Gray---02.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-03.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-07.jpg",
+          "bytes": 283455,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:337ea95a-dd38-420a-aaaa-6d56f7df6341/as/1920x1920-P5-MY26-Q4e-tron-Interior-Driver-Steering-Wheel.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-07.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-02.jpg",
+          "bytes": 254544,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:a5fbb2c0-ea08-43dc-a0e9-2e1adad36b7c/as/1920x1920_MY25---Q4-e-tron---Wheel-Closeup---Parked---Navarra-Blue---2092.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-02.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-04.jpg",
+          "bytes": 210542,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:22853f0e-8481-4d8a-a7ab-a1e706de9776/as/1920x1920-D2-MY26-Q4e-tron-Interior-Driver.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-04.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-01.jpg",
+          "bytes": 194591,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:dee9d557-bc9c-476f-9dcb-07831239a997/as/1080x1920-Stage-MY26-Q4e-tron-FrontProfile-Parked-PebbleGray-002-gradient-added.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-01.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron/q4-e-tron-06.jpg",
+          "bytes": 127462,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:71d004bc-1499-4fac-a960-1dc60feccc16/as/1920x1920-D4-MY26---Q4-e-tron---Front-Detail---Parked---Pebble-Gray.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-06.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-2344a3f880.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-05.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-05.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-08.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron/q4-e-tron-07.jpg"
+      ]
+    },
+    "sq7": {
+      "h1": "2026 Audi SQ7",
+      "msrp_line": "Starting at $93,800",
+      "sections": [
+        "Accelerate your standards.",
+        "2026 Audi SQ7",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "[Car Handover Small\\\\",
+        "[Shopping Basket Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/sq7/sq7-03.jpg",
+          "bytes": 545814,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:9a70dd15-9510-419d-b7d7-e8643230a380/as/1920x1920-SQ7_rear-V2.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-03.jpg"
+        },
+        {
+          "file": "overview/sq7/sq7-04.jpg",
+          "bytes": 408588,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:ad3085fb-bd3e-4371-9982-30d5ac8f0cdd/as/1920x1920-D2-MY26-SQ7-Rear-Parked-5416.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-04.jpg"
+        },
+        {
+          "file": "overview/sq7/sq7-01.jpg",
+          "bytes": 388376,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:b7f8a6ea-60b1-42d5-bc95-db14cc9cb31e/as/1920x1920-Stage-MY26-SQ7-FrontProfile-Parked-5418-gradient-added.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-01.jpg"
+        },
+        {
+          "file": "overview/sq7/sq7-05.jpg",
+          "bytes": 320147,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:baa8651d-9518-4e0e-8209-1145b64401e9/as/1920x1920-D3-MY26-SQ7-Interior-Passenger-Open-door--5423.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-05.jpg"
+        },
+        {
+          "file": "overview/sq7/sq7-02.jpg",
+          "bytes": 310562,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:c697dfe2-cf2e-47df-a167-25f123028d0c/as/1920x1920-SQ7_carbon.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-02.jpg"
+        },
+        {
+          "file": "overview/sq7/sq7-06.jpg",
+          "bytes": 191570,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:3de81829-914e-4fcf-8ed0-e908393b9b43/as/1920x1920-D4-MY26-SQ7-Interior-RearSeats-5425.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-06.jpg"
+        },
+        {
+          "file": "overview/sq7/sq7-07.jpg",
+          "bytes": 104331,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:4bf7a887-a4e1-464b-aa54-b9ae6aa397c3/as/1920x1920-P5-MY26-SQ7-FrontProfile-Driving-5422.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-07.jpg"
+        },
+        {
+          "file": "overview/sq7/sq7-08.jpg",
+          "bytes": 79374,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e738f08c-59bb-4a54-b03e-d386dadb63c2/as/1920x1920_v2MY20-S8-_4.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-08.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-2af86b072b.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-03.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-04.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq7/sq7-05.jpg"
+      ]
+    },
+    "q7": {
+      "h1": "2026 Audi Q7",
+      "msrp_line": "Starting at $62,000",
+      "sections": [
+        "Larger than life luxury.",
+        "2026 Audi Q7",
+        "Design",
+        "Performance (55 TFSI\u00ae)"
+      ],
+      "bullets": [
+        "[Car Handover Small\\\\",
+        "[Shopping Basket Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/q7/q7-01.jpg",
+          "bytes": 693113,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:82547cfc-b7ae-4ec3-9fa2-06809065a1cc/as/1920x1920-Stage-MY26-Q7-SideProfile-Parked-WithTalent-5389-v3-gradient-added-IIHS.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-01.jpg"
+        },
+        {
+          "file": "overview/q7/q7-02.jpg",
+          "bytes": 600153,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:6bb11107-46bd-4a11-9e57-1baa863bb93a/as/1920x1920-D5-MY26-Q7-FrontProfile-Parked-5390.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-02.jpg"
+        },
+        {
+          "file": "overview/q7/q7-07.jpg",
+          "bytes": 529646,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:de555e20-cc22-4863-bda6-ce6e73fccbfc/as/1920x1920-P5-MY26-Q7-FrontProfile-Parked-5386.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-07.jpg"
+        },
+        {
+          "file": "overview/q7/q7-03.jpg",
+          "bytes": 506816,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:4d0919c4-742b-4b98-a5b2-38dfccea1f7a/as/1920x1920-MY26-Q7-Rear-Detail-Parked-5403.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-03.jpg"
+        },
+        {
+          "file": "overview/q7/q7-06.jpg",
+          "bytes": 200718,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:8c85c3bd-ee14-4c3f-afbe-0033aee3cf0a/as/1920x1920-D4-MY26-Q7--RearDetail-Parked-5406.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-06.jpg"
+        },
+        {
+          "file": "overview/q7/q7-05.jpg",
+          "bytes": 187852,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:00abc56b-204d-42a1-aaa9-5f9538514eaf/as/1920x1920_MY25---Q7---Interior---Passenger---5411.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-05.jpg"
+        },
+        {
+          "file": "overview/q7/q7-04.jpg",
+          "bytes": 177775,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:6d5a07c4-de1e-46cc-b4f3-ddb7df1d0cd2/as/1920x1920_MY25---Q7---Interior---Rear-Seats---5401.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-04.jpg"
+        },
+        {
+          "file": "overview/q7/q7-08.jpg",
+          "bytes": 63931,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:92bfe7ac-6502-4878-a6c8-5ed1d79d3422/as/1920x1920_A198812_large.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-08.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-3ae003ae9a.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-01.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-02.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-07.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q7/q7-03.jpg"
+      ]
+    },
+    "rs3": {
+      "h1": "2026 RS 3",
+      "msrp_line": "Starting at $66,100",
+      "sections": [
+        "Track Proven. Everyday Thrills.",
+        "2026 RS 3",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "[Shopping Basket Small\\\\",
+        "[Car Handover Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/rs3/rs3-06.jpg",
+          "bytes": 932197,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e849a26c-3eba-4cac-a011-f4b56f0af7a4/as/1920x1920-D4-MY25-RS3-Exterior-RearProfile-Parked-6169.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-06.jpg"
+        },
+        {
+          "file": "overview/rs3/rs3-05.jpg",
+          "bytes": 774572,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:ac86ec7c-0a55-4537-b371-3ad8dcd0d9fc/as/1920x1920_D3-CROP_MY25---RS-3---Exterior---Front---Parked---6180.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-05.jpg"
+        },
+        {
+          "file": "overview/rs3/rs3-03.jpg",
+          "bytes": 606531,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:750fc817-a36e-40e8-ba17-ceedc3c20ca4/as/1920x1920-D1-MY25-RS3-Exterior-Profile-Parked-6184.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-03.jpg"
+        },
+        {
+          "file": "overview/rs3/rs3-01.jpg",
+          "bytes": 602594,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e25cd89a-bbbd-4a55-860d-e27eee1e17af/as/1920x1920-Stage-MY25---RS-3---Exterior---Profile---Parked---6183.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-01.jpg"
+        },
+        {
+          "file": "overview/rs3/rs3-02.jpg",
+          "bytes": 321839,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:da258f17-14ab-4822-93b8-ddf5fb9f2ff7/as/1920x1920-D5-MY25-RS3-Interior-Driver-6176.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-02.jpg"
+        },
+        {
+          "file": "overview/rs3/rs3-04.jpg",
+          "bytes": 276066,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:b0001657-4641-4520-9a5c-3e4b6429f2c9/as/1920x1920-D2-MY25-RS3-Interior-SteeringWheel-6187.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-04.jpg"
+        },
+        {
+          "file": "overview/rs3/rs3-08.jpg",
+          "bytes": 254658,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e453c43c-0602-42f5-a036-f0ae3bc6ca74/as/1920x1920-A243787_large.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-08.jpg"
+        },
+        {
+          "file": "overview/rs3/rs3-07.jpg",
+          "bytes": 117105,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:3e2be90f-43fd-4a96-bb46-9cf4da5c8d3b/as/1920x1920-RS3-P5-v2.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-07.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-637800158b.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-06.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-06.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-05.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/rs3/rs3-01.jpg"
+      ]
+    },
+    "a3": {
+      "h1": "2026 A3",
+      "msrp_line": "Starting at $40,100",
+      "sections": [
+        "Sets the standard.",
+        "2026 A3",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "[Car Handover Small\\\\",
+        "[Shopping Basket Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/a3/a3-03.jpg",
+          "bytes": 680642,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:f7329f66-9441-4b17-bf7a-ebd078915098/as/1920X1920_D1_MY26---A3---Side-Profile---Parked---5686.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-03.jpg"
+        },
+        {
+          "file": "overview/a3/a3-02.jpg",
+          "bytes": 663881,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:534563ac-e2b4-4dad-8860-24b5468ab022/as/1920x1920-MY25-A3-Front-Parked-5684.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-02.jpg"
+        },
+        {
+          "file": "overview/a3/a3-04.jpg",
+          "bytes": 257353,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:8389d276-fb7a-428e-b72e-e80b22c64382/as/1920X1920_D2_MY26---A3---Interior---Driver---5696.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-04.jpg"
+        },
+        {
+          "file": "overview/a3/a3-05.jpg",
+          "bytes": 238310,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:7668cf55-c420-4500-95c7-8416453292d4/as/1920X1920_D3_MY26---A3---Rear-Profile---Parked---5676.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-05.jpg"
+        },
+        {
+          "file": "overview/a3/a3-06.jpg",
+          "bytes": 190168,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:65cbf589-65a2-4ebe-81e6-125863f605f2/as/1920X1920_D4_MY26---A3---Front---Headlights---5685.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-06.jpg"
+        },
+        {
+          "file": "overview/a3/a3-08.jpg",
+          "bytes": 137605,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:89df550a-2f3c-4104-bc3a-a83992797302/as/1920X1920_P1_MY26---A3---Interior---Driver---5681.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-08.jpg"
+        },
+        {
+          "file": "overview/a3/a3-01.jpg",
+          "bytes": 111162,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:331395b9-b813-4dbf-9230-892a84ef1397/as/1080x1920_STAGE_MY26---A3---Front-Profile---Parked---5678.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-01.jpg"
+        },
+        {
+          "file": "overview/a3/a3-07.jpg",
+          "bytes": 61599,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:76f69aba-c4b7-4985-9cee-6d7a09b11847/as/1920x1920-v3-A1811748_large.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-07.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-64ff7d9086.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-03.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-02.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-04.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a3/a3-05.jpg"
+      ]
+    },
+    "s3": {
+      "h1": "2026 S3",
+      "msrp_line": "Starting at $52,000",
+      "sections": [
+        "Upgrade the everyday.",
+        "2026 S3",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "[Car Handover Small\\\\",
+        "[Shopping Basket Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/s3/s3-06.jpg",
+          "bytes": 714531,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:42c6da3e-885d-42ff-a23a-8b8bb02ec381/as/1920x1920-US-MY26-S3-D4-_images_s3-sedan_AVP2D_B_1_005_3.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-06.jpg"
+        },
+        {
+          "file": "overview/s3/s3-03.jpg",
+          "bytes": 594388,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:51b32def-cd50-4a03-841b-49ecb36a3fea/as/1920x1920-D1-MY25-S3-Front-Profile-Parked-5766.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-03.jpg"
+        },
+        {
+          "file": "overview/s3/s3-05.jpg",
+          "bytes": 353576,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:71603aa7-448d-42d3-839e-8f6575f74390/as/1920x1920_D3_MY26---S3---Wheel---Closeup---Parked---5776.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-05.jpg"
+        },
+        {
+          "file": "overview/s3/s3-02.jpg",
+          "bytes": 321444,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:85c80f0e-8394-4f3c-839e-1edfc5990b01/as/1920x1920_D5_MY26---S3---Front---Parked---5773.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-02.jpg"
+        },
+        {
+          "file": "overview/s3/s3-04.jpg",
+          "bytes": 192916,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:b3df7098-b199-422a-ba9b-7abeb4ceda6e/as/1920x1920_D2_MY26---S3---Interior---Driver---5780.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-04.jpg"
+        },
+        {
+          "file": "overview/s3/s3-08.jpg",
+          "bytes": 110869,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:2dcded5c-b0e1-41bf-9db6-4c104dbbb5e1/as/1920X1920_P1_MY26---S3---Front---Profile---Driving---5767.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-08.jpg"
+        },
+        {
+          "file": "overview/s3/s3-01.jpg",
+          "bytes": 99908,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:ca6df1d9-9498-4975-83ec-c293c8b543eb/as/1080x1920_STAGE_MY26---S3---Side---Profile---Parked---5775.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-01.jpg"
+        },
+        {
+          "file": "overview/s3/s3-07.jpg",
+          "bytes": 66530,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:baf1fc27-436b-4bd7-baae-91941cef125e/as/1920x1920-a3-drive-select.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-07.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-6c435e5743.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-06.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-06.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-05.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s3/s3-02.jpg"
+      ]
+    },
+    "q4-e-tron-sportback": {
+      "h1": "2026 Audi Q4 Sportback e-tron\u00ae",
+      "msrp_line": "Starting at $59,000",
+      "sections": [
+        "Expressive design, electric performance.",
+        "2026 Audi Q4 Sportback e-tron\u00ae",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "[Car Handover Small\\\\",
+        "[Shopping Basket Small\\\\",
+        "[Voice Call 1 Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-02.jpg",
+          "bytes": 628026,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:576ef610-43de-4272-8248-ffb92147a77a/as/1920x1920_MY25---Q4-Sportback-e-tron---Front---Profile---Parked---2835_1.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-02.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-03.jpg",
+          "bytes": 384227,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:d9327c60-5d92-4092-9f31-b8b8cfd2dbba/as/1920x1920-D1-MY26-Q4Sportback-e-tron-Rear-Profile-Parked-2780.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-03.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-06.jpg",
+          "bytes": 219718,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:5d610d84-dc2e-4209-afcd-ecc46d9d63f4/as/1920x1920_crop_MY25---Q4-Sportback-e-tron---Front-Profile---Driving---2520.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-06.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-07.jpg",
+          "bytes": 125895,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:6a8390b6-e233-4c97-a5bd-b82aaedd9476/as/1920x1920-P5-MY26-Q4-Sportback-e-tron-Side-Profile-Parked-2538.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-07.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-04.jpg",
+          "bytes": 125471,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:919caabe-aca7-4344-84a3-e7ea213cf294/as/1920x1920-D2-MY26-Q4-Sportback-e-tron-Interior-Driver-2527.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-04.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-01.jpg",
+          "bytes": 125010,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:439023da-9c9a-4716-9ac1-e18b6a1f1e00/as/1080x1920-Stage-MY26-Q4-Sportback-e-tron-Front-Profile-Parked-2778-gradient-added1.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-01.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-05.jpg",
+          "bytes": 108391,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:f5103f3f-f15f-4a6d-8c46-f498eeb2d72c/as/1920x1920_MY25---Q4-Sportback-e-tron---Rear-Profile---Parked---2780.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-05.jpg"
+        },
+        {
+          "file": "overview/q4-e-tron-sportback/q4-e-tron-sportback-08.jpg",
+          "bytes": 67893,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:3bd93dfe-94d8-4f04-a674-53846fd9f579/as/1920x1920-P1-MY26-Q4-Sportback-e-tron-Rear-Profile-Driving-2523.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-08.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-7b87ad33a7.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-02.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-02.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-06.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q4-e-tron-sportback/q4-e-tron-sportback-07.jpg"
+      ]
+    },
+    "q3": {
+      "h1": "q3",
+      "msrp_line": null,
+      "sections": [
+        "Exceeds expectations.",
+        "The Audi Q3",
+        "The Audi Q4 e-tron\u00ae",
+        "The Audi Q5"
+      ],
+      "bullets": [
+        "### Reimagine the Audi Q3.",
+        "### Striking interior.",
+        "### Rolling forward.",
+        "### Fitted for you.",
+        "### Wraparound virtual cockpit.",
+        "### Unmistakably Audi.",
+        "### Go farther\u2014faster.",
+        "### Choose your power."
+      ],
+      "images": [
+        {
+          "file": "overview/q3/q3-07.jpg",
+          "bytes": 628026,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:5745758c-49eb-4abf-bcdb-1764c709be61/as/1920x1920_v3_DSC_0927-build-4.19.22-V2-2_tsc_V04-(2?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-07.jpg"
+        },
+        {
+          "file": "overview/q3/q3-01.jpg",
+          "bytes": 280518,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:1e7fc1f3-3681-4e8a-969a-9ebe52b9a0e4/as/SUV-1920x1920.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-01.jpg"
+        },
+        {
+          "file": "overview/q3/q3-03.jpg",
+          "bytes": 17588,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:d86b5287-82df-4bea-b0e2-3c1401901367/as/D3-1920x1920-MY26-Q3-Interior-Cockpit-8073.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-03.jpg"
+        },
+        {
+          "file": "overview/q3/q3-04.jpg",
+          "bytes": 17437,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:65347041-8489-4443-b60e-a1754ffccb33/as/1920x1920-MY26-Q3-Exterior-Rear-Parked-8061.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-04.jpg"
+        },
+        {
+          "file": "overview/q3/q3-02.jpg",
+          "bytes": 15444,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:2a3d7988-6957-4c92-a540-a67f739bdd97/as/MY26---Q3---Exterior---Front---Parked---8058-1920x1920.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-02.jpg"
+        },
+        {
+          "file": "overview/q3/q3-08.jpg",
+          "bytes": 15143,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:7f55159f-3408-472f-a55b-f4e6a1bf8e02/as/1920x1920_A211115_large.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-08.jpg"
+        },
+        {
+          "file": "overview/q3/q3-05.jpg",
+          "bytes": 9350,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:7d651a92-6f63-4c2e-800e-e28187edee8a/as/Q3-2026-883x496.jpg?width=342",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-05.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-7de5802da0.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-07.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-07.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q3/q3-04.jpg"
+      ]
+    },
+    "q8": {
+      "h1": "2027 Audi Q8",
+      "msrp_line": "Starting at $76,900",
+      "sections": [
+        "Highlights",
+        "Design",
+        "Performance",
+        "Technology"
+      ],
+      "bullets": [
+        "### Vision package.",
+        "### Sport plus package.",
+        "### Front seat luxury.",
+        "### Virtual cockpit plus.",
+        "### MMI\u00ae touch response.",
+        "### Audi connect CARE\u00ae with remote start.\\*",
+        "### Night vision assist.",
+        "[Car Handover Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/q8/q8-06.jpg",
+          "bytes": 63846,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:c4d8f0c6-a9d4-49a9-b6fb-4270d208f553/as/1920x1920-MY19-Q8-Prestige---Int---Speaker---Sarder-Brown.jpg?preferwebp=true&width=560",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-06.jpg"
+        },
+        {
+          "file": "overview/q8/q8-01.jpg",
+          "bytes": 33755,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:b7886b06-0e2f-47fc-a097-19fd43ef688a/as/1080X1920_US-2027-Q8-stage.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-01.jpg"
+        },
+        {
+          "file": "overview/q8/q8-02.jpg",
+          "bytes": 29857,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:c368a004-cd9e-4536-adad-c4d8a392762f/as/1920x1920_H1_MY26---Q8---Exterior---Front-Profile---Parked---5499.jpg?preferwebp=true&width=560",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-02.jpg"
+        },
+        {
+          "file": "overview/q8/q8-05.jpg",
+          "bytes": 28934,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:626f7f7f-3762-4200-80b0-4f1ee3ae7255/as/1920X1920_P2_MY26---Q8---Exterior---Front-Profile---Driving---5485.jpg?preferwebp=true&width=560",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-05.jpg"
+        },
+        {
+          "file": "overview/q8/q8-07.jpg",
+          "bytes": 19469,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:698b2158-2a47-4491-a79a-f39bcbf4086b/as/1920x1920_remote-park-assist-a8_edited.jpg?preferwebp=true&width=560",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-07.jpg"
+        },
+        {
+          "file": "overview/q8/q8-03.jpg",
+          "bytes": 18810,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:de6101c6-99ad-4360-b60d-a4b4e511cd7d/as/1920X1920_MY25---Q8---Interior---Rear-Seats---5490.jpg?preferwebp=true&width=560",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-03.jpg"
+        },
+        {
+          "file": "overview/q8/q8-04.jpg",
+          "bytes": 18194,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:d076fa67-1f32-4dce-9e71-329b02545f7d/as/1920x1920-2020-Audi-SQ7-031-all-wheel-steering_v2-min.jpg?preferwebp=true&width=560",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-04.jpg"
+        },
+        {
+          "file": "overview/q8/q8-08.jpg",
+          "bytes": 8007,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:daf4e1ae-a2d3-4b96-8cac-96cc94a9e4f4/as/1920x1080_D4_MY26---Q8---Exterior---Front---Parked---5478.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-08.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-87b1689d36.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-06.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-06.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-02.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/q8/q8-05.jpg"
+      ]
+    },
+    "s5": {
+      "h1": "2026 Audi S5",
+      "msrp_line": "Starting at $63,300",
+      "sections": [
+        "2026 Audi S5",
+        "Highlights",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "### Shapes that move.",
+        "### Black optic package.",
+        "### Panoramic glass roof.",
+        "### Technology package.",
+        "### Bang & Olufsen\u00ae.",
+        "### MMI\u00ae touch display.",
+        "### Audi connect CARE\u00ae.",
+        "[Shopping Basket Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/s5/s5-07.jpg",
+          "bytes": 21507,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:404e3c6b-74ae-485c-82d5-abb824355679/as/1920x1920-MY26-S5-Sedan-Exterior-Front-Profile-Parked-6272b.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-07.jpg"
+        },
+        {
+          "file": "overview/s5/s5-03.jpg",
+          "bytes": 14996,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:334a42b5-ce2e-476b-86df-367134cd7a7d/as/1920x1920-MY26-S5-Sedan-Interior-Passenger-6287.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-03.jpg"
+        },
+        {
+          "file": "overview/s5/s5-06.jpg",
+          "bytes": 13348,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:fc5d4329-99ef-47c7-acfa-bcdff02f1dba/as/1920x1920-MY26-S5-Sedan-Exterior-Rear-Profile-Parked-6268a.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-06.jpg"
+        },
+        {
+          "file": "overview/s5/s5-02.jpg",
+          "bytes": 11654,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:16d24819-2b00-433e-88de-40a4f12f920d/as/1920x1920-MY26-S5-Sedan-Exterior-Front-Profile-Driving-6271.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-02.jpg"
+        },
+        {
+          "file": "overview/s5/s5-05.jpg",
+          "bytes": 11474,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:ffd5a285-ea10-4b22-98ea-de656e395ad2/as/1920x1920_DA1_S5_2023_6271_1_SENSORGRAFIK.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-05.jpg"
+        },
+        {
+          "file": "overview/s5/s5-08.jpg",
+          "bytes": 9185,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:493af522-6ccb-4acc-8579-0bc421035dca/as/1920x1080-MY26-S5-Sedan-Exterior-Front-Parked-6274.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-08.jpg"
+        },
+        {
+          "file": "overview/s5/s5-01.jpg",
+          "bytes": 8971,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:5e9d35b0-7368-41ab-acdd-e849ae772cb6/as/1920x1920-P1-A243051_large.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-01.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-c5bfa4824d.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-07.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-07.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-06.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/s5/s5-02.jpg"
+      ]
+    },
+    "a5": {
+      "h1": "2026 Audi A5",
+      "msrp_line": "Starting at $50,200",
+      "sections": [
+        "2026 Audi A5",
+        "Highlights",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "### Dynamic from every perspective.",
+        "### S line black optic package.",
+        "### Warm weather package.",
+        "### Technology package.",
+        "### Adaptive cruise assist.",
+        "### MMI\u00ae touch display.",
+        "### Audi connect CARE\u00ae.",
+        "[Shopping Basket Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/a5/a5-07.jpg",
+          "bytes": 18174,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e741954c-0b90-4d1e-97e6-91782eaa487e/as/1920x1920-MY25-A5-Exterior-Front-Profile-Parked-6204.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-07.jpg"
+        },
+        {
+          "file": "overview/a5/a5-01.jpg",
+          "bytes": 14443,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:830f0971-78b5-4f85-b90f-6845ca9a41af/as/1920x1920-MY25-A5-Interior-Customizable-DRL-6253.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-01.jpg"
+        },
+        {
+          "file": "overview/a5/a5-02.jpg",
+          "bytes": 13877,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:28941d00-d0d1-4c6f-9bcc-293f35e4ecf6/as/1920x1920-A5-2026-H3.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-02.jpg"
+        },
+        {
+          "file": "overview/a5/a5-06.jpg",
+          "bytes": 13068,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:47a3e8d3-ecf4-45e7-a697-bdb37dfec644/as/1920x1920-MY25-A5-Exterior-Rear-Profile-Parked-6208.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-06.jpg"
+        },
+        {
+          "file": "overview/a5/a5-08.jpg",
+          "bytes": 12847,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:a1789939-1684-4a40-a9f4-4572c35e36c3/as/1920x1080-MY25-A5-Interior-Driver-6240.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-08.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-cd7c3a4971.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-07.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-07.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-02.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a5/a5-06.jpg"
+      ]
+    },
+    "sq5": {
+      "h1": "2026 Audi SQ5",
+      "msrp_line": "Starting at $65,400",
+      "sections": [
+        "2026 Audi SQ5",
+        "Highlights",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "A play of light with personality.",
+        "### Powerful presence.",
+        "### Inviting interior.",
+        "### Black optic package.",
+        "### Sporty atmosphere with plenty of space.",
+        "### MMI\u00ae touch display.",
+        "### Audi connect CARE\u00ae.",
+        "### Technology package."
+      ],
+      "images": [
+        {
+          "file": "overview/sq5/sq5-05.jpg",
+          "bytes": 19343,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:76518bd6-b625-4433-8e42-69cfc5be7ce1/as/1920x1920-MY25-Q5-Exterior-RearProfile-Driving-6822b.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-05.jpg"
+        },
+        {
+          "file": "overview/sq5/sq5-03.jpg",
+          "bytes": 16796,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:3de8a383-513c-4a56-9d30-5acae71281e8/as/1920X1920_H4_MY26---SQ5---Interior---Driver---6857.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-03.jpg"
+        },
+        {
+          "file": "overview/sq5/sq5-06.jpg",
+          "bytes": 16018,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:7c4a1794-8522-4802-b820-91ce4c8f4212/as/1920X1080_D1_MY26---SQ5---Exterior---Front-Profile---Parked---6845a.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-06.jpg"
+        },
+        {
+          "file": "overview/sq5/sq5-08.jpg",
+          "bytes": 15562,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:c480cbdf-0132-45f8-b85f-f6fc69e5b3bd/as/1920X1920_D3_MY26-US-SQ5-SUV-Black-Optic-Copy_images_sq5-_2.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-08.jpg"
+        },
+        {
+          "file": "overview/sq5/sq5-07.jpg",
+          "bytes": 13640,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e00cdef8-9b26-407b-8edf-b52a58d19d25/as/1920X1080_D2_MY26---SQ5---Interior---Passenger---6855.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-07.jpg"
+        },
+        {
+          "file": "overview/sq5/sq5-02.jpg",
+          "bytes": 9081,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:2706b902-308a-45e6-ae51-3077109c9e98/as/1920X1920_H2_MY26---SQ5---Exterior---Front---Driving---6851.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-02.jpg"
+        },
+        {
+          "file": "overview/sq5/sq5-01.jpg",
+          "bytes": 8971,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:7fdc8455-b904-4431-b771-38ed8f75c89c/as/1920x1920-P1-A243051_large.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-01.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-d7581b3491.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-05.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-05.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-06.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/sq5/sq5-08.jpg"
+      ]
+    },
+    "a6": {
+      "h1": "2026 Audi A6 Sedan",
+      "msrp_line": "Starting at $64,100",
+      "sections": [
+        "2026 Audi A6 Sedan",
+        "Highlights",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "### Progressive exterior design.",
+        "### Stylish and comfortable.",
+        "### Luxury package.",
+        "### Sport plus package.",
+        "### Bang & Olufsen\u00ae.",
+        "### Panoramic glass roof.",
+        "### Audi connect\u00ae CARE with remote engine start. (limited time subscription)",
+        "[Shopping Basket Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/a6/a6-08.jpg",
+          "bytes": 29971,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:47f28e2b-34d0-42d7-8efa-09e13c53f150/as/1920x1920-D1-MY26---A6-TFSI-CL6---Exterior---Front-Profile---Parked---7603.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-08.jpg"
+        },
+        {
+          "file": "overview/a6/a6-02.jpg",
+          "bytes": 18039,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:96258808-a263-43c7-8022-43a1c742dac6/as/1920x1920-H2-MY26---A6-TFSI-CL6---Exterior---Rear---Parked---7593.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-02.jpg"
+        },
+        {
+          "file": "overview/a6/a6-04.jpg",
+          "bytes": 16965,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:6390d9fd-e426-48b9-9340-5b4c866d04a9/as/1920x1920-US-MY27-A6-Sedan-H4.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-04.jpg"
+        },
+        {
+          "file": "overview/a6/a6-03.jpg",
+          "bytes": 14104,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e3222e20-9e7e-4f89-8cf1-d89ff8800111/as/1920x1920-A251934_large-v2.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-03.jpg"
+        },
+        {
+          "file": "overview/a6/a6-01.jpg",
+          "bytes": 14062,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:67d03fd3-f8f0-4b32-b0e5-1459557cee19/as/1920x1920-MY26---A6-TFSI-CL6---Interior---Cockpit---7612.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-01.jpg"
+        },
+        {
+          "file": "overview/a6/a6-07.jpg",
+          "bytes": 12219,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:eb75e25f-0bb4-41d4-9a8c-7c6e96f92a82/as/1920x1920-H7-MY26---A6-TFSI-CL6---Exterior---Top-View---Driving---Sensors---7591.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-07.jpg"
+        },
+        {
+          "file": "overview/a6/a6-06.jpg",
+          "bytes": 8838,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:5a1ace34-d010-4d13-9de5-5ae01202debd/as/1920x1920-H6-MY26---A6-TFSI-CL6---Interior---Cockpit---7612.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-06.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-e9722c44e8.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-08.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-08.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-02.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-04.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a6/a6-03.jpg"
+      ]
+    },
+    "a8": {
+      "h1": "2027 A8",
+      "msrp_line": "Starting at $95,100",
+      "sections": [
+        "2027 A8",
+        "Highlights",
+        "Design",
+        "Performance"
+      ],
+      "bullets": [
+        "### Black optic package.",
+        "### Executive plus package.",
+        "### OLED taillights.",
+        "### MMI\u00ae touch response.",
+        "### Head-up display.",
+        "### Remote park assist plus.",
+        "### Topview camera system.",
+        "[Car Handover Small\\\\"
+      ],
+      "images": [
+        {
+          "file": "overview/a8/a8-01.jpg",
+          "bytes": 178991,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:e8c97fa0-069c-4357-8a9e-89acf6f90f88/as/1920x1920_STAGE_MY26---A8---Exterior---Rear-Profile---Parked---3275.jpg?width=1920",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-01.jpg"
+        },
+        {
+          "file": "overview/a8/a8-08.jpg",
+          "bytes": 22649,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:022e7c4b-aac0-42a4-a611-3518a9d2844d/as/1920x1080-D1-USA8D1Render.jpg?width=375",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-08.jpg"
+        },
+        {
+          "file": "overview/a8/a8-03.jpg",
+          "bytes": 21322,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:a757b890-dca7-4b3d-9f36-5956e7ebf0be/as/1920x1920-H2-MY26---A8---Interior---Driver---3280.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-03.jpg"
+        },
+        {
+          "file": "overview/a8/a8-05.jpg",
+          "bytes": 16620,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:232b1885-0909-474c-b606-03e32b6ff1ba/as/1920x1920-H4-USA8Render2.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-05.jpg"
+        },
+        {
+          "file": "overview/a8/a8-06.jpg",
+          "bytes": 12219,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:eb75e25f-0bb4-41d4-9a8c-7c6e96f92a82/as/1920x1920-H7-MY26---A6-TFSI-CL6---Exterior---Top-View---Driving---Sensors---7591.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-06.jpg"
+        },
+        {
+          "file": "overview/a8/a8-07.jpg",
+          "bytes": 11873,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:d1d67d6f-59be-46b4-a3dc-234364fbe986/as/1920x1920-A8-BO.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-07.jpg"
+        },
+        {
+          "file": "overview/a8/a8-02.jpg",
+          "bytes": 8425,
+          "source": "https://nar-dam.audi.com/adobe/assets/urn:aaid:aem:48612971-c84e-413b-a6e6-4e5a02e596a9/as/1920x1920-H1-MY26---A8---Exterior---Profile---Parked---3276.jpg?preferwebp=true&width=300",
+          "url": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-02.jpg"
+        }
+      ],
+      "cache_file": "/Users/lucfaucheux/.hermes/cache/web/www.audiusa.com-ecd42f3a6c.md",
+      "hero": "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-01.jpg",
+      "feature_images": [
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-01.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-08.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-03.jpg",
+        "https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/audi-models/overview/a8/a8-05.jpg"
+      ]
+    }
+  },
+  "errors": []
+}

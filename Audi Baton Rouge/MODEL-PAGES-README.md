@@ -28,11 +28,32 @@ The models hub (`audi-models-baton-rouge.html`) links to those live URLs.
 | 10 | 2027 Audi Q6 e-tron | `audi-q6-e-tron-baton-rouge.html` | `audi-q6-e-tron-baton-rouge` |
 | 11 | 2026 Audi S5 | `audi-s5-baton-rouge.html` | `audi-s5-baton-rouge` |
 | 12 | 2026 Audi SQ5 | `audi-sq5-baton-rouge.html` | `audi-sq5-baton-rouge` |
+| 13 | 2026 Audi S3 | `audi-s3-baton-rouge.html` | `audi-s3-baton-rouge` |
+| 14 | 2026 Audi RS 3 | `audi-rs3-baton-rouge.html` | `audi-rs3-baton-rouge` |
+| 15 | 2026 Audi SQ7 | `audi-sq7-baton-rouge.html` | `audi-sq7-baton-rouge` |
+| 16 | 2026 Audi SQ5 Sportback | `audi-sq5-sportback-baton-rouge.html` | `audi-sq5-sportback-baton-rouge` |
+| 17 | 2026 Audi SQ8 | `audi-sq8-baton-rouge.html` | `audi-sq8-baton-rouge` |
+| 18 | 2026 Audi RS Q8 | `audi-rs-q8-baton-rouge.html` | `audi-rs-q8-baton-rouge` |
+| 19 | 2026 Audi RS 6 Avant | `audi-rs6-avant-baton-rouge.html` | `audi-rs6-avant-baton-rouge` |
+| 20 | 2026 Audi S8 | `audi-s8-baton-rouge.html` | `audi-s8-baton-rouge` |
+| 21 | 2026 Audi RS 7 | `audi-rs7-baton-rouge.html` | `audi-rs7-baton-rouge` |
 
 The Q5 Sportback slug intentionally mirrors the existing `all-new-audi-q5`
 pattern for the two "all-new" nameplates ABR uses in market. All other pages
 use the `{model}-baton-rouge` slug pattern to match the existing content
 library (comparison pages, etc.).
+
+S/RS trims (rows 13–21) share their inventory URL with the base nameplate
+(e.g. S3/RS 3 → `/cars/a3`, SQ7 → `/cars/q7`, RS 7 → `/cars/a7`).
+
+## Image sourcing
+
+Rows 1–12 and rows 13–15 (S3, RS 3, SQ7) draw from
+`assets/audi-models/overview-manifest.json` — hero and feature images pull
+from the Audi USA overview scrape when available, falling back to the
+`assets/audi-models/variants/` cutouts otherwise. Rows 16–21 (SQ5 Sportback,
+SQ8, RS Q8, RS 6 Avant, S8, RS 7) currently use the variant cutout across all
+image slots — the overview scrape does not yet include these models.
 
 ## Page structure
 Every page mirrors the Q5 template (`audi-q5-s-line-black-optic.html`):
