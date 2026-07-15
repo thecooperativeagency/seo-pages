@@ -1,0 +1,410 @@
+<div class="abr-models-page">
+<style>
+  .abr-models-page * { box-sizing:border-box; }
+  .abr-models-page {
+    --abr-black:#000;
+    --abr-elevated:#151515;
+    --abr-card:#101010;
+    --abr-border:#444;
+    --abr-white:#fff;
+    --abr-muted:#bdbdbd;
+    --abr-soft:#e8e8e8;
+    font-family:Audi,"AudiType",Arial,sans-serif;
+    color:var(--abr-white);
+    background:var(--abr-black);
+  }
+  .abr-models-page .abr-wrap { max-width:1180px; margin:0 auto; width:100%; }
+  .abr-models-page .abr-eyebrow { margin:0 0 12px; color:var(--abr-muted); font-size:11px; line-height:1.4; letter-spacing:.16em; text-transform:uppercase; font-weight:700; }
+  .abr-models-page h1, .abr-models-page h2, .abr-models-page h3, .abr-models-page p { margin-top:0; }
+  .abr-models-page .abr-h1 { margin:0; max-width:920px; font-size:clamp(2.6rem,6.5vw,5.6rem); line-height:.94; letter-spacing:-.06em; font-weight:700; }
+  .abr-models-page .abr-h2 { margin:0 0 28px; font-size:clamp(1.8rem,3.6vw,3.2rem); line-height:.98; letter-spacing:-.045em; font-weight:700; }
+  .abr-models-page .abr-body-lg { max-width:760px; color:var(--abr-soft); font-size:clamp(1.05rem,1.7vw,1.3rem); line-height:1.55; }
+  .abr-models-page .abr-section { padding:72px 40px; }
+  .abr-models-page .abr-dark { background:#000; }
+  .abr-models-page .abr-elevated { background:#151515; }
+  .abr-models-page .abr-btn-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+  .abr-models-page .abr-btn-primary,
+  .abr-models-page .abr-btn-secondary {
+    display:inline-flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; border-radius:0;
+    font-family:Audi,"AudiType",Arial,sans-serif; font-weight:700; cursor:pointer; min-height:48px; padding:12px 22px; font-size:15px;
+  }
+  .abr-models-page .abr-btn-primary { background:#fff; color:#000; border:2px solid #fff; }
+  .abr-models-page .abr-btn-secondary { background:transparent; color:#fff; border:2px solid #fff; }
+  .abr-models-page .abr-models-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+  .abr-models-page .abr-models-card { background:var(--abr-card); border:1px solid var(--abr-border); display:flex; flex-direction:column; overflow:hidden; min-height:100%; }
+  .abr-models-page .abr-models-media { background:#050505; aspect-ratio:16/9; overflow:hidden; padding:14px 18px; }
+  .abr-models-page .abr-models-media img { width:100%; height:100%; display:block; object-fit:contain; object-position:center; }
+  .abr-models-page .abr-models-media-ph { display:flex; align-items:center; justify-content:center; color:var(--abr-muted); font-weight:700; letter-spacing:.04em; padding:24px; text-align:center; }
+  .abr-models-page .abr-models-card-body { padding:22px 22px 24px; display:flex; flex-direction:column; flex:1; }
+  .abr-models-page .abr-models-badge { display:inline-block; align-self:flex-start; margin:0 0 10px; padding:5px 10px; border:1px solid #707070; color:#fff; font-size:11px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; }
+  .abr-models-page .abr-models-badge-srs { border-color:#fff; }
+  .abr-models-page .abr-models-card-title { margin:0 0 8px; font-size:clamp(1.25rem,1.8vw,1.55rem); line-height:1.15; letter-spacing:-.03em; font-weight:700; }
+  .abr-models-page .abr-models-msrp { margin:0 0 16px; color:var(--abr-muted); font-size:14px; line-height:1.4; }
+  .abr-models-page .abr-models-card-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:auto; }
+  .abr-models-page .abr-models-card-actions .abr-btn-primary,
+  .abr-models-page .abr-models-card-actions .abr-btn-secondary { min-height:42px; padding:10px 14px; font-size:13px; }
+  .abr-models-page .abr-fineprint { margin:0; color:#bdbdbd; font-size:12px; line-height:1.65; max-width:900px; }
+  @media (max-width:980px) {
+    .abr-models-page .abr-models-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+  @media (max-width:640px) {
+    .abr-models-page .abr-section { padding-left:18px; padding-right:18px; }
+    .abr-models-page .abr-models-grid { grid-template-columns:1fr; }
+    .abr-models-page .abr-h1 { font-size:clamp(2.2rem,11vw,3.4rem); }
+  }
+</style>
+
+<section class="abr-section abr-dark" style="padding-top:96px;padding-bottom:56px;">
+  <div class="abr-wrap">
+    <p class="abr-eyebrow">Audi Baton Rouge &middot; New Models</p>
+    <h1 class="abr-h1">Explore Audi models in Baton Rouge.</h1>
+    <p class="abr-body-lg" style="margin-top:22px;">From everyday SUVs and sedans to S and RS performance models and the e-tron electric lineup — browse the Audi family available through Audi Baton Rouge.</p>
+    <div class="abr-btn-row">
+      <a class="abr-btn-primary" href="https://audibatonrouge.com/inventory">Shop New Inventory</a>
+      <a class="abr-btn-secondary" href="https://audibatonrouge.com/get-pre-qualified">Get Pre-Qualified</a>
+      <a class="abr-btn-secondary" href="https://audibatonrouge.com/contact">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+  <section class="abr-section abr-dark">
+    <div class="abr-wrap">
+      <p class="abr-eyebrow">SUV</p>
+      <h2 class="abr-h2">SUV models.</h2>
+      <div class="abr-models-grid">
+        
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q3.png" alt="Audi Q3" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge">All-new</span>
+          <h3 class="abr-models-card-title">Audi Q3</h3>
+          <p class="abr-models-msrp">MSRP from $43,700</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q3">Explore Q3</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q5.png" alt="Audi Q5" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi Q5</h3>
+          <p class="abr-models-msrp">MSRP from $52,800</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q5">Explore Q5</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q5-sportback.png" alt="Audi Q5 Sportback" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi Q5 Sportback</h3>
+          <p class="abr-models-msrp">MSRP from $55,100</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q5-sportback">Explore Q5 Sportback</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q7.jpg" alt="Audi Q7" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi Q7</h3>
+          <p class="abr-models-msrp">MSRP from $62,000</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q7">Explore Q7</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q8.png" alt="Audi Q8" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi Q8</h3>
+          <p class="abr-models-msrp">MSRP from $76,900</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q8">Explore Q8</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="abr-section abr-dark">
+    <div class="abr-wrap">
+      <p class="abr-eyebrow">Sedan</p>
+      <h2 class="abr-h2">Sedan models.</h2>
+      <div class="abr-models-grid">
+        
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/a3.png" alt="Audi A3" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi A3</h3>
+          <p class="abr-models-msrp">MSRP from $40,100</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a3">Explore A3</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/a5.png" alt="Audi A5" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi A5</h3>
+          <p class="abr-models-msrp">MSRP from $50,200</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a5">Explore A5</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/a6.png" alt="Audi A6" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi A6</h3>
+          <p class="abr-models-msrp">MSRP from $64,100</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a6">Explore A6</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/a8.png" alt="Audi A8" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi A8</h3>
+          <p class="abr-models-msrp">MSRP from $95,100</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a8">Explore A8</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="abr-section abr-dark">
+    <div class="abr-wrap">
+      <p class="abr-eyebrow">Sportback</p>
+      <h2 class="abr-h2">Sportback models.</h2>
+      <div class="abr-models-grid">
+        
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/hub/a7.png" alt="Audi A7" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi A7</h3>
+          <p class="abr-models-msrp">MSRP from $132,700</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a7">Explore A7</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="abr-section abr-elevated">
+    <div class="abr-wrap">
+      <p class="abr-eyebrow">Electric</p>
+      <h2 class="abr-h2">Electric models.</h2>
+      <div class="abr-models-grid">
+        
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q4-e-tron.png" alt="Audi Q4 e-tron" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi Q4 e-tron</h3>
+          <p class="abr-models-msrp">MSRP from $50,600</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q4-e-tron">Explore Q4 e-tron</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q4-e-tron-sportback.png" alt="Audi Q4 Sportback e-tron" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi Q4 Sportback e-tron</h3>
+          <p class="abr-models-msrp">MSRP from $59,000</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q4-e-tron-sportback">Explore Q4 Sportback</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/q6-e-tron.png" alt="Audi Q6 e-tron" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          
+          <h3 class="abr-models-card-title">Audi Q6 e-tron</h3>
+          <p class="abr-models-msrp">MSRP from $64,500</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q6">Explore Q6 e-tron</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="abr-section abr-elevated">
+    <div class="abr-wrap">
+      <p class="abr-eyebrow">S & RS</p>
+      <h2 class="abr-h2">The Audi S & RS lineup.</h2>
+      <div class="abr-models-grid">
+        
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/sq5.png" alt="Audi SQ5" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi SQ5</h3>
+          <p class="abr-models-msrp">MSRP from $65,400</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q5">Explore SQ5</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/sq5-sportback.png" alt="Audi SQ5 Sportback" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi SQ5 Sportback</h3>
+          <p class="abr-models-msrp">MSRP from $66,800</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q5-sportback">Explore SQ5 Sportback</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/sq7.jpg" alt="Audi SQ7" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi SQ7</h3>
+          <p class="abr-models-msrp">MSRP from $93,800</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q7">Explore SQ7</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/sq8.png" alt="Audi SQ8" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi SQ8</h3>
+          <p class="abr-models-msrp">MSRP from $100,600</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q8">Explore SQ8</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/rs-q8.png" alt="Audi RS Q8 performance" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi RS Q8 performance</h3>
+          <p class="abr-models-msrp">MSRP from $139,700</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/q8">Explore RS Q8</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/s3.png" alt="Audi S3" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi S3</h3>
+          <p class="abr-models-msrp">MSRP from $52,000</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a3">Explore S3</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/rs3.png" alt="Audi RS 3" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi RS 3</h3>
+          <p class="abr-models-msrp">MSRP from $66,100</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a3">Explore RS 3</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/s5.png" alt="Audi S5" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi S5</h3>
+          <p class="abr-models-msrp">MSRP from $63,300</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/s5">Explore S5</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/rs6-avant.png" alt="Audi RS 6 Avant performance" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi RS 6 Avant performance</h3>
+          <p class="abr-models-msrp">MSRP from $130,700</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a6">Explore RS 6 Avant</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/rs7.png" alt="Audi RS 7 performance" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi RS 7 performance</h3>
+          <p class="abr-models-msrp">MSRP from $132,700</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a7">Explore RS 7</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      <article class="abr-models-card">
+        <div class="abr-models-media"><img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/variants/s8.png" alt="Audi S8" loading="lazy" /></div>
+        <div class="abr-models-card-body">
+          <span class="abr-models-badge abr-models-badge-srs">S / RS</span>
+          <h3 class="abr-models-card-title">Audi S8</h3>
+          <p class="abr-models-msrp">MSRP from $130,000</p>
+          <div class="abr-models-card-actions">
+            <a class="abr-btn-primary" href="https://audibatonrouge.com/cars/a8">Explore S8</a>
+            <a class="abr-btn-secondary" href="https://audibatonrouge.com/inventory">Shop Inventory</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+
+<section class="abr-section abr-dark" style="padding-top:40px;padding-bottom:80px;">
+  <div class="abr-wrap">
+    <p class="abr-fineprint">Models shown for illustration purposes only. Availability, features, and specifications may vary. MSRP figures are manufacturer suggested retail prices and exclude tax, title, license, options, and dealer fees. See Audi Baton Rouge for current inventory, pricing, and complete details.</p>
+  </div>
+</section>
+</div>

@@ -1,0 +1,398 @@
+{
+  "dealer": "Audi Baton Rouge",
+  "domain": "audibatonrouge.com",
+  "source": "https://www.audiusa.com/en/models/",
+  "layout": "hybrid-motive-cards-audi-sections",
+  "sections_order": [
+    "SUV",
+    "Sedan",
+    "Sportback",
+    "Electric",
+    "S & RS"
+  ],
+  "models": [
+    {
+      "id": "q3",
+      "name": "Audi Q3",
+      "section": "SUV",
+      "badge": "All-new",
+      "msrp": "$43,700",
+      "href": "/cars/q3",
+      "hub_file": "hub/q3.png",
+      "source": "https://www.audiusa.com/en/models/q3/q3/2026/overview/",
+      "image": "../assets/audi-models/variants/q3.png",
+      "image_rel_repo": "assets/audi-models/variants/q3.png"
+    },
+    {
+      "id": "q5",
+      "name": "Audi Q5",
+      "section": "SUV",
+      "msrp": "$52,800",
+      "href": "/cars/q5",
+      "hub_file": "hub/q5.png",
+      "source": "https://www.audiusa.com/en/models/q5/q5/2026/overview/",
+      "image": "../assets/audi-models/variants/q5.png",
+      "image_rel_repo": "assets/audi-models/variants/q5.png"
+    },
+    {
+      "id": "q5-sportback",
+      "name": "Audi Q5 Sportback",
+      "section": "SUV",
+      "msrp": "$55,100",
+      "href": "/cars/q5-sportback",
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/q5-sportback.png",
+      "image_rel_repo": "assets/audi-models/variants/q5-sportback.png"
+    },
+    {
+      "id": "sq5",
+      "name": "Audi SQ5",
+      "section": "S & RS",
+      "msrp": "$65,400",
+      "href": "/cars/q5",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/sq5.png",
+      "image_rel_repo": "assets/audi-models/variants/sq5.png"
+    },
+    {
+      "id": "sq5-sportback",
+      "name": "Audi SQ5 Sportback",
+      "section": "S & RS",
+      "msrp": "$66,800",
+      "href": "/cars/q5-sportback",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/sq5-sportback.png",
+      "image_rel_repo": "assets/audi-models/variants/sq5-sportback.png"
+    },
+    {
+      "id": "q7",
+      "name": "Audi Q7",
+      "section": "SUV",
+      "msrp": "$62,000",
+      "href": "/cars/q7",
+      "hub_file": "hub/q7.jpg",
+      "source": "https://www.audiusa.com/en/models/q7/q7/2026/overview/",
+      "image": "../assets/audi-models/variants/q7.jpg",
+      "image_rel_repo": "assets/audi-models/variants/q7.jpg"
+    },
+    {
+      "id": "sq7",
+      "name": "Audi SQ7",
+      "section": "S & RS",
+      "msrp": "$93,800",
+      "href": "/cars/q7",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/sq7.jpg",
+      "image_rel_repo": "assets/audi-models/variants/sq7.jpg"
+    },
+    {
+      "id": "q8",
+      "name": "Audi Q8",
+      "section": "SUV",
+      "msrp": "$76,900",
+      "href": "/cars/q8",
+      "hub_file": "hub/q8.png",
+      "source": "https://www.audiusa.com/en/models/q8/q8/2027/overview/",
+      "image": "../assets/audi-models/variants/q8.png",
+      "image_rel_repo": "assets/audi-models/variants/q8.png"
+    },
+    {
+      "id": "sq8",
+      "name": "Audi SQ8",
+      "section": "S & RS",
+      "msrp": "$100,600",
+      "href": "/cars/q8",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/sq8.png",
+      "image_rel_repo": "assets/audi-models/variants/sq8.png"
+    },
+    {
+      "id": "rs-q8",
+      "name": "Audi RS Q8 performance",
+      "section": "S & RS",
+      "msrp": "$139,700",
+      "href": "/cars/q8",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/rs-q8.png",
+      "image_rel_repo": "assets/audi-models/variants/rs-q8.png"
+    },
+    {
+      "id": "a3",
+      "name": "Audi A3",
+      "section": "Sedan",
+      "msrp": "$40,100",
+      "href": "/cars/a3",
+      "hub_file": "hub/a3.png",
+      "image": "../assets/audi-models/variants/a3.png",
+      "image_rel_repo": "assets/audi-models/variants/a3.png"
+    },
+    {
+      "id": "s3",
+      "name": "Audi S3",
+      "section": "S & RS",
+      "msrp": "$52,000",
+      "href": "/cars/a3",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/s3.png",
+      "image_rel_repo": "assets/audi-models/variants/s3.png"
+    },
+    {
+      "id": "rs3",
+      "name": "Audi RS 3",
+      "section": "S & RS",
+      "msrp": "$66,100",
+      "href": "/cars/a3",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/rs3.png",
+      "image_rel_repo": "assets/audi-models/variants/rs3.png"
+    },
+    {
+      "id": "a5",
+      "name": "Audi A5",
+      "section": "Sedan",
+      "msrp": "$50,200",
+      "href": "/cars/a5",
+      "hub_file": "hub/a5.png",
+      "image": "../assets/audi-models/variants/a5.png",
+      "image_rel_repo": "assets/audi-models/variants/a5.png"
+    },
+    {
+      "id": "s5",
+      "name": "Audi S5",
+      "section": "S & RS",
+      "msrp": "$63,300",
+      "href": "/cars/s5",
+      "is_s_rs": true,
+      "image": "../assets/audi-models/variants/s5.png",
+      "image_rel_repo": "assets/audi-models/variants/s5.png"
+    },
+    {
+      "id": "a6",
+      "name": "Audi A6",
+      "section": "Sedan",
+      "msrp": "$64,100",
+      "href": "/cars/a6",
+      "hub_file": "hub/a6.png",
+      "image": "../assets/audi-models/variants/a6.png",
+      "image_rel_repo": "assets/audi-models/variants/a6.png"
+    },
+    {
+      "id": "rs6-avant",
+      "name": "Audi RS 6 Avant performance",
+      "section": "S & RS",
+      "msrp": "$130,700",
+      "href": "/cars/a6",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/rs6-avant.png",
+      "image_rel_repo": "assets/audi-models/variants/rs6-avant.png"
+    },
+    {
+      "id": "a7",
+      "name": "Audi A7",
+      "section": "Sportback",
+      "note": "Current USA listing is RS 7 performance under A7 family",
+      "msrp": "$132,700",
+      "href": "/cars/a7",
+      "hub_file": "hub/a7.png",
+      "image": "../assets/audi-models/hub/a7.png",
+      "image_rel_repo": "assets/audi-models/hub/a7.png"
+    },
+    {
+      "id": "rs7",
+      "name": "Audi RS 7 performance",
+      "section": "S & RS",
+      "msrp": "$132,700",
+      "href": "/cars/a7",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/rs7.png",
+      "image_rel_repo": "assets/audi-models/variants/rs7.png"
+    },
+    {
+      "id": "a8",
+      "name": "Audi A8",
+      "section": "Sedan",
+      "msrp": "$95,100",
+      "href": "/cars/a8",
+      "hub_file": "hub/a8.png",
+      "image": "../assets/audi-models/variants/a8.png",
+      "image_rel_repo": "assets/audi-models/variants/a8.png"
+    },
+    {
+      "id": "s8",
+      "name": "Audi S8",
+      "section": "S & RS",
+      "msrp": "$130,000",
+      "href": "/cars/a8",
+      "is_s_rs": true,
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/s8.png",
+      "image_rel_repo": "assets/audi-models/variants/s8.png"
+    },
+    {
+      "id": "q4-e-tron",
+      "name": "Audi Q4 e-tron",
+      "section": "Electric",
+      "msrp": "$50,600",
+      "href": "/cars/q4-e-tron",
+      "hub_file": "hub/q4-e-tron.png",
+      "image": "../assets/audi-models/variants/q4-e-tron.png",
+      "image_rel_repo": "assets/audi-models/variants/q4-e-tron.png"
+    },
+    {
+      "id": "q4-e-tron-sportback",
+      "name": "Audi Q4 Sportback e-tron",
+      "section": "Electric",
+      "msrp": "$59,000",
+      "href": "/cars/q4-e-tron-sportback",
+      "variant_only": true,
+      "image": "../assets/audi-models/variants/q4-e-tron-sportback.png",
+      "image_rel_repo": "assets/audi-models/variants/q4-e-tron-sportback.png"
+    },
+    {
+      "id": "q6-e-tron",
+      "name": "Audi Q6 e-tron",
+      "section": "Electric",
+      "msrp": "$64,500",
+      "href": "/cars/q6",
+      "hub_file": "hub/q6-e-tron.png",
+      "image": "../assets/audi-models/variants/q6-e-tron.png",
+      "image_rel_repo": "assets/audi-models/variants/q6-e-tron.png"
+    }
+  ],
+  "download_results": {
+    "downloaded": [
+      {
+        "id": "q5",
+        "file": "variants/q5.png",
+        "bytes": 525904
+      },
+      {
+        "id": "q5-sportback",
+        "file": "variants/q5-sportback.png",
+        "bytes": 500085
+      },
+      {
+        "id": "sq5",
+        "file": "variants/sq5.png",
+        "bytes": 588978
+      },
+      {
+        "id": "sq5-sportback",
+        "file": "variants/sq5-sportback.png",
+        "bytes": 583624
+      },
+      {
+        "id": "q3",
+        "file": "variants/q3.png",
+        "bytes": 560550
+      },
+      {
+        "id": "q7",
+        "file": "variants/q7.jpg",
+        "bytes": 75816
+      },
+      {
+        "id": "sq7",
+        "file": "variants/sq7.jpg",
+        "bytes": 74128
+      },
+      {
+        "id": "q8",
+        "file": "variants/q8.png",
+        "bytes": 607088
+      },
+      {
+        "id": "sq8",
+        "file": "variants/sq8.png",
+        "bytes": 630951
+      },
+      {
+        "id": "rs-q8",
+        "file": "variants/rs-q8.png",
+        "bytes": 736471
+      },
+      {
+        "id": "a3",
+        "file": "variants/a3.png",
+        "bytes": 459658
+      },
+      {
+        "id": "s3",
+        "file": "variants/s3.png",
+        "bytes": 460937
+      },
+      {
+        "id": "rs3",
+        "file": "variants/rs3.png",
+        "bytes": 519696
+      },
+      {
+        "id": "a5",
+        "file": "variants/a5.png",
+        "bytes": 1118197
+      },
+      {
+        "id": "s5",
+        "file": "variants/s5.png",
+        "bytes": 1178920
+      },
+      {
+        "id": "a6",
+        "file": "variants/a6.png",
+        "bytes": 520538
+      },
+      {
+        "id": "rs6-avant",
+        "file": "variants/rs6-avant.png",
+        "bytes": 626941
+      },
+      {
+        "id": "rs7",
+        "file": "variants/rs7.png",
+        "bytes": 556922
+      },
+      {
+        "id": "a8",
+        "file": "variants/a8.png",
+        "bytes": 516361
+      },
+      {
+        "id": "s8",
+        "file": "variants/s8.png",
+        "bytes": 559954
+      },
+      {
+        "id": "q4-e-tron",
+        "file": "variants/q4-e-tron.png",
+        "bytes": 473848
+      },
+      {
+        "id": "q4-e-tron-sportback",
+        "file": "variants/q4-e-tron-sportback.png",
+        "bytes": 480705
+      },
+      {
+        "id": "q6-e-tron",
+        "file": "variants/q6-e-tron.png",
+        "bytes": 498075
+      }
+    ],
+    "errors": []
+  },
+  "notes": [
+    "Dropped Nuvolari and Q9 (concept/coming soon).",
+    "Q7 uses current 2026 sellable tile; all-new 2027 Q7/SQ7 images available for later.",
+    "A7 family currently surfaces as RS 7 performance on Audi USA.",
+    "S/RS callouts included as separate tiles with is_s_rs true.",
+    "Motive hrefs mapped to existing ABR /cars paths where known."
+  ]
+}
