@@ -72,10 +72,10 @@
       "section": "SUV",
       "msrp": "$62,000",
       "href": "/cars/q7",
-      "hub_file": "hub/q7.jpg",
+      "hub_file": "hub/q7.png",
       "source": "https://www.audiusa.com/en/models/q7/q7/2026/overview/",
-      "image": "../assets/audi-models/variants/q7.jpg",
-      "image_rel_repo": "assets/audi-models/variants/q7.jpg"
+      "image": "../assets/audi-models/variants/q7.png",
+      "image_rel_repo": "assets/audi-models/variants/q7.png"
     },
     {
       "id": "sq7",
@@ -85,8 +85,8 @@
       "href": "/cars/q7",
       "is_s_rs": true,
       "variant_only": true,
-      "image": "../assets/audi-models/variants/sq7.jpg",
-      "image_rel_repo": "assets/audi-models/variants/sq7.jpg"
+      "image": "../assets/audi-models/variants/sq7.png",
+      "image_rel_repo": "assets/audi-models/variants/sq7.png"
     },
     {
       "id": "q8",
@@ -297,12 +297,12 @@
       },
       {
         "id": "q7",
-        "file": "variants/q7.jpg",
+        "file": "variants/q7.png",
         "bytes": 75816
       },
       {
         "id": "sq7",
-        "file": "variants/sq7.jpg",
+        "file": "variants/sq7.png",
         "bytes": 74128
       },
       {

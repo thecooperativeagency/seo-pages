@@ -54,11 +54,11 @@
         {"label": "Capability", "title": "quattro® + everyday power", "body": "Standard quattro® all-wheel drive and composed SUV dynamics make the Q7 as capable as it is refined.", "bullets": ["Standard quattro® AWD", "Available Sport plus package", "Available vision package lighting", "Confident highway and family hauling"]}
       ],
       "images": {
-        "hero": "variants/q7.jpg",
-        "f1": "variants/q7.jpg",
-        "f2": "hub/q7.jpg",
-        "f3": "variants/sq7.jpg",
-        "grid": ["variants/q7.jpg", "variants/sq7.jpg", "hub/q7.jpg", "variants/q8.png"]
+        "hero": "variants/q7.png",
+        "f1": "variants/q7.png",
+        "f2": "hub/q7.png",
+        "f3": "variants/sq7.png",
+        "grid": ["variants/q7.png", "variants/sq7.png", "hub/q7.png", "variants/q8.png"]
       }
     },
     {
