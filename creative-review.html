@@ -38,11 +38,20 @@
     .tag-service { background:#e6f4ea; color:#137333; }
     .tag-evergreen { background:#f1f3f4; color:#444; }
     .tag-report { background:#edf2ff; color:#2742a8; }
+    .tag-annual { background:#e6f4ea; color:#137333; }
     .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; }
     .btn { display:inline-flex; align-items:center; justify-content:center; min-height:34px; padding:8px 11px; border-radius:8px; font-size:12px; font-weight:750; text-decoration:none; border:1px solid var(--line); }
     .btn-preview { background:var(--blue); color:#fff; border-color:var(--blue); }
     .btn-raw { background:#fff; color:#555; }
     .btn-index { background:#f3f4f6; color:#555; }
+    .hub-card {
+      margin:18px 0 8px; padding:16px 18px; border-radius:14px; border:1px solid #c9d7f5;
+      background:linear-gradient(180deg,#f5f8ff 0%,#fff 70%);
+    }
+    .hub-card h2 { margin:0 0 6px; font-size:1.08rem; color:#1a3f8a; }
+    .hub-card p { margin:0 0 12px; color:#556; font-size:13px; line-height:1.45; }
+    .hub-card .actions { margin-top:0; }
+    .month.hidden, .dealer.hidden { display:none !important; }
     .hidden { display:none !important; }
     @media (max-width:790px) { .grid { grid-template-columns:1fr; } .item-top { flex-direction:column; } .tags { justify-content:flex-start; } .dealer-head { flex-direction:column; align-items:flex-start; } }
   </style>
@@ -52,15 +61,31 @@
     <h1>Creative Review Dashboard</h1>
     <p class="sub">One place to review finished web/content/specials pages and dealership email creative. Repos stay separate; this dashboard just makes everything easier to find.</p>
     <div class="note"><strong>Preview</strong> opens the rendered page/email. <strong>Raw HTML</strong> opens the copy/paste source for Motiv or CRM. Motive tool buttons may only function after the web HTML is pasted into the live Motive site.</div>
-    <div class="actions" style="margin-top:14px;"><a class="btn btn-index" href="index.html">SEO/Web Index</a><a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/">Email Index</a></div>
+    <div class="actions" style="margin-top:14px;">
+      <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html">Manager Reports Hub</a>
+      <a class="btn btn-index" href="index.html">SEO/Web Index</a>
+      <a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/">Email Index</a>
+    </div>
   </header>
 
-  <section class="month"><h2>July 2026 GM Weekly Performance Brief</h2><span>store collective + New / Used department pages · share one store URL family only</span></section>
+  <div class="hub-card" data-store-section="gm-reports">
+    <h2>Manager packs — quick open</h2>
+    <p>GM Weekly (lead handling) and Annual Inventory (metal) in one place. For the full store-by-store list, open the hub. Client shares stay single-store URLs only.</p>
+    <div class="actions">
+      <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html">Open Manager Reports Hub</a>
+      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bhbmw.html">BHBMW GM Weekly</a>
+      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/abr.html">ABR GM Weekly</a>
+      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj.html">BMWJ GM Weekly</a>
+      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/annual-inventory/bhbmw.html">BHBMW Annual Inventory</a>
+    </div>
+  </div>
+
+  <section class="month" data-month-for="gm-reports"><h2>Manager Reports · GM Weekly + Annual Inventory</h2><span>lead handling + metal packs · Store / New / Used · single-store shares only</span></section>
   <section class="dealer bmw" data-store-section="gm-reports">
-    <div class="dealer-head"><h3>GM Weekly Reports</h3><span>per store · Store / New / Used · no multi-store hub for GMs</span></div>
+    <div class="dealer-head"><h3>GM Weekly</h3><span>rolling 30 days · Store / New / Used · no multi-store hub for GMs</span></div>
     <div class="grid">
       <article class="item" data-store="brian-harris-bmw" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">GM Weekly — Brian Harris BMW</p><p class="meta">Store · New · Used · VinSolutions · rolling 30 days</p></div><div class="tags"><span class="tag tag-report">GM Report</span></div></div>
+        <div class="item-top"><div><p class="title">GM Weekly — Brian Harris BMW</p><p class="meta">Store · New · Used · VinSolutions · rolling 30 days</p></div><div class="tags"><span class="tag tag-report">GM Weekly</span></div></div>
         <div class="actions">
           <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bhbmw.html">Store</a>
           <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bhbmw-new.html">New</a>
@@ -68,7 +93,7 @@
         </div>
       </article>
       <article class="item" data-store="audi-baton-rouge" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">GM Weekly — Audi Baton Rouge</p><p class="meta">Store · New · Used · VinSolutions · rolling 30 days</p></div><div class="tags"><span class="tag tag-report">GM Report</span></div></div>
+        <div class="item-top"><div><p class="title">GM Weekly — Audi Baton Rouge</p><p class="meta">Store · New · Used · VinSolutions · rolling 30 days</p></div><div class="tags"><span class="tag tag-report">GM Weekly</span></div></div>
         <div class="actions">
           <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/abr.html">Store</a>
           <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/abr-new.html">New</a>
@@ -76,11 +101,35 @@
         </div>
       </article>
       <article class="item" data-store="bmw-of-jackson" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">GM Weekly — BMW of Jackson</p><p class="meta">Store · New/Used via VOI stock type · Focus · rolling 30d</p></div><div class="tags"><span class="tag tag-report">GM Report</span></div></div>
+        <div class="item-top"><div><p class="title">GM Weekly — BMW of Jackson</p><p class="meta">Store · New/Used via VOI stock type · Focus · rolling 30d</p></div><div class="tags"><span class="tag tag-report">GM Weekly</span></div></div>
         <div class="actions">
           <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj.html">Store</a>
           <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj-new.html">New</a>
           <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj-used.html">Used</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="dealer bmw" data-store-section="gm-reports">
+    <div class="dealer-head"><h3>Annual Inventory</h3><span>trailing 12 months sold metal + active lot · separate product from GM Weekly</span></div>
+    <div class="grid">
+      <article class="item" data-store="brian-harris-bmw" data-kind="report" data-type="gm-reports">
+        <div class="item-top"><div><p class="title">Annual Inventory — Brian Harris BMW</p><p class="meta">Aug 1, 2025 – Jul 24, 2026 · New / Used / CPO · Generated 2026-07-30</p></div><div class="tags"><span class="tag tag-annual">Annual Inventory</span></div></div>
+        <div class="actions">
+          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/annual-inventory/bhbmw.html">Open pack</a>
+          <a class="btn btn-raw" href="https://thecooperativeagency.github.io/annual-inventory/">Product index</a>
+        </div>
+      </article>
+      <article class="item" data-store="audi-baton-rouge" data-kind="report" data-type="gm-reports">
+        <div class="item-top"><div><p class="title">Annual Inventory — Audi Baton Rouge</p><p class="meta">Pending Motosnap ABR Annual Inventory feed</p></div><div class="tags"><span class="tag tag-evergreen">Pending</span></div></div>
+        <div class="actions">
+          <a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html#abr">See hub note</a>
+        </div>
+      </article>
+      <article class="item" data-store="bmw-of-jackson" data-kind="report" data-type="gm-reports">
+        <div class="item-top"><div><p class="title">Annual Inventory — BMW of Jackson</p><p class="meta">Pending real trailing sold extract (do not invent from short Focus dumps)</p></div><div class="tags"><span class="tag tag-evergreen">Pending</span></div></div>
+        <div class="actions">
+          <a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html#bmwj">See hub note</a>
         </div>
       </article>
     </div>
@@ -104,7 +153,7 @@
   <div class="toolbar" aria-label="Filters">
     <button class="filter active" data-filter="all">All</button>
     <button class="filter" data-filter="co-op-reports">Co-op Reports</button>
-    <button class="filter" data-filter="gm-reports">GM Reports</button>
+    <button class="filter" data-filter="gm-reports">Manager Reports</button>
     <button class="filter" data-filter="audi-baton-rouge">Audi Baton Rouge</button>
     <button class="filter" data-filter="brian-harris-bmw">Brian Harris BMW</button>
     <button class="filter" data-filter="bmw-of-jackson">BMW of Jackson</button>
@@ -331,6 +380,8 @@
     const filters = document.querySelectorAll('.filter');
     const items = document.querySelectorAll('.item');
     const dealerSections = document.querySelectorAll('.dealer');
+    const monthSections = document.querySelectorAll('section.month');
+    const hubCards = document.querySelectorAll('.hub-card');
     filters.forEach(btn => btn.addEventListener('click', () => {
       filters.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -342,6 +393,20 @@
       dealerSections.forEach(section => {
         const visible = [...section.querySelectorAll('.item')].some(item => !item.classList.contains('hidden'));
         section.classList.toggle('hidden', !visible);
+      });
+      // Hide month headers that only introduce currently-hidden dealer blocks
+      monthSections.forEach(month => {
+        let el = month.nextElementSibling;
+        let any = false;
+        while (el && !el.classList.contains('month')) {
+          if (el.classList.contains('dealer') && !el.classList.contains('hidden')) any = true;
+          if (el.classList.contains('hub-card') && (f === 'all' || f === 'gm-reports')) any = true;
+          el = el.nextElementSibling;
+        }
+        month.classList.toggle('hidden', f !== 'all' && !any);
+      });
+      hubCards.forEach(card => {
+        card.classList.toggle('hidden', !(f === 'all' || f === 'gm-reports'));
       });
     }));
   </script>
