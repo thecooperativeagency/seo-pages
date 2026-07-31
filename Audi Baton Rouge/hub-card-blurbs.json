@@ -1,0 +1,122 @@
+{
+  "Audi Q3": {
+    "blurb": "Compact luxury crossover with a striking cabin and everyday agility \u2014 the all-new Q3 raises the bar for entry luxury.",
+    "inventory": "https://audibatonrouge.com/cars/q3",
+    "msrp": "MSRP from $43,700"
+  },
+  "Audi Q5": {
+    "blurb": "The core of the Audi SUV lineup \u2014 refined, practical, and confident with quattro\u00ae DNA and modern tech.",
+    "inventory": "https://audibatonrouge.com/cars/q5",
+    "msrp": "MSRP from $52,800"
+  },
+  "Audi Q5 Sportback": {
+    "blurb": "Coupe-inspired silhouette with everyday Q5 utility. Sculpted Sportback style without giving up versatility.",
+    "inventory": "https://audibatonrouge.com/cars/q5-sportback",
+    "msrp": "MSRP from $55,100"
+  },
+  "Audi Q7": {
+    "blurb": "Three-row luxury for the whole crew \u2014 generous space, standard quattro\u00ae, and composed family-hauling capability.",
+    "inventory": "https://audibatonrouge.com/cars/q7",
+    "msrp": "MSRP from $62,000"
+  },
+  "Audi Q8": {
+    "blurb": "Bold coupe-SUV presence with serious capability, including strong towing confidence and flagship design.",
+    "inventory": "https://audibatonrouge.com/cars/q8",
+    "msrp": "MSRP from $76,900"
+  },
+  "Audi A3": {
+    "blurb": "Premium sedan essentials in a compact footprint \u2014 standard panoramic sunroof, LED lighting, and quattro\u00ae character.",
+    "inventory": "https://audibatonrouge.com/cars/a3",
+    "msrp": "MSRP from $40,100"
+  },
+  "Audi A5": {
+    "blurb": "Next-gen luxury sedan with a panoramic digital stage, standard quattro\u00ae, and a sharp modern stance.",
+    "inventory": "https://audibatonrouge.com/cars/a5",
+    "msrp": "MSRP from $50,200"
+  },
+  "Audi A6": {
+    "blurb": "Executive sedan comfort with progressive design and a quiet, composed ride for daily luxury.",
+    "inventory": "https://audibatonrouge.com/cars/a6",
+    "msrp": "MSRP from $64,100"
+  },
+  "Audi A8": {
+    "blurb": "Flagship luxury sedan \u2014 first-class cabin calm, advanced technology, and quiet authority on the road.",
+    "inventory": "https://audibatonrouge.com/cars/a8",
+    "msrp": "MSRP from $95,100"
+  },
+  "Audi A7": {
+    "blurb": "Four-door Sportback elegance \u2014 sleek lines with performance presence in the RS 7 performance territory.",
+    "inventory": "https://audibatonrouge.com/cars/a7",
+    "msrp": "MSRP from $132,700"
+  },
+  "Audi Q4 e-tron": {
+    "blurb": "All-electric SUV luxury within reach \u2014 intuitive EV driving with compact premium packaging.",
+    "inventory": "https://audibatonrouge.com/cars/q4-e-tron",
+    "msrp": "MSRP from $50,600"
+  },
+  "Audi Q4 Sportback e-tron": {
+    "blurb": "Expressive electric Sportback design with sleek EV performance and a more dynamic silhouette.",
+    "inventory": "https://audibatonrouge.com/cars/q4-e-tron-sportback",
+    "msrp": "MSRP from $59,000"
+  },
+  "Audi Q6 e-tron": {
+    "blurb": "Next-chapter electric SUV \u2014 rapid charge readiness, modern presence, and unmistakably Audi design.",
+    "inventory": "https://audibatonrouge.com/cars/q6",
+    "msrp": "MSRP from $64,500"
+  },
+  "Audi SQ5": {
+    "blurb": "S performance SUV \u2014 elevated dynamics with everyday utility and a powerful presence.",
+    "inventory": "https://audibatonrouge.com/cars/q5",
+    "msrp": "MSRP from $65,400"
+  },
+  "Audi SQ5 Sportback": {
+    "blurb": "S performance meets coupe-inspired Sportback style \u2014 sharper looks with SQ5 capability.",
+    "inventory": "https://audibatonrouge.com/cars/q5-sportback",
+    "msrp": "MSRP from $66,800"
+  },
+  "Audi SQ7": {
+    "blurb": "Accelerate your standards \u2014 three-row S performance SUV power with premium family luxury.",
+    "inventory": "https://audibatonrouge.com/cars/q7",
+    "msrp": "MSRP from $93,800"
+  },
+  "Audi SQ8": {
+    "blurb": "High-performance coupe-SUV muscle with bold design and elevated SQ character.",
+    "inventory": "https://audibatonrouge.com/cars/q8",
+    "msrp": "MSRP from $100,600"
+  },
+  "Audi RS Q8 performance": {
+    "blurb": "RS performance SUV intensity \u2014 track-bred power in a commanding coupe-SUV body.",
+    "inventory": "https://audibatonrouge.com/cars/q8",
+    "msrp": "MSRP from $139,700"
+  },
+  "Audi S3": {
+    "blurb": "Upgrade the everyday \u2014 compact S performance sedan thrills with sharp handling and quattro\u00ae grip.",
+    "inventory": "https://audibatonrouge.com/cars/a3",
+    "msrp": "MSRP from $52,000"
+  },
+  "Audi RS 3": {
+    "blurb": "Track proven, everyday thrills \u2014 RS 3 performance in a compact sedan built to excite.",
+    "inventory": "https://audibatonrouge.com/cars/a3",
+    "msrp": "MSRP from $66,100"
+  },
+  "Audi S5": {
+    "blurb": "S performance sedan \u2014 sharper stance, elevated power, and everyday usability.",
+    "inventory": "https://audibatonrouge.com/cars/s5",
+    "msrp": "MSRP from $63,300"
+  },
+  "Audi RS 6 Avant performance": {
+    "blurb": "Iconic RS Avant performance \u2014 wagon practicality with blistering RS power.",
+    "inventory": "https://audibatonrouge.com/cars/a6",
+    "msrp": "MSRP from $130,700"
+  },
+  "Audi RS 7 performance": {
+    "blurb": "RS 7 performance Sportback \u2014 sleek four-door form with serious RS capability.",
+    "inventory": "https://audibatonrouge.com/cars/a7",
+    "msrp": "MSRP from $132,700"
+  },
+  "Audi S8": {
+    "blurb": "Flagship S performance \u2014 executive luxury with elevated power and presence.",
+    "inventory": "https://audibatonrouge.com/cars/a8",
+    "msrp": "MSRP from $130,000"
+  }
+}
