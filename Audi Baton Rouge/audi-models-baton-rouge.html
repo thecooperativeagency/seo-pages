@@ -22,14 +22,36 @@
   .abr-models-page .abr-section { padding:56px 28px; }
   .abr-models-page .abr-dark { background:#000; }
   .abr-models-page .abr-elevated { background:#151515; }
-  .abr-models-page .abr-btn-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
-  .abr-models-page .abr-btn-primary,
+  .abr-models-page .abr-btn-row { display:flex; flex-wrap:wrap; align-items:stretch; gap:14px; margin-top:28px; }
+  .abr-models-page .abr-btn-primary {
+    display:inline-flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; border-radius:0;
+    font-family:Audi,"AudiType",Arial,sans-serif; font-weight:700; cursor:pointer; min-height:52px; padding:14px 26px; font-size:15px;
+    background:#fff; color:#000; border:2px solid #fff;
+  }
   .abr-models-page .abr-btn-secondary {
     display:inline-flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; border-radius:0;
     font-family:Audi,"AudiType",Arial,sans-serif; font-weight:700; cursor:pointer; min-height:48px; padding:12px 22px; font-size:15px;
+    background:transparent; color:#fff; border:2px solid #fff;
   }
-  .abr-models-page .abr-btn-primary { background:#fff; color:#000; border:2px solid #fff; }
-  .abr-models-page .abr-btn-secondary { background:transparent; color:#fff; border:2px solid #fff; }
+  .abr-models-page .abr-specials-ref {
+    display:inline-flex; align-items:center; gap:16px; text-decoration:none; color:#fff;
+    border:1px solid #555; background:linear-gradient(135deg, #141414 0%, #1c1c1c 55%, #101010 100%);
+    padding:12px 18px 12px 16px; min-height:52px; transition:border-color .2s ease, background .2s ease;
+  }
+  .abr-models-page .abr-specials-ref:hover { border-color:#fff; background:#1a1a1a; }
+  .abr-models-page .abr-specials-ref-mark {
+    width:3px; align-self:stretch; min-height:28px; background:#fff; flex-shrink:0;
+  }
+  .abr-models-page .abr-specials-ref-copy { display:flex; flex-direction:column; gap:3px; min-width:0; }
+  .abr-models-page .abr-specials-ref-kicker {
+    margin:0; font-size:10px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--abr-muted);
+  }
+  .abr-models-page .abr-specials-ref-title {
+    margin:0; font-size:15px; font-weight:700; letter-spacing:-.01em; line-height:1.2;
+  }
+  .abr-models-page .abr-specials-ref-arrow {
+    margin-left:4px; font-size:18px; line-height:1; color:#fff; opacity:.85; flex-shrink:0;
+  }
   .abr-models-page .abr-models-grid {
     display:grid;
     grid-template-columns:repeat(4,minmax(0,1fr));
@@ -119,12 +141,17 @@
   <div class="abr-wrap">
     <p class="abr-eyebrow">Audi Baton Rouge &middot; New Models</p>
     <h1 class="abr-h1">Explore Audi models in Baton Rouge.</h1>
-    <p class="abr-body-lg" style="margin-top:18px;">From everyday SUVs and sedans to S and RS performance models and the e-tron electric lineup — browse the Audi family available through Audi Baton Rouge. Looking for current deals? See our <a href="https://audibatonrouge.com/audi-baton-rouge-special-offers" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">special offers</a>.</p>
+    <p class="abr-body-lg" style="margin-top:18px;">From everyday SUVs and sedans to S and RS performance models and the e-tron electric lineup — browse the Audi family available through Audi Baton Rouge.</p>
     <div class="abr-btn-row">
       <a class="abr-btn-primary" href="https://audibatonrouge.com/inventory">Shop New Inventory</a>
-      <a class="abr-btn-secondary" href="https://audibatonrouge.com/audi-baton-rouge-special-offers">View Specials</a>
-      <a class="abr-btn-secondary" href="https://audibatonrouge.com/get-pre-qualified">Get Pre-Qualified</a>
-      <a class="abr-btn-secondary" href="https://audibatonrouge.com/contact">Contact Us</a>
+      <a class="abr-specials-ref" href="https://audibatonrouge.com/audi-baton-rouge-special-offers" aria-label="View current Audi Baton Rouge special offers">
+        <span class="abr-specials-ref-mark" aria-hidden="true"></span>
+        <span class="abr-specials-ref-copy">
+          <span class="abr-specials-ref-kicker">Current offers</span>
+          <span class="abr-specials-ref-title">View specials &amp; lease deals</span>
+        </span>
+        <span class="abr-specials-ref-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </div>
 </section>
