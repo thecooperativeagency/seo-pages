@@ -45,7 +45,9 @@
     display:inline-flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; border-radius:0;
     font-family:inherit; font-weight:700; cursor:pointer;
   }
-  .bmwj-specials-page .btn-primary, .bmwj-specials-page .btn-secondary { min-height:52px; padding:14px 26px; font-size:15px; }
+  .bmwj-specials-page .btn-primary, .bmwj-specials-page .btn-secondary { min-height:52px; padding:14px 22px; font-size:15px; white-space:nowrap; line-height:1.15; }
+  .bmwj-specials-page .btn-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; align-items:stretch; }
+  .bmwj-specials-page .btn-row .btn-primary, .bmwj-specials-page .btn-row .btn-secondary { flex:0 1 auto; max-width:100%; }
   .bmwj-specials-page .btn-primary { background:var(--bmw); color:#fff; border:2px solid var(--bmw); }
   .bmwj-specials-page .btn-secondary { background:transparent; color:#fff; border:2px solid #fff; }
   .bmwj-specials-page .model-shop-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; max-width:960px; }
@@ -62,6 +64,8 @@
     .bmwj-specials-page .section, .bmwj-specials-page .section-tight { padding-left:18px; padding-right:18px; }
     .bmwj-specials-page .card-content { padding:22px; }
     .bmwj-specials-page .h1 { font-size:clamp(2.05rem,10vw,3.1rem); }
+
+    .bmwj-specials-page .btn-primary, .bmwj-specials-page .btn-secondary { padding:12px 16px; font-size:14px; }
   }
 </style>
 
@@ -113,7 +117,7 @@
           </div>
           <p class="body">Lease from $869/month for 39 months on select MY26 X5 xDrive40i models ($809/mo with loyalty).</p>
           <div class="divider"><p class="body"><strong>Featured lease:</strong> $869/mo for 39 months on select MY26 X5 xDrive40i. $2,000 lease credit available. Additional due at signing may apply.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary">Shop X5 Inventory</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary">Shop X5</a></div>
         </div>
       </article>
 
@@ -129,7 +133,7 @@
           </div>
           <p class="body">Athletic performance and everyday versatility in BMW&rsquo;s core SAV. August finance is 1.99% APR &mdash; not the July 0.9% rate.</p>
           <div class="divider"><p class="body"><strong>Also:</strong> X3 M50 xDrive from $789/mo for 39 months; 2.99% APR for 60 months on select models.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-primary">Shop X3 Inventory</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-primary">Shop X3</a></div>
         </div>
       </article>
 
@@ -146,7 +150,7 @@
           </div>
           <p class="body">Three-row luxury with a short-term lease path built for customers who want flexibility into next year. Loyalty support available on select contracts.</p>
           <div class="divider"><p class="body"><strong>Also available:</strong> $1,049/month for 39 months on select MY27 X7 xDrive40i models. Finance from 1.99% APR for 60 months.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/new-x7" class="btn-primary">Shop X7 Inventory</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/new-x7" class="btn-primary">Shop X7</a></div>
         </div>
       </article>
 
@@ -162,7 +166,7 @@
           </div>
           <p class="body">Sharp handling and everyday luxury with 0.9% APR financing on select models. Lease from $479/mo (330i) or $499/mo (330i xDrive) for 39 months.</p>
           <div class="divider"><p class="body"><strong>Featured lease:</strong> $479/mo for 39 months on select MY26 330i; $499/mo on select 330i xDrive. $1,000 lease credit available. Lower payments available with loyalty on select contracts.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/3-series" class="btn-primary">Shop 3 Series Inventory</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/3-series" class="btn-primary">Shop 3 Series</a></div>
         </div>
       </article>
 
@@ -178,7 +182,7 @@
           </div>
           <p class="body">Compact luxury with signature BMW feel. Strong entry payment for Jackson shoppers stepping into a new BMW SAV this month.</p>
           <div class="divider"><p class="body"><strong>Also:</strong> X1 M35i from $619/mo for 39 months; 2.99% APR for 60 months on select models.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/x1" class="btn-primary">Shop X1 Inventory</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/x1" class="btn-primary">Shop X1</a></div>
         </div>
       </article>
 
@@ -193,7 +197,7 @@
             <span class="pill">Dealer cash MY26</span>
           </div>
           <p class="body">Worth featuring alongside the core SUV stack. MY27 530xi from $739/mo for 39 months with 3.99% APR for 60 months (improved vs July).</p>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/5-series" class="btn-primary">Shop 5 Series Inventory</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/5-series" class="btn-primary">Shop 5 Series</a></div>
         </div>
       </article>
     </div>
