@@ -40,18 +40,68 @@
   .bmwj-specials-page .pill-row { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
   .bmwj-specials-page .pill { display:inline-flex; align-items:center; min-height:30px; padding:6px 10px; border:1px solid rgba(28,105,212,.45); background:rgba(28,105,212,.12); color:#d7e7ff; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
   .bmwj-specials-page .divider { border-top:1px solid var(--border); margin-top:20px; padding-top:18px; }
-  .bmwj-specials-page .btn-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
-  .bmwj-specials-page .btn-primary, .bmwj-specials-page .btn-secondary, .bmwj-specials-page .btn-compact {
-    display:inline-flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; border-radius:0;
-    font-family:inherit; font-weight:700; cursor:pointer;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .bmwj-specials-page a.btn-primary,
+  .bmwj-specials-page a.btn-secondary,
+  .bmwj-specials-page a.btn-compact {
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    text-decoration:none !important;
+    border-radius:0 !important;
+    font-family:inherit !important;
+    font-weight:700 !important;
+    line-height:1.2 !important;
+    white-space:nowrap !important;
+    word-break:normal !important;
+    overflow-wrap:normal !important;
+    hyphens:none !important;
+    box-sizing:border-box !important;
+    max-width:100%;
   }
-  .bmwj-specials-page .btn-primary, .bmwj-specials-page .btn-secondary { min-height:52px; padding:14px 22px; font-size:15px; white-space:nowrap; line-height:1.15; }
-  .bmwj-specials-page .btn-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; align-items:stretch; }
-  .bmwj-specials-page .btn-row .btn-primary, .bmwj-specials-page .btn-row .btn-secondary { flex:0 1 auto; max-width:100%; }
-  .bmwj-specials-page .btn-primary { background:var(--bmw); color:#fff; border:2px solid var(--bmw); }
-  .bmwj-specials-page .btn-secondary { background:transparent; color:#fff; border:2px solid #fff; }
-  .bmwj-specials-page .model-shop-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; max-width:960px; }
-  .bmwj-specials-page .btn-compact { min-height:42px; padding:10px 16px; font-size:14px; background:rgba(255,255,255,.06); color:#fff; border:1.5px solid rgba(255,255,255,.72); }
+  .bmwj-specials-page a.btn-primary, .bmwj-specials-page a.btn-secondary {
+    min-height:48px;
+    padding:12px 20px;
+    font-size:15px;
+  }
+  .bmwj-specials-page a.btn-primary { background:#1c69d4 !important; color:#fff !important; border:2px solid #1c69d4 !important; }
+  .bmwj-specials-page a.btn-secondary { background:transparent !important; color:#fff !important; border:2px solid #fff !important; }
+  .bmwj-specials-page a.btn-compact {
+    min-height:40px;
+    padding:10px 14px;
+    font-size:13px;
+    background:rgba(255,255,255,.06) !important;
+    color:#fff !important;
+    border:1.5px solid rgba(255,255,255,.72) !important;
+  }
+  .bmwj-specials-page .btn-row {
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:24px;
+    align-items:center;
+  }
+  .bmwj-specials-page .model-shop-row {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:14px;
+    max-width:960px;
+    align-items:center;
+  }
+  .bmwj-specials-page .stat .btn-row { margin-top:18px; }
+  .bmwj-specials-page .stat a.btn-secondary { width:auto; }
+
   .bmwj-specials-page .stat { border-top:2px solid #fff; padding-top:18px; }
   .bmwj-specials-page .stat strong { display:block; margin-bottom:8px; font-size:26px; line-height:1; letter-spacing:-.03em; color:#fff; }
   .bmwj-specials-page .fineprint { margin:0; color:#9aa6b5; font-size:12px; line-height:1.65; }
@@ -65,7 +115,7 @@
     .bmwj-specials-page .card-content { padding:22px; }
     .bmwj-specials-page .h1 { font-size:clamp(2.05rem,10vw,3.1rem); }
 
-    .bmwj-specials-page .btn-primary, .bmwj-specials-page .btn-secondary { padding:12px 16px; font-size:14px; }
+    
   }
 </style>
 
@@ -78,17 +128,17 @@
     <h1 class="h1">End your summer in the Ultimate Driving Machine.</h1>
     <p class="body-lg" style="margin-top:22px;">With these amazing August offers on select new BMWs at BMW of Jackson &mdash; led by 0.9% APR on select X5 xDrive40i, strong X3 lease payments, the X7 15-month lease, and more on select new BMWs.</p>
     <div class="btn-row">
-      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary">Shop New X5</a>
-      <a href="https://bmwofjackson.net/cars/new-x7" class="btn-secondary">Shop New X3</a>
+      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop X5</a>
+      <a href="https://bmwofjackson.net/cars/new-x7" class="btn-secondary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:transparent;color:#fff;border:2px solid #fff;box-sizing:border-box;">Shop X3</a>
     </div>
     <div class="model-shop-row" aria-label="Shop August BMW specials">
-      <a href="https://bmwofjackson.net/cars/new-inventory" class="btn-compact">Shop New Inventory</a>
-      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-compact">Shop X5</a>
-      <a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-compact">Shop X3</a>
-      <a href="https://bmwofjackson.net/cars/new-x7" class="btn-compact">Shop X7</a>
-      <a href="https://bmwofjackson.net/cars/x1" class="btn-compact">Shop X1</a>
-      <a href="https://bmwofjackson.net/cars/3-series" class="btn-compact">Shop 3 Series</a>
-      <a href="https://bmwofjackson.net/cars/5-series" class="btn-compact">Shop 5 Series</a>
+      <a href="https://bmwofjackson.net/cars/new-inventory" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop New</a>
+      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X5</a>
+      <a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X3</a>
+      <a href="https://bmwofjackson.net/cars/new-x7" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X7</a>
+      <a href="https://bmwofjackson.net/cars/x1" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X1</a>
+      <a href="https://bmwofjackson.net/cars/3-series" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop 3 Series</a>
+      <a href="https://bmwofjackson.net/cars/5-series" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop 5 Series</a>
     </div>
 </section>
 
@@ -117,7 +167,7 @@
           </div>
           <p class="body">Lease from $869/month for 39 months on select MY26 X5 xDrive40i models ($809/mo with loyalty).</p>
           <div class="divider"><p class="body"><strong>Featured lease:</strong> $869/mo for 39 months on select MY26 X5 xDrive40i. $2,000 lease credit available. Additional due at signing may apply.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary">Shop X5</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop X5</a></div>
         </div>
       </article>
 
@@ -133,7 +183,7 @@
           </div>
           <p class="body">Athletic performance and everyday versatility in BMW&rsquo;s core SAV. August finance is 1.99% APR &mdash; not the July 0.9% rate.</p>
           <div class="divider"><p class="body"><strong>Also:</strong> X3 M50 xDrive from $789/mo for 39 months; 2.99% APR for 60 months on select models.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-primary">Shop X3</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop X3</a></div>
         </div>
       </article>
 
@@ -150,7 +200,7 @@
           </div>
           <p class="body">Three-row luxury with a short-term lease path built for customers who want flexibility into next year. Loyalty support available on select contracts.</p>
           <div class="divider"><p class="body"><strong>Also available:</strong> $1,049/month for 39 months on select MY27 X7 xDrive40i models. Finance from 1.99% APR for 60 months.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/new-x7" class="btn-primary">Shop X7</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/new-x7" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop X7</a></div>
         </div>
       </article>
 
@@ -166,7 +216,7 @@
           </div>
           <p class="body">Sharp handling and everyday luxury with 0.9% APR financing on select models. Lease from $479/mo (330i) or $499/mo (330i xDrive) for 39 months.</p>
           <div class="divider"><p class="body"><strong>Featured lease:</strong> $479/mo for 39 months on select MY26 330i; $499/mo on select 330i xDrive. $1,000 lease credit available. Lower payments available with loyalty on select contracts.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/3-series" class="btn-primary">Shop 3 Series</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/3-series" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop 3 Series</a></div>
         </div>
       </article>
 
@@ -182,7 +232,7 @@
           </div>
           <p class="body">Compact luxury with signature BMW feel. Strong entry payment for Jackson shoppers stepping into a new BMW SAV this month.</p>
           <div class="divider"><p class="body"><strong>Also:</strong> X1 M35i from $619/mo for 39 months; 2.99% APR for 60 months on select models.</p></div>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/x1" class="btn-primary">Shop X1</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/x1" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop X1</a></div>
         </div>
       </article>
 
@@ -197,7 +247,7 @@
             <span class="pill">Dealer cash MY26</span>
           </div>
           <p class="body">Worth featuring alongside the core SUV stack. MY27 530xi from $739/mo for 39 months with 3.99% APR for 60 months (improved vs July).</p>
-          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/5-series" class="btn-primary">Shop 5 Series</a></div>
+          <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/cars/5-series" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop 5 Series</a></div>
         </div>
       </article>
     </div>
@@ -211,17 +261,17 @@
       <div class="stat">
         <strong>All New BMW</strong>
         <p class="body">Browse every new BMW available now at BMW of Jackson, including SUVs, sedans, and electric models.</p>
-        <div class="btn-row"><a href="https://bmwofjackson.net/cars/new-inventory" class="btn-secondary">Shop New Inventory</a></div>
+        <div class="btn-row"><a href="https://bmwofjackson.net/cars/new-inventory" class="btn-secondary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:transparent;color:#fff;border:2px solid #fff;box-sizing:border-box;">Shop New</a></div>
       </div>
       <div class="stat">
         <strong>Current Specials</strong>
         <p class="body">Review the full specials destination and keep shopping the models with the strongest August programs.</p>
-        <div class="btn-row"><a href="https://bmwofjackson.net/new-bmw-specials" class="btn-secondary">View Specials Hub</a></div>
+        <div class="btn-row"><a href="https://bmwofjackson.net/new-bmw-specials" class="btn-secondary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:transparent;color:#fff;border:2px solid #fff;box-sizing:border-box;">View Specials</a></div>
       </div>
       <div class="stat">
         <strong>BMW of Jackson</strong>
         <p class="body">Visit the team in Jackson, confirm eligibility on the vehicle you choose, and lock in August pricing before month-end.</p>
-        <div class="btn-row"><a href="https://bmwofjackson.net" class="btn-secondary">Visit Dealership Site</a></div>
+        <div class="btn-row"><a href="https://bmwofjackson.net" class="btn-secondary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:transparent;color:#fff;border:2px solid #fff;box-sizing:border-box;">Visit Site</a></div>
       </div>
 </section>
 
@@ -232,16 +282,16 @@
     <h2 class="h2" style="margin-bottom:16px;">End your summer in the Ultimate Driving Machine.</h2>
     <p class="body-lg">With these amazing offers on select new BMWs at BMW of Jackson. Start with X5, X3, X7, X1, 3 Series, or 5 Series &mdash; or browse full new inventory.</p>
     <div class="btn-row" style="margin-top:26px;">
-      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary">Shop New X5</a>
-      <a href="https://bmwofjackson.net/cars/new-inventory" class="btn-secondary">Shop All New BMW</a>
+      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-primary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:#1c69d4;color:#fff;border:2px solid #1c69d4;box-sizing:border-box;">Shop X5</a>
+      <a href="https://bmwofjackson.net/cars/new-inventory" class="btn-secondary" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;font-size:15px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:transparent;color:#fff;border:2px solid #fff;box-sizing:border-box;">Shop All New</a>
     </div>
     <div class="model-shop-row" aria-label="Shop August BMW model inventory">
-      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-compact">Shop X5</a>
-      <a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-compact">Shop X3</a>
-      <a href="https://bmwofjackson.net/cars/new-x7" class="btn-compact">Shop X7</a>
-      <a href="https://bmwofjackson.net/cars/x1" class="btn-compact">Shop X1</a>
-      <a href="https://bmwofjackson.net/cars/3-series" class="btn-compact">Shop 3 Series</a>
-      <a href="https://bmwofjackson.net/cars/5-series" class="btn-compact">Shop 5 Series</a>
+      <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X5</a>
+      <a href="https://bmwofjackson.net/cars/bmw-x3" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X3</a>
+      <a href="https://bmwofjackson.net/cars/new-x7" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X7</a>
+      <a href="https://bmwofjackson.net/cars/x1" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop X1</a>
+      <a href="https://bmwofjackson.net/cars/3-series" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop 3 Series</a>
+      <a href="https://bmwofjackson.net/cars/5-series" class="btn-compact" style="display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:10px 14px;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap;text-decoration:none;border-radius:0;background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.72);box-sizing:border-box;">Shop 5 Series</a>
     </div>
 </section>
 
