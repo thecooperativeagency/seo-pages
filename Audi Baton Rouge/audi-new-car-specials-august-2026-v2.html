@@ -1,0 +1,314 @@
+<link rel="stylesheet" href="https://thecooperativeagency.github.io/fonts/audi.css">
+<div class="abr-specials-page">
+<style>
+  @font-face {
+    font-family: "AudiType";
+    src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2"),
+         url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "AudiType";
+    src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2"),
+         url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  .abr-specials-page * { box-sizing:border-box; }
+  .abr-specials-page {
+    --abr-black:#000;
+    --abr-elevated:#151515;
+    --abr-card:#101010;
+    --abr-border:#4D4D4D;
+    --abr-white:#fff;
+    --abr-muted:#BDBDBD;
+    font-family: AudiType, Audi, "AudiType-Normal", Arial, sans-serif;
+    color:var(--abr-white);
+    background:var(--abr-black);
+  }
+  .abr-specials-page .abr-wrap { max-width:1120px; margin:0 auto; width:100%; }
+  .abr-specials-page .abr-eyebrow { margin:0 0 10px; color:var(--abr-muted); font-size:11px; line-height:1.4; letter-spacing:.16em; text-transform:uppercase; font-weight:700; }
+  .abr-specials-page h1,
+  .abr-specials-page h2,
+  .abr-specials-page p { margin-top:0; }
+  .abr-specials-page .abr-h1 { margin:0; max-width:920px; font-size:clamp(2.35rem,6vw,5rem); line-height:.95; letter-spacing:-.055em; font-weight:700; }
+  .abr-specials-page .abr-h2 { margin:0; font-size:clamp(1.65rem,3.1vw,2.7rem); line-height:1; letter-spacing:-.04em; font-weight:700; }
+  .abr-specials-page .abr-sub { margin:14px 0 0; max-width:640px; color:#e8e8e8; font-size:clamp(1rem,1.6vw,1.2rem); line-height:1.45; }
+  .abr-specials-page .abr-section { padding:56px 40px; }
+  .abr-specials-page .abr-elevated { background:#151515; }
+  .abr-specials-page .abr-dark { background:#000; }
+  .abr-specials-page .abr-grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; align-items:stretch; }
+  .abr-specials-page .abr-offer-card { background:var(--abr-card); border:1px solid var(--abr-border); min-height:100%; display:flex; flex-direction:column; overflow:hidden; }
+  .abr-specials-page .abr-offer-card.is-featured { border-color:#707070; }
+  .abr-specials-page .abr-card-media {
+    position:relative; width:100%; aspect-ratio:16 / 10; background:#0a0a0a; overflow:hidden;
+  }
+  .abr-specials-page .abr-card-media img {
+    width:100%; height:100%; display:block; object-fit:cover; object-position:center center;
+  }
+  .abr-specials-page .abr-card-media-label {
+    position:absolute; left:16px; right:16px; bottom:14px; z-index:2;
+    font-size:clamp(1.9rem,3.2vw,3.2rem); line-height:.9; letter-spacing:-.06em; font-weight:700; color:#fff;
+    text-shadow:0 2px 16px rgba(0,0,0,.5);
+  }
+  .abr-specials-page .abr-card-content { padding:22px; display:flex; flex-direction:column; flex:1; }
+  .abr-specials-page .abr-label { margin:0 0 6px; color:var(--abr-muted); font-size:11px; text-transform:uppercase; letter-spacing:.14em; font-weight:700; }
+  .abr-specials-page .abr-amount { margin:0 0 8px; font-size:clamp(2rem,3.4vw,3.4rem); line-height:.92; letter-spacing:-.05em; font-weight:700; color:#fff; }
+  .abr-specials-page .abr-meta { margin:0; color:#f0f0f0; font-size:15px; line-height:1.4; font-weight:700; }
+  .abr-specials-page .abr-btn-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+  .abr-specials-page .abr-btn-primary,
+  .abr-specials-page .abr-btn-secondary,
+  .abr-specials-page .abr-btn-compact {
+    display:inline-flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; border-radius:0;
+    font-family:AudiType, Audi, Arial, sans-serif; font-weight:700; cursor:pointer;
+    white-space:nowrap; min-width:max-content; width:auto; overflow:visible; flex:0 0 auto;
+  }
+  .abr-specials-page .abr-btn-primary,
+  .abr-specials-page .abr-btn-secondary { min-height:46px; padding:11px 20px; font-size:14px; }
+  .abr-specials-page .abr-btn-primary { background:#fff; color:#000; border:2px solid #fff; }
+  .abr-specials-page .abr-btn-secondary { background:transparent; color:#fff; border:2px solid #fff; }
+  .abr-specials-page .abr-model-shop-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .abr-specials-page .abr-btn-compact { min-height:38px; padding:8px 12px; font-size:13px; background:rgba(0,0,0,.28); color:#fff; border:1.5px solid rgba(255,255,255,.76); }
+  .abr-specials-page .abr-fineprint { margin:0; color:#bdbdbd; font-size:12px; line-height:1.65; }
+  .abr-specials-page .abr-hero {
+    position:relative; min-height:520px; display:flex; align-items:flex-end; background:#000; overflow:hidden;
+  }
+  .abr-specials-page .abr-hero-img {
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; opacity:.55;
+  }
+  .abr-specials-page .abr-hero-shade {
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,.5) 40%, rgba(0,0,0,.92) 100%);
+  }
+  .abr-specials-page .abr-hero-inner { position:relative; z-index:2; width:100%; padding:64px 40px 40px; }
+  .abr-specials-page .abr-lead-offers {
+    display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px;
+    margin:22px 0 0; max-width:920px;
+  }
+  .abr-specials-page .abr-lead-offer {
+    border:1px solid rgba(255,255,255,.28); background:rgba(0,0,0,.42); padding:14px 16px;
+  }
+  .abr-specials-page .abr-lead-offer strong {
+    display:block; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--abr-muted); margin-bottom:6px;
+  }
+  .abr-specials-page .abr-lead-offer span {
+    display:block; font-size:clamp(1.35rem,2.3vw,1.9rem); line-height:1.05; letter-spacing:-.035em; font-weight:700; color:#fff;
+  }
+  .abr-specials-page .abr-lead-offer em {
+    display:block; margin-top:6px; font-style:normal; font-size:12px; color:#cfcfcf; letter-spacing:.04em;
+  }
+  @media (max-width:980px) {
+    .abr-specials-page .abr-grid-2,
+    .abr-specials-page .abr-lead-offers { grid-template-columns:1fr; }
+  }
+  @media (max-width:640px) {
+    .abr-specials-page .abr-section,
+    .abr-specials-page .abr-hero-inner { padding-left:18px; padding-right:18px; }
+    .abr-specials-page .abr-hero { min-height:0; }
+    .abr-specials-page .abr-hero-inner { padding-top:32px; padding-bottom:28px; }
+    .abr-specials-page .abr-hero-img { opacity:.4; }
+    .abr-specials-page .abr-card-content { padding:20px; }
+    .abr-specials-page .abr-h1 { font-size:clamp(2rem,10vw,2.9rem); }
+  }
+</style>
+
+<section class="abr-hero">
+  <img class="abr-hero-img" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/abr-specials-hero-wide.jpg?v=2" alt="Audi Baton Rouge" />
+  <div class="abr-hero-shade"></div>
+  <div class="abr-wrap abr-hero-inner">
+    <p class="abr-eyebrow">Audi Baton Rouge &middot; August 2026</p>
+    <h1 class="abr-h1">Q3 specials, like never before.</h1>
+    <p class="abr-sub">All-new 2026 Q3 offers &mdash; with strong savings across Q5 and Q7.</p>
+    <div class="abr-lead-offers" aria-label="Featured August specials">
+      <div class="abr-lead-offer"><strong>All-new Q3</strong><span>$2,000 off</span><em>13 in stock</em></div>
+      <div class="abr-lead-offer"><strong>Q5</strong><span>Up to $4,500 off</span><em>17 in stock</em></div>
+      <div class="abr-lead-offer"><strong>Q7</strong><span>Over $11,000 off</span><em>21 in stock</em></div>
+    </div>
+    <div class="abr-btn-row">
+      <a href="https://audibatonrouge.com/all-new-audi-q3" class="abr-btn-primary"><span style="white-space:nowrap;">Shop Q3</span></a>
+      <a href="https://audibatonrouge.com/cars/new-q5s" class="abr-btn-secondary"><span style="white-space:nowrap;">Shop Q5</span></a>
+      <a href="https://audibatonrouge.com/cars/new-q7s" class="abr-btn-secondary"><span style="white-space:nowrap;">Shop Q7</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="abr-section abr-elevated">
+  <div class="abr-wrap">
+    <p class="abr-eyebrow">Featured offers</p>
+    <h2 class="abr-h2" style="margin-bottom:24px;">Q3 · Q5 · Q7</h2>
+
+    <div class="abr-grid-2">
+      <article class="abr-offer-card is-featured">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q3.jpg?v=2" alt="All-new 2026 Audi Q3" width="1600" height="1000" />
+          <div class="abr-card-media-label">Q3</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">All-new 2026 · 13 in stock</p>
+          <div class="abr-amount">$2,000 off</div>
+          <p class="abr-meta">Special offers on the all-new Q3.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/all-new-audi-q3" class="abr-btn-primary"><span style="white-space:nowrap;">Shop Q3</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card is-featured">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q5.jpg?v=2" alt="2026 Audi Q5" width="1600" height="1000" />
+          <div class="abr-card-media-label">Q5</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">17 in stock</p>
+          <div class="abr-amount">Up to $4,500 off</div>
+          <p class="abr-meta">$2,000 off + $2,500 rebate.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/new-q5s" class="abr-btn-primary"><span style="white-space:nowrap;">Shop Q5</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card is-featured">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q7.jpg?v=2" alt="2026 Audi Q7" width="1600" height="1000" />
+          <div class="abr-card-media-label">Q7</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">21 in stock</p>
+          <div class="abr-amount">Over $11,000 off</div>
+          <p class="abr-meta">Select new Q7 inventory.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/new-q7s" class="abr-btn-primary"><span style="white-space:nowrap;">Shop Q7</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q8.jpg?v=2" alt="Audi Q8" width="1600" height="1000" />
+          <div class="abr-card-media-label">Q8</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">17 in stock</p>
+          <div class="abr-amount">Over $11,000 off</div>
+          <p class="abr-meta">Select new Q8 inventory.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/collections/new-q8s" class="abr-btn-primary"><span style="white-space:nowrap;">Shop Q8</span></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="abr-section abr-dark">
+  <div class="abr-wrap">
+    <p class="abr-eyebrow">More August offers</p>
+    <h2 class="abr-h2" style="margin-bottom:24px;">A5 · A3 · S5 · S3 · A6</h2>
+
+    <div class="abr-grid-2">
+      <article class="abr-offer-card">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a5.jpg?v=2" alt="Audi A5" width="1600" height="1000" />
+          <div class="abr-card-media-label">A5</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">9 in stock</p>
+          <div class="abr-amount">Up to $5,500 off</div>
+          <p class="abr-meta">$3,000 off + $2,500 rebate.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/a5" class="abr-btn-primary"><span style="white-space:nowrap;">Shop A5</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a3.jpg?v=2" alt="Audi A3" width="1600" height="1000" />
+          <div class="abr-card-media-label">A3</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">Compact sedan</p>
+          <div class="abr-amount">Up to $5,500 off</div>
+          <p class="abr-meta">$2,000 off + $3,500 rebate.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/a3" class="abr-btn-primary"><span style="white-space:nowrap;">Shop A3</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/s5.jpg?v=2" alt="Audi S5" width="1600" height="1000" />
+          <div class="abr-card-media-label">S5</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">Performance</p>
+          <div class="abr-amount">Up to $5,500 off</div>
+          <p class="abr-meta">$3,000 off + $2,500 rebate.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/s5" class="abr-btn-primary"><span style="white-space:nowrap;">Shop S5</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/s3.jpg?v=2" alt="Audi S3" width="1600" height="1000" />
+          <div class="abr-card-media-label">S3</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">Compact performance</p>
+          <div class="abr-amount">Up to $8,000 off</div>
+          <p class="abr-meta">$4,500 off + $3,500 rebate.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/a3" class="abr-btn-primary"><span style="white-space:nowrap;">Shop A3 Lineup</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a6.jpg?v=2" alt="Audi A6" width="1600" height="1000" />
+          <div class="abr-card-media-label">A6</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">Midsize sedan</p>
+          <div class="abr-amount">Up to $7,000 off</div>
+          <p class="abr-meta">$3,000 off + $4,000 customer credit.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/cars/a6" class="abr-btn-primary"><span style="white-space:nowrap;">Shop A6</span></a></div>
+        </div>
+      </article>
+
+      <article class="abr-offer-card">
+        <div class="abr-card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/all-new.jpg?v=2" alt="New Audi inventory" width="1600" height="1000" />
+          <div class="abr-card-media-label">All New</div>
+        </div>
+        <div class="abr-card-content">
+          <p class="abr-label">Full lineup</p>
+          <div class="abr-amount">Shop new inventory</div>
+          <p class="abr-meta">Every new Audi at Audi Baton Rouge.</p>
+          <div class="abr-btn-row" style="margin-top:auto;"><a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="abr-btn-primary"><span style="white-space:nowrap;">Shop New</span></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="abr-hero" style="min-height:360px;">
+  <img class="abr-hero-img" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/abr-specials-close.jpg?v=2" alt="Audi Baton Rouge" style="opacity:.48; object-position:center center;" />
+  <div class="abr-hero-shade"></div>
+  <div class="abr-wrap abr-hero-inner">
+    <p class="abr-eyebrow">Limited time</p>
+    <h2 class="abr-h2" style="margin-bottom:16px;">Visit Audi Baton Rouge.</h2>
+    <div class="abr-btn-row">
+      <a href="https://audibatonrouge.com/all-new-audi-q3" class="abr-btn-primary"><span style="white-space:nowrap;">Shop Q3</span></a>
+      <a href="https://audibatonrouge.com/cars/new-q5s" class="abr-btn-secondary"><span style="white-space:nowrap;">Shop Q5</span></a>
+      <a href="https://audibatonrouge.com/cars/new-q7s" class="abr-btn-secondary"><span style="white-space:nowrap;">Shop Q7</span></a>
+    </div>
+    <div class="abr-model-shop-row">
+      <a href="https://audibatonrouge.com/cars/a5" class="abr-btn-compact"><span style="white-space:nowrap;">A5</span></a>
+      <a href="https://audibatonrouge.com/collections/new-q8s" class="abr-btn-compact"><span style="white-space:nowrap;">Q8</span></a>
+      <a href="https://audibatonrouge.com/cars/a3" class="abr-btn-compact"><span style="white-space:nowrap;">A3</span></a>
+      <a href="https://audibatonrouge.com/cars/s5" class="abr-btn-compact"><span style="white-space:nowrap;">S5</span></a>
+      <a href="https://audibatonrouge.com/cars/a6" class="abr-btn-compact"><span style="white-space:nowrap;">A6</span></a>
+      <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="abr-btn-compact"><span style="white-space:nowrap;">All New</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="abr-section abr-dark" style="border-top:1px solid #4D4D4D; padding-top:36px; padding-bottom:36px;">
+  <div class="abr-wrap">
+    <p class="abr-eyebrow">Disclosures</p>
+    <p class="abr-fineprint">August 2026 offer information is based on Audi Baton Rouge sales pricing and current live specials for Q7/Q8. Offers subject to change without notice and apply to select new, in-stock Audi models only. Savings vary by model, trim, VIN, inventory, dealer offer, manufacturer incentive/rebate/customer credit, and eligibility. Maximum combined savings may require qualifying incentives and approved credit where applicable; not all customers will qualify. Some exclusions apply. Q7 example stacks observed on live inventory include dealer offer and national customer credit totaling over $11,000 before tax, title, license, registration, dealer fees, optional equipment, insurance, and other required fees. See Audi Baton Rouge for complete details. Audi Baton Rouge · 11955 Airline Hwy, Baton Rouge, LA 70816 · (225) 686-6012.</p>
+  </div>
+</section>
+</div>
