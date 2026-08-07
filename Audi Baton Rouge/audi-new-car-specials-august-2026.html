@@ -94,7 +94,27 @@
   text-shadow: 0 2px 18px rgba(0,0,0,.45);
 }
 .abr-specials-page .card-content { padding: 28px; display: flex; flex-direction: column; flex: 1; }
-.abr-specials-page .label { margin: 0 0 10px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; }
+
+.abr-specials-page .model-summary {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 14px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.06);
+  color: #f2f2f2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  width: fit-content;
+  max-width: 100%;
+}
+.abr-specials-page .label { margin: 0 0 8px; }
+.abr-specials-page .amount { margin: 0 0 8px; }
+.abr-specials-page .meta { margin: 0 0 14px; }
+.abr-specials-page .label { margin: 0 0 8px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; }
 .abr-specials-page .amount { margin: 0 0 10px; font-size: clamp(2.35rem, 3.8vw, 4.2rem); line-height: .9; letter-spacing: -.055em; font-weight: 700; color: #fff; }
 .abr-specials-page .meta { margin: 0 0 16px; color: #f4f4f4; font-size: 17px; line-height: 1.45; font-weight: 700; }
 .abr-specials-page .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
@@ -183,37 +203,24 @@
 }
 </style>
 
-<section style="position:relative;min-height:620px;display:flex;align-items:flex-end;background:#000;overflow:hidden;">
+<section style="position:relative;min-height:0;display:flex;align-items:flex-end;background:#000;overflow:hidden;">
   <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/abr-specials-hero-aerial.jpg" alt="Audi Baton Rouge dealership" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;opacity:.72;" />
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 46%,rgba(0,0,0,.28) 100%);"></div>
-  <div class="wrap" style="position:relative;z-index:2;padding:110px 40px 54px;">
-    <p class="eyebrow">Audi Baton Rouge &middot; August 2026 New Audi Specials</p>
+  <div class="wrap" style="position:relative;z-index:2;padding:64px 40px 40px;">
+    <p class="eyebrow">Audi Baton Rouge &middot; August 2026</p>
     <h1 class="h1">Make your summer memorable.</h1>
-    <p class="body-lg" style="margin-top:22px;">With an Audi from Audi Baton Rouge &mdash; led by all-new Q3 specials, plus Q5 and Q7 offers this August.</p>
-    <div class="btn-row">
-      <a href="https://audibatonrouge.com/all-new-audi-q3" class="btn-primary"><span>Shop Q3</span></a>
-      <a href="https://audibatonrouge.com/cars/new-q5s" class="btn-secondary"><span>Shop Q5</span></a>
-    </div>
-    <div class="model-shop-row" aria-label="Shop August Audi specials">
-      <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="btn-compact"><span>Shop New</span></a>
-      <a href="https://audibatonrouge.com/cars/new-q7s" class="btn-compact"><span>Shop Q7</span></a>
-      <a href="https://audibatonrouge.com/cars/a5" class="btn-compact"><span>Shop A5</span></a>
-      <a href="https://audibatonrouge.com/collections/new-q8s" class="btn-compact"><span>Shop Q8</span></a>
+    <p class="body-lg" style="margin-top:14px;max-width:560px;">All-new Q3 specials, plus Q5, Q7, and sedan offers now.</p>
+    <div class="btn-row" style="margin-top:18px;">
+      <a href="#abr-august-offers" class="btn-primary"><span>See offers</span></a>
+      <a href="https://audibatonrouge.com/all-new-audi-q3" class="btn-secondary"><span>Shop Q3</span></a>
     </div>
   </div>
 </section>
 
-<section class="section-tight dark">
+<section id="abr-august-offers" class="section elevated" style="padding-top:48px;">
   <div class="wrap">
-    <p class="body-lg">August offers on select new Audi models. Final savings vary by vehicle, trim, VIN, and eligibility.</p>
-  </div>
-</section>
-
-<section class="section elevated">
-  <div class="wrap">
-    <p class="eyebrow">Featured August offers</p>
-    <h2 class="h2" style="max-width:900px;margin-bottom:14px;">Current new Audi specials</h2>
-    <p class="body-lg" style="margin-bottom:34px;">Make your summer memorable with an Audi from Audi Baton Rouge.</p>
+    <p class="eyebrow">August specials</p>
+    <h2 class="h2" style="max-width:900px;margin-bottom:28px;">Current new Audi offers</h2>
 
     <div class="grid-2">
       <article class="offer-card is-hero is-split span-2">
@@ -223,13 +230,13 @@
         </div>
         <div class="card-content">
           <p class="label">All-new 2026 · 13 in stock</p>
+          <p class="model-summary">All-new compact SUV</p>
           <div class="amount">$2,000 off</div>
           <p class="meta">Special offers on the all-new Audi Q3.</p>
           <div class="pill-row">
             <span class="pill">All-new 2026</span>
             <span class="pill">$2,000 off</span>
           </div>
-          <p class="body">Fresh Q3s ready to go.</p>
           <div class="btn-row" style="margin-top:auto;">
             <a href="https://audibatonrouge.com/all-new-audi-q3" class="btn-primary"><span>Shop Q3</span></a>
           </div>
@@ -243,6 +250,7 @@
         </div>
         <div class="card-content">
           <p class="label">17 in stock</p>
+          <p class="model-summary">Premium compact SUV</p>
           <div class="amount">Up to $4,500 off</div>
           <p class="meta">$2,000 off + $2,500 rebate on select new Q5 models.</p>
           <div class="pill-row">
@@ -262,6 +270,7 @@
         </div>
         <div class="card-content">
           <p class="label">21 in stock</p>
+          <p class="model-summary">Three-row flagship SUV</p>
           <div class="amount">Over $11,000 off</div>
           <p class="meta">Select new Q7 inventory with dealer offer + national customer credit.</p>
           <div class="pill-row">
@@ -281,6 +290,7 @@
         </div>
         <div class="card-content">
           <p class="label">Select new A3</p>
+          <p class="model-summary">Compact luxury sedan</p>
           <div class="amount">Up to $5,500 off</div>
           <p class="meta">$2,000 off + $3,500 rebate on select new A3 models.</p>
           <div class="pill-row">
@@ -300,6 +310,7 @@
         </div>
         <div class="card-content">
           <p class="label">Select new S3</p>
+          <p class="model-summary">Performance compact sedan</p>
           <div class="amount">Up to $8,000 off</div>
           <p class="meta">$4,500 off + $3,500 rebate on select new S3 models.</p>
           <div class="pill-row">
@@ -319,6 +330,7 @@
         </div>
         <div class="card-content">
           <p class="label">9 in stock</p>
+          <p class="model-summary">Premium sport sedan</p>
           <div class="amount">Up to $5,500 off</div>
           <p class="meta">$3,000 off + $2,500 rebate on select new A5 models.</p>
           <div class="pill-row">
@@ -338,6 +350,7 @@
         </div>
         <div class="card-content">
           <p class="label">Select new S5</p>
+          <p class="model-summary">S performance Sportback</p>
           <div class="amount">Up to $5,500 off</div>
           <p class="meta">$3,000 off + $2,500 rebate on select new S5 models.</p>
           <div class="pill-row">
@@ -357,6 +370,7 @@
         </div>
         <div class="card-content">
           <p class="label">Select new A6</p>
+          <p class="model-summary">Executive sedan</p>
           <div class="amount">Up to $7,000 off</div>
           <p class="meta">$3,000 off + $4,000 customer credit on select new A6 models.</p>
           <div class="pill-row">
@@ -388,9 +402,9 @@
 <section style="position:relative;padding:104px 40px;background-image:url('https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/close-1x1.jpg');background-size:cover;background-position:center;">
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.92));"></div>
   <div class="wrap" style="position:relative;z-index:2;max-width:860px;">
-    <p class="eyebrow">August 2026 new Audi specials</p>
-    <h2 class="h2" style="margin-bottom:16px;">Make your summer memorable.</h2>
-    <p class="body-lg">Start with the all-new Q3, then shop Q5, Q7, and sedan specials — A3, S3, A5, S5, A6 — or full new inventory.</p>
+    <p class="eyebrow">August 2026</p>
+    <h2 class="h2" style="margin-bottom:16px;">Ready when you are.</h2>
+    <p class="body-lg">Shop Q3 through A6 specials — or full new inventory.</p>
     <div class="btn-row" style="margin-top:26px;">
       <a href="https://audibatonrouge.com/all-new-audi-q3" class="btn-primary"><span>Shop Q3</span></a>
       <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="btn-secondary"><span>Shop All New</span></a>
