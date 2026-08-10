@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BHBMW Public Phone Listing Audit</title>
+  <style>
+    :root {
+      --bg: #0f1218;
+      --panel: #171c26;
+      --panel-2: #1d2431;
+      --line: #2b3445;
+      --text: #e8edf7;
+      --muted: #9aa8bf;
+      --accent: #6ea8ff;
+      --good: #3ecf8e;
+      --warn: #f0b429;
+      --bad: #ff6b6b;
+      --track: #a78bfa;
+      --staff: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2740 0%, transparent 55%), var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 18px 64px; }
+    h1 { margin: 0 0 6px; font-size: 1.55rem; letter-spacing: -0.02em; }
+    .sub { color: var(--muted); margin-bottom: 22px; font-size: 0.95rem; }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(4, 1fr); margin-bottom: 18px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat {
+      background: linear-gradient(180deg, var(--panel-2), var(--panel));
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+    .stat b { display: block; font-size: 1.4rem; margin-top: 4px; }
+    .stat span { color: var(--muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+    .panel header {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 14px 16px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02);
+    }
+    .panel header h2 { margin: 0; font-size: 1.05rem; }
+    .tools { display: flex; gap: 8px; flex-wrap: wrap; }
+    input[type="search"], select, button {
+      background: #0e1420; color: var(--text); border: 1px solid var(--line);
+      border-radius: 10px; padding: 8px 10px; font: inherit;
+    }
+    button { cursor: pointer; }
+    button.primary { background: #244a8a; border-color: #335ea8; }
+    button.ghost:hover, button.primary:hover { filter: brightness(1.08); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; background: #141a24; position: sticky; top: 0; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .phone {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700; font-size: 1rem; white-space: nowrap;
+    }
+    .phone a { color: var(--accent); text-decoration: none; }
+    .phone a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block; border-radius: 999px; padding: 2px 8px; font-size: 0.72rem;
+      border: 1px solid transparent; font-weight: 650; letter-spacing: 0.02em; margin: 0 4px 4px 0;
+    }
+    .official { background: rgba(62,207,142,0.12); color: var(--good); border-color: rgba(62,207,142,0.35); }
+    .third { background: rgba(240,180,41,0.12); color: var(--warn); border-color: rgba(240,180,41,0.35); }
+    .tracking { background: rgba(167,139,250,0.14); color: #c4b5fd; border-color: rgba(167,139,250,0.4); }
+    .staff { background: rgba(56,189,248,0.12); color: var(--staff); border-color: rgba(56,189,248,0.35); }
+    .stale { background: rgba(255,107,107,0.12); color: #ff8e8e; border-color: rgba(255,107,107,0.35); }
+    .unknown { background: rgba(154,168,191,0.12); color: #c2cddd; border-color: rgba(154,168,191,0.3); }
+    .sites a { color: var(--accent); text-decoration: none; display: inline-block; margin: 0 8px 4px 0; }
+    .sites a:hover { text-decoration: underline; }
+    .note { color: var(--muted); font-size: 0.86rem; }
+    .checkrow { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .checkrow label { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); font-size: 0.86rem; }
+    .result {
+      min-width: 120px; background: #0e1420; border: 1px solid var(--line); color: var(--text);
+      border-radius: 8px; padding: 6px 8px; font: inherit;
+    }
+    .priority {
+      display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle;
+    }
+    .p-high { background: var(--bad); }
+    .p-med { background: var(--warn); }
+    .p-low { background: var(--good); }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+    .callout {
+      border-left: 3px solid var(--bad); background: rgba(255,107,107,0.08);
+      padding: 12px 14px; border-radius: 0 12px 12px 0; margin-bottom: 18px;
+    }
+    .callout strong { color: #ffb4b4; }
+    footer { color: var(--muted); font-size: 0.82rem; margin-top: 10px; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Brian Harris BMW — Public Phone Listing Audit</h1>
+    <p class="sub">
+      12336 Airline Hwy, Baton Rouge, LA 70817 · Snapshot compiled <span id="stamp">2026-08-10 10:58 CDT</span> ·
+      Use this to dial-test each number and flag dead/tracking lines.
+    </p>
+
+    <div class="callout">
+      <strong>Why calls may not go through:</strong>
+      third-party sites are not all pointing at the same main line. KBB and Autotrader show different
+      <em>224-</em> numbers; CARFAX splits new/used sales onto other 225 numbers; CarGurus SERPs showed a
+      <em>590-</em> number. Those are classic call-tracking / stale-feed patterns. Official site sales is
+      <strong>(877) 391-3018</strong>; service/parts is <strong>(225) 754-1200</strong>.
+    </div>
+
+    <div class="grid">
+      <div class="stat"><span>Unique numbers</span><b id="count-unique">—</b></div>
+      <div class="stat"><span>Likely tracking / third-party</span><b id="count-track">—</b></div>
+      <div class="stat"><span>Official-site numbers</span><b id="count-official">—</b></div>
+      <div class="stat"><span>Sources checked</span><b id="count-sources">—</b></div>
+    </div>
+
+    <div class="legend">
+      <span class="badge official">Official site / owned</span>
+      <span class="badge third">Third-party listing</span>
+      <span class="badge tracking">Likely call tracking</span>
+      <span class="badge stale">Possibly stale / mismatch</span>
+      <span class="badge staff">Staff / direct-dial</span>
+      <span class="badge unknown">Needs live test</span>
+    </div>
+
+    <div class="panel">
+      <header>
+        <h2>Master number chart</h2>
+        <div class="tools">
+          <input id="q" type="search" placeholder="Filter number, site, notes…" />
+          <select id="typeFilter">
+            <option value="all">All types</option>
+            <option value="official">Official</option>
+            <option value="tracking">Tracking / third-party</option>
+            <option value="staff">Staff</option>
+            <option value="stale">Stale / mismatch</option>
+          </select>
+          <button class="ghost" id="exportCsv">Export CSV</button>
+          <button class="primary" id="printBtn">Print</button>
+        </div>
+      </header>
+      <div style="overflow:auto; max-height:70vh;">
+        <table id="mainTable">
+          <thead>
+            <tr>
+              <th>Priority</th>
+              <th>Number</th>
+              <th>Role / label</th>
+              <th>Tags</th>
+              <th>Where listed</th>
+              <th>Test result</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <header>
+        <h2>Source → number map</h2>
+      </header>
+      <div style="overflow:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Listed number(s)</th>
+              <th>Label on source</th>
+              <th>Confidence</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody id="sourceBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <header>
+        <h2>Recommended fix order</h2>
+      </header>
+      <div style="padding: 14px 16px;">
+        <ol style="margin:0; padding-left: 1.2rem; color: var(--text);">
+          <li><strong>KBB</strong> — currently shows <span class="phone">(225) 224-7648</span> (you already found this doesn’t go through). Update dealer profile / Cox Automotive dealer center to official sales line.</li>
+          <li><strong>Autotrader</strong> — shows <span class="phone">(225) 224-7649</span> (adjacent tracking pair). Same Cox/Autotrader dealer tools path.</li>
+          <li><strong>CARFAX</strong> — new <span class="phone">(225) 523-2644</span> / used <span class="phone">(225) 425-8004</span>. Confirm whether still active tracking or dead.</li>
+          <li><strong>CarGurus</strong> — SERP historically showed <span class="phone">(225) 590-5669</span>; live dealer card today showed <em>no phone</em>. Still worth claim/profile check.</li>
+          <li><strong>Auto Group site</strong> — still lists sales as <span class="phone">(225) 754-1200</span> and old toll-free service/parts <span class="phone">(866) 396-1262 / 1264</span>. Align with Motive site.</li>
+          <li><strong>Directories</strong> — Yelp / DealerRater / Apple Maps / MapQuest / Ridekick mostly on <span class="phone">(225) 754-1200</span> (main local). Keep consistent.</li>
+        </ol>
+      </div>
+    </div>
+
+    <footer>
+      Local audit file only — not published. Live call results you enter below stay in this browser (localStorage) until cleared.
+      Prefer you dial-test; an agent call can look like spam and won’t always reach the same hunt-group.
+    </footer>
+  </div>
+
+  <script>
+    const NUMBERS = [
+      {
+        id: "8773913018",
+        display: "(877) 391-3018",
+        role: "Sales (primary on Motive site)",
+        priority: "high",
+        tags: ["official", "sales"],
+        sites: [
+          { name: "brianharrisbmw.com/contact", url: "https://brianharrisbmw.com/contact", label: "Sales" },
+          { name: "Site header / footer (many pages)", url: "https://brianharrisbmw.com/", label: "Main call" },
+          { name: "Acquire SMS terms", url: "https://brianharrisbmw.com/acquire-campaign-terms-and-conditions", label: "Help contact" }
+        ],
+        notes: "Current official sales number on dealership website."
+      },
+      {
+        id: "2257541200",
+        display: "(225) 754-1200",
+        role: "Service / Parts (Motive) · Main local / Sales on several 3P + auto group",
+        priority: "high",
+        tags: ["official", "service", "parts", "third"],
+        sites: [
+          { name: "brianharrisbmw.com/contact", url: "https://brianharrisbmw.com/contact", label: "Service + Parts" },
+          { name: "brianharrisbmw.com/parts", url: "https://brianharrisbmw.com/parts", label: "Parts call us" },
+          { name: "Auto Group site", url: "https://www.brianharrisautogroup.com/", label: "BMW Sales" },
+          { name: "Yelp", url: "https://www.yelp.com/biz/brian-harris-bmw-baton-rouge-2", label: "Main phone" },
+          { name: "DealerRater", url: "https://www.dealerrater.com/dealer/Brian-Harris-BMW-review-182/", label: "Sales" },
+          { name: "CARFAX", url: "https://www.carfax.com/Reviews-Brian-Harris-BMW-Baton-Rouge-LA_ORX61007", label: "Service" },
+          { name: "Apple Maps", url: "https://maps.apple.com/place?place-id=I114DF89FC9F6A6A6", label: "Phone" },
+          { name: "MapQuest", url: "https://www.mapquest.com/us/louisiana/brian-harris-bmw-8606355", label: "Call (tel)" },
+          { name: "Ridekick", url: "https://www.ridekick.com/dealer/la/baton-rouge/brian-harris-bmw-baton-rouge-llt6", label: "Phone" }
+        ],
+        notes: "Most common local listing. Official service/parts on Motive; treated as sales on auto group + many directories."
+      },
+      {
+        id: "2252247648",
+        display: "(225) 224-7648",
+        role: "Dealer phone on KBB",
+        priority: "high",
+        tags: ["third", "tracking", "stale", "sales"],
+        sites: [
+          { name: "Kelley Blue Book dealer page", url: "https://www.kbb.com/dealers/baton-rouge-la/124036/brian-harris-bmw/", label: "Phone" }
+        ],
+        notes: "Confirmed on live KBB page. You reported call does not go through. Highest-priority fix."
+      },
+      {
+        id: "2252247649",
+        display: "(225) 224-7649",
+        role: "Dealer phone on Autotrader",
+        priority: "high",
+        tags: ["third", "tracking", "stale", "sales"],
+        sites: [
+          { name: "Autotrader BMW dealers (Baton Rouge)", url: "https://www.autotrader.com/car-dealers/bmw/baton-rouge-la", label: "Brian Harris BMW telephone" }
+        ],
+        notes: "Adjacent to KBB 224-7648 — classic sequential tracking pool. Test and update via Autotrader/Cox dealer tools."
+      },
+      {
+        id: "2255232644",
+        display: "(225) 523-2644",
+        role: "New car sales on CARFAX",
+        priority: "high",
+        tags: ["third", "tracking", "stale", "sales"],
+        sites: [
+          { name: "CARFAX dealer reviews", url: "https://www.carfax.com/Reviews-Brian-Harris-BMW-Baton-Rouge-LA_ORX61007", label: "New Car Sales" }
+        ],
+        notes: "CARFAX-only split sales line. Likely tracking or outdated feed."
+      },
+      {
+        id: "2254258004",
+        display: "(225) 425-8004",
+        role: "Used car sales on CARFAX",
+        priority: "high",
+        tags: ["third", "tracking", "stale", "sales"],
+        sites: [
+          { name: "CARFAX dealer reviews", url: "https://www.carfax.com/Reviews-Brian-Harris-BMW-Baton-Rouge-LA_ORX61007", label: "Used Car Sales" }
+        ],
+        notes: "CARFAX FAQ also points sales shoppers here. Test ring path."
+      },
+      {
+        id: "2255905669",
+        display: "(225) 590-5669",
+        role: "CarGurus SERP / dealer list (historical snippet)",
+        priority: "med",
+        tags: ["third", "tracking", "stale", "unknown"],
+        sites: [
+          { name: "CarGurus dealer list SERPs", url: "https://www.cargurus.com/Cars/dealers-BMW-Hammond-m3_L13409", label: "Call (snippet)" }
+        ],
+        notes: "Appeared in Google snippets for CarGurus BHBMW cards. Live Hammond dealer card (Aug 10) showed hours but no phone. Still dial-test."
+      },
+      {
+        id: "8663961262",
+        display: "(866) 396-1262",
+        role: "Service on Auto Group site",
+        priority: "med",
+        tags: ["official", "stale", "service"],
+        sites: [
+          { name: "brianharrisautogroup.com", url: "https://www.brianharrisautogroup.com/", label: "BMW Service" }
+        ],
+        notes: "Group site only. Motive service uses 754-1200. Likely stale toll-free."
+      },
+      {
+        id: "8663961264",
+        display: "(866) 396-1264",
+        role: "Parts on Auto Group site",
+        priority: "med",
+        tags: ["official", "stale", "parts"],
+        sites: [
+          { name: "brianharrisautogroup.com", url: "https://www.brianharrisautogroup.com/", label: "BMW Parts" }
+        ],
+        notes: "Group site only. Motive parts uses 754-1200."
+      },
+      {
+        id: "2254971953",
+        display: "(225) 497-1953",
+        role: "Service promo CTA on Motive service pages",
+        priority: "med",
+        tags: ["official", "tracking", "service"],
+        sites: [
+          { name: "brianharrisbmw.com/general-service", url: "https://brianharrisbmw.com/general-service", label: "Call / Schedule Service" }
+        ],
+        notes: "Appears on service offer CTAs — likely campaign/tracking number, not main service."
+      },
+      {
+        id: "2257541218",
+        display: "(225) 754-1218",
+        role: "Staff direct (Lisa Lirette mention)",
+        priority: "low",
+        tags: ["staff"],
+        sites: [
+          { name: "Facebook mentions / posts", url: "https://www.facebook.com/BrianHarrisBMW/mentions/", label: "Sales contact" }
+        ],
+        notes: "Public staff direct-dial, not main board. Not a 3P dealer-profile primary."
+      },
+      {
+        id: "2257541204",
+        display: "(225) 754-1204",
+        role: "Staff direct (Brandi Wine mention)",
+        priority: "low",
+        tags: ["staff"],
+        sites: [
+          { name: "Facebook public posts", url: "https://www.facebook.com/p/Brandi-Wine-61551768903080/", label: "Pre-owned contact" }
+        ],
+        notes: "Public staff line. Optional test only."
+      },
+      {
+        id: "2258924361",
+        display: "(225) 892-4361",
+        role: "Staff mobile (Brandi Wine mention)",
+        priority: "low",
+        tags: ["staff"],
+        sites: [
+          { name: "Facebook public posts", url: "https://www.facebook.com/p/Brandi-Wine-61551768903080/", label: "Ask for Brandi" }
+        ],
+        notes: "Personal/mobile style listing. Low priority for store board audit."
+      }
+    ];
+
+    const SOURCES = [
+      ["Official contact page", "(877) 391-3018 · (225) 754-1200", "Sales / Service / Parts", "High", "https://brianharrisbmw.com/contact"],
+      ["Official site chrome", "(877) 391-3018", "Header/footer call", "High", "https://brianharrisbmw.com/"],
+      ["Official parts page", "(225) 754-1200 (+ 877 in chrome)", "Parts", "High", "https://brianharrisbmw.com/parts"],
+      ["Official general service CTA", "(225) 497-1953 (+ 877 chrome)", "Service promo call", "Med", "https://brianharrisbmw.com/general-service"],
+      ["Brian Harris Auto Group", "Sales 225-754-1200 · Svc 866-396-1262 · Parts 866-396-1264", "BMW rooftop block", "High", "https://www.brianharrisautogroup.com/"],
+      ["KBB dealer page", "(225) 224-7648", "Phone", "High (live page)", "https://www.kbb.com/dealers/baton-rouge-la/124036/brian-harris-bmw/"],
+      ["Autotrader dealer list", "(225) 224-7649", "telephone field", "High (page HTML)", "https://www.autotrader.com/car-dealers/bmw/baton-rouge-la"],
+      ["CARFAX", "New 225-523-2644 · Used 225-425-8004 · Service 225-754-1200", "Dept phones", "High", "https://www.carfax.com/Reviews-Brian-Harris-BMW-Baton-Rouge-LA_ORX61007"],
+      ["CarGurus", "(225) 590-5669 in SERP; no phone on live card 8/10", "Dealer card", "Med / mixed", "https://www.cargurus.com/Cars/dealers-BMW-Hammond-m3_L13409"],
+      ["DealerRater", "(225) 754-1200", "Sales", "High", "https://www.dealerrater.com/dealer/Brian-Harris-BMW-review-182/"],
+      ["Yelp", "(225) 754-1200", "Main", "High", "https://www.yelp.com/biz/brian-harris-bmw-baton-rouge-2"],
+      ["Apple Maps", "(225) 754-1200", "Phone", "High", "https://maps.apple.com/place?place-id=I114DF89FC9F6A6A6"],
+      ["MapQuest", "(225) 754-1200", "tel: link", "High", "https://www.mapquest.com/us/louisiana/brian-harris-bmw-8606355"],
+      ["Ridekick", "(225) 754-1200", "Phone", "Med", "https://www.ridekick.com/dealer/la/baton-rouge/brian-harris-bmw-baton-rouge-llt6"],
+      ["Cars.com dealer page", "No public tel in scrape (hours only / claim CTA)", "—", "Low visibility", "https://www.cars.com/dealers/27508/brian-harris-bmw/"],
+      ["Edmunds", "Address + inventory; phone not confirmed in scrape", "—", "Unknown", "https://www.edmunds.com/dealerships/all/louisiana/baton-rouge/brianharrisbmw/"]
+    ];
+
+    const RESULTS_KEY = "bhbmw_phone_audit_results_v1";
+    const loadResults = () => {
+      try { return JSON.parse(localStorage.getItem(RESULTS_KEY) || "{}"); } catch { return {}; }
+    };
+    const saveResults = (obj) => localStorage.setItem(RESULTS_KEY, JSON.stringify(obj));
+
+    function badgeHtml(tags) {
+      const map = {
+        official: "official",
+        third: "third",
+        tracking: "tracking",
+        stale: "stale",
+        staff: "staff",
+        unknown: "unknown",
+        sales: "unknown",
+        service: "unknown",
+        parts: "unknown"
+      };
+      const labels = {
+        official: "Official",
+        third: "Third-party",
+        tracking: "Tracking?",
+        stale: "Stale/mismatch?",
+        staff: "Staff",
+        unknown: "Needs test",
+        sales: "Sales",
+        service: "Service",
+        parts: "Parts"
+      };
+      return tags.map(t => `<span class="badge ${map[t] || "unknown"}">${labels[t] || t}</span>`).join("");
+    }
+
+    function priorityDot(p) {
+      const cls = p === "high" ? "p-high" : p === "med" ? "p-med" : "p-low";
+      return `<span class="priority ${cls}"></span>${p.toUpperCase()}`;
+    }
+
+    function render() {
+      const q = (document.getElementById("q").value || "").toLowerCase();
+      const type = document.getElementById("typeFilter").value;
+      const results = loadResults();
+      const tbody = document.getElementById("tbody");
+      tbody.innerHTML = "";
+
+      const filtered = NUMBERS.filter(n => {
+        if (type === "official" && !n.tags.includes("official")) return false;
+        if (type === "tracking" && !(n.tags.includes("tracking") || n.tags.includes("third"))) return false;
+        if (type === "staff" && !n.tags.includes("staff")) return false;
+        if (type === "stale" && !n.tags.includes("stale")) return false;
+        if (!q) return true;
+        const blob = [n.display, n.role, n.notes, ...n.sites.map(s => s.name + " " + s.label)].join(" ").toLowerCase();
+        return blob.includes(q);
+      });
+
+      filtered.forEach(n => {
+        const r = results[n.id] || { status: "", note: "" };
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${priorityDot(n.priority)}</td>
+          <td class="phone"><a href="tel:+1${n.id}">${n.display}</a></td>
+          <td>${n.role}</td>
+          <td>${badgeHtml(n.tags)}</td>
+          <td class="sites">${n.sites.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.name}</a><span class="note">(${s.label})</span>`).join("<br>")}</td>
+          <td>
+            <div class="checkrow">
+              <select class="result" data-id="${n.id}" data-field="status">
+                <option value="">Not tested</option>
+                <option value="works">Works / rings desk</option>
+                <option value="vm">Voicemail only</option>
+                <option value="dead">Dead / no connect</option>
+                <option value="wrong">Wrong dept / business</option>
+                <option value="track">Tracking prompt / odd IVR</option>
+              </select>
+            </div>
+            <input class="result" style="margin-top:6px;width:100%;min-width:160px" data-id="${n.id}" data-field="note" placeholder="Test note…" value="" />
+          </td>
+          <td class="note">${n.notes}</td>
+        `;
+        tbody.appendChild(tr);
+        const statusEl = tr.querySelector('[data-field="status"]');
+        const noteEl = tr.querySelector('[data-field="note"]');
+        statusEl.value = r.status || "";
+        noteEl.value = r.note || "";
+        const persist = () => {
+          const cur = loadResults();
+          cur[n.id] = { status: statusEl.value, note: noteEl.value, at: new Date().toISOString() };
+          saveResults(cur);
+        };
+        statusEl.addEventListener("change", persist);
+        noteEl.addEventListener("change", persist);
+        noteEl.addEventListener("blur", persist);
+      });
+
+      document.getElementById("count-unique").textContent = NUMBERS.length;
+      document.getElementById("count-track").textContent = NUMBERS.filter(n => n.tags.includes("tracking") || n.tags.includes("third")).length;
+      document.getElementById("count-official").textContent = NUMBERS.filter(n => n.tags.includes("official")).length;
+      document.getElementById("count-sources").textContent = SOURCES.length;
+    }
+
+    function renderSources() {
+      const body = document.getElementById("sourceBody");
+      body.innerHTML = SOURCES.map(s => `
+        <tr>
+          <td>${s[0]}</td>
+          <td class="phone" style="font-size:0.9rem;font-weight:600">${s[1]}</td>
+          <td>${s[2]}</td>
+          <td>${s[3]}</td>
+          <td class="sites"><a href="${s[4]}" target="_blank" rel="noopener">Open</a></td>
+        </tr>
+      `).join("");
+    }
+
+    function exportCsv() {
+      const results = loadResults();
+      const rows = [["priority","number","role","tags","sites","test_status","test_note","audit_notes"]];
+      NUMBERS.forEach(n => {
+        const r = results[n.id] || {};
+        rows.push([
+          n.priority,
+          n.display,
+          n.role,
+          n.tags.join("|"),
+          n.sites.map(s => s.name).join(" | "),
+          r.status || "",
+          r.note || "",
+          n.notes
+        ]);
+      });
+      const csv = rows.map(r => r.map(c => `"${String(c).replaceAll('"','""')}"`).join(",")).join("\n");
+      const blob = new Blob([csv], { type: "text/csv" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "bhbmw-phone-listing-audit.csv";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    document.getElementById("q").addEventListener("input", render);
+    document.getElementById("typeFilter").addEventListener("change", render);
+    document.getElementById("exportCsv").addEventListener("click", exportCsv);
+    document.getElementById("printBtn").addEventListener("click", () => window.print());
+    renderSources();
+    render();
+  </script>
+</body>
+</html>
