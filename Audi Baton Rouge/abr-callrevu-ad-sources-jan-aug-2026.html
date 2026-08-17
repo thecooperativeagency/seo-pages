@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABR CallRevu Ad Sources — Jan–Aug 2026</title>
+  <style>
+    :root {
+      --bg:#0b0f14; --card:#121821; --line:#243041; --ink:#e8eef7; --muted:#93a0b4;
+      --blue:#4c8dff; --blue2:#1c69d4; --good:#3dd68c; --warn:#f0b429;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #152238 0%, var(--bg) 55%);
+      color: var(--ink); padding: 28px 18px 64px;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    header { margin-bottom: 22px; }
+    .eyebrow { color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 8px 0 8px; font-size: clamp(1.45rem, 2.6vw, 2rem); letter-spacing: -0.03em; line-height:1.15; }
+    .sub { color: var(--muted); font-size: 14px; line-height: 1.55; max-width: 760px; }
+    .meta-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .pill {
+      border:1px solid var(--line); background: rgba(255,255,255,.03);
+      border-radius:999px; padding:7px 12px; font-size:12px; color:var(--muted);
+    }
+    .pill strong { color: var(--ink); font-weight:700; }
+    .grid-stats {
+      display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:10px; margin: 22px 0 18px;
+    }
+    .stat {
+      background: var(--card); border:1px solid var(--line); border-radius:14px; padding:14px;
+      min-height:108px; display:flex; flex-direction:column; gap:6px;
+    }
+    .stat-k { font-size:11px; color:var(--muted); line-height:1.35; min-height:2.6em; }
+    .stat-v { font-size:1.35rem; font-weight:800; letter-spacing:-0.03em; }
+    .stat-s { font-size:12px; color:var(--good); }
+    .panel {
+      background: var(--card); border:1px solid var(--line); border-radius:16px;
+      padding:18px 16px 10px; margin-top:16px;
+    }
+    .panel h2 { margin:0 0 14px; font-size:15px; letter-spacing:-0.01em; }
+    .bar-row {
+      display:grid; grid-template-columns: minmax(140px, 280px) 1fr 110px;
+      gap:10px; align-items:center; padding:7px 0; border-top:1px solid rgba(255,255,255,.04);
+    }
+    .bar-label {
+      font-size:12px; color:var(--ink); line-height:1.3;
+      overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+    }
+    .bar-track {
+      height:14px; background: rgba(255,255,255,.05); border-radius:999px; overflow:hidden;
+      border:1px solid rgba(255,255,255,.04);
+    }
+    .bar-fill {
+      height:100%; border-radius:999px;
+      background: linear-gradient(90deg, var(--blue2), var(--blue));
+    }
+    .bar-nums { text-align:right; font-size:12px; color:var(--muted); display:flex; flex-direction:column; gap:1px; }
+    .bar-nums strong { color:var(--ink); font-size:13px; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th, td { padding:10px 8px; border-bottom:1px solid rgba(255,255,255,.06); text-align:left; vertical-align:top; }
+    th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; }
+    td.rank { width:42px; color:var(--muted); }
+    td.src { font-weight:600; }
+    td.grp { color:var(--muted); white-space:nowrap; }
+    td.num { text-align:right; font-variant-numeric: tabular-nums; white-space:nowrap; }
+    .note {
+      margin-top:18px; color:var(--muted); font-size:12px; line-height:1.5;
+      border-left:3px solid var(--line); padding-left:12px;
+    }
+    footer { margin-top:28px; color:#6d7a8f; font-size:12px; }
+    @media (max-width: 900px) {
+      .grid-stats { grid-template-columns: 1fr 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap:4px; padding:10px 0; }
+      .bar-nums { text-align:left; flex-direction:row; gap:10px; align-items:baseline; }
+      td.grp { display:none; }
+      th.grp { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">CallRevu · Audi Baton Rouge</div>
+      <h1>Call / Ad Source Mix</h1>
+      <p class="sub">Every distinct value in the CallRevu <strong>AD SOURCE</strong> column for Brian Harris Audi, Jan 1–Aug 17, 2026. Counts are raw call records from the export — not unique callers.</p>
+      <div class="meta-row">
+        <div class="pill">Total calls <strong>12,969</strong></div>
+        <div class="pill">Unique sources <strong>37</strong></div>
+        <div class="pill">Period <strong>Jan–Aug 17, 2026</strong></div>
+        <div class="pill">Source file <strong>Call Details Audi Baton Rouge Jan to Aug 2026-2.xlsx</strong></div>
+      </div>
+    </header>
+
+    <section class="grid-stats" aria-label="Top sources">
+    <div class="stat">
+      <div class="stat-k">GMB</div>
+      <div class="stat-v">9,168</div>
+      <div class="stat-s">70.69% of all calls</div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">www.audibatonrouge.com/ SALES (888-903-3018)</div>
+      <div class="stat-v">2,252</div>
+      <div class="stat-s">17.36% of all calls</div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">ABR Service and Parts GMB</div>
+      <div class="stat-v">791</div>
+      <div class="stat-s">6.10% of all calls</div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">BHAG GMB</div>
+      <div class="stat-v">311</div>
+      <div class="stat-s">2.40% of all calls</div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">CarGurus (225-219-8431)</div>
+      <div class="stat-v">133</div>
+      <div class="stat-s">1.03% of all calls</div>
+    </div>
+    </section>
+
+    <section class="panel">
+      <h2>All ad sources (largest → smallest)</h2>
+    <div class="bar-row" data-group="Google Business">
+      <div class="bar-label" title="GMB">GMB</div>
+      <div class="bar-track"><div class="bar-fill" style="width:100.00%"></div></div>
+      <div class="bar-nums"><strong>9,168</strong><span>70.69%</span></div>
+    </div>
+    <div class="bar-row" data-group="Website track">
+      <div class="bar-label" title="www.audibatonrouge.com/ SALES (888-903-3018)">www.audibatonrouge.com/ SALES (888-903-3018)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:24.56%"></div></div>
+      <div class="bar-nums"><strong>2,252</strong><span>17.36%</span></div>
+    </div>
+    <div class="bar-row" data-group="Google Business">
+      <div class="bar-label" title="ABR Service and Parts GMB">ABR Service and Parts GMB</div>
+      <div class="bar-track"><div class="bar-fill" style="width:8.63%"></div></div>
+      <div class="bar-nums"><strong>791</strong><span>6.10%</span></div>
+    </div>
+    <div class="bar-row" data-group="Google Business">
+      <div class="bar-label" title="BHAG GMB">BHAG GMB</div>
+      <div class="bar-track"><div class="bar-fill" style="width:3.39%"></div></div>
+      <div class="bar-nums"><strong>311</strong><span>2.40%</span></div>
+    </div>
+    <div class="bar-row" data-group="3rd-party marketplace">
+      <div class="bar-label" title="CarGurus (225-219-8431)">CarGurus (225-219-8431)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:1.45%"></div></div>
+      <div class="bar-nums"><strong>133</strong><span>1.03%</span></div>
+    </div>
+    <div class="bar-row" data-group="Website track">
+      <div class="bar-label" title="www.audibatonrouge.com/ SERVICE (888-710-2914)">www.audibatonrouge.com/ SERVICE (888-710-2914)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:1.09%"></div></div>
+      <div class="bar-nums"><strong>100</strong><span>0.77%</span></div>
+    </div>
+    <div class="bar-row" data-group="Website track">
+      <div class="bar-label" title="www.audibatonrouge.com/PARTS (888-729-3086)">www.audibatonrouge.com/PARTS (888-729-3086)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>64</strong><span>0.49%</span></div>
+    </div>
+    <div class="bar-row" data-group="3rd-party marketplace">
+      <div class="bar-label" title="Edmunds (866-967-6559)">Edmunds (866-967-6559)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>26</strong><span>0.20%</span></div>
+    </div>
+    <div class="bar-row" data-group="Internal / hunt">
+      <div class="bar-label" title="C2C Anchor Number">C2C Anchor Number</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>22</strong><span>0.17%</span></div>
+    </div>
+    <div class="bar-row" data-group="Social">
+      <div class="bar-label" title="Instagram">Instagram</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>14</strong><span>0.11%</span></div>
+    </div>
+    <div class="bar-row" data-group="Social">
+      <div class="bar-label" title="TikTok">TikTok</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>10</strong><span>0.08%</span></div>
+    </div>
+    <div class="bar-row" data-group="3rd-party marketplace">
+      <div class="bar-label" title="Truecar">Truecar</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>6</strong><span>0.05%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Mike Cyprian Call Back">Mike Cyprian Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>5</strong><span>0.04%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Pre-registered Call Back 2">Pre-registered Call Back 2</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>5</strong><span>0.04%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Will Picard Call Back">Will Picard Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>5</strong><span>0.04%</span></div>
+    </div>
+    <div class="bar-row" data-group="3rd-party marketplace">
+      <div class="bar-label" title="KBB (225-308-3695)">KBB (225-308-3695)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>5</strong><span>0.04%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Eric Metzler Call Back">Eric Metzler Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>5</strong><span>0.04%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Pre-registered Call Back 4">Pre-registered Call Back 4</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>4</strong><span>0.03%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Pre-registered Call Back 5">Pre-registered Call Back 5</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>4</strong><span>0.03%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Richard Martorana Call Back">Richard Martorana Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>3</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Don Harry Call Back">Don Harry Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>3</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Andrew Laley Call Back">Andrew Laley Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>3</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Other marketing">
+      <div class="bar-label" title="Email Marketing Email">Email Marketing Email</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>3</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Jak Langston Call Back">Jak Langston Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>3</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Pre-registered Call Back 6">Pre-registered Call Back 6</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>3</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Hedrick Wood Call Back">Hedrick Wood Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>3</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Other marketing">
+      <div class="bar-label" title="stroll magazine">stroll magazine</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>2</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Jhade Green Call Back">Jhade Green Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>2</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Internal / hunt">
+      <div class="bar-label" title="AUDI NEW SALES HUNT GROUP">AUDI NEW SALES HUNT GROUP</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>2</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Pre-registered Call Back 1">Pre-registered Call Back 1</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>2</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Chad Martorana Call Back">Chad Martorana Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>2</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Social">
+      <div class="bar-label" title="Facebook">Facebook</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>2</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Michael Craig Call Back">Michael Craig Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>2</strong><span>0.02%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Ryan Kinsley Call Back">Ryan Kinsley Call Back</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>1</strong><span>0.01%</span></div>
+    </div>
+    <div class="bar-row" data-group="3rd-party marketplace">
+      <div class="bar-label" title="AutoTrader (225-308-3695)">AutoTrader (225-308-3695)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>1</strong><span>0.01%</span></div>
+    </div>
+    <div class="bar-row" data-group="Callback / personal">
+      <div class="bar-label" title="Pre-registered Call Back 3">Pre-registered Call Back 3</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>1</strong><span>0.01%</span></div>
+    </div>
+    <div class="bar-row" data-group="Internal / hunt">
+      <div class="bar-label" title="AUDI USED SALES HUNT GROUP">AUDI USED SALES HUNT GROUP</div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.80%"></div></div>
+      <div class="bar-nums"><strong>1</strong><span>0.01%</span></div>
+    </div>
+    </section>
+
+    <section class="panel">
+      <h2>Full source table</h2>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>AD SOURCE</th>
+              <th class="grp">Group</th>
+              <th style="text-align:right">Calls</th>
+              <th style="text-align:right">Share</th>
+            </tr>
+          </thead>
+          <tbody>
+      <tr data-group="Google Business">
+        <td class="rank">1</td>
+        <td class="src">GMB</td>
+        <td class="grp">Google Business</td>
+        <td class="num">9,168</td>
+        <td class="num">70.69%</td>
+      </tr>
+      <tr data-group="Website track">
+        <td class="rank">2</td>
+        <td class="src">www.audibatonrouge.com/ SALES (888-903-3018)</td>
+        <td class="grp">Website track</td>
+        <td class="num">2,252</td>
+        <td class="num">17.36%</td>
+      </tr>
+      <tr data-group="Google Business">
+        <td class="rank">3</td>
+        <td class="src">ABR Service and Parts GMB</td>
+        <td class="grp">Google Business</td>
+        <td class="num">791</td>
+        <td class="num">6.10%</td>
+      </tr>
+      <tr data-group="Google Business">
+        <td class="rank">4</td>
+        <td class="src">BHAG GMB</td>
+        <td class="grp">Google Business</td>
+        <td class="num">311</td>
+        <td class="num">2.40%</td>
+      </tr>
+      <tr data-group="3rd-party marketplace">
+        <td class="rank">5</td>
+        <td class="src">CarGurus (225-219-8431)</td>
+        <td class="grp">3rd-party marketplace</td>
+        <td class="num">133</td>
+        <td class="num">1.03%</td>
+      </tr>
+      <tr data-group="Website track">
+        <td class="rank">6</td>
+        <td class="src">www.audibatonrouge.com/ SERVICE (888-710-2914)</td>
+        <td class="grp">Website track</td>
+        <td class="num">100</td>
+        <td class="num">0.77%</td>
+      </tr>
+      <tr data-group="Website track">
+        <td class="rank">7</td>
+        <td class="src">www.audibatonrouge.com/PARTS (888-729-3086)</td>
+        <td class="grp">Website track</td>
+        <td class="num">64</td>
+        <td class="num">0.49%</td>
+      </tr>
+      <tr data-group="3rd-party marketplace">
+        <td class="rank">8</td>
+        <td class="src">Edmunds (866-967-6559)</td>
+        <td class="grp">3rd-party marketplace</td>
+        <td class="num">26</td>
+        <td class="num">0.20%</td>
+      </tr>
+      <tr data-group="Internal / hunt">
+        <td class="rank">9</td>
+        <td class="src">C2C Anchor Number</td>
+        <td class="grp">Internal / hunt</td>
+        <td class="num">22</td>
+        <td class="num">0.17%</td>
+      </tr>
+      <tr data-group="Social">
+        <td class="rank">10</td>
+        <td class="src">Instagram</td>
+        <td class="grp">Social</td>
+        <td class="num">14</td>
+        <td class="num">0.11%</td>
+      </tr>
+      <tr data-group="Social">
+        <td class="rank">11</td>
+        <td class="src">TikTok</td>
+        <td class="grp">Social</td>
+        <td class="num">10</td>
+        <td class="num">0.08%</td>
+      </tr>
+      <tr data-group="3rd-party marketplace">
+        <td class="rank">12</td>
+        <td class="src">Truecar</td>
+        <td class="grp">3rd-party marketplace</td>
+        <td class="num">6</td>
+        <td class="num">0.05%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">13</td>
+        <td class="src">Mike Cyprian Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">5</td>
+        <td class="num">0.04%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">14</td>
+        <td class="src">Pre-registered Call Back 2</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">5</td>
+        <td class="num">0.04%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">15</td>
+        <td class="src">Will Picard Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">5</td>
+        <td class="num">0.04%</td>
+      </tr>
+      <tr data-group="3rd-party marketplace">
+        <td class="rank">16</td>
+        <td class="src">KBB (225-308-3695)</td>
+        <td class="grp">3rd-party marketplace</td>
+        <td class="num">5</td>
+        <td class="num">0.04%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">17</td>
+        <td class="src">Eric Metzler Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">5</td>
+        <td class="num">0.04%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">18</td>
+        <td class="src">Pre-registered Call Back 4</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">4</td>
+        <td class="num">0.03%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">19</td>
+        <td class="src">Pre-registered Call Back 5</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">4</td>
+        <td class="num">0.03%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">20</td>
+        <td class="src">Richard Martorana Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">3</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">21</td>
+        <td class="src">Don Harry Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">3</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">22</td>
+        <td class="src">Andrew Laley Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">3</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Other marketing">
+        <td class="rank">23</td>
+        <td class="src">Email Marketing Email</td>
+        <td class="grp">Other marketing</td>
+        <td class="num">3</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">24</td>
+        <td class="src">Jak Langston Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">3</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">25</td>
+        <td class="src">Pre-registered Call Back 6</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">3</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">26</td>
+        <td class="src">Hedrick Wood Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">3</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Other marketing">
+        <td class="rank">27</td>
+        <td class="src">stroll magazine</td>
+        <td class="grp">Other marketing</td>
+        <td class="num">2</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">28</td>
+        <td class="src">Jhade Green Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">2</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Internal / hunt">
+        <td class="rank">29</td>
+        <td class="src">AUDI NEW SALES HUNT GROUP</td>
+        <td class="grp">Internal / hunt</td>
+        <td class="num">2</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">30</td>
+        <td class="src">Pre-registered Call Back 1</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">2</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">31</td>
+        <td class="src">Chad Martorana Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">2</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Social">
+        <td class="rank">32</td>
+        <td class="src">Facebook</td>
+        <td class="grp">Social</td>
+        <td class="num">2</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">33</td>
+        <td class="src">Michael Craig Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">2</td>
+        <td class="num">0.02%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">34</td>
+        <td class="src">Ryan Kinsley Call Back</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">1</td>
+        <td class="num">0.01%</td>
+      </tr>
+      <tr data-group="3rd-party marketplace">
+        <td class="rank">35</td>
+        <td class="src">AutoTrader (225-308-3695)</td>
+        <td class="grp">3rd-party marketplace</td>
+        <td class="num">1</td>
+        <td class="num">0.01%</td>
+      </tr>
+      <tr data-group="Callback / personal">
+        <td class="rank">36</td>
+        <td class="src">Pre-registered Call Back 3</td>
+        <td class="grp">Callback / personal</td>
+        <td class="num">1</td>
+        <td class="num">0.01%</td>
+      </tr>
+      <tr data-group="Internal / hunt">
+        <td class="rank">37</td>
+        <td class="src">AUDI USED SALES HUNT GROUP</td>
+        <td class="grp">Internal / hunt</td>
+        <td class="num">1</td>
+        <td class="num">0.01%</td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">GMB alone is ~71% of tracked calls. Website sales track is #2 (~17%). Marketplace + social are small in this CallRevu labeling window. “Call Back” rows are personal/callback DIDs, not media sources.</p>
+    </section>
+
+    <footer>
+      Cooperative Agency · internal share page · generated from CallRevu export · not customer-facing
+    </footer>
+  </div>
+</body>
+</html>
