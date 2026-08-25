@@ -42,6 +42,7 @@ html, body { margin:0; padding:0; background:#0a0e14; }
 .bmwj-specials-page a.btn-secondary {
   display:inline-flex !important; align-items:center !important; justify-content:center !important;
   text-align:center !important; text-decoration:none !important; border-radius:0 !important;
+  font-family: bmw, "BMW Type Next", BMWTypeNext, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight:700 !important; line-height:1.2 !important; white-space:nowrap !important;
   min-height:48px; padding:12px 20px; font-size:15px; box-sizing:border-box;
 }
@@ -50,7 +51,6 @@ html, body { margin:0; padding:0; background:#0a0e14; }
 .bmwj-specials-page ul.perks { margin:0; padding:0; list-style:none; color:#c5ced9; font-size:15px; line-height:1.5; }
 .bmwj-specials-page ul.perks li { padding:8px 0; border-bottom:1px solid var(--border); }
 .bmwj-specials-page ul.perks li:last-child { border-bottom:0; }
-.bmwj-specials-page .qr { width:min(100%,280px); height:auto; display:block; background:#fff; }
 .bmwj-specials-page .highlights { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
 .bmwj-specials-page .highlights img { width:100%; height:220px; object-fit:cover; display:block; }
 @media (max-width:980px) {
@@ -63,10 +63,10 @@ html, body { margin:0; padding:0; background:#0a0e14; }
 </style>
 </head>
 <body>
-<div class="bmwj-specials-page">
+<div class="bmwj-specials-page" style="font-family: bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;">
 
 <section style="position:relative;min-height:620px;display:flex;align-items:flex-end;background:#000;overflow:hidden;">
-  <img src="https://s3.remora.inc/herringear/uploads/CM4tpXzZSp2kSD2PVQwa_highlight1.webp" alt="Gear Up and Unleash" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.58;" />
+  <img src="assets/hg-hero-c7.jpg" alt="Gear Up and Unleash" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 55%;opacity:.72;" />
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,10,18,.96) 0%,rgba(5,10,18,.78) 48%,rgba(5,10,18,.28) 100%);"></div>
   <div class="wrap" style="position:relative;z-index:2;padding:110px 40px 54px;">
     <p class="eyebrow">BMW of Jackson &middot; Herrin-Gear Automotive Group</p>
@@ -81,21 +81,12 @@ html, body { margin:0; padding:0; background:#0a0e14; }
 
 <section class="section">
   <div class="wrap">
-    <div class="grid-2">
-      <div>
-        <p class="eyebrow">Event details</p>
-        <h2 class="h2">Herrin-Gear&rsquo;s Gear Up &amp; Unleash Car Show</h2>
-        <p class="body">For The Children. September 5, 2026. 1685 High Street &middot; Jackson, MS. Benefiting Children&rsquo;s Hospital of Mississippi.</p>
-        <p class="body">Showcase your classic car, truck, jeep, custom build, or motorcycle. Registration starts at 8:00 AM. Pre-registration fee of $25. Gate fee of $30.</p>
-        <div class="btn-row">
-          <a class="btn-primary" href="https://friendsofch.org/car-show/"><span>Register</span></a>
-        </div>
-      </div>
-      <div class="offer-card" style="align-items:center;justify-content:center;padding:28px;text-align:center;">
-        <p class="label">Scan to open</p>
-        <img class="qr" src="assets/hg-car-show-qr.jpg" alt="HG Car Show QR" />
-        <p class="fineprint" style="margin-top:14px;">HG Car Show</p>
-      </div>
+    <p class="eyebrow">Event details</p>
+    <h2 class="h2">Herrin-Gear&rsquo;s Gear Up &amp; Unleash Car Show</h2>
+    <p class="body">For The Children. September 5, 2026. 1685 High Street &middot; Jackson, MS. Benefiting Children&rsquo;s Hospital of Mississippi.</p>
+    <p class="body">Showcase your classic car, truck, jeep, custom build, or motorcycle. Registration starts at 8:00 AM. Pre-registration fee of $25. Gate fee of $30.</p>
+    <div class="btn-row">
+      <a class="btn-primary" href="https://friendsofch.org/car-show/"><span>Register</span></a>
     </div>
   </div>
 </section>
