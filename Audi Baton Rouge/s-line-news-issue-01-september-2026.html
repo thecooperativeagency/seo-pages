@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S Line News | Audi Baton Rouge | Issue 01 | September 2026</title>
+  <title>S Line News | September 2026 | Audi Baton Rouge</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Playfair+Display:wght@700;900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,650;1,6..72,400&family=Oswald:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #5a5a5a;
-      --line: #d8d8d8;
+      --bg: #f6f3ec;
+      --paper: #fffdf8;
+      --ink: #141414;
+      --muted: #5c574e;
+      --line: rgba(20,20,20,.14);
       --red: #bb0a30;
-      --page: 820px;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: #efefef; color: var(--text); }
+    html, body { margin: 0; padding: 0; background: #e7e2d6; color: var(--ink); }
     body {
-      font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
+      font-family: "Source Sans 3", Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; }
     img { display: block; width: 100%; }
     .sheet {
-      max-width: var(--page);
+      max-width: 820px;
       margin: 0 auto;
-      background: var(--bg);
-      padding: 28px 28px 64px;
+      background: var(--paper);
+      padding: 32px 32px 72px;
     }
-    .mast { padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
     .mast .news {
       font-family: Oswald, sans-serif;
       font-weight: 600;
@@ -40,30 +40,26 @@
       margin: 0 0 2px;
     }
     .mast h1 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-weight: 900;
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 650;
       color: var(--red);
-      font-size: clamp(4.6rem, 18vw, 8.6rem);
+      font-size: clamp(4.4rem, 16vw, 8.2rem);
       line-height: .78;
       letter-spacing: -.04em;
       margin: 0;
     }
     .mast .sub {
       font-family: Oswald, sans-serif;
-      letter-spacing: .28em;
+      letter-spacing: .26em;
       font-size: 11px;
       text-transform: uppercase;
-      color: var(--text);
-      margin: 10px 0 0;
+      margin: 12px 0 0;
     }
-    .hero {
-      margin-top: 14px;
-      position: relative;
-    }
+    .hero { margin-top: 14px; }
     .hero img {
       aspect-ratio: 4 / 5;
       object-fit: cover;
-      object-position: 52% 62%;
+      object-position: 50% 55%;
     }
     .strip {
       display: grid;
@@ -71,21 +67,17 @@
       gap: 8px;
       margin-top: 8px;
     }
-    .strip img {
-      aspect-ratio: 1;
-      object-fit: cover;
-    }
+    .strip img { aspect-ratio: 1; object-fit: cover; }
     .cover-meta {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 24px;
-      margin-top: 16px;
-      align-items: start;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 28px;
+      margin-top: 18px;
     }
     .issue-box {
       font-family: Oswald, sans-serif;
       font-size: 11px;
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--muted);
       line-height: 1.7;
@@ -98,19 +90,15 @@
       color: var(--red);
       margin: 0 0 8px;
     }
-    .inside ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+    .inside ul { margin: 0; padding: 0; list-style: none; }
     .inside li {
-      font-size: 14px;
-      line-height: 1.45;
-      padding: 7px 0;
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 0;
       border-top: 1px solid var(--line);
     }
     .inside li:first-child { border-top: 0; padding-top: 0; }
-    .nav {
+    .toc {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
@@ -118,19 +106,22 @@
       padding-top: 14px;
       border-top: 1px solid var(--line);
     }
-    .nav a {
+    .toc a {
       font-family: Oswald, sans-serif;
       font-size: 11px;
-      letter-spacing: .2em;
+      letter-spacing: .18em;
       text-transform: uppercase;
       text-decoration: none;
       color: var(--muted);
     }
-    .nav a:hover { color: var(--text); }
-    .note {
-      margin-top: 42px;
-      padding-top: 8px;
+    .open {
+      margin: 48px 0 8px;
+      font-family: Newsreader, Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.25;
+      font-weight: 400;
     }
+    .sec { margin-top: 56px; }
     .kicker {
       font-family: Oswald, sans-serif;
       font-size: 11px;
@@ -140,41 +131,41 @@
       margin: 0 0 10px;
     }
     h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.05;
-      letter-spacing: -.03em;
-      margin: 0 0 16px;
-      font-weight: 700;
-    }
-    .lede {
-      font-size: 20px;
-      line-height: 1.45;
+      font-family: Newsreader, Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      font-weight: 500;
       margin: 0 0 16px;
     }
-    p { margin: 0 0 14px; font-size: 16px; line-height: 1.7; color: #222; }
-    .feature { margin-top: 48px; }
-    .feature .shot {
-      margin: 0 0 14px;
-    }
-    .feature .shot img {
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-    }
+    p { margin: 0 0 14px; font-size: 17px; line-height: 1.65; color: #1c1c1c; }
+    .shot { margin: 0 0 12px; }
+    .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
     .cap {
       font-family: Oswald, sans-serif;
       font-size: 10px;
-      letter-spacing: .2em;
+      letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--muted);
       margin: 8px 0 0;
     }
+    .credit { font-size: 13px; color: var(--muted); }
+    .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .cal li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cal strong { font-family: Oswald, sans-serif; letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .cal a { text-decoration: underline; text-underline-offset: 3px; }
     .cta {
       display: inline-block;
-      margin-top: 6px;
+      margin-top: 4px;
       font-family: Oswald, sans-serif;
       font-size: 12px;
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--red);
       text-decoration: none;
@@ -182,16 +173,16 @@
       padding-bottom: 2px;
     }
     .end {
-      margin-top: 48px;
+      margin-top: 56px;
       padding-top: 16px;
       border-top: 1px solid var(--line);
       font-size: 13px;
       color: var(--muted);
       line-height: 1.6;
     }
-    .end a { color: var(--text); }
+    .end a { color: var(--ink); }
     @media (max-width: 720px) {
-      .sheet { padding: 18px 16px 48px; }
+      .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip { grid-template-columns: 1fr; }
       .hero img { aspect-ratio: 3 / 4; }
       .strip img { aspect-ratio: 16 / 10; }
@@ -207,12 +198,12 @@
     </header>
 
     <div class="hero">
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/overview/rs6-avant/rs6-avant-01.jpg" alt="Audi RS 6 Avant" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-cover.jpg" alt="Audi RS 6 Avant" />
     </div>
     <div class="strip">
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/q5-new/audi-q5-2025-interior-cockpit-black.jpg" alt="Audi Q5 cockpit" />
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/q5-new/audi-q5-2025-front-grille-s-line-black-optic.jpg" alt="Audi rings and S line grille" />
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/q5-new/audi-q5-2025-wheel-closeup-black-machined.jpg" alt="Audi wheel detail" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-avant-spy.jpg" alt="Next RS6 Avant prototype" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-speedmaster-38.jpg" alt="Omega Speedmaster 38 mm" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-august-2026-specials/cards/q3-showroom-1x1.jpg" alt="Audi Q3 at Audi Baton Rouge" />
     </div>
 
     <div class="cover-meta">
@@ -225,64 +216,114 @@
       <div class="inside">
         <p class="label">Inside</p>
         <ul>
-          <li>The Q5 for city weeks and game-day weekends</li>
-          <li>The Q7 when the weekend gets bigger</li>
-          <li>Service, handled like Audi</li>
+          <li>The next RS6, still a wagon you can put a bag in</li>
+          <li>Cocha, then Farm Fête</li>
+          <li>A Speedmaster you forget until someone asks</li>
+          <li>The Q3, because that is what the lot is leading with</li>
         </ul>
       </div>
     </div>
 
-    <nav class="nav" aria-label="In this issue">
-      <a href="#note">Editor’s note</a>
-      <a href="#q5">Q5</a>
-      <a href="#q7">Q7</a>
-      <a href="#service">Service</a>
+    <nav class="toc" aria-label="In this issue">
+      <a href="#road">On the Road</a>
+      <a href="#table">On the Table</a>
+      <a href="#town">On the Town</a>
+      <a href="#wrist">On the Wrist</a>
+      <a href="#lot">On the Lot</a>
     </nav>
 
-    <section class="note" id="note">
-      <p class="kicker">Editor’s note</p>
-      <h2>September feels like a reset, not a slowdown.</h2>
-      <p class="lede">Baton Rouge is still hot. School traffic is back. So is Saturday. The week gets tighter and the weekend gets louder.</p>
-      <p>This issue is for that calendar. The Q5 for city weeks and game-day weekends. The Q7 when more people need to go at once. Service before the season stacks up.</p>
+    <p class="open">September still runs hot. The next RS6 is already in the Alps. Farm Fête is the 24th. This letter is for the jacket, not the inbox.</p>
+
+    <section class="sec" id="road">
+      <p class="kicker">On the Road</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-avant-spy.jpg" alt="Next-generation Audi RS6 Avant prototype in the Austrian Alps" />
+        <p class="cap">Next RS6 Avant · Austrian Alps · August 2026</p>
+      </div>
+      <h2>The honest one is still a wagon.</h2>
+      <p>The next RS6 Avant is back on the road after a May barrier at the Nürburgring. Carscoops caught it in the Austrian Alps on 12 August: yellow hybrid labels on the hood, doors, and trunk, 20-spoke wheels under swollen fenders.</p>
+      <p>The labels prove hybrid. They do not prove cylinder count. The rumor mill will argue V8 against V6; both stories put output around 740 hp. Spring 2027. After fifteen years of wagon-only, a fastback sedan comes with it.</p>
+      <p>Until then, the point is the same. The Audi you actually want to live with still has a roof you can load.</p>
+      <p class="credit">Photos: Carscoops / SH Proshots. <a href="https://www.carscoops.com/2026/08/audi-rs6-avant-scoop/">The scoop</a></p>
     </section>
 
-    <section class="feature" id="q5">
-      <div class="shot">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-front-clubhouse.jpg" alt="Audi Q5 in Baton Rouge" />
-        <p class="cap">Q5 · Baton Rouge</p>
-      </div>
-      <p class="kicker">The city week</p>
-      <h2>The Q5 for city weeks and game-day weekends.</h2>
-      <p>September in Baton Rouge makes the calendar louder. The commute tightens. Evenings fill. Weekends orbit football and family.</p>
-      <p>The Q5 lives in that mix. Sharp enough for dinner. Easy enough for the weekday. Ready for Saturday without making a show of it.</p>
+    <section class="sec" id="table">
+      <p class="kicker">On the Table</p>
+      <h2>Cocha. Not because it is new.</h2>
+      <p>445 N. 6th, downtown. Chef Saskia Spanhoff. Harvest is the point of the room this month, and Cocha is on the Farm Fête vendor list. The menu already reads like that night: local produce, a light hand, international without trying to be Houston. Patio if the heat breaks. Closed Tuesdays.</p>
+      <p>Order the Spanish octopus with chorizo Bilbao and white-bean puree. Lamb loin with blackberry Shiraz if you want a second plate. Cachapa if you are sharing. Skip the dry-aged strip unless you came for steak. You did not.</p>
+      <p>Two people. No laptops. Before Farm Fête, or instead of it.</p>
+      <p><a class="cta" href="https://resy.com/cities/baton-rouge-la/venues/cocha">Resy</a></p>
     </section>
 
-    <section class="feature" id="q7">
-      <div class="shot">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q7-front-urban.jpg" alt="Audi Q7" />
-        <p class="cap">Q7</p>
-      </div>
-      <p class="kicker">The bigger weekend</p>
-      <h2>The Q7 when the weekend gets bigger.</h2>
-      <p>Some weekends need more room. School drop-offs, evening plans, game-day traffic, the whole crew in at once.</p>
-      <p>The Q7 takes that without getting bulky or loud. Space, a quieter cabin, a cleaner line through a busy Saturday.</p>
+    <section class="sec" id="town">
+      <p class="kicker">On the Town</p>
+      <h2>Farm Fête, the 24th.</h2>
+      <p>Thursday, 24 September, 6–9 p.m., Main Street Market. BREADA’s night for the Red Stick Farmers Market: local chefs, farm food, cocktails, two stages, dancing. Dressy casual. Early tickets $95, then $125. Cocha is cooking it.</p>
+      <p>This is the jacket-on night that is not a concert. Jason Carter is at the Manship the same evening. Pick one.</p>
+      <p><a class="cta" href="https://qtego.us/l/farmfete/tickets/event-tickets">Tickets</a></p>
+
+      <p class="kicker" style="margin-top:32px">September</p>
+      <ul class="cal">
+        <li>
+          <strong>Sun 6 · First Free Sunday</strong>
+          Walk <em>Reflections: The Art of George Rodrigue</em> at LASM while it is still new. Through 24 January.
+          <a href="https://www.lasm.org/bluedog/">Exhibition</a>
+        </li>
+        <li>
+          <strong>Tue 8 · Band of Heathens</strong>
+          Manship, 7:30. Austin Americana. From $72.24.
+          <a href="https://manshiptheatre.org/comingsoon/bandofheathens">Show</a>
+        </li>
+        <li>
+          <strong>Sun 13 · Concert Kitchen Live</strong>
+          Chef Kevin Belton and John Papa Gros, Manship, 2 p.m. A plate before you leave. From $35.
+          <a href="https://manshiptheatre.org/comingsoon/concert-kitchen-live">Show</a>
+        </li>
+        <li>
+          <strong>Wed 16 · BoDeans</strong>
+          Manship, 7:30. Forty years of <em>Love &amp; Hope &amp; Sex &amp; Dreams</em>. The seated night if Farm Fête is not the speed.
+          <a href="https://manshiptheatre.org/comingsoon/bodeans">Show</a>
+        </li>
+        <li>
+          <strong>Sun 20 · The Wild Pour</strong>
+          BREC’s Baton Rouge Zoo, 2:30–5:30. 21+. Beer, wine, spirits, the zoo after hours.
+          <a href="https://brzoobrew.ticketbud.com/the-wild-pour-2026">Tickets</a>
+        </li>
+      </ul>
     </section>
 
-    <section class="feature" id="service">
+    <section class="sec" id="wrist">
+      <p class="kicker">On the Wrist</p>
       <div class="shot">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-pair-flag.jpg" alt="Audi Baton Rouge" />
-        <p class="cap">Audi Baton Rouge</p>
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-speedmaster-38.jpg" alt="Omega Speedmaster 38 mm, black no-date" />
+        <p class="cap">Omega Speedmaster 38 mm · ref. 324.30.38.50.01.002</p>
       </div>
-      <p class="kicker">In the shop</p>
-      <h2>Service season, handled like Audi.</h2>
-      <p>Heat, traffic, long weekends. Baton Rouge puts miles on a car in a hurry.</p>
-      <p>September is a good time to get ahead of it. Service here is part of owning the car, not an errand you squeeze in later.</p>
-      <p><a class="cta" href="https://audibatonrouge.com/service-specials">Service at Audi Baton Rouge</a></p>
+      <h2>The piece you forget until someone asks.</h2>
+      <p>You do not need another smartwatch. Omega’s new Speedmaster 38 mm, black no-date. Moonwatch face, smaller case, $6,500. Still 14.75 mm thick. Oval subdials are gone. Ignore the diamond bezels.</p>
+      <p class="credit">Hodinkee, 25 August 2026. Photo: Hodinkee / Omega. <a href="https://www.hodinkee.com/articles/a-new-generation-of-the-omega-speedmaster-38-mm">The piece</a></p>
+    </section>
+
+    <section class="sec" id="lot">
+      <p class="kicker">On the Lot</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-august-2026-specials/cards/q3-showroom-1x1.jpg" alt="All-new Audi Q3 at Audi Baton Rouge" />
+        <p class="cap">Q3 · Audi Baton Rouge</p>
+      </div>
+      <h2>The page leads with the Q3.</h2>
+      <p>All-new 2026. Thirteen in stock. $2,000 off. That is the lead because that is what the lot is leading with, not because it is the loudest car in the building.</p>
+      <p>Come drive it. If September is when you actually book the shop: oil and filter, $199.</p>
+      <p>Aside, not the lead: there is an S3 on the same page if you want the one that makes a point.</p>
+      <p>
+        <a class="cta" href="https://audibatonrouge.com/all-new-audi-q3">The Q3</a>
+        &nbsp;&nbsp;
+        <a class="cta" href="https://audibatonrouge.com/service">Service</a>
+      </p>
     </section>
 
     <footer class="end">
       S Line News · Issue 01 · September 2026<br />
-      <a href="https://audibatonrouge.com">Audi Baton Rouge</a>
+      <a href="https://audibatonrouge.com">Audi Baton Rouge</a> · 11955 Airline Hwy
     </footer>
   </article>
 </body>
