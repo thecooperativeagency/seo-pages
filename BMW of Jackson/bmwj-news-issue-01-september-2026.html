@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jackson News | September 2026 | BMW of Jackson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,650;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #5c574e;
+      --line: rgba(20,20,20,.14);
+      --blue: #0A3A6B;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    body {
+      font-family: Newsreader, Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; width: 100%; }
+    .sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 32px 32px 72px;
+    }
+    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .mast h1 {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 650;
+      color: var(--blue);
+      font-size: clamp(4.2rem, 15vw, 7.4rem);
+      line-height: .82;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .mast .news {
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 650;
+      letter-spacing: .46em;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 10px 0 0;
+    }
+    .mast .sub {
+      letter-spacing: .22em;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin: 12px 0 0;
+    }
+    .hero { margin-top: 14px; }
+    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 50%; }
+    .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .strip img { aspect-ratio: 1; object-fit: cover; }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 28px;
+      margin-top: 18px;
+    }
+    .issue-box {
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .inside .label {
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin: 0 0 8px;
+    }
+    .inside ul { margin: 0; padding: 0; list-style: none; }
+    .inside li {
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .inside li:first-child { border-top: 0; padding-top: 0; }
+    .toc {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 28px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .toc a {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .open {
+      margin: 48px 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .sec { margin-top: 64px; }
+    .kicker {
+      font-size: 11px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin: 0 0 10px;
+    }
+    h2 {
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      font-weight: 650;
+      margin: 0 0 16px;
+    }
+    h3 {
+      font-size: 1.55rem;
+      line-height: 1.2;
+      font-weight: 650;
+      margin: 8px 0 12px;
+    }
+    p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #1c1c1c; }
+    .shot { margin: 0 0 10px; }
+    .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    .cap {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 8px 0 18px;
+    }
+    .credit { font-size: 13px; color: var(--muted); }
+    .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .cal li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cal strong { letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .cal a { text-decoration: underline; text-underline-offset: 3px; }
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue);
+      padding-bottom: 2px;
+    }
+    .lot-car { margin-top: 40px; }
+    .end {
+      margin-top: 56px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .end a { color: var(--ink); }
+    @media (max-width: 720px) {
+      .sheet { padding: 18px 16px 56px; }
+      .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
+      .hero img { aspect-ratio: 3 / 4; }
+      .strip img, .pair img { aspect-ratio: 16 / 10; }
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet">
+    <header class="mast">
+      <h1>Jackson</h1>
+      <p class="news">News</p>
+      <p class="sub">BMW of Jackson &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
+    </header>
+
+    <div class="hero">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/x5.jpg" alt="BMW X5 at BMW of Jackson" />
+    </div>
+    <div class="strip">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/i3-touring-spy.jpg" alt="BMW i3 Touring prototype" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/elvies-interior.jpg" alt="Elvie's, Belhaven" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/cyril-duling.jpg" alt="Cyril Neville at Duling Hall" />
+    </div>
+
+    <div class="cover-meta">
+      <div class="issue-box">
+        Jackson News<br />
+        Issue 01<br />
+        September 2026<br />
+        BMW of Jackson
+      </div>
+      <div class="inside">
+        <p class="label">Inside</p>
+        <ul>
+          <li>The i3 Touring, still a wagon</li>
+          <li>Elvie’s, then Cyril Neville</li>
+          <li>Omega Speedmaster 38</li>
+          <li>X5, X3, X7 — what’s on the board</li>
+          <li>Oil, the plan, brakes</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="In this issue">
+      <a href="#road">On the Road</a>
+      <a href="#table">On the Table</a>
+      <a href="#town">On the Town</a>
+      <a href="#wrist">On the Wrist</a>
+      <a href="#lot">On the Lot</a>
+      <a href="#workbench">On the Workbench</a>
+    </nav>
+
+    <p class="open">September in Jackson doesn’t cool off so much as it stops apologizing. The light goes long, the patios stop being a dare, and the calendar fills up with people who actually play instruments. Here’s what’s news.</p>
+
+    <section class="sec" id="road">
+      <p class="kicker">On the Road</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/i3-touring-spy.jpg" alt="BMW i3 Touring prototype at the Nürburgring" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/i3-spy-8.jpg" alt="i3 Touring prototype, rear" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/i3-spy-15.jpg" alt="i3 Touring prototype, side" />
+      </div>
+      <p class="cap">i3 Touring prototype · Nürburgring</p>
+      <h2>A wagon that plugs in</h2>
+      <p>There’s a photographer named Baldauf who stands at the Nürburgring in the cold and waits for BMW to make a mistake in public. In August he caught one worth caring about: an i3 Touring — the long-roof version of the new Neue Klasse i3 — running laps in a thin coat of camouflage. Silver. Estate body. A wagon that plugs in.</p>
+      <p>The tester wearing the camo is the dual-motor 50 xDrive: 463 horsepower, a 108.7 kWh pack, something north of 500 miles on the European cycle, and DC charging quick enough that a coffee is a real strategy again. BMW already started building the sedan in Munich. The wagon is the driver’s argument against the assumption that the only honest answer anymore is another tall SUV.</p>
+      <p>Two things this is not. It is not a hybrid, and it is not confirmed for anybody’s driveway on this side of the Atlantic. A prototype at a German track proves engineers are working, nothing else — not a Mississippi delivery date, not a price, not a promise. So we watch.</p>
+      <p class="credit">Photos: Carscoops / Baldauf · <a href="https://www.carscoops.com/2026/08/bmw-i3-touring-nurburgring/">The scoop</a></p>
+    </section>
+
+    <section class="sec" id="table">
+      <p class="kicker">On the Table</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/elvies-interior.jpg" alt="Inside Elvie's, Belhaven" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/elvies-fish.jpg" alt="A plate at Elvie's" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/elvies-room.jpg" alt="The dining room at Elvie's" />
+      </div>
+      <p class="cap">Elvie’s · 809 Manship St. · Belhaven</p>
+      <h2>Named for a grandmother</h2>
+      <p>Elvie’s sits in a small room in Belhaven on Manship Street, named for the chef’s grandmother, May Elvaretta Good, and it has spent the years since 2020 quietly being one of the best reasons to stay in Jackson for dinner. Hunter Evans — a James Beard Best Chef South finalist — and Cody McCain cook Mississippi through a French lens without ever pretending the Gulf is somewhere fancier than it is. Bib Gourmand last year. On the New York Times list. None of that is why you go.</p>
+      <p>You go because September is finally when the patio makes sense, and because the plate in front of you came off a farm and out of the Gulf. As of the live night menu: oysters to start, chicken liver pâté with sourdough and pickles, steak frites finished with maître d’ butter and duck-fat fries. The menu moves with the farms, so check the night page the week you go.</p>
+      <p>It’s a two-person room. Leave the laptop in the car. Closed Sunday and Monday. Book it before a Duling Hall night, or instead of defaulting to another steakhouse.</p>
+      <p><a class="cta" href="https://resy.com/cities/jackson-ms/venues/elvies">Reserve Elvie’s</a></p>
+    </section>
+
+    <section class="sec" id="town">
+      <p class="kicker">On the Town</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/cyril-duling.jpg" alt="Cyril Neville Plays The Dead at Duling Hall" />
+      </div>
+      <p class="cap">Cyril Neville · Duling Hall · 24 September</p>
+      <h2>Cyril Neville Plays The Dead</h2>
+      <p>Thursday, 24 September, Duling Hall. Cyril Neville is the youngest Neville brother, which at this point means a Grammy Lifetime Achievement, the Meters, the Neville Brothers, and roughly half a century of New Orleans low end. He is bringing all of that to a 500-seat room in Fondren to play the Grateful Dead. That is not a touring jukebox musical rolling through on a bus. That is a serious musician taking apart songs he loves in a room small enough to hear him think.</p>
+      <p>Doors 6:30, show 7:30, all ages. Advance $40, day-of $45 plus fees. Under-21 is $5 at the door. Eat at Elvie’s first, or oysters at Saltine if you’re already on Duling.</p>
+      <p><a class="cta" href="https://www.ardenland.net/shows/cyrilneville-2026duling">Event page</a></p>
+      <ul class="cal">
+        <li><strong>Sat 5</strong> The Rumble, Duling Hall. Big Chief Joseph Boudreaux Jr. and six more Grammy-nominated New Orleans players. Doors 7, show 8. Advance $25. <a href="https://www.ardenland.net/shows/therumble2026">Tickets</a></li>
+        <li><strong>Sat 5, morning</strong> Free First Saturday, Mississippi Museum of Art, 11 a.m. Walk <em>Photography and the Black Arts Movement, 1955–1985</em> — last stop of the National Gallery tour. <a href="https://www.msmuseumart.org/exhibition/photography-and-the-black-arts-movement-1955-1985/">The show</a></li>
+        <li><strong>Tue 8–Sun 20</strong> <em>Mrs. Christie</em> at New Stage Theatre. Agatha Christie vanishes for eleven days in 1926; a superfan a century later tries to solve it. Box office 601-948-3533. <a href="https://newstagetheatre.com/mrs-christie/">New Stage</a></li>
+        <li><strong>Thu 10</strong> Soul City Swingers, Levitt series, Smith Park, 5–8 p.m. Free, downtown, on the lawn. <a href="https://www.visitjackson.com/events/soul-city-swingers/">Visit Jackson</a></li>
+        <li><strong>Sat 26</strong> Mississippi Book Festival, State Capitol grounds, 9–5. Free. This year’s names include George Saunders, Kate McKinnon, Simon Winchester, and Deesha Philyaw. <a href="https://msbookfestival.com/">Festival</a></li>
+        <li><strong>Wed 30</strong> <em>Jersey Boys</em>, Thalia Mara Hall, 7:30. Broadway in Jackson, one night. <a href="https://www.jacksonbroadway.com/jerseyboys">Tickets</a></li>
+      </ul>
+    </section>
+
+    <section class="sec" id="wrist">
+      <p class="kicker">On the Wrist</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/omega-hero.jpg" alt="Omega Speedmaster 38 mm" />
+      </div>
+      <p class="cap">Speedmaster 38 · black no-date</p>
+      <h2>Speedmaster 38, reconsidered</h2>
+      <p>Omega redrew the Speedmaster 38 this year and, for once, the news is what they took away. The oval subdials are gone. What’s left, in the black no-date (ref. 324.30.38.50.01.002), is the Moonwatch face on a smaller, more honest case — $6,500, and the one to want out of the seven variants. Ignore the diamond bezels.</p>
+      <p>It disappears on your wrist until somebody asks about it. Not a smartwatch. Not a $75,000 bracelet that lives in a safe. Still 14.75 mm thick, which means it wears like a tool. The good version of a thing is the one you actually use.</p>
+      <p class="credit"><a href="https://www.hodinkee.com/articles/a-new-generation-of-the-omega-speedmaster-38-mm">Hodinkee</a></p>
+    </section>
+
+    <section class="sec" id="lot">
+      <p class="kicker">On the Lot</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/x5.jpg" alt="BMW X5 at BMW of Jackson" />
+      </div>
+      <p class="cap">X5 · BMW of Jackson</p>
+      <h2>The X5, then the rest of the board</h2>
+      <p>BMW of Jackson leads with the X5 — Consumer Reports’ highest-rated luxury SUV, and the one the live specials page puts first. MY26 X5 xDrive40i: 0.9% APR for 60 months on select models, plus a $1,000 APR credit. Lease from $869 a month for 39 months — $809 with loyalty.</p>
+      <p>
+        <a class="cta" href="https://bmwofjackson.net/cars/bmw-x5">Shop X5</a>
+        &nbsp;&nbsp;
+        <a class="cta" href="https://bmwofjackson.net/new-bmw-specials">Shop specials</a>
+      </p>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/x3.jpg" alt="BMW X3 at BMW of Jackson" />
+        </div>
+        <p class="cap">X3 · BMW of Jackson</p>
+        <h3>The X3</h3>
+        <p>MY26 X3 30 xDrive. The core BMW SAV. Lease from $569 a month for 39 months ($539 with loyalty), or 1.99% APR for 60 months.</p>
+        <p>
+          <a class="cta" href="https://bmwofjackson.net/cars/bmw-x3">Shop X3</a>
+          &nbsp;&nbsp;
+          <a class="cta" href="https://bmwofjackson.net/new-bmw-specials">Shop specials</a>
+        </p>
+      </div>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/x7.jpg" alt="BMW X7 at BMW of Jackson" />
+        </div>
+        <p class="cap">X7 · BMW of Jackson</p>
+        <h3>The X7</h3>
+        <p>MY27 X7 xDrive40i. Three rows. $1,249 a month on a 15-month lease, or $1,049 for 39 months. 1.99% APR for 60 months if you’re financing.</p>
+        <p>
+          <a class="cta" href="https://bmwofjackson.net/cars/new-x7">Shop X7</a>
+          &nbsp;&nbsp;
+          <a class="cta" href="https://bmwofjackson.net/new-bmw-specials">Shop specials</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="sec" id="workbench">
+      <p class="kicker">On the Workbench</p>
+      <h2>The shop, not the leftover line</h2>
+      <p>The waiting room has the Isetta Bar and wifi. The bays have factory-trained techs. That’s the whole deal.</p>
+      <p>BMW Value Service oil change is $119.99 — up to six quarts of premium synthetic, factory filter, parts and labor, for Value Service Program models. Expires 9/28.</p>
+      <p>If you keep cars past the warranty window — and around here, people do — the three-year oil change plan is $249 plus tax and disposal. Two oil changes a contract year, BMW-trained techs, original parts. Expires 9/28.</p>
+      <p>Value Service brakes are on the board the same month. Pads, and the people who already know the VIN. Expires 9/28.</p>
+      <p><a class="cta" href="https://bmwofjackson.net/service">Book service</a></p>
+    </section>
+
+    <footer class="end">
+      Jackson News · Issue 01 · September 2026<br />
+      <a href="https://bmwofjackson.net">BMW of Jackson</a> · 1685 High St
+    </footer>
+  </article>
+</body>
+</html>
