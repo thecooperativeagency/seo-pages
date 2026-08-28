@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,650;1,6..72,400&family=Oswald:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f6f3ec;
       --paper: #fffdf8;
       --ink: #141414;
       --muted: #5c574e;
@@ -56,17 +55,8 @@
       margin: 12px 0 0;
     }
     .hero { margin-top: 14px; }
-    .hero img {
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: 50% 55%;
-    }
-    .strip {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 8px;
-      margin-top: 8px;
-    }
+    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 55%; }
+    .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
     .strip img { aspect-ratio: 1; object-fit: cover; }
     .cover-meta {
       display: grid;
@@ -118,7 +108,7 @@
       margin: 48px 0 8px;
       font-family: Newsreader, Georgia, serif;
       font-size: clamp(1.6rem, 3vw, 2rem);
-      line-height: 1.25;
+      line-height: 1.3;
       font-weight: 400;
     }
     .sec { margin-top: 56px; }
@@ -139,15 +129,17 @@
       margin: 0 0 16px;
     }
     p { margin: 0 0 14px; font-size: 17px; line-height: 1.65; color: #1c1c1c; }
-    .shot { margin: 0 0 12px; }
+    .shot { margin: 0 0 10px; }
     .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
     .cap {
       font-family: Oswald, sans-serif;
       font-size: 10px;
       letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--muted);
-      margin: 8px 0 0;
+      margin: 8px 0 14px;
     }
     .credit { font-size: 13px; color: var(--muted); }
     .credit a { text-decoration: underline; text-underline-offset: 3px; }
@@ -183,9 +175,9 @@
     .end a { color: var(--ink); }
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
-      .cover-meta, .strip { grid-template-columns: 1fr; }
+      .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
       .hero img { aspect-ratio: 3 / 4; }
-      .strip img { aspect-ratio: 16 / 10; }
+      .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
   </style>
 </head>
@@ -201,9 +193,9 @@
       <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-cover.jpg" alt="Audi RS 6 Avant" />
     </div>
     <div class="strip">
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-avant-spy.jpg" alt="Next RS6 Avant prototype" />
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-speedmaster-38.jpg" alt="Omega Speedmaster 38 mm" />
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-august-2026-specials/cards/q3-showroom-1x1.jpg" alt="Audi Q3 at Audi Baton Rouge" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-spy-00001.jpg" alt="Next RS6 Avant prototype" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-plate-2.jpg" alt="A plate at Cocha" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/farm-fete-1.jpg" alt="Farm Fête at Main Street Market" />
     </div>
 
     <div class="cover-meta">
@@ -216,10 +208,10 @@
       <div class="inside">
         <p class="label">Inside</p>
         <ul>
-          <li>The next RS6, still a wagon you can put a bag in</li>
+          <li>The next RS6, still a wagon</li>
           <li>Cocha, then Farm Fête</li>
-          <li>A Speedmaster you forget until someone asks</li>
-          <li>The Q3, because that is what the lot is leading with</li>
+          <li>Omega Speedmaster 38</li>
+          <li>The Q3 on Airline Hwy</li>
         </ul>
       </div>
     </div>
@@ -232,42 +224,64 @@
       <a href="#lot">On the Lot</a>
     </nav>
 
-    <p class="open">September still runs hot. The next RS6 is already in the Alps. Farm Fête is the 24th. This letter is for the jacket, not the inbox.</p>
+    <p class="open">September still runs hot. The next RS6 is already in the Alps. Farm Fête is the 24th.</p>
 
     <section class="sec" id="road">
       <p class="kicker">On the Road</p>
       <div class="shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-avant-spy.jpg" alt="Next-generation Audi RS6 Avant prototype in the Austrian Alps" />
-        <p class="cap">Next RS6 Avant · Austrian Alps · August 2026</p>
       </div>
-      <h2>The honest one is still a wagon.</h2>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-spy-00007.jpg" alt="RS6 Avant prototype, rear three-quarter" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-spy-00012.jpg" alt="RS6 Avant prototype, side" />
+      </div>
+      <p class="cap">Next RS6 Avant · Austrian Alps · August 2026 · Carscoops / SH Proshots</p>
+      <h2>Next RS6. Still a wagon.</h2>
       <p>The next RS6 Avant is back on the road after a May barrier at the Nürburgring. Carscoops caught it in the Austrian Alps on 12 August: yellow hybrid labels on the hood, doors, and trunk, 20-spoke wheels under swollen fenders.</p>
       <p>The labels prove hybrid. They do not prove cylinder count. The rumor mill will argue V8 against V6; both stories put output around 740 hp. Spring 2027. After fifteen years of wagon-only, a fastback sedan comes with it.</p>
-      <p>Until then, the point is the same. The Audi you actually want to live with still has a roof you can load.</p>
-      <p class="credit">Photos: Carscoops / SH Proshots. <a href="https://www.carscoops.com/2026/08/audi-rs6-avant-scoop/">The scoop</a></p>
+      <p class="credit"><a href="https://www.carscoops.com/2026/08/audi-rs6-avant-scoop/">Carscoops scoop</a></p>
     </section>
 
     <section class="sec" id="table">
       <p class="kicker">On the Table</p>
-      <h2>Cocha. Not because it is new.</h2>
-      <p>445 N. 6th, downtown. Chef Saskia Spanhoff. Harvest is the point of the room this month, and Cocha is on the Farm Fête vendor list. The menu already reads like that night: local produce, a light hand, international without trying to be Houston. Patio if the heat breaks. Closed Tuesdays.</p>
-      <p>Order the Spanish octopus with chorizo Bilbao and white-bean puree. Lamb loin with blackberry Shiraz if you want a second plate. Cachapa if you are sharing. Skip the dry-aged strip unless you came for steak. You did not.</p>
-      <p>Two people. No laptops. Before Farm Fête, or instead of it.</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-hero.jpg" alt="Cocha, downtown Baton Rouge" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-room.jpg" alt="Inside Cocha" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-plate.jpg" alt="A plate at Cocha" />
+      </div>
+      <p class="cap">Cocha · 445 N. 6th · Photos: Cocha</p>
+      <h2>Cocha.</h2>
+      <p>Downtown. Chef Saskia Spanhoff. Harvest is the point of the room this month, and Cocha is on the Farm Fête vendor list. Patio if the heat breaks. Closed Tuesdays.</p>
+      <p>Spanish octopus with chorizo Bilbao and white-bean puree. Lamb loin with blackberry Shiraz if you want a second plate. Cachapa if you are sharing.</p>
       <p><a class="cta" href="https://resy.com/cities/baton-rouge-la/venues/cocha">Resy</a></p>
     </section>
 
     <section class="sec" id="town">
       <p class="kicker">On the Town</p>
-      <h2>Farm Fête, the 24th.</h2>
-      <p>Thursday, 24 September, 6–9 p.m., Main Street Market. BREADA’s night for the Red Stick Farmers Market: local chefs, farm food, cocktails, two stages, dancing. Dressy casual. Early tickets $95, then $125. Cocha is cooking it.</p>
-      <p>This is the jacket-on night that is not a concert. Jason Carter is at the Manship the same evening. Pick one.</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/farm-fete-1.jpg" alt="Farm Fête at Main Street Market" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/farm-fete-2.jpg" alt="Farm Fête, Main Street Market" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/farm-fete-3.jpg" alt="Farm Fête" />
+      </div>
+      <p class="cap">Farm Fête · Main Street Market · Photos: Cathy Smart / BREADA, 2025</p>
+      <h2>Farm Fête, September 24.</h2>
+      <p>Thursday, 6–9 p.m., Main Street Market. BREADA’s night for the Red Stick Farmers Market: local chefs, farm food, cocktails, two stages, dancing. Dressy casual. Early tickets $95, then $125. Cocha is cooking it.</p>
+      <p>Jason Carter is at the Manship the same evening.</p>
       <p><a class="cta" href="https://qtego.us/l/farmfete/tickets/event-tickets">Tickets</a></p>
 
-      <p class="kicker" style="margin-top:32px">September</p>
+      <p class="kicker" style="margin-top:36px">September</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/lasm-rodrigue.jpg" alt="Reflections: The Art of George Rodrigue at LASM" />
+        <p class="cap">LASM · Reflections: The Art of George Rodrigue</p>
+      </div>
       <ul class="cal">
         <li>
           <strong>Sun 6 · First Free Sunday</strong>
-          Walk <em>Reflections: The Art of George Rodrigue</em> at LASM while it is still new. Through 24 January.
+          <em>Reflections: The Art of George Rodrigue</em> at LASM. Through 24 January.
           <a href="https://www.lasm.org/bluedog/">Exhibition</a>
         </li>
         <li>
@@ -277,17 +291,17 @@
         </li>
         <li>
           <strong>Sun 13 · Concert Kitchen Live</strong>
-          Chef Kevin Belton and John Papa Gros, Manship, 2 p.m. A plate before you leave. From $35.
+          Chef Kevin Belton and John Papa Gros, Manship, 2 p.m. From $35.
           <a href="https://manshiptheatre.org/comingsoon/concert-kitchen-live">Show</a>
         </li>
         <li>
           <strong>Wed 16 · BoDeans</strong>
-          Manship, 7:30. Forty years of <em>Love &amp; Hope &amp; Sex &amp; Dreams</em>. The seated night if Farm Fête is not the speed.
+          Manship, 7:30. Forty years of <em>Love &amp; Hope &amp; Sex &amp; Dreams</em>.
           <a href="https://manshiptheatre.org/comingsoon/bodeans">Show</a>
         </li>
         <li>
           <strong>Sun 20 · The Wild Pour</strong>
-          BREC’s Baton Rouge Zoo, 2:30–5:30. 21+. Beer, wine, spirits, the zoo after hours.
+          BREC’s Baton Rouge Zoo, 2:30–5:30. 21+.
           <a href="https://brzoobrew.ticketbud.com/the-wild-pour-2026">Tickets</a>
         </li>
       </ul>
@@ -296,24 +310,31 @@
     <section class="sec" id="wrist">
       <p class="kicker">On the Wrist</p>
       <div class="shot">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-speedmaster-38.jpg" alt="Omega Speedmaster 38 mm, black no-date" />
-        <p class="cap">Omega Speedmaster 38 mm · ref. 324.30.38.50.01.002</p>
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-hero.jpg" alt="Omega Speedmaster 38 mm" />
       </div>
-      <h2>The piece you forget until someone asks.</h2>
-      <p>You do not need another smartwatch. Omega’s new Speedmaster 38 mm, black no-date. Moonwatch face, smaller case, $6,500. Still 14.75 mm thick. Oval subdials are gone. Ignore the diamond bezels.</p>
-      <p class="credit">Hodinkee, 25 August 2026. Photo: Hodinkee / Omega. <a href="https://www.hodinkee.com/articles/a-new-generation-of-the-omega-speedmaster-38-mm">The piece</a></p>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-speedmaster-38.jpg" alt="Omega Speedmaster 38 mm, black no-date" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-dial.jpg" alt="Speedmaster 38 mm dial" />
+      </div>
+      <p class="cap">Omega Speedmaster 38 mm · ref. 324.30.38.50.01.002 · Hodinkee / Omega</p>
+      <h2>Speedmaster 38.</h2>
+      <p>Omega’s new Speedmaster 38 mm, black no-date. Moonwatch face, smaller case, $6,500. Still 14.75 mm thick. Oval subdials are gone.</p>
+      <p class="credit">Hodinkee, 25 August 2026. <a href="https://www.hodinkee.com/articles/a-new-generation-of-the-omega-speedmaster-38-mm">The piece</a></p>
     </section>
 
     <section class="sec" id="lot">
       <p class="kicker">On the Lot</p>
       <div class="shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-august-2026-specials/cards/q3-showroom-1x1.jpg" alt="All-new Audi Q3 at Audi Baton Rouge" />
-        <p class="cap">Q3 · Audi Baton Rouge</p>
       </div>
-      <h2>The page leads with the Q3.</h2>
-      <p>All-new 2026. Thirteen in stock. $2,000 off. That is the lead because that is what the lot is leading with, not because it is the loudest car in the building.</p>
-      <p>Come drive it. If September is when you actually book the shop: oil and filter, $199.</p>
-      <p>Aside, not the lead: there is an S3 on the same page if you want the one that makes a point.</p>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-august-2026-specials/cards/q3-1x1.jpg" alt="Audi Q3" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-august-2026-specials/cards/s3-yellow-bridge-1x1.jpg" alt="Audi S3" />
+      </div>
+      <p class="cap">Q3 · Audi Baton Rouge. S3, same page, not the lead.</p>
+      <h2>The Q3. $2,000 off.</h2>
+      <p>All-new 2026. Thirteen in stock. That is first on the specials page this week.</p>
+      <p>Come drive it. Oil and filter is $199 if you are booking the shop.</p>
       <p>
         <a class="cta" href="https://audibatonrouge.com/all-new-audi-q3">The Q3</a>
         &nbsp;&nbsp;
