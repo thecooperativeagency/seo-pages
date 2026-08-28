@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harris News | September 2026 | Brian Harris BMW</title>
+  <link rel="stylesheet" href="https://thecooperativeagency.github.io/fonts/bmw.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,650;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #5c574e;
+      --line: rgba(20,20,20,.14);
+      --blue: #0A3A6B;
+      --head: BMWTypeNext, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    body {
+      font-family: Newsreader, Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; width: 100%; }
+    .sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 32px 32px 72px;
+    }
+    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .mast h1 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: var(--blue);
+      font-size: clamp(4.2rem, 15vw, 7.4rem);
+      line-height: .82;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .mast .news {
+      font-family: var(--head);
+      font-weight: 700;
+      letter-spacing: .46em;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 10px 0 0;
+    }
+    .mast .sub {
+      font-family: var(--head);
+      letter-spacing: .22em;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin: 12px 0 0;
+    }
+    .hero { margin-top: 14px; }
+    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 78%; }
+    .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .strip img { aspect-ratio: 1; object-fit: cover; }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 28px;
+      margin-top: 18px;
+    }
+    .issue-box {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .inside .label {
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin: 0 0 8px;
+    }
+    .inside ul { margin: 0; padding: 0; list-style: none; }
+    .inside li {
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .inside li:first-child { border-top: 0; padding-top: 0; }
+    .toc {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 28px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .toc a {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .open {
+      margin: 48px 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .sec { margin-top: 64px; }
+    .kicker {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin: 0 0 10px;
+    }
+    h2 {
+      font-family: var(--head);
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    h3 {
+      font-family: var(--head);
+      font-size: 1.55rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 8px 0 12px;
+    }
+    p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #1c1c1c; }
+    .shot { margin: 0 0 10px; }
+    .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .shot.product img { aspect-ratio: 4 / 3; object-fit: contain; background: #111; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    .cap {
+      font-family: var(--head);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 8px 0 18px;
+    }
+    .credit { font-size: 13px; color: var(--muted); }
+    .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .cal li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cal strong { font-family: var(--head); letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .cal a { text-decoration: underline; text-underline-offset: 3px; }
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue);
+      padding-bottom: 2px;
+    }
+    .lot-car { margin-top: 40px; }
+    .end {
+      margin-top: 56px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .end a { color: var(--ink); }
+    @media (max-width: 720px) {
+      .sheet { padding: 18px 16px 56px; }
+      .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
+      .hero img { aspect-ratio: 3 / 4; }
+      .strip img, .pair img { aspect-ratio: 16 / 10; }
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet">
+    <header class="mast">
+      <h1>Harris</h1>
+      <p class="news">News</p>
+      <p class="sub">Brian Harris BMW &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
+    </header>
+
+    <div class="hero">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/x5-bocage.jpg" alt="BMW X5 on the lot at Brian Harris BMW" />
+    </div>
+    <div class="strip">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/i3-touring-spy.jpg" alt="i3 Touring prototype" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/cocha-plate-2.jpg" alt="A plate at Cocha" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/farm-fete-1.jpg" alt="Farm Fête at Main Street Market" />
+    </div>
+
+    <div class="cover-meta">
+      <div class="issue-box">
+        Harris News<br />
+        Issue 01<br />
+        September 2026<br />
+        Brian Harris BMW
+      </div>
+      <div class="inside">
+        <p class="label">Inside</p>
+        <ul>
+          <li>The i3 Touring</li>
+          <li>Cocha, then Farm Fête</li>
+          <li>Tudor Black Bay 58</li>
+          <li>X5, X3, X7</li>
+          <li>Oil, 10%, brakes</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="In this issue">
+      <a href="#road">On the Road</a>
+      <a href="#table">On the Table</a>
+      <a href="#town">On the Town</a>
+      <a href="#wrist">On the Wrist</a>
+      <a href="#lot">On the Lot</a>
+      <a href="#workbench">On the Workbench</a>
+    </nav>
+
+    <p class="open">September in Baton Rouge is a negotiation. The heat still owns the afternoon, but the evenings start giving ground — a few honest minutes of dark on the back end of every drive. Here’s what’s news.</p>
+
+    <section class="sec" id="road">
+      <p class="kicker">On the Road</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/i3-touring-spy.jpg" alt="BMW i3 Touring prototype at the Nürburgring" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/i3-spy-8.jpg" alt="i3 Touring prototype, rear" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/i3-spy-15.jpg" alt="i3 Touring prototype, side" />
+      </div>
+      <p class="cap">i3 Touring prototype · Nürburgring · Carscoops / Baldauf</p>
+      <h2>The wagon nobody was supposed to build</h2>
+      <p>Somewhere at the Nürburgring last month, a silver estate went out for laps under a thin coat of camouflage, and the shutter caught it. Carscoops ran the photos on 19 August. Credit to them and to Baldauf.</p>
+      <p>What he caught is the i3 Touring — the long-roof version of BMW’s Neue Klasse i3 sedan. A driver’s-shape electric wagon, which is not a phrase the market has heard in a long time. The prototype doing the work is the dual-motor 50 xDrive: 463 horsepower, a 108.7 kWh battery, roughly 550 miles on the European cycle, and 400 kW charging that turns a stop into a coffee. Munich already started building the sedan this month.</p>
+      <p>Two corrections before anyone gets ahead of it. It is not a hybrid. And a car turning laps in Germany is proof that engineers are busy, not that a Baton Rouge delivery date exists. Nobody has promised us this car. A long-roof that charges and actually corners is the argument against the idea that every good answer has to be a taller SUV.</p>
+      <p class="credit">Photos: Carscoops / Baldauf · <a href="https://www.carscoops.com/2026/08/bmw-i3-touring-nurburgring/">The scoop</a></p>
+    </section>
+
+    <section class="sec" id="table">
+      <p class="kicker">On the Table</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/cocha-hero.jpg" alt="Cocha, downtown Baton Rouge" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/cocha-room.jpg" alt="Inside Cocha" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/cocha-plate.jpg" alt="A plate at Cocha" />
+      </div>
+      <p class="cap">Cocha · 445 N. 6th · Photos: Cocha</p>
+      <h2>Six blocks of downtown, cooking like it’s harvest</h2>
+      <p>Cocha sits at 445 North Sixth, downtown, in a room that never oversells itself. Low noise, real light, tables close enough that you talk to the person across from you and nobody else. Two people. No laptops.</p>
+      <p>Go this month because the city is finally cooking the way the room already thinks. Cocha is on the vendor list for Farm Fête, and the menu has read like that night all along — local produce, a light hand, international without straining to prove it.</p>
+      <p>Order the Spanish octopus with chorizo Bilbao and a white-bean purée. Then the lamb loin with blackberry Shiraz. If you’re sharing, the cachapa — a Venezuelan corn cake, set down with no footnote. Skip the dry-aged strip. Not because it’s bad. Because you didn’t come here to eat a steak you could get anywhere.</p>
+      <p>Closed Tuesdays. Patio if the heat breaks. Book it before Farm Fête, or instead of it.</p>
+      <p><a class="cta" href="https://resy.com/cities/baton-rouge-la/venues/cocha">Resy</a></p>
+    </section>
+
+    <section class="sec" id="town">
+      <p class="kicker">On the Town</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/farm-fete-1.jpg" alt="Farm Fête at Main Street Market" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/farm-fete-2.jpg" alt="Farm Fête, Main Street Market" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/farm-fete-3.jpg" alt="Farm Fête" />
+      </div>
+      <p class="cap">Farm Fête · Main Street Market · Photos: Cathy Smart / BREADA, 2025</p>
+      <h2>Farm Fête, September 24</h2>
+      <p>One Thursday every September, the people who run the Red Stick Farmers Market stop running a market and throw a party instead. Chefs cooking farm food at outdoor scale, cocktails, two stages, dancing. Main Street Market, six to nine, dressy casual. Early tickets $95, then $125.</p>
+      <p>Cocha is on the line this year — the same kitchen, at a scale dinner service never asks of them. Watching a good kitchen cook in the open is half the ticket. Jason Carter is at Manship the same night. The city has options. This is the one to buy first.</p>
+      <p><a class="cta" href="https://qtego.us/l/farmfete/tickets/event-tickets">Tickets</a></p>
+
+      <p class="kicker" style="margin-top:36px">September</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/lasm-rodrigue.jpg" alt="Reflections: The Art of George Rodrigue at LASM" />
+        <p class="cap">LASM · Reflections: The Art of George Rodrigue</p>
+      </div>
+      <ul class="cal">
+        <li>
+          <strong>Sun 6 · First Free Sunday</strong>
+          <em>Reflections: The Art of George Rodrigue</em> at LASM. Through January 24, 2027. No admission that Sunday.
+          <a href="https://www.lasm.org/bluedog/">Exhibition</a>
+        </li>
+        <li>
+          <strong>Tue 8 · Band of Heathens</strong>
+          Manship, 7:30. From $72.24. Austin roots-rock, twenty years in.
+          <a href="https://manshiptheatre.org/comingsoon/bandofheathens">Show</a>
+        </li>
+        <li>
+          <strong>Sun 13 · Concert Kitchen Live</strong>
+          Chef Kevin Belton and John Papa Gros, Manship, 2 p.m. From $35.
+          <a href="https://manshiptheatre.org/comingsoon/concert-kitchen-live">Show</a>
+        </li>
+        <li>
+          <strong>Wed 16 · BoDeans</strong>
+          Manship, 7:30. The catalog, midweek.
+          <a href="https://manshiptheatre.org/comingsoon/bodeans">Show</a>
+        </li>
+        <li>
+          <strong>Sun 20 · The Wild Pour</strong>
+          BREC’s Baton Rouge Zoo, 2:30–5:30. 21+. Wine and cocktails on zoo grounds.
+          <a href="https://brzoobrew.ticketbud.com/the-wild-pour-2026">Tickets</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="sec" id="wrist">
+      <p class="kicker">On the Wrist</p>
+      <div class="shot product">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/tudor-bb58-hero.jpg" alt="Tudor Black Bay 58, 2026" />
+      </div>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/tudor-bb58-wrist.jpg" alt="Tudor Black Bay 58 on five-link bracelet" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/tudor-bb58-dial.jpg" alt="Tudor Black Bay 58 dial" />
+      </div>
+      <p class="cap">Black Bay 58 · ref. 7939A1A0NU · Hodinkee / Tudor</p>
+      <h2>Tudor fixed the one thing</h2>
+      <p>The Black Bay 58 was already the smart dive watch — 39 mm, the right size. This spring at Watches &amp; Wonders, Tudor updated it. The number that matters: 11.7 mm thick, down from 11.9. Still 200 meters. Still a proper unidirectional 60-minute bezel. Black matte dial, gently domed, text trimmed to two lines, hands drawn slimmer. Grade A Super-LumiNova.</p>
+      <p>Under the caseback: Caliber MT5400-U, silicon hairspring, 65-hour reserve, COSC and METAS. Master Chronometer. Zero to plus-five seconds a day. The one to want is the black dial on the new five-link bracelet with the T-fit clasp: $5,350. Three-link $5,225, rubber $4,975. Available now. Not a lottery.</p>
+      <p class="credit"><a href="https://www.hodinkee.com/articles/tudor-updates-the-black-bay-58-now-includes-metas-certification">Hodinkee, Tim Jeffreys, 14 April 2026</a></p>
+    </section>
+
+    <section class="sec" id="lot">
+      <p class="kicker">On the Lot</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/x5-bocage.jpg" alt="BMW X5 at Brian Harris BMW" />
+      </div>
+      <p class="cap">X5 · Brian Harris BMW</p>
+      <h2>Start with the X5</h2>
+      <p>MY26 X5 xDrive40i. 0.9% APR for 60 months on select models, plus a $1,000 APR credit. Lease from $869 a month for 39 months — $809 with loyalty.</p>
+      <p>
+        <a class="cta" href="https://brianharrisbmw.com/cars/bmw-x5">Shop X5</a>
+        &nbsp;&nbsp;
+        <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2">Shop specials</a>
+      </p>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/x3-row.jpg" alt="BMW X3 at Brian Harris BMW" />
+        </div>
+        <p class="cap">X3 · Brian Harris BMW</p>
+        <h3>The X3</h3>
+        <p>MY26 X3 30 xDrive. Right-sized, athletic. Lease from $569 a month for 39 months ($539 with loyalty), or 1.99% APR for 60 months.</p>
+        <p>
+          <a class="cta" href="https://brianharrisbmw.com/cars/new-x3">Shop X3</a>
+          &nbsp;&nbsp;
+          <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2">Shop specials</a>
+        </p>
+      </div>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/x7.jpg" alt="BMW X7 at Brian Harris BMW" />
+        </div>
+        <p class="cap">X7 · Brian Harris BMW</p>
+        <h3>The X7</h3>
+        <p>MY27 X7 xDrive40i. Three rows. $1,249 a month on a 15-month lease, or $1,049 for 39 months. 1.99% APR for 60 months if you’re financing.</p>
+        <p>
+          <a class="cta" href="https://brianharrisbmw.com/cars/new-x7">Shop X7</a>
+          &nbsp;&nbsp;
+          <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2">Shop specials</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="sec" id="workbench">
+      <p class="kicker">On the Workbench</p>
+      <h2>Where the miles get honest</h2>
+      <p>BMW Value Service oil change is $119.99 — premium synthetic, factory filter, parts and labor, for Value Service Program models. Expires 9/28.</p>
+      <p>Ten percent off BMW service for the visit that’s more than an oil change. Cannot combine. Excludes Value Service and tires. Expires 9/28.</p>
+      <p>Brake Value Service is on the board the same month. Pricing depends on the car; other models and repairs run higher. The desk gives you the number before anything is touched. Expires 9/28.</p>
+      <p><a class="cta" href="https://brianharrisbmw.com/service">Book service</a></p>
+    </section>
+
+    <footer class="end">
+      Harris News · Issue 01 · September 2026<br />
+      <a href="https://brianharrisbmw.com">Brian Harris BMW</a> · 12336 Airline Hwy
+    </footer>
+  </article>
+</body>
+</html>
