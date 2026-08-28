@@ -4,416 +4,286 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S Line News | Audi Baton Rouge | Issue 01 | September 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Playfair+Display:wght@700;900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #ffffff;
-      --panel: #ffffff;
-      --panel-2: #f7f7f7;
       --text: #111111;
-      --muted: #5f5f5f;
-      --faint: #8a8a8a;
-      --line: rgba(0,0,0,.12);
-      --accent: #bb0a30;
-      --accent-soft: rgba(187,10,48,.10);
-      --max: 1180px;
+      --muted: #5a5a5a;
+      --line: #d8d8d8;
+      --red: #bb0a30;
+      --page: 820px;
     }
-
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+    html, body { margin: 0; padding: 0; background: #efefef; color: var(--text); }
     body {
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
-    a { color: inherit; text-decoration: none; }
-
-    .page { max-width: var(--max); margin: 0 auto; padding: 28px 24px 72px; }
-    .topbar {
-      display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
-      border-bottom: 1px solid var(--line); padding-bottom: 14px;
+    a { color: inherit; }
+    img { display: block; width: 100%; }
+    .sheet {
+      max-width: var(--page);
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 28px 28px 64px;
+    }
+    .mast { padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .mast .news {
+      font-family: Oswald, sans-serif;
+      font-weight: 600;
+      letter-spacing: .46em;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin: 0 0 2px;
+    }
+    .mast h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 900;
+      color: var(--red);
+      font-size: clamp(4.6rem, 18vw, 8.6rem);
+      line-height: .78;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .mast .sub {
+      font-family: Oswald, sans-serif;
+      letter-spacing: .28em;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text);
+      margin: 10px 0 0;
+    }
+    .hero {
+      margin-top: 14px;
+      position: relative;
+    }
+    .hero img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 52% 62%;
+    }
+    .strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .strip img {
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 24px;
+      margin-top: 16px;
+      align-items: start;
+    }
+    .issue-box {
+      font-family: Oswald, sans-serif;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .inside .label {
+      font-family: Oswald, sans-serif;
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 0 0 8px;
+    }
+    .inside ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .inside li {
+      font-size: 14px;
+      line-height: 1.45;
+      padding: 7px 0;
+      border-top: 1px solid var(--line);
+    }
+    .inside li:first-child { border-top: 0; padding-top: 0; }
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 28px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .nav a {
+      font-family: Oswald, sans-serif;
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .nav a:hover { color: var(--text); }
+    .note {
+      margin-top: 42px;
+      padding-top: 8px;
     }
     .kicker {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted);
-    }
-    .kicker::before { content: ""; width: 42px; height: 1px; background: var(--line); display: inline-block; }
-    .toplinks { display: flex; gap: 18px; flex-wrap: wrap; }
-    .toplinks a {
-      font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
-    }
-    .toplinks a:hover { color: var(--text); }
-
-    .hero {
-      margin-top: 18px; position: relative; overflow: hidden; border: 1px solid var(--line);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.92)),
-        radial-gradient(circle at 80% 10%, rgba(187,10,48,.10), transparent 32%),
-        linear-gradient(135deg, #fff 0%, #f7f7f7 55%, #ffffff 100%);
-      min-height: 620px;
-      display: grid; align-items: end;
-    }
-    .hero::before {
-      content: ""; position: absolute; inset: 0;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.15), rgba(255,255,255,.58)),
-        url('https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-baton-rouge-drone-hero.jpg') center/cover no-repeat;
-      opacity: .32;
-      mix-blend-mode: multiply;
-    }
-    .hero-inner { position: relative; z-index: 1; padding: 48px; }
-    .masthead { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 22px; }
-    .brand-lock { display: grid; gap: 8px; }
-    .brand-lock .brand { font-size: 18px; letter-spacing: .26em; text-transform: uppercase; color: var(--text); }
-    .brand-lock .issue { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
-    .brand-lock .title {
-      font-size: clamp(3.2rem, 8vw, 7rem);
-      line-height: .88; letter-spacing: -0.06em; font-weight: 700; margin: 0;
+      font-family: Oswald, sans-serif;
+      font-size: 11px;
+      letter-spacing: .24em;
       text-transform: uppercase;
+      color: var(--red);
+      margin: 0 0 10px;
     }
-    .brand-lock .subtitle {
-      max-width: 760px; color: #2d2d2d; font-size: 18px; line-height: 1.7; margin-top: 18px;
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      margin: 0 0 16px;
+      font-weight: 700;
     }
-    .hero-card {
-      margin-left: auto; max-width: 340px; background: rgba(255,255,255,.92); backdrop-filter: blur(14px);
-      border: 1px solid var(--line); padding: 20px 22px;
+    .lede {
+      font-size: 20px;
+      line-height: 1.45;
+      margin: 0 0 16px;
     }
-    .hero-card .label { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    .hero-card .copy { font-size: 15px; line-height: 1.75; color: #1d1d1d; margin: 0; }
-
-    .grid { display: grid; gap: 22px; margin-top: 22px; }
-    .grid.two { grid-template-columns: 1.2fr .8fr; }
-    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-    .panel { background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.95)); border: 1px solid var(--line); }
-    .panel-pad { padding: 28px; }
-
-    .section-title {
-      font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
+    p { margin: 0 0 14px; font-size: 16px; line-height: 1.7; color: #222; }
+    .feature { margin-top: 48px; }
+    .feature .shot {
+      margin: 0 0 14px;
     }
-    .section-title.gray { color: var(--muted); }
-    h2 { font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem); line-height: 1.02; margin: 0 0 12px; letter-spacing: -0.04em; }
-    h3 { font-size: 22px; line-height: 1.12; margin: 0 0 12px; letter-spacing: -0.03em; }
-    p { margin: 0; }
-    .lede { color: #222222; font-size: 18px; line-height: 1.8; }
-    .body { color: #4a4a4a; font-size: 15px; line-height: 1.85; }
-    .muted { color: var(--muted); }
-    .small { font-size: 13px; line-height: 1.75; }
-
-    .meta-row {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 22px;
+    .feature .shot img {
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
     }
-    .meta {
-      padding: 16px 18px; background: rgba(255,255,255,.92); border: 1px solid var(--line);
-      display: grid; gap: 6px;
+    .cap {
+      font-family: Oswald, sans-serif;
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 8px 0 0;
     }
-    .meta .k { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
-    .meta .v { font-size: 16px; line-height: 1.5; color: var(--text); }
-
-    .story-list { display: grid; gap: 18px; }
-    .story {
-      border-top: 1px solid var(--line); padding-top: 18px;
+    .cta {
+      display: inline-block;
+      margin-top: 6px;
+      font-family: Oswald, sans-serif;
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid var(--red);
+      padding-bottom: 2px;
     }
-    .story:first-child { border-top: 0; padding-top: 0; }
-    .story .eyebrow { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
-    .story .tagline { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
-
-    .brand-band {
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 22px;
+    .end {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
     }
-    .brand-card {
-      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,247,247,.98));
-      border: 1px solid var(--line); padding: 24px 22px; min-height: 232px;
-    }
-    .brand-card .name { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-    .brand-card h3 { margin-bottom: 10px; }
-    .brand-card ul { margin: 14px 0 0; padding-left: 18px; color: #404040; line-height: 1.8; }
-    .brand-card li { margin-bottom: 6px; }
-
-    .article {
-      display: grid; grid-template-columns: 1fr 1.05fr; gap: 22px; align-items: start;
-      margin-top: 22px;
-    }
-    .article.reverse { grid-template-columns: 1.05fr 1fr; }
-    .article .visual {
-      min-height: 420px; border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.38)), var(--img) center/cover no-repeat;
-      position: relative; overflow: hidden;
-    }
-    .article .visual .cap {
-      position: absolute; left: 16px; bottom: 16px; right: 16px;
-      padding: 14px 16px; background: rgba(255,255,255,.90); border: 1px solid var(--line); backdrop-filter: blur(12px);
-      font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent);
-    }
-    .article .text { padding: 8px 0; }
-    .article .text .headline { font-size: clamp(2rem, 2vw + 1rem, 2.8rem); margin-bottom: 14px; }
-    .article .text .deck { color: #222222; font-size: 18px; line-height: 1.75; margin-bottom: 18px; }
-    .article .text .copy { color: #4a4a4a; font-size: 15px; line-height: 1.9; }
-    .rule { height: 1px; background: var(--line); margin: 22px 0; }
-
-    .navline {
-      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 22px;
-      border-top: 1px solid var(--line); padding-top: 18px;
-    }
-    .navpill {
-      display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px;
-      border: 1px solid var(--line); background: #fff; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
-    }
-    .navpill strong { color: var(--text); font-weight: 600; letter-spacing: .06em; text-transform: none; font-size: 14px; }
-
-    .footer {
-      margin-top: 24px; padding: 24px 0 0; border-top: 1px solid var(--line);
-      display: grid; gap: 10px;
-    }
-    .footer .cta {
-      color: var(--text); font-size: 16px; line-height: 1.7;
-    }
-    .footer .note { color: var(--muted); font-size: 13px; line-height: 1.75; max-width: 900px; }
-
-    @media (max-width: 980px) {
-      .hero-inner { padding: 28px; }
-      .grid.two, .article, .article.reverse, .brand-band, .meta-row, .grid.three { grid-template-columns: 1fr; }
-      .hero { min-height: auto; }
-      .hero-card { max-width: none; }
-      .article .visual { min-height: 320px; }
-      .topbar { align-items: flex-start; }
+    .end a { color: var(--text); }
+    @media (max-width: 720px) {
+      .sheet { padding: 18px 16px 48px; }
+      .cover-meta, .strip { grid-template-columns: 1fr; }
+      .hero img { aspect-ratio: 3 / 4; }
+      .strip img { aspect-ratio: 16 / 10; }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <div class="topbar">
-      <div class="kicker">Audi Baton Rouge • September 2026 • Issue 01</div>
-      <nav class="toplinks" aria-label="Issue navigation">
-        <a href="#editor-note">Editor’s note</a>
-        <a href="#q5">Q5</a>
-        <a href="#q7">Q7</a>
-        <a href="#service">Service</a>
-        <a href="#archive">Archive</a>
-      </nav>
+  <article class="sheet">
+    <header class="mast">
+      <p class="news">News</p>
+      <h1>S Line</h1>
+      <p class="sub">Audi Baton Rouge &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
+    </header>
+
+    <div class="hero">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-models/overview/rs6-avant/rs6-avant-01.jpg" alt="Audi RS 6 Avant" />
+    </div>
+    <div class="strip">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/q5-new/audi-q5-2025-interior-cockpit-black.jpg" alt="Audi Q5 cockpit" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/q5-new/audi-q5-2025-front-grille-s-line-black-optic.jpg" alt="Audi rings and S line grille" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/q5-new/audi-q5-2025-wheel-closeup-black-machined.jpg" alt="Audi wheel detail" />
     </div>
 
-    <section class="hero panel">
-      <div class="hero-inner">
-        <div class="masthead">
-          <div class="brand-lock">
-            <div class="brand">S Line News</div>
-            <div class="issue">Audi Baton Rouge • September Edition</div>
-            <h1 class="title">Built for Baton Rouge.</h1>
-            <div class="subtitle">
-              A clean Audi issue for Baton Rouge’s September rhythm — late heat, school traffic,
-              football weekends, and the return to routines that call for something composed and sharp.
-            </div>
-          </div>
-          <aside class="hero-card">
-            <div class="label">Director note</div>
-            <p class="copy">
-              Make Audi feel like a local premium magazine: clean, sexy, precise, and worth opening.
-              The issue should look like it belongs in Baton Rouge, but feel like a serious editorial object.
-            </p>
-          </aside>
-        </div>
-
-        <div class="meta-row">
-          <div class="meta">
-            <div class="k">Season</div>
-            <div class="v">September reset, back-to-routine energy, football weekends, service prep.</div>
-          </div>
-          <div class="meta">
-            <div class="k">Voice</div>
-            <div class="v">Precise, modern, restrained, premium, and a little sexy.</div>
-          </div>
-          <div class="meta">
-            <div class="k">Distribution</div>
-            <div class="v">Issue page + archive hub + social teaser posts that point back to the hub.</div>
-          </div>
-        </div>
+    <div class="cover-meta">
+      <div class="issue-box">
+        S Line News<br />
+        Issue 01<br />
+        September 2026<br />
+        Audi Baton Rouge
       </div>
-    </section>
-
-    <section class="grid two" id="editor-note">
-      <div class="panel panel-pad">
-        <div class="section-title">Editor’s note</div>
-        <h2>September feels like a reset, not a slowdown.</h2>
-        <p class="lede">
-          Baton Rouge is still hot, still busy, and still moving — but September changes the pace.
-          School is back. Football is back. Weekends carry a little more weight.
-          That makes this the right moment for an Audi publication that feels sharper, calmer, and more intentional.
-        </p>
-        <div class="rule"></div>
-        <p class="body">
-          Audi should feel like it understands the city’s rhythm: the commute, the heat, the game-day schedule,
-          the family calendar, and the need for something polished that still works every day.
-          That is the editorial lane for this issue.
-        </p>
-      </div>
-      <div class="panel panel-pad">
-        <div class="section-title">Issue structure</div>
-        <div class="story-list">
-          <div class="story">
-            <div class="eyebrow">Lead story</div>
-            <h3>September, sharpened.</h3>
-            <div class="tagline">The opener should feel like a headline, not a note about the system.</div>
-          </div>
-          <div class="story">
-            <div class="eyebrow">Feature</div>
-            <h3>The Q5 for city weeks and game-day weekends.</h3>
-            <div class="tagline">Practical luxury for the pace Baton Rouge actually runs on.</div>
-          </div>
-          <div class="story">
-            <div class="eyebrow">Feature</div>
-            <h3>The Q7 when the weekend gets bigger.</h3>
-            <div class="tagline">More room, same Audi discipline.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="brand-band">
-      <div class="brand-card">
-        <div class="name">Audi • S Line News</div>
-        <h3>Precision editorial.</h3>
-        <p class="body">This side should feel the cleanest: disciplined layout, strong hierarchy, restrained accent use, and a premium magazine tone that still feels local.</p>
+      <div class="inside">
+        <p class="label">Inside</p>
         <ul>
-          <li>Sharp type hierarchy</li>
-          <li>Wide breathing room</li>
-          <li>Technical but warm copy</li>
-          <li>Premium without fuss</li>
+          <li>The Q5 for city weeks and game-day weekends</li>
+          <li>The Q7 when the weekend gets bigger</li>
+          <li>Service, handled like Audi</li>
         </ul>
       </div>
-      <div class="brand-card">
-        <div class="name">BMW • Ultimate Driver News</div>
-        <h3>Art + motion.</h3>
-        <p class="body">This lane can be bolder and more expressive, with more contrast and more visual drama when we get to it.</p>
-        <ul>
-          <li>More attitude</li>
-          <li>Stronger visual rhythm</li>
-          <li>Culture plus performance</li>
-          <li>Energy without clutter</li>
-        </ul>
-      </div>
-      <div class="brand-card">
-        <div class="name">Porsche • Driver’s Cut</div>
-        <h3>Quiet confidence.</h3>
-        <p class="body">This one should stay restrained and expensive, with a simple structure and a serious magazine feel.</p>
-        <ul>
-          <li>Minimal but intentional</li>
-          <li>Photography-led</li>
-          <li>Refined pacing</li>
-          <li>Nothing extra</li>
-        </ul>
-      </div>
+    </div>
+
+    <nav class="nav" aria-label="In this issue">
+      <a href="#note">Editor’s note</a>
+      <a href="#q5">Q5</a>
+      <a href="#q7">Q7</a>
+      <a href="#service">Service</a>
+    </nav>
+
+    <section class="note" id="note">
+      <p class="kicker">Editor’s note</p>
+      <h2>September feels like a reset, not a slowdown.</h2>
+      <p class="lede">Baton Rouge is still hot. School traffic is back. So is Saturday. The week gets tighter and the weekend gets louder.</p>
+      <p>This issue is for that calendar. The Q5 for city weeks and game-day weekends. The Q7 when more people need to go at once. Service before the season stacks up.</p>
     </section>
 
-    <section class="article panel" id="q5" style="--img:url('https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-front-clubhouse.jpg');">
-      <div class="visual">
-        <div class="cap">Feature image cue • Audi Q5 • Baton Rouge</div>
+    <section class="feature" id="q5">
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-front-clubhouse.jpg" alt="Audi Q5 in Baton Rouge" />
+        <p class="cap">Q5 · Baton Rouge</p>
       </div>
-      <div class="text panel-pad">
-        <div class="section-title">Article 01</div>
-        <h2 class="headline">Why the Audi Q5 belongs in September.</h2>
-        <p class="deck">
-          The Q5 is the right kind of local luxury for Baton Rouge right now: sleek enough to feel premium,
-          practical enough for everyday life, and polished enough to feel like a small upgrade every time you get in.
-        </p>
-        <p class="copy">
-          September in Baton Rouge means the calendar gets louder. The commute tightens up, the evenings get busier,
-          and the weekends start orbiting football, family, and movement. The Q5 fits that rhythm because it does not ask you to choose between style and usefulness.
-          It feels composed in traffic, easy to live with, and sharp enough to make a simple errand feel more intentional.
-        </p>
-        <div class="rule"></div>
-        <p class="copy">
-          For this issue, the Q5 should be framed as the everyday premium answer: the Audi that feels equally at home pulling up for dinner,
-          rolling through the city, or lining up for a busy Saturday. That is the kind of local relevance that keeps the publication from feeling generic.
-        </p>
-      </div>
+      <p class="kicker">The city week</p>
+      <h2>The Q5 for city weeks and game-day weekends.</h2>
+      <p>September in Baton Rouge makes the calendar louder. The commute tightens. Evenings fill. Weekends orbit football and family.</p>
+      <p>The Q5 lives in that mix. Sharp enough for dinner. Easy enough for the weekday. Ready for Saturday without making a show of it.</p>
     </section>
 
-    <section class="article reverse panel" id="q7" style="--img:url('https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q7-front-urban.jpg');">
-      <div class="text panel-pad">
-        <div class="section-title">Article 02</div>
-        <h2 class="headline">The Q7 as the weekend reset.</h2>
-        <p class="deck">
-          When the family or the crew needs more room, the Q7 is the cleanest answer. It should read like calm space,
-          not just extra size.
-        </p>
-        <p class="copy">
-          The bigger Audi should not feel bulky or showy in this issue. It should feel like the premium solution for the kinds of weekends Baton Rouge actually has:
-          school drop-offs, evening plans, game-day traffic, last-minute errands, and the run of people who all need to go somewhere at once.
-        </p>
-        <div class="rule"></div>
-        <p class="copy">
-          The editorial angle here is confidence. The Q7 is not trying to be loud. It wins by being composed, spacious, and cleanly designed.
-          That makes it perfect for a September issue where the city is moving fast and the reader wants something that feels more collected than the chaos around it.
-        </p>
+    <section class="feature" id="q7">
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q7-front-urban.jpg" alt="Audi Q7" />
+        <p class="cap">Q7</p>
       </div>
-      <div class="visual">
-        <div class="cap">Feature image cue • Audi Q7 • Baton Rouge</div>
-      </div>
+      <p class="kicker">The bigger weekend</p>
+      <h2>The Q7 when the weekend gets bigger.</h2>
+      <p>Some weekends need more room. School drop-offs, evening plans, game-day traffic, the whole crew in at once.</p>
+      <p>The Q7 takes that without getting bulky or loud. Space, a quieter cabin, a cleaner line through a busy Saturday.</p>
     </section>
 
-    <section class="article panel" id="service" style="--img:url('https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-pair-flag.jpg');">
-      <div class="visual">
-        <div class="cap">Feature image cue • service / lifestyle moment</div>
+    <section class="feature" id="service">
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/audi-loyalty-v2/audi-q5-pair-flag.jpg" alt="Audi Baton Rouge" />
+        <p class="cap">Audi Baton Rouge</p>
       </div>
-      <div class="text panel-pad">
-        <div class="section-title">Article 03</div>
-        <h2 class="headline">Service season, handled like Audi.</h2>
-        <p class="deck">
-          September is the right time to frame service as part of the premium experience — not a chore, not an afterthought,
-          but a clean part of keeping the car and the owner ready for what comes next.
-        </p>
-        <p class="copy">
-          A strong Audi publication should remind the reader that care is part of the ownership story. Baton Rouge brings its own version of wear and pace:
-          heat, traffic, long weekends, short notice plans, and the kind of routine that rewards staying ahead of maintenance.
-          This article can anchor the practical side of the issue without losing the editorial tone.
-        </p>
-        <div class="rule"></div>
-        <p class="copy">
-          The service message should feel polished and specific. Keep it short, useful, and visually aligned with the rest of the publication.
-          This is where the issue stays local and real.
-        </p>
-      </div>
+      <p class="kicker">In the shop</p>
+      <h2>Service season, handled like Audi.</h2>
+      <p>Heat, traffic, long weekends. Baton Rouge puts miles on a car in a hurry.</p>
+      <p>September is a good time to get ahead of it. Service here is part of owning the car, not an errand you squeeze in later.</p>
+      <p><a class="cta" href="https://audibatonrouge.com/service-specials">Service at Audi Baton Rouge</a></p>
     </section>
 
-    <section class="grid two">
-      <div class="panel panel-pad">
-        <div class="section-title">Social strategy</div>
-        <h2>One hub link. One story family.</h2>
-        <p class="lede">
-          Social posts should not act like random promos. They should feel like teasers for the issue and send people back to the live hub or archive.
-        </p>
-        <div class="rule"></div>
-        <p class="body">
-          Use the stable profile link as the default social link. Then use post copy to point people toward the current issue, the archive, or the story that best matches the audience moment.
-          The social version and the issue need to feel like one editorial system.
-        </p>
-      </div>
-      <div class="panel panel-pad" id="archive">
-        <div class="section-title">Archive / nav</div>
-        <h2>Keep the issue alive after publish.</h2>
-        <p class="lede">
-          This issue should sit inside a simple browse system so people can move forward, back, and across the series without friction.
-        </p>
-        <div class="rule"></div>
-        <div class="navline">
-          <div class="navpill"><span>Prev</span> <strong>Issue 00</strong></div>
-          <div class="navpill"><span>Archive</span> <strong>Browse all issues</strong></div>
-          <div class="navpill"><span>Next</span> <strong>Issue 02</strong></div>
-        </div>
-        <div class="rule"></div>
-        <p class="body">
-          The archive should feel like a premium library, not a dump of old pages. Keep the hub stable, keep the nav obvious, and let the social profile point people into the system.
-        </p>
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="cta">S Line News — September 2026 first issue for Audi Baton Rouge.</div>
-      <div class="note">
-        This is intentionally built as a premium local Audi publication: Baton Rouge-specific, editorial, clean, and sexy without getting cheesy.
-        It is ready for internal review and morning show-and-tell.
-      </div>
-    </section>
-  </main>
+    <footer class="end">
+      S Line News · Issue 01 · September 2026<br />
+      <a href="https://audibatonrouge.com">Audi Baton Rouge</a>
+    </footer>
+  </article>
 </body>
 </html>
