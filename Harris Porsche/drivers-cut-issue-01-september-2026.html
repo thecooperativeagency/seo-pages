@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Driver’s Cut | September 2026 | Harris Porsche</title>
+  <link rel="stylesheet" href="https://cdn.ui.porsche.com/porsche-design-system/styles/font-face.7076ba0.css" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,650;0,6..72,700;1,6..72,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #5c574e;
+      --line: rgba(20,20,20,.14);
+      --gold: #C5A028;
+      --head: "Porsche Next", "Arial Narrow", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    body {
+      font-family: Newsreader, Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; width: 100%; }
+    .sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 32px 32px 72px;
+    }
+    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .mast h1 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: var(--gold);
+      font-size: clamp(2.6rem, 10vw, 5.2rem);
+      line-height: .86;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .mast .sub {
+      font-family: var(--head);
+      letter-spacing: .22em;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin: 12px 0 0;
+    }
+    .hero { margin-top: 14px; }
+    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 55%; }
+    .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .strip img { aspect-ratio: 1; object-fit: cover; }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 28px;
+      margin-top: 18px;
+    }
+    .issue-box {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .inside .label {
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 8px;
+    }
+    .inside ul { margin: 0; padding: 0; list-style: none; }
+    .inside li {
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .inside li:first-child { border-top: 0; padding-top: 0; }
+    .toc {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 28px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .toc a {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .open {
+      margin: 48px 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .sec { margin-top: 64px; }
+    .kicker {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 10px;
+    }
+    h2 {
+      font-family: var(--head);
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    h3 {
+      font-family: var(--head);
+      font-size: 1.55rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 8px 0 12px;
+    }
+    p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #1c1c1c; }
+    .shot { margin: 0 0 10px; }
+    .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .shot.product img { aspect-ratio: 4 / 3; object-fit: contain; background: #111; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    .cap {
+      font-family: var(--head);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 8px 0 18px;
+    }
+    .credit { font-size: 13px; color: var(--muted); }
+    .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .cal li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cal strong { font-family: var(--head); letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .cal a { text-decoration: underline; text-underline-offset: 3px; }
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px;
+    }
+    .lot-car { margin-top: 40px; }
+    .end {
+      margin-top: 56px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .end a { color: var(--ink); }
+    @media (max-width: 720px) {
+      .sheet { padding: 18px 16px 56px; }
+      .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
+      .hero img { aspect-ratio: 3 / 4; }
+      .strip img, .pair img { aspect-ratio: 16 / 10; }
+    }
+  </style>
+</head>
+<body>
+  <article class="sheet">
+    <header class="mast">
+      <h1>The Driver’s<br />Cut</h1>
+      <p class="sub">Harris Porsche &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
+    </header>
+
+    <div class="hero">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/cayenne-specials.jpg" alt="Porsche Cayenne on the lot at Harris Porsche" />
+    </div>
+    <div class="strip">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/carrera-s-mt-2.jpg" alt="2027 Porsche 911 Carrera S MT Package" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/elsie-potpie.jpg" alt="Pot pie at Elsie’s Plate &amp; Pie" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/blancpain.jpg" alt="Blancpain Bathyscaphe 70th Anniversary" />
+    </div>
+
+    <div class="cover-meta">
+      <div class="issue-box">
+        The Driver’s Cut<br />
+        Issue 01<br />
+        September 2026<br />
+        Harris Porsche
+      </div>
+      <div class="inside">
+        <p class="label">Inside</p>
+        <ul>
+          <li>911 Carrera S, six-speed</li>
+          <li>Elsie’s, then BoDeans</li>
+          <li>Blancpain Bathyscaphe 70th</li>
+          <li>Cayenne demos</li>
+          <li>Brakes, alignment, flush</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="In this issue">
+      <a href="#road">On the Road</a>
+      <a href="#table">On the Table</a>
+      <a href="#town">On the Town</a>
+      <a href="#wrist">On the Wrist</a>
+      <a href="#lot">On the Lot</a>
+      <a href="#workbench">On the Workbench</a>
+    </nav>
+
+    <p class="open">September doesn’t cool Baton Rouge so much as it stops actively working against you. The asphalt lets go of the day a little earlier now, the light quits at a reasonable hour, and a car built to be driven finally gets the road it was waiting for.</p>
+    <p class="open" style="margin-top:0">Here’s what’s news.</p>
+
+    <section class="sec" id="road">
+      <p class="kicker">On the Road</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/carrera-s-mt-2.jpg" alt="2027 Porsche 911 Carrera S MT Package" />
+      </div>
+      <p class="cap">2027 911 Carrera S MT · Porsche</p>
+      <h2>America keeps the third pedal</h2>
+      <p>Here is the honest 911 this fall, and it is not a hundred-car Alpine special you will read about and never see. It is a 2027 Carrera S with a six-speed manual bolted into the middle of the cabin, and Porsche is selling it here.</p>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/carrera-s-mt.jpg" alt="2027 Porsche 911 Carrera S MT Package" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/carrera-s-mt-2.jpg" alt="2027 Porsche 911 Carrera S, rear" />
+      </div>
+      <p>Rear-wheel drive only. The 3.0-liter twin-turbo flat-six, 473 horsepower, and three pedals under your feet — no hybrid weight, no paddle shuffle. It is a North America exclusive, which almost never runs in our favor and this time does.</p>
+      <p>The GT3 Touring take rate on the stick ran eighty percent. That is not nostalgia. That is a market telling the factory what it actually wants, and the S got a manual because of it. Porsche’s line, roughly: they’ll keep building the third pedal until the law or the order book kills it. The hybrid GTS and Turbo still don’t offer one. That tells you which car in the range is the driver’s car.</p>
+      <p class="credit"><a href="https://www.motor1.com/news/806344/porsche-sell-manual-cars-until-outlawed/">Porsche / Motor1, 28 August 2026</a></p>
+    </section>
+
+    <section class="sec" id="table">
+      <p class="kicker">On the Table</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/elsie-potpie.jpg" alt="Pot pie at Elsie’s Plate &amp; Pie" />
+      </div>
+      <p class="cap">Elsie’s Plate &amp; Pie · Mid City</p>
+      <h2>Named for Elsie</h2>
+      <p>Paul Chauvin Dupré named the place for his grandmother. Elsie Marie Campeau Rupe, out of Lockport, down in Lafourche where the water gets into everything — the cooking, the names, the way people talk about a meal three days after they ate it. That is the whole thesis of Elsie’s Plate &amp; Pie.</p>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/elsie-bisque.jpg" alt="Seafood Lafourche bisque at Elsie’s" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/elsie-pie.jpg" alt="Pie at Elsie’s" />
+      </div>
+      <p>Order like you mean it. The seafood pot pie, because a pot pie built by someone from bayou country is a different animal than the frozen-aisle memory you’re carrying. The seafood Lafourche bisque. And a slice of pie, boxed, to take home — the move of a person who plans ahead and regrets nothing. Two people. No laptops.</p>
+      <p>OpenTable will not book you here. Call the house — (225) 636-5157 — or start at the site. Old-fashioned, and it works.</p>
+      <p>
+        <a class="cta" href="https://elsiespies.com/">elsiespies.com</a>
+      </p>
+    </section>
+
+    <section class="sec" id="town">
+      <p class="kicker">On the Town</p>
+      <h2>BoDeans, September 16</h2>
+      <p>Forty years ago the BoDeans put out <em>Love &amp; Hope &amp; Sex &amp; Dreams</em> and spent the next four decades proving heartland rock was never a phase. Wednesday, September 16, they play the whole thing at the Manship Theatre, 7:30. Tickets start at $36 with fees — buy them from the theatre and nowhere else.</p>
+      <p>Manship is the right room for it: seated, honest acoustics, no bad sightline. A midweek night that asks nothing of you except that you actually listen.</p>
+      <p>
+        <a class="cta" href="https://manshiptheatre.org/comingsoon/bodeans">Show page</a>
+        &nbsp;&nbsp;
+        <a class="cta" href="https://manshiptheatre.my.salesforce-sites.com/ticket/#/instances/a0FPm00000IXwIzMAL">Tickets</a>
+      </p>
+      <ul class="cal">
+        <li><strong>Sun 6</strong> First Free Sunday at LASM. <em>Reflections: The Art of George Rodrigue</em>, through Jan 24. No admission. <a href="https://www.lasm.org/bluedog/">lasm.org</a></li>
+        <li><strong>Tue 8</strong> Band of Heathens, Manship, 7:30. From $72.24. Austin roots-rock, twenty years in. <a href="https://manshiptheatre.org/comingsoon/bandofheathens">Tickets</a></li>
+        <li><strong>Sun 13</strong> Concert Kitchen Live: Kevin Belton and John Papa Gros, Manship, 2 p.m. From $35. <a href="https://manshiptheatre.org/comingsoon/concert-kitchen-live">Show</a></li>
+        <li><strong>Sun 20</strong> The Wild Pour, BREC Zoo, 2:30–5:30. 21+. <a href="https://brzoobrew.ticketbud.com/the-wild-pour-2026">Tickets</a></li>
+      </ul>
+    </section>
+
+    <section class="sec" id="wrist">
+      <p class="kicker">On the Wrist</p>
+      <div class="shot product">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/blancpain.jpg" alt="Blancpain Fifty Fathoms Bathyscaphe 70th Anniversary" />
+      </div>
+      <p class="cap">Bathyscaphe 70th · ref. 5903 1110 63A</p>
+      <h2>Blancpain goes small on purpose</h2>
+      <p>The Fifty Fathoms is where the modern dive watch starts — 1953, the actual origin, not a marketing claim. For the 70th, Blancpain didn’t chase size. It shrank the Bathyscaphe to 37.4 mm and built 300 of them. The restraint is the point.</p>
+      <div class="pair">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/blancpain-2.jpg" alt="Blancpain Bathyscaphe 70th, wrist" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/blancpain.jpg" alt="Blancpain Bathyscaphe 70th dial" />
+      </div>
+      <p>Steel, 37.4 mm, 12.3 mm thick, 46.5 mm lug to lug. Sapphire front and back, ceramic bezel, 300 meters. Sunburst meteor grey dial, vintage Blancpain logo, 18k white gold baton hands, vintage-toned Super-LumiNova. It reads like 1968 without cosplaying it.</p>
+      <p>Turn it over: manufacture caliber 1150, 100-hour reserve, silicon hairspring, 3 Hz, open-worked 18k gold rotor from the ’53 Fifty Fathoms. Chocolate calf. $18,300. Available now. Three hundred people get one.</p>
+      <p class="credit"><a href="https://www.hodinkee.com/articles/blancpain-fifty-fathoms-bathyscaphe-70th-anniversary-limited-edition">Hodinkee, Tim Jeffreys, 20 August 2026</a></p>
+    </section>
+
+    <section class="sec" id="lot">
+      <p class="kicker">On the Lot</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/cayenne-specials.jpg" alt="Porsche Cayenne at Harris Porsche" />
+      </div>
+      <p class="cap">Cayenne · Harris Porsche</p>
+      <h2>Start with the Cayenne demos</h2>
+      <p>The board leads with the Cayenne this month. Executive demos — the ones the store drove first — at up to $12,500 off, three to choose from. A Cayenne with the delivery nerves already worked out and five figures off the sticker is the easiest math on the lot. Three is three.</p>
+      <p>
+        <a class="cta" href="https://harris.porsche.com/en/inventory/porsche/search?condition=porsche_approved,used&amp;modelSeries=cayenne&amp;orderBy=newest">Shop Cayenne</a>
+        &nbsp;&nbsp;
+        <a class="cta" href="https://harris.porsche.com/en/specials/new">Shop specials</a>
+      </p>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/macan-ev.jpg" alt="Porsche Macan EV at Harris Porsche" />
+        </div>
+        <p class="cap">Macan EV · Harris Porsche</p>
+        <h3>Macan EV</h3>
+        <p>Executive demo, as low as $73,900. Quick, tight, a real Porsche and not a badge on a battery. This is a demo, so the price already moved.</p>
+        <p>
+          <a class="cta" href="https://harris.porsche.com/en/inventory/porsche/search?modelSeries=macan&amp;category=macan-electric">Shop Macan EV</a>
+          &nbsp;&nbsp;
+          <a class="cta" href="https://harris.porsche.com/en/specials/new">Shop specials</a>
+        </p>
+      </div>
+
+      <div class="lot-car">
+        <h3>Macan EV GTS</h3>
+        <p>Lease $1,699 a month. Thirty-nine months, $10,000 due at signing, Welcome to Porsche Credit included. The GTS is the one tuned for the driver, and the lease is on the page as written.</p>
+        <p>
+          <a class="cta" href="https://harris.porsche.com/en/inventory/porsche/search?modelSeries=macan&amp;category=macan-gts-electric">Shop Macan EV GTS</a>
+          &nbsp;&nbsp;
+          <a class="cta" href="https://harris.porsche.com/en/specials/new">Shop specials</a>
+        </p>
+      </div>
+      <p class="credit">Side note: a 2023 Panamera Turbo S, GT-silver over black chalk, CPO, $143,493.75. Not a special. Just sitting there being tempting. Approved credit; tax, title and fees extra.</p>
+    </section>
+
+    <section class="sec" id="workbench">
+      <p class="kicker">On the Workbench</p>
+      <div class="shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/brake.jpg" alt="Brake service at Harris Porsche" />
+      </div>
+      <p class="cap">Service · Harris Porsche</p>
+      <h2>Brakes are not where you save</h2>
+      <p>A 911 is only as honest as the parts that stop it. $150 off a complete Porsche brake job — genuine Porsche components. Free alignment check with any scheduled service (no centerlock wheels). $30 off a Porsche brake flush.</p>
+      <p>Book it, or call the shop: 225-754-1500.</p>
+      <p><a class="cta" href="https://service-booking.porsche.com/?partnerId=4500738">Book service</a></p>
+    </section>
+
+    <footer class="end">
+      The Driver’s Cut · Issue 01 · September 2026<br />
+      <a href="https://harris.porsche.com">Harris Porsche</a> · 12326 Airline Hwy
+    </footer>
+  </article>
+</body>
+</html>
