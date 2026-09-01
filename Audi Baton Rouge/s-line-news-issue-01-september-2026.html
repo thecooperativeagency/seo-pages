@@ -174,6 +174,43 @@
       padding-bottom: 2px;
     }
     .lot-car { margin-top: 40px; }
+    .offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin: 4px 0 18px;
+    }
+    .offer {
+      background: var(--paper);
+      padding: 14px 16px 16px;
+    }
+    .offer .lbl {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    .offer .amt {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      color: var(--red);
+      margin: 0;
+    }
+    .offer .note {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin: 6px 0 0;
+      line-height: 1.35;
+    }
     .end {
       margin-top: 56px;
       padding-top: 16px;
@@ -185,7 +222,7 @@
     .end a { color: var(--ink); }
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
-      .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
+      .cover-meta, .strip, .pair, .offers { grid-template-columns: 1fr; }
       .hero img { aspect-ratio: 3 / 4; }
       .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
@@ -221,7 +258,7 @@
           <li>The next RS6, still a wagon</li>
           <li>Cocha, then Farm Fête</li>
           <li>Omega Speedmaster 38</li>
-          <li>Q3, Q5, Q7 — the money on the lot, plus a few leases</li>
+          <li>Q3, Q5, Q7 — purchase and lease</li>
           <li>The lounge, the charger, the work</li>
         </ul>
       </div>
@@ -352,8 +389,18 @@
       </div>
       <p class="cap">Q3 · Country Club of Louisiana · Audi Baton Rouge</p>
       <h2>All-new Q3 and Q5</h2>
-      <p>The all-new Q3 is the reason to look this month. Third generation, first full redesign since 2019 — larger in every dimension, a 2.0-liter turbo four now making 255 horsepower and 273 lb-ft (up from 228 and 251), standard quattro, a seven-speed dual-clutch, and a cabin built around an 11.9-inch cockpit and a 12.8-inch screen. Audi USA starts it at $43,700.</p>
-      <p>Audi Baton Rouge has thirteen in stock and is running $2,000 off the all-new model. Worth noting because this store used to sell the Q3 at price. It is not selling at price today.</p>
+      <p>The all-new Q3 is the reason to look this month. Third generation, first full redesign since 2019 — larger in every dimension, a 2.0-liter turbo four now making 255 horsepower and 273 lb-ft (up from 228 and 251), standard quattro, a seven-speed dual-clutch, and a cabin built around an 11.9-inch cockpit and a 12.8-inch screen. Audi USA starts it at $43,700. Thirteen in stock. This store used to sell the Q3 at price.</p>
+      <div class="offers">
+        <div class="offer">
+          <p class="lbl">Purchase</p>
+          <p class="amt">$2,000 off</p>
+        </div>
+        <div class="offer">
+          <p class="lbl">Lease</p>
+          <p class="amt">$598/mo</p>
+          <p class="note">$3,000 due · 36 mo / 10k</p>
+        </div>
+      </div>
       <p>
         <a class="cta" href="https://audibatonrouge.com/all-new-audi-q3">Shop Q3</a>
         &nbsp;&nbsp;
@@ -366,7 +413,18 @@
         </div>
         <p class="cap">Q5 · all-new generation · Audi Baton Rouge</p>
         <h3>The Q5, also all-new</h3>
-        <p>Two rungs up, the Q5 is also an all-new generation. Seventeen in stock, up to $4,500 off — real money on a car that is new, not clearing.</p>
+        <p>Two rungs up, the Q5 is also an all-new generation. Seventeen in stock. New, not clearing.</p>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Up to $4,500 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$699/mo</p>
+            <p class="note">$3,500 due · 36 mo / 10k</p>
+          </div>
+        </div>
         <p>
           <a class="cta" href="https://audibatonrouge.com/cars/new-q5s">Shop Q5</a>
           &nbsp;&nbsp;
@@ -380,19 +438,24 @@
         </div>
         <p class="cap">Q7 · three-row · Audi Baton Rouge</p>
         <h3>The Q7</h3>
-        <p>And the Q7, the three-row, is where the numbers open up: twenty-one in stock, over $11,000 off. If you have been circling a full-size Audi and waiting for the math to move, it moved.</p>
+        <p>The Q7 is the three-row. Twenty-one in stock. The money is here if you have been waiting on a full-size Audi.</p>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Over $11,000 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$795/mo</p>
+            <p class="note">$3,000 due · 36 mo / 10k</p>
+          </div>
+        </div>
         <p>
           <a class="cta" href="https://audibatonrouge.com/cars/new-q7s">Shop Q7</a>
           &nbsp;&nbsp;
           <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers">Shop specials</a>
         </p>
       </div>
-
-      <h3>If you'd rather lease</h3>
-      <p>The Q3 can be $598 a month. The Q5, $699. The Q7, $795. Thirty-six months, ten thousand miles. A3, A5, and A6 examples sit with them on the specials page.</p>
-      <p>
-        <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers#abr-september-leases">See leases</a>
-      </p>
     </section>
 
     <section class="sec" id="workbench">
