@@ -1,0 +1,564 @@
+<div class="abr-specials-page" style="font-family:AudiType, Audi, 'Audi Type', Helvetica, Arial, sans-serif;">
+<style>
+@font-face {
+  font-family: "AudiType";
+  src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AudiType";
+  src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.abr-specials-page,
+.abr-specials-page * {
+  font-family: AudiType, Audi, "Audi Type", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.abr-specials-page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  --ink: #000000;
+  --elevated: #151515;
+  --card: #101010;
+  --border: #4D4D4D;
+  --white: #ffffff;
+  --muted: #BDBDBD;
+  --soft: #e8e8e8;
+  color: var(--white);
+  background: var(--ink);
+}
+.abr-specials-page * { box-sizing: border-box; }
+.abr-specials-page .wrap { max-width: 1120px; margin: 0 auto; width: 100%; }
+.abr-specials-page .eyebrow { margin: 0 0 12px; color: var(--muted); font-size: 11px; line-height: 1.4; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
+.abr-specials-page h1, .abr-specials-page h2, .abr-specials-page h3, .abr-specials-page p { margin-top: 0; }
+.abr-specials-page .h1 { margin: 0; max-width: 920px; font-size: clamp(2.35rem, 5.8vw, 4.6rem); line-height: .96; letter-spacing: -.045em; font-weight: 700; }
+.abr-specials-page .h2 { margin: 0; font-size: clamp(1.9rem, 3.6vw, 3.4rem); line-height: .98; letter-spacing: -.04em; font-weight: 700; }
+.abr-specials-page .body-lg { max-width: 840px; color: var(--soft); font-size: clamp(1.05rem, 1.7vw, 1.28rem); line-height: 1.55; }
+.abr-specials-page .body { color: #d0d0d0; font-size: 16px; line-height: 1.62; }
+.abr-specials-page .section { padding: 72px 40px; }
+.abr-specials-page .section-tight { padding: 40px; }
+.abr-specials-page .dark { background: var(--ink); }
+.abr-specials-page .elevated { background: var(--elevated); }
+.abr-specials-page .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+.abr-specials-page .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+.abr-specials-page .lease-card .amount { font-size: clamp(2.05rem, 3.2vw, 3.4rem); }
+.abr-specials-page .offer-card { background: var(--card); border: 1px solid var(--border); min-height: 100%; display: flex; flex-direction: column; overflow: hidden; }
+.abr-specials-page .offer-card.is-hero { border-color: #707070; }
+.abr-specials-page .offer-card.is-hero.is-split {
+  display: grid;
+  grid-template-columns: minmax(240px, 38%) minmax(0, 1fr);
+  align-items: stretch;
+}
+.abr-specials-page .offer-card.is-hero.is-split .card-media {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 280px;
+}
+.abr-specials-page .offer-card.is-hero.is-split .card-media img {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 280px;
+}
+.abr-specials-page .offer-card.is-hero.is-split .card-content {
+  padding: 32px 34px;
+  justify-content: center;
+}
+.abr-specials-page .card-media {
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  background: #050505;
+  position: relative;
+  overflow: hidden;
+}
+.abr-specials-page .card-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+  opacity: .95;
+}
+.abr-specials-page .card-media-label {
+  position: absolute;
+  inset: auto 22px 20px 22px;
+  z-index: 2;
+  font-size: clamp(2.1rem, 3.6vw, 3.8rem);
+  line-height: .9;
+  letter-spacing: -.05em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0,0,0,.45);
+}
+.abr-specials-page .card-content { padding: 28px; display: flex; flex-direction: column; flex: 1; }
+
+.abr-specials-page .model-summary {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 14px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.06);
+  color: #f2f2f2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  width: fit-content;
+  max-width: 100%;
+}
+.abr-specials-page .label { margin: 0 0 8px; }
+.abr-specials-page .amount { margin: 0 0 8px; }
+.abr-specials-page .meta { margin: 0 0 14px; }
+.abr-specials-page .label { margin: 0 0 8px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; }
+.abr-specials-page .amount { margin: 0 0 10px; font-size: clamp(2.35rem, 3.8vw, 4.2rem); line-height: .9; letter-spacing: -.055em; font-weight: 700; color: #fff; }
+.abr-specials-page .meta { margin: 0 0 16px; color: #f4f4f4; font-size: 17px; line-height: 1.45; font-weight: 700; }
+.abr-specials-page .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.abr-specials-page .pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.abr-specials-page .fineprint { margin: 0; color: #bdbdbd; font-size: 12px; line-height: 1.65; }
+.abr-specials-page .span-2 { grid-column: 1 / -1; }
+.abr-specials-page .btn-row,
+.abr-specials-page .model-shop-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 24px;
+  align-items: center !important;
+}
+.abr-specials-page .model-shop-row { margin-top: 14px; max-width: 960px; }
+.abr-specials-page a.btn-primary,
+.abr-specials-page a.btn-secondary,
+.abr-specials-page a.btn-compact {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  min-width: max-content !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+}
+.abr-specials-page a.btn-primary,
+.abr-specials-page a.btn-secondary {
+  min-height: 48px;
+  padding: 12px 20px;
+  font-size: 15px;
+}
+.abr-specials-page a.btn-primary { background: #fff !important; color: #000 !important; border: 2px solid #fff !important; }
+.abr-specials-page a.btn-secondary { background: transparent !important; color: #fff !important; border: 2px solid #fff !important; }
+.abr-specials-page a.btn-compact {
+  min-height: 40px;
+  padding: 10px 14px;
+  font-size: 13px;
+  background: rgba(255,255,255,.06) !important;
+  color: #fff !important;
+  border: 1.5px solid rgba(255,255,255,.72) !important;
+}
+.abr-specials-page a.btn-primary span,
+.abr-specials-page a.btn-secondary span,
+.abr-specials-page a.btn-compact span {
+  display: inline !important;
+  white-space: nowrap !important;
+}
+@media (max-width: 1100px) {
+  .abr-specials-page .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 980px) {
+  .abr-specials-page .grid-2,
+  .abr-specials-page .grid-3 { grid-template-columns: 1fr; }
+  .abr-specials-page .span-2 { grid-column: auto; }
+  .abr-specials-page .offer-card.is-hero.is-split { grid-template-columns: 1fr; }
+  .abr-specials-page .offer-card.is-hero.is-split .card-media,
+  .abr-specials-page .offer-card.is-hero.is-split .card-media img {
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    height: auto;
+  }
+  .abr-specials-page .offer-card.is-hero.is-split .card-media img { height: 100%; }
+  .abr-specials-page .offer-card.is-hero.is-split .card-content { padding: 28px; }
+}
+@media (max-width: 640px) {
+  .abr-specials-page .section,
+  .abr-specials-page .section-tight { padding-left: 18px; padding-right: 18px; }
+  .abr-specials-page .card-content { padding: 22px; }
+  .abr-specials-page .h1 { font-size: clamp(2.05rem, 10vw, 3.1rem); }
+}
+</style>
+
+<section style="position:relative;min-height:0;display:flex;align-items:flex-end;background:#000;overflow:hidden;">
+  <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/abr-specials-hero-aerial.jpg" alt="Audi Baton Rouge dealership" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;opacity:.72;" />
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 46%,rgba(0,0,0,.28) 100%);"></div>
+  <div class="wrap" style="position:relative;z-index:2;padding:64px 40px 40px;">
+    <p class="eyebrow">Audi Baton Rouge &middot; September 2026</p>
+    <h1 class="h1">September specials are live.</h1>
+    <p class="body-lg" style="margin-top:14px;max-width:560px;">Current purchase offers, plus leases on select models.</p>
+    <div class="btn-row" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+      <a href="#abr-september-offers" class="btn-primary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">See offers</span></a>
+      <a href="#abr-september-leases" class="btn-secondary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">See leases</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="abr-september-offers" class="section elevated" style="padding-top:48px;">
+  <div class="wrap">
+    <p class="eyebrow">September specials</p>
+    <h2 class="h2" style="max-width:900px;margin-bottom:28px;">Current new Audi offers</h2>
+
+    <div class="grid-2">
+      <article class="offer-card is-hero is-split span-2">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q3-showroom-1x1.jpg" alt="2026 Audi Q3 in showroom" style="object-position: center 48%;" />
+          <div class="card-media-label">Q3</div>
+        </div>
+        <div class="card-content">
+          <p class="label">All-new 2026 · 13 in stock</p>
+          <p class="model-summary">All-new compact SUV</p>
+          <div class="amount">$2,000 off</div>
+          <p class="meta">Special offers on the all-new Audi Q3.</p>
+          <div class="pill-row">
+            <span class="pill">All-new 2026</span>
+            <span class="pill">$2,000 off</span>
+            <span class="pill">Lease $598/mo</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/all-new-audi-q3" class="btn-primary"><span>Shop Q3</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q5-golf-1x1.jpg" alt="2026 Audi Q5" style="object-position: center 48%;" />
+          <div class="card-media-label">Q5</div>
+        </div>
+        <div class="card-content">
+          <p class="label">17 in stock</p>
+          <p class="model-summary">Premium compact SUV</p>
+          <div class="amount">Up to $4,500 off</div>
+          <p class="meta">$2,000 off + $2,500 rebate on select new Q5 models.</p>
+          <div class="pill-row">
+            <span class="pill">$2,000 off</span>
+            <span class="pill">$2,500 rebate</span>
+            <span class="pill">Lease $699/mo</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/cars/new-q5s" class="btn-primary"><span>Shop Q5</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q7-urban-1x1.jpg" alt="2026 Audi Q7" style="object-position: center 42%;" />
+          <div class="card-media-label">Q7</div>
+        </div>
+        <div class="card-content">
+          <p class="label">21 in stock</p>
+          <p class="model-summary">Three-row flagship SUV</p>
+          <div class="amount">Over $11,000 off</div>
+          <p class="meta">Select new Q7 inventory with dealer offer + national customer credit.</p>
+          <div class="pill-row">
+            <span class="pill">Select inventory</span>
+            <span class="pill">Over $11,000 off</span>
+            <span class="pill">Lease $795/mo</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/cars/new-q7s" class="btn-primary"><span>Shop Q7</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a3-red-home-1x1.jpg" alt="2026 Audi A3" style="object-position: center 48%;" />
+          <div class="card-media-label">A3</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Select new A3</p>
+          <p class="model-summary">Compact luxury sedan</p>
+          <div class="amount">Up to $5,500 off</div>
+          <p class="meta">$2,000 off + $3,500 rebate on select new A3 models.</p>
+          <div class="pill-row">
+            <span class="pill">$2,000 off</span>
+            <span class="pill">$3,500 rebate</span>
+            <span class="pill">Lease $499/mo</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/cars/a3" class="btn-primary"><span>Shop A3</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/s3-yellow-bridge-1x1.jpg" alt="2026 Audi S3" style="object-position: center 48%;" />
+          <div class="card-media-label">S3</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Select new S3</p>
+          <p class="model-summary">Performance compact sedan</p>
+          <div class="amount">Up to $8,000 off</div>
+          <p class="meta">$4,500 off + $3,500 rebate on select new S3 models.</p>
+          <div class="pill-row">
+            <span class="pill">$4,500 off</span>
+            <span class="pill">$3,500 rebate</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22:%7B%22option%22:%7B%22label%22:%22Price%22,%22value%22:%22price%22,%22type%22:%22value%22%7D,%22direction%22:%22desc%22%7D,%22appliedFilters%22:%7B%22car_condition%22:%7B%22value%22:%7B%22New%22:true%7D%7D,%22model%22:%7B%22value%22:%7B%22S3%22:true%7D%7D%7D%7D" class="btn-primary"><span>Shop S3</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a5-plaza-1x1.jpg" alt="2026 Audi A5" style="object-position: center 48%;" />
+          <div class="card-media-label">A5</div>
+        </div>
+        <div class="card-content">
+          <p class="label">9 in stock</p>
+          <p class="model-summary">Premium sport sedan</p>
+          <div class="amount">Up to $5,500 off</div>
+          <p class="meta">$3,000 off + $2,500 rebate on select new A5 models.</p>
+          <div class="pill-row">
+            <span class="pill">$3,000 off</span>
+            <span class="pill">$2,500 rebate</span>
+            <span class="pill">Lease $599/mo</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/cars/a5" class="btn-primary"><span>Shop A5</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/s5-showroom-1x1.jpg" alt="2026 Audi S5" style="object-position: center 48%;" />
+          <div class="card-media-label">S5</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Select new S5</p>
+          <p class="model-summary">S performance Sportback</p>
+          <div class="amount">Up to $5,500 off</div>
+          <p class="meta">$3,000 off + $2,500 rebate on select new S5 models.</p>
+          <div class="pill-row">
+            <span class="pill">$3,000 off</span>
+            <span class="pill">$2,500 rebate</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/cars/s5" class="btn-primary"><span>Shop S5</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a6-lot-1x1.jpg" alt="2026 Audi A6" style="object-position: center 42%;" />
+          <div class="card-media-label">A6</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Select new A6</p>
+          <p class="model-summary">Executive sedan</p>
+          <div class="amount">Up to $7,000 off</div>
+          <p class="meta">$3,000 off + $4,000 customer credit on select new A6 models.</p>
+          <div class="pill-row">
+            <span class="pill">$3,000 off</span>
+            <span class="pill">$4,000 customer credit</span>
+            <span class="pill">Lease $897/mo</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;">
+            <a href="https://audibatonrouge.com/cars/a6" class="btn-primary"><span>Shop A6</span></a>
+          </div>
+        </div>
+      </article>
+
+      </div>
+  </div>
+</section>
+
+<section id="abr-september-leases" class="section dark" style="padding-top:48px;border-top:1px solid #4D4D4D;">
+  <div class="wrap">
+    <p class="eyebrow">Featured leases</p>
+    <h2 class="h2" style="max-width:900px;margin-bottom:12px;">Featured lease offers</h2>
+    <p class="body-lg" style="margin-bottom:28px;">36 months &middot; 10,000 miles &middot; select stock.</p>
+    <div class="grid-3">
+      <article class="offer-card lease-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q3-showroom-1x1.jpg" alt="2026 Audi Q3 lease" style="object-position: center 48%;" />
+          <div class="card-media-label">Q3</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Stock 26A199</p>
+          <p class="model-summary">All-new compact SUV</p>
+          <div class="amount">$598/mo</div>
+          <p class="meta">$3,000 due at signing</p>
+          <div class="pill-row">
+            <span class="pill">36 mo</span>
+            <span class="pill">10k miles</span>
+            <span class="pill">$3,000 due at signing</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+            <a href="https://audibatonrouge.com/all-new-audi-q3" class="btn-primary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">Shop Q3</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="offer-card lease-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q5-golf-1x1.jpg" alt="2026 Audi Q5 lease" style="object-position: center 48%;" />
+          <div class="card-media-label">Q5</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Stock 26A186</p>
+          <p class="model-summary">Premium compact SUV</p>
+          <div class="amount">$699/mo</div>
+          <p class="meta">$3,500 due at signing</p>
+          <div class="pill-row">
+            <span class="pill">36 mo</span>
+            <span class="pill">10k miles</span>
+            <span class="pill">$3,500 due at signing</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+            <a href="https://audibatonrouge.com/cars/new-q5s" class="btn-primary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">Shop Q5</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="offer-card lease-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/q7-urban-1x1.jpg" alt="2026 Audi Q7 45 lease" style="object-position: center 42%;" />
+          <div class="card-media-label">Q7</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Stock 26A262 &middot; Q7 45</p>
+          <p class="model-summary">Three-row flagship SUV</p>
+          <div class="amount">$795/mo</div>
+          <p class="meta">$3,000 due at signing</p>
+          <div class="pill-row">
+            <span class="pill">36 mo</span>
+            <span class="pill">10k miles</span>
+            <span class="pill">$3,000 due at signing</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+            <a href="https://audibatonrouge.com/cars/new-q7s" class="btn-primary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">Shop Q7</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="offer-card lease-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a3-red-home-1x1.jpg" alt="2026 Audi A3 lease" style="object-position: center 48%;" />
+          <div class="card-media-label">A3</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Stock 26A216</p>
+          <p class="model-summary">Compact luxury sedan</p>
+          <div class="amount">$499/mo</div>
+          <p class="meta">$2,500 due at signing</p>
+          <div class="pill-row">
+            <span class="pill">36 mo</span>
+            <span class="pill">10k miles</span>
+            <span class="pill">$2,500 due at signing</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+            <a href="https://audibatonrouge.com/cars/a3" class="btn-primary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">Shop A3</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="offer-card lease-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a5-plaza-1x1.jpg" alt="2026 Audi A5 Prestige lease" style="object-position: center 48%;" />
+          <div class="card-media-label">A5</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Stock 26A190 &middot; Prestige</p>
+          <p class="model-summary">Premium sport sedan</p>
+          <div class="amount">$599/mo</div>
+          <p class="meta">$4,000 due at signing</p>
+          <div class="pill-row">
+            <span class="pill">36 mo</span>
+            <span class="pill">10k miles</span>
+            <span class="pill">$4,000 due at signing</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+            <a href="https://audibatonrouge.com/cars/a5" class="btn-primary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">Shop A5</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="offer-card lease-card">
+        <div class="card-media">
+          <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/a6-lot-1x1.jpg" alt="2026 Audi A6 lease" style="object-position: center 42%;" />
+          <div class="card-media-label">A6</div>
+        </div>
+        <div class="card-content">
+          <p class="label">Stock 26A140</p>
+          <p class="model-summary">Executive sedan</p>
+          <div class="amount">$897/mo</div>
+          <p class="meta">$4,000 due at signing</p>
+          <div class="pill-row">
+            <span class="pill">36 mo</span>
+            <span class="pill">10k miles</span>
+            <span class="pill">$4,000 due at signing</span>
+          </div>
+          <div class="btn-row" style="margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+            <a href="https://audibatonrouge.com/cars/a6" class="btn-primary" style="display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;white-space:nowrap !important;overflow:visible !important;"><span style="white-space:nowrap;overflow:visible;">Shop A6</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <p class="eyebrow">More ways to shop</p>
+    <h2 class="h2" style="max-width:820px;margin-bottom:28px;">More Audi shopping options</h2>
+    <div class="btn-row" style="margin-top:8px;">
+      <a href="https://audibatonrouge.com/cars/pre-owned-specials" class="btn-primary"><span>Pre-Owned Specials</span></a>
+      <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="btn-secondary"><span>Shop New</span></a>
+      <a href="https://audibatonrouge.com/sell-or-trade" class="btn-secondary"><span>Value Your Trade</span></a>
+    </div>
+  </div>
+</section>
+
+<section style="position:relative;padding:104px 40px;background-image:url('https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/cards/close-1x1.jpg');background-size:cover;background-position:center;">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.92));"></div>
+  <div class="wrap" style="position:relative;z-index:2;max-width:860px;">
+    <p class="eyebrow">September 2026</p>
+    <h2 class="h2" style="margin-bottom:16px;">Ready when you are.</h2>
+    <p class="body-lg">Shop current purchase offers and featured leases &mdash; or full new inventory.</p>
+    <div class="btn-row" style="margin-top:26px;">
+      <a href="https://audibatonrouge.com/all-new-audi-q3" class="btn-primary"><span>Shop Q3</span></a>
+      <a href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%7D%7D" class="btn-secondary"><span>Shop All New</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight dark" style="border-top:1px solid #4D4D4D;">
+  <div class="wrap">
+    <p class="eyebrow">Disclosures</p>
+    <p class="fineprint">September 2026 purchase offer information is based on Audi Baton Rouge sales pricing and current live specials for Q7. Offers subject to change without notice and apply to select new, in-stock Audi models only. Savings vary by model, trim, VIN, inventory, dealer offer, manufacturer incentive/rebate/customer credit, and eligibility. Maximum combined savings may require qualifying incentives and approved credit where applicable; not all customers will qualify. Some exclusions apply. Tax, title, license, registration, and dealer fees not included. Q7 example stacks observed on live inventory include dealer offer and national customer credit totaling over $11,000 before tax, title, license, registration, dealer fees, optional equipment, insurance, and other required fees.</p>
+    <p class="fineprint" style="margin-top:14px;">Lease examples are for the specific stock numbers shown: 26A199 Q3, 26A186 Q5, 26A262 Q7 45, 26A216 A3, 26A190 A5 Prestige, and 26A140 A6. Each example is a 36-month closed-end lease at 10,000 miles per year with the advertised monthly payment and due-at-signing amount shown. Tax, title, license, registration, and dealer fees not included. With approved credit. Not all customers will qualify. Some exclusions apply. Excess mileage, wear, and disposition charges may apply. Offers subject to change without notice and are not available on every VIN. See Audi Baton Rouge for complete details. Audi Baton Rouge &middot; 11955 Airline Hwy, Baton Rouge, LA 70817 &middot; (225) 686-6012.</p>
+  </div>
+</section>
+</div>
