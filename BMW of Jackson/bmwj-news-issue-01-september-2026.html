@@ -173,6 +173,43 @@
       padding-bottom: 2px;
     }
     .lot-car { margin-top: 40px; }
+    .offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin: 4px 0 18px;
+    }
+    .offer {
+      background: var(--paper);
+      padding: 14px 16px 16px;
+    }
+    .offer .lbl {
+      font-family: var(--head);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    .offer .amt {
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      color: var(--blue);
+      margin: 0;
+    }
+    .offer .note {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin: 6px 0 0;
+      line-height: 1.35;
+    }
     .end {
       margin-top: 56px;
       padding-top: 16px;
@@ -182,6 +219,14 @@
       line-height: 1.6;
     }
     .end a { color: var(--ink); }
+    .fine {
+      font-family: var(--head);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: .02em;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
@@ -309,7 +354,20 @@
       </div>
       <p class="cap">X5 · BMW of Jackson</p>
       <h2>The X5</h2>
-      <p>MY26 X5 xDrive40i. 0.9% APR for 60 months on select models, plus a $1,000 APR credit. Lease from $869 a month for 39 months — $809 with loyalty.</p>
+      <p>The SAV they put first this month &mdash; MY26 xDrive40i.</p>
+      <div class="offers">
+        <div class="offer">
+          <p class="lbl">Finance</p>
+          <p class="amt">0.9% APR</p>
+          <p class="note">60 mo &middot; $1,000 APR credit</p>
+        </div>
+        <div class="offer">
+          <p class="lbl">Lease</p>
+          <p class="amt">$869/mo</p>
+          <p class="note">39 mo &middot; $809 w/ loyalty</p>
+        </div>
+      </div>
+      <p class="fine">Expires September 30, 2026. With approved credit. Some exclusions apply. See dealer for details. Delivery by September 30 required.</p>
       <p>
         <a class="cta" href="https://bmwofjackson.net/cars/bmw-x5">Shop X5</a>
         &nbsp;&nbsp;
@@ -320,9 +378,22 @@
         <div class="shot">
           <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/x3-showroom.jpg" alt="BMW X3 at BMW of Jackson" />
         </div>
-        <p class="cap">X3 · BMW of Jackson</p>
+        <p class="cap">X3 &middot; BMW of Jackson</p>
         <h3>The X3</h3>
-        <p>MY26 X3 30 xDrive. The core BMW SAV. Lease from $569 a month for 39 months ($539 with loyalty), or 1.99% APR for 60 months.</p>
+        <p>MY26 X3 30 xDrive. The core BMW SAV.</p>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Finance</p>
+            <p class="amt">0.9% APR</p>
+            <p class="note">60 mo &middot; 30 xDrive</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$569/mo</p>
+            <p class="note">39 mo &middot; $539 w/ loyalty</p>
+          </div>
+        </div>
+        <p class="fine">Expires September 30, 2026. With approved credit. Some exclusions apply. See dealer for details. Delivery by September 30 required.</p>
         <p>
           <a class="cta" href="https://bmwofjackson.net/cars/bmw-x3">Shop X3</a>
           &nbsp;&nbsp;
@@ -334,9 +405,22 @@
         <div class="shot">
           <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/x7.jpg" alt="BMW X7 at BMW of Jackson" />
         </div>
-        <p class="cap">X7 · BMW of Jackson</p>
+        <p class="cap">X7 &middot; BMW of Jackson</p>
         <h3>The X7</h3>
-        <p>MY27 X7 xDrive40i. Three rows. $1,249 a month on a 15-month lease, or $1,049 for 39 months. 1.99% APR for 60 months if you’re financing.</p>
+        <p>MY27 X7 xDrive40i. Three rows. Short-term lease if you want flexibility into next year.</p>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Finance</p>
+            <p class="amt">0.9% APR</p>
+            <p class="note">60 mo</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$1,249/mo</p>
+            <p class="note">15 mo &middot; or $1,049 / 39 mo</p>
+          </div>
+        </div>
+        <p class="fine">Expires September 30, 2026. With approved credit. Some exclusions apply. See dealer for details. Delivery by September 30 required.</p>
         <p>
           <a class="cta" href="https://bmwofjackson.net/cars/new-x7">Shop X7</a>
           &nbsp;&nbsp;
