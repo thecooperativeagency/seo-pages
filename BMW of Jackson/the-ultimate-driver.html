@@ -31,25 +31,29 @@
       background: var(--paper);
       padding: 32px 32px 72px;
     }
-    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
-    .mast h1 {
+    .hero {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+    }
+    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 42%; }
+    .lockup {
+      position: absolute;
+      left: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .lockup h1 {
       font-family: var(--head);
       font-weight: 700;
-      color: var(--blue);
-      font-size: clamp(2.6rem, 10vw, 5.2rem);
+      color: #fff;
+      font-size: clamp(3rem, 12vw, 5.4rem);
       line-height: .86;
       letter-spacing: -.04em;
       margin: 0;
+      text-shadow: 0 1px 16px rgba(0,0,0,.35);
     }
-    .mast .sub {
-      font-family: var(--head);
-      letter-spacing: .22em;
-      font-size: 11px;
-      text-transform: uppercase;
-      margin: 12px 0 0;
-    }
-    .hero { display: block; margin-top: 14px; text-decoration: none; }
-    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 42%; }
     .cover-line {
       font-family: var(--head);
       font-size: 11px;
@@ -126,18 +130,17 @@
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .hero img { aspect-ratio: 3 / 4; }
+      .lockup { left: 16px; bottom: 16px; }
     }
   </style>
 </head>
 <body>
   <article class="sheet">
-    <header class="mast">
-      <h1>The Ultimate<br />Driver</h1>
-      <p class="sub">BMW of Jackson</p>
-    </header>
-
     <a class="hero" href="bmwj-news-issue-01-september-2026.html">
       <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/cover-x3-lot.jpg" alt="BMW X3 on the lot at BMW of Jackson" />
+      <span class="lockup">
+        <h1>The Ultimate<br />Driver</h1>
+      </span>
     </a>
     <p class="cover-line">Issue 01 · September 2026</p>
 

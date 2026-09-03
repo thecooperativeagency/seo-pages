@@ -30,33 +30,39 @@
       background: var(--paper);
       padding: 32px 32px 72px;
     }
-    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
-    .mast .news {
+    .hero {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: #fff;
+    }
+    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
+    .lockup {
+      position: absolute;
+      left: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .lockup .news {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       letter-spacing: .46em;
       font-size: 14px;
       text-transform: uppercase;
-      margin: 10px 0 0;
+      margin: 0 0 8px;
+      color: #fff;
+      text-shadow: 0 1px 16px rgba(0,0,0,.35);
     }
-    .mast h1 {
+    .lockup h1 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
-      color: var(--red);
-      font-size: clamp(4.4rem, 16vw, 8.2rem);
+      color: #fff;
+      font-size: clamp(3.4rem, 14vw, 6.4rem);
       line-height: .78;
       letter-spacing: -.04em;
       margin: 0;
+      text-shadow: 0 1px 16px rgba(0,0,0,.35);
     }
-    .mast .sub {
-      font-family: "AudiType", Arial, Helvetica, sans-serif;
-      letter-spacing: .26em;
-      font-size: 11px;
-      text-transform: uppercase;
-      margin: 12px 0 0;
-    }
-    .hero { display: block; margin-top: 14px; text-decoration: none; }
-    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
     .cover-line {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 11px;
@@ -133,19 +139,18 @@
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .hero img { aspect-ratio: 3 / 4; }
+      .lockup { left: 16px; bottom: 16px; }
     }
   </style>
 </head>
 <body>
   <article class="sheet">
-    <header class="mast">
-      <h1>S Line</h1>
-      <p class="news">News</p>
-      <p class="sub">Audi Baton Rouge</p>
-    </header>
-
     <a class="hero" href="https://audibatonrouge.com/sline-news-01">
       <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-q3-night.jpg" alt="Audi Q3 at Country Club of Louisiana" />
+      <span class="lockup">
+        <span class="news">News</span>
+        <h1>S Line</h1>
+      </span>
     </a>
     <p class="cover-line">Issue 01 · September 2026</p>
 
