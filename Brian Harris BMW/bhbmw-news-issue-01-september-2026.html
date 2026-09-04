@@ -111,6 +111,45 @@
       border-top: 1px solid rgba(255,255,255,.32);
       line-height: 1.35;
     }
+    .cover-shot {
+      position: relative;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .cover-shot img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .cover-shot::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 58%;
+      background: linear-gradient(transparent, rgba(0,0,0,.62));
+      pointer-events: none;
+    }
+    .cover-shot .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .cover-shot .lockup .kicker {
+      color: var(--blue);
+      margin: 0 0 8px;
+    }
+    .cover-shot .lockup h2 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.4rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0;
+      text-shadow: 0 1px 16px rgba(0,0,0,.4);
+    }
     .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
     .strip img { aspect-ratio: 1; object-fit: cover; }
     .cover-meta {
@@ -288,6 +327,8 @@
       .plate { padding: 22px 20px 18px; }
       .art img { aspect-ratio: 3 / 4; }
       .story { left: 20px; right: 20px; bottom: 20px; }
+      .cover-shot img { aspect-ratio: 3 / 4; }
+      .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
       .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
   </style>
@@ -302,8 +343,9 @@
       <div class="art">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/x5-cover.jpg" alt="BMW X5 on the lot at Brian Harris BMW" />
         <div class="story">
-          <h2>The i3 Touring</h2>
+          <h2>Cold Start</h2>
           <ul>
+            <li>The i3 Touring</li>
             <li>Tsunami, then Jason Carter</li>
             <li>Tudor Black Bay 58</li>
             <li>X5, X3, X7</li>
@@ -329,6 +371,7 @@
         <p class="label">Inside</p>
         <ul>
           <li>The i3 Touring</li>
+          <li>Cold Start</li>
           <li>Tsunami, then Jason Carter</li>
           <li>Tudor Black Bay 58</li>
           <li>X5, X3, X7</li>
@@ -339,6 +382,7 @@
 
     <nav class="toc" aria-label="In this issue">
       <a href="#road">On the Road</a>
+      <a href="#saturday">On Saturday</a>
       <a href="#table">On the Table</a>
       <a href="#town">On the Town</a>
       <a href="#wrist">On the Wrist</a>
@@ -363,6 +407,23 @@
       <p>What he caught is the i3 Touring — the long-roof version of BMW’s Neue Klasse i3 sedan. A driver’s-shape electric wagon, which is not a phrase the market has heard in a long time. The prototype doing the work is the dual-motor 50 xDrive: 463 horsepower, a 108.7 kWh battery, roughly 550 miles on the European cycle, and 400 kW charging that turns a stop into a coffee. Munich already started building the sedan this month.</p>
       <p>Two corrections before anyone gets ahead of it. It is not a hybrid. And a car turning laps in Germany is proof that engineers are busy, not that a Baton Rouge delivery date exists. Nobody has promised us this car. A long-roof that charges and actually corners is the argument against the idea that every good answer has to be a taller SUV.</p>
       <p class="credit">Photos: Carscoops / Baldauf · <a href="https://www.carscoops.com/2026/08/bmw-i3-touring-nurburgring/">The scoop</a></p>
+    </section>
+
+    <section class="sec" id="saturday">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/tiger-stadium.jpg" alt="Tiger Stadium on gameday, Baton Rouge" />
+        <div class="lockup">
+          <p class="kicker">On Saturday</p>
+          <h2>Cold Start</h2>
+        </div>
+      </div>
+      <p class="cap">Tiger Stadium · Baton Rouge</p>
+      <p class="kicker">On Saturday</p>
+      <h2>Cold Start</h2>
+      <p>The season turns over Saturday night. Clemson comes to Tiger Stadium, kickoff 6:30 on ABC, and College GameDay has set up in Baton Rouge to watch a coach who has not yet called a snap here. Lane Kiffin arrived in the offseason and inherited a roster that ranks No. 11 in the AP poll and No. 13 in the coaches’. LSU is 0–0 the way every team is 0–0 in early September — untested, and carrying everything that was said about it all summer.</p>
+      <p>What makes this opener local rather than national is the paperwork. This week a Baton Rouge judge, William Jorden, granted a preliminary injunction barring the NCAA and SEC from punishing a school for fielding certain former pro players named in the suit. Two of them followed Kiffin from Ole Miss — Dae’Quan Wright and Zxavian Harris. The SEC answered in federal court, suing LSU itself: the school, its board, president Wade Rousse, athletic director Verge Ausberry, and Kiffin, over the intent to put those players on the field.</p>
+      <p>So kickoff comes with a court file open beside it. A cold start is like that — you turn the key and the thing runs before it is warm, before anyone quite knows what it does under load. What we do know is the schedule. Louisiana Tech comes to Baton Rouge on the 12th, Ole Miss waits in Oxford on the 19th, and Texas A&amp;M returns here on the 26th.</p>
+      <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tiger_Stadium_north_side_at_LSU_in_Baton_Rouge,_LA_on_gameday.jpg">WClarke / Wikimedia Commons</a> (CC BY-SA 4.0). Reporting: <a href="https://www.espn.com/college-football/team/_/id/99/lsu-tigers">ESPN</a>, <a href="https://www.espn.com/college-football/story/_/id/49807088/judge-grants-injunction-pro-players-seeking-lsu-return">Dan Murphy</a>, <a href="https://www.espn.com/college-football/story/_/id/49816309/sec-files-suit-vs-lsu-school-intent-play-pro-athletes">Mark Schlabach</a>, 3 September 2026.</p>
     </section>
 
     <section class="sec" id="table">
