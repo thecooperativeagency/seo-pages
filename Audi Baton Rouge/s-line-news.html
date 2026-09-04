@@ -17,23 +17,23 @@
       --red: #bb0a30;
       --head: "AudiType", Arial, Helvetica, sans-serif;
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
-    body {
+    .sheet, .sheet * { box-sizing: border-box; }
+    .sheet { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    .sheet {
       font-family: Newsreader, Georgia, "Times New Roman", serif;
       -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; }
-    img { display: block; width: 100%; }
+    .sheet a { color: inherit; }
+    .sheet img { display: block; width: 100%; }
     .sheet {
       max-width: 820px;
       margin: 0 auto;
       background: var(--paper);
       padding: 32px 32px 72px;
     }
-    .hero { display: block; text-decoration: none; color: #fff; }
-    .plate { background: #fff; padding: 28px 28px 22px; }
-    .plate h1 {
+    .sheet .hero { display: block; text-decoration: none; color: #fff; }
+    .sheet .plate { background: #fff; padding: 28px 28px 22px; }
+    .sheet .plate h1 {
       font-family: var(--head);
       font-weight: 700;
       color: var(--red);
@@ -42,7 +42,7 @@
       letter-spacing: -.045em;
       margin: 0;
     }
-    .plate .meta {
+    .sheet .plate .meta {
       font-family: var(--head);
       font-size: 11px;
       letter-spacing: .18em;
@@ -50,9 +50,9 @@
       color: #141414;
       margin: 12px 0 0;
     }
-    .art { display: block; position: relative; }
-    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
-    .art::after {
+    .sheet .art { display: block; position: relative; }
+    .sheet .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
+    .sheet .art::after {
       content: "";
       position: absolute;
       left: 0; right: 0; bottom: 0;
@@ -60,14 +60,14 @@
       background: linear-gradient(transparent, rgba(0,0,0,.52));
       pointer-events: none;
     }
-    .story {
+    .sheet .story {
       position: absolute;
       left: 28px;
       right: 28px;
       bottom: 28px;
       z-index: 2;
     }
-    .story h2 {
+    .sheet .story h2 {
       font-family: var(--head);
       font-weight: 700;
       color: #fff !important;
@@ -77,8 +77,8 @@
       margin: 0 0 14px;
       text-shadow: 0 1px 14px rgba(0,0,0,.35);
     }
-    .story ul { list-style: none; margin: 0; padding: 0; }
-    .story li {
+    .sheet .story ul { list-style: none; margin: 0; padding: 0; }
+    .sheet .story li {
       font-family: var(--head);
       font-size: 11px;
       letter-spacing: .16em;
@@ -88,7 +88,7 @@
       border-top: 1px solid rgba(255,255,255,.32);
       line-height: 1.35;
     }
-    .cover-line {
+    .sheet .cover-line {
       font-family: var(--head);
       font-size: 11px;
       letter-spacing: .16em;
@@ -96,8 +96,8 @@
       color: var(--muted);
       margin: 12px 0 0;
     }
-    .issues { margin-top: 48px; }
-    .issues > .label {
+    .sheet .issues { margin-top: 48px; }
+    .sheet .issues > .label {
       font-family: var(--head);
       font-size: 12px;
       letter-spacing: .22em;
@@ -105,8 +105,8 @@
       color: var(--red);
       margin: 0 0 8px;
     }
-    .issue-row { padding: 22px 0 26px; border-top: 1px solid var(--line); }
-    .issue-row .num {
+    .sheet .issue-row { padding: 22px 0 26px; border-top: 1px solid var(--line); }
+    .sheet .issue-row .num {
       font-family: var(--head);
       font-size: 11px;
       letter-spacing: .16em;
@@ -114,7 +114,7 @@
       color: var(--muted);
       margin: 0 0 6px;
     }
-    .issue-row h2 {
+    .sheet .issue-row h2 {
       font-family: var(--head);
       font-size: clamp(1.6rem, 4vw, 2.1rem);
       line-height: 1.08;
@@ -123,7 +123,7 @@
       margin: 0 0 14px;
       color: #141414 !important;
     }
-    .issue-row .inside-kicker {
+    .sheet .issue-row .inside-kicker {
       font-family: var(--head);
       font-size: 12px;
       letter-spacing: .22em;
@@ -131,16 +131,16 @@
       color: var(--red);
       margin: 0 0 8px;
     }
-    .issue-row ul { margin: 0 0 16px; padding: 0; list-style: none; }
-    .issue-row li {
+    .sheet .issue-row ul { margin: 0 0 16px; padding: 0; list-style: none; }
+    .sheet .issue-row li {
       font-size: 15px;
       line-height: 1.4;
       padding: 8px 0;
       border-top: 1px solid var(--line);
       color: #141414 !important;
     }
-    .issue-row li:first-child { border-top: 0; padding-top: 0; }
-    .cta {
+    .sheet .issue-row li:first-child { border-top: 0; padding-top: 0; }
+    .sheet .cta {
       display: inline-block;
       font-family: var(--head);
       font-size: 12px;
@@ -151,7 +151,7 @@
       border-bottom: 1px solid var(--red);
       padding-bottom: 2px;
     }
-    .end {
+    .sheet .end {
       margin-top: 56px;
       padding-top: 16px;
       border-top: 1px solid var(--line);
@@ -159,7 +159,7 @@
       color: var(--muted);
       line-height: 1.6;
     }
-    .end a { color: var(--ink); }
+    .sheet .end a { color: var(--ink); }
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .plate { padding: 22px 20px 18px; }

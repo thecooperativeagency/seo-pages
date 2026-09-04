@@ -21,22 +21,22 @@
       --line: rgba(20,20,20,.14);
       --red: #bb0a30;
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
-    body {
+    .sheet, .sheet * { box-sizing: border-box; }
+    .sheet { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    .sheet {
       font-family: Newsreader, Georgia, "Times New Roman", serif;
       -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; }
-    img { display: block; width: 100%; }
+    .sheet a { color: inherit; }
+    .sheet img { display: block; width: 100%; }
     .sheet {
       max-width: 820px;
       margin: 0 auto;
       background: var(--paper);
       padding: 32px 32px 72px;
     }
-    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
-    .mast .news {
+    .sheet .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .sheet .mast .news {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       letter-spacing: .46em;
@@ -44,7 +44,7 @@
       text-transform: uppercase;
       margin: 10px 0 0;
     }
-    .mast h1 {
+    .sheet .mast h1 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       color: var(--red);
@@ -53,16 +53,16 @@
       letter-spacing: -.04em;
       margin: 0;
     }
-    .mast .sub {
+    .sheet .mast .sub {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       letter-spacing: .26em;
       font-size: 11px;
       text-transform: uppercase;
       margin: 12px 0 0;
     }
-    .hero { margin-top: 0; color: #fff; }
-    .plate { background: #fff; padding: 28px 28px 22px; }
-    .plate h1 {
+    .sheet .hero { margin-top: 0; color: #fff; }
+    .sheet .plate { background: #fff; padding: 28px 28px 22px; }
+    .sheet .plate h1 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       color: var(--red);
@@ -71,7 +71,7 @@
       letter-spacing: -.045em;
       margin: 0;
     }
-    .plate .meta {
+    .sheet .plate .meta {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 11px;
       letter-spacing: .18em;
@@ -79,9 +79,9 @@
       color: #141414;
       margin: 12px 0 0;
     }
-    .art { position: relative; }
-    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
-    .art::after {
+    .sheet .art { position: relative; }
+    .sheet .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
+    .sheet .art::after {
       content: "";
       position: absolute;
       left: 0; right: 0; bottom: 0;
@@ -89,14 +89,14 @@
       background: linear-gradient(transparent, rgba(0,0,0,.52));
       pointer-events: none;
     }
-    .story {
+    .sheet .story {
       position: absolute;
       left: 28px;
       right: 28px;
       bottom: 28px;
       z-index: 2;
     }
-    .story h2 {
+    .sheet .story h2 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       color: #fff !important;
@@ -106,8 +106,8 @@
       margin: 0 0 14px;
       text-shadow: 0 1px 14px rgba(0,0,0,.35);
     }
-    .story ul { list-style: none; margin: 0; padding: 0; }
-    .story li {
+    .sheet .story ul { list-style: none; margin: 0; padding: 0; }
+    .sheet .story li {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 11px;
       letter-spacing: .16em;
@@ -117,17 +117,17 @@
       border-top: 1px solid rgba(255,255,255,.32);
       line-height: 1.35;
     }
-    .cover-shot {
+    .sheet .cover-shot {
       position: relative;
       margin: 0 0 10px;
       color: #fff;
     }
-    .cover-shot img {
+    .sheet .cover-shot img {
       aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: 50% 38%;
     }
-    .cover-shot::after {
+    .sheet .cover-shot::after {
       content: "";
       position: absolute;
       left: 0; right: 0; bottom: 0;
@@ -135,18 +135,18 @@
       background: linear-gradient(transparent, rgba(0,0,0,.62));
       pointer-events: none;
     }
-    .cover-shot .lockup {
+    .sheet .cover-shot .lockup {
       position: absolute;
       left: 24px;
       right: 24px;
       bottom: 18px;
       z-index: 1;
     }
-    .cover-shot .lockup .kicker {
+    .sheet .cover-shot .lockup .kicker {
       color: var(--red);
       margin: 0 0 8px;
     }
-    .cover-shot .lockup h2 {
+    .sheet .cover-shot .lockup h2 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       color: #fff !important;
@@ -156,15 +156,15 @@
       margin: 0;
       text-shadow: 0 1px 16px rgba(0,0,0,.4);
     }
-    .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
-    .strip img { aspect-ratio: 1; object-fit: cover; }
-    .cover-meta {
+    .sheet .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .sheet .strip img { aspect-ratio: 1; object-fit: cover; }
+    .sheet .cover-meta {
       display: grid;
       grid-template-columns: .85fr 1.15fr;
       gap: 28px;
       margin-top: 18px;
     }
-    .issue-box {
+    .sheet .issue-box {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 11px;
       letter-spacing: .16em;
@@ -172,7 +172,7 @@
       color: var(--muted);
       line-height: 1.7;
     }
-    .inside .label {
+    .sheet .inside .label {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 12px;
       letter-spacing: .22em;
@@ -180,16 +180,16 @@
       color: var(--red);
       margin: 0 0 8px;
     }
-    .inside ul { margin: 0; padding: 0; list-style: none; }
-    .inside li {
+    .sheet .inside ul { margin: 0; padding: 0; list-style: none; }
+    .sheet .inside li {
       font-size: 15px;
       line-height: 1.4;
       padding: 8px 0;
       border-top: 1px solid var(--line);
     }
-    .inside li:first-child { border-top: 0; padding-top: 0; }
-    .inside li, .open, h2, h3, .cal li, .cal strong, .sheet p, .mast .news, .mast .sub { color: #141414 !important; }
-    .toc {
+    .sheet .inside li:first-child { border-top: 0; padding-top: 0; }
+    .sheet .inside li, .sheet .open, .sheet h2, .sheet h3, .sheet .cal li, .sheet .cal strong, .sheet p, .sheet .mast .news, .sheet .mast .sub { color: #141414 !important; }
+    .sheet .toc {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
@@ -197,7 +197,7 @@
       padding-top: 14px;
       border-top: 1px solid var(--line);
     }
-    .toc a {
+    .sheet .toc a {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 11px;
       letter-spacing: .18em;
@@ -205,15 +205,15 @@
       text-decoration: none;
       color: var(--muted);
     }
-    .open {
+    .sheet .open {
       margin: 48px 0 8px;
       font-family: Newsreader, Georgia, "Times New Roman", serif;
       font-size: clamp(1.6rem, 3vw, 2rem);
       line-height: 1.4;
       font-weight: 400;
     }
-    .sec { margin-top: 64px; }
-    .kicker {
+    .sheet .sec { margin-top: 64px; }
+    .sheet .kicker {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 11px;
       letter-spacing: .24em;
@@ -221,7 +221,7 @@
       color: var(--red);
       margin: 0 0 10px;
     }
-    h2 {
+    .sheet h2 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: clamp(2rem, 4vw, 2.7rem);
       line-height: 1.08;
@@ -229,20 +229,20 @@
       font-weight: 700;
       margin: 0 0 16px;
     }
-    h3 {
+    .sheet h3 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 1.55rem;
       line-height: 1.2;
       font-weight: 700;
       margin: 8px 0 12px;
     }
-    p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #141414 !important; }
-    .shot { margin: 0 0 10px; }
-    .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
-    .shot.product img { aspect-ratio: 4 / 3; object-fit: contain; background: #f4f4f4; }
-    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
-    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
-    .cap {
+    .sheet p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #141414 !important; }
+    .sheet .shot { margin: 0 0 10px; }
+    .sheet .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .sheet .shot.product img { aspect-ratio: 4 / 3; object-fit: contain; background: #f4f4f4; }
+    .sheet .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .sheet .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    .sheet .cap {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 10px;
       letter-spacing: .18em;
@@ -250,18 +250,18 @@
       color: var(--muted);
       margin: 8px 0 18px;
     }
-    .credit { font-size: 13px; color: var(--muted); }
-    .credit a { text-decoration: underline; text-underline-offset: 3px; }
-    .cal { margin: 18px 0 0; padding: 0; list-style: none; }
-    .cal li {
+    .sheet .credit { font-size: 13px; color: var(--muted); }
+    .sheet .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .sheet .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .sheet .cal li {
       padding: 12px 0;
       border-top: 1px solid var(--line);
       font-size: 16px;
       line-height: 1.5;
     }
-    .cal strong { font-family: "AudiType", Arial, Helvetica, sans-serif; letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
-    .cal a { text-decoration: underline; text-underline-offset: 3px; }
-    .cta {
+    .sheet .cal strong { font-family: "AudiType", Arial, Helvetica, sans-serif; letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .sheet .cal a { text-decoration: underline; text-underline-offset: 3px; }
+    .sheet .cta {
       display: inline-block;
       margin-top: 8px;
       font-family: "AudiType", Arial, Helvetica, sans-serif;
@@ -273,8 +273,8 @@
       border-bottom: 1px solid var(--red);
       padding-bottom: 2px;
     }
-    .lot-car { margin-top: 40px; }
-    .offers {
+    .sheet .lot-car { margin-top: 40px; }
+    .sheet .offers {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1px;
@@ -282,11 +282,11 @@
       border: 1px solid var(--line);
       margin: 4px 0 18px;
     }
-    .offer {
+    .sheet .offer {
       background: var(--paper);
       padding: 14px 16px 16px;
     }
-    .offer .lbl {
+    .sheet .offer .lbl {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 10px;
       letter-spacing: .18em;
@@ -294,7 +294,7 @@
       color: var(--muted);
       margin: 0 0 6px;
     }
-    .offer .amt {
+    .sheet .offer .amt {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       font-size: 1.45rem;
@@ -303,7 +303,7 @@
       color: var(--red);
       margin: 0;
     }
-    .offer .note {
+    .sheet .offer .note {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-size: 11px;
       letter-spacing: .04em;
@@ -311,7 +311,7 @@
       margin: 6px 0 0;
       line-height: 1.35;
     }
-    .end {
+    .sheet .end {
       margin-top: 56px;
       padding-top: 22px;
       border-top: 1px solid var(--line);
@@ -321,24 +321,24 @@
       line-height: 1.7;
       text-align: center;
     }
-    .end .issue-line {
+    .sheet .end .issue-line {
       letter-spacing: .14em;
       text-transform: uppercase;
       margin: 0 0 16px;
       color: var(--ink);
     }
-    .end .issue-line a {
+    .sheet .end .issue-line a {
       color: var(--ink);
       text-decoration: underline;
       text-underline-offset: 3px;
     }
-    .end .social {
+    .sheet .end .social {
       display: flex;
       justify-content: center;
       gap: 22px;
       margin: 0 0 16px;
     }
-    .end .social a {
+    .sheet .end .social a {
       letter-spacing: .16em;
       text-transform: uppercase;
       text-decoration: none;
@@ -346,10 +346,10 @@
       border-bottom: 1px solid var(--line);
       padding-bottom: 2px;
     }
-    .end .store { margin: 0; color: var(--ink); }
-    .end .store a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-    .end .web { margin: 6px 0 0; }
-    .end .web a { color: var(--muted); text-decoration: none; letter-spacing: .08em; }
+    .sheet .end .store { margin: 0; color: var(--ink); }
+    .sheet .end .store a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .sheet .end .web { margin: 6px 0 0; }
+    .sheet .end .web a { color: var(--muted); text-decoration: none; letter-spacing: .08em; }
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair, .offers { grid-template-columns: 1fr; }
