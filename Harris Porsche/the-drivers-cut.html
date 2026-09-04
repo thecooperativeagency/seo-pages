@@ -17,18 +17,16 @@
       --gold: #C5A028;
       --head: "Porsche Next", "Arial Narrow", Arial, sans-serif;
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
-    body {
+    .sheet, .sheet * { box-sizing: border-box; }
+    .sheet a { color: inherit; }
+    .sheet img { display: block; width: 100%; }
+    .sheet {
       font-family: Newsreader, Georgia, "Times New Roman", serif;
       -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; }
-    img { display: block; width: 100%; }
-    .sheet {
       max-width: 820px;
       margin: 0 auto;
       background: var(--paper);
+      color: var(--ink);
       padding: 32px 32px 72px;
     }
     .hero {
@@ -43,7 +41,7 @@
     .plate h1 {
       font-family: var(--head);
       font-weight: 700;
-      color: var(--gold);
+      color: var(--gold) !important;
       font-size: clamp(2.5rem, 8.5vw, 4.2rem);
       line-height: .88;
       letter-spacing: -.045em;
@@ -54,7 +52,7 @@
       font-size: 11px;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: #141414;
+      color: #141414 !important;
       margin: 12px 0 0;
     }
     .art {
