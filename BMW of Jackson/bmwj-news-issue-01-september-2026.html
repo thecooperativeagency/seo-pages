@@ -56,8 +56,61 @@
       text-transform: uppercase;
       margin: 12px 0 0;
     }
-    .hero { margin-top: 14px; }
-    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 42%; }
+    .hero { margin-top: 0; color: #fff; }
+    .plate { background: #fff; padding: 28px 28px 22px; }
+    .plate h1 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: var(--blue);
+      font-size: clamp(2.5rem, 8.5vw, 4.2rem);
+      line-height: .88;
+      letter-spacing: -.045em;
+      margin: 0;
+    }
+    .plate .meta {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #141414;
+      margin: 12px 0 0;
+    }
+    .art { position: relative; }
+    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 42%; }
+    .art::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 38%;
+      background: linear-gradient(transparent, rgba(0,0,0,.52));
+      pointer-events: none;
+    }
+    .story {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+    }
+    .story h2 {
+      color: #fff !important;
+      font-size: clamp(1.7rem, 4.6vw, 2.4rem);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+      margin: 0 0 14px;
+      text-shadow: 0 1px 14px rgba(0,0,0,.35);
+    }
+    .story ul { list-style: none; margin: 0; padding: 0; }
+    .story li {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 7px 0;
+      border-top: 1px solid rgba(255,255,255,.32);
+      line-height: 1.35;
+    }
     .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
     .strip img { aspect-ratio: 1; object-fit: cover; }
     .cover-meta {
@@ -231,20 +284,33 @@
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
-      .hero img { aspect-ratio: 3 / 4; }
+      .plate { padding: 22px 20px 18px; }
+      .art img { aspect-ratio: 3 / 4; }
+      .story { left: 20px; right: 20px; bottom: 20px; }
       .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
   </style>
 </head>
 <body>
   <article class="sheet">
-    <header class="mast">
-      <h1>The Ultimate<br />Driver</h1>
-      <p class="sub">BMW of Jackson &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
-    </header>
-
     <div class="hero">
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/cover-x3-lot.jpg" alt="BMW X3 on the lot at BMW of Jackson" />
+      <div class="plate">
+        <h1>The Ultimate Driver</h1>
+        <p class="meta">BMW of Jackson &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
+      </div>
+      <div class="art">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/cover-x3-lot.jpg" alt="BMW X3 on the lot at BMW of Jackson" />
+        <div class="story">
+          <h2>The i3 Touring</h2>
+          <ul>
+            <li>Elvie’s, then Cyril Neville</li>
+            <li>Gear Up &amp; Unleash, 5 September</li>
+            <li>Omega Speedmaster 38</li>
+            <li>X5, X3, X7</li>
+            <li>Oil, the plan, brakes</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="strip">
       <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/i3-touring-spy.jpg" alt="i3 Touring prototype" />

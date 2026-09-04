@@ -60,44 +60,62 @@
       text-transform: uppercase;
       margin: 12px 0 0;
     }
-    .hero { margin-top: 14px; position: relative; color: #fff; }
-    .hero::after {
+    .hero { margin-top: 0; color: #fff; }
+    .plate { background: #fff; padding: 28px 28px 22px; }
+    .plate h1 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: var(--red);
+      font-size: clamp(2.5rem, 8.5vw, 4.2rem);
+      line-height: .88;
+      letter-spacing: -.045em;
+      margin: 0;
+    }
+    .plate .meta {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #141414;
+      margin: 12px 0 0;
+    }
+    .art { position: relative; }
+    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
+    .art::after {
       content: "";
       position: absolute;
       left: 0; right: 0; bottom: 0;
-      height: 52%;
-      background: linear-gradient(transparent, rgba(0,0,0,.55));
+      height: 38%;
+      background: linear-gradient(transparent, rgba(0,0,0,.52));
       pointer-events: none;
     }
-    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
-    .hero .lockup {
+    .story {
       position: absolute;
-      left: 24px;
-      right: 24px;
-      bottom: 18px;
-      z-index: 1;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
     }
-    .hero .lockup h2 {
+    .story h2 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
       color: #fff !important;
-      font-size: clamp(2.4rem, 9vw, 4.6rem);
-      line-height: .88;
-      letter-spacing: -.04em;
-      margin: 0 0 12px;
-      text-shadow: 0 1px 16px rgba(0,0,0,.45);
+      font-size: clamp(1.7rem, 4.6vw, 2.4rem);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+      margin: 0 0 14px;
+      text-shadow: 0 1px 14px rgba(0,0,0,.35);
     }
-    .hero .teasers { list-style: none; margin: 0; padding: 0; }
-    .hero .teasers li {
+    .story ul { list-style: none; margin: 0; padding: 0; }
+    .story li {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      letter-spacing: .14em;
+      font-size: 11px;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: #fff !important;
       padding: 7px 0;
-      border-top: 1px solid rgba(255,255,255,.4);
-      line-height: 1.3;
-      text-shadow: 0 1px 10px rgba(0,0,0,.4);
+      border-top: 1px solid rgba(255,255,255,.32);
+      line-height: 1.35;
     }
     .cover-shot {
       position: relative;
@@ -335,30 +353,31 @@
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair, .offers { grid-template-columns: 1fr; }
-      .hero img { aspect-ratio: 3 / 4; }
-      .hero .lockup { left: 16px; right: 16px; bottom: 16px; }
+      .plate { padding: 22px 20px 18px; }
+      .art img { aspect-ratio: 3 / 4; }
+      .story { left: 20px; right: 20px; bottom: 20px; }
       .cover-shot img { aspect-ratio: 3 / 4; }
       .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
       .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
   </style>
-    <div class="mast">
-      <h1>S Line</h1>
-      <p class="news">News</p>
-      <p class="sub">Audi Baton Rouge &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
-    </div>
-
     <div class="hero">
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-q3-night.jpg" alt="Audi Q3 at Country Club of Louisiana" />
-      <div class="lockup">
-        <h2>The Lane Kiffin era begins</h2>
-        <ul class="teasers">
-          <li>The next RS6, still a wagon</li>
-          <li>Cocha, then Farm Fête</li>
-          <li>Omega Speedmaster 38</li>
-          <li>Q3, Q5, Q7 — purchase and lease</li>
-          <li>The lounge, the charger, the work</li>
-        </ul>
+      <div class="plate">
+        <h1>S Line News</h1>
+        <p class="meta">Audi Baton Rouge &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
+      </div>
+      <div class="art">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-q3-night.jpg" alt="Audi Q3 at Country Club of Louisiana" />
+        <div class="story">
+          <h2>The Lane Kiffin era begins</h2>
+          <ul>
+            <li>The next RS6, still a wagon</li>
+            <li>Cocha, then Farm Fête</li>
+            <li>Omega Speedmaster 38</li>
+            <li>Q3, Q5, Q7 — purchase and lease</li>
+            <li>The lounge, the charger, the work</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="strip">
