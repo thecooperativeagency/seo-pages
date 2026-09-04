@@ -306,13 +306,43 @@
     }
     .end {
       margin-top: 56px;
-      padding-top: 16px;
+      padding-top: 22px;
       border-top: 1px solid var(--line);
-      font-size: 13px;
+      font-family: var(--head);
+      font-size: 12px;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.7;
+      text-align: center;
     }
-    .end a { color: var(--ink); }
+    .end .issue-line {
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+    .end .issue-line a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .end .social {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin: 0 0 16px;
+    }
+    .end .social a {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+    }
+    .end .store { margin: 0; color: var(--ink); }
+    .end .store a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .end .web { margin: 6px 0 0; }
+    .end .web a { color: var(--muted); text-decoration: none; letter-spacing: .08em; }
     .fine {
       font-family: var(--head);
       font-size: 11px;
@@ -599,8 +629,14 @@
     </section>
 
     <footer class="end">
-      <a href="https://brianharrisbmw.com/ultimate-driver-cover-page">The Ultimate Driver</a> · Issue 01 · September 2026<br />
-      <a href="https://brianharrisbmw.com">Brian Harris BMW</a> · 12336 Airline Hwy
+      <p class="issue-line"><a href="https://brianharrisbmw.com/ultimate-driver-cover-page">The Ultimate Driver</a> · Issue 01 · September 2026</p>
+      <p class="social">
+        <a href="https://www.facebook.com/BrianHarrisBMW">Facebook</a>
+        <a href="https://www.x.com/brianharrisbmw">X</a>
+        <a href="https://www.instagram.com/brianharrisbmw">Instagram</a>
+      </p>
+      <p class="store">Brian Harris BMW · <a href="https://www.google.com/maps/search/12336+Airline+Highway+Baton+Rouge+LA+70817">12336 Airline Highway, Baton Rouge, LA 70817</a></p>
+      <p class="web"><a href="https://www.brianharrisbmw.com">www.brianharrisbmw.com</a></p>
     </footer>
   </article>
 </body>
