@@ -60,8 +60,84 @@
       text-transform: uppercase;
       margin: 12px 0 0;
     }
-    .hero { margin-top: 14px; }
+    .hero { margin-top: 14px; position: relative; color: #fff; }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 52%;
+      background: linear-gradient(transparent, rgba(0,0,0,.55));
+      pointer-events: none;
+    }
     .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
+    .hero .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .hero .lockup h2 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.6rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0 0 12px;
+      text-shadow: 0 1px 16px rgba(0,0,0,.45);
+    }
+    .hero .teasers { list-style: none; margin: 0; padding: 0; }
+    .hero .teasers li {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 7px 0;
+      border-top: 1px solid rgba(255,255,255,.4);
+      line-height: 1.3;
+      text-shadow: 0 1px 10px rgba(0,0,0,.4);
+    }
+    .cover-shot {
+      position: relative;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .cover-shot img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .cover-shot::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 58%;
+      background: linear-gradient(transparent, rgba(0,0,0,.62));
+      pointer-events: none;
+    }
+    .cover-shot .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .cover-shot .lockup .kicker {
+      color: var(--red);
+      margin: 0 0 8px;
+    }
+    .cover-shot .lockup h2 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.4rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0;
+      text-shadow: 0 1px 16px rgba(0,0,0,.4);
+    }
     .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
     .strip img { aspect-ratio: 1; object-fit: cover; }
     .cover-meta {
@@ -260,6 +336,9 @@
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair, .offers { grid-template-columns: 1fr; }
       .hero img { aspect-ratio: 3 / 4; }
+      .hero .lockup { left: 16px; right: 16px; bottom: 16px; }
+      .cover-shot img { aspect-ratio: 3 / 4; }
+      .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
       .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
   </style>
@@ -271,6 +350,16 @@
 
     <div class="hero">
       <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-q3-night.jpg" alt="Audi Q3 at Country Club of Louisiana" />
+      <div class="lockup">
+        <h2>A Debut, and a Docket</h2>
+        <ul class="teasers">
+          <li>The next RS6, still a wagon</li>
+          <li>Cocha, then Farm Fête</li>
+          <li>Omega Speedmaster 38</li>
+          <li>Q3, Q5, Q7 — purchase and lease</li>
+          <li>The lounge, the charger, the work</li>
+        </ul>
+      </div>
     </div>
     <div class="strip">
       <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-spy-00001.jpg" alt="Next RS6 Avant prototype" />
@@ -289,6 +378,7 @@
         <p class="label">Inside</p>
         <ul>
           <li>The next RS6, still a wagon</li>
+          <li>A Debut, and a Docket</li>
           <li>Cocha, then Farm Fête</li>
           <li>Omega Speedmaster 38</li>
           <li>Q3, Q5, Q7 — purchase and lease</li>
@@ -299,6 +389,7 @@
 
     <div class="toc">
       <a href="#road">On the Road</a>
+      <a href="#saturday">On Saturday</a>
       <a href="#table">On the Table</a>
       <a href="#town">On the Town</a>
       <a href="#wrist">On the Wrist</a>
@@ -309,15 +400,20 @@
     <p class="open">September in Baton Rouge is summer that refuses to read the calendar. The heat holds; the light gives back a few minutes a night. Here’s what’s news.</p>
 
     <section class="sec" id="road">
-      <p class="kicker">On the Road</p>
-      <div class="shot">
+      <div class="cover-shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-avant-spy.jpg" alt="Next-generation Audi RS6 Avant prototype in the Austrian Alps" />
+        <div class="lockup">
+          <p class="kicker">On the Road</p>
+          <h2>Yellow labels, Austrian Alps</h2>
+        </div>
       </div>
+
       <div class="pair">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-spy-00007.jpg" alt="RS6 Avant prototype, rear three-quarter" />
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/rs6-spy-00012.jpg" alt="RS6 Avant prototype, side" />
       </div>
       <p class="cap">Next RS6 Avant · Austrian Alps · August 2026 · Carscoops / SH Proshots</p>
+      <p class="kicker">On the Road</p>
       <h2>Yellow labels, Austrian Alps</h2>
       <p>The next RS6 went quiet after a prototype clipped a barrier at the Nürburgring in May. In August it turned up again — SH Proshots caught it running public roads in the Austrian Alps, wearing full camouflage and, more usefully, a set of yellow warning labels on the hood, the doors, the trunk.</p>
       <p>Those labels are the whole scoop. In Europe they are a legal notice to first responders that a car is electrified. You cannot opt out of them. So this RS6 is a hybrid — that much is now fact.</p>
@@ -327,16 +423,39 @@
       <p class="credit">Photos: SH Proshots. <a href="https://www.carscoops.com/2026/08/audi-rs6-avant-scoop/">Carscoops, 12 August 2026</a></p>
     </section>
 
-    <section class="sec" id="table">
-      <p class="kicker">On the Table</p>
-      <div class="shot">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-hero.jpg" alt="Cocha, downtown Baton Rouge" />
+
+    <section class="sec" id="saturday">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/tiger-stadium.jpg" alt="Tiger Stadium on gameday, Baton Rouge" />
+        <div class="lockup">
+          <p class="kicker">On Saturday</p>
+          <h2>A Debut, and a Docket</h2>
+        </div>
       </div>
+      <p class="cap">Tiger Stadium · Baton Rouge</p>
+      <p class="kicker">On Saturday</p>
+      <h2>A Debut, and a Docket</h2>
+      <p>Clemson comes to Tiger Stadium on Saturday, September 5, and the whole apparatus arrives with it — ESPN’s College GameDay set up on campus, ABC’s cameras, a top-fifteen ranking in both polls. Kickoff is 6:30 p.m. Central. It is also the first time Lane Kiffin will coach a snap for LSU. New man on the sideline, full house, a night game in early September: the building has held all of these before, just never quite in this arrangement.</p>
+      <p>The other opponent this week wore a robe. A Baton Rouge judge, William Jorden, granted a preliminary injunction barring the NCAA and the SEC from punishing a school for playing certain former NFL players named in a lawsuit — two of whom, Dae’Quan Wright and Zxavian Harris, followed Kiffin over from Ole Miss. The conference answered by suing LSU itself in federal court: the school, its board, president Wade Rousse, athletic director Verge Ausberry, and the coach, over the intent to put those players on the field. The eligibility question is unsettled. The kickoff is not.</p>
+      <p>So the city gets a debut and a docket in the same weekend, which is a very Louisiana way to open a season. Come for the football; the rest will sort itself out in a courtroom that keeps its own hours. After Clemson, Louisiana Tech comes home the 12th, then Ole Miss in Oxford the 19th, and Texas A&amp;M back in Tiger Stadium the 26th.</p>
+      <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tiger_Stadium_north_side_at_LSU_in_Baton_Rouge,_LA_on_gameday.jpg">WClarke / Wikimedia Commons</a> (CC BY-SA 4.0). Reporting: <a href="https://www.espn.com/college-football/team/_/id/99/lsu-tigers">ESPN</a>, <a href="https://www.espn.com/college-football/story/_/id/49807088/judge-grants-injunction-pro-players-seeking-lsu-return">Dan Murphy</a>, <a href="https://www.espn.com/college-football/story/_/id/49816309/sec-files-suit-vs-lsu-school-intent-play-pro-athletes">Mark Schlabach</a>, 3 September 2026.</p>
+    </section>
+
+    <section class="sec" id="table">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-hero.jpg" alt="Cocha, downtown Baton Rouge" />
+        <div class="lockup">
+          <p class="kicker">On the Table</p>
+          <h2>The name is a term of endearment</h2>
+        </div>
+      </div>
+
       <div class="pair">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-room.jpg" alt="Inside Cocha" />
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/cocha-plate.jpg" alt="A plate at Cocha" />
       </div>
       <p class="cap">Cocha · 445 N. 6th · Photos: Cocha</p>
+      <p class="kicker">On the Table</p>
       <h2>The name is a term of endearment</h2>
       <p>Cocha has been open since 2016 and the name still gets asked about. It is what Enrique Pinerua calls Saskia Spanhoff. When you open a restaurant together and need to call it something, the private word becomes the sign out front.</p>
       <p>Spanhoff is from Baton Rouge — LSU, second-generation Dutch, about twenty years spent on the coast before she came home. She is a certified sommelier with roughly twelve years in wine before the doors opened, and the list reads like it. It has a point of view, not a distributor’s spreadsheet.</p>
@@ -347,15 +466,20 @@
     </section>
 
     <section class="sec" id="town">
-      <p class="kicker">On the Town</p>
-      <div class="shot">
+      <div class="cover-shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/farm-fete-1.jpg" alt="Farm Fête at Main Street Market" />
+        <div class="lockup">
+          <p class="kicker">On the Town</p>
+          <h2>Farm Fête, September 24</h2>
+        </div>
       </div>
+
       <div class="pair">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/farm-fete-2.jpg" alt="Farm Fête, Main Street Market" />
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/farm-fete-3.jpg" alt="Farm Fête" />
       </div>
       <p class="cap">Farm Fête · Main Street Market · Photos: Cathy Smart / BREADA, 2025</p>
+      <p class="kicker">On the Town</p>
       <h2>Farm Fête, September 24</h2>
       <p>For one night in September, BREADA — pronounced “bred-uh,” the Big River Economic and Agricultural Development Alliance — stops running a farmers market and throws a party. Farm Fête is the annual fundraiser: chefs, farm food, cocktails, two stages, dancing. Thursday, September 24, at Main Street Market, six to nine. Dressy casual. Early tickets are $95 and climb to $125 as the night nears.</p>
       <p>The market it funds opened in November 1996 in the parking lot of the Government building on St. Louis Street, out of a master’s thesis by Chris Campany under LSU landscape architecture professor Suzanne Turner. BREADA incorporated as a nonprofit the same year. Today it links farmers across fourteen South Louisiana parishes to the people who eat what they grow.</p>
@@ -397,15 +521,20 @@
     </section>
 
     <section class="sec" id="wrist">
-      <p class="kicker">On the Wrist</p>
-      <div class="shot">
+      <div class="cover-shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-hero.jpg" alt="Omega Speedmaster 38 mm" />
+        <div class="lockup">
+          <p class="kicker">On the Wrist</p>
+          <h2>Speedmaster 38, reconsidered</h2>
+        </div>
       </div>
+
       <div class="pair">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-speedmaster-38.jpg" alt="Omega Speedmaster 38 mm, black no-date" />
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/omega-dial.jpg" alt="Speedmaster 38 mm dial" />
       </div>
       <p class="cap">Omega Speedmaster 38 mm · ref. 324.30.38.50.01.002 · Hodinkee / Omega</p>
+      <p class="kicker">On the Wrist</p>
       <h2>Speedmaster 38, reconsidered</h2>
       <p>Omega has a new generation of the Speedmaster 38 mm, and the change that matters is easy to miss in a first glance: the subdials are round now. For years the 38 wore ovals — the thing that set it apart from the 42 mm Moonwatch, and, for some buyers, the thing that kept them away. Round subdials close that gap. From across a table this now reads as a smaller Moonwatch rather than a different idea.</p>
       <p>The one to know is reference 324.30.38.50.01.002: black dial, no date, $6,500. Applied Omega logo at twelve, dot-over-ninety tachymeter bezel, the clean version.</p>
@@ -415,12 +544,16 @@
     </section>
 
     <section class="sec" id="lot">
-      <p class="kicker">On the Lot</p>
-
-      <div class="shot">
+      <div class="cover-shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-q3-siana.jpg" alt="All-new Audi Q3, Country Club of Louisiana" />
+        <div class="lockup">
+          <p class="kicker">On the Lot</p>
+          <h2>The Q3, Redrawn</h2>
+        </div>
       </div>
+
       <p class="cap">Q3 · Country Club of Louisiana · Audi Baton Rouge</p>
+      <p class="kicker">On the Lot</p>
       <h2>The Q3, Redrawn</h2>
       <p>Third generation now, and the first real redesign since 2019 shows up everywhere but the badge. It is longer and wider, so the back seat and the cargo hold finally earn their keep, and the cabin has been rebuilt around the person driving instead of around an old idea of what a screen should be. A bigger car that still parks like a small one.</p>
       <p>Audi Baton Rouge has the all-new one on the ground, $2,500 off. Worth saying plainly: this store used to sell the Q3 at price and hold there. Not this month.</p>
@@ -493,15 +626,20 @@
     </section>
 
     <section class="sec" id="workbench">
-      <p class="kicker">On the Workbench</p>
-      <div class="shot">
+      <div class="cover-shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-lounge.jpg" alt="Audi Baton Rouge service lounge" />
+        <div class="lockup">
+          <p class="kicker">On the Workbench</p>
+          <h2>The lounge, then the work</h2>
+        </div>
       </div>
+
       <div class="pair">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-cafe.jpg" alt="Service cafe at Audi Baton Rouge" />
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-01/abr-service-drive.jpg" alt="Covered service drive at Audi Baton Rouge" />
       </div>
       <p class="cap">Service lounge · cafe · covered drive · Audi Baton Rouge</p>
+      <p class="kicker">On the Workbench</p>
       <h2>The lounge, then the work</h2>
       <p>You don’t wait in a plastic chair under fluorescent tubes. The service lounge at Audi Baton Rouge is a real room — seats, screens, coffee — while factory-trained technicians do the actual job in the bays. Covered drive, so you aren’t standing in the rain handing over keys.</p>
       <div class="shot product">

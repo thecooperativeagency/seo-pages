@@ -40,6 +40,7 @@
     .lockup {
       position: absolute;
       left: 24px;
+      right: 24px;
       bottom: 18px;
       z-index: 1;
     }
@@ -56,12 +57,34 @@
     .lockup h1 {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
       font-weight: 700;
-      color: #fff;
-      font-size: clamp(3.4rem, 14vw, 6.4rem);
-      line-height: .78;
-      letter-spacing: -.04em;
-      margin: 0;
+      color: #fff !important;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      line-height: .9;
+      letter-spacing: -.03em;
+      margin: 0 0 8px;
       text-shadow: 0 1px 16px rgba(0,0,0,.35);
+    }
+    .lockup h2 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.2rem, 8vw, 3.8rem);
+      line-height: .9;
+      letter-spacing: -.04em;
+      margin: 0 0 12px;
+      text-shadow: 0 1px 16px rgba(0,0,0,.4);
+    }
+    .teasers { list-style: none; margin: 0; padding: 0; }
+    .teasers li {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 6px 0;
+      border-top: 1px solid rgba(255,255,255,.4);
+      line-height: 1.3;
+      text-shadow: 0 1px 10px rgba(0,0,0,.4);
     }
     .cover-line {
       font-family: "AudiType", Arial, Helvetica, sans-serif;
@@ -141,7 +164,7 @@
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .hero img { aspect-ratio: 3 / 4; }
-      .lockup { left: 16px; bottom: 16px; }
+      .lockup { left: 16px; right: 16px; bottom: 16px; }
     }
   </style>
 </head>
@@ -152,6 +175,14 @@
       <span class="lockup">
         <span class="news">News</span>
         <h1>S Line</h1>
+        <h2>A Debut, and a Docket</h2>
+        <ul class="teasers">
+          <li>The next RS6, still a wagon</li>
+          <li>Cocha, then Farm Fête</li>
+          <li>Omega Speedmaster 38</li>
+          <li>Q3, Q5, Q7 — purchase and lease</li>
+          <li>The lounge, the charger, the work</li>
+        </ul>
       </span>
     </a>
     <p class="cover-line">Issue 01 · September 2026</p>
@@ -164,6 +195,7 @@
         <p class="inside-kicker">Inside</p>
         <ul>
           <li>The next RS6, still a wagon</li>
+          <li>A Debut, and a Docket</li>
           <li>Cocha, then Farm Fête</li>
           <li>Omega Speedmaster 38</li>
           <li>Q3, Q5, Q7 — what’s new, and what they cost here</li>
