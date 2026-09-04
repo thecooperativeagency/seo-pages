@@ -31,28 +31,62 @@
       background: var(--paper);
       padding: 32px 32px 72px;
     }
-    .hero {
-      display: block;
-      position: relative;
-      text-decoration: none;
-      color: #fff;
-    }
-    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; }
-    .lockup {
-      position: absolute;
-      left: 24px;
-      bottom: 18px;
-      z-index: 1;
-    }
-    .lockup h1 {
+    .hero { display: block; text-decoration: none; color: #fff; }
+    .plate { background: #fff; padding: 28px 28px 22px; }
+    .plate h1 {
       font-family: var(--head);
       font-weight: 700;
-      color: #fff;
-      font-size: clamp(3rem, 12vw, 5.4rem);
-      line-height: .86;
-      letter-spacing: -.04em;
+      color: var(--blue);
+      font-size: clamp(2.5rem, 8.5vw, 4.2rem);
+      line-height: .88;
+      letter-spacing: -.045em;
       margin: 0;
-      text-shadow: 0 1px 16px rgba(0,0,0,.35);
+    }
+    .plate .meta {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #141414;
+      margin: 12px 0 0;
+    }
+    .art { display: block; position: relative; }
+    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; }
+    .art::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 38%;
+      background: linear-gradient(transparent, rgba(0,0,0,.52));
+      pointer-events: none;
+    }
+    .story {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+    }
+    .story h2 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(1.7rem, 4.6vw, 2.4rem);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+      margin: 0 0 14px;
+      text-shadow: 0 1px 14px rgba(0,0,0,.35);
+    }
+    .story ul { list-style: none; margin: 0; padding: 0; }
+    .story li {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 7px 0;
+      border-top: 1px solid rgba(255,255,255,.32);
+      line-height: 1.35;
     }
     .cover-line {
       font-family: var(--head);
@@ -71,10 +105,7 @@
       color: var(--blue);
       margin: 0 0 8px;
     }
-    .issue-row {
-      padding: 22px 0 26px;
-      border-top: 1px solid var(--line);
-    }
+    .issue-row { padding: 22px 0 26px; border-top: 1px solid var(--line); }
     .issue-row .num {
       font-family: var(--head);
       font-size: 11px;
@@ -131,17 +162,30 @@
     .end a { color: var(--ink); }
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
-      .hero img { aspect-ratio: 3 / 4; }
-      .lockup { left: 16px; right: 16px; bottom: 16px; }
+      .plate { padding: 22px 20px 18px; }
+      .art img { aspect-ratio: 3 / 4; }
+      .story { left: 20px; right: 20px; bottom: 20px; }
     }
   </style>
 </head>
 <body>
   <article class="sheet">
     <a class="hero" href="https://brianharrisbmw.com/ultimate-driver-issue-01">
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/x5-cover.jpg" alt="BMW X5 on the lot at Brian Harris BMW" />
-      <span class="lockup">
-        <h1>The Ultimate<br />Driver</h1>
+      <span class="plate">
+        <h1>The Ultimate Driver</h1>
+        <p class="meta">Brian Harris BMW &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
+      </span>
+      <span class="art">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-01/x5-cover.jpg" alt="BMW X5 on the lot at Brian Harris BMW" />
+        <span class="story">
+          <h2>The i3 Touring</h2>
+          <ul>
+            <li>Tsunami, then Jason Carter</li>
+            <li>Tudor Black Bay 58</li>
+            <li>X5, X3, X7</li>
+            <li>Oil, 10%, brakes</li>
+          </ul>
+        </span>
       </span>
     </a>
     <p class="cover-line">Issue 01 · September 2026</p>
