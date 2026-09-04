@@ -106,8 +106,6 @@
       font-weight: 400;
     }
     .sec { margin-top: 64px; }
-    .issue-hed { margin-top: 22px; }
-    .issue-hed h2 { margin: 0; }
     .kicker {
       font-family: var(--head);
       font-size: 11px;
@@ -135,6 +133,58 @@
     .shot { margin: 0 0 10px; }
     .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
     .shot.product img { aspect-ratio: 4 / 3; object-fit: contain; background: #111; }
+    .cover-shot {
+      position: relative;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .cover-shot img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .cover-shot::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 58%;
+      background: linear-gradient(transparent, rgba(0,0,0,.62));
+      pointer-events: none;
+    }
+    .cover-shot .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .cover-shot .lockup .kicker {
+      color: var(--gold);
+      margin: 0 0 8px;
+    }
+    .cover-shot .lockup h2 {
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.4rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0 0 12px;
+      text-shadow: 0 1px 16px rgba(0,0,0,.4);
+    }
+    .cover-shot .teasers {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .cover-shot .teasers li {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 7px 0;
+      border-top: 1px solid rgba(255,255,255,.38);
+      line-height: 1.3;
+    }
     .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
     .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
     .cap {
@@ -182,6 +232,8 @@
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
       .hero img { aspect-ratio: 3 / 4; }
+      .cover-shot img { aspect-ratio: 3 / 4; }
+      .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
       .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
   </style>
@@ -192,11 +244,6 @@
       <h1>The Driver’s<br />Cut</h1>
       <p class="sub">Harris Porsche &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
     </header>
-
-    <div class="issue-hed">
-      <p class="kicker">On Saturday</p>
-      <h2>Kiffin’s first Saturday</h2>
-    </div>
 
     <div class="hero">
       <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/cayenne-cover.jpg" alt="Porsche Cayenne on the lot at Harris Porsche" />
@@ -241,11 +288,21 @@
     <p class="open" style="margin-top:0">Here’s what’s news.</p>
 
     <section class="sec" id="saturday">
-      <p class="kicker">On Saturday</p>
-      <div class="shot">
+      <div class="cover-shot">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/tiger-stadium.jpg" alt="Tiger Stadium on gameday, Baton Rouge" />
+        <div class="lockup">
+          <p class="kicker">On Saturday</p>
+          <h2>Kiffin’s first Saturday</h2>
+          <ul class="teasers">
+            <li>Clemson · 6:30 p.m. · ABC</li>
+            <li>The injunction</li>
+            <li>Ole Miss on the 19th</li>
+          </ul>
+        </div>
       </div>
       <p class="cap">Tiger Stadium · Baton Rouge</p>
+      <p class="kicker">On Saturday</p>
+      <h2>Kiffin’s first Saturday</h2>
       <p>Clemson comes to Tiger Stadium Saturday, 6:30 Central, ABC, with GameDay parked on the quad. LSU sits 0–0, eleventh in the AP, thirteenth in the coaches’ poll, and none of that means anything yet. Lane Kiffin has never coached a snap here. Saturday he does, against a team good enough to make the first answer honest.</p>
       <p>Then there is the part that happened in a courtroom. Thursday night, Baton Rouge judge William Jorden signed a preliminary injunction: the NCAA and SEC can’t punish a school for putting certain former NFL players — the ones named in the suit — on the field. Two of them followed Kiffin from Ole Miss. Dae’Quan Wright practiced twice this week and said he wants Clemson; Zxavian Harris needs a couple weeks and has circled Ole Miss on the 19th. The SEC, meanwhile, sued LSU in U.S. District Court in Alabama — the school, the board, president Wade Rousse, AD Verge Ausberry, Kiffin himself — over the intent to play them. Dabo Swinney called the whole chase “embarrassing.”</p>
       <p>After Clemson: Louisiana Tech at home the 12th, then Ole Miss in Oxford on the 19th, then Texas A&amp;M back in Baton Rouge on the 26th.</p>
