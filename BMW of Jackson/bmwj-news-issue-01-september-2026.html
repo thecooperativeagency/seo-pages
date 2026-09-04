@@ -193,6 +193,45 @@
     p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #141414 !important; }
     .shot { margin: 0 0 10px; }
     .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .cover-shot {
+      position: relative;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .cover-shot img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .cover-shot::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 58%;
+      background: linear-gradient(transparent, rgba(0,0,0,.62));
+      pointer-events: none;
+    }
+    .cover-shot .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .cover-shot .lockup .kicker {
+      color: #fff !important;
+      margin: 0 0 8px;
+    }
+    .cover-shot .lockup h2 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.4rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0;
+      text-shadow: 0 1px 16px rgba(0,0,0,.4);
+    }
     .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
     .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
     .cap {
@@ -288,6 +327,8 @@
       .art img { aspect-ratio: 3 / 4; }
       .story { left: 20px; right: 20px; bottom: 20px; }
       .strip img, .pair img { aspect-ratio: 16 / 10; }
+      .cover-shot img { aspect-ratio: 3 / 4; }
+      .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
     }
   </style>
 </head>
@@ -303,6 +344,7 @@
         <div class="story">
           <h2>The i3 Touring</h2>
           <ul>
+            <li>The Home Gate Opens First</li>
             <li>Elvie’s, then Cyril Neville</li>
             <li>Gear Up &amp; Unleash, 5 September</li>
             <li>Omega Speedmaster 38</li>
@@ -329,6 +371,7 @@
         <p class="label">Inside</p>
         <ul>
           <li>The i3 Touring</li>
+          <li>The Home Gate Opens First</li>
           <li>Elvie’s, then Cyril Neville</li>
           <li>Gear Up &amp; Unleash, 5 September</li>
           <li>Omega Speedmaster 38</li>
@@ -340,6 +383,7 @@
 
     <nav class="toc" aria-label="In this issue">
       <a href="#road">On the Road</a>
+      <a href="#saturday">On Saturday</a>
       <a href="#table">On the Table</a>
       <a href="#town">On the Town</a>
       <a href="#wrist">On the Wrist</a>
@@ -364,6 +408,23 @@
       <p>The tester wearing the camo is the dual-motor 50 xDrive: 463 horsepower, a 108.7 kWh pack, something north of 500 miles on the European cycle, and DC charging quick enough that a coffee is a real strategy again. BMW already started building the sedan in Munich. The wagon is the driver’s argument against the assumption that the only honest answer anymore is another tall SUV.</p>
       <p>Two things this is not. It is not a hybrid, and it is not confirmed for anybody’s driveway on this side of the Atlantic. A prototype at a German track proves engineers are working, nothing else — not a Mississippi delivery date, not a price, not a promise. So we watch.</p>
       <p class="credit">Photos: Carscoops / Baldauf · <a href="https://www.carscoops.com/2026/08/bmw-i3-touring-nurburgring/">The scoop</a></p>
+    </section>
+
+    <section class="sec" id="saturday">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-01/veterans-memorial-stadium.jpg" alt="Mississippi Veterans Memorial Stadium, Jackson" />
+        <div class="lockup">
+          <p class="kicker">On Saturday</p>
+          <h2>The Home Gate Opens First</h2>
+        </div>
+      </div>
+      <p class="cap">Mississippi Veterans Memorial Stadium · Jackson</p>
+      <p class="kicker">On Saturday</p>
+      <h2>The Home Gate Opens First</h2>
+      <p>The only kick that lands inside the city limits this week is Jackson State’s. Six o’clock, Mississippi Veterans Memorial Stadium, Edward Waters in town for the HOPE Labor Day Classic on Friends &amp; Family Weekend. The Tigers come in 1–0 — a 26–24 comeback over Tennessee State up in Nashville a week ago, the John Merritt Classic decided late. First real home gate of the season, and it opens before anyone else’s.</p>
+      <p>The SEC weekend splits, and this metro feels both halves. Mississippi State opens 0–0 at home — Davis Wade, 6:30 Saturday, UL Monroe on ESPNU, a clean first look under the Starkville lights. Ole Miss doesn’t play Saturday at all. The Rebels, ninth in the AP, drew a Sunday night in Nashville: No. 24 Louisville, 6:30 at Nissan Stadium on ABC, the Music City Kickoff. Not Oxford, not a Saturday — a ranked team spending the holiday weekend on neutral turf. Half the driveways in town fly one flag or the other, and this week they watch on different days.</p>
+      <p>Next Saturday tightens: State goes to Minnesota at 2:30 on CBS, and Ole Miss hosts Charlotte in Oxford at 6:45 on ESPN2 — the road to LSU on the 19th starts there.</p>
+      <p class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Mississippi_Veterans_Memorial_Stadium.jpg">Joe Furr / Wikimedia Commons</a> (public domain). Reporting: <a href="https://gojsutigers.com/sports/football/schedule">Jackson State Athletics</a>, <a href="https://gojsutigers.com/news/2026/8/29/football-tigers-come-from-behind-to-capture-john-merritt-classic.aspx">JSU recap</a>, <a href="https://hailstate.com/sports/football/schedule">Hail State</a>, <a href="https://olemisssports.com/sports/football/schedule">Ole Miss Athletics</a>, <a href="https://www.espn.com/college-football/team/_/id/344/mississippi-state-bulldogs">ESPN</a>, 4 September 2026.</p>
     </section>
 
     <section class="sec" id="table">
