@@ -33,44 +33,42 @@
     }
     .hero {
       display: block;
-      position: relative;
       text-decoration: none;
       color: #fff;
     }
-    .hero img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; }
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0; right: 0; bottom: 0;
-      height: 34%;
-      background: linear-gradient(transparent, rgba(0,0,0,.48));
-      pointer-events: none;
-    }
     .plate {
-      position: absolute;
-      top: 22px;
-      left: 22px;
-      right: 22px;
       background: #fff;
-      padding: 18px 22px 16px;
-      z-index: 2;
+      padding: 28px 28px 22px;
     }
     .plate h1 {
       font-family: var(--head);
       font-weight: 700;
       color: var(--gold);
-      font-size: clamp(1.35rem, 3.6vw, 1.85rem);
-      line-height: 1;
-      letter-spacing: -.03em;
+      font-size: clamp(2.5rem, 8.5vw, 4.2rem);
+      line-height: .88;
+      letter-spacing: -.045em;
       margin: 0;
     }
     .plate .meta {
       font-family: var(--head);
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: .18em;
       text-transform: uppercase;
       color: #141414;
-      margin: 10px 0 0;
+      margin: 12px 0 0;
+    }
+    .art {
+      display: block;
+      position: relative;
+    }
+    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; }
+    .art::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 38%;
+      background: linear-gradient(transparent, rgba(0,0,0,.52));
+      pointer-events: none;
     }
     .story {
       position: absolute;
@@ -83,8 +81,8 @@
       font-family: var(--head);
       font-weight: 700;
       color: #fff !important;
-      font-size: clamp(1.55rem, 4.2vw, 2.15rem);
-      line-height: 1.08;
+      font-size: clamp(1.7rem, 4.6vw, 2.4rem);
+      line-height: 1.06;
       letter-spacing: -.03em;
       margin: 0 0 14px;
       text-shadow: 0 1px 14px rgba(0,0,0,.35);
@@ -100,7 +98,7 @@
       letter-spacing: .16em;
       text-transform: uppercase;
       color: #fff !important;
-      padding: 8px 0;
+      padding: 7px 0;
       border-top: 1px solid rgba(255,255,255,.32);
       line-height: 1.35;
     }
@@ -181,8 +179,8 @@
     .end a { color: var(--ink); }
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
-      .hero img { aspect-ratio: 3 / 4; }
-      .plate { top: 16px; left: 16px; right: 16px; padding: 16px 18px 14px; }
+      .plate { padding: 22px 20px 18px; }
+      .art img { aspect-ratio: 3 / 4; }
       .story { left: 20px; right: 20px; bottom: 20px; }
     }
   </style>
@@ -190,18 +188,22 @@
 <body>
   <article class="sheet">
     <a class="hero" href="drivers-cut-issue-01-september-2026.html">
-      <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/cayenne-cover.jpg" alt="Porsche Cayenne on the lot at Harris Porsche" />
       <span class="plate">
         <h1>The Driver’s Cut</h1>
         <p class="meta">Harris Porsche &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
       </span>
-      <span class="story">
-        <h2>Kiffin’s first Saturday</h2>
-        <ul>
-          <li>911 Carrera S, six-speed</li>
-          <li>Elsie’s, then BoDeans</li>
-          <li>Cayenne demos</li>
-        </ul>
+      <span class="art">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-01/cayenne-cover.jpg" alt="Porsche Cayenne on the lot at Harris Porsche" />
+        <span class="story">
+          <h2>Kiffin’s first Saturday</h2>
+          <ul>
+            <li>911 Carrera S, six-speed</li>
+            <li>Elsie’s, then BoDeans</li>
+            <li>Blancpain Bathyscaphe 70th</li>
+            <li>Cayenne demos</li>
+            <li>Brakes, parts, Porsche Design</li>
+          </ul>
+        </span>
       </span>
     </a>
     <p class="cover-line">Issue 01 · September 2026</p>
