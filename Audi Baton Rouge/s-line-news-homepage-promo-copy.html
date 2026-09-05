@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copy — S Line News homepage promo</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #111; color: #fff; }
+    .bar { display: flex; gap: 12px; align-items: center; padding: 14px 16px; }
+    button {
+      min-height: 44px; padding: 10px 18px; font-weight: 700; border: 0; background: #bb0a30; color: #fff; cursor: pointer;
+    }
+    textarea {
+      display: block; width: 100%; height: calc(100vh - 72px); margin: 0; padding: 16px;
+      box-sizing: border-box; border: 0; resize: none; font: 13px/1.4 ui-monospace, Menlo, monospace;
+      background: #fff; color: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <button type="button" id="copy">Copy all</button>
+    <span id="status">Selects on open — paste into Motive.</span>
+  </div>
+  <textarea id="src" spellcheck="false"></textarea>
+  <script>
+    const src = document.getElementById("src");
+    const status = document.getElementById("status");
+    fetch("s-line-news-homepage-promo.html")
+      .then(function (r) { return r.text(); })
+      .then(function (t) {
+        src.value = t.trim();
+        src.focus();
+        src.select();
+      });
+    document.getElementById("copy").onclick = function () {
+      src.select();
+      navigator.clipboard.writeText(src.value).then(function () {
+        status.textContent = "Copied.";
+      });
+    };
+  </script>
+</body>
+</html>
