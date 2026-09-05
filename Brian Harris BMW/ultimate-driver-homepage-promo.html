@@ -7,32 +7,40 @@
       color: #141414;
       width: 100%;
       margin: 0;
-      padding: 28px 32px;
+      padding: 36px 32px 44px;
       border: 0;
+      overflow: visible !important;
     }
     .tud-home-promo .tud-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 32px 40px;
-      max-width: 1120px;
+      justify-content: center;
+      gap: 48px 56px;
+      max-width: 980px;
       margin: 0 auto;
     }
     .tud-home-promo .tud-cover {
       flex: 0 0 auto;
-      width: 220px;
+      width: 240px;
       max-width: 42%;
       text-decoration: none;
+      display: block;
+      overflow: visible !important;
+      transform: rotate(-7deg);
+      transform-origin: center center;
+      margin: 10px 18px 14px 8px;
     }
     .tud-home-promo .tud-cover img {
       display: block;
       width: 100%;
       height: auto;
-      box-shadow: 0 18px 40px rgba(20,20,20,.22);
+      box-shadow: 12px 22px 38px rgba(20,20,20,.28), 0 2px 6px rgba(20,20,20,.12);
     }
     .tud-home-promo .tud-copy {
-      flex: 1 1 280px;
+      flex: 0 1 420px;
       min-width: 0;
+      text-align: left;
     }
     .tud-home-promo .tud-kicker {
       margin: 0 0 10px;
@@ -77,9 +85,9 @@
       align-items: center;
     }
     @media (max-width: 640px) {
-      .tud-home-promo { padding: 22px 18px 26px; }
-      .tud-home-promo .tud-row { justify-content: center; text-align: left; }
-      .tud-home-promo .tud-cover { width: 200px; max-width: 70%; }
+      .tud-home-promo { padding: 28px 18px 36px; }
+      .tud-home-promo .tud-row { justify-content: center; }
+      .tud-home-promo .tud-cover { width: 210px; max-width: 68%; transform: rotate(-5deg); }
     }
   </style>
   <div class="tud-row">
