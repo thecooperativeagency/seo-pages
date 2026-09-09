@@ -1,0 +1,329 @@
+<div class="bhbmw-x5-page" style="font-family: bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;">
+
+<style>
+
+.bhbmw-x5-page,
+.bhbmw-x5-page * {
+ font-family: bmw, "BMW Type Next", BMWTypeNext, "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+.bhbmw-x5-page {
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ --ink:#0a0e14;
+ --elevated:#111820;
+ --card:#151c27;
+ --border:#2a3545;
+ --white:#fff;
+ --muted:#9aa6b5;
+ --soft:#d7dee8;
+ --bmw:#1c69d4;
+ font-family: bmw, "BMW Type Next", BMWTypeNext, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ color:var(--white);
+ background:var(--ink);
+}
+.bhbmw-x5-page * { box-sizing:border-box; }
+.bhbmw-x5-page .wrap { max-width:1120px; margin:0 auto; width:100%; }
+.bhbmw-x5-page .eyebrow { margin:0 0 12px; color:var(--muted); font-size:11px; line-height:1.4; letter-spacing:.16em; text-transform:uppercase; font-weight:700; }
+.bhbmw-x5-page h1, .bhbmw-x5-page h2, .bhbmw-x5-page h3, .bhbmw-x5-page p { margin-top:0; }
+.bhbmw-x5-page .h1 { margin:0; max-width:920px; font-size:clamp(2.35rem,5.8vw,4.6rem); line-height:.96; letter-spacing:-.045em; font-weight:700; }
+.bhbmw-x5-page .h2 { margin:0; font-size:clamp(1.9rem,3.6vw,3.4rem); line-height:.98; letter-spacing:-.04em; font-weight:700; }
+.bhbmw-x5-page .body-lg { max-width:840px; color:var(--soft); font-size:clamp(1.05rem,1.7vw,1.28rem); line-height:1.55; }
+.bhbmw-x5-page .body { color:#c5ced9; font-size:16px; line-height:1.62; }
+.bhbmw-x5-page .section { padding:72px 40px; }
+.bhbmw-x5-page .section-tight { padding:40px 40px; }
+.bhbmw-x5-page .dark { background:var(--ink); }
+.bhbmw-x5-page .elevated { background:var(--elevated); }
+.bhbmw-x5-page .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:stretch; }
+.bhbmw-x5-page .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.bhbmw-x5-page .offer-card { background:var(--card); border:1px solid var(--border); min-height:100%; display:flex; flex-direction:column; overflow:hidden; }
+.bhbmw-x5-page .offer-card.is-hero { border-color:rgba(28,105,212,.55); box-shadow:inset 0 0 0 1px rgba(28,105,212,.18); }
+.bhbmw-x5-page .offer-card.is-hero.is-split {
+  display:grid;
+  grid-template-columns:minmax(240px,42%) minmax(0,1fr);
+  align-items:stretch;
+}
+.bhbmw-x5-page .offer-card.is-hero.is-split .card-media {
+  aspect-ratio:auto;
+  height:100%;
+  min-height:280px;
+  max-height:none;
+}
+.bhbmw-x5-page .offer-card.is-hero.is-split .card-media img {
+  aspect-ratio:auto;
+  height:100%;
+  min-height:280px;
+}
+.bhbmw-x5-page .offer-card.is-hero.is-split .card-content {
+  padding:32px 34px;
+  justify-content:center;
+}
+.bhbmw-x5-page .card-media { min-height:0; aspect-ratio:1 / 1; background:#05080d; position:relative; overflow:hidden; }
+.bhbmw-x5-page .card-media img { width:100%; height:100%; min-height:0; aspect-ratio:1 / 1; display:block; object-fit:cover; opacity:.94; }
+.bhbmw-x5-page .card-media-label { position:absolute; inset:auto 22px 20px 22px; z-index:2; font-size:clamp(1.7rem,3vw,2.8rem); line-height:.9; letter-spacing:-.05em; font-weight:700; color:#fff; text-shadow:0 2px 18px rgba(0,0,0,.45); }
+.bhbmw-x5-page .card-content { padding:28px; display:flex; flex-direction:column; flex:1; }
+.bhbmw-x5-page .label { margin:0 0 10px; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.14em; font-weight:700; }
+.bhbmw-x5-page .amount { margin:0 0 10px; font-size:clamp(2.1rem,3.4vw,3.6rem); line-height:.92; letter-spacing:-.055em; font-weight:700; color:#fff; }
+.bhbmw-x5-page .meta { margin:0 0 16px; color:#f0f4f8; font-size:17px; line-height:1.45; font-weight:700; }
+.bhbmw-x5-page .pill-row { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
+.bhbmw-x5-page .pill { display:inline-flex; align-items:center; min-height:30px; padding:6px 10px; border:1px solid rgba(28,105,212,.45); background:rgba(28,105,212,.12); color:#d7e7ff; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.bhbmw-x5-page .divider { border-top:1px solid var(--border); margin-top:20px; padding-top:18px; }
+.bhbmw-x5-page a.btn-primary,
+.bhbmw-x5-page a.btn-secondary,
+.bhbmw-x5-page a.btn-compact {
+ display:inline-flex !important;
+ align-items:center !important;
+ justify-content:center !important;
+ text-align:center !important;
+ text-decoration:none !important;
+ border-radius:0 !important;
+ font-family: bmw, "BMW Type Next", BMWTypeNext, "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+ font-weight:700 !important;
+ line-height:1.2 !important;
+ white-space:nowrap !important;
+ word-break:normal !important;
+ overflow-wrap:normal !important;
+ hyphens:none !important;
+ box-sizing:border-box !important;
+ max-width:100%;
+ width:auto !important;
+ min-width:max-content !important;
+ flex:0 0 auto !important;
+ overflow:visible !important;
+ text-overflow:clip !important;
+}
+.bhbmw-x5-page a.btn-primary, .bhbmw-x5-page a.btn-secondary {
+ min-height:48px;
+ padding:12px 20px;
+ font-size:15px;
+}
+.bhbmw-x5-page a.btn-primary { background:#1c69d4 !important; color:#fff !important; border:2px solid #1c69d4 !important; }
+.bhbmw-x5-page a.btn-secondary { background:transparent !important; color:#fff !important; border:2px solid #fff !important; }
+.bhbmw-x5-page a.btn-compact {
+ min-height:40px;
+ padding:10px 14px;
+ font-size:13px;
+ background:rgba(255,255,255,.06) !important;
+ color:#fff !important;
+ border:1.5px solid rgba(255,255,255,.72) !important;
+}
+.bhbmw-x5-page .btn-row {
+ display:flex;
+ flex-wrap:wrap;
+ gap:12px;
+ margin-top:24px;
+ align-items:center;
+}
+.bhbmw-x5-page .stat-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:8px; }
+.bhbmw-x5-page .stat { border-top:2px solid #fff; padding-top:18px; }
+.bhbmw-x5-page .stat strong { display:block; margin-bottom:8px; font-size:clamp(1.7rem,3vw,2.4rem); line-height:1; letter-spacing:-.03em; color:#fff; }
+.bhbmw-x5-page .stat span { display:block; color:var(--muted); font-size:13px; line-height:1.45; letter-spacing:.04em; text-transform:uppercase; font-weight:700; }
+.bhbmw-x5-page .fineprint { margin:0; color:#9aa6b5; font-size:12px; line-height:1.65; }
+.bhbmw-x5-page .span-2 { grid-column:1 / -1; }
+.bhbmw-x5-page .shot-band { position:relative; min-height:420px; overflow:hidden; background:#000; }
+.bhbmw-x5-page .shot-band img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.78; }
+.bhbmw-x5-page .shot-band .band-copy { position:relative; z-index:2; max-width:720px; padding:72px 40px; }
+@media (max-width:980px) {
+.bhbmw-x5-page .grid-2, .bhbmw-x5-page .grid-3, .bhbmw-x5-page .stat-grid { grid-template-columns:1fr; }
+.bhbmw-x5-page .span-2 { grid-column:auto; }
+.bhbmw-x5-page .offer-card.is-hero.is-split { grid-template-columns:1fr; }
+.bhbmw-x5-page .offer-card.is-hero.is-split .card-media { aspect-ratio:1 / 1; min-height:0; height:auto; }
+.bhbmw-x5-page .offer-card.is-hero.is-split .card-media img { aspect-ratio:1 / 1; min-height:0; height:100%; }
+}
+@media (max-width:640px) {
+.bhbmw-x5-page .section, .bhbmw-x5-page .section-tight, .bhbmw-x5-page .shot-band .band-copy { padding-left:18px; padding-right:18px; }
+.bhbmw-x5-page .card-content { padding:22px; }
+.bhbmw-x5-page .offer-card.is-hero.is-split .card-content { padding:22px; }
+.bhbmw-x5-page .h1 { font-size:clamp(2.05rem,10vw,3.1rem); }
+}
+
+</style>
+
+<section style="position:relative;min-height:680px;display:flex;align-items:flex-end;background:#000;overflow:hidden;">
+ <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/hero-teaser.jpg" alt="The all-new BMW X5" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;opacity:.72;" />
+ <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,10,18,.96) 0%,rgba(5,10,18,.78) 46%,rgba(5,10,18,.22) 100%);"></div>
+ <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,18,.18) 0%,rgba(5,10,18,.08) 40%,rgba(5,10,18,.88) 100%);"></div>
+ <div class="wrap" style="position:relative;z-index:2;padding:120px 40px 56px;">
+ <p class="eyebrow">BMW of Jackson &middot; All-New 2027 BMW X5</p>
+ <h1 class="h1">The all-new BMW X5.<br>Built to lead.</h1>
+ <p class="body-lg" style="margin-top:22px;">Fifth-generation Sports Activity Vehicle. Neue Klasse technology. We lead with the gas mild-hybrid X5 &mdash; then the plug-in hybrid and the first all-electric BMW iX5.</p>
+ <div class="btn-row">
+ <a href="https://bmwofjackson.net/contact" class="btn-primary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Talk to Us</span></a>
+ <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-secondary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Shop X5 Now</span></a>
+ </div>
+ <div class="btn-row" style="margin-top:14px;" aria-label="Shop BMW X5 options">
+ <a href="https://bmwofjackson.net/cars/new-inventory" class="btn-compact" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:40px !important;padding:10px 16px !important;font-size:13px !important;background:rgba(255,255,255,.06) !important;color:#fff !important;border:1.5px solid rgba(255,255,255,.72) !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Shop New</span></a>
+ <a href="https://bmwofjackson.net/new-bmw-specials" class="btn-compact" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:40px !important;padding:10px 16px !important;font-size:13px !important;background:rgba(255,255,255,.06) !important;color:#fff !important;border:1.5px solid rgba(255,255,255,.72) !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">View Specials</span></a>
+ <a href="https://bmwofjackson.net/contact" class="btn-compact" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:40px !important;padding:10px 16px !important;font-size:13px !important;background:rgba(255,255,255,.06) !important;color:#fff !important;border:1.5px solid rgba(255,255,255,.72) !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Contact</span></a>
+ </div>
+ </div>
+</section>
+
+<section class="section-tight dark">
+ <div class="wrap">
+ <p class="body-lg">The original SAV enters its next chapter at BMW of Jackson in Jackson. Same commanding X proportions. A new design language. Start with the combustion X5 that defines the lineup &mdash; then choose plug-in hybrid or fully electric when it fits.</p>
+ </div>
+</section>
+
+<section class="section elevated">
+ <div class="wrap">
+ <p class="eyebrow">Lead story &middot; Gas mild-hybrid</p>
+ <h2 class="h2" style="max-width:920px;margin-bottom:14px;">The new BMW X5. Combustion first.</h2>
+ <p class="body-lg" style="margin-bottom:28px;">X5 40 and X5 40 xDrive open the generation with 48V mild-hybrid technology, signature BMW dynamics, and the upright Neue Klasse front end.</p>
+ <div class="stat-grid">
+ <div class="stat"><strong>394 hp</strong><span>BMW X5 gas models</span></div>
+ <div class="stat"><strong>27.3&ndash;67.7</strong><span>Cu-ft cargo capacity</span></div>
+ <div class="stat"><strong>Oct 2026</strong><span>X5 40 xDrive U.S. launch</span></div>
+ </div>
+ </div>
+</section>
+
+<section class="section dark">
+ <div class="wrap">
+ <p class="eyebrow">Featured &middot; All-new ICE X5</p>
+ <h2 class="h2" style="max-width:920px;margin-bottom:14px;">X5 40 and X5 40 xDrive lead the rollout.</h2>
+ <p class="body-lg" style="margin-bottom:34px;">Familiar X stance. New Iconic Glow kidney. Double-X light icons. Built at the Home of X in Spartanburg.</p>
+
+ <div class="grid-2">
+ <article class="offer-card is-hero is-split span-2">
+ <div class="card-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/ice-front-3-4-v2-1x1.jpg" alt="All-new BMW X5 gas model" /><div class="card-media-label">X5</div></div>
+ <div class="card-content">
+ <p class="label">All-new fifth generation &middot; Gas mild-hybrid</p>
+ <div class="amount">X5 40 xDrive</div>
+ <p class="meta">The market-launch model for the U.S. Powerful new design, Neue Klasse digital experience, and classic BMW SAV capability.</p>
+ <div class="pill-row">
+ <span class="pill">48V mild hybrid</span>
+ <span class="pill">From $72,100</span>
+ <span class="pill">Oct 2026 launch</span>
+ </div>
+ <p class="body">X5 40 xDrive leads the 2027 rollout beginning in October 2026. Rear-wheel-drive X5 40 follows in the first quarter of 2027 from $69,800. Destination and handling $1,450 extra.</p>
+ <div class="divider"><p class="body"><strong>Also coming:</strong> X5 50e xDrive plug-in hybrid from $77,500 in Q1 2027 &mdash; after the core gas models set the story.</p></div>
+ <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/contact" class="btn-primary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Get on the List</span></a> <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-secondary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Shop Current X5</span></a></div>
+ </div>
+ </article>
+
+ <article class="offer-card">
+ <div class="card-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/ice-front-3-4-mountain-1x1.jpg" alt="All-new BMW X5 exterior design" /><div class="card-media-label">Design</div></div>
+ <div class="card-content">
+ <p class="label">Neue Klasse exterior language</p>
+ <div class="amount">Iconic Glow</div>
+ <p class="meta">Vertically aligned kidney grille. Double-X light icons. Monolithic surfaces and Winglet door handles.</p>
+ <div class="pill-row">
+ <span class="pill">Double-X lights</span>
+ <span class="pill">Hidden handles</span>
+ </div>
+ <p class="body">Upright front end, muscular wheel arches, and a wide rear light signature keep classic X stance while reading unmistakably new.</p>
+ </div>
+ </article>
+
+ <article class="offer-card">
+ <div class="card-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/ice-skyshot-1x1.jpg" alt="All-new BMW X5 presence" /><div class="card-media-label">Presence</div></div>
+ <div class="card-content">
+ <p class="label">Signature SAV proportions</p>
+ <div class="amount">Built to lead</div>
+ <p class="meta">The model that created the Sports Activity Vehicle segment &mdash; now in its fifth generation.</p>
+ <div class="pill-row">
+ <span class="pill">Since 1999</span>
+ <span class="pill">Home of X</span>
+ </div>
+ <p class="body">Plant Spartanburg has built the BMW X5 since day one. The new generation continues that story with more choice across drive systems.</p>
+ </div>
+ </article>
+ </div>
+ </div>
+</section>
+
+<section class="shot-band">
+ <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/ice-front-3-4-v1-web.jpg" alt="All-new BMW X5 front three-quarter" />
+ <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,10,18,.92),rgba(5,10,18,.35) 55%,rgba(5,10,18,.15));"></div>
+ <div class="band-copy">
+ <p class="eyebrow">Inside the cabin</p>
+ <h2 class="h2" style="margin-bottom:14px;">Panoramic Vision. Driver-first cockpit.</h2>
+ <p class="body-lg">BMW Panoramic Vision spans the windshield. A free-cut Central Display keeps controls clean. Optional Passenger Screen gives the front passenger a dedicated display. Standard two-part panoramic glass sunroof opens the cabin to light.</p>
+ </div>
+</section>
+
+<section class="section elevated">
+ <div class="wrap">
+ <p class="eyebrow">Follow-up &middot; Electric models</p>
+ <h2 class="h2" style="max-width:920px;margin-bottom:14px;">Then the all-electric BMW iX5.</h2>
+ <p class="body-lg" style="margin-bottom:28px;">After the gas X5 leads, the first battery-electric BMW X5 expands the lineup with sixth-generation eDrive, 800V architecture, and long-range electric freedom.</p>
+ <div class="stat-grid" style="margin-bottom:34px;">
+ <div class="stat"><strong>435 mi</strong><span>Est. max range &middot; iX5 60 xDrive</span></div>
+ <div class="stat"><strong>570 hp</strong><span>iX5 60 xDrive &middot; Sport mode</span></div>
+ <div class="stat"><strong>22 min</strong><span>10&ndash;80% DC fast charge</span></div>
+ </div>
+
+ <div class="grid-2">
+ <article class="offer-card is-hero is-split span-2">
+ <div class="card-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/card-front-v2-1x1.jpg" alt="All-new BMW iX5" /><div class="card-media-label">iX5</div></div>
+ <div class="card-content">
+ <p class="label">First battery-electric BMW X5</p>
+ <div class="amount">iX5 60 xDrive</div>
+ <p class="meta">Estimated 435 miles of range. 800V technology. Practical bidirectional charging. Built at Spartanburg.</p>
+ <div class="pill-row">
+ <span class="pill">All-electric</span>
+ <span class="pill">Up to 435 mi</span>
+ <span class="pill">From $79,800</span>
+ <span class="pill">Q1 2027</span>
+ </div>
+ <p class="body">Available to order starting October 2026, with market arrival in the first quarter of 2027. MSRP excludes $1,450 destination and handling.</p>
+ <div class="divider"><p class="body"><strong>Power of choice:</strong> gas mild-hybrid, plug-in hybrid X5 50e xDrive, and iX5 &mdash; one architecture, multiple ways to drive.</p></div>
+ <div class="btn-row" style="margin-top:auto;"><a href="https://bmwofjackson.net/contact" class="btn-primary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Ask About iX5</span></a> <a href="https://bmwofjackson.net/contact" class="btn-secondary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Contact Us</span></a></div>
+ </div>
+ </article>
+
+ <article class="offer-card">
+ <div class="card-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/card-mountain-1x1.jpg" alt="BMW iX5 exterior" /><div class="card-media-label">iX5</div></div>
+ <div class="card-content">
+ <p class="label">Electric design expression</p>
+ <div class="amount">Continuous apron</div>
+ <p class="meta">iX5 uses a continuous front-apron design for a more elegant fully electric expression, with the same double-X light icons and Iconic Glow signature.</p>
+ </div>
+ </article>
+
+ <article class="offer-card">
+ <div class="card-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/card-side-1x1.jpg" alt="BMW iX5 side profile" /><div class="card-media-label">Charge</div></div>
+ <div class="card-content">
+ <p class="label">Everyday electric capability</p>
+ <div class="amount">Fast charge</div>
+ <p class="meta">About 22 minutes from 10&ndash;80% at a DC fast charger at maximum charge rate. Level 2 overnight charging at home with the Multifunction Charger.</p>
+ </div>
+ </article>
+ </div>
+ <p class="fineprint" style="margin-top:22px;">Range is a preliminary BMW AG estimate based on EPA testing procedures and will vary. Horsepower is maximum available in Sport mode. Charge time assumes maximum charge rate.</p>
+ </div>
+</section>
+
+<section class="section dark">
+ <div class="wrap">
+ <p class="eyebrow">At BMW of Jackson</p>
+ <h2 class="h2" style="max-width:880px;margin-bottom:14px;">Ready when the all-new X5 arrives in Jackson.</h2>
+ <p class="body-lg" style="margin-bottom:8px;">Talk with our team about gas X5 timing first, then plug-in hybrid and iX5 allocation &mdash; plus current-generation X5 inventory on the ground now.</p>
+ <div class="btn-row">
+ <a href="https://bmwofjackson.net/contact" class="btn-primary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Contact Us</span></a>
+ <a href="https://bmwofjackson.net/cars/bmw-x5" class="btn-secondary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Shop X5 Inventory</span></a>
+ <a href="https://bmwofjackson.net/new-bmw-specials" class="btn-secondary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">View Specials</span></a>
+ </div>
+ </div>
+</section>
+
+<section style="position:relative;padding:104px 40px;background-image:url('https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-x5-2027-all-new/ice-rear-1x1.jpg');background-size:cover;background-position:center;">
+ <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,18,.28),rgba(5,10,18,.92));"></div>
+ <div class="wrap" style="position:relative;z-index:2;max-width:860px;">
+ <p class="eyebrow">All-new 2027 BMW X5</p>
+ <h2 class="h2" style="margin-bottom:16px;">Lead with the X5. Follow with the iX5.</h2>
+ <p class="body-lg">See the all-new generation with the team at BMW of Jackson.</p>
+ <div class="btn-row" style="margin-top:26px;">
+ <a href="https://bmwofjackson.net/contact" class="btn-primary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Talk to Us</span></a>
+ <a href="https://bmwofjackson.net/cars/new-inventory" class="btn-secondary" style="font-family:bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Shop All New</span></a>
+ </div>
+ </div>
+</section>
+
+<section class="section-tight dark" style="border-top:1px solid #2a3545;">
+ <div class="wrap">
+ <p class="eyebrow">Disclosures</p>
+ <p class="fineprint">Information on this page is based on BMW Group PressClub USA materials for The New BMW X5 and iX5 (June 30, 2026) and BMW USA model pages. Specifications, availability, pricing, range, horsepower, and charge times are subject to change without notice. Gas-model horsepower (394 hp) and cargo capacity (27.3&ndash;67.7 cu-ft) reference BMW USA X5 model page figures. Estimated maximum range of up to 435 miles for the BMW iX5 60 xDrive is a preliminary BMW AG estimation based on EPA testing procedures and will vary with vehicle configuration, tires/wheels, driving style, conditions, accessories, temperature, and charging frequency. Ranges may not yet be fully EPA-certified. iX5 horsepower figures reflect maximum available when the vehicle is in Sport mode. DC fast-charge time of approximately 22 minutes from 10&ndash;80% assumes maximum charge rate. MSRP figures shown exclude destination and handling of $1,450 and do not include taxes, title, license, options, or dealer fees. U.S. rollout timing referenced by BMW: X5 40 xDrive market launch beginning October 2026; X5 40, X5 50e xDrive, and iX5 60 xDrive in the first quarter of 2027. Some images may be computer-generated and may show European-specification or pre-production vehicles. Dealer inventory of the all-new 2027 X5/iX5 depends on allocation and production timing. Current in-stock X5 inventory linked from this page may be prior model year. Contact BMW of Jackson in Jackson for the latest availability. BMW, the BMW logo, and Ultimate Driving Machine are trademarks of BMW AG used for identification of BMW products. BMW of Jackson is an authorized BMW dealer.</p>
+ </div>
+</section>
+</div>
