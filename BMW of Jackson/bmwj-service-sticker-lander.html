@@ -1,0 +1,342 @@
+<div class="bmwj-specials-page bmwj-service-lander" style="font-family: bmw, 'BMW Type Next', BMWTypeNext, Helvetica, Arial, sans-serif;">
+<style>
+.bmwj-specials-page,.bmwj-specials-page * {font-family:bmw,"BMW Type Next",BMWTypeNext,"Helvetica Neue",Helvetica,Arial,sans-serif !important;}
+.bmwj-specials-page {-webkit-font-smoothing:antialiased;box-sizing:border-box;--ink:#0a0e14;--elevated:#111820;--card:#151c27;--border:#2a3545;--white:#fff;--muted:#9aa6b5;--soft:#d7dee8;--bmw:#1c69d4;color:var(--white);background:var(--ink);overflow-x:hidden;padding-bottom:88px;}
+.bmwj-specials-page * {box-sizing:border-box;}
+.bmwj-specials-page .wrap {max-width:1120px;margin:0 auto;width:100%;}
+.bmwj-specials-page .eyebrow {margin:0 0 12px;color:var(--muted);font-size:11px;line-height:1.4;letter-spacing:.16em;text-transform:uppercase;font-weight:700;}
+.bmwj-specials-page h1,.bmwj-specials-page h2,.bmwj-specials-page h3,.bmwj-specials-page p {margin-top:0;}
+.bmwj-specials-page .h1 {margin:0 0 16px;max-width:920px;font-size:clamp(2.35rem,6.2vw,4.6rem);line-height:.96;letter-spacing:-.045em;font-weight:700;}
+.bmwj-specials-page .h2 {margin:0 0 14px;font-size:clamp(1.8rem,3.6vw,3.1rem);line-height:.98;letter-spacing:-.04em;font-weight:700;}
+.bmwj-specials-page .h3 {margin:0 0 10px;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.15;letter-spacing:-.02em;font-weight:700;}
+.bmwj-specials-page .body-lg {max-width:760px;color:var(--soft);font-size:clamp(1.05rem,1.7vw,1.28rem);line-height:1.55;margin:0 0 24px;}
+.bmwj-specials-page .body {color:#c5ced9;font-size:16px;line-height:1.62;margin:0 0 14px;}
+.bmwj-specials-page .section {padding:64px 24px;}
+.bmwj-specials-page .elevated {background:var(--elevated);}
+.bmwj-specials-page .dark {background:var(--ink);}
+.bmwj-specials-page .grid-2 {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.bmwj-specials-page .grid-3 {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.bmwj-specials-page .grid-4 {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+.bmwj-specials-page .offer-card,.bmwj-specials-page .mile-card,.bmwj-specials-page .edu-card,.bmwj-specials-page .menu-card {background:var(--card);border:1px solid var(--border);min-height:100%;display:flex;flex-direction:column;overflow:hidden;}
+.bmwj-specials-page .offer-card.is-hero {border-color:rgba(28,105,212,.55);box-shadow:inset 0 0 0 1px rgba(28,105,212,.18);}
+.bmwj-specials-page .card-content {padding:24px;display:flex;flex-direction:column;flex:1;}
+.bmwj-specials-page .label {margin:0 0 8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;}
+.bmwj-specials-page .amount {margin:0 0 10px;font-size:clamp(2rem,3.4vw,3.3rem);line-height:.9;letter-spacing:-.055em;font-weight:700;}
+.bmwj-specials-page .meta {margin:0 0 14px;color:#f0f4f8;font-size:16px;line-height:1.45;font-weight:700;}
+.bmwj-specials-page .fineprint {margin:auto 0 0;padding-top:14px;color:#7f8b9a;font-size:12px;line-height:1.55;}
+.bmwj-specials-page .btn-row {display:flex !important;flex-wrap:wrap !important;gap:12px !important;margin-top:8px;align-items:center !important;}
+.bmwj-specials-page ul.clean {margin:0;padding:0 0 0 18px;color:#c5ced9;font-size:15px;line-height:1.55;}
+.bmwj-specials-page ul.clean li {margin:0 0 8px;}
+.bmwj-specials-page ul.alacarte {margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;}
+.bmwj-specials-page ul.alacarte li {border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);padding:14px 16px;font-size:15px;font-weight:700;color:#fff;}
+.bmwj-specials-page .price-stack {display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px;}
+.bmwj-specials-page .price-pill {display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border:1px solid rgba(28,105,212,.5);background:rgba(28,105,212,.14);color:#fff;font-size:clamp(1.15rem,2vw,1.45rem);font-weight:700;letter-spacing:-.02em;}
+.bmwj-service-lander .hero {position:relative;min-height:min(72vh,720px);display:flex;align-items:flex-end;background:#05080d;}
+.bmwj-service-lander .hero-media {position:absolute;inset:0;overflow:hidden;}
+.bmwj-service-lander .hero-media video,.bmwj-service-lander .hero-media img {width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block;}
+.bmwj-service-lander .hero-media video {opacity:.86;}
+.bmwj-service-lander .hero-media img {opacity:.78;}
+.bmwj-service-lander .hero-scrim {position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,13,.18) 0%,rgba(5,8,13,.12) 35%,rgba(5,8,13,.92) 100%),linear-gradient(90deg,rgba(5,8,13,.62) 0%,rgba(5,8,13,.2) 58%,rgba(5,8,13,.35) 100%);}
+.bmwj-service-lander .hero-content {position:relative;z-index:2;width:100%;padding:48px 24px 56px;}
+.bmwj-service-lander .jump {display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+.bmwj-service-lander .jump a {display:inline-flex !important;align-items:center !important;min-height:36px !important;padding:8px 12px !important;border:1px solid rgba(255,255,255,.28) !important;background:rgba(255,255,255,.08) !important;color:#fff !important;text-decoration:none !important;font-size:12px !important;font-weight:700 !important;letter-spacing:.06em !important;text-transform:uppercase !important;white-space:nowrap !important;}
+.bmwj-service-lander .edu-media {aspect-ratio:16/9;background:#05080d;overflow:hidden;}
+.bmwj-service-lander .edu-media img {width:100%;height:100%;object-fit:cover;display:block;}
+.bmwj-service-lander .photo-band {display:grid;grid-template-columns:1.1fr .9fr;gap:18px;}
+.bmwj-service-lander .photo-frame {overflow:hidden;border:1px solid var(--border);background:#05080d;min-height:280px;}
+.bmwj-service-lander .photo-frame img {width:100%;height:100%;object-fit:cover;display:block;min-height:280px;}
+.bmwj-service-lander .address {margin:18px 0 0;color:#c5ced9;font-size:15px;line-height:1.55;}
+.bmwj-service-lander .address a {color:#fff;}
+.bmwj-service-lander .sticky-bar {position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(5,8,13,.94);border-top:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:12px 14px calc(12px + env(safe-area-inset-bottom));}
+.bmwj-service-lander .sticky-inner {max-width:1120px;margin:0 auto;display:flex;gap:10px;}
+.bmwj-service-lander .note {margin:18px 0 0;color:#7f8b9a;font-size:13px;line-height:1.55;max-width:900px;}
+.bmwj-service-lander .why-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.bmwj-service-lander .why-card {background:var(--card);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;}
+.bmwj-service-lander .why-card img {width:100%;aspect-ratio:3/2;object-fit:cover;display:block;}
+.bmwj-service-lander .why-card .card-content {padding:18px 20px 22px;}
+@media (max-width:980px) {
+  .bmwj-specials-page .grid-2,.bmwj-specials-page .grid-3,.bmwj-specials-page .grid-4,.bmwj-service-lander .photo-band,.bmwj-specials-page ul.alacarte,.bmwj-service-lander .why-grid {grid-template-columns:1fr;}
+  .bmwj-specials-page .section {padding-left:18px;padding-right:18px;}
+}
+@media (min-width:901px) {.bmwj-specials-page {padding-bottom:0;} .bmwj-service-lander .sticky-bar {display:none;}}
+</style>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <video autoplay muted loop playsinline poster="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/hero-service-facility.jpg">
+      <source src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/hero-service-facility.mp4" type="video/mp4">
+    </video>
+    <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/hero-service-facility.jpg" alt="BMW of Jackson Service Center exterior with white BMW on the lot" width="1920" height="1080" style="display:none;" id="hero-fallback-img">
+    <div class="hero-scrim" aria-hidden="true"></div>
+  </div>
+  <div class="hero-content"><div class="wrap">
+    <p class="eyebrow">BMW of Jackson Service</p>
+    <h1 class="h1">BMW service menu</h1>
+    <p class="body-lg">BMW-Trained Technicians. Original BMW Parts. Schedule online, check Condition Based Service items, and see current Value Service oil pricing.</p>
+    <div class="btn-row">
+      <a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span></a>
+      <a href="tel:6013542269" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#fff !important;color:#0a0e14 !important;border:2px solid #fff !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Call (601) 354-2269</span></a>
+    </div>
+    <div class="jump">
+      <a href="#specials">Oil specials</a>
+      <a href="#schedule">CBS schedule</a>
+      <a href="#alacarte">A la carte</a>
+      <a href="#value">Value Service</a>
+      <a href="#brakes">Brakes</a>
+      <a href="#tires">Tires</a>
+      <a href="#battery">Battery</a>
+      <a href="#cabin">Cabin filter</a>
+      <a href="#why">Why BMWJ</a>
+    </div>
+  </div></div>
+</section>
+
+<section class="section dark" id="specials">
+  <div class="wrap">
+    <p class="eyebrow">Service specials</p>
+    <h2 class="h2">Current service specials</h2>
+    <p class="body-lg">Live coupons from BMW of Jackson service specials. No expiration on the current Value Service cards.</p>
+    <div class="grid-2">
+      <article class="offer-card is-hero"><div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-oil-tech-bay.jpg" alt="BMW technician performing oil service under a vehicle on a lift" width="1400" height="845"></div><div class="card-content">
+        <p class="label">BMW Value Service</p>
+        <p class="amount" style="font-size:clamp(1.55rem,2.5vw,2.2rem);">Oil change</p>
+        <div class="price-stack">
+          <span class="price-pill">$119.99</span>
+          <span class="price-pill">$149.99</span>
+          <span class="price-pill">$179.99</span>
+        </div>
+        <p class="meta">Pricing varies by model and engine type</p>
+        <p class="body">Premium synthetic Original BMW Engine Oil. Parts and labor included. Visit Value Service for exact pricing on your BMW.</p>
+        <div class="btn-row">
+          <a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Book Oil Service</span></a>
+          <a href="https://bmwofjackson.net/bmw-value-service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Value Service</span></a>
+        </div>
+        <p class="fineprint">No expiration on the live coupon card. DEF is not included for diesel vehicles. Oil viscosities may vary by model. Applies specifically to certain BMW models included in the Value Service Program. Taxes and additional costs may apply. Topping off diesel emission fluid is not included. BMW Value Service available only at participating authorized BMW Centers. All work is carried out by BMW Trained Technicians using Original BMW Parts, which come with a two-year unlimited mileage limited warranty. Warranty repairs do not constitute an extension of the original limited warranty period for the vehicle or a part thereof. Service availability and pricing may vary for non-standard options, including M Sport options and equipment. Source: bmwofjackson.net/service-specials.</p>
+      </div></article>
+      <article class="offer-card"><div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-value-service-home.jpg" alt="BMW Value Service lifestyle image of a red BMW convertible" width="1271" height="1080"></div><div class="card-content">
+        <p class="label">BMW Value Service</p>
+        <h3 class="h3">Book online</h3>
+        <p class="body">Competitive up-front pricing on select services once your BMW is three years from its in-service date. Expert care with Original BMW Parts.</p>
+        <div class="btn-row">
+          <a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span></a>
+          <a href="https://bmwofjackson.net/service-specials" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">All Specials</span></a>
+        </div>
+        <p class="fineprint">No expiration on the live coupon card. BMW Value Service applies to select services and models and varies by BMW Center. See dealer for vehicle-specific pricing.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section elevated" id="schedule">
+  <div class="wrap">
+    <p class="eyebrow">BMW Maintenance System</p>
+    <h2 class="h2">Condition Based Service</h2>
+    <p class="body-lg">Your BMW monitors oil, vehicle check, brake pads, and brake fluid, then shows remaining distance and/or due dates in the car. Bring the key you drive with so advisors can read current CBS data.</p>
+    <div class="grid-4">
+      <article class="mile-card"><div class="card-content">
+        <p class="label">Engine oil</p>
+        <h3 class="h3">When CBS says oil</h3>
+        <ul class="clean"><li>Engine oil and oil filter</li><li>Interval adapts to how you drive</li><li>Display example often shows miles and a date</li></ul>
+      </div></article>
+      <article class="mile-card"><div class="card-content">
+        <p class="label">Vehicle check</p>
+        <h3 class="h3">Inspection service</h3>
+        <ul class="clean"><li>Broader multi-point vehicle check</li><li>Shown with remaining miles and/or date</li><li>Often paired with other due items</li></ul>
+      </div></article>
+      <article class="mile-card"><div class="card-content">
+        <p class="label">Brakes</p>
+        <h3 class="h3">Pad wear monitored</h3>
+        <ul class="clean"><li>Front and rear pad status tracked</li><li>Brake fluid is time-based</li><li>Do not wait for metal-on-metal</li></ul>
+      </div></article>
+      <article class="mile-card"><div class="card-content">
+        <p class="label">Combined items</p>
+        <h3 class="h3">With oil service</h3>
+        <ul class="clean"><li>Cabin microfilter(s)</li><li>Engine air filter(s)</li><li>Spark plugs on applicable engines</li></ul>
+      </div></article>
+    </div>
+    <p class="note">Source summary: BMW MY25 Maintenance booklet / Condition Based Service. Combined-with-oil tasks may be required on specific oil-service occurrences (approx. every 3rd&ndash;6th oil service depending on item and model family). Exact requirements vary by VIN, model, and driving profile. Always confirm in your vehicle display and with BMW of Jackson advisors.</p>
+    <div class="btn-row" style="margin-top:22px;">
+      <a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule by CBS</span></a>
+      <a href="https://bmwofjackson.net/service-center" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Service Center</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="alacarte">
+  <div class="wrap">
+    <p class="eyebrow">A la carte</p>
+    <h2 class="h2">Services beyond the CBS prompt</h2>
+    <p class="body-lg">Common BMW service items owners ask for between Condition Based Service visits. Your advisor prices the work for your vehicle.</p>
+    <ul class="alacarte"><li>Oil and filter service</li><li>Cabin microfilter</li><li>Engine air filter</li><li>Brake fluid service</li><li>Brake pad and rotor service</li><li>Wheel alignment</li><li>Tire rotation and balance</li><li>Multi-point inspection</li><li>Battery test and replacement</li><li>Wiper blade replacement</li><li>Spark plugs (model-dependent)</li><li>Cooling system service</li><li>ADAS / camera calibration</li><li>Detailing and care</li><li>Pre-purchase multi-point</li></ul>
+    <div class="btn-row" style="margin-top:22px;">
+      <a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Ask Service</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section elevated" id="value">
+  <div class="wrap">
+    <p class="eyebrow">After year three</p>
+    <h2 class="h2">BMW Value Service</h2>
+    <p class="body-lg">Once your BMW is three years from its in-service date, it can become eligible for BMW Value Service &mdash; competitive pricing on select essential services with BMW Trained Technicians and Original BMW Parts.</p>
+    <div class="grid-2">
+      <article class="offer-card is-hero"><div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-oil-pour.jpg" alt="Technician pouring Original BMW TwinPower Turbo engine oil" width="1080" height="1080"></div><div class="card-content">
+        <p class="label">Original BMW engine oil</p>
+        <h3 class="h3">Built for TwinPower Turbo engines</h3>
+        <p class="body">BMW of Jackson uses premium synthetic Original BMW engine oils matched to modern BMW powertrains.</p>
+        <div class="btn-row"><a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Oil Service</span></a></div>
+      </div></article>
+      <article class="offer-card"><div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-service-row.jpg" alt="BMW vehicles parked outside the Service entrance at BMW of Jackson" width="1280" height="853"></div><div class="card-content">
+        <p class="label">What you get</p>
+        <ul class="clean"><li>BMW Trained Technicians</li><li>Original BMW Parts with a 2-year unlimited mileage limited warranty</li><li>Up-front competitive pricing on select services</li><li>VIN-based pricing on the Value Service page</li></ul>
+        <div class="btn-row" style="margin-top:16px;"><a href="https://bmwofjackson.net/bmw-value-service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Shop Value Service</span></a></div>
+        <p class="fineprint">BMW Value Service available only at participating authorized BMW Centers. Service availability and pricing may vary for non-standard options, including M Sport options and equipment.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="brakes">
+  <div class="wrap">
+    <div class="grid-2">
+      <article class="edu-card">
+        <div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-brakes-clean.jpg" alt="Genuine BMW brake components" width="900" height="540"></div>
+        <div class="card-content">
+          <p class="eyebrow">Brakes</p>
+          <h2 class="h2">Brakes</h2>
+          <p class="body">Pads wear down. If metal hits the rotor, damage gets expensive fast and stopping power drops.</p>
+          <ul class="clean"><li>Common signs: squeal, grind, longer stops, vibration in the pedal</li><li>CBS tracks front and rear pad status</li><li>Genuine BMW pads, rotors, and sensors are stocked for complete brake service</li></ul>
+          <div class="btn-row" style="margin-top:16px;"><a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Brake Check</span></a></div>
+        </div>
+      </article>
+      <article class="edu-card"><div class="card-content" style="justify-content:center;">
+        <p class="eyebrow">Pad wear</p>
+        <h3 class="h3">Do not wait for grind</h3>
+        <p class="body">When pad material is gone, the backing plate can score the rotor. That turns a pad job into pads and rotors.</p>
+        <p class="body">If you hear grind, smell hot brakes, or feel pull/vibration, bring it in. Brake fluid is a separate time-based service on the CBS display.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section elevated" id="tires">
+  <div class="wrap">
+    <div class="grid-2">
+      <article class="edu-card">
+        <div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-service-row.jpg" alt="BMW alloy wheels and tires at BMW of Jackson Service" width="1280" height="853"></div>
+        <div class="card-content">
+          <p class="eyebrow">Tires</p>
+          <h2 class="h2">Tires</h2>
+          <p class="body">Tread is your contact patch. When it is gone, wet roads and hard stops get worse quickly.</p>
+          <ul class="clean"><li>Wear bars are molded into the tread. When the tread is even with the bars, you are at about 2/32 inch &mdash; replace the tire</li><li>Penny test: if you can see all of Lincoln&rsquo;s head, tread is too low</li><li>Uneven wear often points to alignment or inflation issues</li><li>Premium fitments commonly used on BMWs: Michelin, Pirelli, Continental, Bridgestone, Goodyear</li></ul>
+          <div class="btn-row" style="margin-top:16px;"><a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Book Tire Check</span></a></div>
+        </div>
+      </article>
+      <article class="edu-card"><div class="card-content" style="justify-content:center;">
+        <p class="eyebrow">Wear bars</p>
+        <h3 class="h3">How to spot them</h3>
+        <p class="body">Look across the tread for raised bars in the grooves. When the rubber around them wears down to the same height, the tire is at the wear limit.</p>
+        <p class="body">Do not wait for cords. At 2/32 inch, wet traction falls off hard. If one tire is wearing faster than the others, ask for an alignment check.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="battery">
+  <div class="wrap">
+    <div class="grid-2">
+      <article class="edu-card">
+        <div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-battery-clean.jpg" alt="Original BMW battery service visual" width="900" height="540"></div>
+        <div class="card-content">
+          <p class="eyebrow">Battery</p>
+          <h2 class="h2">Battery</h2>
+          <p class="body">Modern BMWs put heavy demand on the electrical system. A weak battery can look like a bigger electronic problem.</p>
+          <ul class="clean"><li>Have the battery tested at service visits &mdash; especially before summer heat and winter cold</li><li>Short trips, heat, and sitting unused all stress batteries</li><li>Replacement often needs coding/registration so charge management stays correct</li></ul>
+          <div class="btn-row" style="margin-top:16px;"><a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Battery Test</span></a></div>
+        </div>
+      </article>
+      <article class="edu-card"><div class="card-content" style="justify-content:center;">
+        <p class="eyebrow">Original BMW batteries</p>
+        <h3 class="h3">Designed for your model</h3>
+        <p class="body">Genuine BMW batteries are engineered for the power draw of today&rsquo;s connected BMWs and the integration your car expects.</p>
+        <p class="body">If the car sits, takes short trips only, or struggles to start, put a battery test on the next visit.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section elevated" id="cabin">
+  <div class="wrap">
+    <div class="grid-2">
+      <article class="edu-card">
+        <div class="edu-media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-service-sticker-lander/edu-cabin-filter.jpg" alt="Clean cabin air filter next to a dirty cabin air filter" width="1280" height="720"></div>
+        <div class="card-content">
+          <p class="eyebrow">Cabin microfilter</p>
+          <h2 class="h2">Cabin air filter</h2>
+          <p class="body">Outside air enters through the HVAC system. The cabin microfilter catches dust, pollen, and debris before that air hits the cabin.</p>
+          <ul class="clean"><li>Over time the filter loads up with dirt and can hold odor</li><li>Symptoms: weak airflow, musty smell, more allergens in the cabin</li><li>BMW often combines cabin microfilter service with specific engine-oil service occurrences</li></ul>
+          <div class="btn-row" style="margin-top:16px;"><a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Replace Cabin Filter</span></a></div>
+        </div>
+      </article>
+      <article class="edu-card"><div class="card-content" style="justify-content:center;">
+        <p class="eyebrow">What happens over time</p>
+        <h3 class="h3">Dust, pollen, odor</h3>
+        <p class="body">The filter loads up. Airflow drops. A/C can start to smell. People with allergies notice first.</p>
+        <p class="body">This is one of the highest-value quick services on a BMW and is commonly done with oil service when CBS/combined items call for it.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="why">
+  <div class="wrap">
+    <p class="eyebrow">BMW of Jackson</p>
+    <h2 class="h2">Service built for BMW</h2>
+    <p class="body-lg">BMW-Trained and Certified Technicians, Original BMW Parts, online scheduling, tech videos by text, and a lounge with Isetta Bar beverages plus high-speed WiFi.</p>
+    <div class="why-grid" style="margin-top:8px;">
+      <article class="why-card">
+        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/tile-certified.jpg" alt="BMW trained technician working in a service bay" width="900" height="600">
+        <div class="card-content"><h3 class="h3">BMW-trained techs</h3><p class="body" style="margin:0;">Only BMW-Trained and Certified Technicians work on your vehicle.</p></div>
+      </article>
+      <article class="why-card">
+        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/tile-luxury.jpg" alt="Luxury service waiting experience" width="900" height="600">
+        <div class="card-content"><h3 class="h3">Isetta Bar + WiFi</h3><p class="body" style="margin:0;">Comfortable waiting areas, complimentary beverages, and high-speed WiFi.</p></div>
+      </article>
+      <article class="why-card">
+        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/tile-value.jpg" alt="BMW service value protection" width="900" height="600">
+        <div class="card-content"><h3 class="h3">Text updates</h3><p class="body" style="margin:0;">Tech videos by text. Authorize repairs and pay from your phone.</p></div>
+      </article>
+    </div>
+    <div class="photo-band" style="margin-top:18px;">
+      <div class="photo-frame"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmwj-service-sticker-lander/real-facility-home.jpg" alt="BMW of Jackson dealership exterior and Service entrance" width="2592" height="1728"></div>
+      <div>
+        <p class="body-lg">Real store lot. Real Service entrance. Schedule online or call the desk.</p>
+        <p class="body">Service hours: Monday&ndash;Friday 7:30am&ndash;5:30pm. Closed Saturday and Sunday.</p>
+        <div class="btn-row" style="margin-top:18px;"><a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section elevated" id="visit">
+  <div class="wrap">
+    <p class="eyebrow">Next step</p>
+    <h2 class="h2">Ready to schedule</h2>
+    <p class="body-lg">Schedule online or call the service desk. We will take it from drop-off.</p>
+    <div class="btn-row">
+      <a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span></a>
+      <a href="tel:6013542269" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#fff !important;color:#0a0e14 !important;border:2px solid #fff !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Call (601) 354-2269</span></a>
+      <a href="https://bmwofjackson.net/service-specials" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Service Specials</span></a>
+    </div>
+    <p class="address"><strong>BMW of Jackson</strong><br>1685 High St, Jackson, MS 39202<br><a href="tel:6013542269">(601) 354-2269</a> &nbsp;&middot;&nbsp; <a href="https://bmwofjackson.net/service">bmwofjackson.net/service</a><br>Service: Mon&ndash;Fri 7:30am&ndash;5:30pm</p>
+    <p class="note">Service specials and Value Service language from bmwofjackson.net/service-specials, /service-center, and /bmw-value-service. CBS summary from BMW MY25 maintenance materials. Facility and service photography from BMW of Jackson live site assets. Education cabin-filter still reused only where no store photo exists. Hero motion: cinematic zoom from the real BMW of Jackson Service lot still.</p>
+  </div>
+</section>
+
+<div class="sticky-bar" aria-label="Quick service actions">
+  <div class="sticky-inner">
+    <a href="https://bmwofjackson.net/service" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;min-width:0 !important;width:auto !important;flex:1 1 0 !important;min-height:48px !important;padding:12px 14px !important;font-size:14px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#1c69d4 !important;color:#fff !important;border:2px solid #1c69d4 !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Schedule</span></a>
+    <a href="tel:6013542269" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;min-width:0 !important;width:auto !important;flex:1 1 0 !important;min-height:48px !important;padding:12px 14px !important;font-size:14px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#fff !important;color:#0a0e14 !important;border:2px solid #fff !important;box-sizing:border-box !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Call</span></a>
+  </div>
+</div>
+</div>
