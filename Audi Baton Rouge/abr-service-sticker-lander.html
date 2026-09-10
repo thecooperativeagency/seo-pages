@@ -1,0 +1,720 @@
+<div class="abr-specials-page abr-service-lander" style="font-family:AudiType, Audi, 'Audi Type', Helvetica, Arial, sans-serif;">
+<style>
+@font-face {
+  font-family: "AudiType";
+  src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AudiType";
+  src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.abr-specials-page,
+.abr-specials-page * {
+  font-family: AudiType, Audi, "Audi Type", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.abr-specials-page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  --ink: #000000;
+  --elevated: #151515;
+  --card: #101010;
+  --border: #4D4D4D;
+  --white: #ffffff;
+  --muted: #BDBDBD;
+  --soft: #e8e8e8;
+  --red: #a90002;
+  color: var(--white);
+  background: var(--ink);
+  overflow-x: hidden;
+  padding-bottom: 88px;
+}
+.abr-specials-page * { box-sizing: border-box; }
+.abr-specials-page .wrap { max-width: 1120px; margin: 0 auto; width: 100%; }
+.abr-specials-page .eyebrow {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.abr-specials-page h1,
+.abr-specials-page h2,
+.abr-specials-page h3,
+.abr-specials-page p { margin-top: 0; }
+.abr-specials-page .h1 {
+  margin: 0 0 16px;
+  max-width: 920px;
+  font-size: clamp(2.35rem, 6.2vw, 4.6rem);
+  line-height: .96;
+  letter-spacing: -.045em;
+  font-weight: 700;
+}
+.abr-specials-page .h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.8rem, 3.6vw, 3.1rem);
+  line-height: .98;
+  letter-spacing: -.04em;
+  font-weight: 700;
+}
+.abr-specials-page .h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  font-weight: 700;
+}
+.abr-specials-page .body-lg {
+  max-width: 760px;
+  color: var(--soft);
+  font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+.abr-specials-page .body {
+  color: #d0d0d0;
+  font-size: 16px;
+  line-height: 1.62;
+  margin: 0 0 14px;
+}
+.abr-specials-page .section { padding: 64px 24px; }
+.abr-specials-page .section-tight { padding: 40px 24px; }
+.abr-specials-page .dark { background: var(--ink); }
+.abr-specials-page .elevated { background: var(--elevated); }
+.abr-specials-page .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+.abr-specials-page .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.abr-specials-page .offer-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.abr-specials-page .offer-card.is-hero { border-color: #707070; }
+.abr-specials-page .card-content {
+  padding: 26px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.abr-specials-page .label {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 700;
+}
+.abr-specials-page .amount {
+  margin: 0 0 10px;
+  font-size: clamp(2.1rem, 3.6vw, 3.5rem);
+  line-height: .9;
+  letter-spacing: -.055em;
+  font-weight: 700;
+  color: #fff;
+}
+.abr-specials-page .meta {
+  margin: 0 0 14px;
+  color: #f4f4f4;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+.abr-specials-page .pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+.abr-specials-page .pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.abr-specials-page .fineprint {
+  margin: auto 0 0;
+  padding-top: 14px;
+  color: #8f8f8f;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.abr-specials-page .btn-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 8px;
+  align-items: center !important;
+}
+.abr-specials-page a.btn-primary,
+.abr-specials-page a.btn-secondary,
+.abr-specials-page a.btn-ghost {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  min-width: max-content !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+  box-sizing: border-box !important;
+  min-height: 48px !important;
+  padding: 12px 20px !important;
+  font-size: 15px !important;
+}
+.abr-specials-page a.btn-primary {
+  background: var(--red) !important;
+  color: #fff !important;
+  border: 2px solid var(--red) !important;
+}
+.abr-specials-page a.btn-secondary {
+  background: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+.abr-specials-page a.btn-ghost {
+  background: transparent !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+.abr-specials-page a.btn-primary span,
+.abr-specials-page a.btn-secondary span,
+.abr-specials-page a.btn-ghost span {
+  display: inline;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+/* Hero */
+.abr-service-lander .hero {
+  position: relative;
+  min-height: min(78vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  background: #050505;
+}
+.abr-service-lander .hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.abr-service-lander .hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+  opacity: .78;
+}
+.abr-service-lander .hero-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.15) 35%, rgba(0,0,0,.88) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.18) 55%, rgba(0,0,0,.35) 100%);
+}
+.abr-service-lander .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 48px 24px 56px;
+}
+.abr-service-lander .hero-note {
+  margin: 18px 0 0;
+  color: #bdbdbd;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 560px;
+}
+
+/* Jump chips */
+.abr-service-lander .jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.abr-service-lander .jump a {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 36px !important;
+  padding: 8px 12px !important;
+  border: 1px solid rgba(255,255,255,.28) !important;
+  background: rgba(255,255,255,.08) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+/* Photo band */
+.abr-service-lander .photo-band {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 18px;
+  align-items: stretch;
+}
+.abr-service-lander .photo-frame {
+  overflow: hidden;
+  background: #050505;
+  border: 1px solid var(--border);
+  min-height: 280px;
+}
+.abr-service-lander .photo-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  min-height: 280px;
+}
+.abr-service-lander .photo-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  padding: 8px 4px;
+}
+
+/* Menu cards without prices */
+.abr-service-lander .menu-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 24px 22px 26px;
+  min-height: 100%;
+}
+.abr-service-lander .menu-card .kicker {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.abr-service-lander .menu-card p:last-child { margin-bottom: 0; }
+
+/* Hours / proof strip */
+.abr-service-lander .proof-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.abr-service-lander .proof-item {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  padding: 20px 18px;
+}
+.abr-service-lander .proof-item strong {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 15px;
+  letter-spacing: -.01em;
+}
+.abr-service-lander .proof-item span {
+  color: #cfcfcf;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Close */
+.abr-service-lander .close-block {
+  border-top: 1px solid var(--border);
+}
+.abr-service-lander .address {
+  margin: 18px 0 0;
+  color: #cfcfcf;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.abr-service-lander .address a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Sticky mobile CTA bar */
+.abr-service-lander .sticky-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  background: rgba(0,0,0,.92);
+  border-top: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+}
+.abr-service-lander .sticky-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: stretch;
+}
+.abr-service-lander .sticky-inner a {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  width: auto !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 900px) {
+  .abr-specials-page .grid-2,
+  .abr-specials-page .grid-3,
+  .abr-service-lander .photo-band,
+  .abr-service-lander .proof-row {
+    grid-template-columns: 1fr;
+  }
+  .abr-specials-page .section,
+  .abr-specials-page .section-tight {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .abr-service-lander .hero { min-height: 72vh; }
+  .abr-service-lander .photo-frame,
+  .abr-service-lander .photo-frame img { min-height: 240px; }
+}
+@media (min-width: 901px) {
+  .abr-specials-page { padding-bottom: 0; }
+  .abr-service-lander .sticky-bar { display: none; }
+}
+</style>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-service-sticker-lander/hero-service-drive.jpg" alt="Covered Audi Service Drive at Audi Baton Rouge" width="1600" height="2000">
+    <div class="hero-scrim" aria-hidden="true"></div>
+  </div>
+  <div class="hero-content">
+    <div class="wrap">
+      <p class="eyebrow">Audi Baton Rouge Service</p>
+      <h1 class="h1">Your sticker says it&rsquo;s time.</h1>
+      <p class="body-lg">Factory-trained technicians. Genuine Audi parts. A real lounge while the work gets done. Book your next visit from this page.</p>
+      <div class="btn-row">
+        <a class="btn-primary" href="https://audibatonrouge.com/service"
+           style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#a90002 !important;color:#fff !important;border:2px solid #a90002 !important;box-sizing:border-box !important;">
+          <span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span>
+        </a>
+        <a class="btn-secondary" href="tel:2256866012"
+           style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#fff !important;color:#000 !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+          <span style="display:inline;white-space:nowrap;overflow:visible;">Call (225) 686-6012</span>
+        </a>
+        <a class="btn-ghost" href="#specials"
+           style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+          <span style="display:inline;white-space:nowrap;overflow:visible;">View Specials</span>
+        </a>
+      </div>
+      <div class="jump">
+        <a href="#specials">Specials</a>
+        <a href="#why">Why here</a>
+        <a href="#menu">Service menu</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <p class="hero-note">Oil-sticker QR lander &middot; first draft for sticker/QR production</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE SPECIALS -->
+<section class="section elevated" id="specials">
+  <div class="wrap">
+    <p class="eyebrow">Current service specials</p>
+    <h2 class="h2">Offers live at Audi Baton Rouge.</h2>
+    <p class="body-lg">Pulled from the store service specials page. Present the offer at write-up. One offer per customer per visit unless noted.</p>
+
+    <div class="grid-2" style="margin-top:8px;">
+      <article class="offer-card is-hero">
+        <div class="card-content">
+          <p class="label">Complimentary gift</p>
+          <p class="amount" style="font-size:clamp(1.7rem,2.8vw,2.6rem);">Free 3-in-1 charger</p>
+          <p class="meta">With every service visit</p>
+          <div class="pill-row">
+            <span class="pill">Magnetic wireless</span>
+            <span class="pill">While supplies last</span>
+          </div>
+          <p class="body">Come in for service and take home a complimentary Audi Baton Rouge 3-in-1 magnetic wireless charger. No extra form.</p>
+          <div class="btn-row">
+            <a class="btn-primary" href="https://audibatonrouge.com/service"
+               style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#a90002 !important;color:#fff !important;border:2px solid #a90002 !important;box-sizing:border-box !important;">
+              <span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span>
+            </a>
+          </div>
+          <p class="fineprint">One complimentary charger per service visit, while supplies last. Valid exclusively at Audi Baton Rouge. See your service advisor for details.</p>
+        </div>
+      </article>
+
+      <article class="offer-card is-hero">
+        <div class="card-content">
+          <p class="label">Oil change</p>
+          <p class="amount">$199</p>
+          <p class="meta">Audi oil &amp; filter change</p>
+          <div class="pill-row">
+            <span class="pill">Genuine Audi parts</span>
+            <span class="pill">Audi-approved oil</span>
+          </div>
+          <p class="body">Factory-trained technicians use Genuine Audi Parts and the correct Audi-approved synthetic oil to help maintain peak performance, efficiency, and engine longevity.</p>
+          <div class="btn-row">
+            <a class="btn-primary" href="https://audibatonrouge.com/service"
+               style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#a90002 !important;color:#fff !important;border:2px solid #a90002 !important;box-sizing:border-box !important;">
+              <span style="display:inline;white-space:nowrap;overflow:visible;">Book Oil Service</span>
+            </a>
+          </div>
+          <p class="fineprint">Must present offer at time of write-up. One offer per customer per visit. May not be combined with other offers. Excludes taxes. Not redeemable for advertised specials, previous purchases or cash. Valid exclusively at Audi Baton Rouge. One-time use only. Excludes tires and wheel &amp; tire packages. Not applicable to body shop repairs. Offer applies exclusively to factory-approved services.</p>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-content">
+          <p class="label">Recommended service</p>
+          <p class="amount">10% off</p>
+          <p class="meta">Recommended services</p>
+          <p class="body">When our technicians identify work your Audi needs, move forward with factory-approved service and parts &mdash; and savings.</p>
+          <div class="btn-row">
+            <a class="btn-ghost" href="https://audibatonrouge.com/service"
+               style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+              <span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span>
+            </a>
+          </div>
+          <p class="fineprint">Must present offer at time of write-up. One offer per customer per visit. May not be combined with other offers. Excludes taxes and shop fees. Not redeemable for advertised specials, previous purchases or cash. Valid exclusively at Audi Baton Rouge. One-time use only. Not applicable to body shop repairs. Factory-approved services, factory parts and equipment only. Tires and tire installation not included.</p>
+        </div>
+      </article>
+
+      <article class="offer-card">
+        <div class="card-content">
+          <p class="label">Alignment</p>
+          <p class="amount">$100 off</p>
+          <p class="meta">Regular alignment (non-ACC)</p>
+          <div class="pill-row">
+            <span class="pill">Handling</span>
+            <span class="pill">Tire life</span>
+            <span class="pill">Stability</span>
+          </div>
+          <p class="body">Proper alignment helps improve steering response, extend tire life, and keep the car tracking the way it was engineered.</p>
+          <div class="btn-row">
+            <a class="btn-ghost" href="https://audibatonrouge.com/service"
+               style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+              <span style="display:inline;white-space:nowrap;overflow:visible;">Book Alignment</span>
+            </a>
+          </div>
+          <p class="fineprint">Must present offer at time of write-up. One offer per customer per visit. May not be combined with other offers. Excludes taxes. Valid exclusively at Audi Baton Rouge. One-time use only. Not applicable to body shop repairs. Factory-approved services only. Tires not included.</p>
+        </div>
+      </article>
+
+      <article class="offer-card" style="grid-column:1 / -1;">
+        <div class="card-content">
+          <p class="label">Advanced driver assistance</p>
+          <p class="amount">$699</p>
+          <p class="meta">ACC alignment &amp; recalibration</p>
+          <p class="body">After windshield replacement, front-end repair, or alignment work, Adaptive Cruise Control may need recalibration. Our technicians use Audi-approved equipment to set the system true again.</p>
+          <div class="btn-row">
+            <a class="btn-ghost" href="https://audibatonrouge.com/service"
+               style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+              <span style="display:inline;white-space:nowrap;overflow:visible;">Schedule ACC Service</span>
+            </a>
+            <a class="btn-secondary" href="https://audibatonrouge.com/service-specials"
+               style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#fff !important;color:#000 !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+              <span style="display:inline;white-space:nowrap;overflow:visible;">All Service Specials</span>
+            </a>
+          </div>
+          <p class="fineprint">Price plus tax and shop supplies. Valid at Audi Baton Rouge only. Additional repairs may be required at additional cost. Cannot be combined with other offers. See dealer for details. Limited time offer.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY HERE / EXPERIENCE -->
+<section class="section dark" id="why">
+  <div class="wrap">
+    <p class="eyebrow">The service experience</p>
+    <h2 class="h2">Not a plastic chair under fluorescent lights.</h2>
+    <div class="photo-band" style="margin-top:10px;">
+      <div class="photo-frame">
+        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-service-sticker-lander/lounge.jpg" alt="Audi Baton Rouge service lounge with seating and city skyline mural" width="2000" height="2500">
+      </div>
+      <div class="photo-copy">
+        <p class="body-lg" style="margin-bottom:16px;">The service lounge is a real room &mdash; seats, screens, coffee &mdash; while factory-trained technicians do the work in the bays.</p>
+        <p class="body">Covered Service Drive, so you aren&rsquo;t standing in the rain handing over keys. Genuine Audi parts. The same standard of care that belongs with the car.</p>
+        <div class="proof-row" style="margin-top:18px;">
+          <div class="proof-item">
+            <strong>Factory-trained</strong>
+            <span>Technicians who work on Audis every day.</span>
+          </div>
+          <div class="proof-item">
+            <strong>Genuine parts</strong>
+            <span>Parts engineered for your vehicle.</span>
+          </div>
+          <div class="proof-item">
+            <strong>Covered drive</strong>
+            <span>Drop-off under the Service Drive canopy.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-band" style="margin-top:18px;">
+      <div class="photo-copy" style="order:1;">
+        <p class="eyebrow">While you wait</p>
+        <h3 class="h3">Quattro Caf&eacute; + lounge comfort</h3>
+        <p class="body">Coffee, a quiet place to work or wait, and a service team that treats the visit like ownership care &mdash; not a transaction.</p>
+        <div class="btn-row" style="margin-top:18px;">
+          <a class="btn-primary" href="https://audibatonrouge.com/service"
+             style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#a90002 !important;color:#fff !important;border:2px solid #a90002 !important;box-sizing:border-box !important;">
+            <span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span>
+          </a>
+        </div>
+      </div>
+      <div class="photo-frame" style="order:2;">
+        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-service-sticker-lander/cafe.jpg" alt="Quattro Cafe seating area at Audi Baton Rouge" width="1600" height="2000">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE MENU EDUCATION (no invented package prices) -->
+<section class="section elevated" id="menu">
+  <div class="wrap">
+    <p class="eyebrow">Service menu</p>
+    <h2 class="h2">What owners usually ask about.</h2>
+    <p class="body-lg">Education first. Live specials are above. For anything beyond those offers, your advisor prices the work for your specific Audi after inspection.</p>
+
+    <div class="grid-3" style="margin-top:8px;">
+      <article class="menu-card">
+        <p class="kicker">Oil &amp; filter</p>
+        <h3 class="h3">The service on your sticker</h3>
+        <p class="body">Fresh Audi-approved oil and filter keep the engine protected the way it was designed. Book the $199 oil &amp; filter special when you&rsquo;re due.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">Multi-point check</p>
+        <h3 class="h3">See what the car needs</h3>
+        <p class="body">A thorough look at fluids, filters, brakes, belts, tires, and lights &mdash; so recommended work is based on the vehicle, not a generic menu.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">Brakes</p>
+        <h3 class="h3">Stopping power that feels right</h3>
+        <p class="body">Pads, rotors, and fluid matter on an Audi. If a tech flags brake wear, ask for the recommendation and use the 10% recommended-service offer when it applies.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">Tires &amp; alignment</p>
+        <h3 class="h3">Wear patterns tell the story</h3>
+        <p class="body">Uneven wear, pull, or vibration often point to alignment. Use the $100-off regular alignment special (non-ACC) when you need the geometry set true.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">Battery &amp; electrical</p>
+        <h3 class="h3">Modern Audis are picky</h3>
+        <p class="body">Start-stop systems and electronics need the right battery and programming. If the car is slow to start or throwing electrical warnings, bring it in.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">Cabin filter &amp; A/C</p>
+        <h3 class="h3">Air you actually want to breathe</h3>
+        <p class="body">A clogged cabin filter cuts airflow and can make the A/C smell off. Quick maintenance that makes every drive feel cleaner.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">ADAS / ACC</p>
+        <h3 class="h3">After glass or front-end work</h3>
+        <p class="body">Adaptive Cruise and driver-assist cameras need calibration after windshield or front-end work. ACC alignment &amp; recalibration is $699 when required.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">Scheduled maintenance</p>
+        <h3 class="h3">Follow the car, not a guess</h3>
+        <p class="body">Your Audi tracks service intervals. When the car or sticker says it&rsquo;s time, schedule here and we&rsquo;ll match the visit to what the vehicle is asking for.</p>
+      </article>
+      <article class="menu-card">
+        <p class="kicker">Parts</p>
+        <h3 class="h3">Genuine Audi parts desk</h3>
+        <p class="body">Need a part for DIY or another shop? Start with the Audi Baton Rouge parts counter for the correct fit.</p>
+        <div class="btn-row" style="margin-top:12px;">
+          <a class="btn-ghost" href="https://parts.audibatonrouge.com/"
+             style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+            <span style="display:inline;white-space:nowrap;overflow:visible;">Shop Parts</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT / CLOSE -->
+<section class="section dark close-block" id="visit">
+  <div class="wrap">
+    <p class="eyebrow">Book from the sticker</p>
+    <h2 class="h2">Ready when you are.</h2>
+    <p class="body-lg">Schedule online in a few minutes, or call the service desk. We&rsquo;ll take it from drop-off.</p>
+    <div class="btn-row">
+      <a class="btn-primary" href="https://audibatonrouge.com/service"
+         style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#a90002 !important;color:#fff !important;border:2px solid #a90002 !important;box-sizing:border-box !important;">
+        <span style="display:inline;white-space:nowrap;overflow:visible;">Schedule Service</span>
+      </a>
+      <a class="btn-secondary" href="tel:2256866012"
+         style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#fff !important;color:#000 !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+        <span style="display:inline;white-space:nowrap;overflow:visible;">Call (225) 686-6012</span>
+      </a>
+      <a class="btn-ghost" href="https://audibatonrouge.com/service-specials"
+         style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+        <span style="display:inline;white-space:nowrap;overflow:visible;">Service Specials</span>
+      </a>
+    </div>
+    <p class="address">
+      <strong>Audi Baton Rouge</strong><br>
+      11955 Airline Hwy, Baton Rouge, LA 70817<br>
+      <a href="tel:2256866012">(225) 686-6012</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://audibatonrouge.com/service">audibatonrouge.com/service</a>
+    </p>
+    <p class="fineprint" style="margin-top:22px;max-width:760px;">
+      Service specials sourced from <a href="https://audibatonrouge.com/service-specials" style="color:#fff;">audibatonrouge.com/service-specials</a>. Offers subject to change. Must present applicable offer at write-up. See dealer for full details, exclusions, and current availability. First-draft oil-sticker QR lander for review.
+    </p>
+  </div>
+</section>
+
+<!-- Sticky CTA (mobile) -->
+<div class="sticky-bar" aria-label="Quick service actions">
+  <div class="sticky-inner">
+    <a class="btn-primary" href="https://audibatonrouge.com/service"
+       style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;min-width:0 !important;width:auto !important;flex:1 1 0 !important;min-height:48px !important;padding:12px 14px !important;font-size:14px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#a90002 !important;color:#fff !important;border:2px solid #a90002 !important;box-sizing:border-box !important;">
+      <span style="display:inline;white-space:nowrap;overflow:visible;">Schedule</span>
+    </a>
+    <a class="btn-secondary" href="tel:2256866012"
+       style="font-family:AudiType,Audi,'Audi Type',Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;min-width:0 !important;width:auto !important;flex:1 1 0 !important;min-height:48px !important;padding:12px 14px !important;font-size:14px !important;font-weight:700 !important;line-height:1.2 !important;white-space:nowrap !important;overflow:visible !important;text-decoration:none !important;border-radius:0 !important;background:#fff !important;color:#000 !important;border:2px solid #fff !important;box-sizing:border-box !important;">
+      <span style="display:inline;white-space:nowrap;overflow:visible;">Call</span>
+    </a>
+  </div>
+</div>
+
+</div>
