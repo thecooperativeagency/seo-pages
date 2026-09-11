@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LSU Creator Internships — The Cooperative Agency</title>
+  <meta name="description" content="Paid short-form video and social internships at The Cooperative Agency in Baton Rouge. Real accounts. Real production. AI-native workflow. Built for LSU creators who already ship." />
+  <meta property="og:title" content="LSU Creator Internships — The Cooperative Agency" />
+  <meta property="og:description" content="Not a typical ad agency internship. Real short-form video, real brands, AI-native workflow. Baton Rouge." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0a0a0a;
+      --muted: #5c5c5c;
+      --line: rgba(10, 10, 10, 0.12);
+      --soft: #f4f4f2;
+      --paper: #fafaf8;
+      --card: #ffffff;
+      --accent: #0a0a0a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap {
+      width: min(920px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+    header.top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 0 8px;
+    }
+    .mark {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .mark span { color: var(--muted); font-weight: 500; }
+    .top a.cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .hero {
+      padding: 48px 0 36px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 7vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      max-width: 14ch;
+      text-wrap: pretty;
+    }
+    .lede {
+      margin: 0;
+      max-width: 38ch;
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      color: #222;
+      text-wrap: pretty;
+    }
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      color: #222;
+    }
+    section {
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.7rem, 3.5vw, 2.35rem);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+    p { margin: 0 0 14px; color: #1d1d1d; }
+    p:last-child { margin-bottom: 0; }
+    .muted { color: var(--muted); }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+    }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .dark {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 24px;
+      padding: 28px 24px;
+      margin-top: 8px;
+    }
+    .dark p { color: rgba(255,255,255,0.78); }
+    .dark h2 { color: #fff; }
+    .dark .item + .item {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .dark strong { color: #fff; font-weight: 650; }
+    ul.clean {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+    ul.clean li {
+      position: relative;
+      padding-left: 18px;
+      color: #222;
+    }
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ink);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .box {
+      background: var(--soft);
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid var(--line);
+    }
+    .box label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .box a.mail {
+      color: var(--ink);
+      font-weight: 650;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    footer {
+      padding: 36px 0 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer strong { color: var(--ink); }
+    footer a { color: var(--ink); }
+    .note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(920px, calc(100% - 28px)); }
+      .grid-2, .split { grid-template-columns: 1fr; }
+      .hero { padding-top: 32px; }
+      h1 { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="mark">The Cooperative Agency <span>· Baton Rouge</span></div>
+      <a class="cta" href="mailto:lance@thecoopbrla.com?subject=LSU%20Creator%20Internship">Apply / refer</a>
+    </header>
+
+    <div class="hero">
+      <div class="eyebrow">LSU creator internships</div>
+      <h1>Make content that actually ships.</h1>
+      <p class="lede">We’re looking for a few LSU students who already make trendy short-form video and social — and want real responsibility inside a growing agency that does not run like a typical ad shop.</p>
+      <div class="pills">
+        <span class="pill">Short-form video</span>
+        <span class="pill">Social-native creative</span>
+        <span class="pill">Live brand work</span>
+        <span class="pill">AI-native workflow</span>
+        <span class="pill">Baton Rouge</span>
+      </div>
+    </div>
+
+    <section>
+      <h2>Not a typical agency internship.</h2>
+      <p>Most internships teach you how agencies used to work: decks, endless rounds, content that dies in a folder. We built The Cooperative differently — operators first, creative second, systems always.</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Operators, not theater</h3>
+          <p>You work on live accounts and real production. Good work gets used. Weak work gets fixed. Portfolio > polish theater.</p>
+        </article>
+        <article class="card">
+          <h3>AI in the workflow</h3>
+          <p>We deeply adapt AI into research, drafting, editing speed, iteration, and internal systems — so you learn how modern teams actually move.</p>
+        </article>
+        <article class="card">
+          <h3>Small team, high ownership</h3>
+          <p>No 40-person ladder. Strong interns get trusted fast. You will feel the difference between “assist” and “own a lane.”</p>
+        </article>
+        <article class="card">
+          <h3>Local brands, real stakes</h3>
+          <p>Dealership and brand work that has to perform in market — not mock campaigns for a classroom grade.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>What you’d actually do</h2>
+      <div class="dark">
+        <div class="item">
+          <strong>Short-form video that feels native</strong>
+          <p>Reels, TikToks, vertical cuts, hooks, captions, pacing. Content people finish watching — not “we posted today” filler.</p>
+        </div>
+        <div class="item">
+          <strong>Platform taste + brand judgment</strong>
+          <p>You already know what scrolls. We’ll teach you how to aim that instinct at real businesses without killing the vibe.</p>
+        </div>
+        <div class="item">
+          <strong>Ship, measure, iterate</strong>
+          <p>Create → publish systems → learn what worked → do it again faster. AI helps the loop. Taste still decides.</p>
+        </div>
+      </div>
+      <p class="note">This role exists because we need more of the cultural, trend-forward video layer than a traditional shop cadence covers. If you only want Canva statics and meeting notes, this is not it.</p>
+    </section>
+
+    <section>
+      <div class="split">
+        <div>
+          <h2>Who fits</h2>
+          <ul class="clean">
+            <li>Manship, Tiger TV, Student Media, AdFed, digital advertising, or self-taught creators with a real body of work</li>
+            <li>You already shoot / edit / post — even if the gear is imperfect</li>
+            <li>You can explain why a hook works in one sentence</li>
+            <li>You’re curious about AI as a force multiplier, not scared of it and not lazy with it</li>
+            <li>You want responsibility more than a resume line</li>
+          </ul>
+        </div>
+        <div class="box">
+          <label>What helps</label>
+          <p style="margin:0 0 12px;color:#222;">A link to your best 5–10 pieces beats a perfect resume. Instagram, TikTok, Drive folder, Tiger TV reel — whatever is honest.</p>
+          <label>Logistics</label>
+          <p style="margin:0;color:#222;">Baton Rouge based. Flexible around class. Paid where we can make it make sense. Credit-friendly structure available when the school path fits.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>For faculty, advisers, and student leaders</h2>
+      <p>If you place talent or run a student desk, this is a clean referral ask: we need creators who can produce platform-native video for live brands, inside an AI-forward operating team.</p>
+      <ul class="clean">
+        <li>Short written brief available on request for Handshake / internship boards</li>
+        <li>Happy to do 15 minutes with your team or student org</li>
+        <li>Direct contact: Lance Faucheux, co-founder</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How to reach us</h2>
+      <div class="grid-2">
+        <div class="box">
+          <label>Students</label>
+          <p>Email a short intro + portfolio links to<br />
+          <a class="mail" href="mailto:lance@thecoopbrla.com?subject=LSU%20Creator%20Internship%20—%20student">lance@thecoopbrla.com</a></p>
+        </div>
+        <div class="box">
+          <label>Referrals / faculty</label>
+          <p>Same inbox. Subject line “LSU creator referral” is enough.<br />
+          <a class="mail" href="mailto:lance@thecoopbrla.com?subject=LSU%20Creator%20Referral">lance@thecoopbrla.com</a><br />
+          <span class="muted">Text: (225) 276-5682</span></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>The Cooperative Agency</strong> · Baton Rouge, Louisiana</p>
+      <p><a href="https://thecooperativeagency.com">thecooperativeagency.com</a> · <a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> · (225) 384-7228</p>
+      <p class="note" style="margin-top:10px;">You don’t need more vendors — you need fewer, smarter true partners. Same idea applies to talent: fewer interns, more ownership.</p>
+    </footer>
+  </div>
+</body>
+</html>
