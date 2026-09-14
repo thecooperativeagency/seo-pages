@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <meta name="coop-magazine" data-publication="sline-news" data-issue="issue-01-sep-2026" data-store="abr" />
 </head>
 <body>
   <article class="sheet">
@@ -589,9 +590,9 @@
         </div>
       </div>
       <p>
-        <a class="cta" href="https://audibatonrouge.com/all-new-audi-q3">Shop Q3</a>
+        <a class="cta" href="https://audibatonrouge.com/all-new-audi-q3?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=shop-q3">Shop Q3</a>
         &nbsp;&nbsp;
-        <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers">Shop specials</a>
+        <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=shop-specials">Shop specials</a>
       </p>
 
       <div class="lot-car">
@@ -613,9 +614,9 @@
           </div>
         </div>
         <p>
-          <a class="cta" href="https://audibatonrouge.com/cars/new-q5s">Shop Q5</a>
+          <a class="cta" href="https://audibatonrouge.com/cars/new-q5s?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=shop-q5">Shop Q5</a>
           &nbsp;&nbsp;
-          <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers">Shop specials</a>
+          <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=shop-specials">Shop specials</a>
         </p>
       </div>
 
@@ -638,9 +639,9 @@
           </div>
         </div>
         <p>
-          <a class="cta" href="https://audibatonrouge.com/cars/new-q7s">Shop Q7</a>
+          <a class="cta" href="https://audibatonrouge.com/cars/new-q7s?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=shop-q7">Shop Q7</a>
           &nbsp;&nbsp;
-          <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers">Shop specials</a>
+          <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=shop-specials">Shop specials</a>
         </p>
       </div>
     </section>
@@ -668,19 +669,70 @@
       <p class="cap">3-in-1 charger · complimentary with every service visit</p>
       <p>Every service visit, while supplies last: a 3-in-1 magnetic wireless charger with the store on it. No extra form. You come in. It goes home.</p>
       <p>Oil and filter, $199. Ten percent off recommended service. $100 off a regular alignment. ACC alignment and recalibration at $699 if the cruise system needs to be set true after glass or front-end work.</p>
-      <p><a class="cta" href="https://audibatonrouge.com/service">Book service</a></p>
+      <p><a class="cta" href="https://audibatonrouge.com/service?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=book-service">Book service</a></p>
     </section>
 
     <div class="end">
-      <p class="issue-line"><a href="https://audibatonrouge.com/s-line-news-cover-page">S Line News</a> · Issue 01 · September 2026</p>
+      <p class="issue-line"><a href="https://audibatonrouge.com/s-line-news-cover-page?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=s-line-news-cover-page">S Line News</a> · Issue 01 · September 2026</p>
       <p class="social">
         <a href="https://www.facebook.com/audibatonrouge">Facebook</a>
         <a href="https://www.x.com/audibatonrouge">X</a>
         <a href="https://www.instagram.com/audibatonrouge">Instagram</a>
       </p>
       <p class="store">Audi Baton Rouge · <a href="https://www.google.com/maps/place/Audi+Baton+Rouge/@30.3939522,-91.0513868,17z">11955 Airline Highway, Baton Rouge, LA 70817</a></p>
-      <p class="web"><a href="https://audibatonrouge.com/">www.audibatonrouge.com</a></p>
+      <p class="web"><a href="https://audibatonrouge.com/?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-01&utm_content=home">www.audibatonrouge.com</a></p>
     </div>
   </article>
+<!-- Coop magazine tracking: uses Motive/site gtag if present; does not load GA -->
+<script>
+(function () {
+  var meta = document.querySelector('meta[name="coop-magazine"]');
+  if (!meta) return;
+  var pub = meta.getAttribute('data-publication') || 'magazine';
+  var issue = meta.getAttribute('data-issue') || '';
+  var store = meta.getAttribute('data-store') || '';
+  function fire(name, params) {
+    params = params || {};
+    params.publication = pub;
+    params.issue = issue;
+    params.store = store;
+    params.page_path = location.pathname;
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', name, params);
+        return;
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: name }, params));
+    } catch (e) {}
+  }
+  fire('magazine_issue_view', { engagement_type: 'view' });
+  if ('IntersectionObserver' in window) {
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id || entry.target.getAttribute('data-section') || '';
+        if (!id || seen[id]) return;
+        seen[id] = 1;
+        fire('magazine_section_view', { section_id: id });
+      });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('section[id], article[id], [data-section]').forEach(function (el) {
+      io.observe(el);
+    });
+  }
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (!/^https?:/i.test(href)) return;
+    fire('magazine_cta_click', {
+      link_url: href.split('#')[0],
+      link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80)
+    });
+  }, true);
+})();
+</script>
 </body>
 </html>

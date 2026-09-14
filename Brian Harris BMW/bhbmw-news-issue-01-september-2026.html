@@ -366,6 +366,7 @@
       .strip img, .pair img { aspect-ratio: 16 / 10; }
     }
   </style>
+  <meta name="coop-magazine" data-publication="ultimate-driver" data-issue="issue-01-sep-2026" data-store="bhbmw" />
 </head>
 <body>
   <article class="sheet">
@@ -560,9 +561,9 @@
       </div>
       <p class="fine">Expires September 30, 2026. With approved credit. Some exclusions apply. See dealer for details. Delivery by September 30 required.</p>
       <p>
-        <a class="cta" href="https://brianharrisbmw.com/cars/bmw-x5">Shop X5</a>
+        <a class="cta" href="https://brianharrisbmw.com/cars/bmw-x5?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=shop-x5">Shop X5</a>
         &nbsp;&nbsp;
-        <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2">Shop specials</a>
+        <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=shop-specials">Shop specials</a>
       </p>
 
       <div class="lot-car">
@@ -586,9 +587,9 @@
         </div>
         <p class="fine">Expires September 30, 2026. With approved credit. Some exclusions apply. See dealer for details. Delivery by September 30 required.</p>
         <p>
-          <a class="cta" href="https://brianharrisbmw.com/cars/new-x3">Shop X3</a>
+          <a class="cta" href="https://brianharrisbmw.com/cars/new-x3?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=shop-x3">Shop X3</a>
           &nbsp;&nbsp;
-          <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2">Shop specials</a>
+          <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=shop-specials">Shop specials</a>
         </p>
       </div>
 
@@ -613,9 +614,9 @@
         </div>
         <p class="fine">Expires September 30, 2026. With approved credit. Some exclusions apply. See dealer for details. Delivery by September 30 required.</p>
         <p>
-          <a class="cta" href="https://brianharrisbmw.com/cars/new-x7">Shop X7</a>
+          <a class="cta" href="https://brianharrisbmw.com/cars/new-x7?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=shop-x7">Shop X7</a>
           &nbsp;&nbsp;
-          <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2">Shop specials</a>
+          <a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=shop-specials">Shop specials</a>
         </p>
       </div>
     </section>
@@ -629,19 +630,70 @@
       <p class="fine">Expires 9/28. Some exclusions apply. See dealer for details.</p>
       <p>Brake Value Service. Pricing depends on the car; other models and repairs run higher. The desk gives you the number before anything is touched.</p>
       <p class="fine">Expires 9/28. Some exclusions apply. See dealer for details.</p>
-      <p><a class="cta" href="https://brianharrisbmw.com/service">Book service</a></p>
+      <p><a class="cta" href="https://brianharrisbmw.com/service?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=book-service">Book service</a></p>
     </section>
 
     <footer class="end">
-      <p class="issue-line"><a href="https://brianharrisbmw.com/ultimate-driver-cover-page">The Ultimate Driver</a> · Issue 01 · September 2026</p>
+      <p class="issue-line"><a href="https://brianharrisbmw.com/ultimate-driver-cover-page?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=ultimate-driver-cover-page">The Ultimate Driver</a> · Issue 01 · September 2026</p>
       <p class="social">
         <a href="https://www.facebook.com/BrianHarrisBMW">Facebook</a>
         <a href="https://www.x.com/brianharrisbmw">X</a>
         <a href="https://www.instagram.com/brianharrisbmw">Instagram</a>
       </p>
       <p class="store">Brian Harris BMW · <a href="https://www.google.com/maps/search/12336+Airline+Highway+Baton+Rouge+LA+70817">12336 Airline Highway, Baton Rouge, LA 70817</a></p>
-      <p class="web"><a href="https://www.brianharrisbmw.com">www.brianharrisbmw.com</a></p>
+      <p class="web"><a href="https://www.brianharrisbmw.com?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-issue-01&utm_content=home">www.brianharrisbmw.com</a></p>
     </footer>
   </article>
+<!-- Coop magazine tracking: uses Motive/site gtag if present; does not load GA -->
+<script>
+(function () {
+  var meta = document.querySelector('meta[name="coop-magazine"]');
+  if (!meta) return;
+  var pub = meta.getAttribute('data-publication') || 'magazine';
+  var issue = meta.getAttribute('data-issue') || '';
+  var store = meta.getAttribute('data-store') || '';
+  function fire(name, params) {
+    params = params || {};
+    params.publication = pub;
+    params.issue = issue;
+    params.store = store;
+    params.page_path = location.pathname;
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', name, params);
+        return;
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: name }, params));
+    } catch (e) {}
+  }
+  fire('magazine_issue_view', { engagement_type: 'view' });
+  if ('IntersectionObserver' in window) {
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id || entry.target.getAttribute('data-section') || '';
+        if (!id || seen[id]) return;
+        seen[id] = 1;
+        fire('magazine_section_view', { section_id: id });
+      });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('section[id], article[id], [data-section]').forEach(function (el) {
+      io.observe(el);
+    });
+  }
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (!/^https?:/i.test(href)) return;
+    fire('magazine_cta_click', {
+      link_url: href.split('#')[0],
+      link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80)
+    });
+  }, true);
+})();
+</script>
 </body>
 </html>
