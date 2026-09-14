@@ -106,6 +106,15 @@
     @media (max-width: 960px) { .price-grid { grid-template-columns: 1fr; } }
     table.matrix td.num { font-size:12px; padding:8px 6px; }
     table.matrix th.num { font-size:9px; padding:8px 4px; white-space:nowrap; }
+
+    .coarse-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; margin: 4px 0 14px; }
+    .coarse-card { background:#0d0d0d; border:1px solid var(--line); border-radius:12px; padding:14px 14px 12px; position:relative; overflow:hidden; }
+    .coarse-card::before { content:''; position:absolute; left:0; right:0; top:0; height:3px; background:var(--audi); }
+    .coarse-card .k { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; font-weight:700; }
+    .coarse-card .v { font-size:1.55rem; font-weight:800; letter-spacing:-0.03em; margin-top:6px; font-variant-numeric:tabular-nums; }
+    .coarse-card .s { font-size:12px; color:var(--muted); margin-top:6px; line-height:1.4; }
+    .coarse-card .s strong { color:#ddd; }
+    @media (max-width: 960px) { .coarse-grid { grid-template-columns: 1fr; } }
     @media print {
       body { background:#fff; color:#111; }
       .header, .panel, .stat, .verdict { background:#fff; color:#111; border-color:#ddd; }
@@ -121,7 +130,7 @@
         <div class="eyebrow">Audi Baton Rouge · GM brief</div>
         <h1>CarGurus lead performance</h1>
         <div class="sub">Sales lead handling · VinSolutions · Apr 22, 2026 – Sep 13, 2026</div>
-        <div class="stamp">Generated 2026-09-14 14:41 · The Cooperative Agency · price bands added</div>
+        <div class="stamp">Generated 2026-09-14 18:09 · The Cooperative Agency · price pockets + $10k bands</div>
       </div>
       <div class="brand">Internal ops brief<br>for <strong>Audi Baton Rouge</strong><br>CarGurus only</div>
     </div>
@@ -579,6 +588,122 @@
       </div>
     </div>
 
+
+
+    <div class="panel" id="price-coarse">
+      <h2>Opps by price pocket</h2>
+      <p class="why"><strong>Simple split on top of the $10k bands.</strong> Under $25k · $25k–$35k (the 26–35 pocket) · Over $35k. Same Internet Price join as below. Workable CarGurus only.</p>
+      <div class="coarse-grid">
+        
+        <div class="coarse-card">
+          <div class="k">Under $25k</div>
+          <div class="v">55 <span style="font-size:14px;font-weight:600;color:var(--muted)">opps</span></div>
+          <div class="s"><strong>39.6%</strong> of workable · <strong>6 sold</strong> · 10.9% close<br>
+          Med price $21,879 · Used 55 · New 0 · CPO 0<br>
+          Top makes: Jeep (14), Chevrolet (6), INFINITI (6)</div>
+        </div>
+        <div class="coarse-card">
+          <div class="k">$25k–$35k</div>
+          <div class="v">30 <span style="font-size:14px;font-weight:600;color:var(--muted)">opps</span></div>
+          <div class="s"><strong>21.6%</strong> of workable · <strong>0 sold</strong> · 0.0% close<br>
+          Med price $30,234 · Used 29 · New 0 · CPO 1<br>
+          Top makes: Audi (10), Lincoln (4), Cadillac (4)</div>
+        </div>
+        <div class="coarse-card">
+          <div class="k">Over $35k</div>
+          <div class="v">53 <span style="font-size:14px;font-weight:600;color:var(--muted)">opps</span></div>
+          <div class="s"><strong>38.1%</strong> of workable · <strong>5 sold</strong> · 9.4% close<br>
+          Med price $54,987 · Used 35 · New 13 · CPO 5<br>
+          Top makes: Audi (32), BMW (3), INFINITI (3)</div>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table class="wide">
+          <thead>
+            <tr>
+              <th>Pocket</th><th class="num">Opps</th><th class="num">Share</th><th class="num">Sold</th>
+              <th class="num">Close</th><th class="num">Med price</th><th class="num">Used/New/CPO</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><strong>Under $25k</strong><div class="sub">price &lt; $25,000</div></td>
+        <td class="num">55</td>
+        <td class="num">39.6%</td>
+        <td class="num">6</td>
+        <td class="num"><span class="pill good">10.9%</span></td>
+        <td class="num">$21,879</td>
+        <td class="num">55/0/0</td>
+      </tr>
+      <tr>
+        <td><strong>$25k–$35k</strong><div class="sub">$25,000 – $34,999 (covers the 26–35k pocket)</div></td>
+        <td class="num">30</td>
+        <td class="num">21.6%</td>
+        <td class="num">0</td>
+        <td class="num"><span class="pill bad">0.0%</span></td>
+        <td class="num">$30,234</td>
+        <td class="num">29/0/1</td>
+      </tr>
+      <tr>
+        <td><strong>Over $35k</strong><div class="sub">price ≥ $35,000</div></td>
+        <td class="num">53</td>
+        <td class="num">38.1%</td>
+        <td class="num">5</td>
+        <td class="num"><span class="pill good">9.4%</span></td>
+        <td class="num">$54,987</td>
+        <td class="num">35/13/5</td>
+      </tr>
+      <tr>
+        <td><strong>No price on file</strong><div class="sub"></div></td>
+        <td class="num">1</td>
+        <td class="num">0.7%</td>
+        <td class="num">1</td>
+        <td class="num"><span class="pill good">100.0%</span></td>
+        <td class="num">—</td>
+        <td class="num">1/0/0</td>
+      </tr>
+            <tr class="total">
+              <td>All workable</td>
+              <td class="num">139</td>
+              <td class="num">100%</td>
+              <td class="num">12</td>
+              <td class="num">8.6%</td>
+              <td class="num">—</td>
+              <td class="num">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="subpanel">
+        <h3>Under $25k <span class="when-inline">55 opps · 6 sold · 10.9%</span></h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Vehicle</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med $</th></tr></thead>
+            <tbody><tr><td>2019 Jeep Grand Cherokee</td><td class='num'>7</td><td class='num'>1</td><td class='num'>14.3%</td><td class='num'>$10,980</td></tr><tr><td>2019 Chevrolet Silverado 1500</td><td class='num'>4</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$22,987</td></tr><tr><td>2021 Jeep Grand Cherokee</td><td class='num'>3</td><td class='num'>1</td><td class='num'>33.3%</td><td class='num'>$22,987</td></tr><tr><td>2020 Acura MDX</td><td class='num'>3</td><td class='num'>1</td><td class='num'>33.3%</td><td class='num'>$22,890</td></tr><tr><td>2020 Lincoln Nautilus</td><td class='num'>3</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$23,980</td></tr><tr><td>2013 INFINITI G37 Sedan</td><td class='num'>3</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$10,870</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$25k–$35k <span class="when-inline">30 opps · 0 sold · 0.0%</span></h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Vehicle</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med $</th></tr></thead>
+            <tbody><tr><td>2018 Cadillac CT6</td><td class='num'>4</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$26,980</td></tr><tr><td>2025 Mercedes-Benz C-Class</td><td class='num'>3</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$34,980</td></tr><tr><td>2022 Audi Q7</td><td class='num'>2</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$31,730</td></tr><tr><td>2020 Audi A8 L</td><td class='num'>2</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$34,980</td></tr><tr><td>2021 Honda Accord Sedan</td><td class='num'>2</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$27,980</td></tr><tr><td>2020 Lincoln Navigator L</td><td class='num'>2</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$25,987</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>Over $35k <span class="when-inline">53 opps · 5 sold · 9.4%</span></h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Vehicle</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med $</th></tr></thead>
+            <tbody><tr><td>2025 Audi Q8</td><td class='num'>5</td><td class='num'>1</td><td class='num'>20.0%</td><td class='num'>$63,987</td></tr><tr><td>2025 Audi Q7</td><td class='num'>4</td><td class='num'>1</td><td class='num'>25.0%</td><td class='num'>$55,478</td></tr><tr><td>2026 Audi Q8</td><td class='num'>3</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$80,950</td></tr><tr><td>2025 BMW X3</td><td class='num'>3</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$42,980</td></tr><tr><td>2023 INFINITI QX60</td><td class='num'>3</td><td class='num'>0</td><td class='num'>0.0%</td><td class='num'>$37,980</td></tr><tr><td>2023 Chevrolet Silverado 1500</td><td class='num'>2</td><td class='num'>1</td><td class='num'>50.0%</td><td class='num'>$43,890</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
     <div class="panel" id="price-ranges">
       <h2>Vehicles of interest by price range</h2>
