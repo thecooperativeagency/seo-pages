@@ -101,6 +101,11 @@
       .bar-row { grid-template-columns: 1fr; gap:4px; }
       .bar-nums { text-align:left; flex-direction:row; gap:10px; align-items:baseline; }
     }
+
+    .price-grid { display:grid; grid-template-columns: 1fr 1.15fr; gap:14px; }
+    @media (max-width: 960px) { .price-grid { grid-template-columns: 1fr; } }
+    table.matrix td.num { font-size:12px; padding:8px 6px; }
+    table.matrix th.num { font-size:9px; padding:8px 4px; white-space:nowrap; }
     @media print {
       body { background:#fff; color:#111; }
       .header, .panel, .stat, .verdict { background:#fff; color:#111; border-color:#ddd; }
@@ -116,7 +121,7 @@
         <div class="eyebrow">Audi Baton Rouge · GM brief</div>
         <h1>CarGurus lead performance</h1>
         <div class="sub">Sales lead handling · VinSolutions · Apr 22, 2026 – Sep 13, 2026</div>
-        <div class="stamp">Generated 2026-09-14 10:23 · The Cooperative Agency</div>
+        <div class="stamp">Generated 2026-09-14 14:41 · The Cooperative Agency · price bands added</div>
       </div>
       <div class="brand">Internal ops brief<br>for <strong>Audi Baton Rouge</strong><br>CarGurus only</div>
     </div>
@@ -574,17 +579,893 @@
       </div>
     </div>
 
-    <div class="split">
-      <div class="panel">
-        <h2>Top vehicles of interest</h2>
-        <p class="why">Most common year / make / model on workable CarGurus leads.</p>
+
+    <div class="panel" id="price-ranges">
+      <h2>Vehicles of interest by price range</h2>
+      <p class="why"><strong>$10k bands on the car of interest.</strong> Price = VinSolutions <em>Internet Price</em> from the inventory export, joined on VIN then stock (MSRP only if internet is blank). 138 of 139 workable leads priced · 1 unmatched. Snapshot price, not necessarily list price on the lead day.</p>
+      
+      <div class="bar-row">
+        <div class="bar-label">$0–$9,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%"></div></div>
+        <div class="bar-nums"><strong>2 opps</strong><span>0 sold · 0.0% · med $8,925</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$10,000–$19,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:44%"></div></div>
+        <div class="bar-nums"><strong>21 opps</strong><span>1 sold · 4.8% · med $13,980</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$20,000–$29,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        <div class="bar-nums"><strong>47 opps</strong><span>5 sold · 10.6% · med $23,980</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$30,000–$39,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:48%"></div></div>
+        <div class="bar-nums"><strong>23 opps</strong><span>0 sold · 0.0% · med $34,980</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$40,000–$49,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:36%"></div></div>
+        <div class="bar-nums"><strong>17 opps</strong><span>1 sold · 5.9% · med $44,470</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$50,000–$59,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:19%"></div></div>
+        <div class="bar-nums"><strong>9 opps</strong><span>2 sold · 22.2% · med $55,987</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$60,000–$69,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:17%"></div></div>
+        <div class="bar-nums"><strong>8 opps</strong><span>0 sold · 0.0% · med $63,987</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$70,000–$79,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:10%"></div></div>
+        <div class="bar-nums"><strong>5 opps</strong><span>2 sold · 40.0% · med $73,025</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$80,000–$89,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8%"></div></div>
+        <div class="bar-nums"><strong>4 opps</strong><span>0 sold · 0.0% · med $82,250</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$100,000–$109,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%"></div></div>
+        <div class="bar-nums"><strong>1 opps</strong><span>0 sold · 0.0% · med $109,250</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">$150,000–$159,999</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%"></div></div>
+        <div class="bar-nums"><strong>1 opps</strong><span>0 sold · 0.0% · med $151,190</span></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">No price on file</div>
+        <div class="bar-track"><div class="bar-fill" style="width:4%;opacity:.45"></div></div>
+        <div class="bar-nums"><strong>1 opps</strong><span>1 sold · no inventory price join</span></div>
+      </div>
+      <div class="table-scroll" style="margin-top:14px">
+        <table class="wide">
+          <thead>
+            <tr>
+              <th>Price range</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th>
+              <th class="num">Med price</th><th class="num">Used</th><th class="num">New</th><th class="num">CPO</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><strong>$0–$9,999</strong></td>
+        <td class="num">2</td>
+        <td class="num">0</td>
+        <td class="num"><span class="pill bad">0.0%</span></td>
+        <td class="num">$8,925</td>
+        <td class="num">2</td>
+        <td class="num">0</td>
+        <td class="num">0</td>
+      </tr>
+      <tr>
+        <td><strong>$10,000–$19,999</strong></td>
+        <td class="num">21</td>
+        <td class="num">1</td>
+        <td class="num"><span class="pill bad">4.8%</span></td>
+        <td class="num">$13,980</td>
+        <td class="num">21</td>
+        <td class="num">0</td>
+        <td class="num">0</td>
+      </tr>
+      <tr>
+        <td><strong>$20,000–$29,999</strong></td>
+        <td class="num">47</td>
+        <td class="num">5</td>
+        <td class="num"><span class="pill good">10.6%</span></td>
+        <td class="num">$23,980</td>
+        <td class="num">47</td>
+        <td class="num">0</td>
+        <td class="num">0</td>
+      </tr>
+      <tr>
+        <td><strong>$30,000–$39,999</strong></td>
+        <td class="num">23</td>
+        <td class="num">0</td>
+        <td class="num"><span class="pill bad">0.0%</span></td>
+        <td class="num">$34,980</td>
+        <td class="num">22</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+      </tr>
+      <tr>
+        <td><strong>$40,000–$49,999</strong></td>
+        <td class="num">17</td>
+        <td class="num">1</td>
+        <td class="num"><span class="pill watch">5.9%</span></td>
+        <td class="num">$44,470</td>
+        <td class="num">14</td>
+        <td class="num">1</td>
+        <td class="num">2</td>
+      </tr>
+      <tr>
+        <td><strong>$50,000–$59,999</strong></td>
+        <td class="num">9</td>
+        <td class="num">2</td>
+        <td class="num"><span class="pill good">22.2%</span></td>
+        <td class="num">$55,987</td>
+        <td class="num">6</td>
+        <td class="num">1</td>
+        <td class="num">2</td>
+      </tr>
+      <tr>
+        <td><strong>$60,000–$69,999</strong></td>
+        <td class="num">8</td>
+        <td class="num">0</td>
+        <td class="num"><span class="pill bad">0.0%</span></td>
+        <td class="num">$63,987</td>
+        <td class="num">3</td>
+        <td class="num">4</td>
+        <td class="num">1</td>
+      </tr>
+      <tr>
+        <td><strong>$70,000–$79,999</strong></td>
+        <td class="num">5</td>
+        <td class="num">2</td>
+        <td class="num"><span class="pill good">40.0%</span></td>
+        <td class="num">$73,025</td>
+        <td class="num">3</td>
+        <td class="num">2</td>
+        <td class="num">0</td>
+      </tr>
+      <tr>
+        <td><strong>$80,000–$89,999</strong></td>
+        <td class="num">4</td>
+        <td class="num">0</td>
+        <td class="num"><span class="pill bad">0.0%</span></td>
+        <td class="num">$82,250</td>
+        <td class="num">1</td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+      </tr>
+      <tr>
+        <td><strong>$100,000–$109,999</strong></td>
+        <td class="num">1</td>
+        <td class="num">0</td>
+        <td class="num"><span class="pill bad">0.0%</span></td>
+        <td class="num">$109,250</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">0</td>
+      </tr>
+      <tr>
+        <td><strong>$150,000–$159,999</strong></td>
+        <td class="num">1</td>
+        <td class="num">0</td>
+        <td class="num"><span class="pill bad">0.0%</span></td>
+        <td class="num">$151,190</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">0</td>
+      </tr>
+            <tr class="total">
+              <td>Priced total</td>
+              <td class="num">138</td>
+              <td class="num">11</td>
+              <td class="num">8.0%</td>
+              <td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Make × price range</h2>
+      <p class="why">Workable CarGurus VOI counts. Makes with 3+ opps. Cells are opportunity counts in each $10k band.</p>
+      <div class="table-scroll">
+        <table class="wide matrix">
+          <thead>
+            <tr><th>Make</th><th class="num">$0–9k</th><th class="num">$10–19k</th><th class="num">$20–29k</th><th class="num">$30–39k</th><th class="num">$40–49k</th><th class="num">$50–59k</th><th class="num">$60–69k</th><th class="num">$70–79k</th><th class="num">$80–89k</th><th class="num">$100–109k</th><th class="num">$150–159k</th><th class="num">Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="sticky"><strong>Audi</strong></td><td class="num">·</td><td class="num">1</td><td class="num">9</td><td class="num">6</td><td class="num">8</td><td class="num">7</td><td class="num">8</td><td class="num">3</td><td class="num">3</td><td class="num">1</td><td class="num">1</td><td class="num">47</td></tr><tr><td class="sticky"><strong>Jeep</strong></td><td class="num">·</td><td class="num">7</td><td class="num">7</td><td class="num">1</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">15</td></tr><tr><td class="sticky"><strong>Chevrolet</strong></td><td class="num">·</td><td class="num">2</td><td class="num">4</td><td class="num">1</td><td class="num">2</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">9</td></tr><tr><td class="sticky"><strong>INFINITI</strong></td><td class="num">·</td><td class="num">4</td><td class="num">2</td><td class="num">3</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">9</td></tr><tr><td class="sticky"><strong>Mercedes-Benz</strong></td><td class="num">·</td><td class="num">·</td><td class="num">2</td><td class="num">3</td><td class="num">·</td><td class="num">1</td><td class="num">·</td><td class="num">1</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">7</td></tr><tr><td class="sticky"><strong>Acura</strong></td><td class="num">·</td><td class="num">1</td><td class="num">3</td><td class="num">3</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">7</td></tr><tr><td class="sticky"><strong>Lincoln</strong></td><td class="num">·</td><td class="num">·</td><td class="num">7</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">7</td></tr><tr><td class="sticky"><strong>BMW</strong></td><td class="num">·</td><td class="num">1</td><td class="num">·</td><td class="num">1</td><td class="num">3</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">6</td></tr><tr><td class="sticky"><strong>Honda</strong></td><td class="num">·</td><td class="num">·</td><td class="num">4</td><td class="num">2</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">6</td></tr><tr><td class="sticky"><strong>Lexus</strong></td><td class="num">·</td><td class="num">2</td><td class="num">1</td><td class="num">·</td><td class="num">1</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">1</td><td class="num">·</td><td class="num">·</td><td class="num">5</td></tr><tr><td class="sticky"><strong>Cadillac</strong></td><td class="num">·</td><td class="num">·</td><td class="num">4</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">4</td></tr><tr><td class="sticky"><strong>GMC</strong></td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">1</td><td class="num">1</td><td class="num">·</td><td class="num">·</td><td class="num">1</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">3</td></tr><tr><td class="sticky"><strong>Kia</strong></td><td class="num">·</td><td class="num">·</td><td class="num">3</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">·</td><td class="num">3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Top vehicles inside each price range</h2>
+      <p class="why"><strong>Year / make / model</strong> on the lead, grouped by the unit’s $10k internet-price band. Use this to see what shoppers actually asked about at each price point.</p>
+      
+      <div class="subpanel">
+        <h3>$0–$9,999 <span class="when-inline">2 opps · 0 sold · 0.0%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Land Rover (1), Hyundai (1)</p>
         <div class="table-scroll">
-          <table>
-            <thead><tr><th>Vehicle</th><th class="num">Opps</th></tr></thead>
-            <tbody><tr><td>2019 Jeep Grand Cherokee</td><td class='num'>7</td></tr><tr><td>2025 Audi Q8</td><td class='num'>5</td></tr><tr><td>2025 Audi Q7</td><td class='num'>4</td></tr><tr><td>2019 Chevrolet Silverado 1500</td><td class='num'>4</td></tr><tr><td>2018 Cadillac CT6</td><td class='num'>4</td></tr><tr><td>2026 Audi Q8</td><td class='num'>3</td></tr><tr><td>2025 BMW X3</td><td class='num'>3</td></tr><tr><td>2023 INFINITI QX60</td><td class='num'>3</td></tr><tr><td>2021 Jeep Grand Cherokee</td><td class='num'>3</td></tr><tr><td>2020 Acura MDX</td><td class='num'>3</td></tr><tr><td>2020 Lincoln Nautilus</td><td class='num'>3</td></tr><tr><td>2025 Mercedes-Benz C-Class</td><td class='num'>3</td></tr><tr><td>2023 Audi Q5</td><td class='num'>3</td></tr><tr><td>2013 INFINITI G37 Sedan</td><td class='num'>3</td></tr><tr><td>2022 Audi Q7</td><td class='num'>2</td></tr></tbody>
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2016 Land Rover LR4<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$9,870</td>
+          </tr>
+          <tr>
+            <td>2015 Hyundai Santa Fe Sport<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$7,980</td>
+          </tr></tbody>
           </table>
         </div>
       </div>
+      <div class="subpanel">
+        <h3>$10,000–$19,999 <span class="when-inline">21 opps · 1 sold · 4.8%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Jeep (7), INFINITI (4), Chevrolet (2), Lexus (2), Subaru (2)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2019 Jeep Grand Cherokee<div class="sub">Used</div></td>
+            <td class="num">4</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$10,980</td>
+          </tr>
+          <tr>
+            <td>2013 INFINITI G37 Sedan<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$10,870</td>
+          </tr>
+          <tr>
+            <td>2015 Jeep Grand Cherokee<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$13,980</td>
+          </tr>
+          <tr>
+            <td>2019 Chevrolet Camaro<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$18,370</td>
+          </tr>
+          <tr>
+            <td>2022 Subaru WRX<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$18,970</td>
+          </tr>
+          <tr>
+            <td>2017 Audi Q7<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$14,980</td>
+          </tr>
+          <tr>
+            <td>2021 Jeep Grand Cherokee<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$15,490</td>
+          </tr>
+          <tr>
+            <td>2018 Acura MDX<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td class="num">100.0%</td>
+            <td class="num">$19,370</td>
+          </tr>
+          <tr>
+            <td>2011 Lexus RX 350<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$14,980</td>
+          </tr>
+          <tr>
+            <td>2017 Genesis G80<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$17,680</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$20,000–$29,999 <span class="when-inline">47 opps · 5 sold · 10.6%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (9), Jeep (7), Lincoln (7), Honda (4), Chevrolet (4)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2019 Chevrolet Silverado 1500<div class="sub">Used</div></td>
+            <td class="num">4</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$22,987</td>
+          </tr>
+          <tr>
+            <td>2018 Cadillac CT6<div class="sub">Used</div></td>
+            <td class="num">4</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$26,980</td>
+          </tr>
+          <tr>
+            <td>2019 Jeep Grand Cherokee<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">1</td>
+            <td class="num">33.3%</td>
+            <td class="num">$23,980</td>
+          </tr>
+          <tr>
+            <td>2020 Acura MDX<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">1</td>
+            <td class="num">33.3%</td>
+            <td class="num">$22,890</td>
+          </tr>
+          <tr>
+            <td>2020 Lincoln Nautilus<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$23,980</td>
+          </tr>
+          <tr>
+            <td>2023 Audi Q5<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">1</td>
+            <td class="num">33.3%</td>
+            <td class="num">$23,890</td>
+          </tr>
+          <tr>
+            <td>2021 Jeep Grand Cherokee<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">1</td>
+            <td class="num">50.0%</td>
+            <td class="num">$22,987</td>
+          </tr>
+          <tr>
+            <td>2019 Jeep Wrangler Unlimited<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$23,390</td>
+          </tr>
+          <tr>
+            <td>2022 Kia Sorento<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">1</td>
+            <td class="num">50.0%</td>
+            <td class="num">$21,480</td>
+          </tr>
+          <tr>
+            <td>2021 Honda Accord Sedan<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$27,980</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$30,000–$39,999 <span class="when-inline">23 opps · 0 sold · 0.0%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (6), INFINITI (3), Mercedes-Benz (3), Acura (3), Honda (2)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2023 INFINITI QX60<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$37,980</td>
+          </tr>
+          <tr>
+            <td>2025 Mercedes-Benz C-Class<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$34,980</td>
+          </tr>
+          <tr>
+            <td>2022 Audi Q7<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$31,730</td>
+          </tr>
+          <tr>
+            <td>2020 Audi A8 L<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$34,980</td>
+          </tr>
+          <tr>
+            <td>2022 Acura MDX<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$30,987</td>
+          </tr>
+          <tr>
+            <td>2024 Jeep Wagoneer L<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$38,790</td>
+          </tr>
+          <tr>
+            <td>2022 BMW 3 Series<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$30,480</td>
+          </tr>
+          <tr>
+            <td>2022 GMC Sierra 1500<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$38,970</td>
+          </tr>
+          <tr>
+            <td>2019 Ford Mustang<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$33,980</td>
+          </tr>
+          <tr>
+            <td>2024 Honda Accord Hybrid<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$30,980</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$40,000–$49,999 <span class="when-inline">17 opps · 1 sold · 5.9%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (8), BMW (3), Chevrolet (2), Ford (1), Lexus (1)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2025 BMW X3<div class="sub">Used</div></td>
+            <td class="num">3</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$42,980</td>
+          </tr>
+          <tr>
+            <td>2023 Chevrolet Silverado 1500<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">1</td>
+            <td class="num">50.0%</td>
+            <td class="num">$43,890</td>
+          </tr>
+          <tr>
+            <td>2025 Audi Q5 Sportback<div class="sub">Used</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$46,970</td>
+          </tr>
+          <tr>
+            <td>2025 Audi A5<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$44,470</td>
+          </tr>
+          <tr>
+            <td>2024 Audi Q7<div class="sub">CPO</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$44,980</td>
+          </tr>
+          <tr>
+            <td>2023 Ford Bronco<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$47,970</td>
+          </tr>
+          <tr>
+            <td>2025 Audi A6 Sedan<div class="sub">CPO</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$49,980</td>
+          </tr>
+          <tr>
+            <td>2020 Lexus LS<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$41,980</td>
+          </tr>
+          <tr>
+            <td>2023 GMC Sierra 1500<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$44,390</td>
+          </tr>
+          <tr>
+            <td>2023 Audi S5 Coupe<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$49,980</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$50,000–$59,999 <span class="when-inline">9 opps · 2 sold · 22.2%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (7), Mercedes-Benz (1), Land Rover (1)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2025 Audi Q7<div class="sub">CPO</div></td>
+            <td class="num">4</td>
+            <td class="num">1</td>
+            <td class="num">25.0%</td>
+            <td class="num">$55,478</td>
+          </tr>
+          <tr>
+            <td>2022 Mercedes-Benz S-Class<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$59,980</td>
+          </tr>
+          <tr>
+            <td>2024 Land Rover Defender<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$58,870</td>
+          </tr>
+          <tr>
+            <td>2023 Audi A7<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td class="num">100.0%</td>
+            <td class="num">$55,980</td>
+          </tr>
+          <tr>
+            <td>2026 Audi A5<div class="sub">New</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$56,260</td>
+          </tr>
+          <tr>
+            <td>2023 Audi Q8<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$55,987</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$60,000–$69,999 <span class="when-inline">8 opps · 0 sold · 0.0%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (8)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2025 Audi Q8<div class="sub">Used</div></td>
+            <td class="num">4</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$63,987</td>
+          </tr>
+          <tr>
+            <td>2026 Audi Q5 Sportback<div class="sub">New</div></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$61,628</td>
+          </tr>
+          <tr>
+            <td>2026 Audi SQ5<div class="sub">New</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$67,490</td>
+          </tr>
+          <tr>
+            <td>2026 Audi Q7<div class="sub">New</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$66,910</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$70,000–$79,999 <span class="when-inline">5 opps · 2 sold · 40.0%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (3), GMC (1), Mercedes-Benz (1)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2025 Audi Q8<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td class="num">100.0%</td>
+            <td class="num">$70,980</td>
+          </tr>
+          <tr>
+            <td>2024 GMC Yukon XL<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$77,980</td>
+          </tr>
+          <tr>
+            <td>2024 Mercedes-Benz GLE<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$73,890</td>
+          </tr>
+          <tr>
+            <td>2026 Audi Q7<div class="sub">New</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$72,795</td>
+          </tr>
+          <tr>
+            <td>2026 Audi SQ5 Sportback<div class="sub">New</div></td>
+            <td class="num">1</td>
+            <td class="num">1</td>
+            <td class="num">100.0%</td>
+            <td class="num">$73,025</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$80,000–$89,999 <span class="when-inline">4 opps · 0 sold · 0.0%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (3), Lexus (1)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2026 Audi Q8<div class="sub">New</div></td>
+            <td class="num">3</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$80,950</td>
+          </tr>
+          <tr>
+            <td>2025 Lexus GX<div class="sub">Used</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$87,890</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$100,000–$109,999 <span class="when-inline">1 opps · 0 sold · 0.0%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (1)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2026 Audi SQ8<div class="sub">New</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$109,250</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="subpanel">
+        <h3>$150,000–$159,999 <span class="when-inline">1 opps · 0 sold · 0.0%</span></h3>
+        <p class="why" style="margin-bottom:8px">Top makes: Audi (1)</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle of interest</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med price</th></tr></thead>
+            <tbody>
+          <tr>
+            <td>2026 Audi RS Q8<div class="sub">New</div></td>
+            <td class="num">1</td>
+            <td class="num">0</td>
+            <td class="num">0.0%</td>
+            <td class="num">$151,190</td>
+          </tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="split">
+      <div class="panel">
+        <h2>Top vehicles of interest</h2>
+        <p class="why">Most common year / make / model on workable CarGurus leads, with price band and median internet price.</p>
+        <div class="table-scroll">
+          <table class="wide">
+            <thead><tr><th>Vehicle</th><th class="num">Opps</th><th class="num">Sold</th><th class="num">Close</th><th class="num">Med $</th><th class="num">$ span</th></tr></thead>
+            <tbody>
+      <tr>
+        <td>2019 Jeep Grand Cherokee<div class="sub">$10,000–$19,999</div></td>
+        <td class="num">7</td>
+        <td class="num">1</td>
+        <td class="num">14.3%</td>
+        <td class="num">$10,980</td>
+        <td class="num">$10,980–$23,980</td>
+      </tr>
+      <tr>
+        <td>2025 Audi Q8<div class="sub">$60,000–$69,999</div></td>
+        <td class="num">5</td>
+        <td class="num">1</td>
+        <td class="num">20.0%</td>
+        <td class="num">$63,987</td>
+        <td class="num">$63,987–$70,980</td>
+      </tr>
+      <tr>
+        <td>2025 Audi Q7<div class="sub">$50,000–$59,999</div></td>
+        <td class="num">4</td>
+        <td class="num">1</td>
+        <td class="num">25.0%</td>
+        <td class="num">$55,478</td>
+        <td class="num">$54,987–$59,980</td>
+      </tr>
+      <tr>
+        <td>2019 Chevrolet Silverado 1500<div class="sub">$20,000–$29,999</div></td>
+        <td class="num">4</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$22,987</td>
+        <td class="num">$22,987–$22,987</td>
+      </tr>
+      <tr>
+        <td>2018 Cadillac CT6<div class="sub">$20,000–$29,999</div></td>
+        <td class="num">4</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$26,980</td>
+        <td class="num">$26,980–$26,980</td>
+      </tr>
+      <tr>
+        <td>2026 Audi Q8<div class="sub">$80,000–$89,999</div></td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$80,950</td>
+        <td class="num">$80,950–$83,550</td>
+      </tr>
+      <tr>
+        <td>2025 BMW X3<div class="sub">$40,000–$49,999</div></td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$42,980</td>
+        <td class="num">$42,980–$42,980</td>
+      </tr>
+      <tr>
+        <td>2023 INFINITI QX60<div class="sub">$30,000–$39,999</div></td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$37,980</td>
+        <td class="num">$37,980–$37,980</td>
+      </tr>
+      <tr>
+        <td>2021 Jeep Grand Cherokee<div class="sub">$20,000–$29,999</div></td>
+        <td class="num">3</td>
+        <td class="num">1</td>
+        <td class="num">33.3%</td>
+        <td class="num">$22,987</td>
+        <td class="num">$15,490–$22,987</td>
+      </tr>
+      <tr>
+        <td>2020 Acura MDX<div class="sub">$20,000–$29,999</div></td>
+        <td class="num">3</td>
+        <td class="num">1</td>
+        <td class="num">33.3%</td>
+        <td class="num">$22,890</td>
+        <td class="num">$22,890–$22,890</td>
+      </tr>
+      <tr>
+        <td>2020 Lincoln Nautilus<div class="sub">$20,000–$29,999</div></td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$23,980</td>
+        <td class="num">$23,980–$23,980</td>
+      </tr>
+      <tr>
+        <td>2025 Mercedes-Benz C-Class<div class="sub">$30,000–$39,999</div></td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$34,980</td>
+        <td class="num">$34,980–$34,980</td>
+      </tr>
+      <tr>
+        <td>2023 Audi Q5<div class="sub">$20,000–$29,999</div></td>
+        <td class="num">3</td>
+        <td class="num">1</td>
+        <td class="num">33.3%</td>
+        <td class="num">$23,890</td>
+        <td class="num">$23,890–$29,987</td>
+      </tr>
+      <tr>
+        <td>2013 INFINITI G37 Sedan<div class="sub">$10,000–$19,999</div></td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$10,870</td>
+        <td class="num">$10,870–$10,870</td>
+      </tr>
+      <tr>
+        <td>2022 Audi Q7<div class="sub">$30,000–$39,999</div></td>
+        <td class="num">2</td>
+        <td class="num">0</td>
+        <td class="num">0.0%</td>
+        <td class="num">$31,730</td>
+        <td class="num">$30,480–$32,980</td>
+      </tr></tbody>
+          </table>
+        </div>
+      </div>
+
       <div class="panel">
         <h2>Current lead status mix</h2>
         <p class="why">Workable opportunities — where they sit in VinSolutions now.</p>
@@ -595,6 +1476,7 @@
           </table>
         </div>
       </div>
+
     </div>
 
     <div class="panel">
@@ -618,6 +1500,7 @@
       Closes on this page are CarGurus opportunities marked sold in VinSolutions.
       Same customer closed on a walk-in/phone/other lead cannot be tied back without customer identity on the export.
       Lead history for CarGurus runs Apr 22 – Sep 13, 2026.
+      Vehicle prices are VinSolutions inventory Internet Price (MSRP fallback) joined by VIN/stock — snapshot, not lead-day list price.
     </p>
 
     <footer>
