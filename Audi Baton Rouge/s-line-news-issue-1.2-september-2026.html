@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S Line News | September Issue 1.2 | Audi Baton Rouge</title>
+  <link rel="stylesheet" href="../style-specs/auditype.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <meta name="coop-magazine" data-publication="sline-news" data-issue="issue-1.2-sep-2026" data-store="abr" />
+  <style>
+
+    :root {
+      --head: Arial, Helvetica, sans-serif;
+      --accent: #bb0a30;
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #5c574e;
+      --line: rgba(20,20,20,.14);
+      --red: #bb0a30;
+    }
+    .sheet, .sheet * { box-sizing: border-box; }
+    .sheet { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    .sheet {
+      font-family: Newsreader, Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .sheet a { color: inherit; }
+    .sheet img { display: block; width: 100%; }
+    .sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 32px 32px 72px;
+    }
+    .sheet .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .sheet .mast .news {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      letter-spacing: .46em;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 10px 0 0;
+    }
+    .sheet .mast h1 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: var(--red) !important;
+      font-size: clamp(4.4rem, 16vw, 8.2rem);
+      line-height: .78;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .sheet .mast .sub {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      letter-spacing: .26em;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin: 12px 0 0;
+    }
+    .sheet .hero { margin-top: 0; color: #fff; }
+    .sheet .plate { background: #fff; padding: 28px 28px 22px; }
+    .sheet .plate h1 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: var(--red) !important;
+      font-size: clamp(2.5rem, 8.5vw, 4.2rem);
+      line-height: .88;
+      letter-spacing: -.045em;
+      margin: 0;
+    }
+    .sheet .plate .meta {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #141414 !important;
+      margin: 12px 0 0;
+    }
+    .sheet .art { position: relative; }
+    .sheet .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 55%; }
+    .sheet .art::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 38%;
+      background: linear-gradient(transparent, rgba(0,0,0,.52));
+      pointer-events: none;
+    }
+    .sheet .story {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+    }
+    .sheet .story h2 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(1.7rem, 4.6vw, 2.4rem);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+      margin: 0 0 14px;
+      text-shadow: 0 1px 14px rgba(0,0,0,.35);
+    }
+    .sheet .story ul { list-style: none; margin: 0; padding: 0; }
+    .sheet .story li {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 7px 0;
+      border-top: 1px solid rgba(255,255,255,.32);
+      line-height: 1.35;
+    }
+    .sheet .cover-shot {
+      position: relative;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .sheet .cover-shot img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .sheet .cover-shot::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 58%;
+      background: linear-gradient(transparent, rgba(0,0,0,.62));
+      pointer-events: none;
+    }
+    .sheet .cover-shot .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .sheet .cover-shot .lockup .kicker {
+      color: var(--red) !important;
+      margin: 0 0 8px;
+    }
+    .sheet .cover-shot .lockup h2 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.4rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0;
+      text-shadow: 0 1px 16px rgba(0,0,0,.4);
+    }
+    .sheet .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .sheet .strip img { aspect-ratio: 1; object-fit: cover; }
+    .sheet .cover-meta {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 28px;
+      margin-top: 18px;
+    }
+    .sheet .issue-box {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .sheet .inside .label {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 0 0 8px;
+    }
+    .sheet .inside ul { margin: 0; padding: 0; list-style: none; }
+    .sheet .inside li {
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .sheet .inside li:first-child { border-top: 0; padding-top: 0; }
+    .sheet .inside li, .sheet .open, .sheet h2, .sheet h3, .sheet .cal li, .sheet .cal strong, .sheet p:not(.kicker), .sheet .mast .news, .sheet .mast .sub { color: #141414 !important; }
+    .sheet .kicker, .sheet .cover-shot .lockup .kicker { color: var(--red) !important; }
+    .sheet .toc {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 28px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .sheet .toc a {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .sheet .open {
+      margin: 48px 0 8px;
+      font-family: Newsreader, Georgia, "Times New Roman", serif;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .sheet .sec { margin-top: 64px; }
+    .sheet .kicker {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 0 0 10px;
+    }
+    .sheet h2 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    .sheet h3 {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 1.55rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 8px 0 12px;
+    }
+    .sheet p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #141414 !important; }
+    .sheet .shot { margin: 0 0 10px; }
+    .sheet .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .sheet .shot.product img { aspect-ratio: 4 / 3; object-fit: contain; background: #f4f4f4; }
+    .sheet .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .sheet .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    .sheet .cap {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 8px 0 18px;
+    }
+    .sheet .credit { font-size: 13px; color: var(--muted); }
+    .sheet .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .sheet .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .sheet .cal li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .sheet .cal strong { font-family: "AudiType", Arial, Helvetica, sans-serif; letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .sheet .cal a { text-decoration: underline; text-underline-offset: 3px; }
+    .sheet .cta {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid var(--red);
+      padding-bottom: 2px;
+    }
+    .sheet .lot-car { margin-top: 40px; }
+    .sheet .offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin: 4px 0 18px;
+    }
+    .sheet .offer {
+      background: var(--paper);
+      padding: 14px 16px 16px;
+    }
+    .sheet .offer .lbl {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    .sheet .offer .amt {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      color: var(--red);
+      margin: 0;
+    }
+    .sheet .offer .note {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin: 6px 0 0;
+      line-height: 1.35;
+    }
+    .sheet .end {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      text-align: center;
+    }
+    .sheet .end .issue-line {
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+    .sheet .end .issue-line a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .sheet .end .social {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin: 0 0 16px;
+    }
+    .sheet .end .social a {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+    }
+    .sheet .end .store { margin: 0; color: var(--ink); }
+    .sheet .end .store a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .sheet .end .web { margin: 6px 0 0; }
+    .sheet .end .web a { color: var(--muted); text-decoration: none; letter-spacing: .08em; }
+    @media (max-width: 720px) {
+      .sheet { padding: 18px 16px 56px; }
+      .cover-meta, .strip, .pair, .offers { grid-template-columns: 1fr; }
+      .plate { padding: 22px 20px 18px; }
+      .art img { aspect-ratio: 3 / 4; }
+      .story { left: 20px; right: 20px; bottom: 20px; }
+      .cover-shot img { aspect-ratio: 3 / 4; }
+      .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
+      .strip img, .pair img { aspect-ratio: 16 / 10; }
+    }
+  
+
+    .cal-actions { display:inline-flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+    .cal-btn {
+      font-family: var(--head, "AudiType", Arial, Helvetica, sans-serif);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #bb0a30 !important;
+      border: 1px solid #bb0a30;
+      padding: 6px 10px;
+      line-height: 1;
+    }
+    .sheet .cal .cal-btn { text-decoration: none; }
+    #cup .kicker, section#cup .kicker { letter-spacing: .18em; }
+
+</style>
+</head>
+<body>
+  <article class="sheet">
+    <link rel="stylesheet" href="https://thecooperativeagency.github.io/seo-pages/style-specs/auditype.css" />
+    <div class="hero">
+      <div class="plate">
+        <h1>S Line<br/>News</h1>
+        <p class="meta">Audi Baton Rouge &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 1.2</p>
+      </div>
+      <div class="art">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/abr-q3-night.jpg" alt="Audi Q3 at Audi Baton Rouge" />
+        <div class="story">
+          <h2>The all-new Q3, finally here</h2>
+          <ul>
+            <li>Q3 and Q5 on the lot</li>
+            <li>LSU 2–0, Oxford waiting</li>
+            <li>Pot pie or pecan pie</li>
+            <li>Teddy Graham Latte</li>
+            <li>The 37mm Tudor that wastes nothing</li>
+            <li>$199 oil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="strip">
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/tiger-stadium-dusk.jpg" alt="Tiger Stadium at dusk" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/lighthouse-coffee-room.jpg" alt="Light House Coffee, Baton Rouge" />
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/omega-hero.jpg" alt="Omega Speedmaster 38" />
+    </div>
+    <div class="cover-meta">
+      <div class="issue-box">S Line News<br/>Issue 1.2<br/>September 2026<br/>Audi Baton Rouge</div>
+      <div class="inside">
+        <p class="label">Inside</p>
+        <ul>
+          <li>The all-new Q3, finally here</li>
+          <li>LSU 2–0, Oxford waiting</li>
+          <li>Pot pie or pecan pie</li>
+          <li>The Teddy Graham Latte at Light House</li>
+          <li>The 37mm Tudor that wastes nothing</li>
+          <li>$199 oil, alignment money</li>
+        </ul>
+      </div>
+    </div>
+    <nav class="toc" aria-label="In this issue">
+      <a href="#lot">On the Lot</a>
+      <a href="#saturday">On Saturday</a>
+      <a href="#road">On the Road</a>
+      <a href="#table">On the Table</a>
+      <a href="#cup">In the Cup</a>
+      <a href="#town">On the Town</a>
+      <a href="#wrist">On the Wrist</a>
+      <a href="#workbench">On the Workbench</a>
+    </nav>
+    <p class="open">September in Baton Rouge still refuses the calendar. The heat holds the afternoon; football owns the weekend; the light finally gets useful around six.</p>
+    <p class="open" style="margin-top:0">This issue starts where the inbox already knows you start. Money.</p>
+
+    <section class="sec" id="lot">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/abr-q3-night.jpg" alt="All-new Audi Q3" />
+        <div class="lockup"><p class="kicker">On the Lot</p><h2>The all-new Q3, finally here</h2></div>
+      </div>
+      <p class="cap">Q3 · Audi Baton Rouge</p>
+      <p class="kicker">On the Lot</p>
+      <h2>The all-new Q3, finally here</h2>
+      <p>The compact Audi got the redesign it had been owed for years, and Audi Baton Rouge has thirteen of them on the ground right now. Longer, wider, a cabin rebuilt around the person driving. Here is the part worth saying plainly: the old one is here: all-new 2026 Q3, thirteen on the ground. Purchase side: $2,500 off select stock. Lease example on stock 26A199: $598 a month, $3,000 due at signing, 36 months, 10,000 miles.</p>
+      <p><a class="cta" href="https://audibatonrouge.com/all-new-audi-q3?utm_source=s-line-news&utm_medium=site&utm_campaign=sline-issue-1.2&utm_content=shop-q3">Shop Q3</a>&nbsp;&nbsp;<a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers?utm_source=s-line-news&utm_medium=site&utm_campaign=sline-issue-1.2&utm_content=shop-specials">Shop specials</a></p>
+      <div class="lot-car">
+        <div class="shot"><img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/abr-q5-black.jpg" alt="Audi Q5" /></div>
+        <p class="cap">Q5 · Audi Baton Rouge</p>
+        <h3>Q5 — up to $4,500 off, $699/mo</h3>
+        <p>Seventeen Q5s in stock. Select stacks run to $4,500 off ($2,000 off plus $2,500 rebate). Lease example on stock 26A186: $699 a month, $3,500 due at signing.</p>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/new-q5s?utm_source=s-line-news&utm_medium=site&utm_campaign=sline-issue-1.2&utm_content=shop-q5">Shop Q5</a>&nbsp;&nbsp;<a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers?utm_source=s-line-news&utm_medium=site&utm_campaign=sline-issue-1.2&utm_content=shop-specials">Shop specials</a></p>
+      </div>
+      <div class="lot-car">
+        <h3>Q7 — over $11,000 off on select</h3>
+        <p>Select Q7 inventory clears over $11,000 off before tax and fees. Lease example on stock 26A262 (Q7 45): $795 a month, $3,000 due at signing.</p>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/new-q7s?utm_source=s-line-news&utm_medium=site&utm_campaign=sline-issue-1.2&utm_content=shop-q7">Shop Q7</a></p>
+      </div>
+      <p class="credit">Plus tax, title, license. Approved credit. Some exclusions. See Audi Baton Rouge for the VIN in front of you.</p>
+    </section>
+
+    <section class="sec" id="saturday">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/tiger-stadium-dusk.jpg" alt="Tiger Stadium at dusk" />
+        <div class="lockup"><p class="kicker">On Saturday</p><h2>LSU is 2–0, and the hard part starts now</h2></div>
+      </div>
+      <p class="cap">LSU · Southern University · Baton Rouge</p>
+      <p class="kicker">On Saturday</p>
+      <h2>LSU is 2–0, and the hard part starts now</h2>
+      <p>Two games, two statements. Clemson left 51–10. Louisiana Tech left 45–14. Lane Kiffin’s first LSU September looks loud on paper. The paper gets heavier this weekend.</p>
+      <p>Saturday, September 19, the Tigers go to Oxford to play No. 8 Ole Miss — 7:30 p.m. CT, the first real weight of the year. Get through that and No. 9 Texas A&amp;M comes to Tiger Stadium on September 26, also 7:30, with rivalry teeth in it. Two ranked opponents in eight days. McNeese follows at home October 3 at 7:45.</p>
+      <h2>Southern University</h2>
+      <p>Across town the Jaguars are 1–2 and still playing the local calendar that matters before the SWAC road gets loud. This Saturday: Louisiana Christian at Ace W. Mumford, 7:00 p.m. Next week they go to Jackson State. Homecoming is October 3 against Arkansas–Pine Bluff. LSU owns the national TV. Southern owns the neighborhood.</p>
+      <ul class="cal">
+        <li><strong>LSU · Sat 19</strong> at No. 8 Ole Miss · 7:30 p.m. CT · <a href="https://www.espn.com/college-football/team/schedule/_/id/99/lsu-tigers">ESPN</a><br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/lsu-ole-miss-2026-09-19.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=LSU%20at%20No.%208%20Ole%20Miss&dates=20260919T193000/20260919T230000&ctz=America/Chicago&details=LSU%20at%20Ole%20Miss%20%C2%B7%207%3A30%20p.m.%20CT%20%C2%B7%20Oxford&location=Vaught-Hemingway%20Stadium%2C%20Oxford%2C%20MS" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Southern · Sat 19</strong> vs Louisiana Christian · Mumford · 7:00 p.m. · <a href="https://www.espn.com/college-football/team/schedule/_/id/2582/southern-jaguars">ESPN</a><br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/southern-la-christian-2026-09-19.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Southern%20vs%20Louisiana%20Christian&dates=20260919T190000/20260919T220000&ctz=America/Chicago&details=Southern%20vs%20Louisiana%20Christian%20%C2%B7%20Mumford&location=Ace%20W.%20Mumford%20Stadium%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>LSU · Sat 26</strong> vs No. 9 Texas A&amp;M · Tiger Stadium · 7:30 p.m. CT<br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/lsu-texas-am-2026-09-26.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=LSU%20vs%20No.%209%20Texas%20A%26M&dates=20260926T193000/20260926T230000&ctz=America/Chicago&details=LSU%20vs%20Texas%20A%26M%20%C2%B7%20Tiger%20Stadium%20%C2%B7%207%3A30%20p.m.%20CT&location=Tiger%20Stadium%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Southern · Sat 26</strong> at Jackson State · 7:00 p.m.<br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/southern-jackson-st-2026-09-26.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Southern%20at%20Jackson%20State&dates=20260926T190000/20260926T220000&ctz=America/Chicago&details=Southern%20at%20Jackson%20State&location=Mississippi%20Veterans%20Memorial%20Stadium%2C%20Jackson%2C%20MS" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>LSU · Sat Oct 3</strong> vs McNeese · Tiger Stadium · 7:45 p.m. CT<br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/lsu-mcneese-2026-10-03.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=LSU%20vs%20McNeese&dates=20261003T194500/20261003T230000&ctz=America/Chicago&details=LSU%20vs%20McNeese%20%C2%B7%207%3A45%20p.m.%20CT&location=Tiger%20Stadium%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Southern · Sat Oct 3</strong> vs Arkansas–Pine Bluff · Homecoming · 7:00 p.m.<br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/southern-uapb-2026-10-03.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Southern%20vs%20Arkansas-Pine%20Bluff%20%28Homecoming%29&dates=20261003T190000/20261003T220000&ctz=America/Chicago&details=Southern%20Homecoming%20vs%20UAPB&location=Ace%20W.%20Mumford%20Stadium%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+      </ul>
+      <p class="credit">Schedules: ESPN LSU + Southern, pulled 18 September 2026.</p>
+    </section>
+    <section class="sec" id="road">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/abr-q3-siana.jpg" alt="All-new Audi Q3" />
+        <div class="lockup"><p class="kicker">On the Road</p><h2>The A5 and Q5 got smarter without getting redrawn</h2></div>
+      </div>
+      <p class="cap">Q3 · product note</p>
+      <p class="kicker">On the Road</p>
+      <h2>The A5 and Q5 got smarter without getting redrawn</h2>
+      <p>Not every improvement shows up in the sheet metal. For 2026, Audi reworked the brains of the A5 and Q5 — a genuinely different experience from the driver’s seat. The MMI touch display trades long lists for graphics, dims the busywork, and finally makes the phone feel like part of the car instead of a guest.</p>
+      <p>The cockpit gets three views you flick through with a wheel-mounted button. The passenger display grew up — Bluetooth headphones, a controller, privacy mode while the driver keeps cabin audio. None of it is a redesign. All of it is why the newest Q5 on the lot drives like a newer idea than its shape lets on.</p>
+      <p class="credit">Source: Audi of America media releases.</p>
+    </section>
+    <section class="sec" id="table">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/elsie-potpie.jpg" alt="Elsie's Plate and Pie" />
+        <div class="lockup"><p class="kicker">On the Table</p><h2>The pot pie at Elsie’s</h2></div>
+      </div>
+      <p class="cap">Elsie’s · 3145 Government Street</p>
+      <h2>The pot pie at Elsie’s</h2>
+      <p>Elsie’s Plate &amp; Pie still does Lafourche cooking on Government Street like the name is a plate, not a brand deck. Seafood pot pie when you came for dinner. Pecan pie boxed when you came for later. The correct answer is both. Call the house — (225) 636-5157 — or start at elsiespies.com. OpenTable will wave you off. Old way works.</p>
+      <p><a class="cta" href="https://elsiespies.com/">elsiespies.com</a>&nbsp;&nbsp;<a class="cta" href="https://www.google.com/maps/search/3145+Government+St+Baton+Rouge">3145 Government St</a></p>
+    </section>
+    <section class="sec" id="cup">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/lighthouse-coffee-room.jpg" alt="Light House Coffee, Baton Rouge" />
+        <div class="lockup"><p class="kicker">In the Cup</p><h2>The Teddy Graham Latte at Light House</h2></div>
+      </div>
+      <p class="cap">Light House Coffee · 257 Lee Drive</p>
+      <h2>The Teddy Graham Latte at Light House</h2>
+      <p>Light House Coffee on Lee Drive is the room that still feels like a neighborhood decision: specialty coffee, their own roast since 2023, and a hiring story that is actual work, not a brochure. The drink to order this month is the Teddy Graham Latte — house brown-sugar syrup, local honey from Steve’s Bees, graham dust, cinnamon, the garnish that makes the name honest. Solo morning before a drive. Laptop hour that does not feel like a punishment.</p>
+      <p class="credit"><a href="https://www.lighthousecoffeebr.com/">lighthousecoffeebr.com</a> · Mon–Fri 7–6 · weekends 8–6</p>
+      <p><a class="cta" href="https://www.lighthousecoffeebr.com/">Light House</a>&nbsp;&nbsp;<a class="cta" href="https://goo.gl/maps/fLrLXdnpNVZJjtEE8">257 Lee Dr</a></p>
+    </section>
+
+    <section class="sec" id="town">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/farm-fete-1.jpg" alt="Baton Rouge on the town" />
+        <div class="lockup"><p class="kicker">On the Town</p><h2>The Wild Pour, Sunday the 20th</h2></div>
+      </div>
+      <p class="cap">Baton Rouge · mid-September forward</p>
+      <h2>The Wild Pour, Sunday the 20th</h2>
+      <p>BREC Zoo after hours, 2:30–5:30, 21+. Beer, wine, spirits, restaurant bites once the grounds go adult. The rare Sunday plan that asks you to show up thirsty and leave slower.</p>
+      <ul class="cal">
+        <li><strong>Sun 20</strong> Opéra Louisiane: <em>Life, Liberty, and Laughs!</em> Manship, 3 p.m. From $51.50. <a href="https://manshiptheatre.org/comingsoon/operalouisianelifelibertyandlaugh-920">Show</a><br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/opera-louisiane-2026-09-20.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Opera%20Louisiane%3A%20Life%2C%20Liberty%2C%20and%20Laughs%21&dates=20260920T150000/20260920T170000&ctz=America/Chicago&details=Manship%20Theatre%20%C2%B7%203%20p.m.&location=Manship%20Theatre%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Sun 20</strong> The Wild Pour, BREC Zoo, 2:30–5:30. 21+. <a href="https://brzoobrew.ticketbud.com/the-wild-pour-2026">Tickets</a><br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/wild-pour-2026-09-20.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Wild%20Pour%20at%20BREC%20Zoo&dates=20260920T143000/20260920T173000&ctz=America/Chicago&details=21%2B%20%C2%B7%20beer%2C%20wine%2C%20spirits%2C%20bites&location=BREC%27s%20Baton%20Rouge%20Zoo%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Thu 24</strong> Farm Fête, Main Street Market, 6–9. $125. <a href="https://breada.org/farm-fete/">Event</a><br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/farm-fete-2026-09-24.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Farm%20Fete&dates=20260924T180000/20260924T210000&ctz=America/Chicago&details=BREADA%20chefs%20and%20farms%20%C2%B7%20Main%20Street%20Market&location=Main%20Street%20Market%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Sun Oct 4</strong> The Lone Bellow, Manship, 7 p.m. From $46. <a href="https://manshiptheatre.org/comingsoon/the-lone-bellow-what-a-time-to-be-alive-tour-2026">Show</a><br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/lone-bellow-2026-10-04.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The%20Lone%20Bellow%20at%20Manship%20Theatre&dates=20261004T190000/20261004T210000&ctz=America/Chicago&details=What%20A%20Time%20To%20Be%20Alive%20Tour%20%C2%B7%207%20p.m.&location=Manship%20Theatre%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Wed Oct 7</strong> Alfredo Rodriguez Band feat. Pedrito Martinez, Manship, 7:30. From $56. <a href="https://manshiptheatre.org/comingsoon/rivercityjazzmasters-alfredorodriguezband-r5psh">Show</a><br/><span class="cal-actions"><a class="cal-btn" href="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/calendar/alfredo-rodriguez-2026-10-07.ics">Add to iCal</a><a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Alfredo%20Rodriguez%20Band%20feat.%20Pedrito%20Martinez&dates=20261007T193000/20261007T213000&ctz=America/Chicago&details=River%20City%20Jazz%20Masters%20%C2%B7%207%3A30%20p.m.&location=Manship%20Theatre%2C%20Baton%20Rouge%2C%20LA" target="_blank" rel="noopener">Google Calendar</a></span></li>
+        <li><strong>Through Jan</strong> <em>Reflections: The Art of George Rodrigue</em>, LASM. <a href="https://www.lasm.org/bluedog/">lasm.org</a></li>
+      </ul>
+    </section>
+    <section class="sec" id="wrist">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/omega-hero.jpg" alt="Omega Speedmaster 38" />
+        <div class="lockup"><p class="kicker">On the Wrist</p><h2>The 37mm Tudor that wastes nothing</h2></div>
+      </div>
+      <p class="cap">Omega · Hodinkee</p>
+      <h2>The 37mm Tudor that wastes nothing</h2>
+      <p>Not last issue’s Speedmaster. This time the wrist is a Tudor that keeps the case honest at 37mm — nothing wasted, nothing trying to look larger than the job. The kind of steel sports watch you actually wear to the lot and forget is on your wrist until someone asks.</p>
+      <p class="credit">Writer desk · verify live Hodinkee/Tudor source before CRM paste if a specific ref is required.</p>
+    </section>
+    <section class="sec" id="workbench">
+      <div class="cover-shot">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-1.2/abr-service-drive.jpg" alt="Audi Baton Rouge service" />
+        <div class="lockup"><p class="kicker">On the Workbench</p><h2>$199 oil, and the rest of the board</h2></div>
+      </div>
+      <p class="cap">Service · Audi Baton Rouge</p>
+      <h2>$199 oil, and the rest of the board</h2>
+      <p>Audi oil and filter change: <strong>$199</strong>. <strong>10% off</strong> recommended service. <strong>$100 off</strong> regular alignment (non-ACC). ACC alignment special: <strong>$699</strong>.</p>
+      <p><a class="cta" href="https://audibatonrouge.com/service?utm_source=s-line-news&utm_medium=site&utm_campaign=sline-issue-1.2&utm_content=book-service">Book service</a>&nbsp;&nbsp;<a class="cta" href="https://audibatonrouge.com/service-specials?utm_source=s-line-news&utm_medium=site&utm_campaign=sline-issue-1.2&utm_content=service-specials">Service specials</a></p>
+      <p class="credit">11955 Airline Hwy, Baton Rouge · Must present offer at write-up; see dealer for details.</p>
+    </section>
+    <footer class="foot">
+      <p class="issue-line"><a href="s-line-news.html">S Line News</a> · Issue 1.2 · September 2026</p>
+      <p class="store">Audi Baton Rouge · 11955 Airline Highway · Baton Rouge, LA 70817 · <a href="https://audibatonrouge.com/">audibatonrouge.com</a></p>
+    </footer>
+  </article>
+</body>
+</html>

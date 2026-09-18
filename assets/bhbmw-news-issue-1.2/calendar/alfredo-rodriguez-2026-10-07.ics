@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Ultimate Driver//Brian Harris BMW//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:alfredo-rodriguez-2026-10-07@rooftop.coop
+DTSTAMP:20260918T180000Z
+DTSTART;TZID=America/Chicago:20261007T193000
+DTEND;TZID=America/Chicago:20261007T213000
+SUMMARY:Alfredo Rodriguez Band feat. Pedrito Martinez
+DESCRIPTION:River City Jazz Masters · 7:30 p.m.
+LOCATION:Manship Theatre, Baton Rouge, LA
+END:VEVENT
+END:VCALENDAR

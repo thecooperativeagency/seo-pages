@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Ultimate Driver//BMW of Jackson//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ms-book-fest-2026-09-26@rooftop.coop
+DTSTAMP:20260918T180000Z
+DTSTART;TZID=America/Chicago:20260926T090000
+DTEND;TZID=America/Chicago:20260926T170000
+SUMMARY:Mississippi Book Festival
+DESCRIPTION:Mississippi Book Festival · State Capitol grounds · free
+LOCATION:Mississippi State Capitol, Jackson, MS
+END:VEVENT
+END:VCALENDAR
