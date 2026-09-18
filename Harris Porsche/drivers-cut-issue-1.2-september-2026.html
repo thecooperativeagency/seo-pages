@@ -335,16 +335,29 @@
     }
     .sheet .cal .cal-btn { color: var(--gold) !important; text-decoration: none; }
 
-
-    .shot-landscape img,
+    /* Macan lead: show the photo as sent — no aspect crop */
     .art.shot-landscape img,
-    .cover-shot.shot-landscape img {
-      aspect-ratio: 16 / 10 !important;
-      object-fit: cover;
-      object-position: 50% 55%;
+    .cover-shot.shot-landscape img,
+    .shot-landscape img {
+      aspect-ratio: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      object-position: center center !important;
     }
 
+
     @media (max-width: 720px) {
+
+      .art.shot-landscape img,
+      .cover-shot.shot-landscape img,
+      .shot-landscape img {
+        aspect-ratio: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
       .plate { padding: 22px 20px 18px; }

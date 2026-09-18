@@ -176,15 +176,29 @@
     }
     .end a { color: var(--ink); }
 
-    .shot-landscape img,
+    /* Macan lead: show the photo as sent — no aspect crop */
     .art.shot-landscape img,
-    .cover-shot.shot-landscape img {
-      aspect-ratio: 16 / 10 !important;
-      object-fit: cover;
-      object-position: 50% 55%;
+    .cover-shot.shot-landscape img,
+    .shot-landscape img {
+      aspect-ratio: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      object-position: center center !important;
     }
 
+
     @media (max-width: 720px) {
+
+      .art.shot-landscape img,
+      .cover-shot.shot-landscape img,
+      .shot-landscape img {
+        aspect-ratio: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+
       .sheet { padding: 18px 16px 56px; }
       .plate { padding: 22px 20px 18px; }
       .art img { aspect-ratio: 3 / 4; }
@@ -199,7 +213,7 @@
         <h1>The Driver’s Cut</h1>
         <p class="meta">Harris Porsche &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 1.2</p>
       </span>
-      <span class="art">
+      <span class="art shot-landscape">
         <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-02/macan-exec-demo-sept-1.2-full.jpg" alt="White Porsche Macan S executive demo at Harris Porsche" />
         <span class="story">
           <h2>Macan executive demos from $67,900</h2>
