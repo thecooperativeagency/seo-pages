@@ -335,6 +335,15 @@
     }
     .sheet .cal .cal-btn { color: var(--gold) !important; text-decoration: none; }
 
+
+    .shot-landscape img,
+    .art.shot-landscape img,
+    .cover-shot.shot-landscape img {
+      aspect-ratio: 16 / 10 !important;
+      object-fit: cover;
+      object-position: 50% 55%;
+    }
+
     @media (max-width: 720px) {
       .sheet { padding: 18px 16px 56px; }
       .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
@@ -355,8 +364,8 @@
         <h1>The Driver’s Cut</h1>
         <p class="meta">Harris Porsche &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 1.2</p>
       </div>
-      <div class="art">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-02/macan-exec-demo-sept-1.2.jpg" alt="Porsche Macan at Harris Porsche" />
+      <div class="art shot-landscape">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-02/macan-exec-demo-sept-1.2-full.jpg" alt="White Porsche Macan S executive demo at Harris Porsche" />
         <div class="story">
           <h2>Macan executive demos from $67,900</h2>
           <ul>
@@ -411,8 +420,8 @@
 
     <!-- ON THE LOT FIRST -->
     <section class="sec" id="lot">
-      <div class="cover-shot">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-02/macan-exec-demo-sept-1.2.jpg" alt="Porsche Macan at Harris Porsche" />
+      <div class="cover-shot shot-landscape">
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/drivers-cut-issue-02/macan-exec-demo-sept-1.2-full.jpg" alt="White Porsche Macan S executive demo at Harris Porsche" />
         <div class="lockup">
           <p class="kicker">On the Lot</p>
           <h2>Macan executive demos from $67,900</h2>
