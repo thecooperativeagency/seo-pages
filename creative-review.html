@@ -3,714 +3,1268 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creative Review Dashboard — The Cooperative Agency</title>
+  <title>Creative Review Hub — The Cooperative Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root { --blue:#1c69d4; --audi:#000; --porsche:#b12b28; --ink:#111; --muted:#666; --line:#ddd; --bg:#f7f8fa; --card:#fff; --green:#188038; --gold:#8a6100; }
-    * { box-sizing:border-box; }
-    body { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; max-width:1180px; margin:36px auto; padding:0 20px 70px; background:var(--bg); color:var(--ink); }
-    header { margin-bottom:24px; }
-    h1 { font-size:clamp(1.55rem,2.6vw,2.35rem); margin:0 0 8px; letter-spacing:-0.035em; }
-    .sub { color:var(--muted); font-size:14px; line-height:1.55; max-width:900px; margin:0; }
-    .note { margin-top:14px; padding:12px 14px; background:#fff8e1; border:1px solid #f0d27a; border-radius:10px; color:#5f4700; font-size:13px; line-height:1.45; }
-    .toolbar { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 28px; }
-    .filter { border:1px solid var(--line); background:#fff; color:#333; padding:8px 12px; border-radius:999px; font-size:13px; cursor:pointer; }
-    .filter.active { background:var(--blue); border-color:var(--blue); color:#fff; }
-    .month { margin:30px 0 16px; display:flex; align-items:baseline; gap:10px; border-bottom:2px solid var(--blue); padding-bottom:9px; }
-    .month h2 { margin:0; font-size:1.15rem; color:var(--blue); }
-    .month span { color:#777; font-size:12px; }
-    .dealer { margin:18px 0; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
-    .dealer-head { padding:14px 16px; background:#111; color:#fff; display:flex; justify-content:space-between; gap:12px; align-items:center; }
-    .dealer-head h3 { margin:0; font-size:1rem; }
-    .dealer-head span { font-size:12px; opacity:.75; }
-    .dealer.audi .dealer-head { background:#000; }
-    .dealer.bmw .dealer-head { background:#06101d; }
-    .dealer.porsche .dealer-head { background:#2a1110; }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; padding:14px; }
-    .item { border:1px solid var(--line); border-radius:12px; padding:15px; background:#fff; display:flex; flex-direction:column; gap:12px; }
-    .item-top { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
-    .title { font-size:15px; font-weight:750; margin:0; line-height:1.3; }
-    .meta { color:#666; font-size:12px; margin-top:5px; line-height:1.35; }
-    .tags { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
-    .tag { display:inline-flex; align-items:center; font-size:10px; padding:3px 8px; border-radius:999px; white-space:nowrap; font-weight:750; letter-spacing:.02em; }
-    .tag-web { background:#e8f0fe; color:#1c69d4; }
-    .tag-email { background:#e6f4ea; color:#137333; }
-    .tag-specials { background:#fff3cd; color:#8a6100; }
-    .tag-service { background:#e6f4ea; color:#137333; }
-    .tag-evergreen { background:#f1f3f4; color:#444; }
-    .tag-report { background:#edf2ff; color:#2742a8; }
-    .tag-annual { background:#e6f4ea; color:#137333; }
-    .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:34px; padding:8px 11px; border-radius:8px; font-size:12px; font-weight:750; text-decoration:none; border:1px solid var(--line); }
-    .btn-preview { background:var(--blue); color:#fff; border-color:var(--blue); }
-    .btn-raw { background:#fff; color:#555; }
-    .btn-index { background:#f3f4f6; color:#555; }
-    .hub-card {
-      margin:18px 0 8px; padding:16px 18px; border-radius:14px; border:1px solid #c9d7f5;
-      background:linear-gradient(180deg,#f5f8ff 0%,#fff 70%);
+    :root {
+      --ink: #0a0a0a;
+      --muted: #5c5c5c;
+      --line: #e6e6e6;
+      --soft: #f4f4f2;
+      --card: #ffffff;
+      --accent: #111111;
+      --blue: #1c69d4;
+      --green: #1f7a3f;
+      --amber: #8a6100;
+      --radius: 14px;
     }
-    .hub-card h2 { margin:0 0 6px; font-size:1.08rem; color:#1a3f8a; }
-    .hub-card p { margin:0 0 12px; color:#556; font-size:13px; line-height:1.45; }
-    .hub-card .actions { margin-top:0; }
-    .month.hidden, .dealer.hidden { display:none !important; }
-    .hidden { display:none !important; }
-    @media (max-width:790px) { .grid { grid-template-columns:1fr; } .item-top { flex-direction:column; } .tags { justify-content:flex-start; } .dealer-head { flex-direction:column; align-items:flex-start; } }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: #fafaf8;
+      line-height: 1.45;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px 80px; }
+
+    /* hero */
+    .hero {
+      background: #0a0a0a;
+      color: #fff;
+      padding: 42px 0 36px;
+      margin-bottom: 28px;
+    }
+    .hero .brand {
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .62;
+      margin: 0 0 14px;
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.05;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      max-width: 620px;
+      margin: 0;
+      color: rgba(255,255,255,.72);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .hero-note {
+      margin-top: 18px;
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+    }
+    .hero-note strong { color: #fff; font-weight: 600; }
+
+    /* lane jump cards */
+    .lanes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      margin: -46px 0 28px;
+      position: relative;
+      z-index: 2;
+    }
+    .lane-jump {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 18px 16px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .lane-jump:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(0,0,0,.09); }
+    .lane-jump .kicker {
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+    .lane-jump h2 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: 1.45rem;
+      margin: 0 0 6px;
+      letter-spacing: -0.01em;
+    }
+    .lane-jump p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    /* toolbar */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 8px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250,250,248,.92);
+      backdrop-filter: blur(10px);
+      padding: 12px 0;
+      border-bottom: 1px solid transparent;
+    }
+    .toolbar.stuck { border-bottom-color: var(--line); }
+    .filter {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #333;
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .filter.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+    /* sections */
+    .lane {
+      margin-top: 38px;
+      padding-top: 8px;
+    }
+    .lane-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+    }
+    .lane-head h2 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .lane-head .hint { color: var(--muted); font-size: 13px; max-width: 420px; text-align: right; }
+
+    .dealer-block { margin: 0 0 28px; }
+    .dealer-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 0 0 12px;
+      padding: 10px 12px;
+      background: var(--soft);
+      border-radius: 10px;
+    }
+    .dealer-label h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .dealer-label span { color: var(--muted); font-size: 12px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 128px;
+    }
+    .card-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+    .card h3 { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.3; }
+    .meta { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.4; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+    .tag {
+      display: inline-flex; align-items: center;
+      font-size: 10px; font-weight: 700; letter-spacing: .04em;
+      text-transform: uppercase; padding: 4px 8px; border-radius: 999px;
+      background: #eee; color: #444;
+    }
+    .tag.t-Sales, .tag.t-sales { background: #e8f0fe; color: #1c69d4; }
+    .tag.t-Service, .tag.t-service { background: #e6f4ea; color: #137333; }
+    .tag.t-Feature, .tag.t-feature { background: #111; color: #fff; }
+    .tag.t-Specials, .tag.t-specials { background: #fff3cd; color: #8a6100; }
+    .tag.t-Magazine, .tag.t-magazine { background: #f3e8ff; color: #6b21a8; }
+    .tag.t-Cover, .tag.t-cover { background: #111; color: #fff; }
+    .tag.t-Issue, .tag.t-issue { background: #f3e8ff; color: #6b21a8; }
+    .tag.t-Homepage, .tag.t-homepage { background: #f1f3f4; color: #444; }
+    .status {
+      display: inline-flex; align-items: center;
+      font-size: 10px; font-weight: 700; letter-spacing: .04em;
+      text-transform: uppercase; padding: 4px 8px; border-radius: 999px;
+      background: #ffe8cc; color: #9a4d00;
+    }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 34px; padding: 8px 12px; border-radius: 8px;
+      font-size: 12px; font-weight: 700; text-decoration: none;
+      border: 1px solid var(--line); background: #fff; color: #333;
+    }
+    .btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .btn:hover { opacity: .92; }
+
+    .foot {
+      margin-top: 48px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      justify-content: space-between;
+    }
+    .foot a { color: var(--ink); font-weight: 600; text-decoration: none; border-bottom: 1px solid #ccc; }
+    .hidden { display: none !important; }
+
+    @media (max-width: 860px) {
+      .lanes { grid-template-columns: 1fr; margin-top: -28px; }
+      .grid { grid-template-columns: 1fr; }
+      .lane-head { flex-direction: column; align-items: flex-start; }
+      .lane-head .hint { text-align: left; }
+      .card-top { flex-direction: column; }
+      .tags { justify-content: flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- bmw-tire-sept-2026-v1 bmw-tire-sept-2026-v2 · national-style primary locked -->
-  <section style="margin:18px 0;padding:16px;border:1px solid #2a2f38;border-radius:12px;background:#12161c;color:#eee;">
-    <h3 style="margin:0 0 6px;">BMW Tire Assets · September 2026</h3>
-    <p style="margin:0 0 10px;opacity:.85;">Shared + BHBMW + BMWJ Bridgestone $100 rebrand; dual-offer strip; national $250 OEM pack.</p>
-    <p style="margin:0;">
-      <a href="https://thecooperativeagency.github.io/seo-pages/bmw-tire-assets-sept-2026.html" style="color:#4c9aff;">Preview</a> ·
-      <a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/bmw-tire-assets-sept-2026.html" style="color:#4c9aff;">Raw HTML</a> ·
-      <a href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-tire-sept-2026/shared-dual-offer-landscape.jpg" style="color:#4c9aff;">Dual-offer sample</a>
-    </p>
-  </section>
-
-  <header>
-    <h1>Creative Review Dashboard</h1>
-    <p class="sub">One place to review finished web/content/specials pages and dealership email creative. Repos stay separate; this dashboard just makes everything easier to find.</p>
-    <div class="note"><strong>Preview</strong> opens the rendered page/email. <strong>Raw HTML</strong> opens the copy/paste source for Motiv or CRM. Motive tool buttons may only function after the web HTML is pasted into the live Motive site.</div>
-    <div class="actions" style="margin-top:14px;">
-      <a class="btn btn-preview" href="#letters">Letters paste desk</a>
-      <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html">Manager Reports Hub</a>
-      <a class="btn btn-index" href="index.html">SEO/Web Index</a>
-      <a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/">Email Index</a>
+  <header class="hero">
+    <div class="wrap">
+      <p class="brand">The Cooperative Agency</p>
+      <h1>Creative Review Hub</h1>
+      <p>One calm place to review finished creative before it goes live — emails, SEO feature pages, and rooftop magazines. Preview to look. Raw HTML to paste.</p>
+      <div class="hero-note"><strong>Not here:</strong> GM Weekly, Acquire, inventory packs, and ops reports live on their own desks.</div>
     </div>
   </header>
 
-  <section class="month" id="letters"><h2>Rooftop letters — Motive paste</h2><span>One desk. Cover then Issue 01. Preview to check, Raw HTML to paste.</span></section>
-  <section class="dealer audi" data-store-section="letters">
-    <div class="dealer-head"><h3>Audi Baton Rouge</h3><span>S Line News · cover /s-line-news-cover-page · I1 /sline-news-01</span></div>
-    <div class="grid">
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">S Line News — Cover</p><p class="meta">White lockup on Q3 · issue TOC · paste this first</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Cover</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/s-line-news.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">S Line News — Issue 01</p><p class="meta">September 2026 · On Saturday after Road · cover hed on Q3</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/s-line-news-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news-issue-01-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">S Line News — Issue 1.2</p><p class="meta">September 2026 · offers first · LSU + Southern · In the Cup · Elsie’s</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/s-line-news-issue-1.2-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news-issue-1.2-september-2026.html">Raw HTML</a></div>
-      </article>
+  <div class="wrap">
+    <nav class="lanes" aria-label="Creative lanes">
+      <a class="lane-jump" href="#email">
+        <p class="kicker">Lane 1</p>
+        <h2>Email creative</h2>
+        <p>Sales, service, launch, and CRM emails. Paste into VinSolutions / your ESP.</p>
+      </a>
+      <a class="lane-jump" href="#seo">
+        <p class="kicker">Lane 2</p>
+        <h2>SEO feature pages</h2>
+        <p>Launch features, specials, and homepage panels for Motive paste.</p>
+      </a>
+      <a class="lane-jump" href="#magazine">
+        <p class="kicker">Lane 3</p>
+        <h2>Magazine newsletters</h2>
+        <p>S Line News, The Ultimate Driver, The Driver’s Cut — cover, issues, promos.</p>
+      </a>
+    </nav>
 
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">S Line News — Homepage promo</p><p class="meta">Motive homepage strip · cover + Read Issue 01</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Homepage</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/s-line-news-homepage-promo-copy.html">Copy</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news-homepage-promo.html">Raw HTML</a></div>
-      </article>
+    <div class="toolbar" id="toolbar" aria-label="Store filters">
+      <button class="filter active" data-filter="all">All stores</button>
+      <button class="filter" data-filter="audi-baton-rouge">Audi Baton Rouge</button>
+      <button class="filter" data-filter="brian-harris-bmw">Brian Harris BMW</button>
+      <button class="filter" data-filter="bmw-of-jackson">BMW of Jackson</button>
+      <button class="filter" data-filter="harris-porsche">Harris Porsche</button>
     </div>
-  </section>
-  <section class="dealer bmw" data-store-section="letters">
-    <div class="dealer-head"><h3>Brian Harris BMW</h3><span>The Ultimate Driver · cover /ultimate-driver-cover-page · I1 /ultimate-driver-issue-01</span></div>
-    <div class="grid">
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Cover</p><p class="meta">White lockup on X5 · issue TOC · paste this first</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Cover</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/the-ultimate-driver.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/the-ultimate-driver.html">Raw HTML</a></div>
+    <section class="lane" id="email">
+      <div class="lane-head">
+        <h2>Email creative</h2>
+        <p class="hint">CRM / ESP paste. Newest work first under each store.</p>
+      </div>
+      <div class="dealer-block" data-store-section="audi-baton-rouge">
+        <div class="dealer-label"><h3>Audi Baton Rouge</h3><span>10 emails</span></div>
+        <div class="grid">
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>All-New 2027 Audi Q9 Feature Email</h3>
+            <p class="meta">First draft · launch feature fold · calls + contact form · not monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span><span class="status">Draft</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-all-new-2027-q9-feature-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-all-new-2027-q9-feature-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Issue 01</p><p class="meta">September 2026 · On Saturday after Road · cover hed on X5</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bhbmw-news-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bhbmw-news-issue-01-september-2026.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>September 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">Ultimate Driver — Issue 1.2 (BHBMW)</p><p class="meta">September 2026 · offers first · Cup · Vals · LSU + Southern</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bhbmw-news-issue-1.2-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bhbmw-news-issue-1.2-september-2026.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>September 2026 S Line Teaser Email</h3>
+            <p class="meta">S Line News teaser</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email-sline-teaser.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email-sline-teaser.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Homepage promo</p><p class="meta">Motive homepage strip · cover + Read Issue 01 · mock first</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Homepage</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/ultimate-driver-homepage-promo-preview.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/ultimate-driver-homepage-promo.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>August 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-august-2026-sales-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-august-2026-sales-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-    </div>
-  </section>
-  <section class="dealer bmw" data-store-section="letters">
-    <div class="dealer-head"><h3>BMW of Jackson</h3><span>The Ultimate Driver · cover /ultimate-driver-cover-page · I1 /ultimate-driver-issue-01</span></div>
-    <div class="grid">
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Cover</p><p class="meta">White lockup on X3 · issue TOC · paste this first</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Cover</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/the-ultimate-driver.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/the-ultimate-driver.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>July 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-july-2026-sales-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-july-2026-sales-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Issue 01</p><p class="meta">September 2026 · masthead links to cover</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmwj-news-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmwj-news-issue-01-september-2026.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>June 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-june-2026-sales-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-june-2026-sales-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">Ultimate Driver — Issue 1.2 (BMWJ)</p><p class="meta">September 2026 · offers first · Cup · Ole Miss + State · Native</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmwj-news-issue-1.2-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmwj-news-issue-1.2-september-2026.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>May 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-may-2026-sales-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-may-2026-sales-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Homepage promo</p><p class="meta">Motive homepage strip · cover + Read Issue 01</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Homepage</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/ultimate-driver-homepage-promo-copy.html">Copy</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/ultimate-driver-homepage-promo.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>May 2026 Loyalty Email</h3>
+            <p class="meta">Loyalty offer</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-may-2026-loyalty-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-may-2026-loyalty-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-    </div>
-  </section>
-  <section class="dealer porsche" data-store-section="letters">
-    <div class="dealer-head"><h3>Harris Porsche</h3><span>The Driver’s Cut · cover + Issue 1.2 + Issue 01 · email-first</span></div>
-    <div class="grid">
-      <article class="item" data-store="harris-porsche" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — Cover</p><p class="meta">Issue TOC · leads with Issue 1.2 · paste this first</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Cover</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Harris Porsche/the-drivers-cut.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/the-drivers-cut.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>April 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-april-2026-sales-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-april-2026-sales-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-      <article class="item" data-store="harris-porsche" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — Issue 1.2</p><p class="meta">September 2026 · offers first · LSU + Southern · Rolex · CRM full letter</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Harris Porsche/drivers-cut-issue-1.2-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/drivers-cut-issue-1.2-september-2026.html">Raw HTML</a></div>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Service Specials Email</h3>
+            <p class="meta">Service offers</p>
+          </div>
+          <div class="tags"><span class="tag t-Service">Service</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Service/audi-br-service-specials-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Service/audi-br-service-specials-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-      <article class="item" data-store="harris-porsche" data-kind="web" data-type="letter">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — Issue 01</p><p class="meta">September 2026 · On Saturday (LSU) under the masthead</p></div><div class="tags"><span class="tag tag-web">Letter</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Harris Porsche/drivers-cut-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/drivers-cut-issue-01-september-2026.html">Raw HTML</a></div>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="brian-harris-bmw">
+        <div class="dealer-label"><h3>Brian Harris BMW</h3><span>11 emails</span></div>
+        <div class="grid">
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>September 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-september-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-september-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-      <article class="item" data-store="harris-porsche" data-kind="email" data-type="letter">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — Issue 1.2 (CRM email)</p><p class="meta">Full letter · email UTMs · paste into CRM</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-drivers-cut-issue-1.2-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-drivers-cut-issue-1.2-september-2026.html">Raw HTML</a></div>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>August 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-august-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-august-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
       </article>
-    </div>
-  </section>
-
-  <div class="hub-card" data-store-section="gm-reports">
-    <h2>Manager packs — quick open</h2>
-    <p>GM Weekly (lead handling) and Annual Inventory (metal) in one place. For the full store-by-store list, open the hub. Client shares stay single-store URLs only.</p>
-    <div class="actions">
-      <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html">Open Manager Reports Hub</a>
-      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bhbmw.html">BHBMW GM Weekly</a>
-      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/abr.html">ABR GM Weekly</a>
-      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj.html">BMWJ GM Weekly</a>
-      <a class="btn btn-raw" href="https://thecooperativeagency.github.io/annual-inventory/bhbmw.html">BHBMW Annual Inventory</a>
-    </div>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>July 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-july-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-july-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>June 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-june-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-june-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>May 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-may-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-may-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>April 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-april-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-april-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>M4 CS Custom Order Email</h3>
+            <p class="meta">Feature / order path</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-m4-cs-custom-order-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-m4-cs-custom-order-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>M3 CS Handschalter Email</h3>
+            <p class="meta">Feature</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-m3-cs-handschalter-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-m3-cs-handschalter-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>Gen M Tour Event Email</h3>
+            <p class="meta">Event</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-gen-m-tour-event-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-gen-m-tour-event-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>Service Specials 2026</h3>
+            <p class="meta">Service offers</p>
+          </div>
+          <div class="tags"><span class="tag t-Service">Service</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Service/bh-bmw-service-specials-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Service/bh-bmw-service-specials-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>Value Service Aug 2026 Email</h3>
+            <p class="meta">Service</p>
+          </div>
+          <div class="tags"><span class="tag t-Service">Service</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Service/bh-bmw-value-service-aug-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Service/bh-bmw-value-service-aug-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="bmw-of-jackson">
+        <div class="dealer-label"><h3>BMW of Jackson</h3><span>7 emails</span></div>
+        <div class="grid">
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>Launch Evening Oct 2026 Invite</h3>
+            <p class="meta">Event invite</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-launch-evening-oct-2026-invite.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-launch-evening-oct-2026-invite.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>September 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-september-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-september-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>August 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-august-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-august-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>July 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-july-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-july-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>June 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-june-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-june-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>May 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-may-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-may-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>April 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-april-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-april-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="harris-porsche">
+        <div class="dealer-label"><h3>Harris Porsche</h3><span>8 emails</span></div>
+        <div class="grid">
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>September 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-september-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-september-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>Driver’s Cut Issue 1.2 — CRM Email</h3>
+            <p class="meta">Full letter email · CRM paste</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-drivers-cut-issue-1.2-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-drivers-cut-issue-1.2-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>July 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-july-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-july-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>June 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-june-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-june-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>May 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-may-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-may-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>April 2026 Sales Email</h3>
+            <p class="meta">Monthly specials</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-april-2026-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-april-2026-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>Inquiry Email</h3>
+            <p class="meta">Lead follow-up</p>
+          </div>
+          <div class="tags"><span class="tag t-Sales">Sales</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-inquiry-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-inquiry-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>Birthday Email</h3>
+            <p class="meta">Service / retention</p>
+          </div>
+          <div class="tags"><span class="tag t-Service">Service</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Service/harris-porsche-birthday-email.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Service/harris-porsche-birthday-email.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="lane" id="seo">
+      <div class="lane-head">
+        <h2>SEO feature pages</h2>
+        <p class="hint">Launch features, monthly specials, homepage panels. Full model catalog stays on the SEO index.</p>
+      </div>
+      <div class="dealer-block" data-store-section="audi-baton-rouge">
+        <div class="dealer-label"><h3>Audi Baton Rouge</h3><span>8 pages</span></div>
+        <div class="grid">
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>All-New 2027 Audi Q7</h3>
+            <p class="meta">Launch feature page · 429 hp · Motive paste</p>
+          </div>
+          <div class="tags"><span class="tag t-Feature">Feature</span><span class="status">Live draft</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/all-new-2027-audi-q7-baton-rouge.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/all-new-2027-audi-q7-baton-rouge.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>All-New 2027 Audi Q9</h3>
+            <p class="meta">Launch feature page · first-ever flagship · Motive paste</p>
+          </div>
+          <div class="tags"><span class="tag t-Feature">Feature</span><span class="status">Live draft</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/all-new-2027-audi-q9-baton-rouge.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/all-new-2027-audi-q9-baton-rouge.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Homepage Q3 / Q5 / Q7 / Q9 Panels</h3>
+            <p class="meta">Motive homepage 4-up · Shop + Learn More</p>
+          </div>
+          <div class="tags"><span class="tag t-Feature">Feature</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/abr-homepage-q3-q5-q7-q9-panels.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/abr-homepage-q3-q5-q7-q9-panels.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>New Car Specials — September 2026</h3>
+            <p class="meta">Monthly specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/audi-new-car-specials-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-new-car-specials-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>New Car Specials — August 2026</h3>
+            <p class="meta">Monthly specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/audi-new-car-specials-august-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-new-car-specials-august-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>New Car Specials — May 2026</h3>
+            <p class="meta">Monthly specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/audi-new-car-specials-may-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-new-car-specials-may-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Audi Loyalty Credit</h3>
+            <p class="meta">Loyalty offer page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/audi-loyalty-credit-baton-rouge.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-baton-rouge.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Q5 S line Black Optic</h3>
+            <p class="meta">Feature / trim page</p>
+          </div>
+          <div class="tags"><span class="tag t-Feature">Feature</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/audi-q5-s-line-black-optic.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q5-s-line-black-optic.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="brian-harris-bmw">
+        <div class="dealer-label"><h3>Brian Harris BMW</h3><span>4 pages</span></div>
+        <div class="grid">
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>All-New 2027 BMW X5</h3>
+            <p class="meta">Launch feature page (latest)</p>
+          </div>
+          <div class="tags"><span class="tag t-Feature">Feature</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/all-new-bmw-x5-2027-v9.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/all-new-bmw-x5-2027-v9.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>New BMW Specials — September 2026</h3>
+            <p class="meta">Monthly specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/new-bmw-specials-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-specials-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>New BMW Specials — August 2026</h3>
+            <p class="meta">Monthly specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/new-bmw-specials-august-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-specials-august-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>BMW Tire Assets — September 2026</h3>
+            <p class="meta">Bridgestone $100 rebrand + dual-offer + national $250 · BHBMW / BMWJ</p>
+          </div>
+          <div class="tags"><span class="tag t-Service">Service</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/bmw-tire-assets-sept-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/bmw-tire-assets-sept-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="bmw-of-jackson">
+        <div class="dealer-label"><h3>BMW of Jackson</h3><span>3 pages</span></div>
+        <div class="grid">
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>All-New 2027 BMW X5</h3>
+            <p class="meta">Launch feature page (latest)</p>
+          </div>
+          <div class="tags"><span class="tag t-Feature">Feature</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/all-new-bmw-x5-2027-v9.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/all-new-bmw-x5-2027-v9.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>New BMW Specials — September 2026</h3>
+            <p class="meta">Monthly specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/new-bmw-specials-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/new-bmw-specials-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>New BMW Specials — August 2026</h3>
+            <p class="meta">Monthly specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/new-bmw-specials-august-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/new-bmw-specials-august-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="harris-porsche">
+        <div class="dealer-label"><h3>Harris Porsche</h3><span>1 pages</span></div>
+        <div class="grid">
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>April 2026 Specials Page</h3>
+            <p class="meta">Specials page</p>
+          </div>
+          <div class="tags"><span class="tag t-Specials">Specials</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Harris%20Porsche/harris-porsche-april-2026-specials.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/harris-porsche-april-2026-specials.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="lane" id="magazine">
+      <div class="lane-head">
+        <h2>Magazine newsletters</h2>
+        <p class="hint">Rooftop letters. Cover first, then issues, then homepage promo.</p>
+      </div>
+      <div class="dealer-block" data-store-section="audi-baton-rouge">
+        <div class="dealer-label"><h3>Audi Baton Rouge · S Line News</h3><span>4 pieces</span></div>
+        <div class="grid">
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Cover</h3>
+            <p class="meta">White lockup · issue TOC · paste first</p>
+          </div>
+          <div class="tags"><span class="tag t-Cover">Cover</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/s-line-news.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Issue 01 — September 2026</h3>
+            <p class="meta">Full issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/s-line-news-issue-01-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news-issue-01-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Issue 1.2 — September 2026</h3>
+            <p class="meta">Offers-first issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/s-line-news-issue-1.2-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news-issue-1.2-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="audi-baton-rouge">
+        <div class="card-top">
+          <div>
+            <h3>Homepage promo</h3>
+            <p class="meta">Motive homepage strip</p>
+          </div>
+          <div class="tags"><span class="tag t-Homepage">Homepage</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/s-line-news-homepage-promo.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news-homepage-promo.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="brian-harris-bmw">
+        <div class="dealer-label"><h3>Brian Harris BMW · The Ultimate Driver</h3><span>4 pieces</span></div>
+        <div class="grid">
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>Cover</h3>
+            <p class="meta">White lockup · issue TOC · paste first</p>
+          </div>
+          <div class="tags"><span class="tag t-Cover">Cover</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/the-ultimate-driver.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/the-ultimate-driver.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>Issue 01 — September 2026</h3>
+            <p class="meta">Full issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/bhbmw-news-issue-01-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bhbmw-news-issue-01-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>Issue 1.2 — September 2026</h3>
+            <p class="meta">Offers-first issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/bhbmw-news-issue-1.2-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bhbmw-news-issue-1.2-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="brian-harris-bmw">
+        <div class="card-top">
+          <div>
+            <h3>Homepage promo</h3>
+            <p class="meta">Motive homepage strip</p>
+          </div>
+          <div class="tags"><span class="tag t-Homepage">Homepage</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/ultimate-driver-homepage-promo.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/ultimate-driver-homepage-promo.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="bmw-of-jackson">
+        <div class="dealer-label"><h3>BMW of Jackson · The Ultimate Driver</h3><span>4 pieces</span></div>
+        <div class="grid">
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>Cover</h3>
+            <p class="meta">White lockup · issue TOC · paste first</p>
+          </div>
+          <div class="tags"><span class="tag t-Cover">Cover</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/the-ultimate-driver.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/the-ultimate-driver.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>Issue 01 — September 2026</h3>
+            <p class="meta">Full issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/bmwj-news-issue-01-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmwj-news-issue-01-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>Issue 1.2 — September 2026</h3>
+            <p class="meta">Offers-first issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/bmwj-news-issue-1.2-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmwj-news-issue-1.2-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="bmw-of-jackson">
+        <div class="card-top">
+          <div>
+            <h3>Homepage promo</h3>
+            <p class="meta">Motive homepage strip</p>
+          </div>
+          <div class="tags"><span class="tag t-Homepage">Homepage</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/BMW%20of%20Jackson/ultimate-driver-homepage-promo.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/ultimate-driver-homepage-promo.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+      <div class="dealer-block" data-store-section="harris-porsche">
+        <div class="dealer-label"><h3>Harris Porsche · The Driver’s Cut</h3><span>3 pieces</span></div>
+        <div class="grid">
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>Cover</h3>
+            <p class="meta">Issue TOC · paste first</p>
+          </div>
+          <div class="tags"><span class="tag t-Cover">Cover</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Harris%20Porsche/the-drivers-cut.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/the-drivers-cut.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>Issue 01 — September 2026</h3>
+            <p class="meta">Full issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Harris%20Porsche/drivers-cut-issue-01-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/drivers-cut-issue-01-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+      <article class="card" data-store="harris-porsche">
+        <div class="card-top">
+          <div>
+            <h3>Issue 1.2 — September 2026</h3>
+            <p class="meta">Offers-first issue</p>
+          </div>
+          <div class="tags"><span class="tag t-Issue">Issue</span><span class="tag t-Magazine">Magazine</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/Harris%20Porsche/drivers-cut-issue-1.2-september-2026.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/drivers-cut-issue-1.2-september-2026.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <footer class="foot">
+      <div>Creative only · The Cooperative Agency</div>
+      <div>
+        <a href="index.html">Full SEO / model index</a>
+        ·
+        <a href="https://thecooperativeagency.github.io/email-creative/">Email library</a>
+        ·
+        <a href="https://thecooperativeagency.github.io/email-creative/manager-reports.html">Manager reports (separate)</a>
+      </div>
+    </footer>
   </div>
-
-  <section class="month" data-month-for="gm-reports"><h2>Manager Reports · GM Weekly + Annual Inventory</h2><span>lead handling + metal packs · Store / New / Used · single-store shares only</span></section>
-  <section class="dealer bmw" data-store-section="gm-reports">
-    <div class="dealer-head"><h3>GM Weekly</h3><span>rolling 30 days · Store / New / Used · no multi-store hub for GMs</span></div>
-    <div class="grid">
-      <article class="item" data-store="brian-harris-bmw" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">GM Weekly — Brian Harris BMW</p><p class="meta">Store · New · Used · VinSolutions · rolling 30 days</p></div><div class="tags"><span class="tag tag-report">GM Weekly</span></div></div>
-        <div class="actions">
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bhbmw.html">Store</a>
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bhbmw-new.html">New</a>
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bhbmw-used.html">Used</a>
-        </div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">GM Weekly — Audi Baton Rouge</p><p class="meta">Store · New · Used · VinSolutions · rolling 30 days</p></div><div class="tags"><span class="tag tag-report">GM Weekly</span></div></div>
-        <div class="actions">
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/abr.html">Store</a>
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/abr-new.html">New</a>
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/abr-used.html">Used</a>
-        </div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">CarGurus Lead Performance — Audi Baton Rouge</p><p class="meta">Apr 22 – Sep 13, 2026 · who got them · speed · close · sold · VOI by $10k price band</p></div><div class="tags"><span class="tag tag-report">Source deep-dive</span></div></div>
-        <div class="actions">
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/seo-pages/Audi%20Baton%20Rouge/abr-cargurus-leads-apr-sep-2026.html">Open</a>
-        </div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">GM Weekly — BMW of Jackson</p><p class="meta">Store · New/Used via VOI stock type · Focus · rolling 30d</p></div><div class="tags"><span class="tag tag-report">GM Weekly</span></div></div>
-        <div class="actions">
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj.html">Store</a>
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj-new.html">New</a>
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/gm-weekly/bmwj-used.html">Used</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="dealer bmw" data-store-section="gm-reports">
-    <div class="dealer-head"><h3>Annual Inventory</h3><span>trailing 12 months sold metal + active lot · separate product from GM Weekly</span></div>
-    <div class="grid">
-      <article class="item" data-store="brian-harris-bmw" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">Annual Inventory — Brian Harris BMW</p><p class="meta">Aug 1, 2025 – Jul 24, 2026 · New / Used / CPO · Generated 2026-07-30</p></div><div class="tags"><span class="tag tag-annual">Annual Inventory</span></div></div>
-        <div class="actions">
-          <a class="btn btn-preview" href="https://thecooperativeagency.github.io/annual-inventory/bhbmw.html">Open pack</a>
-          <a class="btn btn-raw" href="https://thecooperativeagency.github.io/annual-inventory/">Product index</a>
-        </div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">Annual Inventory — Audi Baton Rouge</p><p class="meta">Pending Motosnap ABR Annual Inventory feed</p></div><div class="tags"><span class="tag tag-evergreen">Pending</span></div></div>
-        <div class="actions">
-          <a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html#abr">See hub note</a>
-        </div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="report" data-type="gm-reports">
-        <div class="item-top"><div><p class="title">Annual Inventory — BMW of Jackson</p><p class="meta">Pending real trailing sold extract (do not invent from short Focus dumps)</p></div><div class="tags"><span class="tag tag-evergreen">Pending</span></div></div>
-        <div class="actions">
-          <a class="btn btn-index" href="https://thecooperativeagency.github.io/email-creative/manager-reports.html#bmwj">See hub note</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="month"><h2>July / August 2026 Co-op Reports</h2><span>organic search PDFs for BMW co-op reimbursement</span></section>
-  <section class="dealer bmw" data-store-section="co-op-reports">
-    <div class="dealer-head"><h3>BHBMW + BMW of Jackson</h3><span>July + August 2026 PDF outputs</span></div>
-    <div class="grid">
-      <article class="item" data-store="brian-harris-bmw" data-kind="report" data-type="co-op-reports">
-        <div class="item-top"><div><p class="title">Brian Harris BMW July 2026 Co-op Report</p><p class="meta">Organic Search traffic report for BMW Website SEO co-op support · July 2026 · 6,664 sessions</p></div><div class="tags"><span class="tag tag-report">Report</span><span class="tag tag-web">BHBMW</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bhbmw-organic/bhbmw-july-2026-organic-coop.html">Preview</a><a class="btn btn-raw" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bhbmw-organic/bhbmw-july-2026-organic-coop.pdf">PDF</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="report" data-type="co-op-reports">
-        <div class="item-top"><div><p class="title">Brian Harris BMW August 2026 Co-op Report</p><p class="meta">Organic Search traffic report for BMW Website SEO co-op support · August 2026 · 6,545 sessions</p></div><div class="tags"><span class="tag tag-report">Report</span><span class="tag tag-web">BHBMW</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bhbmw-organic/bhbmw-august-2026-organic-coop.html">Preview</a><a class="btn btn-raw" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bhbmw-organic/bhbmw-august-2026-organic-coop.pdf">PDF</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="report" data-type="co-op-reports">
-        <div class="item-top"><div><p class="title">BMW of Jackson July 2026 Co-op Report</p><p class="meta">Organic Search traffic report for BMW Website SEO co-op support · July 2026 · 3,792 sessions</p></div><div class="tags"><span class="tag tag-report">Report</span><span class="tag tag-web">BMWJ</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bmwj-organic/bmwj-july-2026-organic-coop.html">Preview</a><a class="btn btn-raw" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bmwj-organic/bmwj-july-2026-organic-coop.pdf">PDF</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="report" data-type="co-op-reports">
-        <div class="item-top"><div><p class="title">BMW of Jackson August 2026 Co-op Report</p><p class="meta">Organic Search traffic report for BMW Website SEO co-op support · August 2026 · 3,819 sessions</p></div><div class="tags"><span class="tag tag-report">Report</span><span class="tag tag-web">BMWJ</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bmwj-organic/bmwj-august-2026-organic-coop.html">Preview</a><a class="btn btn-raw" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bmwj-organic/bmwj-august-2026-organic-coop.pdf">PDF</a></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="month"><h2>June 2026 Co-op Reports</h2><span>organic search PDFs for BMW co-op reimbursement</span></section>
-  <section class="dealer bmw" data-store-section="co-op-reports">
-    <div class="dealer-head"><h3>BMW of Jackson</h3><span>June 2026 PDF output</span></div>
-    <div class="grid">
-      <article class="item" data-store="bmw-of-jackson" data-kind="report" data-type="co-op-reports">
-        <div class="item-top"><div><p class="title">BMW of Jackson June 2026 Co-op Report</p><p class="meta">Organic Search traffic report for BMW Website SEO co-op support · June 2026 · 3,471 sessions</p></div><div class="tags"><span class="tag tag-report">Report</span><span class="tag tag-web">BMWJ</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bmwj-organic/bmwj-june-2026-organic-coop.html">Preview</a><a class="btn btn-raw" href="https://thecooperativeagency.github.io/seo-pages/coop-claims/bmwj-organic/bmwj-june-2026-organic-coop.pdf">PDF</a></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="month"><h2>May 2026 Co-op Reports</h2><span>organic search PDFs for BMW co-op reimbursement</span></section>
-  <section class="dealer bmw" data-store-section="co-op-reports">
-    <div class="dealer-head"><h3>BMW Co-op Reports</h3><span>May 2026 PDF outputs</span></div>
-    <div class="grid">
-      <article class="item" data-store="co-op-reports" data-kind="report" data-type="co-op">
-        <div class="item-top"><div><p class="title">Brian Harris BMW May 2026 Co-op Report</p><p class="meta">Organic Search traffic report for BMW Website SEO co-op support · May 2026</p></div><div class="tags"><span class="tag tag-report">Report</span><span class="tag tag-web">BMW</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="../coop-claims/bhbmw-organic/may-2026-pdf.html">Preview</a><a class="btn btn-raw" href="../coop-claims/bhbmw-organic/may-2026-pdf.pdf">PDF</a></div>
-      </article>
-      <article class="item" data-store="co-op-reports" data-kind="report" data-type="co-op">
-        <div class="item-top"><div><p class="title">BMW of Jackson May 2026 Co-op Report</p><p class="meta">Organic Search traffic report for BMW Website SEO co-op support · May 2026</p></div><div class="tags"><span class="tag tag-report">Report</span><span class="tag tag-web">BMW</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="../coop-claims/bmwj-organic/may-2026-pdf.html">Preview</a><a class="btn btn-raw" href="../coop-claims/bmwj-organic/may-2026-pdf.pdf">PDF</a></div>
-      </article>
-    </div>
-  </section>
-
-  <div class="toolbar" aria-label="Filters">
-    <button class="filter active" data-filter="all">All</button>
-    <button class="filter" data-filter="letter">Letters</button>
-    <button class="filter" data-filter="co-op-reports">Co-op Reports</button>
-    <button class="filter" data-filter="gm-reports">Manager Reports</button>
-    <button class="filter" data-filter="audi-baton-rouge">Audi Baton Rouge</button>
-    <button class="filter" data-filter="brian-harris-bmw">Brian Harris BMW</button>
-    <button class="filter" data-filter="bmw-of-jackson">BMW of Jackson</button>
-    <button class="filter" data-filter="harris-porsche">Harris Porsche</button>
-    <button class="filter" data-filter="web">Web/SEO</button>
-    <button class="filter" data-filter="email">Email</button>
-    <button class="filter" data-filter="specials">Specials</button>
-    <button class="filter" data-filter="guide">Guide</button>
-    <button class="filter" data-filter="sales">Sales</button>
-    <button class="filter" data-filter="service">Service</button>
-  </div>
-
-  <section class="month"><h2>BMW Program Reference</h2><span>shareable operational guide</span></section>
-  <section class="dealer bmw" data-store-section="bmw-program-guides">
-    <div class="dealer-head"><h3>BMW Program Guides</h3><span>internal/shareable reference page</span></div>
-    <div class="grid">
-      <article class="item" data-store="bmw-program-guides" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">Available Non-MACO Co-Op Claim Guide</p><p class="meta">Premium mini-site for BMW Aftersales non-MACO co-op claims across the four available categories</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Guide</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="bmw-aftersales-available-non-maco-co-op-claim-guide.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/bmw-aftersales-available-non-maco-co-op-claim-guide.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">BHBMW Public Phone Listing Audit</p><p class="meta">All public numbers + third-party listings (KBB/Autotrader/CARFAX/etc.) with dial-test checklist</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Guide</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bhbmw-public-phone-listing-audit.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bhbmw-public-phone-listing-audit.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="month"><h2>September 2026</h2><span>Audi specials page</span></section>
-  <section class="dealer audi" data-store-section="audi-baton-rouge-september">
-    <div class="dealer-head"><h3>Audi Baton Rouge</h3><span>All-new Q7/Q9 feature pages + September specials</span></div>
-    <div class="grid">
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="web">
-        <div class="item-top"><div><p class="title">Homepage Q3/Q5/Q7/Q9 Feature Panels</p><p class="meta">Motive homepage inject · 4-up · Shop Inventory + Learn More → feature pages</p></div><div class="tags"><span class="tag tag-web">Web</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/abr-homepage-q3-q5-q7-q9-panels.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/abr-homepage-q3-q5-q7-q9-panels.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">All-New 2027 Audi Q7</p><p class="meta">Launch feature page · 429 hp · starting $70,900 · contact / BYO / current Q7 inventory</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-model">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/all-new-2027-audi-q7-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/all-new-2027-audi-q7-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="model">
-        <div class="item-top"><div><p class="title">All-New 2027 Audi Q9 Feature Email</p><p class="meta">CRM draft · calls + contact form · fold of Q9 feature page</p></div><div class="tags"><span class="tag tag-email">Email</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-all-new-2027-q9-feature-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-all-new-2027-q9-feature-email.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">All-New 2027 Audi Q9</p><p class="meta">Launch feature page · first-ever flagship · starting $87,700 · contact / BYO / pre-qual</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-model">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/all-new-2027-audi-q9-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/all-new-2027-audi-q9-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">September 2026 New Car Specials</p><p class="meta">Purchase stacks held · featured leases on Q3, Q5, Q7 45, A3, A5 Prestige, A6</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-new-car-specials-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-new-car-specials-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="service">
-        <div class="item-top"><div><p class="title">Service Sticker QR Lander v1</p><p class="meta">Oil-sticker QR destination · live ABR specials · lounge/drive photos · Schedule + Call sticky</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-service">Service</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/abr-service-sticker-lander.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/abr-service-sticker-lander.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="dealer bmw" data-store-section="bmw-of-jackson-september-service">
-    <div class="dealer-head"><h3>BMW of Jackson</h3><span>Service sticker QR lander</span></div>
-    <div class="grid">
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="service">
-        <div class="item-top"><div><p class="title">Service Sticker QR Lander</p><p class="meta">Oil-sticker QR · Value Service oil $119.99/$149.99/$179.99 · CBS · facility hero video · sticky CTAs</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-service">Service</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmwj-service-sticker-lander.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmwj-service-sticker-lander.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="month"><h2>August 2026</h2><span>BMW + Audi specials pages + sales emails</span></section>
-  <section class="dealer audi" data-store-section="audi-baton-rouge-august">
-    <div class="dealer-head"><h3>Audi Baton Rouge</h3><span>August specials + sales email</span></div>
-    <div class="grid">
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">Free 3-in-1 Charger — Service Visit Gift</p><p class="meta">Motive paste + 1900×776 banner · complimentary charger with every service visit</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Service</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/abr-service-3in1-charger.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/abr-service-3in1-charger.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="service">
-        <div class="item-top"><div><p class="title">ABR Service Specials Email + Free Charger</p><p class="meta">CRM-ready · charger lead offer · existing oil / 10% / alignment stack kept</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-service">Service</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Service/audi-br-service-specials-stripo.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Service/audi-br-service-specials-stripo.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">August 2026 New Car Specials</p><p class="meta">Q3 specials like never before · BHBMW-style layout · real lot photos</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-new-car-specials-august-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-new-car-specials-august-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">S Line News — Cover</p><p class="meta">Publication hub · issue TOC · Audi Baton Rouge</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Hub</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/s-line-news.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">S Line News — September 2026 Issue 01</p><p class="meta">Luxury Letter first issue · Baton Rouge · editorial hub / archive ready</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/s-line-news-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/s-line-news-issue-01-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">Audi Baton Rouge September 2026 Sales Email</p><p class="meta">CRM-ready · leases with built-in savings · Q3 → Q5 → Q7 · full sedan set</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">ABR September Sales + S Line Teaser</p><p class="meta">Workshop draft · offers email with Issue 01 teaser · RS6 + Cocha · CTA /sline-news-01</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email-sline-teaser.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-september-2026-sales-email-sline-teaser.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">Audi Baton Rouge August 2026 Sales Email</p><p class="meta">CRM-ready · same August stacks · Q3 → Q5 → Q7 · full sedan set</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-august-2026-sales-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-august-2026-sales-email.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-  <section class="dealer bmw" data-store-section="brian-harris-bmw-september">
-    <div class="dealer-head"><h3>Brian Harris BMW</h3><span>September specials + sales email</span></div>
-    <div class="grid">
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">September 2026 New BMW Specials</p><p class="meta">September offers on the Ultimate Driving Machine · X5 lead · 0.9% on X3 30 / X5 40i / MY27 X7 / 330</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/new-bmw-specials-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/new-bmw-specials-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">All-New 2027 BMW X5</p><p class="meta">Specials-style landing · teaser hero · iX5 435 mi / 570 hp · contact + current X5 CTAs</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/all-new-bmw-x5-2027-v9.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/all-new-bmw-x5-2027-v9.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">Brian Harris BMW September 2026 Sales Email</p><p class="meta">CRM-ready · Ultimate Driver teaser on top · X5 → X3 → X7 · Sept numbers</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-september-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-september-2026-email.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Cover</p><p class="meta">Publication hub · issue TOC · Brian Harris BMW</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Hub</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/the-ultimate-driver.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/the-ultimate-driver.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — September 2026 Issue 01</p><p class="meta">Luxury Letter first issue · Brian Harris BMW · X5 cover · Tudor wrist</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bhbmw-news-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bhbmw-news-issue-01-september-2026.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-  <section class="dealer bmw" data-store-section="bmw-of-jackson-september">
-    <div class="dealer-head"><h3>BMW of Jackson</h3><span>September specials + sales email</span></div>
-    <div class="grid">
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">September 2026 New BMW Specials</p><p class="meta">September offers on the Ultimate Driving Machine · X5 lead · same September offer stack</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/new-bmw-specials-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/new-bmw-specials-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">All-New 2027 BMW X5</p><p class="meta">Specials-style landing · teaser hero · iX5 435 mi / 570 hp · contact + current X5 CTAs</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/all-new-bmw-x5-2027-v9.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/all-new-bmw-x5-2027-v9.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">BMW of Jackson September 2026 Sales Email</p><p class="meta">CRM-ready · Ultimate Driver teaser on top · Gear Up &amp; Unleash Sept 5</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-september-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-september-2026-email.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">BMW of Jackson · Launch Evening Invite (Oct 23)</p><p class="meta">Exclusive black invite · X5 / iX3 / 7 Series · 5:00–7:30 · RSVP</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Event</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-launch-evening-oct-2026-invite.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-launch-evening-oct-2026-invite.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — Cover</p><p class="meta">Publication hub · issue TOC · BMW of Jackson</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Hub</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/the-ultimate-driver.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/the-ultimate-driver.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">The Ultimate Driver — September 2026 Issue 01</p><p class="meta">Luxury Letter first issue · BMW of Jackson · X3 cover · Elvie’s / Cyril Neville</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmwj-news-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmwj-news-issue-01-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">Gear Up &amp; Unleash — Sept 5, 2026</p><p class="meta">Herrin-Gear car show landing · BMWJ specials look · Register + event page buttons</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Event</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/gear-up-and-unleash-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/gear-up-and-unleash-2026.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="month"><h2>May / June 2026</h2><span>current campaign drafts</span></section>
-  <section class="dealer audi" data-store-section="audi-baton-rouge">
-    <div class="dealer-head"><h3>Audi Baton Rouge</h3><span>web + email campaign review</span></div>
-    <div class="grid">
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">Audi Models in Baton Rouge</p><p class="meta">Motiv models hub · SUV / Sedan / Electric / S &amp; RS · scraped from Audi USA</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Models</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-models-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-models-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi Q5 Sportback</p><p class="meta">Motiv model landing page · Q5 Sportback · MSRP from $55,100</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q5-sportback-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q5-sportback-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi Q7</p><p class="meta">Motiv model landing page · Q7 · MSRP from $62,000</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q7-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q7-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2027 Audi Q8</p><p class="meta">Motiv model landing page · Q8 · MSRP from $76,900</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q8-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q8-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi A3</p><p class="meta">Motiv model landing page · A3 sedan · MSRP from $40,100</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-a3-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-a3-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi A5</p><p class="meta">Motiv model landing page · A5 sedan · MSRP from $50,200</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-a5-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-a5-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi A6</p><p class="meta">Motiv model landing page · A6 sedan · MSRP from $64,100</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-a6-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-a6-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2027 Audi A8</p><p class="meta">Motiv model landing page · A8 flagship sedan · MSRP from $95,100</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-a8-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-a8-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi Q4 e-tron</p><p class="meta">Motiv model landing page · Q4 e-tron EV · MSRP from $50,600</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q4-e-tron-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q4-e-tron-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi Q4 Sportback e-tron</p><p class="meta">Motiv model landing page · Q4 Sportback e-tron EV · MSRP from $59,000</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q4-sportback-e-tron-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q4-sportback-e-tron-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2027 Audi Q6 e-tron</p><p class="meta">Motiv model landing page · Q6 e-tron EV · MSRP from $64,500</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-q6-e-tron-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-q6-e-tron-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi S5</p><p class="meta">Motiv model landing page · S5 · MSRP from $63,300</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-s5-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-s5-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi SQ5</p><p class="meta">Motiv model landing page · SQ5 performance SUV · MSRP from $65,400</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-sq5-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-sq5-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi S3</p><p class="meta">Motiv model landing page · S3 sport sedan · MSRP from $52,000</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-s3-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-s3-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi RS 3</p><p class="meta">Motiv model landing page · RS 3 sport sedan · MSRP from $66,100</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-rs3-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-rs3-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi SQ7</p><p class="meta">Motiv model landing page · SQ7 three-row S SUV · MSRP from $93,800</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-sq7-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-sq7-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi SQ5 Sportback</p><p class="meta">Motiv model landing page · SQ5 Sportback · MSRP from $66,800</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-sq5-sportback-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-sq5-sportback-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi SQ8</p><p class="meta">Motiv model landing page · SQ8 flagship S SUV · MSRP from $100,600</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-sq8-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-sq8-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi RS Q8</p><p class="meta">Motiv model landing page · RS Q8 flagship RS SUV · MSRP from $139,700</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-rs-q8-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-rs-q8-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi RS 6 Avant</p><p class="meta">Motiv model landing page · RS 6 Avant performance wagon · MSRP from $130,700</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-rs6-avant-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-rs6-avant-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi S8</p><p class="meta">Motiv model landing page · S8 flagship S sedan · MSRP from $130,000</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-s8-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-s8-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="model">
-        <div class="item-top"><div><p class="title">2026 Audi RS 7</p><p class="meta">Motiv model landing page · RS 7 Sportback · MSRP from $132,700</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Model</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-rs7-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-rs7-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">Audi Baton Rouge May 2026 New Car Specials</p><p class="meta">Motiv web/specials page · current new Audi offers</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-new-car-specials-may-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-new-car-specials-may-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">Audi Loyalty Credit — Q3, Q5 &amp; Q7</p><p class="meta">Motiv web/content page · loyalty credit campaign · offers end August 3, 2026</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-q5-q7-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">Audi Loyalty Credit in Baton Rouge</p><p class="meta">Motiv web/content page · original loyalty draft</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Audi Baton Rouge/audi-loyalty-credit-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Audi%20Baton%20Rouge/audi-loyalty-credit-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="specials">
-        <div class="item-top"><div><p class="title">ABR June 2026 Sales Email</p><p class="meta">Email creative · updated with current dealer discounts</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="../email-creative/Audi Baton Rouge/Sales/abr-june-2026-sales-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-june-2026-sales-email.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-  <section class="dealer bmw" data-store-section="brian-harris-bmw">
-    <div class="dealer-head"><h3>Brian Harris BMW</h3><span>M halo campaign review</span></div>
-    <div class="grid">
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">BMW 2027 M3 CS Handschalter in Baton Rouge</p><p class="meta">Motiv web/content page · matching the current M3 CS Handschalter email</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-m3-cs-handschalter-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-m3-cs-handschalter-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">Brian Harris BMW M3 CS Handschalter Email</p><p class="meta">CRM-ready sales email · matching M3 CS Handschalter campaign creative</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-m3-cs-handschalter-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-m3-cs-handschalter-email.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">BMW M4 CS Custom Order in Baton Rouge</p><p class="meta">Motiv web/content page · 2 open custom-order slots before June 1</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-m4-cs-custom-order-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-m4-cs-custom-order-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">BMW Certified Collision Repair in Baton Rouge</p><p class="meta">Motiv web/content page · refreshed Brian Harris BMW CCRC guidance page</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-certified-collision-repair-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-certified-collision-repair-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">BMW Summer of Soccer Test Drive Event in Baton Rouge</p><p class="meta">Motiv web/content page · Summer of Soccer test-drive campaign adapted for Brian Harris BMW</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/summer-of-soccer-test-drive-event-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/summer-of-soccer-test-drive-event-baton-rouge.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">Brian Harris BMW M4 CS Custom Order Email</p><p class="meta">CRM-ready sales email · matching M4 CS allocation creative</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-m4-cs-custom-order-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-m4-cs-custom-order-email.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-  <section class="dealer bmw" data-store-section="bmw-of-jackson">
-    <div class="dealer-head"><h3>BMW of Jackson</h3><span>CCRC page review</span></div>
-    <div class="grid">
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">BMW Certified Collision Repair Center in Jackson, MS</p><p class="meta">Motiv web/content page · BMW of Jackson CCRC page · mobile hero sizing tuned</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/certified-collision-repair-center-jackson-ms.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/certified-collision-repair-center-jackson-ms.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="specials">
-        <div class="item-top"><div><p class="title">BMW Summer of Soccer Test Drive Event in Jackson, MS</p><p class="meta">Motiv web/content page · Summer of Soccer test-drive campaign adapted for BMW of Jackson</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="BMW of Jackson/summer-of-soccer-test-drive-event-jackson-ms.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/summer-of-soccer-test-drive-event-jackson-ms.html">Raw HTML</a></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="month"><h2>April 2026</h2><span>sales/service email creative and specials pages</span></section>
-  <section class="dealer audi" data-store-section="audi-baton-rouge">
-    <div class="dealer-head"><h3>Audi Baton Rouge</h3><span>April email creative</span></div>
-    <div class="grid">
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">ABR April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Sales/abr-april-2026-sales-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Sales/abr-april-2026-sales-email.html">Raw HTML</a></div></article>
-      <article class="item" data-store="audi-baton-rouge" data-kind="email" data-type="service"><div class="item-top"><div><p class="title">Audi Baton Rouge Service Specials</p><p class="meta">CRM-ready service email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-service">Service</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Audi%20Baton%20Rouge/Service/audi-br-service-specials-stripo.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Audi%20Baton%20Rouge/Service/audi-br-service-specials-stripo.html">Raw HTML</a></div></article>
-    </div>
-  </section>
-
-  <section class="dealer bmw" data-store-section="brian-harris-bmw">
-    <div class="dealer-head"><h3>Brian Harris BMW</h3><span>April email creative + evergreen web examples</span></div>
-    <div class="grid">
-      <article class="item" data-store="brian-harris-bmw" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">Brian Harris BMW April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Sales/bh-bmw-april-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Sales/bh-bmw-april-2026-email.html">Raw HTML</a></div></article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="email" data-type="service"><div class="item-top"><div><p class="title">Brian Harris BMW Service Specials</p><p class="meta">CRM-ready service email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-service">Service</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Brian%20Harris%20BMW/Service/bh-bmw-service-specials-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Brian%20Harris%20BMW/Service/bh-bmw-service-specials-2026.html">Raw HTML</a></div></article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X3 vs Lexus RX</p><p class="meta">Motiv web/content page</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-vs-lexus-rx-baton-rouge.html">Raw HTML</a></div></article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X1 vs Mercedes-Benz GLA</p><p class="meta">Motiv web/content page · NEW X1 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x1-vs-mercedes-gla-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x1-vs-mercedes-gla-baton-rouge.html">Raw HTML</a></div></article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X3 vs Lexus NX</p><p class="meta">Motiv web/content page · NEW X3 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x3-vs-lexus-nx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x3-vs-lexus-nx-baton-rouge.html">Raw HTML</a></div></article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X5 vs Lexus GX</p><p class="meta">Motiv web/content page · NEW X5 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x5-vs-lexus-gx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x5-vs-lexus-gx-baton-rouge.html">Raw HTML</a></div></article>
-      <article class="item" data-store="brian-harris-bmw" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X5 vs Lexus RX</p><p class="meta">Motiv web/content page · NEW X5 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="Brian Harris BMW/bmw-x5-vs-lexus-rx-baton-rouge.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Brian%20Harris%20BMW/bmw-x5-vs-lexus-rx-baton-rouge.html">Raw HTML</a></div></article>
-    </div>
-  </section>
-
-  <section class="dealer bmw" data-store-section="bmw-of-jackson">
-    <div class="dealer-head"><h3>BMW of Jackson</h3><span>April email creative + evergreen web examples</span></div>
-    <div class="grid">
-      <article class="item" data-store="bmw-of-jackson" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">BMW of Jackson April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/BMW%20of%20Jackson/Sales/bmw-jackson-april-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/BMW%20of%20Jackson/Sales/bmw-jackson-april-2026-email.html">Raw HTML</a></div></article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">New BMW X3 for Sale in Jackson, MS</p><p class="meta">Motiv web/content page</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/new-bmw-x3-jackson-ms.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/new-bmw-x3-jackson-ms.html">Raw HTML</a></div></article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X1 vs Mercedes-Benz GLB</p><p class="meta">Motiv web/content page · NEW X1 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x1-vs-mercedes-glb-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x1-vs-mercedes-glb-jackson.html">Raw HTML</a></div></article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X1 vs Mercedes-Benz GLA</p><p class="meta">Motiv web/content page · NEW X1 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x1-vs-mercedes-gla-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x1-vs-mercedes-gla-jackson.html">Raw HTML</a></div></article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X1 vs Lexus NX</p><p class="meta">Motiv web/content page · NEW X1 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x1-vs-lexus-nx-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x1-vs-lexus-nx-jackson.html">Raw HTML</a></div></article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X3 vs Lexus NX</p><p class="meta">Motiv web/content page · NEW X3 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x3-vs-lexus-nx-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x3-vs-lexus-nx-jackson.html">Raw HTML</a></div></article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X5 vs Lexus GX</p><p class="meta">Motiv web/content page · NEW X5 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x5-vs-lexus-gx-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x5-vs-lexus-gx-jackson.html">Raw HTML</a></div></article>
-      <article class="item" data-store="bmw-of-jackson" data-kind="web" data-type="evergreen"><div class="item-top"><div><p class="title">BMW X5 vs Lexus RX</p><p class="meta">Motiv web/content page · NEW X5 comparison</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Evergreen</span></div></div><div class="actions"><a class="btn btn-preview" href="BMW of Jackson/bmw-x5-vs-lexus-rx-jackson.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/BMW%20of%20Jackson/bmw-x5-vs-lexus-rx-jackson.html">Raw HTML</a></div></article>
-    </div>
-  </section>
-
-  <section class="dealer porsche" data-store-section="harris-porsche">
-    <div class="dealer-head"><h3>Harris Porsche</h3><span>The Driver’s Cut Issue 1.2 + Issue 01 + April archive</span></div>
-    <div class="grid">
-      <article class="item" data-store="harris-porsche" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — Cover</p><p class="meta">Publication hub · Issue 1.2 + Issue 01 TOC</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Hub</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Harris Porsche/the-drivers-cut.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/the-drivers-cut.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="harris-porsche" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — September 2026 Issue 1.2</p><p class="meta">Offers first · LSU + Southern · Cayenne Electric · Rolex Daytona</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Harris Porsche/drivers-cut-issue-1.2-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/drivers-cut-issue-1.2-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="harris-porsche" data-kind="email" data-type="sales">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — Issue 1.2 CRM Email</p><p class="meta">Full letter · email UTMs · paste into CRM</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-drivers-cut-issue-1.2-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-drivers-cut-issue-1.2-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="harris-porsche" data-kind="web" data-type="guide">
-        <div class="item-top"><div><p class="title">The Driver’s Cut — September 2026 Issue 01</p><p class="meta">Luxury Letter first issue · Harris Porsche · Cayenne cover · Blancpain wrist</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-evergreen">Issue</span></div></div>
-        <div class="actions"><a class="btn btn-preview" href="Harris Porsche/drivers-cut-issue-01-september-2026.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/drivers-cut-issue-01-september-2026.html">Raw HTML</a></div>
-      </article>
-      <article class="item" data-store="harris-porsche" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">Harris Porsche September 2026 Sales Email</p><p class="meta">CRM-ready email HTML · Macan courtesy · Cayenne demos · Taycan</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-september-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-september-2026-email.html">Raw HTML</a></div></article>
-      <article class="item" data-store="harris-porsche" data-kind="web" data-type="specials"><div class="item-top"><div><p class="title">Harris Porsche April 2026 Specials</p><p class="meta">Content/specials page</p></div><div class="tags"><span class="tag tag-web">Web</span><span class="tag tag-specials">Specials</span></div></div><div class="actions"><a class="btn btn-preview" href="Harris Porsche/harris-porsche-april-2026-specials.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/Harris%20Porsche/harris-porsche-april-2026-specials.html">Raw HTML</a></div></article>
-      <article class="item" data-store="harris-porsche" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">Harris Porsche April 2026 Sales Email</p><p class="meta">CRM-ready email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-april-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-april-2026-email.html">Raw HTML</a></div></article>
-      <article class="item" data-store="harris-porsche" data-kind="email" data-type="sales"><div class="item-top"><div><p class="title">Harris Porsche June 2026 Sales Email</p><p class="meta">CRM-ready email HTML aligned to live specials page</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-specials">Sales</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Sales/harris-porsche-june-2026-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Sales/harris-porsche-june-2026-email.html">Raw HTML</a></div></article>
-      <article class="item" data-store="harris-porsche" data-kind="email" data-type="service"><div class="item-top"><div><p class="title">Harris Porsche Birthday Email</p><p class="meta">CRM-ready service/retention email HTML</p></div><div class="tags"><span class="tag tag-email">Email</span><span class="tag tag-service">Service</span></div></div><div class="actions"><a class="btn btn-preview" href="https://thecooperativeagency.github.io/email-creative/Harris%20Porsche/Service/harris-porsche-birthday-email.html">Preview</a><a class="btn btn-raw" href="https://raw.githubusercontent.com/thecooperativeagency/email-creative/main/Harris%20Porsche/Service/harris-porsche-birthday-email.html">Raw HTML</a></div></article>
-    </div>
-  </section>
 
   <script>
     const filters = document.querySelectorAll('.filter');
-    const items = document.querySelectorAll('.item');
-    const dealerSections = document.querySelectorAll('.dealer');
-    const monthSections = document.querySelectorAll('section.month');
-    const hubCards = document.querySelectorAll('.hub-card');
-    filters.forEach(btn => btn.addEventListener('click', () => {
-      filters.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter;
-      items.forEach(item => {
-        const match = f === 'all' || item.dataset.store === f || item.dataset.kind === f || item.dataset.type === f;
-        item.classList.toggle('hidden', !match);
+    const cards = document.querySelectorAll('.card');
+    const blocks = document.querySelectorAll('.dealer-block');
+    function apply(f) {
+      filters.forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+      cards.forEach(c => {
+        const show = f === 'all' || c.dataset.store === f;
+        c.classList.toggle('hidden', !show);
       });
-      dealerSections.forEach(section => {
-        const visible = [...section.querySelectorAll('.item')].some(item => !item.classList.contains('hidden'));
-        section.classList.toggle('hidden', !visible);
+      blocks.forEach(b => {
+        const visible = [...b.querySelectorAll('.card')].some(c => !c.classList.contains('hidden'));
+        b.classList.toggle('hidden', !visible);
       });
-      // Hide month headers that only introduce currently-hidden dealer blocks
-      monthSections.forEach(month => {
-        let el = month.nextElementSibling;
-        let any = false;
-        while (el && !el.classList.contains('month')) {
-          if (el.classList.contains('dealer') && !el.classList.contains('hidden')) any = true;
-          if (el.classList.contains('hub-card') && (f === 'all' || f === 'gm-reports')) any = true;
-          el = el.nextElementSibling;
-        }
-        month.classList.toggle('hidden', f !== 'all' && !any);
-      });
-      hubCards.forEach(card => {
-        card.classList.toggle('hidden', !(f === 'all' || f === 'gm-reports'));
-      });
-    }));
+    }
+    filters.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
   </script>
-
 </body>
 </html>
