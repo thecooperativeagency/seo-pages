@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ABR Homepage — Q3 Q5 Q7 Q9 Feature Panels</title>
-  <meta name="description" content="Motive paste: four-panel SUV feature strip for Audi Baton Rouge homepage — Q3, Q5, Q7, Q9." />
+  <meta name="description" content="Motive paste: compact four-panel SUV feature strip for Audi Baton Rouge homepage." />
   <style>
     @font-face {
       font-family: "AudiType";
@@ -18,30 +18,30 @@
     }
     .abr-qpanels {
       font-family: AudiType, Audi, Arial, Helvetica, sans-serif;
-      background: #000;
+      background: transparent;
       color: #fff;
       width: 100%;
       max-width: 100%;
-      margin: 0;
-      padding: 24px 16px 32px;
+      margin: 0 auto;
+      padding: 8px 8px 12px;
       box-sizing: border-box;
       -webkit-text-size-adjust: 100%;
     }
     .abr-qpanels *, .abr-qpanels *::before, .abr-qpanels *::after { box-sizing: border-box; }
     .abr-qpanels a { text-decoration: none; color: inherit; }
+    /* Desktop/normal window: always 4 across */
     .abr-qpanels__grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
+      gap: 10px;
       width: 100%;
-      max-width: 1400px;
       margin: 0 auto;
     }
     .abr-qpanel {
       display: flex;
       flex-direction: column;
       background: #111;
-      border: 1px solid #2a2a2a;
+      border: 1px solid #222;
       overflow: hidden;
       min-width: 0;
       height: 100%;
@@ -49,151 +49,120 @@
     .abr-qpanel__media {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 10;
+      aspect-ratio: 14 / 9;
       background: #0a0a0a;
       overflow: hidden;
     }
     .abr-qpanel__media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 40%;
       display: block;
     }
     .abr-qpanel__body {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 auto;
-      padding: 22px 20px 20px;
-      background: #111;
-      color: #fff;
+      display: flex; flex-direction: column; flex: 1 1 auto;
+      padding: 12px 12px 12px;
+      background: #111; color: #fff;
     }
     .abr-qpanel__eyebrow {
-      margin: 0 0 8px;
-      font-size: 13px;
-      line-height: 1.35;
-      font-weight: 400;
+      margin: 0 0 4px;
+      font-size: 11px; line-height: 1.3; font-weight: 400;
       color: #BDBDBD !important;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .abr-qpanel__title {
-      margin: 0 0 12px;
-      font-size: clamp(22px, 2.1vw, 28px);
-      line-height: 1.15;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #ffffff !important;
-      -webkit-text-fill-color: #ffffff;
+      margin: 0 0 6px;
+      font-size: 16px; line-height: 1.2; font-weight: 700;
+      letter-spacing: -0.015em;
+      color: #ffffff !important; -webkit-text-fill-color: #ffffff;
     }
     .abr-qpanel__copy {
-      margin: 0 0 20px;
-      font-size: 14px;
-      line-height: 1.55;
+      margin: 0 0 12px;
+      font-size: 12px; line-height: 1.4;
       color: #BDBDBD !important;
       flex: 1 1 auto;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
     .abr-qpanel__ctas {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: auto;
+      display: flex; flex-direction: column; gap: 6px; margin-top: auto;
     }
     .abr-qpanel__btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 48px;
-      padding: 12px 16px;
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; min-height: 36px; padding: 8px 10px;
       border-radius: 0;
       font-family: AudiType, Audi, Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      text-align: center;
-      white-space: nowrap;
-      overflow: visible;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
+      text-align: center; white-space: nowrap; overflow: visible;
     }
     .abr-qpanel__btn span { white-space: nowrap; }
     .abr-qpanel__btn--primary {
-      background: #ffffff;
-      color: #000000 !important;
-      border: 1px solid #ffffff;
+      background: #fff; color: #000 !important; border: 1px solid #fff;
     }
-    .abr-qpanel__btn--primary span { color: #000000 !important; }
+    .abr-qpanel__btn--primary span { color: #000 !important; }
     .abr-qpanel__btn--secondary {
-      background: transparent;
-      color: #ffffff !important;
-      border: 1px solid #ffffff;
+      background: transparent; color: #fff !important; border: 1px solid #fff;
     }
-    .abr-qpanel__btn--secondary span { color: #ffffff !important; }
-    @media (max-width: 1100px) {
-      .abr-qpanels__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    }
-    @media (max-width: 640px) {
-      .abr-qpanels { padding: 16px 12px 24px; }
+    .abr-qpanel__btn--secondary span { color: #fff !important; }
+    /* Mobile only: stack one after another */
+    @media (max-width: 720px) {
+      .abr-qpanels { padding: 8px 10px 16px; }
       .abr-qpanels__grid { grid-template-columns: 1fr; gap: 12px; }
-      .abr-qpanel__title { font-size: 24px; }
+      .abr-qpanel__title { font-size: 20px; }
+      .abr-qpanel__copy { font-size: 14px; -webkit-line-clamp: 3; }
+      .abr-qpanel__btn { min-height: 44px; font-size: 13px; }
+      .abr-qpanel__body { padding: 16px; }
+      .abr-qpanel__eyebrow { white-space: normal; font-size: 12px; }
     }
   </style>
 </head>
 <body>
-  <!-- ABR Motive homepage inject: Q3 / Q5 / Q7 / Q9 feature panels -->
+  <!-- ABR Motive homepage inject: compact 4-up Q3/Q5/Q7/Q9 -->
   <section class="abr-qpanels" aria-label="Audi SUV feature models">
     <div class="abr-qpanels__grid">
-
     <article class="abr-qpanel">
-      <div class="abr-qpanel__media">
-        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q3.jpg" alt="All-new Audi Q3" loading="lazy" decoding="async" width="1600" height="1000" />
-      </div>
+      <div class="abr-qpanel__media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q3-lot-v2.jpg" alt="All-new Audi Q3" loading="lazy" decoding="async" width="1400" height="900" /></div>
       <div class="abr-qpanel__body">
         <p class="abr-qpanel__eyebrow" style="color:#BDBDBD;">Compact luxury, arrived.</p>
         <h3 class="abr-qpanel__title" style="color:#ffffff;">All-new Audi Q3</h3>
-        <p class="abr-qpanel__copy" style="color:#BDBDBD;">The entry point to Audi’s SUV lineup — refined, capable, and ready now at Audi Baton Rouge.</p>
+        <p class="abr-qpanel__copy" style="color:#BDBDBD;">Refined, capable, and ready now at Audi Baton Rouge.</p>
         <div class="abr-qpanel__ctas">
-          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/cars/q3" style="color:#000000;"><span style="color:#000000;">Shop Inventory</span></a>
-          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-audi-q3" style="color:#ffffff;"><span style="color:#ffffff;">Learn More</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/cars/q3" style="color:#000;"><span style="color:#000;">Shop Inventory</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-audi-q3" style="color:#fff;"><span style="color:#fff;">Learn More</span></a>
         </div>
       </div>
     </article>
     <article class="abr-qpanel">
-      <div class="abr-qpanel__media">
-        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q5.jpg" alt="All-new Audi Q5" loading="lazy" decoding="async" width="1600" height="1000" />
-      </div>
+      <div class="abr-qpanel__media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q5.jpg" alt="All-new Audi Q5" loading="lazy" decoding="async" width="1400" height="900" /></div>
       <div class="abr-qpanel__body">
-        <p class="abr-qpanel__eyebrow" style="color:#BDBDBD;">The one that started it.</p>
+        <p class="abr-qpanel__eyebrow" style="color:#BDBDBD;">The core luxury SUV.</p>
         <h3 class="abr-qpanel__title" style="color:#ffffff;">All-new Audi Q5</h3>
-        <p class="abr-qpanel__copy" style="color:#BDBDBD;">Audi’s core luxury SUV, reimagined — precision engineering with a more sculpted presence, inside and out.</p>
+        <p class="abr-qpanel__copy" style="color:#BDBDBD;">Precision engineering with a more sculpted presence.</p>
         <div class="abr-qpanel__ctas">
-          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/cars/q5" style="color:#000000;"><span style="color:#000000;">Shop Inventory</span></a>
-          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-audi-q5" style="color:#ffffff;"><span style="color:#ffffff;">Learn More</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/cars/q5" style="color:#000;"><span style="color:#000;">Shop Inventory</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-audi-q5" style="color:#fff;"><span style="color:#fff;">Learn More</span></a>
         </div>
       </div>
     </article>
     <article class="abr-qpanel">
-      <div class="abr-qpanel__media">
-        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q7.jpg" alt="All-new 2027 Audi Q7" loading="lazy" decoding="async" width="1600" height="1000" />
-      </div>
+      <div class="abr-qpanel__media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q7.jpg" alt="All-new 2027 Audi Q7" loading="lazy" decoding="async" width="1400" height="900" /></div>
       <div class="abr-qpanel__body">
-        <p class="abr-qpanel__eyebrow" style="color:#BDBDBD;">Three rows. 429 horsepower.</p>
+        <p class="abr-qpanel__eyebrow" style="color:#BDBDBD;">Three rows. 429 hp.</p>
         <h3 class="abr-qpanel__title" style="color:#ffffff;">All-new 2027 Audi Q7</h3>
-        <p class="abr-qpanel__copy" style="color:#BDBDBD;">The third-generation three-row brings more power, more space, and the same uncompromising standard.</p>
+        <p class="abr-qpanel__copy" style="color:#BDBDBD;">Third-generation three-row power and space.</p>
         <div class="abr-qpanel__ctas">
-          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/cars/q7" style="color:#000000;"><span style="color:#000000;">Shop Inventory</span></a>
-          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-2027-q7" style="color:#ffffff;"><span style="color:#ffffff;">Learn More</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/cars/q7" style="color:#000;"><span style="color:#000;">Shop Inventory</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-2027-q7" style="color:#fff;"><span style="color:#fff;">Learn More</span></a>
         </div>
       </div>
     </article>
     <article class="abr-qpanel">
-      <div class="abr-qpanel__media">
-        <img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q9.jpg" alt="All-new 2027 Audi Q9" loading="lazy" decoding="async" width="1600" height="1000" />
-      </div>
+      <div class="abr-qpanel__media"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-homepage-q-suv-panels/q9.jpg" alt="All-new 2027 Audi Q9" loading="lazy" decoding="async" width="1400" height="900" /></div>
       <div class="abr-qpanel__body">
         <p class="abr-qpanel__eyebrow" style="color:#BDBDBD;">Audi’s largest SUV ever.</p>
         <h3 class="abr-qpanel__title" style="color:#ffffff;">All-new 2027 Audi Q9</h3>
-        <p class="abr-qpanel__copy" style="color:#BDBDBD;">The first-ever Q9 — full-size flagship presence and the most spacious Audi cabin to date.</p>
+        <p class="abr-qpanel__copy" style="color:#BDBDBD;">First-ever full-size flagship. Most spacious Audi cabin to date.</p>
         <div class="abr-qpanel__ctas">
-          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%2C%22model%22%3A%7B%22value%22%3A%7B%22q9%22%3Atrue%7D%7D%7D%7D" style="color:#000000;"><span style="color:#000000;">Shop Inventory</span></a>
-          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-2027-audi-q9" style="color:#ffffff;"><span style="color:#ffffff;">Learn More</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--primary" href="https://audibatonrouge.com/inventory?filters=%7B%22sortBy%22%3A%7B%22option%22%3A%7B%22label%22%3A%22Price%22%2C%22value%22%3A%22price%22%2C%22type%22%3A%22value%22%7D%2C%22direction%22%3A%22desc%22%7D%2C%22appliedFilters%22%3A%7B%22car_condition%22%3A%7B%22value%22%3A%7B%22New%22%3Atrue%7D%7D%2C%22model%22%3A%7B%22value%22%3A%7B%22q9%22%3Atrue%7D%7D%7D%7D" style="color:#000;"><span style="color:#000;">Shop Inventory</span></a>
+          <a class="abr-qpanel__btn abr-qpanel__btn--secondary" href="https://audibatonrouge.com/all-new-2027-audi-q9" style="color:#fff;"><span style="color:#fff;">Learn More</span></a>
         </div>
       </div>
     </article>
