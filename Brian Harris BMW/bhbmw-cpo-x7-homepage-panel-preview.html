@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage panel mock — CPO X7 | Brian Harris BMW</title>
+  <link rel="stylesheet" href="https://thecooperativeagency.github.io/fonts/bmw.css" />
+  <style>
+    body { margin: 0; background: #0b0f14; color: #fff; font-family: BMWTypeNext, Helvetica, Arial, sans-serif; }
+    .mock-note {
+      max-width: 1120px; margin: 0 auto; padding: 16px 20px 8px;
+      font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #9aa3ad;
+    }
+    .mock-nav {
+      background: #06101d; padding: 16px 28px; font-size: 13px; letter-spacing: .16em; text-transform: uppercase;
+      border-bottom: 1px solid #1a2430;
+    }
+    .mock-hero {
+      height: 180px; background: #141a22;
+      display: flex; align-items: center; justify-content: center;
+      color: #5c6570; font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <p class="mock-note">Mock only — paste the fragment file into Motive, not this page. Feature page slug: /cpo-x7</p>
+  <div class="mock-nav">Brian Harris BMW</div>
+  <div class="mock-hero">Homepage slider</div>
+  <div id="slot">Loading panel…</div>
+  <script>
+    fetch("bhbmw-cpo-x7-homepage-panel.html")
+      .then(function (r) { return r.text(); })
+      .then(function (html) { document.getElementById("slot").innerHTML = html; })
+      .catch(function () { document.getElementById("slot").textContent = "Could not load panel fragment."; });
+  </script>
+</body>
+</html>
