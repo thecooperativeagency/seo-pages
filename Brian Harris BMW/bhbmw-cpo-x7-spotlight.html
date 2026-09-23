@@ -14,7 +14,8 @@
 .bhbmw-cpo-x7-page h1, .bhbmw-cpo-x7-page h2, .bhbmw-cpo-x7-page p { margin-top:0; }
 .bhbmw-cpo-x7-page .h1 { margin:0; max-width:920px; font-size:clamp(2.1rem,5vw,3.8rem); line-height:.96; letter-spacing:-.045em; font-weight:700; color:#fff !important; -webkit-text-fill-color:#fff; }
 .bhbmw-cpo-x7-page .h2 { margin:0 0 18px; font-size:clamp(1.5rem,2.8vw,2.3rem); line-height:1; letter-spacing:-.04em; font-weight:700; }
-.bhbmw-cpo-x7-page .body-lg { max-width:720px; color:var(--soft); font-size:clamp(1.05rem,1.6vw,1.22rem); line-height:1.5; }
+.bhbmw-cpo-x7-page .body-lg { max-width:720px; margin:14px 0 0; color:var(--soft); font-size:clamp(1.05rem,1.6vw,1.22rem); line-height:1.5; }
+.bhbmw-cpo-x7-page .body { color:#c5ced9; font-size:16px; line-height:1.62; }
 .bhbmw-cpo-x7-page .section { padding:56px 40px; }
 .bhbmw-cpo-x7-page .hero { position:relative; min-height:680px; display:flex; align-items:flex-end; background:#000; overflow:hidden; }
 .bhbmw-cpo-x7-page .hero-photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 55%; }
@@ -25,6 +26,9 @@
   display:inline-flex; align-items:center; background:#fff; padding:10px 14px; margin:0 0 18px;
 }
 .bhbmw-cpo-x7-page .cpo-logo-plate img { display:block; height:42px; width:auto; }
+.bhbmw-cpo-x7-page .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.bhbmw-cpo-x7-page .benefit { background:var(--card); border:1px solid var(--border); padding:22px; }
+.bhbmw-cpo-x7-page .benefit h3 { margin:0 0 8px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:#d7e7ff; }
 .bhbmw-cpo-x7-page .lot { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
 .bhbmw-cpo-x7-page .unit { background:var(--card); border:1px solid var(--border); overflow:hidden; display:flex; flex-direction:column; }
 .bhbmw-cpo-x7-page .unit img { width:100%; height:auto; display:block; }
@@ -37,7 +41,7 @@
   .bhbmw-cpo-x7-page .section { padding:32px 20px; }
   .bhbmw-cpo-x7-page .hero { min-height:520px; }
   .bhbmw-cpo-x7-page .hero-copy { padding:72px 20px 36px; }
-  .bhbmw-cpo-x7-page .lot { grid-template-columns:1fr; }
+  .bhbmw-cpo-x7-page .grid-3, .bhbmw-cpo-x7-page .lot { grid-template-columns:1fr; }
 }
 </style>
 
@@ -47,16 +51,38 @@
   <div class="hero-fade-y"></div>
   <div class="hero-copy wrap">
     <div class="cpo-logo-plate"><img src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/bmw-cpo/bmw-certified-logo.jpg" alt="BMW Certified"></div>
-    <p class="eyebrow">Brian Harris BMW · Baton Rouge</p>
-    <h1 class="h1" style="color:#fff;">Certified Pre-Owned X7</h1>
-    <p class="body-lg">A few on the lot with real photos. Shop the full CPO X7 list from there.</p>
+    <p class="eyebrow">BMW Certified Pre-Owned · Brian Harris BMW, Baton Rouge</p>
+    <h1 class="h1" style="color:#fff;">The X7. Certified.</h1>
+    <p class="body-lg">BMW’s full-size three-row SUV, backed by Certified Pre-Owned.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <p class="eyebrow">On the lot</p>
-    <h2 class="h2">A sampling</h2>
+    <p class="eyebrow">What Certified means</p>
+    <h2 class="h2">The program behind every vehicle</h2>
+    <div class="grid-3">
+      <div class="benefit">
+        <h3>BMW inspection</h3>
+        <p class="body" style="margin:0;">Each X7 is inspected to BMW Certified Pre-Owned standards before it is offered as Certified.</p>
+      </div>
+      <div class="benefit">
+        <h3>1-year unlimited-mile warranty</h3>
+        <p class="body" style="margin:0;">BMW CPO Limited Warranty: one year, unlimited miles after the original new-vehicle warranty.</p>
+      </div>
+      <div class="benefit">
+        <h3>Roadside assistance included</h3>
+        <p class="body" style="margin:0;">BMW Roadside Assistance is included with every Certified Pre-Owned vehicle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:8px;">
+  <div class="wrap">
+    <p class="eyebrow">Available now at Brian Harris BMW</p>
+    <h2 class="h2">Certified X7s on the lot</h2>
+    <p class="body" style="margin:0 0 22px; max-width:720px;">BMW Certified X7 xDrive40i SUVs, on the lot in Baton Rouge.</p>
     <div class="lot">
       <article class="unit">
         <img src="https://images.app.ridemotive.com/2p2ikr48ci1srvkcvrzomanti1s2" alt="2024 BMW CPO X7 Alpine White stock PBA153">
@@ -86,7 +112,7 @@
     <p class="shop-all">
       <a href="https://brianharrisbmw.com/inventory?filters=%7B%22sortBy%22:%7B%22option%22:%7B%22label%22:%22Image+Count%22,%22value%22:%22image_count%22,%22type%22:%22value%22%7D,%22direction%22:%22desc%22%7D,%22appliedFilters%22:%7B%22car_condition%22:%7B%22value%22:%7B%22Used%22:true%7D%7D,%22make%22:%7B%22value%22:%7B%22BMW%22:true%7D%7D,%22model%22:%7B%22value%22:%7B%22X7%22:true%7D%7D%7D%7D" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;white-space:nowrap !important;min-height:48px !important;padding:12px 22px !important;font-size:14px !important;font-weight:700 !important;text-transform:uppercase !important;text-decoration:none !important;color:#fff !important;background:#1c69d4 !important;border:1px solid #1c69d4 !important;border-radius:0 !important;"><span style="white-space:nowrap;">Shop all CPO X7 inventory</span></a>
     </p>
-    <p class="fine">Lot photos from Brian Harris BMW. Prices and mileage as shown on the site at build. Inventory moves. BMW Certified Pre-Owned Limited Warranty is 1 year / unlimited miles after the new-vehicle limited warranty. BMW Roadside Assistance is included with CPO.</p>
+    <p class="fine">Prices and mileage as shown on brianharrisbmw.com at build. Inventory moves. BMW Certified Pre-Owned Limited Warranty is 1 year / unlimited miles after the new-vehicle limited warranty. BMW Roadside Assistance is included with CPO.</p>
   </div>
 </section>
 </div>
