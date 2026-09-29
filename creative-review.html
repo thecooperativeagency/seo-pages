@@ -288,6 +288,30 @@
       <button class="filter" data-filter="bmw-of-jackson">BMW of Jackson</button>
       <button class="filter" data-filter="harris-porsche">Harris Porsche</button>
     </div>
+    <section class="lane" id="now">
+      <div class="lane-head">
+        <h2>Now</h2>
+        <p class="hint">Look here first. Intern brief — photos, social, builder. Edit tonight or tomorrow, then site / email / post.</p>
+      </div>
+      <div class="dealer-block" data-store-section="coop">
+        <div class="dealer-label"><h3>The Cooperative Agency</h3><span>1 page</span></div>
+        <div class="grid">
+      <article class="card" data-store="coop">
+        <div class="card-top">
+          <div>
+            <h3>Internship — photos, social, builder</h3>
+            <p class="meta">Inventory photography + social content. Inspired, hardworking, entrepreneurial — not a rando. Review copy, then we post it on the Coop site, email, and social.</p>
+          </div>
+          <div class="tags"><span class="tag t-Feature">Coop</span><span class="status">Review</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/seo-pages/creator-internship.html" target="_blank" rel="noopener">Preview</a>
+          <a class="btn" href="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/creator-internship.html" target="_blank" rel="noopener">Raw HTML</a>
+        </div>
+      </article>
+        </div>
+      </div>
+    </section>
     <section class="lane" id="email">
       <div class="lane-head">
         <h2>Email creative</h2>
@@ -1373,7 +1397,7 @@
     function apply(f) {
       filters.forEach(b => b.classList.toggle('active', b.dataset.filter === f));
       cards.forEach(c => {
-        const show = f === 'all' || c.dataset.store === f;
+        const show = f === 'all' || c.dataset.store === f || c.dataset.store === 'coop';
         c.classList.toggle('hidden', !show);
       });
       blocks.forEach(b => {
