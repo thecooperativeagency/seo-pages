@@ -36,7 +36,7 @@
     header.top {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 16px;
       padding: 22px 0 8px;
     }
@@ -51,14 +51,18 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 40px;
-      padding: 0 14px;
+      flex-shrink: 0;
+      height: 32px;
+      padding: 0 12px;
       border-radius: 0;
       background: var(--ink);
       color: #fff;
       text-decoration: none;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
     .hero {
       padding: 48px 0 36px;
@@ -227,7 +231,7 @@
   <div class="wrap">
     <header class="top">
       <div class="mark">The Cooperative Agency <span>· Baton Rouge</span></div>
-      <a class="cta" href="mailto:lance@thecoopbrla.com?subject=Internship">Apply / refer</a>
+      <a class="cta" href="mailto:lance@thecoopbrla.com?subject=Internship">Apply</a>
     </header>
 
     <div class="hero">
