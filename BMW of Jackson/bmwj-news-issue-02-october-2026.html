@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ultimate Driver | Issue 02 · October 2026 | BMW of Jackson</title>
+  <link rel="stylesheet" href="https://thecooperativeagency.github.io/fonts/bmw.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <meta name="coop-magazine" data-publication="ultimate-driver" data-issue="issue-02-oct-2026" data-store="bmwj" />
+  <style>
+
+    :root {
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #5c574e;
+      --line: rgba(20,20,20,.14);
+      --m-light: #2A64AC;
+      --m-navy: #163B74;
+      --m-red: #D03C2A;
+      --blue: var(--m-navy);
+      --head: BMWTypeNext, Helvetica, Arial, sans-serif;
+    }
+    .sheet, .sheet * { box-sizing: border-box; }
+    .sheet a { color: inherit; }
+    .sheet img { display: block; width: 100%; }
+    .sheet {
+      font-family: Newsreader, Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 32px 32px 72px;
+    }
+    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .mast h1 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: var(--blue) !important;
+      font-size: clamp(2.6rem, 10vw, 5.2rem);
+      line-height: .86;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .mast .news {
+      font-family: var(--head);
+      font-weight: 700;
+      letter-spacing: .46em;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 10px 0 0;
+    }
+    .mast .sub {
+      font-family: var(--head);
+      letter-spacing: .22em;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin: 12px 0 0;
+    }
+    .hero { margin-top: 0; color: #fff; }
+    .plate { background: #fff; padding: 28px 28px 22px; }
+    .plate h1 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: var(--blue) !important;
+      font-size: clamp(2.5rem, 8.5vw, 4.2rem);
+      line-height: .88;
+      letter-spacing: -.045em;
+      margin: 0;
+    }
+    .plate .meta {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--m-light) !important;
+      margin: 12px 0 0;
+    }
+    .art { position: relative; }
+    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 42%; }
+    .art::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 62%;
+      background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.45) 48%, transparent 100%);
+      pointer-events: none;
+    }
+    .story {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+    }
+    .story h2 {
+      color: #fff !important;
+      font-size: clamp(1.7rem, 4.6vw, 2.4rem);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+      margin: 0 0 14px;
+      text-shadow: 0 2px 16px rgba(0,0,0,.7), 0 1px 2px rgba(0,0,0,.5);
+    }
+    .story ul { list-style: none; margin: 0; padding: 0; }
+    .story li {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 7px 0;
+      border-top: 1px solid rgba(255,255,255,.32);
+      line-height: 1.35;
+    }
+    .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .strip img { aspect-ratio: 1; object-fit: cover; }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 28px;
+      margin-top: 18px;
+    }
+    .issue-box {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .inside .label {
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--m-light);
+      margin: 0 0 8px;
+    }
+    .inside ul { margin: 0; padding: 0; list-style: none; }
+    .inside li {
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .inside li:first-child { border-top: 0; padding-top: 0; }
+    .sheet .inside li, .sheet .open, .sheet h2, .sheet h3, .sheet .cal li, .sheet .cal strong, .sheet p:not(.kicker) { color: #141414 !important; }
+    .sheet .kicker, .sheet .mast .news, .sheet .mast .sub, .sheet .inside .label { color: var(--m-light) !important; }
+    .sheet .cover-shot .lockup .kicker { color: var(--m-light) !important; }
+    .sheet .story h2, .sheet .story li, .sheet .cover-shot .lockup, .sheet .cover-shot .lockup h2 { color: #fff !important; }
+
+    .toc {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 28px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .toc a {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .open {
+      margin: 48px 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .sec { margin-top: 64px; }
+    .kicker {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--m-light);
+      margin: 0 0 10px;
+    }
+    .sheet h2 {
+      font-family: var(--head);
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    .sheet h3 {
+      font-family: var(--head);
+      font-size: 1.55rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 8px 0 12px;
+    }
+    .sheet p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #141414 !important; }
+    .shot { margin: 0 0 10px; }
+    .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .cover-shot {
+      position: relative;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .cover-shot img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .cover-shot::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 72%;
+      background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 42%, rgba(0,0,0,.18) 72%, transparent 100%);
+      pointer-events: none;
+    }
+    .cover-shot .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .cover-shot .lockup .kicker {
+      color: #fff !important;
+      margin: 0 0 8px;
+    }
+    .cover-shot .lockup h2 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.4rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0;
+      text-shadow: 0 2px 18px rgba(0,0,0,.75), 0 1px 2px rgba(0,0,0,.55);
+    }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    .cap {
+      font-family: var(--head);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 8px 0 18px;
+    }
+    .credit { font-size: 13px; color: var(--muted); }
+    .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .cal li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cal strong { font-family: var(--head); letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .cal a { text-decoration: underline; text-underline-offset: 3px; }
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue);
+      padding-bottom: 2px;
+    }
+    .lot-car { margin-top: 40px; }
+    .offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin: 4px 0 18px;
+    }
+    .offer {
+      background: var(--paper);
+      padding: 14px 16px 16px;
+    }
+    .offer .lbl {
+      font-family: var(--head);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    .offer .amt {
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      color: var(--blue);
+      margin: 0;
+    }
+    .offer .note {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin: 6px 0 0;
+      line-height: 1.35;
+    }
+    .end {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      font-family: var(--head);
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      text-align: center;
+    }
+    .end .issue-line {
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+    .end .issue-line a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .end .social {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin: 0 0 16px;
+    }
+    .end .social a {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+    }
+    .end .store { margin: 0; color: var(--ink); }
+    .end .store a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .end .web { margin: 6px 0 0; }
+    .end .web a { color: var(--muted); text-decoration: none; letter-spacing: .08em; }
+    .fine {
+      font-family: var(--head);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: .02em;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    @media (max-width: 720px) {
+      .sheet { padding: 18px 16px 56px; }
+      .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
+      .plate { padding: 22px 20px 18px; }
+      .art img { aspect-ratio: 3 / 4; }
+      .story { left: 20px; right: 20px; bottom: 20px; }
+      .strip img, .pair img { aspect-ratio: 16 / 10; }
+      .cover-shot img { aspect-ratio: 3 / 4; }
+      .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
+    }
+  
+
+    .cal-actions { display:inline-flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+    .cal-btn {
+      font-family: var(--head, "AudiType", Arial, Helvetica, sans-serif);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #2A64AC !important;
+      border: 1px solid #2A64AC;
+      padding: 6px 10px;
+      line-height: 1;
+    }
+    .sheet .cal .cal-btn { text-decoration: none; }
+    #cup .kicker, section#cup .kicker { letter-spacing: .18em; }
+
+</style>
+</head>
+
+<body>
+  <!-- verify: oct2026-i02-bmwj-v1 -->
+  <article class="sheet">
+    <div class="hero">
+      <div class="plate">
+        <h1>The Ultimate<br/>Driver</h1>
+        <p class="meta">BMW of Jackson &nbsp;·&nbsp; October 2026 &nbsp;·&nbsp; Issue 02</p>
+      </div>
+      <div class="art">
+        <!-- PE/art swap: bmwj-3series-cover-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/x5.jpg" alt="Eighth-gen BMW 3 Series placeholder" />
+        <div class="story">
+          <h2>The eighth-gen 3 Series is official</h2>
+          <ul>
+            <li>On the Road — the eighth-gen 3 Series is official, and the M350 does 0–60 in 3.9</li>
+            <li>On Saturday — Ole Miss, Mississippi State, and a homecoming at Veterans Memorial</li>
+            <li>On the Table — wood-fired redfish and oysters at the Manship in Belhaven</li>
+            <li>In the Cup — a single-origin pour-over on North State at The Bean</li>
+            <li>On the Town — Snarky Puppy at Duling Hall, Wednesday the 21st</li>
+            <li>On the Wrist — Zenith builds the chronograph house a watch with no chronograph</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="strip">
+      <!-- PE/art swap: bmwj-strip-saturday-i02.jpg -->
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/veterans-memorial-stadium.jpg" alt="Jackson sports" />
+      <!-- PE/art swap: bmwj-strip-cup-i02.jpg -->
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/native-coffee-room.jpg" alt="The Bean placeholder" />
+      <!-- PE/art swap: bmwj-strip-wrist-i02.jpg -->
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/omega-hero.jpg" alt="Zenith Chronomaster Solo Sport placeholder" />
+    </div>
+    <div class="cover-meta">
+      <div class="issue-box">The Ultimate Driver<br/>Issue 02<br/>October 2026<br/>BMW of Jackson</div>
+      <div class="inside">
+        <p class="label">Inside</p>
+        <ul>
+          <li>On the Road — the eighth-gen 3 Series is official, and the M350 does 0–60 in 3.9</li>
+          <li>On Saturday — Ole Miss, Mississippi State, and a homecoming at Veterans Memorial</li>
+          <li>On the Table — wood-fired redfish and oysters at the Manship in Belhaven</li>
+          <li>In the Cup — a single-origin pour-over on North State at The Bean</li>
+          <li>On the Town — Snarky Puppy at Duling Hall, Wednesday the 21st</li>
+          <li>On the Wrist — Zenith builds the chronograph house a watch with no chronograph</li>
+        </ul>
+      </div>
+    </div>
+    <nav class="toc" aria-label="In this issue">
+      <a href="#road">On the Road</a>
+      <a href="#saturday">On Saturday</a>
+      <a href="#table">On the Table</a>
+      <a href="#cup">In the Cup</a>
+      <a href="#town">On the Town</a>
+      <a href="#wrist">On the Wrist</a>
+      <a href="#lot">On the Lot</a>
+      <a href="#workbench">On the Workbench</a>
+    </nav>
+    <p class="open">October in Jackson is when the air finally gives you something back. The mornings get a little mean, the light goes copper by five, and the Saturdays start mattering in a way September only hinted at.</p>
+    <p class="open" style="margin-top:0">Here's the honest part. The car you keep meaning to replace is still the point. Everything else — the room in Belhaven, the band at Duling, the watch — is just the life you drive it into.</p>
+
+    <section class="sec" id="road">
+      <div class="cover-shot">
+        <!-- PE/art swap: bmwj-3series-road-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/bmw-x5-g65-hero.jpg" alt="Eighth-generation BMW 3 Series placeholder" />
+        <div class="lockup"><p class="kicker">On the Road</p><h2>The new 3 Series is here, and it still drinks gasoline</h2></div>
+      </div>
+      <p class="cap">BMW 3 Series · eighth generation</p>
+      <p class="kicker">On the Road</p>
+      <h2>The new 3 Series is here, and it still drinks gasoline</h2>
+      <p>Pull up every argument anyone's had about what a BMW should be, and it ends up in the same place: a 3 Series. Not the flagship, not the halo car. The one that has to be right, because if it isn't, nothing else above it means a thing.</p>
+      <p>The eighth generation is official now — real studio stills, no German camouflage doing laps on a test track. The Neue Klasse face, the clean sheet, and underneath it the thing a lot of people quietly worried about: a straight six that still runs on gasoline. The i3 is the electric sibling, built on its own architecture. This one is not a hedge. It's the 3 you mean when you say "3 Series."</p>
+      <p>Then there's the M350 xDrive, which exists to end the dinner-table debate. Three liters, twin-turbo inline six, a 48-volt mild-hybrid assist, and the number that matters: <strong>437 horsepower, 428 pound-feet, zero to sixty in 3.9 seconds.</strong> BMW's own figure, not a magazine's stopwatch. There's a Drift Moment coming over the air in 2027 that unlocks rear-wheel drive on command, which is either the best or worst idea you've ever heard, depending on how your insurance feels about you.</p>
+      <p>U.S. base stickers, before the $1,350 destination charge: <strong>330 from $49,900, 330 xDrive from $51,900, M350 xDrive from $65,900,</strong> and the electric i3 50 xDrive from $61,500. They go on sale in the first quarter of 2027. We'll have them on High Street, and you'll have an opinion. Come have it in person.</p>
+      <p class="credit">Source: BMW PressClub USA and Car and Driver, 29 September 2026. <a href="https://press.bmwgroup.com/usa">press.bmwgroup.com/usa</a> · <a href="https://caranddriver.com/news/a73939982/2027-bmw-3-series-revealed">caranddriver.com/news/a73939982/2027-bmw-3-series-revealed</a></p>
+    </section>
+
+    <section class="sec" id="saturday">
+      <div class="cover-shot">
+        <!-- PE/art swap: bmwj-saturday-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/veterans-memorial-stadium.jpg" alt="Mississippi football" />
+        <div class="lockup"><p class="kicker">On Saturday</p><h2>Ole Miss, Mississippi State, and a homecoming at Veterans Memorial</h2></div>
+      </div>
+      <p class="cap">Ole Miss · Mississippi State · Jackson State</p>
+      <p class="kicker">On Saturday</p>
+      <h2>Ole Miss, Mississippi State, and a homecoming at Veterans Memorial</h2>
+      <p>Two of this state's teams spend October on opposite sides of a lot of road, and both of them are worth your afternoon.</p>
+      <p><strong>Ole Miss</strong> heads to Vanderbilt on the 10th (2:30 Central), hosts Missouri in Oxford on the 17th in the mid-afternoon window, then draws the long straw and goes to Texas on the 24th before closing the month at home against Auburn on the 31st. That Texas trip is the one that tells you something.</p>
+      <p><strong>Mississippi State</strong> walked into October at 4–0 and doesn't let up: Alabama in Starkville for a Stripe Out on the 3rd at 11, then on the road at a rival in the early window on the 17th, and Oklahoma back home on the 24th for a Black Out. A good fall in Starkville, and they know it.</p>
+      <p>And downtown, mark the 17th twice. <strong>Jackson State hosts Florida A&amp;M at Veterans Memorial for Homecoming, 2 p.m.</strong> — SWAC football that doesn't need Oxford or Starkville to explain itself, the band worth the ticket on its own. The Egg Bowl is still out there on the horizon, the 27th of November, the night this whole state circles. Not yet. But it's coming, and you can feel the schedule leaning toward it.</p>
+      <p>Two flags fly over most driveways in this town. October lets you wave both.</p>
+      <p class="credit">Source: Ole Miss Athletics, Hail State, Jackson State Athletics, 1 October 2026. <a href="https://olemisssports.com">olemisssports.com</a> · <a href="https://hailstate.com">hailstate.com</a> · <a href="https://gojsutigers.com">gojsutigers.com</a></p>
+    </section>
+
+    <section class="sec" id="table">
+      <div class="cover-shot">
+        <!-- PE/art swap: manship-wood-fired-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/elvies-room.jpg" alt="The Manship Wood Fired Kitchen placeholder" />
+        <div class="lockup"><p class="kicker">On the Table</p><h2>Wood-fired redfish and oysters at the Manship</h2></div>
+      </div>
+      <p class="cap">The Manship · 1200 North State · Belhaven</p>
+      <p class="kicker">On the Table</p>
+      <h2>Wood-fired redfish and oysters at the Manship</h2>
+      <p>The Manship Wood Fired Kitchen sits at 1200 North State in Belhaven, close enough to a dozen other good rooms that it could coast. It doesn't. Chef Alex Eaton and Steven O'Neill run a wood fire and point it at Gulf fish and Mediterranean plates, and the whole thing works at neighborhood scale — which is a polite way of saying it's a restaurant, not a scene.</p>
+      <p>Start with the <strong>Wood Fired Oysters</strong> — Pernod, garlic, lemon, chili, parmesan, a slab of focaccia to catch what's left in the shell. The <strong>Fried Green Tomatoes</strong> come under jumbo crab and remoulade and are not a side dish pretending to be an appetizer. The plate to order, though, is the <strong>Redfish "Fisherman Style"</strong> — cauliflower, lemon, olive oil, garlic, and a piece of fish that tasted the fire. If someone at the table came for the steak, the <strong>Filet Frites</strong> with truffle fries is there, and it's honest about being a splurge.</p>
+      <p>Happy hour runs Monday through Friday, 3 to 6, with half-price pizzettas if you walk in early. Resy's booking lunch and dinner. It's closed Sundays for dinner — check the week you go if brunch is the play. Two people, an hour, a jacket if you feel like it. This is the Belhaven dinner before the Fondren night.</p>
+      <p class="credit">Menu moves with the season — check <a href="https://themanshipjackson.com/menu/dinner">themanshipjackson.com/menu/dinner</a> the week you go.<br/>Reservations: <a href="https://resy.com/cities/jackson-ms/venues/the-manship-wood-fired-kitchen">Resy</a> · House: <a href="https://themanshipjackson.com">themanshipjackson.com</a></p>
+      <p><a class="cta" href="https://themanshipjackson.com">The Manship</a>&nbsp;&nbsp;<a class="cta" href="https://resy.com/cities/jackson-ms/venues/the-manship-wood-fired-kitchen">Resy</a></p>
+    </section>
+
+    <section class="sec" id="cup">
+      <div class="cover-shot">
+        <!-- PE/art swap: the-bean-north-state-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/native-coffee-room.jpg" alt="The Bean, North State placeholder" />
+        <div class="lockup"><p class="kicker">In the Cup</p><h2>A single-origin pour-over on North State at The Bean</h2></div>
+      </div>
+      <p class="cap">The Bean · 2914 North State</p>
+      <p class="kicker">In the Cup</p>
+      <h2>A single-origin pour-over on North State at The Bean</h2>
+      <p>The Bean lives at 2914 North State in Fondren, in a room built for sitting still — porch, patio, a walk-up window for the mornings you can't stop. They run Hattiesburg's GRIN Coffee Roastery across the board, which means the coffee has a name and a zip code, not just a logo.</p>
+      <p>The move is the <strong>Single Origin pour-over.</strong> The board rotates whatever's current, so you don't order a season, you order the day — four minutes, no theater, a cup that tastes like someone decided it should. If the pour-over list is bare when you walk in, the <strong>Cortado</strong> off their espresso does the job without a single wasted ounce of milk.</p>
+      <p>Open Monday through Saturday, 7 to 6, with brunch on Saturdays from 7:30 and the kitchen going till 2. Closed Sundays. This is the stop before a Fondren drive or a Saturday before the museum — the morning cup, not the after-party.</p>
+      <p class="credit">House: <a href="https://thebeanjackson.com">thebeanjackson.com</a> · Menu: <a href="https://thebeanjackson.com/menu">thebeanjackson.com/menu</a></p>
+      <p><a class="cta" href="https://thebeanjackson.com">The Bean</a></p>
+    </section>
+
+    <section class="sec" id="town">
+      <div class="cover-shot">
+        <!-- PE/art swap: snarky-puppy-duling-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/cyril-duling.jpg" alt="Duling Hall, Jackson" />
+        <div class="lockup"><p class="kicker">On the Town</p><h2>Snarky Puppy at Duling Hall, Wednesday the 21st</h2></div>
+      </div>
+      <p class="cap">Jackson · October</p>
+      <p class="kicker">On the Town</p>
+      <h2>Snarky Puppy at Duling Hall, Wednesday the 21st</h2>
+      <p>Some nights you dress for. This is one.</p>
+      <p>Snarky Puppy — the five-time Grammy collective, a band that treats a bass line like an architecture problem and still makes you move — plays Duling Hall on <strong>Wednesday, October 21.</strong> Doors at 6:30, show at 7:30, all ages. A room that holds about 500 people, which means a group this size is playing at a scale they outgrew years ago. This is not a tribute act and not a free lawn. Advance tickets are $55, day-of $60 plus fees; under-21 is $5 at the door.</p>
+      <p>Eat Belhaven first — the Manship is a straight shot — then point the car at Fondren. That's the whole evening, built.</p>
+      <p class="credit">Event: <a href="https://www.ardenland.net/shows/snarkypuppy">ardenland.net/shows/snarkypuppy</a> · Tickets: <a href="https://www.ticketmaster.com/snarky-puppy-jackson-mississippi-10-21-2026/event/1B00643CF009F1D8">Ticketmaster</a></p>
+      <p><strong>Also on the calendar:</strong></p>
+      <ul class="cal">
+        <li><strong>Thu 1</strong> — Pierre Bensusan, The Infinite Guitar Tour, Duling Hall. Doors 6:30, show 7:30. French fingerstyle in a small room, $20 advance. <a href="https://www.ardenland.net/shows/pierresusan2026">ardenland.net</a></li>
+        <li><strong>Sat 3</strong> — Access for All: Free First Saturday, Mississippi Museum of Art, 11 a.m. Free admission, drop-in artmaking, 2 p.m. tour. Still catch <em>Photography and the Black Arts Movement, 1955–1985</em> through Nov 8. <a href="https://www.msmuseumart.org/event/access-for-all-free-first-saturday-13/">msmuseumart.org</a></li>
+        <li><strong>Sat 10</strong> — Mississippi Symphony Orchestra: American Celebration, Thalia Mara Hall, 7:30. Bernstein, Barber, Schuman. $45–$85. <a href="https://msorchestra.com/event/american-celebration/">msorchestra.com</a></li>
+        <li><strong>Tue 20–Sun Nov 1</strong> — <em>Slippin' Through the Cracks: The Bobby Rush Musical</em>, New Stage Theatre. World premiere, a triple-Grammy Mississippi blues life on stage. Box office 601-948-3533. <a href="https://newstagetheatre.com/slippin-through-the-cracks-the-bobby-rush-musical/">newstagetheatre.com</a></li>
+        <li><strong>Sat 24</strong> — Mississippi Symphony Orchestra: Fearless Fusion, Duling Hall, 7:30. Chamber and new-music night, same room as Snarky, different week. <a href="https://msorchestra.com/event/fearless-fusion/">msorchestra.com</a></li>
+        <li><strong>Thu 29</strong> — Dorothy Moore: A Fifty Year Celebration of Misty Blue, Duling Hall. Doors 6:30, show 7:30. A Jackson soul landmark, not a touring jukebox. <a href="https://dulinghall.com/event-calendar/">dulinghall.com</a></li>
+      </ul>
+    </section>
+
+    <section class="sec" id="wrist">
+      <div class="cover-shot">
+        <!-- PE/art swap: zenith-chronomaster-solo-sport-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/omega-hero.jpg" alt="Zenith Chronomaster Solo Sport placeholder" />
+        <div class="lockup"><p class="kicker">On the Wrist</p><h2>Zenith builds the chronograph house a watch with no chronograph</h2></div>
+      </div>
+      <p class="cap">Zenith Chronomaster Solo Sport · Worn &amp; Wound</p>
+      <p class="kicker">On the Wrist</p>
+      <h2>Zenith builds the chronograph house a watch with no chronograph</h2>
+      <p>Here's a small heresy worth paying for. Zenith made its name on the El Primero — one of the first automatic chronographs, a movement that beats fast enough to slice a second into tenths. So what do they do for a daily watch? They take the stopwatch off.</p>
+      <p>The <strong>Chronomaster Solo Sport</strong> is the first time-only Chronomaster, and it runs the El Primero 3620 at 5 hertz — all that high-beat precision, pointed at just telling you the time. Forty millimeters, a ceramic unidirectional bezel, and a ceramic "Z" dial in white, black, or brown; the black comes without a date if you like a clean face. It's a permanent catalog piece, not a limited drop you have to beg for — <strong>$9,800 no-date, $10,900 with date.</strong></p>
+      <p>It's the same logic that puts you in a car built to be driven instead of parked and posted. The chronograph house, quietly proving the engine was always the point — even with nothing to time.</p>
+      <p class="credit">Source: Worn &amp; Wound, 2 September 2026. <a href="https://wornandwound.com/zenith-goes-back-to-basics-with-its-first-time-only-chronomaster">wornandwound.com</a></p>
+    </section>
+
+    <section class="sec" id="lot">
+      <div class="cover-shot">
+        <!-- PE/art swap: bmwj-lot-lead-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmwj-news-issue-1.2/x5.jpg" alt="BMW of Jackson lot placeholder" />
+        <div class="lockup"><p class="kicker">On the Lot</p><h2>The cars on High Street</h2></div>
+      </div>
+      <p class="cap">Lot · BMW of Jackson · stub</p>
+      <p class="kicker">On the Lot</p>
+      <h2>The cars on High Street</h2>
+      <p>The board at 1685 High Street is where the talk stops and the math starts. The new specials page leads with a model for a reason, and that's where this section leads too — the car October is built around, with the term and the number spelled out plainly, no asterisk games.</p>
+      <p>Below it, the rest of the lineup that earns a line this month. One honest aside for the car somebody walks in wanting even though they didn't come for it.</p>
+      <p>Programs run on select in-stock models, approved credit, delivery by the posted date. Tax, title and fees extra. The exact car and the fine print live at BMW of Jackson, 1685 High Street.</p>
+      <p><a class="cta" href="https://bmwofjackson.net/new-bmw-specials">Shop specials</a></p>
+      <p class="credit">Shop specials: https://bmwofjackson.net/new-bmw-specials</p>
+    </section>
+
+    <section class="sec" id="workbench">
+      <p class="kicker">On the Workbench</p>
+      <h2>The oil change, the three-year plan, and 10% off the ticket</h2>
+      <p>The shop at BMW of Jackson is where the miles get honest. A BMW rewards the person who keeps up with it, and the board makes keeping up straightforward.</p>
+      <p><strong>BMW Value Service Oil Change.</strong> Premium synthetic BMW oil and a factory filter — up to six quarts — with parts and labor included, for models in the Value Service Program. Not every car qualifies, so confirm your VIN when you book. The small on-time habit that keeps the big bills off your calendar.</p>
+      <p><strong>BMW Oil Change Plan — $249 for three years.</strong> Prepaid oil and filter changes for three years, labor included, done by BMW-trained techs with Original BMW Parts, up to two changes per contract year. If you keep your cars past the warranty window — and around here, people do — this is the boring math that pays for itself.</p>
+      <p><strong>10% off service, up to $200.</strong> On the ticket, excluding Value Service work and tires, one per person. The easy yes on a repair you were already going to approve.</p>
+      <p>The waiting room has the coffee and the wifi; the bays have the factory-trained people. That's the whole difference between a fix and a service. Check current dates and claim the offer on the page.</p>
+      <p><a class="cta" href="https://bmwofjackson.net/service-offers">Service offers</a>&nbsp;&nbsp;<a class="cta" href="https://bmwofjackson.net/service">Book service</a></p>
+      <p class="credit">Service offers: bmwofjackson.net/service-offers · Book service: bmwofjackson.net/service</p>
+    </section>
+
+    <footer class="end">
+      <p class="issue-line"><a href="the-ultimate-driver.html">The Ultimate Driver</a> · Issue 02 · October 2026</p>
+      <p class="store">BMW of Jackson · 1685 High Street · Jackson, MS 39202 · <a href="https://bmwofjackson.net/">bmwofjackson.net</a></p>
+    </footer>
+  </article>
+</body>
+</html>

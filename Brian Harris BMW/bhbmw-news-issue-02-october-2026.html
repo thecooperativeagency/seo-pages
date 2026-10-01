@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ultimate Driver | Issue 02 · October 2026 | Brian Harris BMW</title>
+  <link rel="stylesheet" href="https://thecooperativeagency.github.io/fonts/bmw.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <meta name="coop-magazine" data-publication="ultimate-driver" data-issue="issue-02-oct-2026" data-store="bhbmw" />
+  <style>
+
+    :root {
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #5c574e;
+      --line: rgba(20,20,20,.14);
+      --m-light: #2A64AC;
+      --m-navy: #163B74;
+      --m-red: #D03C2A;
+      --blue: var(--m-navy);
+      --head: BMWTypeNext, Helvetica, Arial, sans-serif;
+    }
+    .sheet, .sheet * { box-sizing: border-box; }
+    .sheet a { color: inherit; }
+    .sheet img { display: block; width: 100%; }
+    .sheet {
+      font-family: Newsreader, Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      color: var(--ink);
+      padding: 32px 32px 72px;
+    }
+    .mast { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .mast h1 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: var(--blue) !important;
+      font-size: clamp(2.6rem, 10vw, 5.2rem);
+      line-height: .86;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .mast .news {
+      font-family: var(--head);
+      font-weight: 700;
+      letter-spacing: .46em;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin: 10px 0 0;
+    }
+    .mast .sub {
+      font-family: var(--head);
+      letter-spacing: .22em;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin: 12px 0 0;
+    }
+    .hero { margin-top: 0; color: #fff; }
+    .plate { background: #fff; padding: 28px 28px 22px; }
+    .plate h1 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: var(--blue) !important;
+      font-size: clamp(2.5rem, 8.5vw, 4.2rem);
+      line-height: .88;
+      letter-spacing: -.045em;
+      margin: 0;
+    }
+    .plate .meta {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--m-light) !important;
+      margin: 12px 0 0;
+    }
+    .art { position: relative; }
+    .art img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; }
+    .art::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 62%;
+      background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.45) 48%, transparent 100%);
+      pointer-events: none;
+    }
+    .story {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+    }
+    .story h2 {
+      color: #fff !important;
+      font-size: clamp(1.7rem, 4.6vw, 2.4rem);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+      margin: 0 0 14px;
+      text-shadow: 0 2px 16px rgba(0,0,0,.7), 0 1px 2px rgba(0,0,0,.5);
+    }
+    .story ul { list-style: none; margin: 0; padding: 0; }
+    .story li {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff !important;
+      padding: 7px 0;
+      border-top: 1px solid rgba(255,255,255,.32);
+      line-height: 1.35;
+    }
+    .cover-shot {
+      position: relative;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .cover-shot img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .cover-shot::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 72%;
+      background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 42%, rgba(0,0,0,.18) 72%, transparent 100%);
+      pointer-events: none;
+    }
+    .cover-shot .lockup {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 1;
+    }
+    .cover-shot .lockup .kicker {
+      color: var(--m-light) !important;
+      margin: 0 0 8px;
+    }
+    .cover-shot .lockup h2 {
+      font-family: var(--head);
+      font-weight: 700;
+      color: #fff !important;
+      font-size: clamp(2.4rem, 9vw, 4.4rem);
+      line-height: .88;
+      letter-spacing: -.04em;
+      margin: 0;
+      text-shadow: 0 2px 18px rgba(0,0,0,.75), 0 1px 2px rgba(0,0,0,.55);
+    }
+    .strip { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+    .strip img { aspect-ratio: 1; object-fit: cover; }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 28px;
+      margin-top: 18px;
+    }
+    .issue-box {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .inside .label {
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--m-light);
+      margin: 0 0 8px;
+    }
+    .inside ul { margin: 0; padding: 0; list-style: none; }
+    .inside li {
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .inside li:first-child { border-top: 0; padding-top: 0; }
+    .sheet .inside li, .sheet .open, .sheet h2, .sheet h3, .sheet .cal li, .sheet .cal strong, .sheet p:not(.kicker) { color: #141414 !important; }
+    .sheet .kicker, .sheet .cover-shot .lockup .kicker, .sheet .mast .news, .sheet .mast .sub, .sheet .inside .label { color: var(--m-light) !important; }
+    .sheet .story h2, .sheet .story li, .sheet .cover-shot .lockup, .sheet .cover-shot .lockup h2 { color: #fff !important; }
+
+    .toc {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 28px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .toc a {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .open {
+      margin: 48px 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    .sec { margin-top: 64px; }
+    .kicker {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--m-light);
+      margin: 0 0 10px;
+    }
+    .sheet h2 {
+      font-family: var(--head);
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    .sheet h3 {
+      font-family: var(--head);
+      font-size: 1.55rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin: 8px 0 12px;
+    }
+    .sheet p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #141414 !important; }
+    .shot { margin: 0 0 10px; }
+    .shot img { aspect-ratio: 16 / 10; object-fit: cover; }
+    .shot.product img { aspect-ratio: 4 / 3; object-fit: contain; background: #111; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 0 12px; }
+    .pair img { aspect-ratio: 4 / 3; object-fit: cover; }
+    .cap {
+      font-family: var(--head);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 8px 0 18px;
+    }
+    .credit { font-size: 13px; color: var(--muted); }
+    .credit a { text-decoration: underline; text-underline-offset: 3px; }
+    .cal { margin: 18px 0 0; padding: 0; list-style: none; }
+    .cal li {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cal strong { font-family: var(--head); letter-spacing: .08em; font-size: 13px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .cal a { text-decoration: underline; text-underline-offset: 3px; }
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      font-family: var(--head);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue);
+      padding-bottom: 2px;
+    }
+    .lot-car { margin-top: 40px; }
+    .offers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin: 4px 0 18px;
+    }
+    .offer {
+      background: var(--paper);
+      padding: 14px 16px 16px;
+    }
+    .offer .lbl {
+      font-family: var(--head);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    .offer .amt {
+      font-family: var(--head);
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      color: var(--blue);
+      margin: 0;
+    }
+    .offer .note {
+      font-family: var(--head);
+      font-size: 11px;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin: 6px 0 0;
+      line-height: 1.35;
+    }
+    .end {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      font-family: var(--head);
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      text-align: center;
+    }
+    .end .issue-line {
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+    .end .issue-line a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .end .social {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin: 0 0 16px;
+    }
+    .end .social a {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+    }
+    .end .store { margin: 0; color: var(--ink); }
+    .end .store a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .end .web { margin: 6px 0 0; }
+    .end .web a { color: var(--muted); text-decoration: none; letter-spacing: .08em; }
+    .fine {
+      font-family: var(--head);
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: .02em;
+      color: var(--muted);
+      margin: -8px 0 16px;
+    }
+    @media (max-width: 720px) {
+      .sheet { padding: 18px 16px 56px; }
+      .cover-meta, .strip, .pair { grid-template-columns: 1fr; }
+      .plate { padding: 22px 20px 18px; }
+      .art img { aspect-ratio: 3 / 4; }
+      .story { left: 20px; right: 20px; bottom: 20px; }
+      .cover-shot img { aspect-ratio: 3 / 4; }
+      .cover-shot .lockup { left: 16px; right: 16px; bottom: 16px; }
+      .strip img, .pair img { aspect-ratio: 16 / 10; }
+    }
+  
+
+    .cal-actions { display:inline-flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+    .cal-btn {
+      font-family: var(--head, "AudiType", Arial, Helvetica, sans-serif);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #2A64AC !important;
+      border: 1px solid #2A64AC;
+      padding: 6px 10px;
+      line-height: 1;
+    }
+    .sheet .cal .cal-btn { text-decoration: none; }
+    #cup .kicker, section#cup .kicker { letter-spacing: .18em; }
+
+</style>
+</head>
+
+<body>
+  <!-- verify: oct2026-i02-bhbmw-v1 -->
+  <article class="sheet">
+    <div class="hero">
+      <div class="plate">
+        <h1>The Ultimate<br/>Driver</h1>
+        <p class="meta">Brian Harris BMW &nbsp;·&nbsp; October 2026 &nbsp;·&nbsp; Issue 02</p>
+      </div>
+      <div class="art">
+        <!-- PE/art swap: bhbmw-3series-cover-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/x5-cover.jpg" alt="Eighth-gen BMW 3 Series placeholder" />
+        <div class="story">
+          <h2>The eighth-gen 3 Series lands</h2>
+          <ul>
+            <li>On the Road: the eighth-gen 3 Series lands, and the M350 does 0–60 in 3.9</li>
+            <li>On Saturday: McNeese in Death Valley, then Homecoming — LSU and Southern at home</li>
+            <li>On the Table: boudin balls and pork belly burnt ends at City Pork Jefferson</li>
+            <li>In the Cup: the Chocolate Cappuccino at Highland Coffees</li>
+            <li>On the Town: Alfredo Rodríguez and Pedrito Martínez open the jazz season at Manship</li>
+            <li>On the Wrist: the Tudor Northflag comes back, thinner, with a second time zone</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="strip">
+      <!-- PE/art swap: bhbmw-strip-saturday-i02.jpg -->
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/tiger-stadium-dusk.jpg" alt="Tiger Stadium" />
+      <!-- PE/art swap: bhbmw-strip-table-i02.jpg -->
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/vals-perkins.jpg" alt="City Pork Jefferson placeholder" />
+      <!-- PE/art swap: bhbmw-strip-cup-i02.jpg -->
+      <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/lighthouse-coffee-room.jpg" alt="Highland Coffees placeholder" />
+    </div>
+    <div class="cover-meta">
+      <div class="issue-box">The Ultimate Driver<br/>Issue 02<br/>October 2026<br/>Brian Harris BMW</div>
+      <div class="inside">
+        <p class="label">Inside</p>
+        <ul>
+          <li>On the Road: the eighth-gen 3 Series lands, and the M350 does 0–60 in 3.9</li>
+          <li>On Saturday: McNeese in Death Valley, then Homecoming — LSU and Southern at home</li>
+          <li>On the Table: boudin balls and pork belly burnt ends at City Pork Jefferson</li>
+          <li>In the Cup: the Chocolate Cappuccino at Highland Coffees</li>
+          <li>On the Town: Alfredo Rodríguez and Pedrito Martínez open the jazz season at Manship</li>
+          <li>On the Wrist: the Tudor Northflag comes back, thinner, with a second time zone</li>
+        </ul>
+      </div>
+    </div>
+    <nav class="toc" aria-label="In this issue">
+      <a href="#road">On the Road</a>
+      <a href="#saturday">On Saturday</a>
+      <a href="#table">On the Table</a>
+      <a href="#cup">In the Cup</a>
+      <a href="#town">On the Town</a>
+      <a href="#wrist">On the Wrist</a>
+      <a href="#lot">On the Lot</a>
+      <a href="#workbench">On the Workbench</a>
+    </nav>
+    <p class="open">The heat breaks the way it always breaks here — late, and only a little. But the back half of the day belongs to you again, and that is enough. There is a new 3 Series worth arguing about, two home Saturdays, and a smokehouse on Jefferson that understands pork. The driving is the point. It usually is.</p>
+
+    <section class="sec" id="road">
+      <div class="cover-shot">
+        <!-- PE/art swap: bhbmw-3series-road-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/bmw-x5-g65-hero.jpg" alt="Eighth-generation BMW 3 Series placeholder" />
+        <div class="lockup"><p class="kicker">On the Road</p><h2>The Eighth-Generation 3 Series Lands — and the M350 Runs 0–60 in 3.9</h2></div>
+      </div>
+      <p class="cap">BMW 3 Series · eighth generation</p>
+      <p class="kicker">On the Road</p>
+      <h2>The Eighth-Generation 3 Series Lands — and the M350 Runs 0–60 in 3.9</h2>
+      <p>Forget the camo shots. This is the real thing, revealed for the US: the eighth-generation gasoline 3 Series, wearing the Neue Klasse face on updated CLAR bones. The electric i3 is its sibling on the new architecture — but this is the one you still mean when you say "3 Series," the sedan that has been the whole argument for small, fast, and serious since Reagan was in office.</p>
+      <p>Here is the number that matters. The M350 xDrive takes BMW's 3.0-liter twin-turbo inline-six, bolts on a 48-volt mild-hybrid assist, and arrives at <strong>437 horsepower and 428 lb-ft</strong>. Zero to sixty in <strong>3.9 seconds</strong>, per BMW. That is not a warm sedan. That is a fast car that happens to have four doors and a trunk big enough to matter. And there is a trick coming: a <strong>Drift Moment</strong> function — an over-the-air RWD unlock due in 2027 — for the kind of adult who wants to misbehave on a closed surface and then drive the kids to school.</p>
+      <p>US pricing from BMW NA, before the $1,350 destination charge: the 330 opens at $49,900, the 330 xDrive at $51,900, and the M350 xDrive at $65,900. The electric i3 50 xDrive comes in at $61,500. US sales open in the first quarter of 2027.</p>
+      <p>The sixes are back, the face is new, and the fast one is genuinely fast. The electric chapter is real and it is coming. But the inline-six, all-weather, stoplight-to-stoplight 3 Series is the car most of Baton Rouge is actually asking for — and it is almost here.</p>
+      <p class="credit">Sources: BMW PressClub USA, Car and Driver, Carscoops.</p>
+    </section>
+
+    <section class="sec" id="saturday">
+      <div class="cover-shot">
+        <!-- PE/art swap: bhbmw-lsu-saturday-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/tiger-stadium-dusk.jpg" alt="Tiger Stadium at dusk" />
+        <div class="lockup"><p class="kicker">On Saturday</p><h2>McNeese in Death Valley, Then Homecoming</h2></div>
+      </div>
+      <p class="cap">LSU · Tiger Stadium · Baton Rouge</p>
+      <p class="kicker">On Saturday</p>
+      <h2>McNeese in Death Valley, Then Homecoming</h2>
+      <p>LSU gets two home dates in October worth setting the morning around. Saturday the 3rd it's <strong>McNeese at Tiger Stadium, 6:45 CT on SEC Network</strong> — Alumni Band and Family Weekend, the kind of night where the parking lots fill early and the stands stay loud for all the right, uncomplicated reasons. Then the road to Lexington on the 10th (at Kentucky, 6:00 CT, ESPN), and back home the 17th for <strong>Homecoming against Mississippi State</strong>, early window, 11 a.m. to noon CT — a 4–0 Bulldogs team walking into Death Valley with something to prove. The 24th is the trip to Auburn and Jordan-Hare at 11 CT. Two home Saturdays, both built for the drive in and the drive back.</p>
+
+      <div class="cover-shot">
+        <!-- PE/art swap: bhbmw-southern-saturday-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/tiger-stadium-dusk.jpg" alt="Southern University Homecoming placeholder" />
+        <div class="lockup"><p class="kicker">On Saturday</p><h2>Southern's Homecoming and Columbia Blue Day</h2></div>
+      </div>
+      <p class="cap">Southern University · Mumford · The Bluff</p>
+      <h2>Southern's Homecoming and Columbia Blue Day</h2>
+      <p>The Jaguars open October where you want them: at home. Saturday the 3rd is <strong>Arkansas–Pine Bluff at Mumford Stadium, 6:00 — Homecoming and Columbia Blue Day</strong>, which means the Human Jukebox turns halftime into the main event and the rest of the night is just the frame around it. After that it's the road — at Prairie View A&amp;M on the 10th, an open date the 17th, Texas Southern the 24th, and Florida A&amp;M to close the month. But the 3rd is the one to circle. The band doesn't lose.</p>
+    </section>
+
+    <section class="sec" id="table">
+      <div class="cover-shot">
+        <!-- PE/art swap: city-pork-jefferson-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/vals-perkins.jpg" alt="City Pork Jefferson placeholder" />
+        <div class="lockup"><p class="kicker">On the Table</p><h2>Boudin Balls and Burnt Ends at City Pork Jefferson</h2></div>
+      </div>
+      <p class="cap">City Pork Jefferson · 7327 Jefferson Hwy.</p>
+      <p class="kicker">On the Table</p>
+      <h2>Boudin Balls and Burnt Ends at City Pork Jefferson</h2>
+      <p>City Pork is a smokehouse that figured out how to run a brasserie, and the Jefferson Highway room is where the share plates earn their keep. This is not white-tablecloth theater. It is a place that takes a pig seriously and makes you glad someone does.</p>
+      <p>Start with the <strong>boudin balls</strong> — house boudin, remoulade, pickled onions and jalapeños, the pickle doing the work of cutting the richness before it gets heavy. Then the <strong>pork belly burnt ends</strong>, the dish that tells you whether a kitchen means it: BBQ beans, mustard greens, slaw, a bourbon glaze that could go sticky-sweet in lesser hands and doesn't here. Get the <strong>crawfish and brie queso</strong> with the fried pork rinds for the table, the <strong>wild boar flautas</strong> with smoked avocado cream if you want something with a little wild to it, and the <strong>salmon saltine</strong> — house-smoked, dill aioli, capers — for the one person at the table who wandered in wanting fish. The full entrée board loads further down the same menu; let the room talk you into it.</p>
+      <p>Two people, smoke in the air, share plates before a midweek jazz night downtown. Patio if the weather holds. Book it on SevenRooms — the Wednesday RCJM night fills fast.</p>
+      <p class="credit">City Pork Jefferson: 7327 Jefferson Hwy., Baton Rouge. Reservations (SevenRooms): <a href="https://sevenrooms.com/explore/cityporkbrasserie">sevenrooms.com/explore/cityporkbrasserie</a> · <a href="https://citypork.com/city-pork-jefferson">citypork.com/city-pork-jefferson</a> · (225) 615-8880</p>
+      <p><a class="cta" href="https://citypork.com/city-pork-jefferson">City Pork Jefferson</a>&nbsp;&nbsp;<a class="cta" href="https://sevenrooms.com/explore/cityporkbrasserie">Reservations</a></p>
+    </section>
+
+    <section class="sec" id="cup">
+      <div class="cover-shot">
+        <!-- PE/art swap: highland-coffees-cup-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/lighthouse-coffee-room.jpg" alt="Highland Coffees placeholder" />
+        <div class="lockup"><p class="kicker">In the Cup</p><h2>The Chocolate Cappuccino at Highland Coffees</h2></div>
+      </div>
+      <p class="cap">Highland Coffees · 3350 Highland Rd.</p>
+      <p class="kicker">In the Cup</p>
+      <h2>The Chocolate Cappuccino at Highland Coffees</h2>
+      <p>Highland Coffees has been roasting its own beans at the North Gates of LSU since 1989, which in coffee years makes it an institution and in Baton Rouge years makes it a landmark. The beans are roasted on site. The room has a courtyard. Nobody is going to rush you, and nobody is going to perform at you.</p>
+      <p>The order is the <strong>Chocolate Cappuccino</strong> — espresso, steamed milk, chocolate, pulled right and served without the seasonal-syrup circus. It is on the menu as written; order it as written. Want it cold? The <strong>iced coffee cold drip</strong> runs ten varieties a day. Either one is the correct fuel for a solo morning, a laptop hour, or the ten quiet minutes before you point the car at Highland Road and go.</p>
+      <p class="credit">Highland Coffees: 3350 Highland Rd., Baton Rouge. <a href="https://highlandcoffees.com">highlandcoffees.com</a> · (225) 336-9773 — confirm hours week-of.</p>
+      <p><a class="cta" href="https://highlandcoffees.com">Highland Coffees</a></p>
+    </section>
+
+    <section class="sec" id="town">
+      <div class="cover-shot">
+        <!-- PE/art swap: bhbmw-town-rcjm-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/farm-fete-2.jpg" alt="Manship Theatre jazz season placeholder" />
+        <div class="lockup"><p class="kicker">On the Town</p><h2>Alfredo Rodríguez and Pedrito Martínez Open the Jazz Season</h2></div>
+      </div>
+      <p class="cap">Baton Rouge · October</p>
+      <p class="kicker">On the Town</p>
+      <h2>Alfredo Rodríguez and Pedrito Martínez Open the Jazz Season</h2>
+      <p>The Arts Council's <strong>River City Jazz Masters</strong> turns twenty this year, and it opens the season the right way: the <strong>Alfredo Rodríguez Band featuring Pedrito Martínez</strong>, Wednesday, October 7, 7:30 p.m. at the Manship Theatre. Afro-Cuban and Latin jazz, seated, in a room that was built to make it sound like it should. Rodríguez on keys, Martínez on congas and voice — two players who turn a stage into a conversation and let you eavesdrop. Tickets from $56 including fees. If you want the whole twentieth-anniversary run, the season pass is available through October 7.</p>
+      <p class="credit">Manship Theatre, 100 Lafayette St. Show: <a href="https://manshiptheatre.org/comingsoon/rivercityjazzmasters-alfredorodriguezband-r5psh">manshiptheatre.org</a> · Tickets: <a href="https://manshiptheatre.my.salesforce-sites.com">manshiptheatre.my.salesforce-sites.com</a></p>
+      <p><strong>Around the Month</strong></p>
+      <ul class="cal">
+        <li><strong>Sun 4 — First Free Sunday</strong>, LASM. <em>Reflections: The Art of George Rodrigue</em> — the Blue Dog show, home in Baton Rouge. <a href="https://lasm.org/bluedog">lasm.org/bluedog</a></li>
+        <li><strong>Fri 9 — Bachtoberfest</strong>, BRSO at the Main Library at Goodwood lawn, 7:30 p.m. Beer, brats, Bach. GA $40 / student-child $20. <a href="https://brso.org">brso.org</a></li>
+        <li><strong>Sat 10 — The California Honeydrops</strong>, Chelsea's Live, 8:00 p.m., 18+. GA $35 plus fees. <a href="https://chelseaslive.com">chelseaslive.com</a></li>
+        <li><strong>Sat 10, 17, 24, 31 (daytime) — Corn Maze at Burden</strong>, LSU AgCenter Botanic Gardens, presale only. Night Maze Oct 30, 6–9 p.m. <a href="https://lsuagcenterbg.ticketspice.com">lsuagcenterbg.ticketspice.com</a></li>
+        <li><strong>Sat 24 — Louisiana Bourbon Festival</strong>, L'Auberge, 21+. <a href="https://louisianabourbonfest.com">louisianabourbonfest.com</a></li>
+        <li><strong>Fri 30 / Sat 31 — Clue (1985)</strong>, Manship Films, $9.50. Costume gets you free popcorn. <a href="https://manshiptheatre.org/comingsoon/clue">manshiptheatre.org/comingsoon/clue</a></li>
+        <li><strong>Sat 31 — Louisiana Book Festival</strong>, downtown at the State Library, 9 a.m.–4 p.m., free. <a href="https://louisianabookfestival.org">louisianabookfestival.org</a></li>
+      </ul>
+    </section>
+
+    <section class="sec" id="wrist">
+      <div class="cover-shot">
+        <!-- PE/art swap: tudor-northflag-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/tudor-bb58-hero.jpg" alt="Tudor Northflag placeholder" style="filter:brightness(.92)" />
+        <div class="lockup"><p class="kicker">On the Wrist</p><h2>The Tudor Northflag Comes Back — Thinner, with a Second Time Zone</h2></div>
+      </div>
+      <p class="cap">Tudor Northflag · Hodinkee</p>
+      <p class="kicker">On the Wrist</p>
+      <h2>The Tudor Northflag Comes Back — Thinner, with a Second Time Zone</h2>
+      <p>Tudor's first in-house watch, the 2015 North Flag, was always a little odd — a power-reserve indicator parked where it didn't need to be, on a case that ran thick. Tudor has brought it back as one word, the <strong>Northflag (ref. 9140G1A0U)</strong>, and fixed the brief. Forty millimeters across, <strong>12.7mm thick</strong>, 48.8mm lug to lug, on an integrated two-link bracelet with a T-Fit micro-adjust clasp. Black dial, yellow accents on the GMT and seconds hands — the sport color, used with restraint.</p>
+      <p>The upgrade is under the dial. Out goes the power-reserve oddball; in comes a <strong>flyer GMT</strong> via the MT5652-U, a METAS-certified Master Chronometer with a 65-hour reserve. That means a second time zone you can actually set the easy way — jump the local hour forward or back without stopping the watch — on a travel piece that is neither a Sub nor a Black Bay. Boutique-only, $5,525. For the driver who wants a tool watch with a passport and a little attitude, this is the one that isn't on every wrist yet.</p>
+      <p class="credit">Source: Hodinkee, James Stacey. <a href="https://hodinkee.com">hodinkee.com</a></p>
+    </section>
+
+    <section class="sec" id="lot">
+      <div class="cover-shot">
+        <!-- PE/art swap: bhbmw-lot-lead-i02.jpg -->
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/bhbmw-news-issue-1.2/x5-cover.jpg" alt="Brian Harris BMW lot placeholder" />
+        <div class="lockup"><p class="kicker">On the Lot</p><h2>The cars on Airline</h2></div>
+      </div>
+      <p class="cap">Lot · Brian Harris BMW · stub</p>
+      <p class="kicker">On the Lot</p>
+      <h2>The cars on Airline</h2>
+      <p>The board out front is where the month gets real. The new specials page leads with one car this October — we'll lead with the same one, in our own words, the week the numbers land. Full frame, real figures, two links to shop it: inventory and specials. No prices until the page says so.</p>
+      <p><a class="cta" href="https://brianharrisbmw.com/new-bmw-specials2">Shop specials</a></p>
+      <p class="credit">Brian Harris BMW, 12336 Airline Hwy., Baton Rouge. Shop specials: brianharrisbmw.com/new-bmw-specials2</p>
+    </section>
+
+    <section class="sec" id="workbench">
+      <p class="kicker">On the Workbench</p>
+      <h2>Where the Miles Get Honest</h2>
+      <p>A BMW rewards the person who keeps up with it, and the shop is where that account gets settled. This month the board is clean and the numbers are plain.</p>
+      <p><strong>Value Service Oil Change — $119.99.</strong> Premium synthetic BMW oil and a factory filter, parts and labor in the price. This is the small, on-time habit that keeps the big bills off your calendar. Applies to BMW models in the Value Service Program — the desk confirms your car qualifies. Through 11/1/2026.</p>
+      <p><strong>10% Off BMW Service — up to $200.</strong> For the visit that's more than an oil change: the recommended work your car has been quietly asking for. Excludes Value Service and tires. Through 11/1/2026.</p>
+      <p><strong>Brake Value Service.</strong> Pads and rotors done by techs who already know your VIN and don't guess. Pricing depends on the car — the desk gives you the real number before anything gets touched. No surprises after. Through 11/1/2026.</p>
+      <p>The work is done by factory-trained BMW technicians with original BMW parts, which is the whole difference between a service and a fix. Book it: brianharrisbmw.com/service-offers · Service (225) 497-1953.</p>
+      <p><a class="cta" href="https://brianharrisbmw.com/service-offers">Service offers</a>&nbsp;&nbsp;<a class="cta" href="https://brianharrisbmw.com/service">Book service</a></p>
+      <p class="credit">12336 Airline Hwy, Baton Rouge · (225) 497-1953</p>
+    </section>
+
+    <footer class="end">
+      <p class="issue-line"><a href="the-ultimate-driver.html">The Ultimate Driver</a> · Issue 02 · October 2026</p>
+      <p class="store">Brian Harris BMW · 12336 Airline Highway · Baton Rouge, LA 70817 · <a href="https://brianharrisbmw.com/">brianharrisbmw.com</a></p>
+    </footer>
+  </article>
+</body>
+</html>
