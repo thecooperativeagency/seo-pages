@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Howell Motors — Owner Desk · GMC + Nissan, Summit MS</title>
+  <meta name="description" content="Sourced discovery desk for Howell Motors: two franchises, one lot. SEO, SEM, social, OEM co-op, and a small-store fee range." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #14181f;
+      --muted: #5c6573;
+      --line: #e4e7ec;
+      --bg: #f4f1ea;
+      --card: #fff;
+      --soft: #f7f5f0;
+      --gmc: #a6192e;
+      --nissan: #c3002f;
+      --navy: #1a2332;
+      --ok: #1f6b4a;
+      --warn: #8a5a12;
+      --gap: #7a2e12;
+      --shadow: 0 10px 28px rgba(20,24,31,.07);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    .wrap { width: min(1120px, calc(100% - 28px)); margin: 0 auto; padding: 20px 0 64px; }
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 22px;
+      padding: 28px 24px 22px;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+    .version {
+      position: absolute; top: 16px; right: 18px;
+      font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+    }
+    .kicker { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.62); font-weight: 700; }
+    h1 { margin: 8px 0 8px; font-size: clamp(26px, 4vw, 40px); letter-spacing: -.03em; line-height: 1.12; }
+    .lede { margin: 0; max-width: 58ch; color: rgba(255,255,255,.82); font-size: 15px; }
+    .modes {
+      display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap;
+    }
+    .modes button {
+      border: 1px solid rgba(255,255,255,.2);
+      background: transparent; color: #fff;
+      border-radius: 999px; padding: 10px 16px; font: inherit; font-weight: 700; font-size: 13px;
+      min-height: 44px; cursor: pointer;
+    }
+    .modes button[aria-pressed="true"] { background: #fff; color: var(--navy); }
+    .facts {
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin: 16px 0 0;
+    }
+    .fact { background: rgba(255,255,255,.08); border-radius: 12px; padding: 12px 14px; }
+    .fact b { display: block; font-size: 20px; letter-spacing: -.03em; }
+    .fact span { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: rgba(255,255,255,.6); }
+    nav.toc {
+      display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 20px;
+    }
+    nav.toc a {
+      color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 600;
+      background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+      padding: 8px 12px; min-height: 40px; display: inline-flex; align-items: center;
+    }
+    section.block {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 20px 20px 16px; margin: 0 0 12px; box-shadow: var(--shadow);
+    }
+    h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: -.02em; }
+    h3 { margin: 16px 0 8px; font-size: 14px; }
+    p, li { font-size: 14.5px; color: #2a3140; }
+    .muted { color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+    .tag {
+      display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .04em;
+      text-transform: uppercase; border-radius: 999px; padding: 3px 8px;
+    }
+    .t-ok { background: #e7f5ee; color: var(--ok); }
+    .t-warn { background: #f8ecd8; color: var(--warn); }
+    .t-gap { background: #f8e4dc; color: var(--gap); }
+    .t-src { background: #eee; color: #555; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .call {
+      background: var(--soft); border-radius: 12px; padding: 14px 16px; margin-top: 10px;
+    }
+    .call strong { display: block; margin-bottom: 4px; }
+    .ask { border-left: 3px solid var(--navy); padding-left: 12px; margin: 10px 0; }
+    footer { font-size: 12px; color: var(--muted); margin-top: 18px; line-height: 1.55; }
+    a { color: #1a4d8c; }
+    body.pitch .desk-only { display: none !important; }
+    body.desk .pitch-only { display: none !important; }
+    @media (max-width: 820px) {
+      .facts, .split { grid-template-columns: 1fr 1fr; }
+      .version { position: static; display: block; margin-bottom: 8px; }
+    }
+    @media (max-width: 560px) {
+      .facts, .split { grid-template-columns: 1fr; }
+      .wrap { width: min(100% - 20px, 1120px); }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body class="desk">
+  <div class="wrap">
+    <header class="hero">
+      <div class="version">v1 · Oct 5, 2026 · sourced</div>
+      <div class="kicker">Howell Motors · Summit, Mississippi</div>
+      <h1>Two franchises.<br>One lot. One conversation.</h1>
+      <p class="lede">GMC and Nissan sit at the same address, share a phone number, and share the used book. This desk is for the sit-down with Paige — and flips into a pitch without rewriting the facts.</p>
+      <div class="modes" role="group" aria-label="View">
+        <button type="button" id="btn-desk" aria-pressed="true">Owner desk</button>
+        <button type="button" id="btn-pitch" aria-pressed="false">Pitch view</button>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>2</b><span>franchises, 1 rooftop</span></div>
+        <div class="fact"><b>8</b><span>new GMC on site</span></div>
+        <div class="fact"><b>28</b><span>new Nissan on site</span></div>
+        <div class="fact"><b>18</b><span>used, listed on both sites</span></div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <a href="#who">Who</a>
+      <a href="#lot">Lot</a>
+      <a href="#stack">Stack</a>
+      <a href="#seo">SEO</a>
+      <a href="#sem">SEM</a>
+      <a href="#social">Social</a>
+      <a href="#coop">Co-op</a>
+      <a href="#fee" class="desk-only">Fee</a>
+      <a href="#ask">Ask Paige</a>
+    </nav>
+
+    <section class="block" id="who">
+      <h2>Who you’re talking to</h2>
+      <table>
+        <tr><th>Item</th><th>Sourced fact</th></tr>
+        <tr><td>Legal</td><td>Howell, Inc. — MS licenses <strong>916 GMC</strong> and <strong>1916 Nissan</strong>. Mail: P.O. Box 528, McComb, MS 39649.</td></tr>
+        <tr><td>Trade</td><td>Howell Motors / Howell GMC / K.H. Nissan. Sites: howellgmc.com, howellnissan.com.</td></tr>
+        <tr><td>Place</td><td>1158 Highway 51-98, Summit, MS 39666. Same pin for both brands (~31.274, −90.471).</td></tr>
+        <tr><td>Phone</td><td>One number for main / sales / service / parts: <a href="tel:6012767711">601-276-7711</a>.</td></tr>
+        <tr><td>Family</td><td>Opened April 9, 1964 (VW). Today GMC + Nissan. Co-owned by Krandall Howell (semi-retired, bigger-picture) and son <strong>Paige</strong> (day-to-day). Paige’s son <strong>Kran</strong> is F&amp;I / fourth generation. MADA member; Krandall was first import dealer on the MADA board.</td></tr>
+        <tr><td>Hours (conflict)</td><td>About pages: sales Mon–Fri 8:30–5:30, Sat 9–1, Sun closed. Nissan USA dealer locator lists sales Mon–Fri 8:00–6:00, Sat 9–2. Service both: Mon–Fri 7:30–5, weekends closed. <span class="tag t-warn">hours disagree</span></td></tr>
+      </table>
+      <p class="muted">Talk to Paige. Do not pitch “a group with two stores” as two campuses — it is one operation with two OEM skins.</p>
+    </section>
+
+    <section class="block" id="lot">
+      <h2>What is actually on the lot</h2>
+      <p>Counts from live SRP titles on Oct 5, 2026. Not a DMS pull.</p>
+      <div class="split">
+        <div>
+          <h3>Howell GMC</h3>
+          <ul>
+            <li>New / CTP / demo SRP: <strong>8</strong></li>
+            <li>New specials SRP: <strong>5</strong></li>
+            <li>Used SRP: <strong>18</strong></li>
+            <li>Dealer discount on several 2026s: <strong>$1,000</strong> + OEM cash</li>
+            <li>Doc fee: <strong>$315</strong></li>
+            <li>Several used units: “Please call for price”</li>
+          </ul>
+        </div>
+        <div>
+          <h3>K.H. Nissan</h3>
+          <ul>
+            <li>New SRP: <strong>28</strong></li>
+            <li>Used SRP: <strong>18</strong> (same count; overlapping VINs with GMC used, e.g. 2025 Kicks Play S)</li>
+            <li>Offers page is the <strong>Nissan USA Jackson-MS-area</strong> national incentive board, not a store-built specials page</li>
+            <li>Doc fee: <strong>$315</strong></li>
+          </ul>
+        </div>
+      </div>
+      <p>Homepage copy on both sites still says a “vast inventory.” That is template language. The real story is a small, honest rural book — and Nissan is the volume franchise.</p>
+    </section>
+
+    <section class="block" id="stack">
+      <h2>Who is doing the digital work today</h2>
+      <table>
+        <tr><th>Layer</th><th>Who</th><th>Read</th></tr>
+        <tr>
+          <td>Websites</td>
+          <td>Dealer Inspire / Cars Commerce (DI WordPress, GMUS + Nissan core templates, AudioEye, Botdoc, Cars Commerce vehicle images — dealer IDs 110012670 GMC / 110012690 Nissan)</td>
+          <td><span class="tag t-ok">confirmed from sites</span></td>
+        </tr>
+        <tr>
+          <td>SEO</td>
+          <td>No third-party SEO firm visible. City pages exist (McComb, Brookhaven, Hammond). Copy is DI stock. No staff page. No original photography on used SRP (several “notfound” placeholders on GMC).</td>
+          <td><span class="tag t-gap">template SEO only</span></td>
+        </tr>
+        <tr>
+          <td>SEM / paid</td>
+          <td>Meta Ad Library: <strong>no active ads</strong> for “Howell Motors Summit.” Google Ads Transparency did not return a usable advertiser record in this pass. Dealer Inspire <em>is</em> a Nissan Digital Program advertising partner — that does not prove they are buying ads here.</td>
+          <td><span class="tag t-warn">no public paid signal</span></td>
+        </tr>
+        <tr>
+          <td>Social</td>
+          <td>Facebook Page <a href="https://www.facebook.com/howellmotorsinc/">Howell Motors Inc.</a> (4.2 from 19 ratings). Occasional video posts naming both URLs. No official Instagram found. No YouTube channel found.</td>
+          <td><span class="tag t-gap">thin organic</span></td>
+        </tr>
+        <tr>
+          <td>Local listings</td>
+          <td>Yellow Pages still lists “Howell Buick Gmc” and “Howell Pontiac Buick GMC” at the same address. Brand history is real; the public NAP is stale.</td>
+          <td><span class="tag t-warn">NAP drift</span></td>
+        </tr>
+        <tr>
+          <td>Pixels / GTM</td>
+          <td>Not extracted. Direct fetch and browser hit Cloudflare on gm.websites.dealerinspire.com / retail.websites.dealerinspire.com.</td>
+          <td><span class="tag t-src">blocked this pass</span></td>
+        </tr>
+      </table>
+      <p class="desk-only muted">Working take: they are paying a website vendor, not a marketing department. That is the opening.</p>
+    </section>
+
+    <section class="block" id="seo">
+      <h2>SEO — what a shopper actually gets</h2>
+      <ul>
+        <li><strong>Works:</strong> live inventory, model hubs, service schedule, finance apply, trade form, some city landers.</li>
+        <li><strong>Breaks trust:</strong> “vast inventory” vs 8 new GMCs; GMC homepage reviews talking about Nissan; hours mismatch vs Nissan.com; Buick/Pontiac ghosts in directories.</li>
+        <li><strong>Missing:</strong> people page, real lot photography, store-written specials (Nissan), priced used book on GMC, service SEO that is not generic DI.</li>
+        <li><strong>Market:</strong> McComb / Summit / Brookhaven, with Nissan copy also naming Hammond. Jackson DMA-adjacent, not a metro fight with Autonation-scale inventory.</li>
+      </ul>
+      <div class="call">
+        <strong>SEO job that fits this store</strong>
+        Honest pages for the towns they already name, service + trucks, GBP hygiene, kill the Buick/Pontiac listings, one photo pass so used cars stop showing broken images. Not a 40-page luxury SEO program.
+      </div>
+    </section>
+
+    <section class="block" id="sem">
+      <h2>SEM</h2>
+      <p>Public libraries did not show active Meta ads. Google Transparency did not confirm an advertiser. So: <strong>do not tell Paige they spend $0</strong> — tell him we could not see a live campaign from outside, and we need Ads / Meta / DI invoices.</p>
+      <p>If they are not in IMR / Nissan Digital Program ads today, the cheapest certified on-ramps are:</p>
+      <ul>
+        <li><strong>Nissan:</strong> Dealer Inspire Digital Advertising — 2026 program sheet: media minimum <strong>≥ $2,500</strong>, management fee <strong>25% of media, cap $3,500</strong>.</li>
+        <li><strong>GMC:</strong> GM Dealer Digital Solution / IMR via a certified DAP. C-4’s published Digital Base band is <strong>$2,000–$3,999</strong> media (vendor sell sheet, not Howell’s invoice).</li>
+      </ul>
+    </section>
+
+    <section class="block" id="social">
+      <h2>Social</h2>
+      <table>
+        <tr><th>Channel</th><th>Status</th></tr>
+        <tr><td>Facebook</td><td>One page for the company. Thin review count (19). Organic video exists. No active ads in Library search.</td></tr>
+        <tr><td>Instagram</td><td>No official Howell Motors / Howell GMC / KH Nissan account found this pass.</td></tr>
+        <tr><td>YouTube / TikTok</td><td>Not found as store properties.</td></tr>
+        <tr><td>GBP</td><td>Maps links exist from the sites (Howell, INC. and K.H. Nissan). Not audited inside Google Business this pass.</td></tr>
+      </table>
+      <p>For a store this size, Instagram + GBP posts + Facebook from real lot photos beats a content calendar of stock GMC deserts.</p>
+    </section>
+
+    <section class="block" id="coop">
+      <h2>OEM co-op — what these two brands actually allow</h2>
+      <p>Exact Howell balances and match rates live in the dealer portals. Outside sources do not publish this rooftop’s accrual. What is public:</p>
+
+      <h3>GMC — GM In-Market Retail (IMR) / Dealer Digital Solution</h3>
+      <ul>
+        <li>GM connects Chevy / Buick / GMC / Cadillac dealers to <strong>certified digital partners</strong>. Channels called out by approved vendors: paid media, <strong>SEO</strong>, social media management, paid social.</li>
+        <li>Industry guides put GM IMR reimbursement in a <strong>50–100%</strong> range by channel, typically <strong>quarterly</strong>, use-it-or-lose-it. Verify on GM SharePoint / IMR account — do not quote 50% or 100% as Howell’s rate.</li>
+        <li>Digital Dealer (Naked Lime approval): <strong>more than 90%</strong> of GM’s ~4,300 U.S. dealers participate; GM reimburses a portion of eligible costs from approved vendors.</li>
+        <li>Enrollment / dashboard: <a href="https://www.gmdealerdigital.com/">gmdealerdigital.com</a> · dealer.digital@gm.com · 1-800-250-9038.</li>
+        <li>SEO is eligible <strong>when billed by a certified DAP</strong>. Organic posting on Facebook is generally <em>not</em> an ad spend and is not reimbursable.</li>
+      </ul>
+
+      <h3>Nissan — Dealer Digital Program (not a DIY Google Ads invoice)</h3>
+      <ul>
+        <li>Nissan runs a certified marketplace (<a href="https://www.nissandigitalprogram.com/DigitalAdvertising">nissandigitalprogram.com</a>). Dealer Inspire is on the Full-Suite advertising list — which matches their website vendor.</li>
+        <li>2026 DI advertising sheet: <strong>$2,500 minimum media</strong> + 25% management (cap $3,500). That is the on-menu paid path, not a Coop-invented number.</li>
+        <li>A3 Brands (agency, not OEM): they report helping Nissan dealers apply co-op to SEO; they also say many OEMs reimburse <strong>30–50%</strong> of SEO. Treat as vendor marketing, not Nissan policy.</li>
+        <li>A 2018–2020 Nissan Northwest Region PDF (not Mississippi, not current): dealers accrued 0.5% of wholesale, Nissan added $0.40 per $1, claims 1:1, SEM/SEO required invoices + keyword lists + screenshots, 60-day claim window. Useful as “this is how Nissan thinks,” not as Summit’s 2026 contract.</li>
+      </ul>
+
+      <div class="call">
+        <strong>Hard line for the pitch</strong>
+        The Cooperative Agency is <em>not</em> listed as a GM IMR DAP or a Nissan Digital Program partner on the public partner boards. Do not promise that Coop invoices will reimburse. Promise: we will read the portals with Paige, spend certified dollars where they match, and do the non-reimbursable work (truthful pages, photos, GBP, reputation) as a small monthly that the store actually feels.
+      </div>
+    </section>
+
+    <section class="block desk-only" id="fee">
+      <h2>What we charge elsewhere — and what this pair can bear</h2>
+      <p>Luxury rooftops in Baton Rouge and Jackson are a different product: Motive SEO pages, magazine, Acquire, GM Weekly, J&amp;L paid at metro scale, photography as a system.</p>
+      <table>
+        <tr><th>Comparable</th><th>Number</th><th>What it is</th></tr>
+        <tr><td>BMW of Jackson paid (J&amp;L)</td><td>Sales <strong>$7,000 → $4,500</strong>; service held <strong>$1,500</strong> (Sep 2026 recap)</td><td>Media, not Coop retainer</td></tr>
+        <tr><td>Harris Porsche paid (J&amp;L)</td><td>About <strong>$2,500–$3,000</strong>/mo in spring 2026 notes</td><td>Media</td></tr>
+        <tr><td>GM DAP Digital Base (C-4 sheet)</td><td><strong>$2,000–$3,999</strong> media</td><td>Certified GM paid, not this store</td></tr>
+        <tr><td>Nissan DI ads (2026 sheet)</td><td><strong>≥ $2,500</strong> media + 25% fee</td><td>Certified Nissan paid</td></tr>
+        <tr><td>Howell lot reality</td><td>8 new GMC + 28 new Nissan + 18 used, Sat close at 1</td><td>One-family operation</td></tr>
+      </table>
+      <p><strong>Recommendation (internal):</strong> do not quote BR/Jackson luxury. Do not quote $800 “we’ll keep an eye on it.” Two OEM sites, two co-op claim languages, photos, GBP, and a monthly sit-down is real work.</p>
+      <div class="split">
+        <div class="call">
+          <strong>Fee — the pair as one client</strong>
+          <b>$2,500 / month</b> for both sites: SEO/content, GBP, organic social from real photos, offer/service page truth, monthly 30-min with Paige.<br>
+          Setup <b>$1,500</b> (photo day + NAP cleanup + page pass).
+        </div>
+        <div class="call">
+          <strong>If they want invoices split for co-op later</strong>
+          $1,500 GMC + $1,500 Nissan only after a certified path exists. Until then, one invoice, one owner.<br>
+          Paid media is extra and should ride IMR / Nissan Digital Program, not our uncertified media buy.
+        </div>
+      </div>
+      <p class="muted">Floor: $2,000. Ceiling unless they ask for magazine/Acquire-class work: $3,500. Paid media not in the fee.</p>
+    </section>
+
+    <section class="block pitch-only">
+      <h2>What this would cost — sized to this store</h2>
+      <p>This is not a Baton Rouge luxury program. It is a small, monthly operating rhythm for two franchises that already share a driveway.</p>
+      <ul>
+        <li><strong>Monthly:</strong> $2,500 for both rooftops — pages, Google Business, social from real photos, offer/service truth, one working call.</li>
+        <li><strong>Start:</strong> $1,500 — photography + listing cleanup + first page pass.</li>
+        <li><strong>Ads:</strong> only if you want them, and only on GMC/Nissan approved tracks so co-op can actually come back. Nissan’s own Dealer Inspire menu starts around $2,500 in media.</li>
+      </ul>
+    </section>
+
+    <section class="block" id="ask">
+      <h2>Ask Paige in the room</h2>
+      <div class="ask">1. Who invoices the websites today, and what is the monthly DI / Cars Commerce bill?</div>
+      <div class="ask">2. Open GM IMR (or LAM) — what is the unspent balance, and is anyone enrolled as DAP?</div>
+      <div class="ask">3. Open Nissan Digital Program / RMP — same questions. Any DI advertising contract?</div>
+      <div class="ask">4. Google Ads + Meta logins: who has admin? Any spend last 90 days?</div>
+      <div class="ask">5. Who owns the Facebook page? Is there an Instagram they simply never linked?</div>
+      <div class="ask desk-only">6. Confirm fee: $2,500/mo pair + $1,500 setup, paid extra only on certified rails.</div>
+    </section>
+
+    <footer>
+      Sourced Oct 5, 2026 from live howellgmc.com / howellnissan.com, MADA 60-year feature (May 31, 2024), MMVC dealer list, Nissan Digital Program + Dealer Inspire 2026 advertising PDF, GM Dealer Digital Solution, C-4 IMR overview PDF, Capital One/GM IMR news (Oct 21, 2025), Meta Ad Library, Google Ads Transparency (no usable advertiser hit), Yellow Pages McComb. Inventory counts are SRP titles, not DMS. Co-op percentages are program-class, not this dealer’s portal. The Cooperative Agency is not a listed GM IMR or Nissan Digital Program partner on the public boards checked.
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var desk = document.getElementById("btn-desk");
+      var pitch = document.getElementById("btn-pitch");
+      function setMode(mode) {
+        document.body.className = mode;
+        desk.setAttribute("aria-pressed", mode === "desk" ? "true" : "false");
+        pitch.setAttribute("aria-pressed", mode === "pitch" ? "true" : "false");
+        try { localStorage.setItem("howellDeskMode", mode); } catch (e) {}
+      }
+      desk.addEventListener("click", function () { setMode("desk"); });
+      pitch.addEventListener("click", function () { setMode("pitch"); });
+      try {
+        var saved = localStorage.getItem("howellDeskMode");
+        if (saved === "pitch" || saved === "desk") setMode(saved);
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
