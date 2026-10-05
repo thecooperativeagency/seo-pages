@@ -179,6 +179,33 @@
     }
     .dealer-label span { color: var(--muted); font-size: 12px; }
 
+    /* manager hub share — above store content; copy to send */
+    .hub-share { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 22px; }
+    .hub-share-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .hub-share-row .kicker {
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 0 0 2px;
+    }
+    .hub-share-row h3 { margin: 0; font-size: 14px; font-weight: 700; }
+    .hub-share-row .url { margin: 2px 0 0; font-size: 12px; color: var(--muted); word-break: break-all; }
+    .hub-share-row .btn { cursor: pointer; font-family: inherit; }
+    @media (max-width: 860px) {
+      .hub-share-row { flex-direction: column; align-items: stretch; }
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
@@ -287,6 +314,53 @@
       <button class="filter" data-filter="brian-harris-bmw">Brian Harris BMW</button>
       <button class="filter" data-filter="bmw-of-jackson">BMW of Jackson</button>
       <button class="filter" data-filter="harris-porsche">Harris Porsche</button>
+    </div>
+    <!-- mgmt-hub-share-v1 -->
+    <div class="hub-share" id="hub-share" aria-label="Manager hubs">
+      <article class="hub-share-row" data-store="audi-baton-rouge">
+        <div>
+          <p class="kicker">Manager hub</p>
+          <h3>Audi Baton Rouge</h3>
+          <p class="url">https://thecooperativeagency.github.io/email-creative/abr-hub/</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/abr-hub/" target="_blank" rel="noopener">Open</a>
+          <button type="button" class="btn js-copy-hub" data-copy="https://thecooperativeagency.github.io/email-creative/abr-hub/">Copy link</button>
+        </div>
+      </article>
+      <article class="hub-share-row" data-store="brian-harris-bmw">
+        <div>
+          <p class="kicker">Manager hub</p>
+          <h3>Brian Harris BMW</h3>
+          <p class="url">https://thecooperativeagency.github.io/email-creative/bhbmw-hub/</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/bhbmw-hub/" target="_blank" rel="noopener">Open</a>
+          <button type="button" class="btn js-copy-hub" data-copy="https://thecooperativeagency.github.io/email-creative/bhbmw-hub/">Copy link</button>
+        </div>
+      </article>
+      <article class="hub-share-row" data-store="bmw-of-jackson">
+        <div>
+          <p class="kicker">Manager hub</p>
+          <h3>BMW of Jackson</h3>
+          <p class="url">https://thecooperativeagency.github.io/email-creative/bmwj-hub/</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thecooperativeagency.github.io/email-creative/bmwj-hub/" target="_blank" rel="noopener">Open</a>
+          <button type="button" class="btn js-copy-hub" data-copy="https://thecooperativeagency.github.io/email-creative/bmwj-hub/">Copy link</button>
+        </div>
+      </article>
+      <article class="hub-share-row" data-store="harris-porsche">
+        <div>
+          <p class="kicker">Manager hub</p>
+          <h3>Harris Porsche</h3>
+          <p class="url">https://thedriverscut.com/mgmt/</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://thedriverscut.com/mgmt/" target="_blank" rel="noopener">Open</a>
+          <button type="button" class="btn js-copy-hub" data-copy="https://thedriverscut.com/mgmt/">Copy link</button>
+        </div>
+      </article>
     </div>
     <section class="lane" id="now">
       <div class="lane-head">
@@ -1407,6 +1481,7 @@
     const filters = document.querySelectorAll('.filter');
     const cards = document.querySelectorAll('.card');
     const blocks = document.querySelectorAll('.dealer-block');
+    const hubRows = document.querySelectorAll('.hub-share-row');
     function apply(f) {
       filters.forEach(b => b.classList.toggle('active', b.dataset.filter === f));
       cards.forEach(c => {
@@ -1417,8 +1492,29 @@
         const visible = [...b.querySelectorAll('.card')].some(c => !c.classList.contains('hidden'));
         b.classList.toggle('hidden', !visible);
       });
+      hubRows.forEach(r => {
+        r.classList.toggle('hidden', f !== 'all' && r.dataset.store !== f);
+      });
     }
     filters.forEach(b => b.addEventListener('click', () => apply(b.dataset.filter)));
+    document.querySelectorAll('.js-copy-hub').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const url = btn.dataset.copy || '';
+        const label = btn.textContent;
+        const done = () => { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = label; }, 1400); };
+        const fallback = () => {
+          const ta = document.createElement('textarea');
+          ta.value = url;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); done(); } catch (e) {}
+          ta.remove();
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(url).then(done).catch(fallback);
+        } else fallback();
+      });
+    });
   </script>
 </body>
 </html>
