@@ -105,6 +105,7 @@
     a { color: #1a4d8c; }
     body.pitch .desk-only { display: none !important; }
     body.desk .pitch-only { display: none !important; }
+    img.heat { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); margin: 8px 0 4px; display: block; }
     @media (max-width: 820px) {
       .facts, .split { grid-template-columns: 1fr 1fr; }
       .version { position: static; display: block; margin-bottom: 8px; }
@@ -119,7 +120,7 @@
 <body class="desk">
   <div class="wrap">
     <header class="hero">
-      <div class="version">v1 · Oct 5, 2026 · sourced</div>
+      <div class="version">v2 · Oct 5, 2026 · TCI report in</div>
       <div class="kicker">Howell Motors · Summit, Mississippi</div>
       <h1>Two franchises.<br>One lot. One conversation.</h1>
       <p class="lede">GMC and Nissan sit at the same address, share a phone number, and share the used book. This desk is for the sit-down with Paige — and flips into a pitch without rewriting the facts.</p>
@@ -139,6 +140,7 @@
       <a href="#who">Who</a>
       <a href="#lot">Lot</a>
       <a href="#stack">Stack</a>
+      <a href="#tci">TCI report</a>
       <a href="#seo">SEO</a>
       <a href="#sem">SEM</a>
       <a href="#social">Social</a>
@@ -200,8 +202,8 @@
         </tr>
         <tr>
           <td>SEO</td>
-          <td>No third-party SEO firm visible. City pages exist (McComb, Brookhaven, Hammond). Copy is DI stock. No staff page. No original photography on used SRP (several “notfound” placeholders on GMC).</td>
-          <td><span class="tag t-gap">template SEO only</span></td>
+          <td><strong>Think Creative Intelligence</strong> (Ridgeland, 601-856-2000) — September 2026 “Local SEO” report for K.H. Nissan is listing syndication + GBP-style grids, not on-page content. Sites themselves remain Dealer Inspire stock (city pages, no staff page, broken used photos on GMC).</td>
+          <td><span class="tag t-ok">vendor identified</span></td>
         </tr>
         <tr>
           <td>SEM / paid</td>
@@ -215,7 +217,7 @@
         </tr>
         <tr>
           <td>Local listings</td>
-          <td>Yellow Pages still lists “Howell Buick Gmc” and “Howell Pontiac Buick GMC” at the same address. Brand history is real; the public NAP is stale.</td>
+          <td>TCI reports 61/71 connected. Yellow Pages still lists Buick/Pontiac at the same address. TCI campaign address is 1156 vs live 1158.</td>
           <td><span class="tag t-warn">NAP drift</span></td>
         </tr>
         <tr>
@@ -224,20 +226,48 @@
           <td><span class="tag t-src">blocked this pass</span></td>
         </tr>
       </table>
-      <p class="desk-only muted">Working take: they are paying a website vendor, not a marketing department. That is the opening.</p>
+      <p class="desk-only muted">Working take: they already pay a Ridgeland shop for listings. The hole is still pages, photos, reviews, and paid. Do not sell a second citation tool.</p>
+    </section>
+
+    <section class="block" id="tci">
+      <h2>Think Creative Intelligence — September 2026 local SEO pack</h2>
+      <p>Source: <em>K.H. Nissan Local SEO Report</em>, generated Oct 1, 2026, branded THINK CREATIVE INTELLIGENCE · 601-856-2000. Period is September. This is a directory/GBP pack (71 listings), not a website SEO audit.</p>
+      <table>
+        <tr><th>Metric</th><th>Report number</th></tr>
+        <tr><td>Impressions</td><td><strong>1,380</strong> (92% Search / 8% Maps · 85.5% mobile)</td></tr>
+        <tr><td>Interactions</td><td><strong>517</strong></td></tr>
+        <tr><td>Website clicks</td><td><strong>200</strong></td></tr>
+        <tr><td>Direction requests</td><td><strong>38</strong></td></tr>
+        <tr><td>Call clicks</td><td><strong>3</strong></td></tr>
+        <tr><td>Listings</td><td>71 total · 61 connected (85.9%) · 1 submitted · 1 disconnected · 8 unavailable</td></tr>
+        <tr><td>Reviews</td><td>Average <strong>4.4</strong> · <strong>0</strong> new reviews in September · “Metrics: Rating — No data found”</td></tr>
+        <tr><td>Address in charts</td><td>Report body uses <strong>1158 US-51</strong>; charts/heatmap campaign use <strong>1156 Highway 51 &amp; 98 / 1156 US-51 &amp; 98</strong>. Site and MMVC use 1158. <span class="tag t-warn">NAP inside their own report</span></td></tr>
+      </table>
+      <p>TCI’s written summary says when locals search “nissan dealer,” the store “consistently appears as one of the top results across a wide geographic area.” Their own heatmap (same PDF, p.8) does not say that:</p>
+      <img class="heat" src="tci-heatmap-oct-2026.png" alt="Local rank grids for gmc dealer, car dealer, and nissan dealer, Oct 1 2026" />
+      <ul>
+        <li><strong>gmc dealer</strong> — mostly green 1–3 around Summit/McComb. This is the win.</li>
+        <li><strong>nissan dealer</strong> — mostly yellow 5–8, some 9–15 south. Page-one-ish locally, not a wide “top result.”</li>
+        <li><strong>car dealer</strong> — almost all 20+. They do not exist on that query.</li>
+      </ul>
+      <p>Campaign name on the heatmap is <strong>Howell, INC.</strong> (both brands), even though the cover says K.H. Nissan. TCI is Ridgeland: 655 Lake Harbour Dr Ste 100, 601.856.2000, thinkcreativeintelligence.com. Founder/CEO Bryan Carter. Not a listed Nissan Digital Program or GM IMR partner on the public boards we checked.</p>
+      <div class="call">
+        <strong>How to use this in the room</strong>
+        Thank them for the report. Then: listings are 86% connected and GMC local pack is healthy. Nissan is mid-pack. Zero new reviews. Three calls from listings all month. The address in the campaign is wrong. That is the gap — not “you have no SEO vendor.”
+      </div>
     </section>
 
     <section class="block" id="seo">
-      <h2>SEO — what a shopper actually gets</h2>
+      <h2>SEO — site vs listings</h2>
       <ul>
-        <li><strong>Works:</strong> live inventory, model hubs, service schedule, finance apply, trade form, some city landers.</li>
-        <li><strong>Breaks trust:</strong> “vast inventory” vs 8 new GMCs; GMC homepage reviews talking about Nissan; hours mismatch vs Nissan.com; Buick/Pontiac ghosts in directories.</li>
-        <li><strong>Missing:</strong> people page, real lot photography, store-written specials (Nissan), priced used book on GMC, service SEO that is not generic DI.</li>
-        <li><strong>Market:</strong> McComb / Summit / Brookhaven, with Nissan copy also naming Hammond. Jackson DMA-adjacent, not a metro fight with Autonation-scale inventory.</li>
+        <li><strong>Listings (TCI):</strong> citation network + local rank grids. Real work, thin outcome on calls/reviews.</li>
+        <li><strong>Website (Dealer Inspire):</strong> live inventory, model hubs, service schedule, finance apply, trade form, some city landers. Copy is stock. “Vast inventory” vs 8 new GMCs.</li>
+        <li><strong>Breaks trust:</strong> hours mismatch vs Nissan.com; Buick/Pontiac ghosts in directories; 1156 vs 1158 in TCI charts; GMC homepage reviews talking about Nissan.</li>
+        <li><strong>Missing:</strong> people page, real lot photography, store-written Nissan specials, priced used book on GMC, review generation, service pages that are not generic DI.</li>
       </ul>
       <div class="call">
         <strong>SEO job that fits this store</strong>
-        Honest pages for the towns they already name, service + trucks, GBP hygiene, kill the Buick/Pontiac listings, one photo pass so used cars stop showing broken images. Not a 40-page luxury SEO program.
+        Keep or replace the listing tool — do not stack a second one. Fix NAP. Generate reviews. Honest town + service + truck pages. One photo pass. That is the Coop lane. Not a 40-page luxury SEO program.
       </div>
     </section>
 
@@ -301,7 +331,7 @@
         <tr><td>Nissan DI ads (2026 sheet)</td><td><strong>≥ $2,500</strong> media + 25% fee</td><td>Certified Nissan paid</td></tr>
         <tr><td>Howell lot reality</td><td>8 new GMC + 28 new Nissan + 18 used, Sat close at 1</td><td>One-family operation</td></tr>
       </table>
-      <p><strong>Recommendation (internal):</strong> do not quote BR/Jackson luxury. Do not quote $800 “we’ll keep an eye on it.” Two OEM sites, two co-op claim languages, photos, GBP, and a monthly sit-down is real work.</p>
+      <p><strong>Recommendation (internal):</strong> they already have a listings vendor. Do not quote BR/Jackson luxury. Do not quote $800 to “keep an eye on it.” Do not stack TCI + Coop citation software. Fee is pages, photos, reviews, GBP truth, monthly with Paige — and optionally taking over listings if they want one throat to choke.</p>
       <div class="split">
         <div class="call">
           <strong>Fee — the pair as one client</strong>
@@ -329,16 +359,16 @@
 
     <section class="block" id="ask">
       <h2>Ask Paige in the room</h2>
-      <div class="ask">1. Who invoices the websites today, and what is the monthly DI / Cars Commerce bill?</div>
-      <div class="ask">2. Open GM IMR (or LAM) — what is the unspent balance, and is anyone enrolled as DAP?</div>
-      <div class="ask">3. Open Nissan Digital Program / RMP — same questions. Any DI advertising contract?</div>
-      <div class="ask">4. Google Ads + Meta logins: who has admin? Any spend last 90 days?</div>
-      <div class="ask">5. Who owns the Facebook page? Is there an Instagram they simply never linked?</div>
-      <div class="ask desk-only">6. Confirm fee: $2,500/mo pair + $1,500 setup, paid extra only on certified rails.</div>
+      <div class="ask">1. What does Think Creative Intelligence invoice monthly, and is it Nissan-only or Howell, Inc.?</div>
+      <div class="ask">2. Who invoices Dealer Inspire / Cars Commerce, and what is that bill?</div>
+      <div class="ask">3. Open GM IMR (or LAM) — unspent balance, any DAP enrolled?</div>
+      <div class="ask">4. Open Nissan Digital Program — any DI advertising contract?</div>
+      <div class="ask">5. Google Ads + Meta logins: who has admin? Any spend last 90 days?</div>
+      <div class="ask desk-only">6. Confirm fee: $2,500/mo pair + $1,500 setup, paid extra only on certified rails — TCI listings either stay or get absorbed, not doubled.</div>
     </section>
 
     <footer>
-      Sourced Oct 5, 2026 from live howellgmc.com / howellnissan.com, MADA 60-year feature (May 31, 2024), MMVC dealer list, Nissan Digital Program + Dealer Inspire 2026 advertising PDF, GM Dealer Digital Solution, C-4 IMR overview PDF, Capital One/GM IMR news (Oct 21, 2025), Meta Ad Library, Google Ads Transparency (no usable advertiser hit), Yellow Pages McComb. Inventory counts are SRP titles, not DMS. Co-op percentages are program-class, not this dealer’s portal. The Cooperative Agency is not a listed GM IMR or Nissan Digital Program partner on the public boards checked.
+      Sourced Oct 5, 2026 from live howellgmc.com / howellnissan.com, MADA 60-year feature (May 31, 2024), MMVC dealer list, Nissan Digital Program + Dealer Inspire 2026 advertising PDF, GM Dealer Digital Solution, C-4 IMR overview PDF, Capital One/GM IMR news (Oct 21, 2025), Meta Ad Library, Google Ads Transparency (no usable advertiser hit), Yellow Pages McComb, and the K.H. Nissan Local SEO Report generated Oct 1, 2026 by Think Creative Intelligence (Sept performance). Inventory counts are SRP titles, not DMS. Co-op percentages are program-class, not this dealer’s portal. The Cooperative Agency is not a listed GM IMR or Nissan Digital Program partner on the public boards checked. TCI heatmap ranks are as printed on p.8 of that PDF.
     </footer>
   </div>
   <script>
