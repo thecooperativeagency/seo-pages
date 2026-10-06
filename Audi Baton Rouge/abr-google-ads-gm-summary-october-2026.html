@@ -45,7 +45,7 @@
     .sub { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; max-width: 540px; }
     .stats {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-      margin: 14px 0;
+      margin: 0 0 10px;
     }
     .stat {
       background: var(--paper); border: 1px solid var(--line); border-radius: 4px;
@@ -64,7 +64,7 @@
     .months .s { font-size: 12px; color: var(--muted); }
     section {
       background: var(--paper); border: 1px solid var(--line); border-radius: 4px;
-      padding: 16px 18px 14px; margin-bottom: 12px;
+      padding: 16px 18px 14px; margin-top: 12px;
     }
     h2 {
       margin: 0 0 10px; font-size: 13px; letter-spacing: .08em;
@@ -89,47 +89,11 @@
 <body>
   <div class="page">
     <header>
-      <div class="ver">Oct 6, 2026<br />GM notes</div>
+      <div class="ver">Oct 6, 2026<br />updated p.m.</div>
       <div class="eyebrow">Audi Baton Rouge</div>
       <h1>Google Ads summary</h1>
-      <p class="sub">What we set up, why, and how the ads already show in Google AI results. Numbers are Aug 7–Oct 6, 2026.</p>
+      <p class="sub">What we set up, why it shows in Google AI results, and what is actually limiting traffic. Numbers sit under that.</p>
     </header>
-
-    <div class="stats">
-      <div class="stat">
-        <div class="k">Google Ads clicks into the website</div>
-        <div class="v">3,323</div>
-        <div class="s">Last 61 days · whole account</div>
-      </div>
-      <div class="stat">
-        <div class="k">Average clicks per month</div>
-        <div class="v">1,656</div>
-        <div class="s">61-day pace · September was 1,654</div>
-      </div>
-      <div class="stat">
-        <div class="k">Website sessions from those ads</div>
-        <div class="v">2,661</div>
-        <div class="s">1,810 engaged · people who loaded the site</div>
-      </div>
-    </div>
-
-    <div class="months">
-      <div>
-        <div class="k">August 7–31</div>
-        <div class="v">964 clicks</div>
-        <div class="s">Partial month</div>
-      </div>
-      <div>
-        <div class="k">September</div>
-        <div class="v">1,654 clicks</div>
-        <div class="s">Full month</div>
-      </div>
-      <div>
-        <div class="k">October 1–6</div>
-        <div class="v">705 clicks</div>
-        <div class="s">Six days · Vehicle ads + Display filling</div>
-      </div>
-    </div>
 
     <section>
       <h2>What we did</h2>
@@ -141,6 +105,7 @@
         <li>Turned on Vehicle ads so cars on the lot can show as Google vehicle listings.</li>
         <li>Built Pre-Owned Q5 Search + Display to the used Q5 page.</li>
         <li>Turned on AI matching on used Q5 Search, with the landing page locked.</li>
+        <li>Today: same AI matching on <strong>new Q5, Q7, and Q8</strong> Search. Google can match extra questions; the click still goes to that model’s shop page. Offer campaigns stay off this, so dollar claims cannot get rewritten onto the wrong page.</li>
       </ul>
     </section>
 
@@ -150,14 +115,62 @@
         <li>Spend on people looking for this store, these cars, and these offers — not random research.</li>
         <li>What Google shows has to match what the website says.</li>
         <li>Vehicle ads put actual lot inventory in Google results (including AI surfaces).</li>
-        <li>Used Q5 is metal we need to move.</li>
+        <li>Used Q5, new Q5, Q7, and Q8 are metal we need to move.</li>
       </ul>
     </section>
 
     <section>
       <h2>AI results</h2>
       <p><strong>They were already showing.</strong> There is no separate “AI ads” campaign to buy. Google AI Overviews and AI Mode pull from Search ads and Vehicle ads. Audi Baton Rouge already had both running, so those ads were already eligible.</p>
-      <p><strong>Why more of them will show now.</strong> We turned on AI matching on used Q5 Search so those ads can appear on longer, conversational questions people type into AI search. Google still sends the click to the used Q5 page — we did not let it pick a different URL. Vehicle ads keep feeding inventory cards. We did not turn this on for offer campaigns, because Google would start writing dollar claims and sending people to the wrong page.</p>
+      <p><strong>Why more of them will show now.</strong> AI matching is on for used Q5 and for new Q5 / Q7 / Q8 Search. Those ads can appear on longer, conversational questions people type into AI search. Google still sends the click to that model’s shop page — we did not let it pick a different URL. Vehicle ads keep feeding inventory cards. Offer campaigns stay off this setting.</p>
+    </section>
+
+    <section>
+      <h2>What actually limits traffic</h2>
+      <p>A daily budget is a ceiling, not a promise. If we say “spend up to $50 a day,” two different things can still hold the campaign down:</p>
+      <ul>
+        <li><strong>Budget cap</strong> — enough people are searching, but we told Google to stop at $X. We miss some of those auctions on purpose.</li>
+        <li><strong>Volume cap</strong> — there are not enough searches for that model in this market to fill the budget. The campaign can underspend even at $50/day. That is demand, not a broken campaign. Raising the daily does not create shoppers who are not searching.</li>
+      </ul>
+      <p>AI matching can catch extra phrasings. It cannot invent search volume.</p>
+    </section>
+
+    <section>
+      <h2>Results · Aug 7–Oct 6, 2026</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="k">Google Ads clicks into the website</div>
+          <div class="v">3,323</div>
+          <div class="s">Last 61 days · whole account</div>
+        </div>
+        <div class="stat">
+          <div class="k">Average clicks per month</div>
+          <div class="v">1,656</div>
+          <div class="s">61-day pace · September was 1,654</div>
+        </div>
+        <div class="stat">
+          <div class="k">Website sessions from those ads</div>
+          <div class="v">2,661</div>
+          <div class="s">1,810 engaged · people who loaded the site</div>
+        </div>
+      </div>
+      <div class="months">
+        <div>
+          <div class="k">August 7–31</div>
+          <div class="v">964 clicks</div>
+          <div class="s">Partial month</div>
+        </div>
+        <div>
+          <div class="k">September</div>
+          <div class="v">1,654 clicks</div>
+          <div class="s">Full month</div>
+        </div>
+        <div>
+          <div class="k">October 1–6</div>
+          <div class="v">705 clicks</div>
+          <div class="s">Six days · Vehicle ads + Display filling</div>
+        </div>
+      </div>
     </section>
 
     <p class="note">Clicks are from Google Ads (Search + Vehicle ads + Used Q5 Display). Sessions are from Google Analytics on audibatonrouge.com for those named campaigns. Brand and Service often generate a phone call from the ad itself, so website sessions sit under clicks. Window: Aug 7–Oct 6, 2026. Prepared by The Cooperative Agency.</p>
