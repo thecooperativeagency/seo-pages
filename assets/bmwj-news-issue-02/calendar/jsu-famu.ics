@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Ultimate Driver//BMW of Jackson//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:jsu-famu@bmwj.coop
+DTSTAMP:20261006T220000Z
+DTSTART;TZID=America/Chicago:20261017T140000
+DTEND;TZID=America/Chicago:20261017T170000
+SUMMARY:Jackson State vs Florida A&M (Homecoming)
+LOCATION:Mississippi Veterans Memorial Stadium, Jackson
+DESCRIPTION:Homecoming · 2:00 CT
+END:VEVENT
+END:VCALENDAR
