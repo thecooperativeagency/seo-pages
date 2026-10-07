@@ -84,12 +84,26 @@ SITE_HOOK = """
   var pub = meta.getAttribute('data-publication') || 'magazine';
   var issue = meta.getAttribute('data-issue') || '';
   var store = meta.getAttribute('data-store') || '';
+  var pageType = meta.getAttribute('data-page-type') || 'issue';
+  var inbound = {};
+  try {
+    var sp = new URLSearchParams(location.search || '');
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) {
+      var v = sp.get(k);
+      if (v) inbound[k] = v;
+    });
+  } catch (e) {}
   function fire(name, params) {
     params = params || {};
     params.publication = pub;
     params.issue = issue;
     params.store = store;
+    params.page_type = pageType;
     params.page_path = location.pathname;
+    try {
+      if (document.referrer) params.referrer_host = new URL(document.referrer).hostname;
+    } catch (e) {}
+    Object.keys(inbound).forEach(function (k) { params[k] = inbound[k]; });
     try {
       if (typeof gtag === 'function') {
         gtag('event', name, params);
@@ -99,32 +113,46 @@ SITE_HOOK = """
       window.dataLayer.push(Object.assign({ event: name }, params));
     } catch (e) {}
   }
-  fire('magazine_issue_view', { engagement_type: 'view' });
-  if ('IntersectionObserver' in window) {
-    var seen = {};
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var id = entry.target.id || entry.target.getAttribute('data-section') || '';
-        if (!id || seen[id]) return;
-        seen[id] = 1;
-        fire('magazine_section_view', { section_id: id });
+  function bind() {
+    fire(pageType === 'cover' ? 'magazine_cover_view' : 'magazine_issue_view', { engagement_type: 'view' });
+    if ('IntersectionObserver' in window) {
+      var seen = {};
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.id || entry.target.getAttribute('data-section') || '';
+          if (!id || seen[id]) return;
+          seen[id] = 1;
+          fire('magazine_section_view', { section_id: id });
+        });
+      }, { threshold: 0.35 });
+      document.querySelectorAll('section[id], article[id], [data-section]').forEach(function (el) {
+        io.observe(el);
       });
-    }, { threshold: 0.35 });
-    document.querySelectorAll('section[id], article[id], [data-section]').forEach(function (el) {
-      io.observe(el);
-    });
+    }
+    document.addEventListener('click', function (ev) {
+      var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (!/^https?:/i.test(href)) return;
+      fire('magazine_cta_click', {
+        link_url: href.split('#')[0],
+        link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80)
+      });
+    }, true);
   }
-  document.addEventListener('click', function (ev) {
-    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
-    if (!a) return;
-    var href = a.getAttribute('href') || '';
-    if (!/^https?:/i.test(href)) return;
-    fire('magazine_cta_click', {
-      link_url: href.split('#')[0],
-      link_text: (a.textContent || '').replace(/\\s+/g, ' ').trim().slice(0, 80)
-    });
-  }, true);
+  if (typeof gtag === 'function') {
+    bind();
+    return;
+  }
+  var n = 0;
+  var t = setInterval(function () {
+    n += 1;
+    if (typeof gtag === 'function' || n >= 16) {
+      clearInterval(t);
+      bind();
+    }
+  }, 500);
 })();
 </script>
 """.strip()
@@ -215,6 +243,7 @@ def bake_html(
     issue: str = "",
     store: str = "",
     open_pixel_url: str = "",
+    page_type: str = "issue",
 ) -> tuple[str, int]:
     content_map = build_content_map(html)
     changed = 0
@@ -236,7 +265,8 @@ def bake_html(
     if mode == "site":
         meta = (
             f'<meta name="coop-magazine" data-publication="{publication or source}" '
-            f'data-issue="{issue or campaign}" data-store="{store}" />'
+            f'data-issue="{issue or campaign}" data-store="{store}" '
+            f'data-page-type="{page_type or "issue"}" />'
         )
         if 'name="coop-magazine"' not in out:
             m_head = re.search(r"</head>", out, re.I)
@@ -377,6 +407,7 @@ def process_one(cfg: dict) -> None:
         issue=cfg.get("issue", ""),
         store=cfg.get("store", ""),
         open_pixel_url=cfg.get("open_pixel_url", ""),
+        page_type=cfg.get("page_type", "issue"),
     )
     if out != html:
         path.write_text(out, encoding="utf-8")
@@ -406,6 +437,7 @@ def main(argv: list[str]) -> int:
     p_site.add_argument("--publication", default="")
     p_site.add_argument("--issue", default="")
     p_site.add_argument("--store", default="")
+    p_site.add_argument("--page-type", default="issue")
 
     sub.add_parser("batch-sept-2026")
 
@@ -427,6 +459,7 @@ def main(argv: list[str]) -> int:
         "issue": getattr(args, "issue", ""),
         "store": getattr(args, "store", ""),
         "open_pixel_url": getattr(args, "open_pixel_url", ""),
+        "page_type": getattr(args, "page_type", "issue"),
     }
     process_one(cfg)
     return 0
