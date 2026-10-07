@@ -5,7 +5,7 @@ Email (CRM paste):
   - UTMs on store + magazine CTAs only
   - utm_medium MUST be exactly "email" (GA4 Default Channel Group)
   - NEVER inject gtag.js into email HTML
-  - Optional 1x1 open pixel if --open-pixel-url is set
+  - Always inject Coop 1x1 open pixel (pixel worker). Override with --open-pixel-url.
 
 Site magazine (Motive paste):
   - UTMs on store CTAs: source=<pub>, medium=site, campaign=<issue>
@@ -24,7 +24,43 @@ import argparse
 import re
 import sys
 from pathlib import Path
-from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit, unquote
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit, unquote, quote
+
+PIXEL_BASE = "https://coop-email-open.thecoopbrla.workers.dev/o.gif"
+
+
+def pixel_img(*, campaign: str, store: str, publication: str, issue: str, kind: str) -> str:
+    q = urlencode(
+        {k: v for k, v in {
+            "c": campaign,
+            "s": store,
+            "pub": publication,
+            "i": issue,
+            "k": kind,
+        }.items() if v}
+    )
+    src = f"{PIXEL_BASE}?{q}"
+    return (
+        f'<img data-coop="open-pixel" src="{src}" width="1" height="1" alt="" '
+        f'style="display:block;width:1px;height:1px;border:0;" />'
+    )
+
+
+def inject_pixel(html: str, pixel: str) -> str:
+    if 'data-coop="open-pixel"' in html:
+        html = re.sub(
+            r'<img[^>]*data-coop="open-pixel"[^>]*>',
+            pixel,
+            html,
+            count=1,
+            flags=re.I,
+        )
+        return html
+    m_body = re.search(r"</body>", html, re.I)
+    if m_body:
+        i = m_body.start()
+        return html[:i] + pixel + "\n" + html[i:]
+    return html + "\n" + pixel
 
 ROOT_EMAIL = Path(__file__).resolve().parents[1]
 ROOT_SEO = Path("/Users/lucfaucheux/.openclaw/workspace/seo-pages")
@@ -283,19 +319,21 @@ def bake_html(
             else:
                 out += "\n" + SITE_HOOK
 
-    if mode == "email" and open_pixel_url:
-        # Ensure UTMs not required on pixel; append cache-bust friendly src once
+    kind = "email" if mode == "email" else "mag"
+    if open_pixel_url:
         pixel = (
             f'<img data-coop="open-pixel" src="{open_pixel_url}" width="1" height="1" alt="" '
             f'style="display:block;width:1px;height:1px;border:0;" />'
         )
-        if 'data-coop="open-pixel"' not in out and open_pixel_url not in out:
-            m_body = re.search(r"</body>", out, re.I)
-            if m_body:
-                i = m_body.start()
-                out = out[:i] + pixel + "\n" + out[i:]
-            else:
-                out += "\n" + pixel
+    else:
+        pixel = pixel_img(
+            campaign=campaign,
+            store=store,
+            publication=publication or source,
+            issue=issue or campaign,
+            kind=kind,
+        )
+    out = inject_pixel(out, pixel)
 
     return out, changed
 
@@ -427,6 +465,9 @@ def main(argv: list[str]) -> int:
     p_email.add_argument("--medium", default="email")
     p_email.add_argument("--store-hosts", default="")
     p_email.add_argument("--open-pixel-url", default="")
+    p_email.add_argument("--store", default="")
+    p_email.add_argument("--publication", default="")
+    p_email.add_argument("--issue", default="")
 
     p_site = sub.add_parser("site")
     p_site.add_argument("--file", required=True)

@@ -168,11 +168,12 @@
       .story { left: 20px; right: 20px; bottom: 20px; }
     }
   </style>
+  <meta name="coop-magazine" data-publication="ultimate-driver" data-issue="cover" data-store="bmwj" data-page-type="cover" />
 </head>
 <body>
   <article class="sheet">
 
-    <a class="hero" href="https://bmwofjackson.net/ultimate-driver-issue-02">
+    <a class="hero" href="https://bmwofjackson.net/ultimate-driver-issue-02?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-cover&utm_content=read-the-issue">
       <div class="plate">
         <h1>The Ultimate<br/>Driver</h1>
         <p class="meta">BMW of Jackson &nbsp;·&nbsp; October 2026 &nbsp;·&nbsp; Issue 02</p>
@@ -189,7 +190,7 @@
     </a>
     <p class="cover-line">Issue 02 · October 2026</p>
 
-    <a class="hero" href="https://bmwofjackson.net/ultimate-driver-issue-01">
+    <a class="hero" href="https://bmwofjackson.net/ultimate-driver-issue-01?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-cover&utm_content=read-the-issue">
       <span class="plate">
         <h1>The Ultimate Driver</h1>
         <p class="meta">BMW of Jackson &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Issue 01</p>
@@ -225,7 +226,7 @@
           <li>Snarky Puppy at Duling</li>
           <li>X5, X3, X7 · 0.9%</li>
         </ul>
-        <a class="cta" href="https://bmwofjackson.net/ultimate-driver-issue-02">Read the issue</a>
+        <a class="cta" href="https://bmwofjackson.net/ultimate-driver-issue-02?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-cover&utm_content=read-the-issue">Read the issue</a>
       </article>
       <article class="issue-row">
         <p class="num">Issue 01</p>
@@ -240,14 +241,94 @@
           <li>X5, X3, X7</li>
           <li>Oil, the plan, brakes</li>
         </ul>
-        <a class="cta" href="https://bmwofjackson.net/ultimate-driver-issue-01">Read the issue</a>
+        <a class="cta" href="https://bmwofjackson.net/ultimate-driver-issue-01?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-cover&utm_content=read-the-issue">Read the issue</a>
       </article>
     </section>
 
     <footer class="end">
       The Ultimate Driver<br />
-      <a href="https://bmwofjackson.net">BMW of Jackson</a> · 1685 High St
+      <a href="https://bmwofjackson.net?utm_source=ultimate-driver&utm_medium=site&utm_campaign=ultimate-driver-cover&utm_content=home">BMW of Jackson</a> · 1685 High St
     </footer>
   </article>
+<!-- Coop magazine tracking: uses Motive/site gtag if present; does not load GA -->
+<script>
+(function () {
+  var meta = document.querySelector('meta[name="coop-magazine"]');
+  if (!meta) return;
+  var pub = meta.getAttribute('data-publication') || 'magazine';
+  var issue = meta.getAttribute('data-issue') || '';
+  var store = meta.getAttribute('data-store') || '';
+  var pageType = meta.getAttribute('data-page-type') || 'issue';
+  var inbound = {};
+  try {
+    var sp = new URLSearchParams(location.search || '');
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) {
+      var v = sp.get(k);
+      if (v) inbound[k] = v;
+    });
+  } catch (e) {}
+  function fire(name, params) {
+    params = params || {};
+    params.publication = pub;
+    params.issue = issue;
+    params.store = store;
+    params.page_type = pageType;
+    params.page_path = location.pathname;
+    try {
+      if (document.referrer) params.referrer_host = new URL(document.referrer).hostname;
+    } catch (e) {}
+    Object.keys(inbound).forEach(function (k) { params[k] = inbound[k]; });
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', name, params);
+        return;
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: name }, params));
+    } catch (e) {}
+  }
+  function bind() {
+    fire(pageType === 'cover' ? 'magazine_cover_view' : 'magazine_issue_view', { engagement_type: 'view' });
+    if ('IntersectionObserver' in window) {
+      var seen = {};
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.id || entry.target.getAttribute('data-section') || '';
+          if (!id || seen[id]) return;
+          seen[id] = 1;
+          fire('magazine_section_view', { section_id: id });
+        });
+      }, { threshold: 0.35 });
+      document.querySelectorAll('section[id], article[id], [data-section]').forEach(function (el) {
+        io.observe(el);
+      });
+    }
+    document.addEventListener('click', function (ev) {
+      var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (!/^https?:/i.test(href)) return;
+      fire('magazine_cta_click', {
+        link_url: href.split('#')[0],
+        link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80)
+      });
+    }, true);
+  }
+  if (typeof gtag === 'function') {
+    bind();
+    return;
+  }
+  var n = 0;
+  var t = setInterval(function () {
+    n += 1;
+    if (typeof gtag === 'function' || n >= 16) {
+      clearInterval(t);
+      bind();
+    }
+  }, 500);
+})();
+</script>
+<img data-coop="open-pixel" src="https://coop-email-open.thecoopbrla.workers.dev/o.gif?c=ultimate-driver-cover&s=bmwj&pub=ultimate-driver&i=cover&k=mag" width="1" height="1" alt="" style="display:block;width:1px;height:1px;border:0;" />
 </body>
 </html>
