@@ -236,6 +236,14 @@
       font-weight: 700;
       margin: 8px 0 12px;
     }
+    .sheet .fine {
+      font-family: "AudiType", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.45;
+      letter-spacing: .02em;
+      color: var(--muted) !important;
+      margin: -8px 0 16px;
+    }
     .sheet p { margin: 0 0 16px; font-size: 18px; line-height: 1.72; color: #141414 !important; }
     .sheet p.open { margin: 40px 0 16px; }
     .sheet .shot { margin: 0 0 10px; }
@@ -275,6 +283,8 @@
       padding-bottom: 2px;
     }
     .sheet .lot-car { margin-top: 40px; }
+    .sheet .lot-car .shot img { aspect-ratio: auto; height: auto; object-fit: contain; }
+    .sheet .offers.one { grid-template-columns: 1fr; }
     .sheet .offers {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -382,7 +392,7 @@
 </head>
 
 <body>
-  <!-- verify: oct2026-i02-abr-v2-toc-gap -->
+  <!-- verify: oct2026-i02-abr-v3-lot-board -->
   <article class="sheet">
     <link rel="stylesheet" href="https://thecooperativeagency.github.io/seo-pages/style-specs/auditype.css" />
     <div class="hero">
@@ -444,31 +454,155 @@
       <p class="kicker">On the Lot</p>
       <h2>Over $12,000 off the Q8</h2>
       <p>Over $12,000 off select new Q8s this month.</p>
-      <div class="offers">
+      <div class="offers one">
         <div class="offer">
-          <p class="lbl">Q8 purchase</p>
+          <p class="lbl">Purchase</p>
           <p class="amt">Over $12,000 off</p>
         </div>
-        <div class="offer">
-          <p class="lbl">Q3 purchase</p>
-          <p class="amt">$2,500 off</p>
-          <p class="note">Lease $598/mo · $3,000 due</p>
-        </div>
       </div>
-      <div class="offers">
-        <div class="offer">
-          <p class="lbl">Q5 purchase</p>
-          <p class="amt">Up to $5,100 off</p>
-          <p class="note">Lease $699/mo · $3,500 due</p>
+      <p>
+        <a class="cta" href="https://audibatonrouge.com/cars/new-q8s?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-q8">Shop Q8</a>
+        &nbsp;&nbsp;
+        <a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-specials">See the offers</a>
+      </p>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-02/abr-q3-lot.jpg" alt="Audi Q3 at Audi Baton Rouge" />
         </div>
-        <div class="offer">
-          <p class="lbl">Q7 purchase</p>
-          <p class="amt">Over $11,000 off</p>
-          <p class="note">Lease $795/mo · $3,000 due</p>
+        <p class="cap">Q3 · all-new · Audi Baton Rouge</p>
+        <h3>The Q3</h3>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">$2,500 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$598/mo</p>
+            <p class="note">$3,000 due · 36 mo / 10k</p>
+          </div>
         </div>
+        <p><a class="cta" href="https://audibatonrouge.com/all-new-audi-q3?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-q3">Shop Q3</a></p>
       </div>
-      <p><a class="cta" href="https://audibatonrouge.com/cars/new-q8s?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-q8">Shop Q8</a>&nbsp;&nbsp;<a class="cta" href="https://audibatonrouge.com/audi-baton-rouge-special-offers?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-specials">See the offers</a></p>
-      <p class="credit">Shop Q8: audibatonrouge.com/cars/new-q8s · See the offers: audibatonrouge.com/audi-baton-rouge-special-offers</p>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-02/abr-q5-lot.jpg" alt="Audi Q5 at Audi Baton Rouge" />
+        </div>
+        <p class="cap">Q5 · Audi Baton Rouge</p>
+        <h3>The Q5</h3>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Up to $5,100 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$699/mo</p>
+            <p class="note">$3,500 due · 36 mo / 10k</p>
+          </div>
+        </div>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/new-q5s?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-q5">Shop Q5</a></p>
+      </div>
+
+      <div class="lot-car">
+        <div class="shot">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-02/abr-q7-lot.jpg" alt="Audi Q7 at Audi Baton Rouge" />
+        </div>
+        <p class="cap">Q7 · Audi Baton Rouge</p>
+        <h3>The Q7</h3>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Over $11,000 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$795/mo</p>
+            <p class="note">$3,000 due · 36 mo / 10k</p>
+          </div>
+        </div>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/new-q7s?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-q7">Shop Q7</a></p>
+      </div>
+
+      <div class="lot-car">
+        <p class="cap">A3 · Audi Baton Rouge</p>
+        <h3>The A3</h3>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Up to $5,500 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$499/mo</p>
+            <p class="note">$2,500 due · 36 mo / 10k</p>
+          </div>
+        </div>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/a3?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-a3">Shop A3</a></p>
+      </div>
+
+      <div class="lot-car">
+        <p class="cap">S3 · Audi Baton Rouge</p>
+        <h3>The S3</h3>
+        <div class="offers one">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Up to $8,000 off</p>
+          </div>
+        </div>
+        <p><a class="cta" href="https://audibatonrouge.com/inventory?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-s3">Shop S3</a></p>
+      </div>
+
+      <div class="lot-car">
+        <p class="cap">A5 · Audi Baton Rouge</p>
+        <h3>The A5</h3>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Up to $5,500 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$599/mo</p>
+            <p class="note">$4,000 due · 36 mo / 10k</p>
+          </div>
+        </div>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/a5?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-a5">Shop A5</a></p>
+      </div>
+
+      <div class="lot-car">
+        <p class="cap">S5 · Audi Baton Rouge</p>
+        <h3>The S5</h3>
+        <div class="offers one">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Up to $5,500 off</p>
+          </div>
+        </div>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/s5?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-s5">Shop S5</a></p>
+      </div>
+
+      <div class="lot-car">
+        <p class="cap">A6 · Audi Baton Rouge</p>
+        <h3>The A6</h3>
+        <div class="offers">
+          <div class="offer">
+            <p class="lbl">Purchase</p>
+            <p class="amt">Up to $7,000 off</p>
+          </div>
+          <div class="offer">
+            <p class="lbl">Lease</p>
+            <p class="amt">$897/mo</p>
+            <p class="note">$4,000 due · 36 mo / 10k</p>
+          </div>
+        </div>
+        <p><a class="cta" href="https://audibatonrouge.com/cars/a6?utm_source=sline-news&utm_medium=site&utm_campaign=sline-news-02&utm_content=shop-a6">Shop A6</a></p>
+      </div>
+
+      <p class="fine">Plus tax, title, license. With approved credit. Some exclusions apply. See dealer for details. Example leases: 36 months, 10,000 miles, on select stock.</p>
+      <p class="credit">Shop specials: audibatonrouge.com/audi-baton-rouge-special-offers</p>
     </section>
 
     <section class="sec" id="saturday">
@@ -547,7 +681,7 @@
 
     <section class="sec" id="town">
       <div class="cover-shot">
-        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-02/abr-town-lone-bellow-i02.jpg" alt="The Lone Bellow" />
+        <img src="https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-02/abr-town-alfredo-i02.jpg" alt="Alfredo Rodríguez, River City Jazz Masters at Manship Theatre" style="object-position: 50% 40%;" />
         <div class="lockup"><p class="kicker">On the Town</p><h2>Alfredo Rodríguez at the Manship, Wednesday the 7th</h2></div>
       </div>
       <p class="cap">Manship Theatre · Wednesday, October 7, 7:30 p.m.</p>
