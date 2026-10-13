@@ -8,8 +8,8 @@ UID:ole-miss-missouri@bmwj.coop
 DTSTAMP:20261006T220000Z
 DTSTART;TZID=America/Chicago:20261017T143000
 DTEND;TZID=America/Chicago:20261017T173000
-SUMMARY:Ole Miss vs Missouri
+SUMMARY:Ole Miss vs Missouri (Homecoming)
 LOCATION:Vaught-Hemingway Stadium, Oxford
-DESCRIPTION:Afternoon window · 2:30 CT
+DESCRIPTION:2:30 CT · SECN
 END:VEVENT
 END:VCALENDAR
