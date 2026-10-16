@@ -94,14 +94,23 @@
 .bmw-ix3-page .stat span { display:block; color:var(--muted); font-size:13px; line-height:1.45; letter-spacing:.04em; text-transform:uppercase; font-weight:700; }
 .bmw-ix3-page .fineprint { margin:0; color:#9aa6b5; font-size:12px; line-height:1.65; }
 .bmw-ix3-page .span-2 { grid-column:1 / -1; }
-.bmw-ix3-page table.cmp { width:100%; border-collapse:collapse; font-size:15px; }
-.bmw-ix3-page table.cmp th, .bmw-ix3-page table.cmp td { padding:12px 14px; text-align:left; border-bottom:1px solid var(--border); vertical-align:top; }
+.bmw-ix3-page table.cmp { width:100%; border-collapse:collapse; font-size:15px; table-layout:fixed; }
+.bmw-ix3-page table.cmp th, .bmw-ix3-page table.cmp td { padding:12px 14px; text-align:left; border-bottom:1px solid var(--border); vertical-align:top; color:#e8eef6 !important; -webkit-text-fill-color:#e8eef6 !important; word-break:break-word; }
 .bmw-ix3-page table.cmp th { font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
-.bmw-ix3-page table.cmp th.win { background:#1c69d4; color:#fff; }
-.bmw-ix3-page table.cmp td.win { background:rgba(28,105,212,.12); color:#fff; font-weight:700; }
-.bmw-ix3-page .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.bmw-ix3-page table.cmp th.win { background:#1c69d4; color:#fff !important; -webkit-text-fill-color:#fff !important; }
+.bmw-ix3-page table.cmp td.win { background:rgba(28,105,212,.12); color:#fff !important; -webkit-text-fill-color:#fff !important; font-weight:700; }
+.bmw-ix3-page table.cmp td.them { color:#e8eef6 !important; -webkit-text-fill-color:#e8eef6 !important; font-weight:600; }
+.bmw-ix3-page .table-wrap { width:100%; overflow:visible; }
+.bmw-ix3-page .vs-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:0 0 32px; }
+.bmw-ix3-page .vs-card { background:var(--card); border:1px solid var(--border); padding:22px 24px; }
+.bmw-ix3-page .vs-card .vs-kicker { margin:0 0 14px; color:var(--muted); font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; }
+.bmw-ix3-page .vs-pair { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.bmw-ix3-page .vs-side strong { display:block; margin:0 0 6px; font-size:clamp(1.55rem,2.8vw,2.35rem); line-height:.95; letter-spacing:-.04em; font-weight:700; color:#fff !important; -webkit-text-fill-color:#fff !important; }
+.bmw-ix3-page .vs-side span { display:block; color:var(--muted); font-size:12px; line-height:1.4; letter-spacing:.04em; text-transform:uppercase; font-weight:700; }
+.bmw-ix3-page .vs-side.is-bmw { padding-right:12px; border-right:1px solid var(--border); }
+.bmw-ix3-page .vs-side.is-them strong { color:#c5ced9 !important; -webkit-text-fill-color:#c5ced9 !important; }
 @media (max-width:980px) {
-  .bmw-ix3-page .grid-2, .bmw-ix3-page .stat-grid { grid-template-columns:1fr; }
+  .bmw-ix3-page .grid-2, .bmw-ix3-page .stat-grid, .bmw-ix3-page .vs-grid { grid-template-columns:1fr; }
   .bmw-ix3-page .span-2 { grid-column:auto; }
   .bmw-ix3-page .offer-card.is-hero.is-split { grid-template-columns:1fr; }
   .bmw-ix3-page .offer-card.is-hero.is-split .card-media, .bmw-ix3-page .offer-card.is-hero.is-split .card-media img { aspect-ratio:1 / 1; min-height:0; height:auto; }
@@ -130,42 +139,57 @@
  <p class="body-lg">Baton Rouge shoppers cross-shop these two. The iX3 50 xDrive starts at $61,500. Tesla Model Y L Premium starts at $61,990. The gap is not the price. It is range, charge speed, and who stands behind the car.</p>
 </div></section>
 <section class="section elevated"><div class="wrap">
- <p class="eyebrow">Head to head</p>
+ <p class="eyebrow">This vs that</p>
  <h2 class="h2" style="max-width:920px;margin-bottom:22px;">The numbers that matter.</h2>
+ <div class="vs-grid">
+  <article class="vs-card">
+   <p class="vs-kicker">EPA est. range</p>
+   <div class="vs-pair">
+    <div class="vs-side is-bmw"><strong>434 mi</strong><span>BMW iX3 50 xDrive</span></div>
+    <div class="vs-side is-them"><strong>332 mi</strong><span>Tesla Model Y L Premium</span></div>
+   </div>
+  </article>
+  <article class="vs-card">
+   <p class="vs-kicker">DC charge added</p>
+   <div class="vs-pair">
+    <div class="vs-side is-bmw"><strong>185 mi / 10 min</strong><span>Up to 400 kW · 800V</span></div>
+    <div class="vs-side is-them"><strong>172 mi / 15 min</strong><span>Up to 250 kW Supercharger</span></div>
+   </div>
+  </article>
+ </div>
  <div class="table-wrap">
  <table class="cmp">
   <thead>
    <tr>
     <th>Spec</th>
     <th class="win">2027 BMW iX3 50 xDrive</th>
-    <th>Tesla Model Y</th>
+    <th>Tesla Model Y L Premium</th>
    </tr>
   </thead>
   <tbody>
-   <tr><td>Starting MSRP</td><td class="win">$61,500 + $1,350 D&amp;H</td><td>Model Y L Premium from $61,990*</td></tr>
-   <tr><td>EPA est. range</td><td class="win">383–434 miles</td><td>Up to 321 miles (Model Y)</td></tr>
-   <tr><td>DC charge</td><td class="win">Up to 400 kW · ~185 mi / 10 min</td><td>Up to 250 kW · up to 172 mi / 15 min (Y L)</td></tr>
-   <tr><td>10–80%</td><td class="win">21 minutes</td><td>Not published the same way</td></tr>
-   <tr><td>0–60 mph</td><td>4.7 seconds</td><td>6.8 s RWD · 4.3 s Premium AWD · 3.3 s Performance</td></tr>
-   <tr><td>Drive</td><td class="win">Dual-motor xDrive, Heart of Joy</td><td>RWD or AWD</td></tr>
-   <tr><td>Port</td><td class="win">NACS standard</td><td>NACS</td></tr>
-   <tr><td>Display</td><td class="win">Panoramic Vision + central display</td><td>16&quot; center touchscreen</td></tr>
-   <tr><td>Local support</td><td class="win">Brian Harris BMW</td><td>Tesla service / mobile</td></tr>
+   <tr><td>Starting MSRP</td><td class="win">$61,500 + $1,350 D&amp;H</td><td class="them">$61,990*</td></tr>
+   <tr><td>EPA est. range</td><td class="win">383–434 miles</td><td class="them">332 miles</td></tr>
+   <tr><td>DC charge</td><td class="win">Up to 400 kW · ~185 mi / 10 min</td><td class="them">Up to 250 kW · up to 172 mi / 15 min</td></tr>
+   <tr><td>0–60 mph</td><td>4.7 seconds</td><td class="them">4.4 seconds</td></tr>
+   <tr><td>Drive</td><td class="win">Dual-motor xDrive, Heart of Joy</td><td class="them">Dual Motor AWD</td></tr>
+   <tr><td>Port</td><td class="win">NACS standard</td><td class="them">NACS</td></tr>
+   <tr><td>Display</td><td class="win">Panoramic Vision + central display</td><td class="them">16&quot; center + 8&quot; second-row</td></tr>
+   <tr><td>Local support</td><td class="win">Brian Harris BMW</td><td class="them">Tesla service / mobile</td></tr>
   </tbody>
  </table>
  </div>
- <p class="fineprint" style="margin-top:16px;">*Tesla.com, United States, October 2026. Model Y L Premium starting price before destination and order fees. BMW figures: PressClub USA May 7, 2026 and bmwusa.com.</p>
+ <p class="fineprint" style="margin-top:16px;">*Tesla.com, United States. Model Y L Premium starting price before destination and order fees ($63,630 including those fees). BMW figures: PressClub USA May 7, 2026 and bmwusa.com. iX3 range 383 miles on standard 20&quot; all-seasons, 434 miles on no-cost 20&quot; summers.</p>
 </div></section>
 <section class="section dark"><div class="wrap">
  <p class="eyebrow">Range and charge</p>
  <h2 class="h2" style="max-width:920px;margin-bottom:14px;">More miles. Less time plugged in.</h2>
- <p class="body-lg">Tesla’s volume Model Y is rated up to 321 miles. The iX3 is 383 miles on standard 20&quot; all-seasons and 434 miles on the no-cost 20&quot; summers. At an 800-volt station the iX3 adds about 185 miles in 10 minutes. Tesla quotes up to 172 miles in 15 minutes on Model Y L. If the brief is highway range and a short stop, this is not close.</p>
+ <p class="body-lg">Tesla Model Y L Premium is rated 332 miles EPA est. The iX3 is 383 miles on standard 20&quot; all-seasons and 434 miles on the no-cost 20&quot; summers. At an 800-volt station the iX3 adds about 185 miles in 10 minutes. Tesla quotes up to 172 miles in 15 minutes on the same Y L. If the brief is highway range and a short stop, this is not close.</p>
 </div></section>
 <section class="section elevated"><div class="wrap">
  <img src="https://thecooperativeagency.github.io/seo-pages/assets/bmw-ix3-2027/hero-3-4.jpg" alt="All-new BMW iX3" style="width:100%;max-height:480px;object-fit:cover;display:block;margin-bottom:28px;" />
  <p class="eyebrow">The drive</p>
  <h2 class="h2" style="max-width:920px;margin-bottom:14px;">A Sports Activity Vehicle. Not a tablet with wheels.</h2>
- <p class="body-lg">Tesla Performance is quicker to 60. That is fair. The iX3 is the one built as a BMW SAV: dual-motor xDrive, 463 hp in Sport, Heart of Joy coordinating drive, brake, and recuperation. Panoramic iDrive keeps information on the road, not only on a center screen. If you still want to enjoy the drive, that is the split.</p>
+ <p class="body-lg">Model Y L Premium is a tenth quicker to 60. That is fair. The iX3 is the one built as a BMW SAV: dual-motor xDrive, 463 hp in Sport, Heart of Joy coordinating drive, brake, and recuperation. Panoramic iDrive keeps information on the road, not only on a center screen. If you still want to enjoy the drive, that is the split.</p>
 </div></section>
 <section class="section dark"><div class="wrap">
  <p class="eyebrow">Ownership</p>
@@ -181,6 +205,6 @@
  <a href="https://brianharrisbmw.com/build-your-own" class="btn-secondary" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:48px !important;padding:12px 22px !important;font-size:15px !important;background:transparent !important;color:#fff !important;border:2px solid #fff !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">Build iX3</span></a>
  <a href="https://thecooperativeagency.github.io/seo-pages/Brian%20Harris%20BMW/all-new-bmw-ix3-2027.html" class="btn-compact" style="font-family:bmw,'BMW Type Next',BMWTypeNext,Helvetica,Arial,sans-serif;display:inline-flex !important;align-items:center !important;justify-content:center !important;width:auto !important;max-width:none !important;min-width:max-content !important;flex:0 0 auto !important;height:auto !important;margin:0 !important;font-weight:700 !important;line-height:1.2 !important;letter-spacing:normal !important;white-space:nowrap !important;word-break:keep-all !important;overflow:visible !important;text-overflow:clip !important;hyphens:none !important;text-decoration:none !important;border-radius:0 !important;box-sizing:border-box !important;min-height:40px !important;padding:10px 16px !important;font-size:13px !important;background:rgba(255,255,255,.06) !important;color:#fff !important;border:1.5px solid rgba(255,255,255,.72) !important;"><span style="display:inline;white-space:nowrap;overflow:visible;">iX3 feature page</span></a>
  </div>
- <p class="fineprint" style="margin-top:28px;">BMW iX3 50 xDrive MSRP $61,500 + $1,350 destination. Dealer sets actual price. Range 383–434 miles depending on wheel/tire (BMW USA / EPA procedure). Charge: up to 400 kW; ~185 miles in 10 minutes; 10–80% in 21 minutes at a compatible 800V DC station. 0–60 4.7 s. Tesla Model Y figures from tesla.com US, October 2026: up to 321 miles EPA est. (Model Y); Model Y L Premium from $61,990 before destination/order fees; Supercharging up to 250 kW; Y L up to 172 miles added in 15 minutes; 0–60 6.8 s RWD / 4.3 s Premium AWD / 3.3 s Performance. Actual range, charge time, and acceleration vary. No competitor inventory or offers implied.</p>
+ <p class="fineprint" style="margin-top:28px;">BMW iX3 50 xDrive MSRP $61,500 + $1,350 destination. Dealer sets actual price. Range 383–434 miles depending on wheel/tire (BMW USA / EPA procedure). Charge: up to 400 kW; ~185 miles in 10 minutes; 10–80% in 21 minutes at a compatible 800V DC station. 0–60 4.7 s. Tesla Model Y L Premium figures from tesla.com US: 332 miles EPA est.; from $61,990 before destination and order fees ($63,630 including those fees); Supercharging up to 250 kW; up to 172 miles added in 15 minutes; 0–60 4.4 s. Actual range, charge time, and acceleration vary. No competitor inventory or offers implied.</p>
 </div></section>
 </div>
