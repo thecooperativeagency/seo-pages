@@ -14,4 +14,4 @@ caching: default
 custom_schema: |
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I buy my leased BMW early?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ask for a payoff quote through BMW Financial Services or the My BMW app. Buying it skips extra wear or mile charges at turn-in."}}, {"@type": "Question", "name": "Can I trade a leased BMW?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We will put your payoff next to a trade value and show you the difference in writing."}}]}
 ---
-Paste HTML into Motive. Not in main nav. Keep coverages CTA verbatim on lease-vs-finance. Repo only until Lance OKs.
+Paste HTML into Motive. Not in main nav. Keep protection CTA verbatim on lease-vs-finance. Repo only until Lance OKs.

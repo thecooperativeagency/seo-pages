@@ -14,4 +14,4 @@ caching: default
 custom_schema: |
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I lease, finance, or buy a BMW in Louisiana and in Baton Rouge?", "acceptedAnswer": {"@type": "Answer", "text": "Lease if you want a newer BMW every few years on a set number of miles. Finance if you want to own it, drive as much as you like, and keep it past the factory warranty. Consumer Reports says buying usually wins if you will keep the car six years or more."}}]}
 ---
-Paste HTML into Motive. Not in main nav. Keep coverages CTA verbatim on lease-vs-finance. Repo only until Lance OKs.
+Paste HTML into Motive. Not in main nav. Keep protection CTA verbatim on lease-vs-finance. Repo only until Lance OKs.

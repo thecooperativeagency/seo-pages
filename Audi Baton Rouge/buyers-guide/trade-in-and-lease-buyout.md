@@ -14,4 +14,4 @@ caching: default
 custom_schema: |
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I buy my leased Audi early?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ask for a payoff quote in the myAudi app. Buying it skips the turn-in fee and extra wear or mile charges."}}, {"@type": "Question", "name": "Does Audi refinance a lease?", "acceptedAnswer": {"@type": "Answer", "text": "Audi Financial Services doesn’t refinance. You can pay it off, return it, or start a new lease or loan on another car."}}]}
 ---
-Paste HTML into Motive. Not in main nav. Store ID 1772. Keep coverages CTA verbatim on lease-vs-finance.
+Paste HTML into Motive. Not in main nav. Store ID 1772. Keep protection CTA verbatim on lease-vs-finance.
