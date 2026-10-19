@@ -1,114 +1,331 @@
-<div class="abr-bg" style="font-family: AudiType, Audi, Arial, sans-serif;">
-<style>
-@font-face{font-family:"AudiType";src:url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
-@font-face{font-family:"AudiType";src:url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
-.abr-bg,.abr-bg *{font-family:AudiType,Audi,Arial,Helvetica,sans-serif !important;box-sizing:border-box;}
-.abr-bg{-webkit-font-smoothing:antialiased;--ink:#0a0e14;--card:#151c27;--border:#2a3545;--white:#fff;--muted:#9aa6b5;--soft:#d7dee8;--audi:#bb0a30;color:var(--white);background:var(--ink);}
-.abr-bg .wrap{max-width:1120px;margin:0 auto;width:100%;min-width:0;}
-.abr-bg .eyebrow{margin:0 0 12px;color:var(--muted);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;}
-.abr-bg h1,.abr-bg h2,.abr-bg h3,.abr-bg p{margin-top:0;}
-.abr-bg .h1{margin:0;max-width:920px;font-size:clamp(2rem,4.6vw,3.5rem);line-height:.96;letter-spacing:-.045em;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff;}
-.abr-bg .h2{margin:0 0 16px;font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.08;letter-spacing:-.04em;font-weight:700;}
-.abr-bg .deck{max-width:740px;margin:14px 0 0;color:var(--soft);font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.5;}
-.abr-bg .body{color:#c5ced9;font-size:16px;line-height:1.62;}
-.abr-bg .body a,.abr-bg .src a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
-.abr-bg .section{padding:56px 40px;}
-.abr-bg .section + .section{border-top:1px solid var(--border);}
-.abr-bg .hero{position:relative;min-height:640px;display:flex;align-items:flex-end;background:#000;overflow:hidden;}
-.abr-bg .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;}
-.abr-bg .hero-fade-x{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,10,18,.8) 0%,rgba(5,10,18,.4) 44%,rgba(5,10,18,.08) 74%,rgba(5,10,18,.02) 100%);}
-.abr-bg .hero-fade-y{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,18,.16) 0%,rgba(5,10,18,.02) 48%,rgba(5,10,18,.92) 100%);}
-.abr-bg .hero-copy{position:relative;z-index:2;padding:120px 40px 56px;}
-.abr-bg .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0;}
-.abr-bg .btn{display:inline-block;padding:14px 22px;background:var(--audi);color:#fff !important;text-decoration:none !important;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;}
-.abr-bg .btn-ghost{background:transparent;border:1px solid #fff;}
-.abr-bg .minav{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 40px;background:#0e141c;border-bottom:1px solid var(--border);font-size:12px;letter-spacing:.04em;text-transform:uppercase;}
-.abr-bg .minav a{color:var(--soft);text-decoration:none;}
-.abr-bg .minav a[aria-current="page"]{color:#fff;font-weight:700;}
-.abr-bg table{width:100%;border-collapse:collapse;font-size:15px;}
-.abr-bg th,.abr-bg td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--soft);}
-.abr-bg th{color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
-.abr-bg .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
-.abr-bg .card{display:block;background:var(--card);border:1px solid var(--border);color:#fff !important;text-decoration:none !important;overflow:hidden;min-width:0;}
-.abr-bg .card img{width:100%;height:180px;object-fit:cover;display:block;}
-.abr-bg .card-b{padding:18px 20px;}
-.abr-bg .card span{display:block;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
-.abr-bg .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.abr-bg .panel{background:var(--card);border:1px solid var(--border);padding:22px 24px;}
-.abr-bg .panel h3{margin:0 0 12px;font-size:1.2rem;letter-spacing:-.03em;}
-.abr-bg .panel ul{margin:0;padding-left:18px;color:var(--soft);line-height:1.5;}
-.abr-bg .cta-band{background:#1a0a10;border:1px solid #5a1a28;padding:22px 24px;}
-.abr-bg .cta-band a{color:#fff;font-weight:700;}
-.abr-bg .inline-photo{width:100%;height:auto;display:block;margin:8px 0 0;}
-.abr-bg .caption{margin:8px 0 0;color:var(--muted);font-size:12px;}
-.abr-bg .faq-item{border-top:1px solid var(--border);padding:22px 0;}
-.abr-bg .faq-item:last-child{border-bottom:1px solid var(--border);}
-.abr-bg .faq-item h3{margin:0 0 8px;font-size:17px;letter-spacing:-.02em;}
-.abr-bg .fine{margin:0;color:var(--muted);font-size:12px;line-height:1.55;}
-.abr-bg .src{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.5;}
-.abr-bg .chips{display:flex;flex-wrap:wrap;gap:8px;}
-.abr-bg .chip{background:var(--card);border:1px solid var(--border);padding:10px 14px;color:var(--soft);font-size:14px;cursor:pointer;}
-.abr-bg .chip.on{border-color:#fff;color:#fff;}
-.abr-bg .prod{background:var(--card);border:1px solid var(--border);padding:20px;}
-.abr-bg .prod h3{margin:0 0 8px;}
-.abr-bg .hide{display:none;}
-.abr-bg .take{background:var(--card);border-left:3px solid var(--audi);padding:18px 20px;margin:0 0 20px;}
-@media (max-width:820px){
-  .abr-bg .section,.abr-bg .minav{padding-left:20px;padding-right:20px;}
-  .abr-bg .section{padding-top:32px;padding-bottom:32px;}
-  .abr-bg .hero{min-height:500px;}
-  .abr-bg .hero-copy{padding:72px 20px 36px;}
-  .abr-bg .cards,.abr-bg .split{grid-template-columns:1fr;}
-  .abr-bg .cta-row{flex-direction:column;}
-  .abr-bg .btn{text-align:center;}
-  .abr-bg table{display:block;overflow-x:auto;}
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Happens When Your Audi Lease Ends in Louisiana and in Baton Rouge | Audi Baton Rouge</title>
+  <meta name="description" content="Inspection, wear, extra miles, buying the car, and how to avoid the turn-in fee." />
+  <link rel="canonical" href="https://audibatonrouge.com/guide/audi-lease-end/" />
+  <style>
+    @font-face {
+      font-family: "AudiType";
+      src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "AudiType";
+      src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .abr-allnew-page {
+      font-family: AudiType, Audi, Arial, Helvetica, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+    }
+    .abr-allnew-page a { color: inherit; text-decoration: none; }
+    .abr-allnew-page h1,
+    .abr-allnew-page h2,
+    .abr-allnew-page h3,
+    .abr-allnew-page p,
+    .abr-allnew-page li,
+    .abr-allnew-page span {
+      font-family: AudiType, Audi, Arial, Helvetica, sans-serif;
+    }
+    .abr-allnew-page .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #fff; color: #000 !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 32px; border-radius: 0; border: none; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-primary span { color: #000 !important; white-space: nowrap; }
+    .abr-allnew-page .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; color: #fff !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 13px 32px; border-radius: 0; border: 1px solid #fff; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-secondary span { color: #fff !important; white-space: nowrap; }
+    .abr-allnew-page .btn-dark {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #000; color: #fff !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 32px; border-radius: 0; border: 1px solid #fff; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-dark span { color: #fff !important; white-space: nowrap; }
+    .abr-allnew-page .label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #BDBDBD; display: block; margin-bottom: 10px;
+    }
+    .abr-allnew-page .hero {
+      position: relative; width: 100%; min-height: 90vh;
+      background: #000 center center / cover no-repeat;
+      display: flex; align-items: flex-end;
+    }
+    /* Stronger bottom scrim so Motive inject never leaves dark type on dark photo */
+    .abr-allnew-page .hero-overlay {
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.72) 28%,
+        rgba(0,0,0,0.35) 55%,
+        rgba(0,0,0,0.12) 78%,
+        rgba(0,0,0,0.05) 100%
+      );
+    }
+    .abr-allnew-page .hero-content {
+      position: relative; z-index: 2; padding: 64px 7% 72px; max-width: 780px;
+      color: #ffffff;
+    }
+    .abr-allnew-page .hero-content .label { color: #e8e8e8 !important; }
+    .abr-allnew-page .hero-content h1 {
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 16px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+    }
+    .abr-allnew-page .hero-content .hero-sub {
+      font-size: 18px; line-height: 1.45; margin: 0 0 12px; max-width: 560px;
+      color: #f2f2f2 !important; -webkit-text-fill-color: #f2f2f2;
+    }
+    .abr-allnew-page .hero-content .hero-msrp {
+      font-size: 14px; margin: 0 0 8px; letter-spacing: 0.02em;
+      color: #e0e0e0 !important; -webkit-text-fill-color: #e0e0e0;
+    }
+    .abr-allnew-page .hero-content .hero-timing {
+      font-size: 13px; margin: 0 0 28px; max-width: 520px;
+      color: #d0d0d0 !important; -webkit-text-fill-color: #d0d0d0;
+    }
+    .abr-allnew-page .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .abr-allnew-page .stats {
+      background: #0b0b0b; border-top: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f;
+      padding: 36px 7%; color: #fff;
+    }
+    .abr-allnew-page .stats-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 18px; max-width: 1100px; margin: 0 auto;
+    }
+    .abr-allnew-page .stat { text-align: center; padding: 8px 10px; }
+    .abr-allnew-page .stat .num {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.1; margin-bottom: 8px; color: #ffffff !important;
+    }
+    .abr-allnew-page .stat .cap {
+      font-size: 12px; color: #9a9a9a; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .abr-allnew-page .intro { background: #111; padding: 80px 7%; text-align: center; color: #fff; }
+    .abr-allnew-page .intro h2 {
+      font-size: clamp(26px, 4vw, 44px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 20px; color: #ffffff !important;
+    }
+    .abr-allnew-page .intro p {
+      font-size: 18px; color: #BDBDBD; max-width: 760px; margin: 0 auto;
+    }
+    .abr-allnew-page .feature { display: flex; align-items: center; min-height: 520px; }
+    .abr-allnew-page .feature.reverse { flex-direction: row-reverse; }
+    .abr-allnew-page .feature-img {
+      flex: 1; min-height: 520px; background-size: cover; background-position: center; background-color: #0a0a0a;
+    }
+    .abr-allnew-page .feature-text { flex: 1; padding: 60px 7%; background: #1a1a1a; color: #fff; }
+    .abr-allnew-page .feature.alt .feature-text { background: #000; }
+    .abr-allnew-page .feature-text h2 {
+      font-size: clamp(24px, 3.5vw, 40px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 16px; line-height: 1.1; color: #ffffff !important;
+    }
+    .abr-allnew-page .feature-text p {
+      font-size: 16px; color: #BDBDBD; line-height: 1.7; margin: 0 0 16px;
+    }
+    .abr-allnew-page .feature-bullets { list-style: none; margin: 16px 0 0; padding: 0; }
+    .abr-allnew-page .feature-bullets li {
+      font-size: 15px; color: #ccc; padding: 8px 0; border-bottom: 1px solid #333;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .abr-allnew-page .feature-bullets li::before {
+      content: ''; display: inline-block; width: 18px; height: 2px; background: #fff; flex-shrink: 0;
+    }
+    .abr-allnew-page .details { background: #111; padding: 80px 7%; color: #fff; }
+    .abr-allnew-page .details-header { text-align: center; margin-bottom: 40px; }
+    .abr-allnew-page .details-header h2 {
+      font-size: clamp(26px, 4vw, 44px); font-weight: 700; letter-spacing: -0.01em; color: #ffffff !important;
+    }
+    .abr-allnew-page .details-header p { font-size: 15px; color: #BDBDBD; margin-top: 8px; }
+    .abr-allnew-page .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .abr-allnew-page .details-grid img {
+      width: 100%; height: 380px; object-fit: cover; display: block; background: #000;
+    }
+    .abr-allnew-page .cta-section {
+      background: #000; border-top: 1px solid #222; padding: 100px 7%; text-align: center; color: #fff;
+    }
+    .abr-allnew-page .cta-section .label { text-align: center; display: block; margin-bottom: 16px; }
+    .abr-allnew-page .cta-section h2 {
+      font-size: clamp(28px, 4vw, 50px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 16px; color: #ffffff !important;
+    }
+    .abr-allnew-page .cta-section p {
+      font-size: 18px; color: #BDBDBD; margin: 0 auto 40px; max-width: 640px;
+    }
+    .abr-allnew-page .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .abr-allnew-page .disclaimer { background: #000; padding: 24px 7% 60px; text-align: center; }
+    .abr-allnew-page .disclaimer p {
+      font-size: 12px; color: #777; max-width: 900px; margin: 0 auto; line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .abr-allnew-page .stats-grid { grid-template-columns: 1fr 1fr; }
+      .abr-allnew-page .feature,
+      .abr-allnew-page .feature.reverse { flex-direction: column; }
+      .abr-allnew-page .feature-img { width: 100%; min-height: 280px; }
+      .abr-allnew-page .feature-text { padding: 48px 6%; }
+      .abr-allnew-page .hero-content { padding: 40px 6% 52px; }
+      .abr-allnew-page .details-grid { grid-template-columns: 1fr; }
+      .abr-allnew-page .details-grid img { height: 260px; }
+      .abr-allnew-page .hero-ctas,
+      .abr-allnew-page .cta-buttons { flex-direction: column; align-items: flex-start; }
+      .abr-allnew-page .cta-buttons { align-items: center; }
+      .abr-allnew-page .intro,
+      .abr-allnew-page .details,
+      .abr-allnew-page .cta-section,
+      .abr-allnew-page .stats { padding-left: 6%; padding-right: 6%; }
+    }
+
+  
+    .abr-allnew-page .minav {
+      background:#0b0b0b; border-bottom:1px solid #1f1f1f;
+      display:flex; gap:22px; padding:14px 7%; overflow-x:auto;
+      white-space:nowrap; font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+      -webkit-overflow-scrolling:touch;
+    }
+    .abr-allnew-page .minav a { color:#BDBDBD; }
+    .abr-allnew-page .minav a[aria-current="page"] { color:#fff; }
+    .abr-allnew-page .prose { background:#111; padding:80px 7%; color:#fff; }
+    .abr-allnew-page .prose.alt { background:#000; }
+    .abr-allnew-page .prose-inner { max-width:760px; }
+    .abr-allnew-page .prose.center { text-align:center; }
+    .abr-allnew-page .prose.center .prose-inner { margin:0 auto; }
+    .abr-allnew-page .prose h2 {
+      font-size:clamp(26px,4vw,44px); font-weight:700; letter-spacing:-0.01em;
+      margin:0 0 20px; color:#fff !important;
+    }
+    .abr-allnew-page .prose h3 {
+      font-size:20px; font-weight:700; letter-spacing:-0.01em; margin:28px 0 10px; color:#fff !important;
+    }
+    .abr-allnew-page .prose p, .abr-allnew-page .prose li {
+      font-size:16px; color:#BDBDBD; line-height:1.7; margin:0 0 16px;
+    }
+    .abr-allnew-page .prose a { color:#fff; text-decoration:underline; text-underline-offset:3px; }
+    .abr-allnew-page .guide-table { width:100%; border-collapse:collapse; margin:12px 0 24px; }
+    .abr-allnew-page .guide-table th {
+      font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+      color:#BDBDBD; text-align:left; padding:12px 10px; border-bottom:1px solid #333;
+    }
+    .abr-allnew-page .guide-table td {
+      font-size:15px; color:#ccc; padding:12px 10px; border-bottom:1px solid #333; vertical-align:top; line-height:1.6;
+    }
+    .abr-allnew-page .faq { max-width:760px; margin:0 auto; text-align:left; }
+    .abr-allnew-page .faq-item { border-top:1px solid #333; padding:22px 0; }
+    .abr-allnew-page .faq-item:last-child { border-bottom:1px solid #333; }
+    .abr-allnew-page .faq-item h3 { font-size:20px; font-weight:700; letter-spacing:-0.01em; color:#fff !important; margin:0 0 8px; }
+    .abr-allnew-page .faq-item p { font-size:16px; color:#BDBDBD; line-height:1.7; margin:0; }
+    .abr-allnew-page .hub-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
+    .abr-allnew-page .hub-tile {
+      position:relative; min-height:280px; background-size:cover; background-position:center;
+      display:flex; align-items:flex-end; padding:28px; color:#fff !important;
+    }
+    .abr-allnew-page .hub-tile::after {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.2) 55%,transparent 100%);
+    }
+    .abr-allnew-page .hub-tile strong {
+      position:relative; z-index:1; font-size:clamp(18px,2.4vw,24px); font-weight:700; letter-spacing:-0.01em;
+      color:#fff !important;
+    }
+    .abr-allnew-page .chips { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 24px; }
+    .abr-allnew-page .chip {
+      display:inline-flex; align-items:center; justify-content:center;
+      background:#000; color:#fff !important; border:1px solid #333;
+      font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      padding:12px 18px; cursor:pointer;
+    }
+    .abr-allnew-page .chip.on { background:#fff; color:#000 !important; border-color:#fff; }
+    .abr-allnew-page .prod { padding:28px 0; border-bottom:1px solid #333; }
+    .abr-allnew-page .prod h3 { font-size:22px; margin:0 0 10px; color:#fff !important; }
+    .abr-allnew-page .src { font-size:12px; color:#777; margin:8px 0 0; }
+    .abr-allnew-page .src a { color:#777; text-decoration:underline; }
+    @media (max-width:900px) {
+      .abr-allnew-page .hub-grid { grid-template-columns:1fr; }
+      .abr-allnew-page .hub-tile { min-height:220px; }
+      .abr-allnew-page .minav { padding-left:6%; padding-right:6%; }
+      .abr-allnew-page .prose { padding:48px 6%; }
+      .abr-allnew-page .guide-table { display:block; overflow-x:auto; }
+    }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What counts as excess wear on an Audi lease?", "acceptedAnswer": {"@type": "Answer", "text": "Audi’s turn-in guide: normal includes scratches or dents under 2 inches, three or fewer quarter-size dings per panel, a single windshield chip without spidering, and tires with more than 1/8 inch of tread. Excess includes anything over 2 inches, more than three dings per panel, tires under 1/8 inch, mismatched tires on quattro, heavily gouged wheels, plugged sidewalls, service lights on, and aftermarket alterations not removed."}}, {"@type": "Question", "name": "Who inspects an Audi lease return?", "acceptedAnswer": {"@type": "Answer", "text": "Lease-end inspections are done only by AiM — third party, free, at home, office, or dealer. The report is valid for 90 days. Repairs must be done at an Audi Authorized Collision Repair Facility."}}, {"@type": "Question", "name": "How do I get the Audi turn-in fee waived?", "acceptedAnswer": {"@type": "Answer", "text": "Audi FAQs: the turn-in fee is waived if you lease or buy a new or CPO Audi through AFS within 90 days."}}]}</script>
-<nav class="minav" aria-label="Buyer's guide"><a href="index.html">Hub</a><a href="lease-vs-finance.html">Lease vs finance</a><a href="coverages-advisor.html">Coverages</a><a href="lease-end.html" aria-current="page">Lease-end</a><a href="warranty-maintenance.html">Warranty</a><a href="cpo.html">CPO</a><a href="louisiana-car-lease-tax-fees.html">LA tax & fees</a><a href="trade-in-and-lease-buyout.html">Trade-in</a><a href="special-programs.html">Programs</a></nav>
-<section class="hero">
-  <img class="hero-photo" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/s-line-news-issue-02/abr-q7-lot.jpg" alt="Audi Q7 on the Audi Baton Rouge lot" style="object-position:center 45%;">
-  <div class="hero-fade-x"></div>
-  <div class="hero-fade-y"></div>
-  <div class="hero-copy wrap">
-    <p class="eyebrow">Audi Baton Rouge · Buyer’s guide</p>
-    <h1 class="h1" style="color:#fff !important;-webkit-text-fill-color:#fff;">What happens at the end of an Audi lease?</h1>
-    <p class="deck">A third-party inspection, a measuring tool, and four ways out. Buy the car and the wear bill goes away.</p>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are you ready for your lease-end inspection?", "acceptedAnswer": {"@type": "Answer", "text": "Walk the car the way the inspector will. Check for a cracked windshield, body damage, worn tires, and gouged wheels. Those are the items that turn into extra charges if you return the car."}}, {"@type": "Question", "name": "Who inspects the car?", "acceptedAnswer": {"@type": "Answer", "text": "Audi uses an independent inspector (a company called AiM), not the dealership. The visit is free and can be at your home, office, or the store. The report is good for 90 days."}}, {"@type": "Question", "name": "How do I avoid the turn-in fee?", "acceptedAnswer": {"@type": "Answer", "text": "Audi says the fee is waived if you lease or buy a new or Certified Pre-Owned Audi through Audi Financial Services within 90 days."}}]}</script>
+</head>
+<body>
+<div class="abr-allnew-page">
+<section class="hero" style="background-image:url('https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-02/abr-q7-lot.jpg');">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <span class="label" style="color:#e8e8e8;">Audi Baton Rouge</span>
+    <h1 style="color:#ffffff;">When your<br>lease ends</h1>
+    <p class="hero-sub" style="color:#f2f2f2;">Are you ready for the inspection? Cracked windshield? Body damage? Worn tires?</p>
+    <div class="hero-ctas">
+      <a href="https://audibatonrouge.com/get-pre-qualified" class="btn-primary"><span>Get Pre-Qualified</span></a>
+      <a href="https://audibatonrouge.com/collections/new-inventory" class="btn-secondary"><span>Shop New Inventory</span></a>
+    </div>
+  </div>
+</section><nav class="minav" aria-label="Buyer guide"><a href="index.html">Home</a><a href="lease-vs-finance.html">Lease or finance</a><a href="coverages-advisor.html">Coverages</a><a href="lease-end.html" aria-current="page">When the lease ends</a><a href="warranty-maintenance.html">Warranty</a><a href="cpo.html">Certified Pre-Owned</a><a href="louisiana-car-lease-tax-fees.html">Tax and plates</a><a href="trade-in-and-lease-buyout.html">Trade-in or buyout</a><a href="special-programs.html">Special programs</a></nav><section class="intro"><span class="label">Four ways out</span>
+    <h2 style="color:#ffffff;">Trade up, extend, buy it, or return it.</h2><p>If you return the car, Audi sends an independent inspector (a company called AiM) to look at it. If you buy the car, you skip the turn-in fee and you are not billed for extra wear or extra miles.</p></section><section class="feature">
+  <div class="feature-img" style="background-image:url('https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/woman-keys-pexels-7144213.jpg');"></div>
+  <div class="feature-text">
+    <span class="label">Buy it instead</span>
+    <h2 style="color:#ffffff;">The keys stay yours.</h2>
+    <p>Ask for a payoff in the myAudi app. Audi Financial Services does not refinance.</p>
+  </div>
+</section><section class="prose alt"><div class="prose-inner">
+        <h2>Are you ready for your lease-end inspection?</h2>
+        <p>Walk the car the way they will. Did you check for a cracked windshield? Any existing body damage? Tires worn down? Wheels gouged from a curb?</p>
+        <h3>What they usually let go</h3>
+        <p>Scratches or dents under 2 inches. Three or fewer quarter-size dings per panel. One windshield chip that has not spidered. Tires with more than 1/8 inch of tread.</p>
+        <h3>What they charge for</h3>
+        <p>Anything over 2 inches. More than three dings per panel. Thin tires. Mismatched tires on quattro. Gouged wheels. Plugged sidewalls. Warning lights on. Aftermarket parts left on the car.</p>
+        <p class="src"><a href="https://www.audiusa.com/en/shopping-tools/financial-services-hub/lease-an-audi/turn-in-process/">Audi turn-in guide</a></p>
+        </div></section><section class="cta-section">
+  <span class="label">Next</span>
+  <h2 style="color:#ffffff;">Curious about what coverages you should get to protect you the best? Click here</h2>
+  <p>Optional products. Prices in writing. Nothing is required to get financed.</p>
+  <div class="cta-buttons">
+    <a class="btn-primary" href="coverages-advisor.html"><span>Explore coverages</span></a>
+    <a class="btn-secondary" href="https://audibatonrouge.com/finance"><span>Talk to finance</span></a>
+    <a class="btn-dark" href="https://audibatonrouge.com/get-pre-qualified"><span>Get Pre-Qualified</span></a>
   </div>
 </section>
-
-<section class="section"><div class="wrap">
-<div class="take"><p class="body" style="margin:0;">You can trade up to a new Audi, extend, buy the car, or return it. Lease-end inspections are done only by AiM, Audi’s third-party inspector. Buy the car and you skip the turn-in fee, excess wear, and excess miles.</p></div>
-<p class="body">Audi mails a measuring tool before lease end. Repairs on the inspection must be done at an Audi Authorized Collision Repair Facility. Report valid 90 days.</p>
-</div></section>
-<section class="section"><div class="wrap">
-<h2 class="h2">What counts as normal vs excess?</h2>
-<table>
-<thead><tr><th>Normal (examples)</th><th>Excess (examples)</th></tr></thead>
-<tbody>
-<tr><td>Scratches or dents under 2 inches</td><td>Anything over 2 inches</td></tr>
-<tr><td>Three or fewer quarter-size dings per panel</td><td>More than 3 dings per panel</td></tr>
-<tr><td>A single windshield chip without spidering</td><td>Spidered glass</td></tr>
-<tr><td>Tires with more than 1/8 inch of tread</td><td>Tires under 1/8 inch; quattro tires that don’t match brand/size/rating</td></tr>
-<tr><td></td><td>Heavily gouged wheels, plugged sidewalls, service lights on, aftermarket not removed</td></tr>
-</tbody>
-</table>
-<p class="src"><a href="https://www.audiusa.com/en/shopping-tools/financial-services-hub/lease-an-audi/turn-in-process/">Audi turn-in / wear guide</a>.</p>
-<img class="inline-photo" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/s-line-news-issue-02/abr-q7-lot.jpg" alt="Audi Q7 on the lot at Audi Baton Rouge">
-</div></section>
-<section class="section"><div class="wrap">
-<h2 class="h2">Miles, fees, buyout</h2>
-<p class="body">Eligible customers can buy additional miles at the halfway point. Final invoice can include excess wear, excess mileage, turn-in fee (waived if you lease or buy new or CPO through AFS within 90 days), taxes, late fees. Early termination: the earlier you end it, the greater the charge is likely to be. You can buy at any time via myAudi payoff. AFS does not refinance.</p>
-
-<img class="inline-photo" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-buyers-guide/woman-keys-pexels-7144213.jpg" alt="Handing over car keys">
-<p class="caption">Buyout path: the keys stay yours.</p>
-<p class="body"><a href="coverages-advisor.html">Curious about what coverages you should get to protect you the best? Click here</a></p>
-</div></section>
-
-<section class="section"><div class="wrap"><p class="eyebrow">Questions</p><h2 class="h2">FAQ</h2><div class="faq"><div class="faq-item"><h3>What counts as excess wear on an Audi lease?</h3><p class="body" style="margin:0;">Audi’s turn-in guide: normal includes scratches or dents under 2 inches, three or fewer quarter-size dings per panel, a single windshield chip without spidering, and tires with more than 1/8 inch of tread. Excess includes anything over 2 inches, more than three dings per panel, tires under 1/8 inch, mismatched tires on quattro, heavily gouged wheels, plugged sidewalls, service lights on, and aftermarket alterations not removed.</p></div><div class="faq-item"><h3>Who inspects an Audi lease return?</h3><p class="body" style="margin:0;">Lease-end inspections are done only by AiM — third party, free, at home, office, or dealer. The report is valid for 90 days. Repairs must be done at an Audi Authorized Collision Repair Facility.</p></div><div class="faq-item"><h3>How do I get the Audi turn-in fee waived?</h3><p class="body" style="margin:0;">Audi FAQs: the turn-in fee is waived if you lease or buy a new or CPO Audi through AFS within 90 days.</p></div></div></div></section>
-<section class="section"><div class="wrap">
-<p class="fine">Last reviewed October 19, 2026. Facts drawn from Audi USA / Audi Financial Services, CFPB, FTC, Louisiana Department of Revenue, and LA OMV as cited on the page. Program terms change — confirm on this VIN. A separate writer will polish this copy. Visual research still in progress; rooftop photos are Audi Baton Rouge showroom, lounge, service, and lot.</p>
-<p class="fine" style="margin-top:12px;"><strong>Areas we serve.</strong> Shoppers come to Airline Highway from across Louisiana and in Baton Rouge, and from New Orleans, Lafayette, and the Mississippi Gulf Coast. The pairing rule still applies whenever Baton Rouge is named: in Louisiana and in Baton Rouge.</p>
-<p class="fine" style="margin-top:12px;">Audi Baton Rouge · 11955 Airline Hwy, Baton Rouge, LA 70817 · Sales (225) 686-6012 · Mon–Sat 9:00am–7:00pm · Sunday closed.<br>New inventory: <a href="https://audibatonrouge.com/collections/new-inventory">audibatonrouge.com/collections/new-inventory</a> · Finance: <a href="https://audibatonrouge.com/finance">/finance</a> · Specials: <a href="https://audibatonrouge.com/audi-baton-rouge-special-offers">current offers</a></p>
-</div></section>
+<section class="intro" style="background:#000;text-align:left;">
+  <div class="faq"><span class="label">Questions</span>
+  <h2 style="color:#ffffff;text-align:center;margin-bottom:28px;">FAQ</h2>
+  <div class="faq-item"><h3>Are you ready for your lease-end inspection?</h3><p>Walk the car the way the inspector will. Check for a cracked windshield, body damage, worn tires, and gouged wheels. Those are the items that turn into extra charges if you return the car.</p></div><div class="faq-item"><h3>Who inspects the car?</h3><p>Audi uses an independent inspector (a company called AiM), not the dealership. The visit is free and can be at your home, office, or the store. The report is good for 90 days.</p></div><div class="faq-item"><h3>How do I avoid the turn-in fee?</h3><p>Audi says the fee is waived if you lease or buy a new or Certified Pre-Owned Audi through Audi Financial Services within 90 days.</p></div></div>
+</section>
+<section class="disclaimer">
+  <p>Reviewed by the Audi Baton Rouge finance office. October 19, 2026. Details from Audi USA, Audi Financial Services, the CFPB, the FTC, the Louisiana Department of Revenue, and Louisiana’s Office of Motor Vehicles, as linked on this page. Offers and terms change. Ask us to walk through yours.</p>
+  <p style="margin-top:12px;">Areas we serve. Shoppers come to us on Airline Highway from across Louisiana and in Baton Rouge, plus New Orleans, Lafayette, and the Mississippi Gulf Coast.</p>
+  <p style="margin-top:12px;">Audi Baton Rouge · 11955 Airline Hwy, Baton Rouge, LA 70817 · Sales (225) 686-6012 · Mon–Sat 9:00am–7:00pm · Sunday closed.</p>
+</section>
 </div>
+</body>
+</html>
