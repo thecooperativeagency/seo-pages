@@ -1,0 +1,17 @@
+---
+store: Brian Harris BMW
+page_title: "When the lease ends"
+slug: "guide/bmw-lease-end"
+seo_title: "What Happens When Your BMW Lease Ends in Louisiana and in Baton Rouge"
+seo_description: "Inspection, windshield, body damage, extra miles, and buying the car instead of returning it."
+index_enabled: true
+canonical: "https://brianharrisbmw.com/guide/bmw-lease-end/"
+asc_page_type: content
+vehicle_model: ""
+vehicle_year: ""
+tags: [buyers-guide, lease, finance]
+caching: default
+custom_schema: |
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are you ready for your lease-end inspection?", "acceptedAnswer": {"@type": "Answer", "text": "Walk the car the way the inspector will. Check for a cracked windshield, body damage, worn tires, and gouged wheels. Those are the items that turn into extra charges if you return the car."}}, {"@type": "Question", "name": "Who inspects the car?", "acceptedAnswer": {"@type": "Answer", "text": "BMW Financial Services offers a complimentary pre-inspection, usually at a BMW center. The estimate is available in My BMW. You can also schedule one with us."}}, {"@type": "Question", "name": "What tread do I need at turn-in?", "acceptedAnswer": {"@type": "Answer", "text": "BMW’s turn-in guide asks for at least 4/32 of an inch of tread at the thinnest point, and tires that match the original size and speed rating. If the car came with run-flat tires, it should go back with run-flat tires."}}]}
+---
+Paste HTML into Motive. Not in main nav. Keep coverages CTA verbatim on lease-vs-finance. Repo only until Lance OKs.
