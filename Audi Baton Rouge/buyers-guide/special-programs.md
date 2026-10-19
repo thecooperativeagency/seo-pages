@@ -14,4 +14,6 @@ caching: default
 custom_schema: |
   {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What special programs does Audi offer?", "acceptedAnswer": {"@type": "Answer", "text": "Audi lists College Graduate, First-time Buyer (a lease program), Foreign Business Professional, Expatriate, and Overseas Military. Every situation is different, so ask us and we’ll check what you qualify for."}}, {"@type": "Question", "name": "What should I bring?", "acceptedAnswer": {"@type": "Answer", "text": "Driver’s license, proof of income and residence, and your Social Security number or Individual Taxpayer Identification Number. Bring trade-in info if you have a car to turn in."}}]}
 ---
+Featured offer at top (no term, end date, or model year): Special financing: as low as 1.9% annual percentage rate (APR) available on new Audi Q3 and Q5 models. With approved credit; terms and availability vary, so ask us for details.
+
 Paste HTML into Motive. Not in main nav. Store ID 1772. Keep protection CTA verbatim on lease-vs-finance.
