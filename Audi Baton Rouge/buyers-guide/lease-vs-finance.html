@@ -1,0 +1,157 @@
+<div class="abr-bg" style="font-family: AudiType, Audi, Arial, sans-serif;">
+<style>
+@font-face{font-family:"AudiType";src:url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"AudiType";src:url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+.abr-bg,.abr-bg *{font-family:AudiType,Audi,Arial,Helvetica,sans-serif !important;box-sizing:border-box;}
+.abr-bg{-webkit-font-smoothing:antialiased;--ink:#0a0e14;--card:#151c27;--border:#2a3545;--white:#fff;--muted:#9aa6b5;--soft:#d7dee8;--audi:#bb0a30;color:var(--white);background:var(--ink);}
+.abr-bg .wrap{max-width:1120px;margin:0 auto;width:100%;min-width:0;}
+.abr-bg .eyebrow{margin:0 0 12px;color:var(--muted);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;}
+.abr-bg h1,.abr-bg h2,.abr-bg h3,.abr-bg p{margin-top:0;}
+.abr-bg .h1{margin:0;max-width:920px;font-size:clamp(2rem,4.6vw,3.5rem);line-height:.96;letter-spacing:-.045em;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff;}
+.abr-bg .h2{margin:0 0 16px;font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.08;letter-spacing:-.04em;font-weight:700;}
+.abr-bg .deck{max-width:740px;margin:14px 0 0;color:var(--soft);font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.5;}
+.abr-bg .body{color:#c5ced9;font-size:16px;line-height:1.62;}
+.abr-bg .body a,.abr-bg .src a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+.abr-bg .section{padding:56px 40px;}
+.abr-bg .section + .section{border-top:1px solid var(--border);}
+.abr-bg .hero{position:relative;min-height:640px;display:flex;align-items:flex-end;background:#000;overflow:hidden;}
+.abr-bg .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;}
+.abr-bg .hero-fade-x{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,10,18,.8) 0%,rgba(5,10,18,.4) 44%,rgba(5,10,18,.08) 74%,rgba(5,10,18,.02) 100%);}
+.abr-bg .hero-fade-y{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,18,.16) 0%,rgba(5,10,18,.02) 48%,rgba(5,10,18,.92) 100%);}
+.abr-bg .hero-copy{position:relative;z-index:2;padding:120px 40px 56px;}
+.abr-bg .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0;}
+.abr-bg .btn{display:inline-block;padding:14px 22px;background:var(--audi);color:#fff !important;text-decoration:none !important;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;}
+.abr-bg .btn-ghost{background:transparent;border:1px solid #fff;}
+.abr-bg .minav{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 40px;background:#0e141c;border-bottom:1px solid var(--border);font-size:12px;letter-spacing:.04em;text-transform:uppercase;}
+.abr-bg .minav a{color:var(--soft);text-decoration:none;}
+.abr-bg .minav a[aria-current="page"]{color:#fff;font-weight:700;}
+.abr-bg table{width:100%;border-collapse:collapse;font-size:15px;}
+.abr-bg th,.abr-bg td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--soft);}
+.abr-bg th{color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
+.abr-bg .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.abr-bg .card{display:block;background:var(--card);border:1px solid var(--border);color:#fff !important;text-decoration:none !important;overflow:hidden;min-width:0;}
+.abr-bg .card img{width:100%;height:180px;object-fit:cover;display:block;}
+.abr-bg .card-b{padding:18px 20px;}
+.abr-bg .card span{display:block;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.abr-bg .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.abr-bg .panel{background:var(--card);border:1px solid var(--border);padding:22px 24px;}
+.abr-bg .panel h3{margin:0 0 12px;font-size:1.2rem;letter-spacing:-.03em;}
+.abr-bg .panel ul{margin:0;padding-left:18px;color:var(--soft);line-height:1.5;}
+.abr-bg .cta-band{background:#1a0a10;border:1px solid #5a1a28;padding:22px 24px;}
+.abr-bg .cta-band a{color:#fff;font-weight:700;}
+.abr-bg .inline-photo{width:100%;height:auto;display:block;margin:8px 0 0;}
+.abr-bg .caption{margin:8px 0 0;color:var(--muted);font-size:12px;}
+.abr-bg .faq-item{border-top:1px solid var(--border);padding:22px 0;}
+.abr-bg .faq-item:last-child{border-bottom:1px solid var(--border);}
+.abr-bg .faq-item h3{margin:0 0 8px;font-size:17px;letter-spacing:-.02em;}
+.abr-bg .fine{margin:0;color:var(--muted);font-size:12px;line-height:1.55;}
+.abr-bg .src{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.5;}
+.abr-bg .chips{display:flex;flex-wrap:wrap;gap:8px;}
+.abr-bg .chip{background:var(--card);border:1px solid var(--border);padding:10px 14px;color:var(--soft);font-size:14px;cursor:pointer;}
+.abr-bg .chip.on{border-color:#fff;color:#fff;}
+.abr-bg .prod{background:var(--card);border:1px solid var(--border);padding:20px;}
+.abr-bg .prod h3{margin:0 0 8px;}
+.abr-bg .hide{display:none;}
+.abr-bg .take{background:var(--card);border-left:3px solid var(--audi);padding:18px 20px;margin:0 0 20px;}
+@media (max-width:820px){
+  .abr-bg .section,.abr-bg .minav{padding-left:20px;padding-right:20px;}
+  .abr-bg .section{padding-top:32px;padding-bottom:32px;}
+  .abr-bg .hero{min-height:500px;}
+  .abr-bg .hero-copy{padding:72px 20px 36px;}
+  .abr-bg .cards,.abr-bg .split{grid-template-columns:1fr;}
+  .abr-bg .cta-row{flex-direction:column;}
+  .abr-bg .btn{text-align:center;}
+  .abr-bg table{display:block;overflow-x:auto;}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I lease or finance an Audi in Louisiana and in Baton Rouge?", "acceptedAnswer": {"@type": "Answer", "text": "Lease if you want a newer Audi on a set term and mileage, typically inside the 4-year/50,000-mile new-vehicle limited warranty. Finance if you want your name on the title, no mileage cap, and no lease-end wear review. Audi USA’s own EV lease-or-finance page uses the same split. Keep-it-six-years-or-more is Consumer Reports’ buy rule, not an Audi payment quote."}}, {"@type": "Question", "name": "How many miles can I drive on an Audi lease?", "acceptedAnswer": {"@type": "Answer", "text": "Audi Financial Services says standard leases are typically 15,000 or fewer miles per year. A higher limit means a higher payment. Eligible customers can buy additional miles at the halfway point. Your contract is the number that counts."}}, {"@type": "Question", "name": "Who finances Audi now — Audi Financial Services or Wells Fargo?", "acceptedAnswer": {"@type": "Answer", "text": "Leases and finance contracts started before May 1, 2025 are serviced by Audi Financial Services. Finance contracts started on or after May 1, 2025 are Audi Retail Finance powered by Wells Fargo. AFS does not refinance vehicles at this time."}}, {"@type": "Question", "name": "How is an Audi lease taxed in Louisiana?", "acceptedAnswer": {"@type": "Answer", "text": "Louisiana taxes leases on gross proceeds — the lease payments — not the full vehicle price (Louisiana Department of Revenue). State sales and use tax is 5%. Local rates vary by domicile. Audi FS also lists Louisiana among states where local jurisdictions may bill personal property tax on leased vehicles, added to the lease balance."}}, {"@type": "Question", "name": "Can I buy my leased Audi? Does Audi refinance?", "acceptedAnswer": {"@type": "Answer", "text": "You can buy the leased car at any time (payoff quote in myAudi). If you purchase it you do not pay a turn-in fee, excess wear and use, or excess mileage. AFS does not refinance."}}, {"@type": "Question", "name": "What happens at the end of an Audi lease?", "acceptedAnswer": {"@type": "Answer", "text": "Four paths: turn in toward a new Audi, extend, purchase, or turn in. Turn-in fee can be waived if you lease or buy a new or CPO Audi through AFS within 90 days. Inspections are done only by AiM."}}]}</script>
+<nav class="minav" aria-label="Buyer's guide"><a href="index.html">Hub</a><a href="lease-vs-finance.html" aria-current="page">Lease vs finance</a><a href="coverages-advisor.html">Coverages</a><a href="lease-end.html">Lease-end</a><a href="warranty-maintenance.html">Warranty</a><a href="cpo.html">CPO</a><a href="louisiana-car-lease-tax-fees.html">LA tax & fees</a><a href="trade-in-and-lease-buyout.html">Trade-in</a><a href="special-programs.html">Programs</a></nav>
+<section class="hero">
+  <img class="hero-photo" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/abr-august-2026-specials/abr-specials-hero.jpg" alt="New Audi on the Audi Baton Rouge showroom floor" style="object-position:center 55%;">
+  <div class="hero-fade-x"></div>
+  <div class="hero-fade-y"></div>
+  <div class="hero-copy wrap">
+    <p class="eyebrow">Audi Baton Rouge · Buyer’s guide</p>
+    <h1 class="h1" style="color:#fff !important;-webkit-text-fill-color:#fff;">Should I lease or finance an Audi in Louisiana and in Baton Rouge?</h1>
+    <p class="deck">A brand-specific answer: warranty clocks, Audi Care, miles, and Louisiana tax on payments vs purchase — with Audi USA and LDR cited.</p>
+  </div>
+</section>
+
+<section class="section"><div class="wrap">
+<div class="take"><p class="body" style="margin:0;"><strong>Lease</strong> if you want a newer Audi for a set time and miles, usually still inside the 4-year/50,000-mile new-vehicle limited warranty and Audi Signature Care on MY2026+. <strong>Finance</strong> if you want the title, no mileage cap, and you are comfortable owning past the factory warranty. Protection products are optional.</p></div>
+<p class="body">This page is for buying or leasing an Audi in Louisiana and in Baton Rouge. It uses Audi USA and Audi Financial Services language, then Louisiana tax — not a national “most states don’t tax residual” line that does not fit here.</p>
+<p class="src">Last reviewed October 19, 2026. Illustrative examples are labeled. No current payment, money factor, or residual is published here.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<p class="eyebrow">Decision</p>
+<h2 class="h2">Lease your Audi if you… / Finance your Audi if you…</h2>
+<div class="split">
+  <div class="panel"><h3>Lease if you…</h3>
+    <ul>
+      <li>Want a new Audi for a set amount of time and miles (Audi USA).</li>
+      <li>Drive a schedule that fits typically 15,000 or fewer miles per year.</li>
+      <li>Want the term to sit inside 4 yr/50k warranty, 4-year roadside, and Signature Care (first 3 yr/30k on MY2026+).</li>
+      <li>Are comfortable with an AiM lease-end inspection and wear rules.</li>
+      <li>Like lower payments on average vs financing a similar term — Audi’s own framing, not a quote.</li>
+    </ul>
+  </div>
+  <div class="panel"><h3>Finance if you…</h3>
+    <ul>
+      <li>Want your name on the title (Audi USA).</li>
+      <li>Want no end-of-lease excess wear, mileage, or turn-in math.</li>
+      <li>Want no mileage restrictions and freedom to personalize.</li>
+      <li>Will keep the car after the 4/50 warranty — where a VSC or CPO-style coverage enters the chat.</li>
+      <li>Want terms from 12 to 72 months (Audi Retail Finance powered by Wells Fargo).</li>
+    </ul>
+  </div>
+</div>
+<p class="src">Pattern from <a href="https://www.bmwusa.com/financial-services.html">BMW FS checklists</a> and <a href="https://www.audiusa.com/en/shopping-tools/financial-services-hub/lease-or-finance-an-audi-ev/">Audi EV lease-or-finance</a>. Do not copy Audi’s leftover “federal tax credits up to $7,500” line — NerdWallet and CR (Oct 2026) say that credit ended September 2025.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<h2 class="h2">Lease vs finance, Audi-specific</h2>
+<table>
+  <thead><tr><th></th><th>Lease</th><th>Finance</th></tr></thead>
+  <tbody>
+    <tr><th>Title</th><td>VW Credit Leasing, Ltd. as additional insured / loss payee</td><td>Your name on the title</td></tr>
+    <tr><th>New-vehicle limited warranty</th><td>4 yr/50k — a 36–48 month lease with modest miles usually stays inside</td><td>Years 5+ or after 50k are out of warranty</td></tr>
+    <tr><th>Signature Care (MY2026+)</th><td>First 3 yr/30k scheduled maintenance included</td><td>You pay 40k+ services, or buy Care Select</td></tr>
+    <tr><th>Roadside</th><td>4 years, unlimited miles, on the vehicle</td><td>Ends after year 4</td></tr>
+    <tr><th>Miles</th><td>Typically 15,000/yr or fewer; extra miles at halfway if eligible</td><td>Unlimited</td></tr>
+    <tr><th>Lease-end</th><td>AiM inspection; wear, miles, possible turn-in fee</td><td>None of that</td></tr>
+    <tr><th>Servicer</th><td>Audi Financial Services</td><td>On/after May 1, 2025: Audi Retail Finance powered by Wells Fargo</td></tr>
+    <tr><th>Louisiana tax</th><td>On gross proceeds (payments), plus possible local personal property tax billed to AFS</td><td>OMV collects sales tax at domicile on price minus trade-in and rebate</td></tr>
+  </tbody>
+</table>
+<img class="inline-photo" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/q5-new/audi-q5-2025-front-three-quarter-showroom.jpg" alt="Audi Q5 on the showroom floor at Audi Baton Rouge">
+<p class="caption">Showroom floor at Audi Baton Rouge — the car you sit in, not a studio plate.</p>
+</div></section>
+<section class="section"><div class="wrap"><div class="cta-band"><p class="body" style="margin:0;color:#fff;"> <a href="coverages-advisor.html">Curious about what coverages you should get to protect you the best? Click here</a></p></div></div></section>
+<section class="section"><div class="wrap">
+<h2 class="h2">A worked example (illustrative only)</h2>
+<p class="body">The CFPB walks lease math as: capitalized cost minus residual, divided by months. Example shape, not an Audi Baton Rouge quote: if the amount you are paying down over the lease is $12,000 over 36 months, that depreciation piece is $333/month before rent charge, tax, and fees. Bankrate and Consumer Reports publish national worked examples with resale; we will not invent an Airline Highway payment.</p>
+<p class="src"><a href="https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/">CFPB, last reviewed Sep 12, 2023</a>.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<h2 class="h2">How is this taxed in Louisiana and in Baton Rouge?</h2>
+<p class="body">State sales and use tax is 5%. Leases are taxed on gross proceeds — the payments — not the full vehicle price. Purchases are taxed by OMV based on where the vehicle is domiciled, on price minus trade-in and rebate. City of Baton Rouge / East Baton Rouge local rate as of July 1, 2026 is 5.50% local + 5.00% state = 10.50%. Baker and Central are listed at 11.00%. Whether economic-development-district add-ons apply to vehicle sales is not confirmed on this page.</p>
+<p class="body">Audi Financial Services lists Louisiana among states where local jurisdictions may send AFS a personal property tax bill on leased vehicles; that tax is added to the lease balance.</p>
+<p class="src"><a href="https://revenue.louisiana.gov/businesses/general-sales-and-use-taxes/general-sales-use-tax/">LDR general sales tax</a> · <a href="https://revenue.louisiana.gov/tax-education-and-faqs/faqs/sales-tax-reform/what-is-the-tax-base-for-the-calculation-of-sales-tax-on-leases-or-rentals/">LDR lease tax base</a> · <a href="louisiana-car-lease-tax-fees.html">Full LA tax &amp; fees page</a>.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<h2 class="h2">Warranty, Care, and why the clock matters</h2>
+<p class="body">New Vehicle Limited Warranty: 4 years or 50,000 miles, whichever first, starting when the vehicle is delivered to the original purchaser or original lessee. Corrosion perforation: 12 years, regardless of mileage. PHEV high-voltage battery: 8 years or 100,000 miles. Roadside: 4 years unlimited miles on new vehicles (the coverage is for the vehicle, not the person).</p>
+<p class="body">A lease that ends before those clocks usually never sees an uncovered repair. A financed owner who keeps the car into year five is in a different conversation — Vehicle Service Protection, Care Select, or CPO if they buy used. Details: <a href="warranty-maintenance.html">warranty and maintenance</a>.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<h2 class="h2">Lease-end, buyout, CPO</h2>
+<p class="body">Turn in, extend, purchase, or return. Buy the car and you skip turn-in fee, excess wear, and excess miles. CPO is a separate path: 1 year or 20,000 miles after the NVLW (or at purchase if NVLW is already done). <a href="lease-end.html">Lease-end guide</a> · <a href="cpo.html">CPO</a> · <a href="trade-in-and-lease-buyout.html">Trade-in and buyout</a>.</p>
+</div></section>
+<section class="section"><div class="wrap"><div class="cta-band"><p class="body" style="margin:0;color:#fff;"> Again: <a href="coverages-advisor.html">Curious about what coverages you should get to protect you the best? Click here</a></p></div></div></section>
+
+<section class="section"><div class="wrap"><p class="eyebrow">Questions</p><h2 class="h2">FAQ</h2><div class="faq"><div class="faq-item"><h3>Should I lease or finance an Audi in Louisiana and in Baton Rouge?</h3><p class="body" style="margin:0;">Lease if you want a newer Audi on a set term and mileage, typically inside the 4-year/50,000-mile new-vehicle limited warranty. Finance if you want your name on the title, no mileage cap, and no lease-end wear review. Audi USA’s own EV lease-or-finance page uses the same split. Keep-it-six-years-or-more is Consumer Reports’ buy rule, not an Audi payment quote.</p></div><div class="faq-item"><h3>How many miles can I drive on an Audi lease?</h3><p class="body" style="margin:0;">Audi Financial Services says standard leases are typically 15,000 or fewer miles per year. A higher limit means a higher payment. Eligible customers can buy additional miles at the halfway point. Your contract is the number that counts.</p></div><div class="faq-item"><h3>Who finances Audi now — Audi Financial Services or Wells Fargo?</h3><p class="body" style="margin:0;">Leases and finance contracts started before May 1, 2025 are serviced by Audi Financial Services. Finance contracts started on or after May 1, 2025 are Audi Retail Finance powered by Wells Fargo. AFS does not refinance vehicles at this time.</p></div><div class="faq-item"><h3>How is an Audi lease taxed in Louisiana?</h3><p class="body" style="margin:0;">Louisiana taxes leases on gross proceeds — the lease payments — not the full vehicle price (Louisiana Department of Revenue). State sales and use tax is 5%. Local rates vary by domicile. Audi FS also lists Louisiana among states where local jurisdictions may bill personal property tax on leased vehicles, added to the lease balance.</p></div><div class="faq-item"><h3>Can I buy my leased Audi? Does Audi refinance?</h3><p class="body" style="margin:0;">You can buy the leased car at any time (payoff quote in myAudi). If you purchase it you do not pay a turn-in fee, excess wear and use, or excess mileage. AFS does not refinance.</p></div><div class="faq-item"><h3>What happens at the end of an Audi lease?</h3><p class="body" style="margin:0;">Four paths: turn in toward a new Audi, extend, purchase, or turn in. Turn-in fee can be waived if you lease or buy a new or CPO Audi through AFS within 90 days. Inspections are done only by AiM.</p></div></div></div></section>
+<section class="section"><div class="wrap">
+<p class="fine">Last reviewed October 19, 2026. Facts drawn from Audi USA / Audi Financial Services, CFPB, FTC, Louisiana Department of Revenue, and LA OMV as cited on the page. Program terms change — confirm on this VIN. A separate writer will polish this copy. Visual research still in progress; rooftop photos are Audi Baton Rouge showroom, lounge, service, and lot.</p>
+<p class="fine" style="margin-top:12px;"><strong>Areas we serve.</strong> Shoppers come to Airline Highway from across Louisiana and in Baton Rouge, and from New Orleans, Lafayette, and the Mississippi Gulf Coast. The pairing rule still applies whenever Baton Rouge is named: in Louisiana and in Baton Rouge.</p>
+<p class="fine" style="margin-top:12px;">Audi Baton Rouge · 11955 Airline Hwy, Baton Rouge, LA 70817 · Sales (225) 686-6012 · Mon–Sat 9:00am–7:00pm · Sunday closed.<br>New inventory: <a href="https://audibatonrouge.com/collections/new-inventory">audibatonrouge.com/collections/new-inventory</a> · Finance: <a href="https://audibatonrouge.com/finance">/finance</a> · Specials: <a href="https://audibatonrouge.com/audi-baton-rouge-special-offers">current offers</a></p>
+</div></section>
+</div>

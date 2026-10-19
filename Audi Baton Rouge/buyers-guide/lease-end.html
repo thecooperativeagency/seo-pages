@@ -1,0 +1,111 @@
+<div class="abr-bg" style="font-family: AudiType, Audi, Arial, sans-serif;">
+<style>
+@font-face{font-family:"AudiType";src:url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"AudiType";src:url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+.abr-bg,.abr-bg *{font-family:AudiType,Audi,Arial,Helvetica,sans-serif !important;box-sizing:border-box;}
+.abr-bg{-webkit-font-smoothing:antialiased;--ink:#0a0e14;--card:#151c27;--border:#2a3545;--white:#fff;--muted:#9aa6b5;--soft:#d7dee8;--audi:#bb0a30;color:var(--white);background:var(--ink);}
+.abr-bg .wrap{max-width:1120px;margin:0 auto;width:100%;min-width:0;}
+.abr-bg .eyebrow{margin:0 0 12px;color:var(--muted);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;}
+.abr-bg h1,.abr-bg h2,.abr-bg h3,.abr-bg p{margin-top:0;}
+.abr-bg .h1{margin:0;max-width:920px;font-size:clamp(2rem,4.6vw,3.5rem);line-height:.96;letter-spacing:-.045em;font-weight:700;color:#fff !important;-webkit-text-fill-color:#fff;}
+.abr-bg .h2{margin:0 0 16px;font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.08;letter-spacing:-.04em;font-weight:700;}
+.abr-bg .deck{max-width:740px;margin:14px 0 0;color:var(--soft);font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.5;}
+.abr-bg .body{color:#c5ced9;font-size:16px;line-height:1.62;}
+.abr-bg .body a,.abr-bg .src a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+.abr-bg .section{padding:56px 40px;}
+.abr-bg .section + .section{border-top:1px solid var(--border);}
+.abr-bg .hero{position:relative;min-height:640px;display:flex;align-items:flex-end;background:#000;overflow:hidden;}
+.abr-bg .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;}
+.abr-bg .hero-fade-x{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,10,18,.8) 0%,rgba(5,10,18,.4) 44%,rgba(5,10,18,.08) 74%,rgba(5,10,18,.02) 100%);}
+.abr-bg .hero-fade-y{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,10,18,.16) 0%,rgba(5,10,18,.02) 48%,rgba(5,10,18,.92) 100%);}
+.abr-bg .hero-copy{position:relative;z-index:2;padding:120px 40px 56px;}
+.abr-bg .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0;}
+.abr-bg .btn{display:inline-block;padding:14px 22px;background:var(--audi);color:#fff !important;text-decoration:none !important;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;}
+.abr-bg .btn-ghost{background:transparent;border:1px solid #fff;}
+.abr-bg .minav{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 40px;background:#0e141c;border-bottom:1px solid var(--border);font-size:12px;letter-spacing:.04em;text-transform:uppercase;}
+.abr-bg .minav a{color:var(--soft);text-decoration:none;}
+.abr-bg .minav a[aria-current="page"]{color:#fff;font-weight:700;}
+.abr-bg table{width:100%;border-collapse:collapse;font-size:15px;}
+.abr-bg th,.abr-bg td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--soft);}
+.abr-bg th{color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
+.abr-bg .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.abr-bg .card{display:block;background:var(--card);border:1px solid var(--border);color:#fff !important;text-decoration:none !important;overflow:hidden;min-width:0;}
+.abr-bg .card img{width:100%;height:180px;object-fit:cover;display:block;}
+.abr-bg .card-b{padding:18px 20px;}
+.abr-bg .card span{display:block;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.abr-bg .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.abr-bg .panel{background:var(--card);border:1px solid var(--border);padding:22px 24px;}
+.abr-bg .panel h3{margin:0 0 12px;font-size:1.2rem;letter-spacing:-.03em;}
+.abr-bg .panel ul{margin:0;padding-left:18px;color:var(--soft);line-height:1.5;}
+.abr-bg .cta-band{background:#1a0a10;border:1px solid #5a1a28;padding:22px 24px;}
+.abr-bg .cta-band a{color:#fff;font-weight:700;}
+.abr-bg .inline-photo{width:100%;height:auto;display:block;margin:8px 0 0;}
+.abr-bg .caption{margin:8px 0 0;color:var(--muted);font-size:12px;}
+.abr-bg .faq-item{border-top:1px solid var(--border);padding:22px 0;}
+.abr-bg .faq-item:last-child{border-bottom:1px solid var(--border);}
+.abr-bg .faq-item h3{margin:0 0 8px;font-size:17px;letter-spacing:-.02em;}
+.abr-bg .fine{margin:0;color:var(--muted);font-size:12px;line-height:1.55;}
+.abr-bg .src{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.5;}
+.abr-bg .chips{display:flex;flex-wrap:wrap;gap:8px;}
+.abr-bg .chip{background:var(--card);border:1px solid var(--border);padding:10px 14px;color:var(--soft);font-size:14px;cursor:pointer;}
+.abr-bg .chip.on{border-color:#fff;color:#fff;}
+.abr-bg .prod{background:var(--card);border:1px solid var(--border);padding:20px;}
+.abr-bg .prod h3{margin:0 0 8px;}
+.abr-bg .hide{display:none;}
+.abr-bg .take{background:var(--card);border-left:3px solid var(--audi);padding:18px 20px;margin:0 0 20px;}
+@media (max-width:820px){
+  .abr-bg .section,.abr-bg .minav{padding-left:20px;padding-right:20px;}
+  .abr-bg .section{padding-top:32px;padding-bottom:32px;}
+  .abr-bg .hero{min-height:500px;}
+  .abr-bg .hero-copy{padding:72px 20px 36px;}
+  .abr-bg .cards,.abr-bg .split{grid-template-columns:1fr;}
+  .abr-bg .cta-row{flex-direction:column;}
+  .abr-bg .btn{text-align:center;}
+  .abr-bg table{display:block;overflow-x:auto;}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What counts as excess wear on an Audi lease?", "acceptedAnswer": {"@type": "Answer", "text": "Audi’s turn-in guide: normal includes scratches or dents under 2 inches, three or fewer quarter-size dings per panel, a single windshield chip without spidering, and tires with more than 1/8 inch of tread. Excess includes anything over 2 inches, more than three dings per panel, tires under 1/8 inch, mismatched tires on quattro, heavily gouged wheels, plugged sidewalls, service lights on, and aftermarket alterations not removed."}}, {"@type": "Question", "name": "Who inspects an Audi lease return?", "acceptedAnswer": {"@type": "Answer", "text": "Lease-end inspections are done only by AiM — third party, free, at home, office, or dealer. The report is valid for 90 days. Repairs must be done at an Audi Authorized Collision Repair Facility."}}, {"@type": "Question", "name": "How do I get the Audi turn-in fee waived?", "acceptedAnswer": {"@type": "Answer", "text": "Audi FAQs: the turn-in fee is waived if you lease or buy a new or CPO Audi through AFS within 90 days."}}]}</script>
+<nav class="minav" aria-label="Buyer's guide"><a href="index.html">Hub</a><a href="lease-vs-finance.html">Lease vs finance</a><a href="coverages-advisor.html">Coverages</a><a href="lease-end.html" aria-current="page">Lease-end</a><a href="warranty-maintenance.html">Warranty</a><a href="cpo.html">CPO</a><a href="louisiana-car-lease-tax-fees.html">LA tax & fees</a><a href="trade-in-and-lease-buyout.html">Trade-in</a><a href="special-programs.html">Programs</a></nav>
+<section class="hero">
+  <img class="hero-photo" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/s-line-news-issue-02/abr-q7-lot.jpg" alt="Audi Q7 on the Audi Baton Rouge lot" style="object-position:center 45%;">
+  <div class="hero-fade-x"></div>
+  <div class="hero-fade-y"></div>
+  <div class="hero-copy wrap">
+    <p class="eyebrow">Audi Baton Rouge · Buyer’s guide</p>
+    <h1 class="h1" style="color:#fff !important;-webkit-text-fill-color:#fff;">What happens at the end of an Audi lease?</h1>
+    <p class="deck">AiM, a measuring tool, and four exits. Buy it and the wear bill goes away.</p>
+  </div>
+</section>
+
+<section class="section"><div class="wrap">
+<div class="take"><p class="body" style="margin:0;">Four paths: turn in toward a new Audi, extend, purchase, or turn in. Inspections are AiM only. Buy the car and you skip turn-in fee, excess wear, and excess miles.</p></div>
+<p class="body">Audi mails a measuring tool before lease end. Repairs on the inspection must be done at an Audi Authorized Collision Repair Facility. Report valid 90 days.</p>
+</div></section>
+<section class="section"><div class="wrap">
+<h2 class="h2">What counts as normal vs excess?</h2>
+<table>
+<thead><tr><th>Normal (examples)</th><th>Excess (examples)</th></tr></thead>
+<tbody>
+<tr><td>Scratches or dents under 2 inches</td><td>Anything over 2 inches</td></tr>
+<tr><td>Three or fewer quarter-size dings per panel</td><td>More than 3 dings per panel</td></tr>
+<tr><td>A single windshield chip without spidering</td><td>Spidered glass</td></tr>
+<tr><td>Tires with more than 1/8 inch of tread</td><td>Tires under 1/8 inch; quattro tires that don’t match brand/size/rating</td></tr>
+<tr><td></td><td>Heavily gouged wheels, plugged sidewalls, service lights on, aftermarket not removed</td></tr>
+</tbody>
+</table>
+<p class="src"><a href="https://www.audiusa.com/en/shopping-tools/financial-services-hub/lease-an-audi/turn-in-process/">Audi turn-in / wear guide</a>.</p>
+<img class="inline-photo" src="https://raw.githubusercontent.com/thecooperativeagency/seo-pages/main/assets/s-line-news-issue-02/abr-q7-lot.jpg" alt="Audi Q7 on the lot at Audi Baton Rouge">
+</div></section>
+<section class="section"><div class="wrap">
+<h2 class="h2">Miles, fees, buyout</h2>
+<p class="body">Eligible customers can buy additional miles at the halfway point. Final invoice can include excess wear, excess mileage, turn-in fee (waived if you lease or buy new or CPO through AFS within 90 days), taxes, late fees. Early termination: the earlier you end it, the greater the charge is likely to be. You can buy at any time via myAudi payoff. AFS does not refinance.</p>
+<p class="body"><a href="coverages-advisor.html">Curious about what coverages you should get to protect you the best? Click here</a></p>
+</div></section>
+
+<section class="section"><div class="wrap"><p class="eyebrow">Questions</p><h2 class="h2">FAQ</h2><div class="faq"><div class="faq-item"><h3>What counts as excess wear on an Audi lease?</h3><p class="body" style="margin:0;">Audi’s turn-in guide: normal includes scratches or dents under 2 inches, three or fewer quarter-size dings per panel, a single windshield chip without spidering, and tires with more than 1/8 inch of tread. Excess includes anything over 2 inches, more than three dings per panel, tires under 1/8 inch, mismatched tires on quattro, heavily gouged wheels, plugged sidewalls, service lights on, and aftermarket alterations not removed.</p></div><div class="faq-item"><h3>Who inspects an Audi lease return?</h3><p class="body" style="margin:0;">Lease-end inspections are done only by AiM — third party, free, at home, office, or dealer. The report is valid for 90 days. Repairs must be done at an Audi Authorized Collision Repair Facility.</p></div><div class="faq-item"><h3>How do I get the Audi turn-in fee waived?</h3><p class="body" style="margin:0;">Audi FAQs: the turn-in fee is waived if you lease or buy a new or CPO Audi through AFS within 90 days.</p></div></div></div></section>
+<section class="section"><div class="wrap">
+<p class="fine">Last reviewed October 19, 2026. Facts drawn from Audi USA / Audi Financial Services, CFPB, FTC, Louisiana Department of Revenue, and LA OMV as cited on the page. Program terms change — confirm on this VIN. A separate writer will polish this copy. Visual research still in progress; rooftop photos are Audi Baton Rouge showroom, lounge, service, and lot.</p>
+<p class="fine" style="margin-top:12px;"><strong>Areas we serve.</strong> Shoppers come to Airline Highway from across Louisiana and in Baton Rouge, and from New Orleans, Lafayette, and the Mississippi Gulf Coast. The pairing rule still applies whenever Baton Rouge is named: in Louisiana and in Baton Rouge.</p>
+<p class="fine" style="margin-top:12px;">Audi Baton Rouge · 11955 Airline Hwy, Baton Rouge, LA 70817 · Sales (225) 686-6012 · Mon–Sat 9:00am–7:00pm · Sunday closed.<br>New inventory: <a href="https://audibatonrouge.com/collections/new-inventory">audibatonrouge.com/collections/new-inventory</a> · Finance: <a href="https://audibatonrouge.com/finance">/finance</a> · Specials: <a href="https://audibatonrouge.com/audi-baton-rouge-special-offers">current offers</a></p>
+</div></section>
+</div>
