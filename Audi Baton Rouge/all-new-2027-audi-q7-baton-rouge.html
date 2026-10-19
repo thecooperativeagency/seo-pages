@@ -185,8 +185,47 @@
     .abr-allnew-page .disclaimer p {
       font-size: 12px; color: #777; max-width: 900px; margin: 0 auto; line-height: 1.6;
     }
+    .abr-allnew-page .ncap-plaque-wrap {
+      flex: 1; min-height: 520px; background: #111;
+      display: flex; align-items: center; justify-content: center; padding: 48px 7%;
+    }
+    .abr-allnew-page .ncap-plaque {
+      background: #fff; color: #111; width: 100%; max-width: 420px;
+      padding: 36px 32px 28px; text-align: center;
+    }
+    .abr-allnew-page .ncap-plaque-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      margin-bottom: 22px;
+    }
+    .abr-allnew-page .ncap-plaque-top img { display: block; height: 36px; width: auto; }
+    .abr-allnew-page .ncap-stars { width: 100%; max-width: 280px; height: auto; margin: 0 auto 18px; display: block; }
+    .abr-allnew-page .ncap-100 {
+      font-size: clamp(48px, 8vw, 72px); font-weight: 700; line-height: 1; letter-spacing: -0.03em;
+      color: #111 !important; margin: 0 0 6px;
+    }
+    .abr-allnew-page .ncap-100-cap {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #555; margin: 0 0 22px;
+    }
+    .abr-allnew-page .ncap-scores {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px;
+      border-top: 1px solid #ddd; padding-top: 16px; text-align: left;
+    }
+    .abr-allnew-page .ncap-scores dt {
+      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #666; margin: 0;
+    }
+    .abr-allnew-page .ncap-scores dd {
+      font-size: 18px; font-weight: 700; color: #111; margin: 0 0 8px;
+    }
+    .abr-allnew-page .ncap-sources {
+      font-size: 13px; color: #9a9a9a; margin: 18px 0 0;
+    }
+    .abr-allnew-page .ncap-sources a {
+      color: #fff; text-decoration: underline; text-underline-offset: 3px;
+    }
     @media (max-width: 900px) {
       .abr-allnew-page .stats-grid { grid-template-columns: 1fr 1fr; }
+      .abr-allnew-page .ncap-plaque-wrap { min-height: 0; padding: 36px 6%; }
       .abr-allnew-page .feature,
       .abr-allnew-page .feature.reverse { flex-direction: column; }
       .abr-allnew-page .feature-img { width: 100%; min-height: 280px; }
@@ -237,6 +276,34 @@
     <span class="label">All-new generation</span>
     <h2 style="color:#ffffff;">Redesigned from the ground up</h2>
     <p>Starting at $70,900, the 2027 Q7 is a complete redesign — more powerful and more capable than the generation it replaces. It seats seven, reaches 60 mph in 4.8 seconds, and tows up to 7,700 pounds when properly equipped.</p>
+  </section>
+
+  <section class="feature reverse alt">
+    <div class="ncap-plaque-wrap">
+      <div class="ncap-plaque">
+        <div class="ncap-plaque-top">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-all-new-q7-q9-2027/q7/euro-ncap-logo.png" alt="Euro NCAP" width="202" height="60" />
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-all-new-q7-q9-2027/q7/audi-rings-ncap.svg" alt="Audi" width="80" height="36" />
+        </div>
+        <img class="ncap-stars" src="https://thecooperativeagency.github.io/seo-pages/assets/abr-all-new-q7-q9-2027/q7/euro-ncap-five-stars.svg" alt="Five stars" width="280" height="48" />
+        <div class="ncap-100">100%</div>
+        <p class="ncap-100-cap">Post-Crash Safety</p>
+        <dl class="ncap-scores">
+          <div><dt>Overall</dt><dd>Five stars</dd></div>
+          <div><dt>Crash Protection</dt><dd>88%</dd></div>
+          <div><dt>Crash Avoidance</dt><dd>77%</dd></div>
+          <div><dt>Safe Driving</dt><dd>72%</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="feature-text">
+      <span class="label">Euro NCAP</span>
+      <h2 style="color:#ffffff;">Built to look after you — even after a crash</h2>
+      <p>Audi says the new Q7 is the first production model ever to earn a 100 percent score in Euro NCAP Post-Crash Safety. That’s the part of the test that looks at what happens after an accident: calling for help, holding the car still, and making it easier for first responders to get you out.</p>
+      <p>It also earned five stars overall, with Crash Protection at 88 percent, Crash Avoidance at 77 percent, and Safe Driving at 72 percent.</p>
+      <p>Euro NCAP tested a European version of the new Q7. Equipment on the cars we order here can differ, so this is the independent rating for that car — not a promise on every version.</p>
+      <p class="ncap-sources"><a href="https://www.euroncap.com/assessments/audi/q7/1235/">See the full Euro NCAP rating</a> · <a href="https://www.audi.com/en/press-releases/every-second-counts-audi-q7-becomes-the-first-production-model-to-earn-100-percent-in-euro-ncap-post-crash-safety-18379">Audi’s announcement</a></p>
+    </div>
   </section>
 
   <section class="feature">
@@ -310,7 +377,7 @@
   </section>
 
   <section class="disclaimer">
-    <p>Information based on Audi of America materials for the all-new 2027 Audi Q7. Starting MSRP $70,900 excludes destination, taxes, title, options, and dealer fees; dealer sets actual price. Horsepower, torque, acceleration, cargo, seating, towing, lighting, and feature availability vary by configuration and are subject to change. Maximum tow rating when properly equipped; load and options may reduce capacity. Always obey local speed and traffic laws. Driver assistance features are not substitutes for attentive driving. Some images may show European-specification, pre-production, or computer-generated vehicles and may include features not available on U.S. models. Build &amp; price links go to Audi USA; Audi Baton Rouge does not currently host a local all-new Q7 configurator page. The all-new 2027 Q7 is expected later this year; dealer arrival depends on production and allocation. Current Q7 inventory linked from this page may be prior model year. Contact Audi Baton Rouge for the latest information. Audi, quattro, MMI, Tiptronic, and the four rings are trademarks of AUDI AG.</p>
+    <p>Information based on Audi of America materials for the all-new 2027 Audi Q7. Starting MSRP $70,900 excludes destination, taxes, title, options, and dealer fees; dealer sets actual price. Horsepower, torque, acceleration, cargo, seating, towing, lighting, and feature availability vary by configuration and are subject to change. Maximum tow rating when properly equipped; load and options may reduce capacity. Always obey local speed and traffic laws. Driver assistance features are not substitutes for attentive driving. Some images may show European-specification, pre-production, or computer-generated vehicles and may include features not available on U.S. models. Euro NCAP tested a European specification of the new Q7 (published October 12, 2026). Five stars overall, with Crash Protection 88 percent, Crash Avoidance 77 percent, Safe Driving 72 percent, and Post-Crash Safety 100 percent. Audi says it is the first production model to earn 100 percent in Post-Crash Safety. Ratings apply to the tested car; U.S. equipment can differ. Build &amp; price links go to Audi USA; Audi Baton Rouge does not currently host a local all-new Q7 configurator page. The all-new 2027 Q7 is expected later this year; dealer arrival depends on production and allocation. Current Q7 inventory linked from this page may be prior model year. Contact Audi Baton Rouge for the latest information. Audi, quattro, MMI, Tiptronic, and the four rings are trademarks of AUDI AG. Euro NCAP is a trademark of its owner.</p>
   </section>
 
 </div>
