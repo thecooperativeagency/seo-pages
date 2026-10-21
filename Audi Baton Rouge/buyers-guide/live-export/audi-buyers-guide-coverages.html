@@ -1,0 +1,383 @@
+<style>
+    @font-face {
+      font-family: "AudiType";
+      src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "AudiType";
+      src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .abr-allnew-page {
+      font-family: AudiType, Audi, Arial, Helvetica, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+    }
+    .abr-allnew-page a { color: inherit; text-decoration: none; }
+    .abr-allnew-page h1,
+    .abr-allnew-page h2,
+    .abr-allnew-page h3,
+    .abr-allnew-page p,
+    .abr-allnew-page li,
+    .abr-allnew-page span {
+      font-family: AudiType, Audi, Arial, Helvetica, sans-serif;
+    }
+    .abr-allnew-page .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #fff; color: #000 !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 32px; border-radius: 0; border: none; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-primary span { color: #000 !important; white-space: nowrap; }
+    .abr-allnew-page .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; color: #fff !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 13px 32px; border-radius: 0; border: 1px solid #fff; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-secondary span { color: #fff !important; white-space: nowrap; }
+    .abr-allnew-page .btn-dark {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #000; color: #fff !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 32px; border-radius: 0; border: 1px solid #fff; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-dark span { color: #fff !important; white-space: nowrap; }
+    .abr-allnew-page .label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #BDBDBD; display: block; margin-bottom: 10px;
+    }
+    .abr-allnew-page .hero {
+      position: relative; width: 100%; min-height: 90vh;
+      background: #000 center center / cover no-repeat;
+      display: flex; align-items: flex-end;
+    }
+    /* Stronger bottom scrim so Motive inject never leaves dark type on dark photo */
+    .abr-allnew-page .hero-overlay {
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.72) 28%,
+        rgba(0,0,0,0.35) 55%,
+        rgba(0,0,0,0.12) 78%,
+        rgba(0,0,0,0.05) 100%
+      );
+    }
+    .abr-allnew-page .hero-content {
+      position: relative; z-index: 2; padding: 64px 7% 72px; max-width: 780px;
+      color: #ffffff;
+    }
+    .abr-allnew-page .hero-content .label { color: #e8e8e8 !important; }
+    .abr-allnew-page .hero-content h1 {
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 16px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+    }
+    .abr-allnew-page .hero-content .hero-sub {
+      font-size: 18px; line-height: 1.45; margin: 0 0 12px; max-width: 560px;
+      color: #f2f2f2 !important; -webkit-text-fill-color: #f2f2f2;
+    }
+    .abr-allnew-page .hero-content .hero-msrp {
+      font-size: 14px; margin: 0 0 8px; letter-spacing: 0.02em;
+      color: #e0e0e0 !important; -webkit-text-fill-color: #e0e0e0;
+    }
+    .abr-allnew-page .hero-content .hero-timing {
+      font-size: 13px; margin: 0 0 28px; max-width: 520px;
+      color: #d0d0d0 !important; -webkit-text-fill-color: #d0d0d0;
+    }
+    .abr-allnew-page .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .abr-allnew-page .stats {
+      background: #0b0b0b; border-top: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f;
+      padding: 36px 7%; color: #fff;
+    }
+    .abr-allnew-page .stats-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px; max-width: 720px; margin: 0 auto;
+    }
+    .abr-allnew-page .cta-buttons a.btn-dark {
+      background: transparent; color: #fff !important;
+      border: 1px solid #fff;
+    }
+    .abr-allnew-page .cta-buttons a.btn-dark span { color: #fff !important; }
+    .abr-allnew-page .stat { text-align: center; padding: 8px 10px; }
+    .abr-allnew-page .stat .num {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.1; margin-bottom: 8px; color: #ffffff !important;
+    }
+    .abr-allnew-page .stat .cap {
+      font-size: 12px; color: #9a9a9a; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .abr-allnew-page .intro { background: #111; padding: 80px 7%; text-align: center; color: #fff; }
+    .abr-allnew-page .intro h2 {
+      font-size: clamp(26px, 4vw, 44px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 20px; color: #ffffff !important;
+    }
+    .abr-allnew-page .intro p {
+      font-size: 18px; color: #BDBDBD; max-width: 760px; margin: 0 auto;
+    }
+    .abr-allnew-page .feature { display: flex; align-items: center; min-height: 520px; }
+    .abr-allnew-page .feature.reverse { flex-direction: row-reverse; }
+    .abr-allnew-page .feature-img {
+      flex: 1; min-height: 520px; background-size: cover; background-position: center; background-color: #0a0a0a;
+    }
+    .abr-allnew-page .feature-text { flex: 1; padding: 60px 7%; background: #1a1a1a; color: #fff; }
+    .abr-allnew-page .feature.alt .feature-text { background: #000; }
+    .abr-allnew-page .feature-text h2 {
+      font-size: clamp(24px, 3.5vw, 40px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 16px; line-height: 1.1; color: #ffffff !important;
+    }
+    .abr-allnew-page .feature-text p {
+      font-size: 16px; color: #BDBDBD; line-height: 1.7; margin: 0 0 16px;
+    }
+    .abr-allnew-page .feature-bullets { list-style: none; margin: 16px 0 0; padding: 0; }
+    .abr-allnew-page .feature-bullets li {
+      font-size: 15px; color: #ccc; padding: 8px 0; border-bottom: 1px solid #333;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .abr-allnew-page .feature-bullets li::before {
+      content: ''; display: inline-block; width: 18px; height: 2px; background: #fff; flex-shrink: 0;
+    }
+    .abr-allnew-page .details { background: #111; padding: 80px 7%; color: #fff; }
+    .abr-allnew-page .details-header { text-align: center; margin-bottom: 40px; }
+    .abr-allnew-page .details-header h2 {
+      font-size: clamp(26px, 4vw, 44px); font-weight: 700; letter-spacing: -0.01em; color: #ffffff !important;
+    }
+    .abr-allnew-page .details-header p { font-size: 15px; color: #BDBDBD; margin-top: 8px; }
+    .abr-allnew-page .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .abr-allnew-page .details-grid img {
+      width: 100%; height: 380px; object-fit: cover; display: block; background: #000;
+    }
+    .abr-allnew-page .cta-section {
+      background: #000; border-top: 1px solid #222; padding: 100px 7%; text-align: center; color: #fff;
+    }
+    .abr-allnew-page .cta-section .label { text-align: center; display: block; margin-bottom: 16px; }
+    .abr-allnew-page .cta-section h2 {
+      font-size: clamp(28px, 4vw, 50px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 16px; color: #ffffff !important;
+    }
+    .abr-allnew-page .cta-section p {
+      font-size: 18px; color: #BDBDBD; margin: 0 auto 40px; max-width: 640px;
+    }
+    .abr-allnew-page .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .abr-allnew-page .disclaimer { background: #000; padding: 24px 7% 60px; text-align: center; }
+    .abr-allnew-page .disclaimer p {
+      font-size: 12px; color: #777; max-width: 900px; margin: 0 auto; line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .abr-allnew-page .stats-grid { grid-template-columns: 1fr 1fr; }
+      .abr-allnew-page .feature,
+      .abr-allnew-page .feature.reverse { flex-direction: column; }
+      .abr-allnew-page .feature-img { width: 100%; min-height: 280px; }
+      .abr-allnew-page .feature-text { padding: 48px 6%; }
+      .abr-allnew-page .hero-content { padding: 40px 6% 52px; }
+      .abr-allnew-page .details-grid { grid-template-columns: 1fr; }
+      .abr-allnew-page .details-grid img { height: 260px; }
+      .abr-allnew-page .hero-ctas,
+      .abr-allnew-page .cta-buttons { flex-direction: column; align-items: flex-start; }
+      .abr-allnew-page .cta-buttons { align-items: center; }
+      .abr-allnew-page .intro,
+      .abr-allnew-page .details,
+      .abr-allnew-page .cta-section,
+      .abr-allnew-page .stats { padding-left: 6%; padding-right: 6%; }
+    }
+
+  
+    .abr-allnew-page .minav {
+      background:#0b0b0b; border-bottom:1px solid #1f1f1f;
+      display:flex; gap:22px; padding:14px 7%; overflow-x:auto;
+      white-space:nowrap; font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+      -webkit-overflow-scrolling:touch;
+    }
+    .abr-allnew-page .minav a { color:#BDBDBD; }
+    .abr-allnew-page .minav a[aria-current="page"] { color:#fff; }
+    .abr-allnew-page .prose { background:#111; padding:80px 7%; color:#fff; }
+    .abr-allnew-page .prose.alt { background:#000; }
+    .abr-allnew-page .prose-inner { max-width:760px; }
+    .abr-allnew-page .prose.center { text-align:center; }
+    .abr-allnew-page .prose.center .prose-inner { margin:0 auto; }
+    .abr-allnew-page .prose h2 {
+      font-size:clamp(26px,4vw,44px); font-weight:700; letter-spacing:-0.01em;
+      margin:0 0 20px; color:#fff !important;
+    }
+    .abr-allnew-page .prose h3 {
+      font-size:20px; font-weight:700; letter-spacing:-0.01em; margin:28px 0 10px; color:#fff !important;
+    }
+    .abr-allnew-page .prose p, .abr-allnew-page .prose li {
+      font-size:16px; color:#BDBDBD; line-height:1.7; margin:0 0 16px;
+    }
+    .abr-allnew-page .prose a { color:#fff; text-decoration:underline; text-underline-offset:3px; }
+    .abr-allnew-page .guide-table { width:100%; border-collapse:collapse; margin:12px 0 24px; }
+    .abr-allnew-page .guide-table th {
+      font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+      color:#BDBDBD; text-align:left; padding:12px 10px; border-bottom:1px solid #333;
+    }
+    .abr-allnew-page .guide-table td {
+      font-size:15px; color:#ccc; padding:12px 10px; border-bottom:1px solid #333; vertical-align:top; line-height:1.6;
+    }
+    .abr-allnew-page .faq { max-width:760px; margin:0 auto; text-align:left; }
+    .abr-allnew-page .faq-item { border-top:1px solid #333; padding:22px 0; }
+    .abr-allnew-page .faq-item:last-child { border-bottom:1px solid #333; }
+    .abr-allnew-page .faq-item h3 { font-size:20px; font-weight:700; letter-spacing:-0.01em; color:#fff !important; margin:0 0 8px; }
+    .abr-allnew-page .faq-item p { font-size:16px; color:#BDBDBD; line-height:1.7; margin:0; }
+    .abr-allnew-page .hub-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
+    .abr-allnew-page .hub-tile {
+      position:relative; min-height:280px; background-size:cover; background-position:center;
+      display:flex; align-items:flex-end; padding:28px; color:#fff !important;
+    }
+    .abr-allnew-page .hub-tile::after {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.2) 55%,transparent 100%);
+    }
+    .abr-allnew-page .hub-tile strong {
+      position:relative; z-index:1; font-size:clamp(18px,2.4vw,24px); font-weight:700; letter-spacing:-0.01em;
+      color:#fff !important;
+    }
+    .abr-allnew-page .chips { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 24px; }
+    .abr-allnew-page .chip {
+      display:inline-flex; align-items:center; justify-content:center;
+      background:#000; color:#fff !important; border:1px solid #333;
+      font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      padding:12px 18px; cursor:pointer;
+    }
+    .abr-allnew-page .chip.on { background:#fff; color:#000 !important; border-color:#fff; }
+    .abr-allnew-page .prod { padding:28px 0; border-bottom:1px solid #333; transition:opacity .2s ease; }
+    .abr-allnew-page .prod h3 { font-size:22px; margin:0 0 10px; color:#fff !important; }
+    .abr-allnew-page .prod.is-dim { opacity:.28; }
+    .abr-allnew-page .prod.is-hit { outline:1px solid #fff; outline-offset:8px; opacity:1; }
+    .abr-allnew-page .src { font-size:12px; color:#777; margin:8px 0 0; }
+    .abr-allnew-page .src a { color:#777; text-decoration:underline; }
+
+    .abr-allnew-page .cta-buttons {
+      display:flex; flex-wrap:wrap; gap:12px; align-items:stretch;
+    }
+    .abr-allnew-page .cta-buttons a {
+      min-height:48px; min-width:220px; box-sizing:border-box;
+      padding:14px 32px !important;
+    }
+
+    @media (max-width:900px) {
+      .abr-allnew-page .hub-grid { grid-template-columns:1fr; }
+      .abr-allnew-page .hub-tile { min-height:220px; }
+      .abr-allnew-page .minav { padding-left:6%; padding-right:6%; }
+      .abr-allnew-page .prose { padding:48px 6%; }
+      .abr-allnew-page .guide-table { display:block; overflow-x:auto; }
+    }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a dealer make me buy gap coverage or an extended warranty?", "acceptedAnswer": {"@type": "Answer", "text": "No. Federal consumer protection agencies are clear that these products are optional and not required to get a loan."}}, {"@type": "Question", "name": "Do I need gap coverage on an Audi lease?", "acceptedAnswer": {"@type": "Answer", "text": "Check your lease contract for any included gap coverage. On a loan, gap protection is worth talking about if you put little money down or take a long term."}}, {"@type": "Question", "name": "Is tire and wheel protection worth it in Baton Rouge, Louisiana?", "acceptedAnswer": {"@type": "Answer", "text": "Here in Baton Rouge, Louisiana, a national road report from April 2025 found that 60% of the area’s major roads are in poor or mediocre shape, costing drivers about $945 a year extra. The tire and wheel plan covers potholes. Your auto insurance may also cover pothole damage, minus your deductible."}}, {"@type": "Question", "name": "Does car insurance cover flood damage in Louisiana?", "acceptedAnswer": {"@type": "Answer", "text": "Comprehensive insurance covers floods and hurricanes. That’s a question for your insurance, not a dealership product. After a total loss on a loan, gap coverage is what covers the difference between the insurance check and what you still owe."}}, {"@type": "Question", "name": "Is an extended warranty worth it on an Audi?", "acceptedAnswer": {"@type": "Answer", "text": "A typical three-year lease stays inside the factory 4-year/50,000-mile warranty, so a vehicle service contract is usually low priority. It matters more if you’ll keep the car past year four. Consumer Reports found owners often paid more than they got back."}}]}</script>
+<div class="abr-allnew-page">
+<section class="hero" style="background-image:url('https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/audi-hood-rain-pexels-12418665.jpg');">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <span class="label" style="color:#e8e8e8;">Audi Baton Rouge</span>
+    <h1 style="color:#ffffff;">Protect your<br>investment</h1>
+    <p class="hero-sub" style="color:#f2f2f2;">Every one of these is optional. We’ll help you figure out which ones fit how you drive, and which ones you may be able to skip.</p>
+    <div class="hero-ctas">
+      <a href="https://audibatonrouge.com/get-pre-qualified" class="btn-primary"><span>Get Pre-Qualified</span></a>
+      <a href="https://audibatonrouge.com/collections/new-inventory" class="btn-secondary"><span>Shop New Inventory</span></a>
+    </div>
+  </div>
+</section><nav class="minav" aria-label="Buyer guide"><a href="/audi-buyers-guide">Home</a><a href="/audi-buyers-guide-lease-vs-finance">Lease or finance</a><a href="/audi-buyers-guide-coverages" aria-current="page">Protection</a><a href="/audi-buyers-guide-lease-end">When the lease ends</a><a href="/audi-buyers-guide-warranty-maintenance">Warranty</a><a href="/audi-buyers-guide-cpo">Certified Pre-Owned</a><a href="/audi-buyers-guide-louisiana-tax-fees">Tax and plates</a><a href="/audi-buyers-guide-trade-in-buyout">Trade-in or buyout</a><a href="/audi-buyers-guide-special-programs">Special programs</a></nav><section class="intro"><span class="label">Protection</span>
+    <h2 style="color:#ffffff;">Let us help you pick the protection you need.</h2><p>We’ll put every price in writing. If you change your mind later, you can cancel unused coverage if your contract allows it.</p></section><section class="intro"><span class="label">Good to know</span><p>Audi Signature Care is scheduled maintenance — oil changes and the factory service visits — for 3 years or 30,000 miles on 2026 and newer models. It is not an extra protection plan. On a typical lease, that scheduled maintenance is covered for the term. If you buy and keep your Audi longer, Audi Care Select can extend it.</p></section><section class="feature">
+  <div class="feature-img" style="background-image:url('https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/finance-office-pexels-7144262.jpg');"></div>
+  <div class="feature-text">
+    <span class="label">How you drive</span>
+    <h2 style="color:#ffffff;">Lease or finance changes the list.</h2>
+    <p>If you are leasing, tire and wheel protection and key replacement usually fit. If you are financing, we would suggest a vehicle service contract — extra repair coverage after the factory warranty — because year five is on you.</p>
+  </div>
+</section><section class="prose"><div class="prose-inner">
+        <span class="label">Match it to your life</span>
+        <h2>A quick guide to start the conversation</h2>
+        <table class="guide-table"><thead><tr><th>If you…</th><th>Ask about</th></tr></thead><tbody><tr><td>Lease</td><td>Tire and wheel, dent, and key replacement. Windshield. Check your lease before adding gap protection.</td></tr><tr><td>Finance</td><td>A vehicle service contract (7 years / 100,000 miles) if you will keep it past 4 years / 50,000 miles. Gap protection if you put little down or take a long term.</td></tr><tr><td>Keep it under 4 years</td><td>You’re usually still under the factory warranty.</td></tr><tr><td>Keep it 5+ years</td><td>A vehicle service contract.</td></tr><tr><td>Over 12–15k miles a year</td><td>Wear items and extra lease miles.</td></tr><tr><td>Potholes in Baton Rouge, Louisiana</td><td>Tire and wheel.</td></tr><tr><td>Interstate or construction</td><td>Windshield protection.</td></tr><tr><td>Kids, pets, street parking</td><td>Dent, key, paint and interior.</td></tr><tr><td>Theft</td><td>Theft protection ($5,000 benefit).</td></tr></tbody></table>
+        <p id="filter-hint" class="src">Tap one or more. Matching plans stay bright; the rest fade. Nothing is hidden.</p>
+        <div id="flow" class="chips">
+          <button type="button" class="chip" data-filter="lease">Lease</button>
+          <button type="button" class="chip" data-filter="finance">Finance</button>
+          <button type="button" class="chip" data-filter="vsc">Keep 5+ years</button>
+          <button type="button" class="chip" data-filter="tire">Potholes</button>
+          <button type="button" class="chip" data-filter="dent key appearance">Kids / pets</button>
+          <button type="button" class="chip" data-filter="theft">Theft</button>
+          <button type="button" class="chip" data-filter="gap">Flood / total loss</button>
+        </div>
+        <div id="prods">
+    <article class="prod" data-tags="finance vsc"><h3>Vehicle service contract</h3><p>A vehicle service contract is extra repair coverage after the factory warranty. The plan here runs 7 years or 100,000 miles. We would suggest this if you are financing and will keep the car past year four. On a typical short lease you are still inside the factory warranty, so it is usually low priority. <a href="https://www.consumerreports.org/cars/car-repair/get-an-extended-warranty-for-your-car-a1570471227/">Consumer Reports</a>.</p></article>
+    <article class="prod" data-tags="finance gap"><h3>Gap protection</h3><p>If the car is totaled or stolen, gap protection covers the difference between the insurance check and what you still owe. Check your lease contract before adding it. On a loan, it is worth talking about if you put little money down or take a long term. <a href="https://www.nerdwallet.com/insurance/auto/learn/gap-insurance">NerdWallet</a> notes that gap coverage from your insurance company often costs less than buying it from a dealer.</p></article>
+    <article class="prod" data-tags="lease finance appearance"><h3>Paint and interior protection</h3><p>Helps with stains, wear, and the finish on paint and interior surfaces. 5 years. Useful if you have kids, pets, or street parking.</p></article>
+    <article class="prod" data-tags="lease finance theft"><h3>Theft protection</h3><p>Pays a $5,000 benefit if the car is stolen. 5 years.</p></article>
+    <article class="prod" data-tags="lease finance glass"><h3>Windshield protection</h3><p>Chip and crack repair. A spidered windshield can be a lease-end charge. 5 years.</p></article>
+    <article class="prod" data-tags="lease finance tire dent key"><h3>Tire and wheel, dent, and key replacement</h3><p>One plan for potholes and road hazards, small dent repair, and a lost or damaged key (up to $800). 5 years. The piece that usually fits a lease is tire and wheel plus key replacement — especially on the roads in Baton Rouge, Louisiana. <a href="https://tripnet.org/reports/keeping-louisiana-mobile-baton-rouge-news-release-04-09-2025/">Road report, April 2025</a>.</p></article>
+        </div>
+        <p class="src"><a href="https://www.consumerfinance.gov/ask-cfpb/am-i-required-to-purchase-an-extended-warranty-or-guaranteed-asset-protection-gap-insurance-from-a-lender-or-dealer-to-get-an-auto-loan-en-807/">Consumer Financial Protection Bureau</a> · <a href="https://consumer.ftc.gov/articles/financing-or-leasing-car">Federal Trade Commission</a></p>
+        </div></section><section class="details"><div class="details-header"><h2 style="color:#ffffff;">What these look like</h2></div>
+        <div class="details-grid">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/ppf-door-pexels-36021355.jpg" alt="Paint protection film">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/interior-cloth-pexels-31389821.jpg" alt="Interior being cleaned">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/pdr-pexels-37809549.jpg" alt="Dent repair">
+          <img src="https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/windshield-pexels-11950155.jpg" alt="Windshield repair">
+        </div></section><section class="cta-section">
+  <span class="label">Visit</span>
+  <h2 style="color:#ffffff;">Ask for a written quote</h2>
+  <p>We’ll walk through the list together, and you decide what’s worth it.</p>
+  <div class="cta-buttons"><a class="btn-primary" href="https://audibatonrouge.com/get-pre-qualified"><span>Get Pre-Qualified</span></a><a class="btn-secondary" href="https://audibatonrouge.com/collections/new-inventory"><span>Shop New Inventory</span></a><a class="btn-dark" href="https://audibatonrouge.com/trade"><span>Value My Trade</span></a></div>
+</section><script>
+        (function(){
+          var flow=document.getElementById("flow");
+          var box=document.getElementById("prods");
+          var hint=document.getElementById("filter-hint");
+          if(!flow||!box) return;
+          var chips=[].slice.call(flow.querySelectorAll(".chip"));
+          var cards=[].slice.call(box.querySelectorAll(".prod"));
+          function apply(){
+            var tags=[];
+            chips.forEach(function(c){
+              if(c.classList.contains("on")){
+                (c.getAttribute("data-filter")||"").split(/\s+/).forEach(function(t){ if(t) tags.push(t); });
+              }
+            });
+            cards.forEach(function(el){
+              var have=(el.getAttribute("data-tags")||"").split(/\s+/);
+              var hit=!tags.length || tags.some(function(t){ return have.indexOf(t)!==-1; });
+              el.classList.toggle("is-hit", !!tags.length && hit);
+              el.classList.toggle("is-dim", !!tags.length && !hit);
+            });
+            if(hint) hint.textContent = tags.length
+              ? "Matching plans are outlined. The rest fade. Tap again to clear."
+              : "Tap one or more. Matching plans stay bright; the rest fade. Nothing is hidden.";
+          }
+          chips.forEach(function(c){
+            c.addEventListener("click", function(){ c.classList.toggle("on"); apply(); });
+          });
+          apply();
+        })();
+        </script>
+<section class="intro" style="background:#000;text-align:left;">
+  <div class="faq"><span class="label">Questions</span>
+  <h2 style="color:#ffffff;text-align:center;margin-bottom:28px;">FAQ</h2>
+  <div class="faq-item"><h3>Can a dealer make me buy gap coverage or an extended warranty?</h3><p>No. Federal consumer protection agencies are clear that these products are optional and not required to get a loan.</p></div><div class="faq-item"><h3>Do I need gap coverage on an Audi lease?</h3><p>Check your lease contract for any included gap coverage. On a loan, gap protection is worth talking about if you put little money down or take a long term.</p></div><div class="faq-item"><h3>Is tire and wheel protection worth it in Baton Rouge, Louisiana?</h3><p>Here in Baton Rouge, Louisiana, a national road report from April 2025 found that 60% of the area’s major roads are in poor or mediocre shape, costing drivers about $945 a year extra. The tire and wheel plan covers potholes. Your auto insurance may also cover pothole damage, minus your deductible.</p></div><div class="faq-item"><h3>Does car insurance cover flood damage in Louisiana?</h3><p>Comprehensive insurance covers floods and hurricanes. That’s a question for your insurance, not a dealership product. After a total loss on a loan, gap coverage is what covers the difference between the insurance check and what you still owe.</p></div><div class="faq-item"><h3>Is an extended warranty worth it on an Audi?</h3><p>A typical three-year lease stays inside the factory 4-year/50,000-mile warranty, so a vehicle service contract is usually low priority. It matters more if you’ll keep the car past year four. Consumer Reports found owners often paid more than they got back.</p></div></div>
+</section>
+<section class="disclaimer"><p style="margin-top:12px;">Fine print. Flood and hurricane damage is a question for your comprehensive car insurance, not a product we sell. After a total loss on a loan, gap protection is what covers the difference between the insurance check and what you still owe.</p>
+  <p>Updated October 21, 2026. Details come from Audi USA, Audi Financial Services, the Consumer Financial Protection Bureau, the Federal Trade Commission, the Louisiana Department of Revenue, and Louisiana’s Office of Motor Vehicles, as linked on this page. Offers and terms change, so ask us to walk you through yours.</p>
+  <p style="margin-top:12px;">Areas we serve. Shoppers come to us on Airline Highway from across Louisiana and in Baton Rouge, plus New Orleans, Lafayette, and the Mississippi Gulf Coast.</p>
+  <p style="margin-top:12px;">Audi Baton Rouge · 11955 Airline Hwy, Baton Rouge, LA 70817 · Sales (225) 686-6012 · Mon–Sat 9:00am–7:00pm · Sunday closed.</p>
+  <p style="margin-top:12px;">Leasing, financing, warranties, and protection plans for drivers in Louisiana and Baton Rouge and the surrounding areas, including Baton Rouge, Gonzales, Prairieville, Dutchtown, Geismar, Denham Springs, Walker, Watson, Central, Zachary, Baker, St. Francisville, Port Allen, Brusly, Plaquemine, Addis, Livingston, Hammond, Ponchatoula, Donaldsonville, St. Gabriel, Shenandoah, Greenwell Springs, Pride, and Jackson, Louisiana.</p>
+</section>
+</div>

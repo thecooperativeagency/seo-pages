@@ -1,0 +1,340 @@
+  <style>
+    @font-face {
+      font-family: "AudiType";
+      src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Normal_4.03.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "AudiType";
+      src: url("https://thecooperativeagency.github.io/fonts/fonts/audi/AudiType-Bold_4.03.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .abr-allnew-page {
+      font-family: AudiType, Audi, Arial, Helvetica, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+    }
+    .abr-allnew-page a { color: inherit; text-decoration: none; }
+    .abr-allnew-page h1,
+    .abr-allnew-page h2,
+    .abr-allnew-page h3,
+    .abr-allnew-page p,
+    .abr-allnew-page li,
+    .abr-allnew-page span {
+      font-family: AudiType, Audi, Arial, Helvetica, sans-serif;
+    }
+    .abr-allnew-page .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #fff; color: #000 !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 32px; border-radius: 0; border: none; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-primary span { color: #000 !important; white-space: nowrap; }
+    .abr-allnew-page .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; color: #fff !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 13px 32px; border-radius: 0; border: 1px solid #fff; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-secondary span { color: #fff !important; white-space: nowrap; }
+    .abr-allnew-page .btn-dark {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #000; color: #fff !important;
+      font-family: AudiType, Audi, Arial, sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 14px 32px; border-radius: 0; border: 1px solid #fff; cursor: pointer;
+      white-space: nowrap; min-width: max-content; width: auto; overflow: visible; flex: 0 0 auto;
+    }
+    .abr-allnew-page .btn-dark span { color: #fff !important; white-space: nowrap; }
+    .abr-allnew-page .label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      color: #BDBDBD; display: block; margin-bottom: 10px;
+    }
+    .abr-allnew-page .hero {
+      position: relative; width: 100%; min-height: 90vh;
+      background: #000 center center / cover no-repeat;
+      display: flex; align-items: flex-end;
+    }
+    /* Stronger bottom scrim so Motive inject never leaves dark type on dark photo */
+    .abr-allnew-page .hero-overlay {
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.92) 0%,
+        rgba(0,0,0,0.72) 28%,
+        rgba(0,0,0,0.35) 55%,
+        rgba(0,0,0,0.12) 78%,
+        rgba(0,0,0,0.05) 100%
+      );
+    }
+    .abr-allnew-page .hero-content {
+      position: relative; z-index: 2; padding: 64px 7% 72px; max-width: 780px;
+      color: #ffffff;
+    }
+    .abr-allnew-page .hero-content .label { color: #e8e8e8 !important; }
+    .abr-allnew-page .hero-content h1 {
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 16px;
+      color: #ffffff !important;
+      -webkit-text-fill-color: #ffffff;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+    }
+    .abr-allnew-page .hero-content .hero-sub {
+      font-size: 18px; line-height: 1.45; margin: 0 0 12px; max-width: 560px;
+      color: #f2f2f2 !important; -webkit-text-fill-color: #f2f2f2;
+    }
+    .abr-allnew-page .hero-content .hero-msrp {
+      font-size: 14px; margin: 0 0 8px; letter-spacing: 0.02em;
+      color: #e0e0e0 !important; -webkit-text-fill-color: #e0e0e0;
+    }
+    .abr-allnew-page .hero-content .hero-timing {
+      font-size: 13px; margin: 0 0 28px; max-width: 520px;
+      color: #d0d0d0 !important; -webkit-text-fill-color: #d0d0d0;
+    }
+    .abr-allnew-page .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .abr-allnew-page .stats {
+      background: #0b0b0b; border-top: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f;
+      padding: 36px 7%; color: #fff;
+    }
+    .abr-allnew-page .stats-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px; max-width: 720px; margin: 0 auto;
+    }
+    .abr-allnew-page .cta-buttons a.btn-dark {
+      background: transparent; color: #fff !important;
+      border: 1px solid #fff;
+    }
+    .abr-allnew-page .cta-buttons a.btn-dark span { color: #fff !important; }
+    .abr-allnew-page .stat { text-align: center; padding: 8px 10px; }
+    .abr-allnew-page .stat .num {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.1; margin-bottom: 8px; color: #ffffff !important;
+    }
+    .abr-allnew-page .stat .cap {
+      font-size: 12px; color: #9a9a9a; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .abr-allnew-page .intro { background: #111; padding: 80px 7%; text-align: center; color: #fff; }
+    .abr-allnew-page .intro h2 {
+      font-size: clamp(26px, 4vw, 44px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 20px; color: #ffffff !important;
+    }
+    .abr-allnew-page .intro p {
+      font-size: 18px; color: #BDBDBD; max-width: 760px; margin: 0 auto;
+    }
+    .abr-allnew-page .feature { display: flex; align-items: center; min-height: 520px; }
+    .abr-allnew-page .feature.reverse { flex-direction: row-reverse; }
+    .abr-allnew-page .feature-img {
+      flex: 1; min-height: 520px; background-size: cover; background-position: center; background-color: #0a0a0a;
+    }
+    .abr-allnew-page .feature-text { flex: 1; padding: 60px 7%; background: #1a1a1a; color: #fff; }
+    .abr-allnew-page .feature.alt .feature-text { background: #000; }
+    .abr-allnew-page .feature-text h2 {
+      font-size: clamp(24px, 3.5vw, 40px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 16px; line-height: 1.1; color: #ffffff !important;
+    }
+    .abr-allnew-page .feature-text p {
+      font-size: 16px; color: #BDBDBD; line-height: 1.7; margin: 0 0 16px;
+    }
+    .abr-allnew-page .feature-bullets { list-style: none; margin: 16px 0 0; padding: 0; }
+    .abr-allnew-page .feature-bullets li {
+      font-size: 15px; color: #ccc; padding: 8px 0; border-bottom: 1px solid #333;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .abr-allnew-page .feature-bullets li::before {
+      content: ''; display: inline-block; width: 18px; height: 2px; background: #fff; flex-shrink: 0;
+    }
+    .abr-allnew-page .details { background: #111; padding: 80px 7%; color: #fff; }
+    .abr-allnew-page .details-header { text-align: center; margin-bottom: 40px; }
+    .abr-allnew-page .details-header h2 {
+      font-size: clamp(26px, 4vw, 44px); font-weight: 700; letter-spacing: -0.01em; color: #ffffff !important;
+    }
+    .abr-allnew-page .details-header p { font-size: 15px; color: #BDBDBD; margin-top: 8px; }
+    .abr-allnew-page .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .abr-allnew-page .details-grid img {
+      width: 100%; height: 380px; object-fit: cover; display: block; background: #000;
+    }
+    .abr-allnew-page .cta-section {
+      background: #000; border-top: 1px solid #222; padding: 100px 7%; text-align: center; color: #fff;
+    }
+    .abr-allnew-page .cta-section .label { text-align: center; display: block; margin-bottom: 16px; }
+    .abr-allnew-page .cta-section h2 {
+      font-size: clamp(28px, 4vw, 50px); font-weight: 700; letter-spacing: -0.01em;
+      margin: 0 0 16px; color: #ffffff !important;
+    }
+    .abr-allnew-page .cta-section p {
+      font-size: 18px; color: #BDBDBD; margin: 0 auto 40px; max-width: 640px;
+    }
+    .abr-allnew-page .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .abr-allnew-page .disclaimer { background: #000; padding: 24px 7% 60px; text-align: center; }
+    .abr-allnew-page .disclaimer p {
+      font-size: 12px; color: #777; max-width: 900px; margin: 0 auto; line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .abr-allnew-page .stats-grid { grid-template-columns: 1fr 1fr; }
+      .abr-allnew-page .feature,
+      .abr-allnew-page .feature.reverse { flex-direction: column; }
+      .abr-allnew-page .feature-img { width: 100%; min-height: 280px; }
+      .abr-allnew-page .feature-text { padding: 48px 6%; }
+      .abr-allnew-page .hero-content { padding: 40px 6% 52px; }
+      .abr-allnew-page .details-grid { grid-template-columns: 1fr; }
+      .abr-allnew-page .details-grid img { height: 260px; }
+      .abr-allnew-page .hero-ctas,
+      .abr-allnew-page .cta-buttons { flex-direction: column; align-items: flex-start; }
+      .abr-allnew-page .cta-buttons { align-items: center; }
+      .abr-allnew-page .intro,
+      .abr-allnew-page .details,
+      .abr-allnew-page .cta-section,
+      .abr-allnew-page .stats { padding-left: 6%; padding-right: 6%; }
+    }
+
+  
+    .abr-allnew-page .minav {
+      background:#0b0b0b; border-bottom:1px solid #1f1f1f;
+      display:flex; gap:22px; padding:14px 7%; overflow-x:auto;
+      white-space:nowrap; font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+      -webkit-overflow-scrolling:touch;
+    }
+    .abr-allnew-page .minav a { color:#BDBDBD; }
+    .abr-allnew-page .minav a[aria-current="page"] { color:#fff; }
+    .abr-allnew-page .prose { background:#111; padding:80px 7%; color:#fff; }
+    .abr-allnew-page .prose.alt { background:#000; }
+    .abr-allnew-page .prose-inner { max-width:760px; }
+    .abr-allnew-page .prose.center { text-align:center; }
+    .abr-allnew-page .prose.center .prose-inner { margin:0 auto; }
+    .abr-allnew-page .prose h2 {
+      font-size:clamp(26px,4vw,44px); font-weight:700; letter-spacing:-0.01em;
+      margin:0 0 20px; color:#fff !important;
+    }
+    .abr-allnew-page .prose h3 {
+      font-size:20px; font-weight:700; letter-spacing:-0.01em; margin:28px 0 10px; color:#fff !important;
+    }
+    .abr-allnew-page .prose p, .abr-allnew-page .prose li {
+      font-size:16px; color:#BDBDBD; line-height:1.7; margin:0 0 16px;
+    }
+    .abr-allnew-page .prose a { color:#fff; text-decoration:underline; text-underline-offset:3px; }
+    .abr-allnew-page .guide-table { width:100%; border-collapse:collapse; margin:12px 0 24px; }
+    .abr-allnew-page .guide-table th {
+      font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+      color:#BDBDBD; text-align:left; padding:12px 10px; border-bottom:1px solid #333;
+    }
+    .abr-allnew-page .guide-table td {
+      font-size:15px; color:#ccc; padding:12px 10px; border-bottom:1px solid #333; vertical-align:top; line-height:1.6;
+    }
+    .abr-allnew-page .faq { max-width:760px; margin:0 auto; text-align:left; }
+    .abr-allnew-page .faq-item { border-top:1px solid #333; padding:22px 0; }
+    .abr-allnew-page .faq-item:last-child { border-bottom:1px solid #333; }
+    .abr-allnew-page .faq-item h3 { font-size:20px; font-weight:700; letter-spacing:-0.01em; color:#fff !important; margin:0 0 8px; }
+    .abr-allnew-page .faq-item p { font-size:16px; color:#BDBDBD; line-height:1.7; margin:0; }
+    .abr-allnew-page .hub-grid { display:grid; grid-template-columns:1fr 1fr; gap:4px; }
+    .abr-allnew-page .hub-tile {
+      position:relative; min-height:280px; background-size:cover; background-position:center;
+      display:flex; align-items:flex-end; padding:28px; color:#fff !important;
+    }
+    .abr-allnew-page .hub-tile::after {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.2) 55%,transparent 100%);
+    }
+    .abr-allnew-page .hub-tile strong {
+      position:relative; z-index:1; font-size:clamp(18px,2.4vw,24px); font-weight:700; letter-spacing:-0.01em;
+      color:#fff !important;
+    }
+    .abr-allnew-page .chips { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 24px; }
+    .abr-allnew-page .chip {
+      display:inline-flex; align-items:center; justify-content:center;
+      background:#000; color:#fff !important; border:1px solid #333;
+      font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      padding:12px 18px; cursor:pointer;
+    }
+    .abr-allnew-page .chip.on { background:#fff; color:#000 !important; border-color:#fff; }
+    .abr-allnew-page .prod { padding:28px 0; border-bottom:1px solid #333; }
+    .abr-allnew-page .prod h3 { font-size:22px; margin:0 0 10px; color:#fff !important; }
+    .abr-allnew-page .src { font-size:12px; color:#777; margin:8px 0 0; }
+    .abr-allnew-page .src a { color:#777; text-decoration:underline; }
+
+    .abr-allnew-page .cta-buttons {
+      display:flex; flex-wrap:wrap; gap:12px; align-items:stretch;
+    }
+    .abr-allnew-page .cta-buttons a {
+      min-height:48px; min-width:220px; box-sizing:border-box;
+      padding:14px 32px !important;
+    }
+
+    @media (max-width:900px) {
+      .abr-allnew-page .hub-grid { grid-template-columns:1fr; }
+      .abr-allnew-page .hub-tile { min-height:220px; }
+      .abr-allnew-page .minav { padding-left:6%; padding-right:6%; }
+      .abr-allnew-page .prose { padding:48px 6%; }
+      .abr-allnew-page .guide-table { display:block; overflow-x:auto; }
+    }
+</style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does Audi Certified Pre-Owned cover?", "acceptedAnswer": {"@type": "Answer", "text": "One year or 20,000 miles after the original new-car warranty ends, or from the day you buy it if that warranty is already over."}}, {"@type": "Question", "name": "Is Certified Pre-Owned only instead of new or a lease?", "acceptedAnswer": {"@type": "Answer", "text": "No. Certified Pre-Owned is another way into an Audi, not a vote against a new car or a lease. A new lease is the newest car, with a set number of miles and an inspection when you return it. Financing a new Audi means you own it. Certified Pre-Owned is a used Audi that Audi has inspected, with extra coverage after the original warranty. We'll help you see which path fits how you drive."}}]}</script>
+<div class="abr-allnew-page">
+<section class="hero" style="background-image:url('https://thecooperativeagency.github.io/seo-pages/assets/s-line-news-issue-02/abr-q5-lot.jpg');">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <span class="label" style="color:#e8e8e8;">Audi Baton Rouge</span>
+    <h1 style="color:#ffffff;">Certified<br>Pre-Owned</h1>
+    <p class="hero-sub" style="color:#f2f2f2;">A pre-owned Audi that Audi has inspected and backs with extra coverage after the original warranty. It’s a smart way into an Audi, usually for a lower payment than new.</p>
+    <div class="hero-ctas">
+      <a href="https://audibatonrouge.com/get-pre-qualified" class="btn-primary"><span>Get Pre-Qualified</span></a>
+      <a href="https://audibatonrouge.com/collections/certified-pre-owned" class="btn-secondary"><span>Shop Certified Pre-Owned Inventory</span></a>
+    </div>
+  </div>
+</section><nav class="minav" aria-label="Buyer guide"><a href="/audi-buyers-guide">Home</a><a href="/audi-buyers-guide-lease-vs-finance">Lease or finance</a><a href="/audi-buyers-guide-coverages">Protection</a><a href="/audi-buyers-guide-lease-end">When the lease ends</a><a href="/audi-buyers-guide-warranty-maintenance">Warranty</a><a href="/audi-buyers-guide-cpo" aria-current="page">Certified Pre-Owned</a><a href="/audi-buyers-guide-louisiana-tax-fees">Tax and plates</a><a href="/audi-buyers-guide-trade-in-buyout">Trade-in or buyout</a><a href="/audi-buyers-guide-special-programs">Special programs</a></nav><section class="intro"><span class="label">Another way to buy</span>
+    <h2 style="color:#ffffff;">Is an Audi Certified Pre-Owned right for me?</h2><p>You get one extra year or 20,000 miles of coverage after the original warranty ends. These are Audis that are generally five model years or newer with under 60,000 miles, and each one goes through an inspection covering more than 125 components before it earns the Certified Pre-Owned name. If that sounds like the kind of peace of mind you want, come see us at Audi Baton Rouge in Baton Rouge, Louisiana.</p></section><section class="feature">
+  <div class="feature-img" style="background-image:url('https://thecooperativeagency.github.io/seo-pages/assets/abr-buyers-guide/couple-signing-pexels-36729673.jpg');"></div>
+  <div class="feature-text">
+    <span class="label">Buy with confidence</span>
+    <h2 style="color:#ffffff;">It’s still a big purchase, so take your time.</h2>
+    <p>Look for Certified Pre-Owned on the window sticker, and browse what’s available right now on our site.</p>
+  </div>
+</section><section class="prose alt"><div class="prose-inner">
+        <span class="label">Why buy Certified Pre-Owned</span>
+        <h2>What Audi requires, and what you get</h2>
+        <p>Audi Certified pre-owned vehicles are exclusive to Audi dealers. To qualify, a car is generally 5 model years or newer, with no more than 60,000 miles, and a vehicle history report that meets Audi’s guidelines.</p>
+        <h3>The inspection</h3>
+        <p>Audi-trained technicians inspect more than 125 components. The process covers the interior, exterior, engine compartment, and under the vehicle, plus a road test. Confirm Certified Pre-Owned on the window sticker.</p>
+        <h3>The extra coverage</h3>
+        <p>You get one extra year or 20,000 miles of Certified Pre-Owned Limited Warranty after the original 4-year/50,000-mile new-car warranty ends — or from the day you buy it if that warranty is already over. Covered repairs are performed free of charge at authorized Audi dealers. The high-voltage battery is not covered by the Certified warranty (it may still have remaining new-car coverage). For sales on or after August 1, 2023, that Certified warranty is for the original Certified purchaser only.</p>
+        
+        <h3>What else comes with it</h3>
+        <ul>
+          <li>A vehicle history report so you can see the car’s past.</li>
+          <li>One extra year of 24-hour roadside assistance, including trip-interruption help.</li>
+          <li>Any remaining prepaid Audi Care scheduled maintenance that is still on the car.</li>
+          <li>Coverage honored at Audi dealers nationwide.</li>
+        </ul>
+        <p>Read the full program on our <a href="https://audibatonrouge.com/certified-pre-owned-program">Certified Pre-Owned feature page</a>.</p>
+<p class="src"><a href="https://audibatonrouge.com/certified-pre-owned-program">Certified Pre-Owned at Audi Baton Rouge</a> · <a href="https://www.audiusa.com/en/shopping-tools/certified-pre-owned/">Audi USA Certified</a></p>
+        </div></section><section class="cta-section">
+  <span class="label">Visit</span>
+  <h2 style="color:#ffffff;">Shop Certified</h2>
+  <p>See what’s on the lot today.</p>
+  <div class="cta-buttons"><a class="btn-primary" href="https://audibatonrouge.com/get-pre-qualified"><span>Get Pre-Qualified</span></a><a class="btn-secondary" href="https://audibatonrouge.com/collections/certified-pre-owned"><span>Shop Certified Pre-Owned Inventory</span></a><a class="btn-dark" href="https://audibatonrouge.com/trade"><span>Value My Trade</span></a></div>
+</section>
+<section class="intro" style="background:#000;text-align:left;">
+  <div class="faq"><span class="label">Questions</span>
+  <h2 style="color:#ffffff;text-align:center;margin-bottom:28px;">FAQ</h2>
+  <div class="faq-item"><h3>What does Audi Certified Pre-Owned cover?</h3><p>One year or 20,000 miles after the original new-car warranty ends, or from the day you buy it if that warranty is already over.</p></div><div class="faq-item"><h3>Is Certified Pre-Owned only instead of new or a lease?</h3><p>No. Certified Pre-Owned is another way into an Audi, not a vote against a new car or a lease. A new lease is the newest car, with a set number of miles and an inspection when you return it. Financing a new Audi means you own it. Certified Pre-Owned is a used Audi that Audi has inspected, with extra coverage after the original warranty. We'll help you see which path fits how you drive.</p></div></div>
+</section>
+<section class="disclaimer">
+  <p>Updated October 21, 2026. Details come from Audi USA, Audi Financial Services, the Consumer Financial Protection Bureau, the Federal Trade Commission, the Louisiana Department of Revenue, and Louisiana’s Office of Motor Vehicles, as linked on this page. Offers and terms change, so ask us to walk you through yours.</p>
+  <p style="margin-top:12px;">Areas we serve. Shoppers come to us on Airline Highway from across Louisiana and in Baton Rouge, plus New Orleans, Lafayette, and the Mississippi Gulf Coast.</p>
+  <p style="margin-top:12px;">Audi Baton Rouge · 11955 Airline Hwy, Baton Rouge, LA 70817 · Sales (225) 686-6012 · Mon–Sat 9:00am–7:00pm · Sunday closed.</p>
+  <p style="margin-top:12px;">Leasing, financing, warranties, and protection plans for drivers in Louisiana and Baton Rouge and the surrounding areas, including Baton Rouge, Gonzales, Prairieville, Dutchtown, Geismar, Denham Springs, Walker, Watson, Central, Zachary, Baker, St. Francisville, Port Allen, Brusly, Plaquemine, Addis, Livingston, Hammond, Ponchatoula, Donaldsonville, St. Gabriel, Shenandoah, Greenwell Springs, Pride, and Jackson, Louisiana.</p>
+</section>
+</div>
