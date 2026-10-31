@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//bmwj-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mso-monumental-i03@bmwj-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261107T193000
+DTEND;TZID=America/Chicago:20261107T213000
+SUMMARY:Mississippi Symphony Orchestra: Monumental Elegance
+LOCATION:Thalia Mara Hall\, Jackson
+END:VEVENT
+END:VCALENDAR

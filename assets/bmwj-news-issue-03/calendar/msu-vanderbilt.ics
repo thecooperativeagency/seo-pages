@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//bmwj-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:msu-vanderbilt-i03@bmwj-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261107T151500
+DTEND;TZID=America/Chicago:20261107T183000
+SUMMARY:Mississippi State vs Vanderbilt (Homecoming)
+LOCATION:Davis Wade Stadium\, Starkville
+END:VEVENT
+END:VCALENDAR

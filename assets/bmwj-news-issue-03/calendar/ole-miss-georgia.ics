@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//bmwj-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ole-miss-georgia-i03@bmwj-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261107T183000
+DTEND;TZID=America/Chicago:20261107T220000
+SUMMARY:Ole Miss vs Georgia
+LOCATION:Vaught-Hemingway Stadium\, Oxford
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//bhbmw-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bayou-classic-i03@bhbmw-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261128T130000
+DTEND;TZID=America/Chicago:20261128T163000
+SUMMARY:53rd Bayou Classic: Southern vs Grambling
+LOCATION:Caesars Superdome\, New Orleans
+END:VEVENT
+END:VCALENDAR

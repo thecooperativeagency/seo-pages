@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//bhbmw-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:cap-city-beer-i03@bhbmw-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261101T140000
+DTEND;TZID=America/Chicago:20261101T170000
+SUMMARY:Cap City Beer Fest
+LOCATION:Fourth Street\, downtown Baton Rouge
+END:VEVENT
+END:VCALENDAR

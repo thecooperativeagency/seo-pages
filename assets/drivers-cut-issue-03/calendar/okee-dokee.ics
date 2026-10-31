@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//drivers-cut-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:okee-dokee-i03@drivers-cut-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261120T170000
+DTEND;TZID=America/Chicago:20261120T193000
+SUMMARY:The Okee Dokee Brothers + Kids Fest
+LOCATION:Manship Theatre\, Baton Rouge
+END:VEVENT
+END:VCALENDAR

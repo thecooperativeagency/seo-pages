@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//bhbmw-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kingfish-20-i03@bhbmw-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Baton Rouge Kingfish vs Monroe Moccasins
+LOCATION:Raising Cane's River Center\, Baton Rouge
+DESCRIPTION:Kickoff time TBA; check before you go.
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//s-line-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:beatles-stones-i03@s-line-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261112T193000
+DTEND;TZID=America/Chicago:20261112T220000
+SUMMARY:Beatles vs Stones
+LOCATION:Manship Theatre\, Baton Rouge
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//drivers-cut-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:su-bcu-i03@drivers-cut-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;TZID=America/Chicago:20261107T140000
+DTEND;TZID=America/Chicago:20261107T170000
+SUMMARY:Southern vs Bethune-Cookman
+LOCATION:A.W. Mumford Stadium\, Baton Rouge
+END:VEVENT
+END:VCALENDAR

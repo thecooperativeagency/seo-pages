@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Cooperative Agency//bmwj-news-issue-03//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ole-miss-oklahoma-i03@bmwj-news-issue-03.coop
+DTSTAMP:20261031T200000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Ole Miss at Oklahoma
+LOCATION:Gaylord Family Oklahoma Memorial Stadium\, Norman
+DESCRIPTION:Kickoff time TBA; check before you go.
+END:VEVENT
+END:VCALENDAR
