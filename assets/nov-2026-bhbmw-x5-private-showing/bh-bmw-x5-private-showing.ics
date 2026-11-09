@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Brian Harris BMW//X5 Private Showing//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bhbmw-x5-private-showing-20261119@brianharrisbmw.com
+DTSTAMP:20261109T220000Z
+DTSTART:20261120T000000Z
+DTEND:20261120T020000Z
+SUMMARY:Private Viewing: All-New BMW X5 at Brian Harris BMW
+DESCRIPTION:You're invited to a private viewing of the all-new BMW X5 at Brian Harris BMW. See it and drive it with private\, unfettered access. Hors d'oeuvres and refreshments provided. 6:00–8:00 p.m. Central. Invitation only.
+LOCATION:Brian Harris BMW\, 12336 Airline Highway\, Baton Rouge\, LA 70817
+URL:https://brianharrisbmw.com
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
