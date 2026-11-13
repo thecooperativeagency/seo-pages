@@ -4,11 +4,19 @@ PRODID:-//The Cooperative Agency//s-line-news-issue-03//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
+UID:cs-lewis-matinee-i03@s-line-news-issue-03.coop
+DTSTAMP:20261113T210000Z
+DTSTART;TZID=America/Chicago:20261121T140000
+DTEND;TZID=America/Chicago:20261121T160000
+SUMMARY:Christmas with C.S. Lewis (2:00 p.m.)
+LOCATION:Manship Theatre\, Baton Rouge
+END:VEVENT
+BEGIN:VEVENT
 UID:cs-lewis-i03@s-line-news-issue-03.coop
-DTSTAMP:20261031T200000Z
+DTSTAMP:20261113T210000Z
 DTSTART;TZID=America/Chicago:20261121T193000
 DTEND;TZID=America/Chicago:20261121T213000
-SUMMARY:Christmas with C.S. Lewis
+SUMMARY:Christmas with C.S. Lewis (7:30 p.m.)
 LOCATION:Manship Theatre\, Baton Rouge
 END:VEVENT
 END:VCALENDAR
